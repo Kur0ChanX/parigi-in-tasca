@@ -90,17 +90,26 @@ h1 em{display:block;font-style:italic;font-weight:500;color:var(--gilt);letter-s
 .wk-row{display:grid;grid-template-columns:4.2rem minmax(0,1fr) auto;gap:14px;align-items:center;width:100%;padding:14px 6px;border:0;border-bottom:1px solid var(--rule);background:none;color:var(--ink);font:inherit;text-align:left;cursor:pointer;min-height:58px;border-radius:0}
 .week li:last-child .wk-row{border-bottom:0}
 .wk-row:hover{background:var(--card)}
+.today{display:inline-block;margin-left:6px;padding:2px 6px;border-radius:5px;background:var(--go);color:#fff;font:700 11px/1.2 var(--sign);letter-spacing:.08em;text-transform:uppercase;vertical-align:2px}
+.tab .today{font-size:0;width:8px;height:8px;padding:0;margin-left:7px;border-radius:50%;vertical-align:2px}
 .wk-day{font:700 19px/1 var(--sign);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
 .wk-what{line-height:1.35}
 .wk-out{white-space:nowrap;color:var(--go);font:700 24px/1 var(--sign);text-align:right;font-variant-numeric:tabular-nums}
 .wk-out small{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
 .todo{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:14px}
 .todo li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
-.box{width:22px;height:22px;border:2px solid var(--ink);border-radius:5px;margin-top:2px}
+.todo input{appearance:none;-webkit-appearance:none;margin:2px 0 0;width:24px;height:24px;border:2px solid var(--ink);border-radius:6px;background:transparent;cursor:pointer;display:grid;place-items:center}
+.todo input:checked{background:var(--plaque);border-color:var(--plaque)}
+.todo input:checked::after{content:"";width:6px;height:12px;border:solid #fff;border-width:0 3px 3px 0;transform:translateY(-2px) rotate(45deg)}
+.todo input:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.todo label{cursor:pointer}
+.todo input:checked+label{color:var(--mute)}
+.todo-note{margin:12px 0 0}
+.every{margin:18px 0 0;padding:14px 16px;border-radius:12px;background:var(--raised);border:1px solid var(--rule);font-size:15px}
 
 /* ---------- cosa cambia ---------- */
 .chg{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
-@media(min-width:760px){.chg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:760px){.chg{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}}
 .chg li{padding:16px 18px;border-radius:12px;background:var(--raised);border:1px solid var(--rule)}
 .chg b{display:block;font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;color:var(--plaque)}
 
@@ -194,6 +203,7 @@ footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:
  .tm{font-size:21px}
  .wk-row{grid-template-columns:3.6rem minmax(0,1fr) auto;gap:10px}
  .wk-day{font-size:17px}.wk-out{font-size:21px}
+ .tabs .wrap{gap:6px}.tab{padding:0 10px;font-size:16px;letter-spacing:.04em}
  .ticket{grid-template-columns:minmax(0,1fr)}
  .stub{border-right:0;border-bottom:2px dashed var(--rule);grid-auto-flow:column;justify-content:space-between;align-items:center;justify-items:start;text-align:left}
 }
@@ -215,7 +225,7 @@ footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:
      <span class="pl-arr">18<sup>e</sup> Arr<sup>t</sup></span>
      <span class="pl-name">Rue Duhesme</span>
     </div>
-    <p class="home-meta"><b>Casa al n. 17</b> · metro <span class="lb" style="--c:#007852;--t:#fff">12</span> <b>Lamarck-Caulaincourt</b>, linea 12 (verde)<br>Orari e prezzi controllati il 20/11/2026. I tempi di viaggio sono stime con un po’ di margine.</p>
+    <p class="home-meta"><b>Casa al n. 17</b> · metro <span class="lb" style="--c:#007852;--t:#fff">12</span> <b>Lamarck-Caulaincourt</b>, linea 12 (verde)<br>Orari e prezzi controllati il 20/11/2026. I tempi di viaggio sono stime con un po’ di margine.<br><b>Emergenze: 112</b> (polizia, ambulanza, pompieri)</p>
    </div>
   </div>
  </div>
@@ -231,12 +241,13 @@ footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:
   <div>
    <div class="sec-head"><p class="eyebrow">Prima di partire</p><h2>Da fare</h2></div>
    <ul class="todo">
-    <li><span class="box"></span><div><b>Notre-Dame:</b> prenotate l’ingresso gratuito di domenica alle 13:45 sul <a href="https://www.notredamedeparis.fr" target="_blank" rel="noopener">sito ufficiale</a>. Le prenotazioni si aprono 2–3 giorni prima.</div></li>
-    <li><span class="box"></span><div><b>Biglietti:</b> comprate il Navigo Semaine sul telefono (32,40 € a testa). Come fare è in fondo alla pagina.</div></li>
-    <li><span class="box"></span><div><b>Mercoledì:</b> scegliete tra Orangerie e Trianon (vedi mercoledì). Se Orangerie, prenotate l’orario delle 15:00.</div></li>
-    <li><span class="box"></span><div><b>Crociera martedì (se la volete):</b> prenotate una partenza dalle 19:45 in poi.</div></li>
-    <li><span class="box"></span><div><b>Ogni sera:</b> controllate scioperi e lavori del giorno dopo sull’app Bonjour RATP o Île-de-France Mobilités.</div></li>
+    <li><input type="checkbox" id="todo-notredame" aria-describedby="todo-notredame-t"><label for="todo-notredame" id="todo-notredame-t"><b>Notre-Dame:</b> prenotate l’ingresso gratuito di domenica alle 13:45 sul <a href="https://www.notredamedeparis.fr" target="_blank" rel="noopener">sito ufficiale</a>. Le prenotazioni si aprono 2–3 giorni prima.</label></li>
+    <li><input type="checkbox" id="todo-navigo" aria-describedby="todo-navigo-t"><label for="todo-navigo" id="todo-navigo-t"><b>Biglietti:</b> comprate il Navigo Semaine sul telefono (32,40 € a testa). Come fare è in fondo alla pagina.</label></li>
+    <li><input type="checkbox" id="todo-orangerie" aria-describedby="todo-orangerie-t"><label for="todo-orangerie" id="todo-orangerie-t"><b>Orangerie:</b> prenotate mercoledì 25 alle 15:15 sul <a href="https://www.musee-orangerie.fr" target="_blank" rel="noopener">sito ufficiale</a> (12,50 € a testa).</label></li>
+    <li><input type="checkbox" id="todo-crociera" aria-describedby="todo-crociera-t"><label for="todo-crociera" id="todo-crociera-t"><b>Crociera martedì (se la volete):</b> prenotate una partenza dalle 19:45 in poi.</label></li>
    </ul>
+   <p class="note todo-note">Toccate un punto per spuntarlo: resta segnato su questo telefono.</p>
+   <p class="every"><b>Ogni sera:</b> controllate scioperi e lavori del giorno dopo sull’app Bonjour RATP o Île-de-France Mobilités.</p>
   </div>
  </div>
 </section>
@@ -245,10 +256,9 @@ footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:
  <div class="wrap">
   <div class="sec-head"><p class="eyebrow">Rispetto al programma</p><h2 id="chgh">Cosa cambia</h2></div>
   <ul class="chg">
-   <li><b>Orangerie</b>È chiusa il martedì. Si sposta a mercoledì pomeriggio, tra Versailles e Dior.</li>
+   <li><b>Orangerie</b>È chiusa il martedì. Ci andate mercoledì alle 15:15, tornando da Versailles e prima di Dior.</li>
    <li><b>Domenica, dal pranzo a Notre-Dame</b>Servono circa 35 minuti. Con l’ingresso alle 13:45 uscite dal ristorante entro le 13:05.</li>
    <li><b>Domenica sera</b>Accensione delle luminarie e primo giorno del mercatino degli Champs-Élysées, quindi tantissima gente. Negozi prima delle 18; per tornare, linea 12 da Madeleine.</li>
-   <li><b>Versailles</b>Il biglietto Passport comprende anche il Trianon e la mostra «Marie-Antoinette» di Sofia Coppola. Con il programma attuale restano fuori: è l’alternativa all’Orangerie.</li>
   </ul>
  </div>
 </section>
@@ -379,7 +389,7 @@ const DAYS=[
  pins:[[1,"orsay","Musée d’Orsay"],[2,"opera","Opéra Garnier e Galeries Lafayette"],[3,"trocP","Trocadéro, Tour Eiffel e molo delle crociere"]],
  route:[W(["casa","lam"]),M("12",r12("lam","sol")),W(["sol","orsay"]),M("12",r12("sol","mad")),W(["mad","opera","glh"]),M("9",["cda","hav","sau","mir","spr","fdr","alm","ien","tro"]),W(["tro","trocP","bat"])],
  steps:[
-  {t:"Mattina",warn:1,title:"Libera (l’Orangerie è chiusa)",nb:"L’Orangerie chiude tutti i martedì: si sposta a mercoledì pomeriggio."},
+  {t:"Mattina",warn:1,title:"Libera (l’Orangerie è chiusa)",nb:"L’Orangerie chiude tutti i martedì: ci andate mercoledì alle 15:15."},
   {t:"10:30",go:1,n:1,title:"Musée d’Orsay",legs:[["w","","3 min + ascensore"],["m","12","dir. Mairie d’Issy → Solférino (10 fermate)"],["w","","5 min"]],dur:"≈ 30 min → arrivo verso le 11:00",nb:"L’ingresso è alle 11:30: mezz’ora per i controlli.",links:[["Percorso fino all’Orsay",gm("Musée d'Orsay, Paris",{from:H})]]},
   {t:"11:30",title:"Musée d’Orsay (prenotato)"},
   {t:"13:30",title:"Pranzo in zona Orsay o rue du Bac"},
@@ -391,18 +401,18 @@ const DAYS=[
   {t:"19:30",title:"Crociera sulla Senna (se volete) e cena",legs:[["w","","12–15 min fino al molo sotto la Torre, attraverso il Pont d’Iéna"]],nb:"Prenotate una partenza dalle 19:45 in poi: dopo lo scintillio servono 15 minuti a piedi più l’imbarco.",links:[["A piedi al molo",gm("Bateaux Parisiens, Port de la Bourdonnais, Paris",{from:"Place du Trocadéro, Paris",mode:"walking"})]]},
   {t:"Dopo",go:1,title:"Casa",dur:"≈ 40–45 min, con 1–2 cambi (stima)",nb:"Da qui non c’è una linea diretta: seguite Maps.",links:[["Torna a casa da dove sei",gm(H)]]}
  ]},
-{id:"mercoledi",tab:"Mer 25",short:"Mer 25",what:"Versailles, Galerie Dior",first:"08:30",title:"Mercoledì 25 novembre",sub:"Versailles e Galerie Dior",
- hours:"<b>Reggia</b> 9:00–17:30 · <b>Trianon</b> 12:00–17:30 · poca gente prevista · <b>Orangerie</b> 9:00–18:00 (ultimo ingresso 17:15) · <b>Galerie Dior</b> 11:00–19:00",
- pins:[[1,"VER","Reggia di Versailles"],[2,"orang","Orangerie (idea A)"],[3,"dior","Galerie Dior"]],
- route:[W(["casa","lam"]),M("12",r12("lam","sol")),W(["sol","mor"]),M("C",["mor","inv","pda","cdm","VER"]),W(["pda","dior"]),W(["mor","orang","dior"]),W(["dior","fdr"]),M("1",["fdr","cec","con"]),M("12",r12("con","lam"))],
+{id:"mercoledi",tab:"Mer 25",short:"Mer 25",what:"Versailles, Orangerie, Galerie Dior",first:"08:30",title:"Mercoledì 25 novembre",sub:"Versailles, Orangerie e Galerie Dior",
+ hours:"<b>Reggia</b> 9:00–17:30, poca gente prevista · <b>Orangerie</b> 9:00–18:00, ultimo ingresso 17:15 · <b>Galerie Dior</b> 11:00–19:00",
+ pins:[[1,"VER","Reggia di Versailles"],[2,"orang","Orangerie"],[3,"dior","Galerie Dior"]],
+ route:[W(["casa","lam"]),M("12",r12("lam","sol")),W(["sol","mor"]),M("C",["mor","inv","pda","cdm","VER"]),W(["mor","orang","dior"]),W(["dior","fdr"]),M("1",["fdr","cec","con"]),M("12",r12("con","lam"))],
  steps:[
   {t:"08:30",go:1,n:1,title:"Versailles",legs:[["w","","3 min + ascensore"],["m","12","dir. Mairie d’Issy → Solférino (10 fermate)"],["w","","5 min fino alla stazione RER Musée d’Orsay"],["m","C","treno per Versailles Château Rive Gauche"],["w","","10 min fino alla Reggia"]],dur:"≈ 1 h 25 → arrivo verso le 9:55 (stima)",nb:"<b>Non tutti i RER C vanno a Versailles:</b> guardate la destinazione sul tabellone. Se il RER C è fermo: linea 12 fino a Saint-Lazare, treno L per Versailles Rive Droite, poi 20 min a piedi.",links:[["Percorso fino alla Reggia",gm("Château de Versailles",{from:H})]]},
   {t:"10:30",title:"Reggia di Versailles (Passport, prenotato)"},
   {t:"13:30",title:"Pranzo"},
-  {t:"14:00",go:1,title:"Rientro a Parigi",legs:[["w","","10 min fino alla stazione"],["m","C","dir. Paris → Pont de l’Alma (≈ 30 min)"],["w","","8 min fino alla Galerie Dior"]],dur:"≈ 55 min → a Parigi verso le 15:00",nb:"Restano quasi 2 ore prima di Dior: scegliete una delle due idee.",links:[["Fino alla Galerie Dior",gm("La Galerie Dior, 11 Rue François 1er, 75008 Paris",{from:"Château de Versailles"})]]},
-  {t:"15:05",opt:1,n:2,title:"Idea A: Orangerie",legs:[["m","C","scendete a Musée d’Orsay invece che a Pont de l’Alma"],["w","","10 min sulla passerella pedonale"]],nb:"Visita 15:05–16:10. Biglietto 12,50 €, meglio prenotare l’orario. Poi 25 min a piedi fino a Dior (Concorde, Avenue Montaigne): arrivo verso le 16:35.",links:[["Orangerie → Dior a piedi",gm("La Galerie Dior, 11 Rue François 1er, 75008 Paris",{from:"Musée de l'Orangerie, Paris",mode:"walking"})]]},
-  {t:"Oppure",opt:1,title:"Idea B: Trianon, restando a Versailles",nb:"Già pagato con il Passport, con la mostra «Marie-Antoinette» di Sofia Coppola al Petit Trianon. Reggia più corta (2 ore bastano), Trianon 14:10–15:10, 35 min a piedi fino alla stazione, RER C fino a Pont de l’Alma: Dior verso le 16:35. Più tirato."},
-  {t:"17:00",n:3,title:"Galerie Dior (prenotato)"},
+  {t:"14:00",go:1,n:2,title:"Orangerie",legs:[["w","","10 min fino alla stazione Versailles Château Rive Gauche"],["m","C","dir. Paris → Musée d’Orsay (≈ 35 min)"],["w","","10 min sulla passerella pedonale Léopold-Sédar-Senghor, poi nelle Tuileries"]],dur:"≈ 1 h → arrivo verso le 15:00 (stima)",nb:"<b>Scendete a Musée d’Orsay</b>, non a Pont de l’Alma. Il RER C passa ogni 15 minuti circa: se ne perdete uno, arrivate comunque per le 15:15.",links:[["Percorso fino all’Orangerie",gm("Musée de l'Orangerie, Paris",{from:"Château de Versailles"})]]},
+  {t:"15:15",title:"Orangerie (prenotato)",nb:"Le Ninfee di Monet nelle due sale ovali. Biglietto 12,50 €. Un’ora basta."},
+  {t:"16:15",go:1,n:3,title:"Galerie Dior, a piedi",legs:[["w","","25 min: Place de la Concorde, Cours la Reine, Avenue Montaigne"]],dur:"→ arrivo verso le 16:40",links:[["A piedi fino a Dior",gm("La Galerie Dior, 11 Rue François 1er, 75008 Paris",{from:"Musée de l'Orangerie, Paris",mode:"walking"})]]},
+  {t:"17:00",title:"Galerie Dior (prenotato)"},
   {t:"18:30",title:"Passeggiata e cena",nb:"Avenue Montaigne e gli Champs-Élysées illuminati sono a 5 minuti."},
   {t:"Dopo",go:1,title:"Casa",legs:[["m","1","da Franklin D. Roosevelt, dir. Château de Vincennes → Concorde (2 fermate)"],["m","12","dir. Mairie d’Aubervilliers → Lamarck-Caulaincourt (8 fermate)"]],dur:"≈ 30 min",links:[["Torna a casa da dove sei",gm(H)]]}
  ]},
@@ -418,10 +428,18 @@ const DAYS=[
  ]}
 ];
 
+/* ---------- oggi (durante il viaggio) ---------- */
+const NOW=new Date();const TODAY=NOW.getFullYear()===2026&&NOW.getMonth()===10?NOW.getDate()-22:-1;
+const TAG='<span class="today">oggi</span>';
+
+/* ---------- spunte «Da fare», salvate su questo telefono ---------- */
+for(const c of document.querySelectorAll(".todo input")){try{c.checked=localStorage.getItem("pit:"+c.id)==="1"}catch(e){}
+ c.addEventListener("change",()=>{try{localStorage.setItem("pit:"+c.id,c.checked?"1":"0")}catch(e){}})}
+
 /* ---------- settimana ---------- */
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tabsEl=document.getElementById("tabs"),main=document.getElementById("day");
-document.getElementById("week").innerHTML=DAYS.map((d,i)=>`<li><button class="wk-row" data-i="${i}"><span class="wk-day">${d.short}</span><span class="wk-what">${esc(d.what)}</span><span class="wk-out"><small>esci entro</small>${d.first}</span></button></li>`).join("");
+document.getElementById("week").innerHTML=DAYS.map((d,i)=>`<li><button class="wk-row" data-i="${i}"><span class="wk-day">${d.short}</span><span class="wk-what">${esc(d.what)}${i===TODAY?TAG:""}</span><span class="wk-out"><small>esci entro</small>${d.first}</span></button></li>`).join("");
 
 /* ---------- orario ---------- */
 const badge=(k,l)=>{if(k==="w")return `<span class="lb wk" aria-label="a piedi">${WALK}</span>`;if(k==="t")return `<span class="lb tx">TAXI</span>`;const c=LC[l],rer=/[A-Z]/.test(l);return `<span class="lb${rer?" rer":""}" style="--c:${c[0]};--t:${c[1]}">${l}</span>`};
@@ -463,10 +481,11 @@ const draw=()=>{const svg=document.getElementById("mapsvg");if(!svg)return;const
  svg.innerHTML=h};
 
 /* ---------- giorno ---------- */
-tabsEl.innerHTML=DAYS.map((d,i)=>`<button class="tab" role="tab" id="t-${d.id}" aria-controls="day" aria-selected="false" data-i="${i}">${d.tab}</button>`).join("");
+tabsEl.innerHTML=DAYS.map((d,i)=>`<button class="tab" role="tab" id="t-${d.id}" aria-controls="day" aria-selected="false" data-i="${i}">${d.tab}${i===TODAY?TAG:""}</button>`).join("");
 let ro=null;
 const show=i=>{cur=i;const d=DAYS[i];
  for(const b of tabsEl.querySelectorAll(".tab"))b.setAttribute("aria-selected",String(+b.dataset.i===i));
+ {const b=tabsEl.querySelector(".tab[aria-selected=true]"),r=b.getBoundingClientRect(),t=tabsEl.getBoundingClientRect();if(r.left<t.left||r.right>t.right)tabsEl.scrollLeft+=r.left-t.left-(t.width-r.width)/2}
  main.innerHTML=`<div class="wrap daywrap"><div class="dhead"><p class="eyebrow">Giorno ${i+1} di ${DAYS.length}</p><h2>${d.title}</h2><p class="dsub">${d.sub}</p><div class="hours"><span class="eyebrow">Aperture e avvisi</span>${d.hours}</div></div>
  <div class="dgrid"><div class="mapcol"><div class="fig"><svg id="mapsvg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Mappa degli spostamenti di ${d.title}"></svg></div>
  <ul class="legend">${d.pins.map(([n,,t])=>`<li><span class="pin">${n}</span>${esc(t)}</li>`).join("")}</ul>
@@ -478,7 +497,7 @@ tabsEl.addEventListener("click",e=>{const b=e.target.closest(".tab");if(b)go(+b.
 document.getElementById("week").addEventListener("click",e=>{const b=e.target.closest(".wk-row");if(b)go(+b.dataset.i,true)});
 const fromHash=()=>{const i=DAYS.findIndex(d=>"#"+d.id===location.hash);if(i>=0){show(i);return true}return false};
 window.addEventListener("hashchange",fromHash);
-if(!fromHash()){const now=new Date();const day=now.getFullYear()===2026&&now.getMonth()===10?now.getDate()-22:-1;show(day>=0&&day<5?day:0)}
+if(!fromHash())show(TODAY>=0&&TODAY<5?TODAY:0)
 }
 </script>
 </body>
