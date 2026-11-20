@@ -223,8 +223,12 @@ tfoot td{font-weight:800}
 <script>
 {
 const H="17 Rue Duhesme, 75018 Paris";
-const gm=(dest,o={})=>{let u="https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(dest)+"&travelmode="+(o.mode||"transit");if(o.from)u+="&origin="+encodeURIComponent(o.from);if(o.via)u+="&waypoints="+encodeURIComponent(o.via.join("|"));return u};
-document.getElementById("home").href=gm(H);
+const ANDROID=/Android/i.test(navigator.userAgent);
+/* su Android chiede l'app Google Maps completa (non Maps Go); se non c'è, apre il link normale */
+const app=u=>ANDROID?"intent://"+u.replace(/^https:\/\//,"")+"#Intent;scheme=https;package=com.google.android.apps.maps;S.browser_fallback_url="+encodeURIComponent(u)+";end":u;
+const gm=(dest,o={})=>{let u="https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(dest)+"&travelmode="+(o.mode||"transit");if(o.from)u+="&origin="+encodeURIComponent(o.from);if(o.via)u+="&waypoints="+encodeURIComponent(o.via.join("|"));return app(u)};
+const tgt=ANDROID?"":' target="_blank" rel="noopener"';
+{const h=document.getElementById("home");h.href=gm(H);if(ANDROID){h.removeAttribute("target");h.removeAttribute("rel")}}
 
 const LC={"1":["#FFCD00","#111"],"2":["#003CA6","#fff"],"4":["#CF009E","#fff"],"9":["#B6BD00","#111"],"12":["#007852","#fff"],"14":["#62259D","#fff"],"A":["#E3051C","#fff"],"C":["#FFCE00","#111"]};
 const WALK='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2.2" fill="currentColor"/><path d="M13 8l-3 4 3 3-1 7M10 12l-3 1-1 4M13 8l3 4 3 1M13 15l3 2 1 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -330,7 +334,7 @@ const step=s=>{const cls=[s.go?"go":"",s.opt?"opt":"",s.warn?"warnrow":""].join(
  ${s.dur?`<p class="dur">${esc(s.dur)}</p>`:""}
  ${s.list?`<ul>${s.list.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
  ${s.nb?`<p class="nb">${s.nb}</p>`:""}
- ${s.links?`<div class="links">${s.links.map(([a,u],i)=>`<a class="btn${i?" alt":""}" href="${esc(u)}" target="_blank" rel="noopener">${esc(a)}</a>`).join("")}</div>`:""}
+ ${s.links?`<div class="links">${s.links.map(([a,u],i)=>`<a class="btn${i?" alt":""}" href="${esc(u)}"${tgt}>${esc(a)}</a>`).join("")}</div>`:""}
  </div></li>`};
 
 /* ---------- mappa ---------- */
