@@ -211,6 +211,13 @@ ol.tl{list-style:none;margin:0;padding:0}
 .nb{color:var(--mute);font-size:15px}
 .nb b{color:var(--ink)}
 .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.guide{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px;padding:16px 18px;border-radius:var(--r-lg);text-decoration:none;color:#fff;background:radial-gradient(90% 140% at 100% 0%,rgb(243 201 105 / .28),transparent 60%),linear-gradient(135deg,#2B1E63,#141A46);box-shadow:var(--shadow);transition:transform .15s}
+.guide:hover{transform:translateY(-1px)}
+.g-ic{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:rgb(255 255 255 / .12);font-size:26px}
+.g-tx{flex:1 1 160px;display:grid;gap:2px}
+.g-tx b{font:800 18px/1.2 var(--display);letter-spacing:-.01em}
+.g-tx small{font-size:14px;color:#D9D4F2}
+.g-go{flex:none;text-align:center;padding:10px 16px;border-radius:999px;background:var(--lamp);color:#1B1440;font-weight:800;font-size:15px}
 
 /* ---------- biglietti ---------- */
 .ticket{display:grid;grid-template-columns:auto minmax(0,1fr);margin-top:18px;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:var(--shadow)}
@@ -236,7 +243,17 @@ footer h3{font:800 18px/1.2 var(--display)}
 .src li{margin:4px 0;break-inside:avoid}
 .signoff{margin:28px 0 0;font:800 26px/1 var(--display);letter-spacing:-.02em;color:var(--mute)}
 
+@media(max-width:420px){.g-go{flex:1 1 100%}}
 @media(max-width:600px){
+ .hero-card{padding:22px 20px 24px}
+ .hero-in{gap:20px}
+ h1{font-size:clamp(40px,12vw,52px);margin-top:14px}
+ .lede{font-size:16px;margin-top:10px}
+ .hero-btns{margin-top:16px}
+ .plaque{padding:9px 18px 10px;border-width:4px;outline-offset:-8px}
+ .pl-name{font-size:24px}
+ .home-meta{font-size:14px;line-height:1.5}
+ .next{padding:16px}.nx-time b{font-size:38px}
  table{font-size:14px}
  .tl>li{grid-template-columns:3.9rem 18px minmax(0,1fr);column-gap:10px}
  .tm{font-size:17px}
@@ -341,7 +358,7 @@ footer h3{font:800 18px/1.2 var(--display)}
    <ol class="steps">
     <li>Scaricate l’app <b>Île-de-France Mobilités</b> e create l’account.</li>
     <li>Comprate il <b>Navigo Semaine</b> per la settimana dal 23 al 29 novembre: si può da venerdì 20. Servono una foto e la data di nascita.</li>
-    <li>Ognuno sul proprio telefono, perché è personale. iPhone XR o più nuovo con iOS 17.5 o successivo; Android con NFC.</li>
+    <li>Ognuno sul proprio telefono, perché è personale. iPhone XR o più nuovo con iOS 17.5 o successivo; Android con NFC acceso (Samsung: Impostazioni → Connessioni → NFC).</li>
     <li>Ai tornelli appoggiate il telefono sul lettore Navigo.</li>
    </ol>
    <h3 style="margin-top:26px">Come usare i link Maps</h3>
@@ -430,12 +447,12 @@ const DAYS=[
   {t:"18:30",title:"Accensione delle luminarie",nb:"Luci e concerto sul viale. Attese circa 150.000 persone, con controllo delle borse: borsa piccola e telefono al sicuro."},
   {t:"19:30",go:1,lab:"verso le",title:"Casa, dalla metro Madeleine",legs:[["w","","15–20 min fino a Madeleine, per rue du Faubourg Saint-Honoré (anche lei illuminata)"],["m","12","dir. Mairie d’Aubervilliers → Lamarck-Caulaincourt (7 fermate)"],["w","","3 min"]],dur:"≈ 40 min",nb:"Le fermate della linea 1 sugli Champs-Élysées possono essere chiuse dalla polizia: meglio Madeleine. Cena lì vicino o vicino a casa.",links:[["Madeleine → casa",gm(H,{from:"Madeleine, 75008 Paris"})],["Torna a casa da dove sei",gm(H)]]}
  ]},
-{id:"lunedi",tab:"Lun 23",short:"Lun 23",what:"Disneyland Paris",first:"07:45",title:"Lunedì 23 novembre",sub:"Disneyland Paris",
+{id:"lunedi",guide:{url:"https://guida-disneyland-paris-ynoy.pages.dev",title:"La vostra guida Disneyland",sub:"Giochi, show, personaggi, cibo e orari di lunedì 23"},tab:"Lun 23",short:"Lun 23",what:"Disneyland Paris",first:"07:45",title:"Lunedì 23 novembre",sub:"Disneyland Paris",
  hours:"<b>Disneyland Park</b> e <b>Disney Adventure World</b>: 9:30–22:00",
  pins:[[1,"DIS","Disneyland Paris"]],
  route:[W(["casa","lam"]),M("12",r12("lam","slz")),W(["slz","aub"]),M("A",["aub","clh","gdl","DIS"])],
  steps:[
-  {t:"07:45",go:1,n:1,title:"Disneyland",legs:[["w","","3 min + ascensore"],["m","12","dir. Mairie d’Issy → Saint-Lazare (6 fermate)"],["w","","10 min nei corridoi fino ad Auber"],["m","A","solo treni per Marne-la-Vallée–Chessy (ultima fermata)"]],dur:"≈ 1 h 25 → ai cancelli verso le 9:15, aprono alle 9:30 (stima, è ora di punta)",nb:"<b>Guardate la destinazione del RER A:</b> gli altri treni vanno a Boissy o Torcy. Se Maps propone un altro cambio, va bene lo stesso.",links:[["Percorso fino a Disneyland",gm("Marne-la-Vallée Chessy",{from:H})]]},
+  {t:"07:45",go:1,n:1,title:"Disneyland",legs:[["w","","3 min + ascensore"],["m","12","dir. Mairie d’Issy → Saint-Lazare (6 fermate)"],["w","","10 min nei corridoi fino ad Auber"],["m","A","solo treni per Marne-la-Vallée–Chessy (ultima fermata)"]],dur:"≈ 1 h 25 → ai cancelli verso le 9:15, aprono alle 9:30 (stima, è ora di punta)",nb:"<b>Guardate la destinazione del RER A:</b> gli altri treni vanno a Boissy o Torcy. Se Maps propone un altro cambio, va bene lo stesso.",links:[["Percorso fino a Disneyland",gm("Marne-la-Vallée Chessy",{from:H})],["Guida Disneyland","https://guida-disneyland-paris-ynoy.pages.dev",1]]},
   {t:"Mattina",title:"Disney Adventure World (ex Walt Disney Studios)"},
   {t:"Pom.",title:"Disneyland Park"},
   {t:"22:00",go:1,lab:"chiusura",title:"Casa, alla chiusura dei parchi",legs:[["m","A","dir. Paris → Auber"],["w","","10 min fino a Saint-Lazare"],["m","12","dir. Mairie d’Aubervilliers → Lamarck-Caulaincourt"]],dur:"≈ 1 h 25 → a casa verso le 23:30",nb:"Alla chiusura i treni sono pieni: per evitare la ressa uscite 10 minuti prima. Le metro chiudono poco dopo mezzanotte.",links:[["Torna a casa",gm(H,{from:"Marne-la-Vallée Chessy"})]]}
@@ -509,7 +526,7 @@ const step=s=>{const cls=[s.go?"go":"",s.opt?"opt":"",s.warn?"warnrow":""].join(
  ${s.dur?`<p class="dur">${esc(s.dur)}</p>`:""}
  ${s.list?`<ul>${s.list.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
  ${s.nb?`<p class="nb">${s.nb}</p>`:""}
- ${s.links?`<div class="links">${s.links.map(([a,u],i)=>`<a class="btn${i?" alt":""}" href="${esc(u)}"${tgt}>${esc(a)}</a>`).join("")}</div>`:""}
+ ${s.links?`<div class="links">${s.links.map(([a,u,x],i)=>`<a class="btn${i?" alt":""}" href="${esc(u)}"${x?' target="_blank" rel="noopener"':tgt}>${esc(a)}</a>`).join("")}</div>`:""}
  </div></li>`};
 
 /* ---------- mappa ---------- */
@@ -544,6 +561,7 @@ const show=i=>{cur=i;const d=DAYS[i];
  for(const b of tabsEl.querySelectorAll(".tab"))b.setAttribute("aria-selected",String(+b.dataset.i===i));
  {const b=tabsEl.querySelector(".tab[aria-selected=true]"),r=b.getBoundingClientRect(),t=tabsEl.getBoundingClientRect();if(r.left<t.left||r.right>t.right)tabsEl.scrollLeft+=r.left-t.left-(t.width-r.width)/2}
  main.innerHTML=`<div class="wrap daywrap"><div class="dhead"><p class="kicker">Giorno ${i+1} di ${DAYS.length}</p><h2>${d.title}</h2><p class="dsub">${d.sub}</p><ul class="chips" aria-label="Aperture e avvisi">${d.hours.split(" · ").map(h=>`<li>${h}</li>`).join("")}</ul></div>
+ ${d.guide?`<a class="guide" href="${esc(d.guide.url)}" target="_blank" rel="noopener"><span class="g-ic" aria-hidden="true">🏰</span><span class="g-tx"><b>${esc(d.guide.title)}</b><small>${esc(d.guide.sub)}</small></span><span class="g-go">Apri la guida</span></a>`:""}
  <div class="dgrid"><div class="mapcol"><div class="card mapcard"><div class="fig"><svg id="mapsvg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Mappa degli spostamenti di ${d.title}"></svg></div>
  <ul class="legend">${d.pins.map(([n,,t])=>`<li><span class="pin">${n}</span>${esc(t)}</li>`).join("")}</ul>
  <p class="key">Puntini = a piedi · linee colorate = metro e RER · verde chiaro = la vostra linea 12. Mappa schematica, non in scala.</p></div></div>
@@ -571,7 +589,7 @@ const renderNext=()=>{const now=new Date(),idx=dayIndex(now),mins=now.getHours()
  <div><div class="nx-head"><span>Prossima uscita · ${d===idx?"oggi":esc(DAYS[d].title)}</span>${when?`<span class="nx-when${diff<=30?" soon":""}">${when}</span>`:""}</div>
  <h3 class="nx-title">→ ${esc(s.title)}</h3>
  ${s.legs?`<div class="nx-legs">${s.legs.map(([k,l])=>badge(k,l)).join("")}${s.dur?`<span class="dur">${esc(s.dur)}</span>`:""}</div>`:""}</div>
- <div class="nx-btns">${s.links?`<a class="btn" href="${esc(s.links[0][1])}"${tgt}>Apri il percorso</a>`:""}<button class="btn alt" type="button" data-i="${d}">Vedi la giornata</button></div>`;
+ <div class="nx-btns">${s.links?`<a class="btn" href="${esc(s.links[0][1])}"${tgt}>Apri il percorso</a>`:""}${DAYS[d].guide?`<a class="btn alt" href="${esc(DAYS[d].guide.url)}" target="_blank" rel="noopener">🏰 Guida Disneyland</a>`:""}<button class="btn alt" type="button" data-i="${d}">Vedi la giornata</button></div>`;
  nextEl.hidden=false};
 nextEl.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)go(+b.dataset.i,true)});
 renderNext();setInterval(renderNext,60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)renderNext()});
