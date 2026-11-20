@@ -2,134 +2,234 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Parigi in tasca · 22–26 novembre</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Parigi 22–26 novembre: quando uscire, che metro prendere e i percorsi pronti su Google Maps.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#007852">
+<meta name="theme-color" content="#0F1B33">
 <meta property="og:title" content="Parigi in tasca · 22–26 novembre">
 <meta property="og:description" content="Quando uscire, che metro prendere e i percorsi pronti su Google Maps, giorno per giorno.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23007852'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='white'%3E12%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='11' width='58' height='42' rx='8' fill='%232D5A4C'/%3E%3Crect x='7' y='15' width='50' height='34' rx='5' fill='%231E4C93'/%3E%3Crect x='10' y='18' width='44' height='28' rx='3' fill='none' stroke='white' stroke-width='2'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='22' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..700;1,6..96,500..700&family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* VOICE: pratico, da tenere in tasca, frasi corte.
-   IDEA: la mappa della metro di Parigi; la linea 12 (verde) è la spina dorsale del viaggio.
-   PICTURE: mappa schematica del giorno + orario a fermate, come una linea della metro.
-   COLOUR and TYPE: bianco, verde linea 12, rosso per «esci entro», colori ufficiali delle linee; Figtree.
-   LAYOUT: banda verde, settimana in breve, cose da fare, schede dei giorni; mappa e orario affiancati su schermo largo. */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d1210);--ink:light-dark(#111614,#e9efec);--mute:light-dark(#55615b,#a0b2a9);--rule:light-dark(#dce4e0,#26332d);--card:light-dark(#f2f6f4,#141b18);--green:#007852;--go:light-dark(#c4302a,#ff7d70);--river:light-dark(#b8d8ec,#1d3b4e);--gold:light-dark(#c38f00,#e7b72e);--warn:light-dark(#8a5a00,#f0c35a)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+/* IDEA: Parigi vista dalla strada. La targa smaltata blu delle vie (cornice verde Guimard) apre la pagina,
+   il ferro battuto dei balconi Haussmann chiude la testata, la settimana è disegnata come una linea della metro.
+   TYPE: Bodoni Moda (didone, la Parigi di Dior e dell'Opéra) per i titoli · Barlow Condensed per orari e cartelli
+   (come la segnaletica RATP) · Figtree per il testo.
+   LAYOUT: testata notte con targa · settimana + cose da fare · cosa cambia · schede dei giorni (mappa e orario affiancati) · biglietti · fonti. */
+:root{
+ --paper:#F5F6F9;--raised:#FFFFFF;--card:#ECEFF4;--ink:#141A27;--mute:#576176;--rule:#D8DDE7;
+ --night:#0F1B33;--plaque:#1E4C93;--guimard:#2D5A4C;--gilt:#D9B867;--gold:#9A7420;
+ --go:#C21D2D;--warn:#8A5A00;--river:#B5CFE8;--champs:#C9A54E;--pin:#1C3A6B;--focus:#1E4C93;
+ --display:"Bodoni Moda",Didot,"Bodoni 72",Georgia,serif;
+ --sign:"Barlow Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+ --text:Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
+ --gut-l:max(5vw,16px,env(safe-area-inset-left,0px));--gut-r:max(5vw,16px,env(safe-area-inset-right,0px));
+ color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --paper:#0C1220;--raised:#141C2E;--card:#121A2B;--ink:#E8ECF4;--mute:#A0AABE;--rule:#263049;
+ --night:#0A1428;--gold:#D9B867;--go:#FF7668;--warn:#F0C35A;--river:#1D3954;--pin:#3E6CC2;--focus:#8DB2FF;color-scheme:dark}}
+:root[data-theme="dark"]{
+ --paper:#0C1220;--raised:#141C2E;--card:#121A2B;--ink:#E8ECF4;--mute:#A0AABE;--rule:#263049;
+ --night:#0A1428;--gold:#D9B867;--go:#FF7668;--warn:#F0C35A;--river:#1D3954;--pin:#3E6CC2;--focus:#8DB2FF;color-scheme:dark}
+
 *{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
-.band{padding:clamp(24px,4vw,56px) max(5vw,16px)}
-.wrap{max-width:1240px;margin:0 auto}
-a{color:inherit}html{scroll-padding-top:72px}
-h1,h2,h3{line-height:1.08;text-wrap:balance;margin:0}
-h1{font-size:clamp(34px,6vw,52px);font-weight:800}
-h2{font-size:clamp(26px,3.6vw,34px);font-weight:800}
-h3{font-size:17px;font-weight:800;line-height:1.25}
-.hero{background:var(--green);color:#fff}
-.hero p{margin:10px 0 0;max-width:60ch}
-.hero .meta{margin-top:12px;font-size:15px;opacity:.92}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:600;text-decoration:none;font-size:15px}
-.btn:focus-visible,.tab:focus-visible,.wk-row:focus-visible{outline:3px solid var(--go);outline-offset:2px}
-.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
-.hero .btn{background:#fff;color:#0b3d2b;margin-top:18px}
-.week{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:0}
-.wk-row{display:grid;grid-template-columns:4.6em minmax(0,1fr) auto;gap:12px;align-items:baseline;width:100%;padding:12px 4px;border:0;border-top:1px solid var(--rule);background:none;color:var(--ink);font:inherit;text-align:left;cursor:pointer;min-height:48px}
-.wk-row b{font-weight:800;white-space:nowrap}
-.wk-out{white-space:nowrap;color:var(--go);font-weight:800;text-align:right}
-.wk-out small{display:block;font-size:12px;font-weight:600}
-.todo{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
-.todo li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start}
-.box{width:22px;height:22px;border:2.5px solid var(--ink);border-radius:6px;margin-top:2px}
-.chg{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
-.chg li{padding:12px 14px;border-radius:12px;background:var(--card)}
-.two{display:grid;gap:32px}
-@media(min-width:860px){.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
-.tabs{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule);padding:8px max(5vw,16px)}
-.tabs .wrap{display:flex;gap:6px;overflow-x:auto}
-.tab{flex:none;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid var(--rule);background:var(--bg);color:var(--ink);font:600 15px Figtree,system-ui,sans-serif;cursor:pointer}
-.tab[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.dhead p{margin:6px 0 0;color:var(--mute)}
-.hours{margin-top:12px;padding:10px 14px;border-radius:12px;background:var(--card);font-size:15px}
-.hours b{font-weight:800}
-.dgrid{display:grid;gap:24px;margin-top:20px}
-@media(min-width:960px){.dgrid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px}.mapcol{position:sticky;top:76px;align-self:start}}
-.fig{position:relative;aspect-ratio:600/521;border-radius:14px;overflow:hidden;background:var(--card)}
+html{scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--text);overflow-x:clip;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:inherit;text-underline-offset:.18em}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font:600 clamp(30px,4.2vw,42px)/1.05 var(--display);letter-spacing:-.005em}
+h3{font-size:17px;font-weight:700;line-height:1.3}
+.band{padding-block:clamp(36px,5vw,64px);padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.wrap{max-width:1200px;margin:0 auto}
+.eyebrow{font:600 15px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.14em;margin:0}
+.sec-head{display:grid;gap:6px}
+.sec-head .eyebrow{color:var(--gold)}
+
+/* ---------- testata ---------- */
+.hero{background:var(--night);color:#fff;margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);position:relative}
+.hero .band{padding-block:clamp(36px,6vw,80px) clamp(40px,5vw,64px)}
+.hero-in{display:grid;gap:32px}
+@media(min-width:880px){.hero-in{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:end;gap:56px}}
+.hero .eyebrow{color:var(--gilt)}
+h1{font:600 clamp(56px,12.5vw,118px)/.9 var(--display);letter-spacing:-.02em;margin-top:14px}
+h1 em{display:block;font-style:italic;font-weight:500;color:var(--gilt);letter-spacing:-.01em}
+.lede{margin:20px 0 0;max-width:34ch;font-size:clamp(17px,2vw,19px);line-height:1.5;color:#D7DEEC}
+.hero .btn{margin-top:26px;background:#fff;color:#0F1B33;border-color:#fff}
+.hero .btn:hover{background:var(--gilt);border-color:var(--gilt)}
+.home{display:grid;gap:16px;justify-items:start}
+.plaque{display:grid;justify-items:center;gap:2px;padding:12px 26px 13px;background:var(--plaque);color:#fff;border:5px solid var(--guimard);border-radius:12px;outline:2px solid #fff;outline-offset:-10px;box-shadow:0 14px 30px rgb(0 0 0 / .35);font-family:var(--sign);text-transform:uppercase;line-height:1}
+.pl-arr{font-size:13px;font-weight:600;letter-spacing:.08em;padding-top:4px}
+.pl-arr sup{font-size:.7em;vertical-align:.45em;text-transform:none}
+.pl-name{font-size:clamp(30px,4vw,38px);font-weight:700;letter-spacing:.04em;padding:0 4px 4px}
+.home-meta{margin:0;font-size:15px;line-height:1.55;color:#C9D2E4;max-width:42ch}
+.home-meta b{color:#fff;font-weight:700}
+.home-meta .lb{vertical-align:-6px;margin-right:2px}
+.railing{height:30px;background:var(--night) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='30' viewBox='0 0 56 30'%3E%3Cg fill='none' stroke='%23D9B867' stroke-width='1.6'%3E%3Cpath d='M0 3H56M0 27H56M0 3V27M28 3V27'/%3E%3Cpath d='M14 3c-6 0-7 6-7 6M14 3c6 0 7 6 7 6M14 27c-6 0-7-6-7-6M14 27c6 0 7-6 7-6M42 3c-6 0-7 6-7 6M42 3c6 0 7 6 7 6M42 27c-6 0-7-6-7-6M42 27c6 0 7-6 7-6'/%3E%3Ccircle cx='14' cy='15' r='5'/%3E%3Ccircle cx='42' cy='15' r='5'/%3E%3C/g%3E%3C/svg%3E") repeat-x center/56px 30px;opacity:.9;border-bottom:3px solid var(--gilt)}
+
+/* ---------- bottoni ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border-radius:10px;border:2px solid var(--plaque);background:var(--plaque);color:#fff;font:700 15px/1.2 var(--text);text-decoration:none;transition:background-color .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--night);border-color:var(--night)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--paper)}
+.btn:focus-visible,.tab:focus-visible,.wk-row:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* ---------- settimana: una linea della metro ---------- */
+.two{display:grid;gap:44px}
+@media(min-width:880px){.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}}
+.week{list-style:none;padding:0;margin:20px 0 0}
+.week li{position:relative;padding-left:34px}
+.week li::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:6px;background:#007852}
+.week li:first-child::before{top:50%}.week li:last-child::before{bottom:50%}
+.week li::after{content:"";position:absolute;left:4px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--paper);border:4px solid #007852}
+.wk-row{display:grid;grid-template-columns:4.2rem minmax(0,1fr) auto;gap:14px;align-items:center;width:100%;padding:14px 6px;border:0;border-bottom:1px solid var(--rule);background:none;color:var(--ink);font:inherit;text-align:left;cursor:pointer;min-height:58px;border-radius:0}
+.week li:last-child .wk-row{border-bottom:0}
+.wk-row:hover{background:var(--card)}
+.wk-day{font:700 19px/1 var(--sign);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.wk-what{line-height:1.35}
+.wk-out{white-space:nowrap;color:var(--go);font:700 24px/1 var(--sign);text-align:right;font-variant-numeric:tabular-nums}
+.wk-out small{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.todo{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:14px}
+.todo li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
+.box{width:22px;height:22px;border:2px solid var(--ink);border-radius:5px;margin-top:2px}
+
+/* ---------- cosa cambia ---------- */
+.chg{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+@media(min-width:760px){.chg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.chg li{padding:16px 18px;border-radius:12px;background:var(--raised);border:1px solid var(--rule)}
+.chg b{display:block;font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;color:var(--plaque)}
+
+/* ---------- giorni ---------- */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-block:1px solid var(--rule);padding-block:10px;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.tabs .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{flex:none;min-height:44px;padding:0 16px;border-radius:8px;border:1.5px solid var(--rule);background:transparent;color:var(--ink);font:700 17px/1 var(--sign);text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
+.tab:hover{border-color:var(--ink)}
+.tab[aria-selected=true]{background:var(--plaque);color:#fff;border-color:var(--plaque)}
+.dhead{display:grid;gap:8px}
+.dhead h2{font-size:clamp(34px,5.2vw,56px)}
+.dhead .eyebrow{color:var(--gold)}
+.dsub{margin:0;font:italic 500 clamp(19px,2.4vw,23px)/1.3 var(--display);color:var(--mute)}
+.hours{margin-top:10px;padding:14px 18px;border-radius:12px;background:var(--raised);border:1px solid var(--rule);font-size:15px;line-height:1.6}
+.hours .eyebrow{display:block;font-size:13px;color:var(--mute);margin-bottom:4px}
+.hours b{font-weight:700}
+.dgrid{display:grid;gap:28px;margin-top:28px}
+@media(min-width:960px){.dgrid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px}.mapcol{position:sticky;top:84px;align-self:start}}
+.fig{position:relative;aspect-ratio:600/521;max-width:100%;border-radius:12px;overflow:hidden;background:var(--card);border:1px solid var(--rule)}
 .fig>svg{position:absolute;inset:0;width:100%;height:100%}
 .river{fill:none;stroke:var(--river);stroke-linecap:round;stroke-linejoin:round}
-.champs{fill:none;stroke:var(--gold);stroke-linecap:round}
-.l12{fill:none;stroke:var(--green);stroke-linecap:round;stroke-linejoin:round;opacity:.35}
+.champs{fill:none;stroke:var(--champs);stroke-linecap:round}
+.l12{fill:none;stroke:#007852;stroke-linecap:round;stroke-linejoin:round;opacity:.35}
 .walk{fill:none;stroke:var(--ink);stroke-linecap:round;stroke-linejoin:round}
-.lbl{fill:var(--mute);paint-order:stroke;stroke:var(--card);stroke-linejoin:round;font-family:Figtree,system-ui,sans-serif;font-weight:600}
-.pinc{fill:var(--ink)}.pint{fill:var(--bg);font-family:Figtree,system-ui,sans-serif;font-weight:800}
-.legend{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:6px;font-size:15px}
+.lbl{fill:var(--mute);paint-order:stroke;stroke:var(--card);stroke-linejoin:round;font-family:var(--sign);font-weight:600;letter-spacing:.02em}
+.pinc{fill:var(--pin)}.pint{fill:#fff;font-family:var(--sign);font-weight:700}
+.legend{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;font-size:15px}
 .legend li{display:flex;gap:10px;align-items:center}
-.key{font-size:13px;color:var(--mute);margin-top:10px}
-.pin{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:13px;font-weight:800}
+.key{font-size:13px;color:var(--mute);margin:12px 0 0}
+.pin{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--pin);color:#fff;font:700 14px/1 var(--sign)}
+
+/* orario: come le fermate di una linea */
 ol.tl{list-style:none;margin:0;padding:0}
-.tl>li{display:grid;grid-template-columns:5.4em 20px minmax(0,1fr);column-gap:12px}
-.tm{text-align:right;font-weight:800;font-size:21px;line-height:1.1;white-space:nowrap;padding-top:2px}
-.tm small{display:block;font-size:12px;font-weight:600;color:var(--go)}
+.tl>li{display:grid;grid-template-columns:5.2rem 20px minmax(0,1fr);column-gap:14px}
+.tm{text-align:right;font:700 25px/1 var(--sign);letter-spacing:.01em;white-space:nowrap;padding-top:1px;font-variant-numeric:tabular-nums}
+.tm small{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--go);margin-bottom:3px}
 .rail{position:relative}
 .rail::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:4px;background:var(--rule)}
 .tl>li:first-child .rail::before{top:8px}.tl>li:last-child .rail::before{bottom:auto;height:10px}
-.dot{position:absolute;left:2px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:4px solid var(--ink)}
+.dot{position:absolute;left:2px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:4px solid var(--ink)}
 .go .tm{color:var(--go)}.go .dot{background:var(--go);border-color:var(--go)}
 .opt .dot{border-style:dashed;border-color:var(--mute)}
-.body{padding-bottom:22px}
-.opt .body{border:2px dashed var(--rule);border-radius:12px;padding:12px 14px;margin-bottom:22px}
+.body{padding-bottom:26px}
+.opt .body{border:1.5px dashed var(--mute);border-radius:12px;padding:14px 16px;margin-bottom:26px}
 .warnrow .tm{color:var(--warn)}.warnrow .dot{border-color:var(--warn)}
-.body h3{display:flex;gap:8px;align-items:flex-start}
+.body h3{display:flex;gap:9px;align-items:flex-start}
 .body p{margin:6px 0 0}
-.body ul{margin:6px 0 0;padding-left:18px}
-.legs{display:grid;gap:7px;margin-top:9px}
-.leg{display:flex;gap:9px;align-items:flex-start;font-size:15px}
+.body ul{margin:8px 0 0;padding-left:18px}
+.body ul li{margin:3px 0}
+.legs{display:grid;gap:8px;margin-top:10px}
+.leg{display:flex;gap:10px;align-items:flex-start;font-size:15px}
 .leg b{white-space:nowrap}
-.lb{flex:none;display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:50%;background:var(--c);color:var(--t);font-weight:800;font-size:13px}
+.lb{flex:none;display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:50%;background:var(--c);color:var(--t);font:700 14px/1 var(--text)}
 .lb.rer{border-radius:7px}
 .lb.wk{background:transparent;border:2px dashed var(--mute);color:var(--mute)}
-.lb.tx{border-radius:7px;background:var(--ink);color:var(--bg);font-size:11px;padding:0 6px}
+.lb.tx{border-radius:7px;background:var(--ink);color:var(--paper);font-size:11px;padding:0 6px}
 .lb svg{width:15px;height:15px}
 .dur{font-weight:700}
 .nb{color:var(--mute);font-size:15px}
 .nb b{color:var(--ink)}
-.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-table{border-collapse:collapse;width:100%;font-size:15px;margin-top:12px}
-th,td{padding:8px 6px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
-td.n,th.n{text-align:right;white-space:nowrap}
-tfoot td{font-weight:800}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+
+/* ---------- biglietti ---------- */
+.tickets{background:var(--card)}
+.ticket{display:grid;grid-template-columns:auto minmax(0,1fr);margin-top:20px;background:var(--raised);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.stub{display:grid;align-content:center;justify-items:center;gap:4px;padding:16px 20px;border-right:2px dashed var(--rule);text-align:center}
+.stub .eyebrow{font-size:12px;color:var(--mute)}
+.price{font:600 40px/1 var(--display);font-variant-numeric:lining-nums;white-space:nowrap}
+.stub small{font-size:12px;color:var(--mute)}
+.ticket p{margin:0;padding:16px 18px;align-self:center}
+table{border-collapse:collapse;width:100%;font-size:15px;margin-top:18px}
+th,td{padding:9px 6px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font:700 14px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tfoot td{font-weight:800;border-bottom:0}
 .steps{margin:12px 0 0;padding-left:20px}.steps li{margin:6px 0}
+.tickets h3{font:700 19px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.06em}
+.note{font-size:14px;color:var(--mute)}
+
+/* ---------- fonti ---------- */
+footer.band{border-top:1px solid var(--rule)}
+footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.08em}
 .src{font-size:14px;color:var(--mute);columns:2 320px;column-gap:32px;padding-left:18px}
 .src li{margin:4px 0;break-inside:avoid}
-.note{font-size:14px;color:var(--mute)}
-@media(max-width:600px){table{font-size:14px}.tl>li{grid-template-columns:4.3em 20px minmax(0,1fr);column-gap:9px}.tm{font-size:18px}.wk-row{grid-template-columns:4.1em minmax(0,1fr) auto;gap:10px}}
-@media(prefers-reduced-motion:no-preference){.daywrap{animation:in .25s ease-out}@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+.signoff{margin:32px 0 0;font:italic 500 28px/1 var(--display);color:var(--gold)}
+
+@media(max-width:600px){
+ table{font-size:14px}
+ .tl>li{grid-template-columns:4.3rem 20px minmax(0,1fr);column-gap:10px}
+ .tm{font-size:21px}
+ .wk-row{grid-template-columns:3.6rem minmax(0,1fr) auto;gap:10px}
+ .wk-day{font-size:17px}.wk-out{font-size:21px}
+ .ticket{grid-template-columns:minmax(0,1fr)}
+ .stub{border-right:0;border-bottom:2px dashed var(--rule);grid-auto-flow:column;justify-content:space-between;align-items:center;justify-items:start;text-align:left}
+}
+@media(prefers-reduced-motion:no-preference){.daywrap{animation:in .3s ease-out}@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
 </style>
 </head>
 <body>
-<header class="band hero">
- <div class="wrap">
-  <h1>Parigi in tasca</h1>
-  <p style="font-size:20px;font-weight:600;margin-top:6px">22–26 novembre</p>
-  <p>Quando uscire, che metro prendere e il percorso già pronto su Google Maps, giorno per giorno.</p>
-  <p class="meta">Casa: 17 rue Duhesme · Metro Lamarck-Caulaincourt, linea 12 (verde)<br>Orari e prezzi controllati il 20/11/2026 · i tempi di viaggio sono stime con un po’ di margine</p>
-  <a class="btn" id="home" href="#" target="_blank" rel="noopener">Torna a casa da dove sei</a>
+<header class="hero">
+ <div class="band">
+  <div class="wrap hero-in">
+   <div>
+    <p class="eyebrow">Guida · 22–26 novembre 2026</p>
+    <h1>Parigi <em>in tasca</em></h1>
+    <p class="lede">Quando uscire, che metro prendere e il percorso già pronto su Google Maps, giorno per giorno.</p>
+    <a class="btn" id="home" href="#" target="_blank" rel="noopener">Torna a casa da dove sei</a>
+   </div>
+   <div class="home">
+    <div class="plaque" role="img" aria-label="Casa: rue Duhesme, 18° arrondissement">
+     <span class="pl-arr">18<sup>e</sup> Arr<sup>t</sup></span>
+     <span class="pl-name">Rue Duhesme</span>
+    </div>
+    <p class="home-meta"><b>Casa al n. 17</b> · metro <span class="lb" style="--c:#007852;--t:#fff">12</span> <b>Lamarck-Caulaincourt</b>, linea 12 (verde)<br>Orari e prezzi controllati il 20/11/2026. I tempi di viaggio sono stime con un po’ di margine.</p>
+   </div>
+  </div>
  </div>
+ <div class="railing" aria-hidden="true"></div>
 </header>
 
 <section class="band" aria-labelledby="wk">
  <div class="wrap two">
   <div>
-   <h2 id="wk">La settimana in breve</h2>
+   <div class="sec-head"><p class="eyebrow">Domenica → giovedì</p><h2 id="wk">La settimana in breve</h2></div>
    <ul class="week" id="week"></ul>
   </div>
   <div>
-   <h2>Da fare prima di partire</h2>
+   <div class="sec-head"><p class="eyebrow">Prima di partire</p><h2>Da fare</h2></div>
    <ul class="todo">
     <li><span class="box"></span><div><b>Notre-Dame:</b> prenotate l’ingresso gratuito di domenica alle 13:45 sul <a href="https://www.notredamedeparis.fr" target="_blank" rel="noopener">sito ufficiale</a>. Le prenotazioni si aprono 2–3 giorni prima.</div></li>
     <li><span class="box"></span><div><b>Biglietti:</b> comprate il Navigo Semaine sul telefono (32,40 € a testa). Come fare è in fondo alla pagina.</div></li>
@@ -143,12 +243,12 @@ tfoot td{font-weight:800}
 
 <section class="band" aria-labelledby="chgh" style="padding-top:0">
  <div class="wrap">
-  <h2 id="chgh">Cosa cambia rispetto al programma</h2>
+  <div class="sec-head"><p class="eyebrow">Rispetto al programma</p><h2 id="chgh">Cosa cambia</h2></div>
   <ul class="chg">
-   <li><b>Orangerie:</b> è chiusa il martedì. Si sposta a mercoledì pomeriggio, tra Versailles e Dior.</li>
-   <li><b>Domenica, dal pranzo a Notre-Dame:</b> servono circa 35 minuti. Con l’ingresso alle 13:45 uscite dal ristorante entro le 13:05.</li>
-   <li><b>Domenica sera:</b> accensione delle luminarie e primo giorno del mercatino degli Champs-Élysées, quindi tantissima gente. Negozi prima delle 18; per tornare, linea 12 da Madeleine.</li>
-   <li><b>Versailles:</b> il biglietto Passport comprende anche il Trianon e la mostra «Marie-Antoinette» di Sofia Coppola. Con il programma attuale restano fuori: è l’alternativa all’Orangerie.</li>
+   <li><b>Orangerie</b>È chiusa il martedì. Si sposta a mercoledì pomeriggio, tra Versailles e Dior.</li>
+   <li><b>Domenica, dal pranzo a Notre-Dame</b>Servono circa 35 minuti. Con l’ingresso alle 13:45 uscite dal ristorante entro le 13:05.</li>
+   <li><b>Domenica sera</b>Accensione delle luminarie e primo giorno del mercatino degli Champs-Élysées, quindi tantissima gente. Negozi prima delle 18; per tornare, linea 12 da Madeleine.</li>
+   <li><b>Versailles</b>Il biglietto Passport comprende anche il Trianon e la mostra «Marie-Antoinette» di Sofia Coppola. Con il programma attuale restano fuori: è l’alternativa all’Orangerie.</li>
   </ul>
  </div>
 </section>
@@ -157,11 +257,14 @@ tfoot td{font-weight:800}
 
 <main class="band" id="day" aria-live="polite"></main>
 
-<section class="band" aria-labelledby="tk" style="background:var(--card)">
+<section class="band tickets" aria-labelledby="tk">
  <div class="wrap two">
   <div>
-   <h2 id="tk">Biglietti</h2>
-   <p><b>Consiglio: Navigo Semaine sul telefono, 32,40 € a testa.</b> Vale da lunedì 23 a domenica 29, in tutte le zone: Disney, Versailles e Orly compresi.</p>
+   <div class="sec-head"><p class="eyebrow">Metro, RER e aeroporto</p><h2 id="tk">Biglietti</h2></div>
+   <div class="ticket">
+    <div class="stub"><span class="eyebrow">Navigo Semaine</span><span class="price">32,40 €</span><small>a testa</small></div>
+    <p><b>Consiglio: il Navigo Semaine sul telefono.</b> Vale da lunedì 23 a domenica 29, in tutte le zone: Disney, Versailles e Orly compresi.</p>
+   </div>
    <table>
     <thead><tr><th>Con biglietti singoli</th><th class="n">a testa</th></tr></thead>
     <tbody>
@@ -182,7 +285,7 @@ tfoot td{font-weight:800}
     <li>Ognuno sul proprio telefono: è personale e il telefono deve avere l’NFC.</li>
     <li>Ai tornelli appoggiate il telefono sul lettore Navigo.</li>
    </ol>
-   <h3 style="margin-top:22px">Come usare i link Maps</h3>
+   <h3 style="margin-top:26px">Come usare i link Maps</h3>
    <ol class="steps">
     <li>Il bottone apre Google Maps con partenza, arrivo e mezzo già scelti.</li>
     <li>Siete altrove? Toccate la partenza e scegliete «La tua posizione».</li>
@@ -194,7 +297,7 @@ tfoot td{font-weight:800}
  </div>
 </section>
 
-<footer class="band" style="border-top:1px solid var(--rule)">
+<footer class="band">
  <div class="wrap">
   <h3>Fonti (controllate il 20/11/2026)</h3>
   <ul class="src">
@@ -217,6 +320,7 @@ tfoot td{font-weight:800}
    <li><a href="https://www.toureiffel.paris/en/news/visit/what-time-does-eiffel-tower-light-and-sparkle" target="_blank" rel="noopener">Tour Eiffel: scintillio ogni ora</a></li>
    <li><a href="https://www.lechotouristique.com/transport/transports-ce-que-l-on-sait-des-perturbations-attendues-pour-la-greve-du-5-novembre" target="_blank" rel="noopener">Scioperi di novembre</a></li>
   </ul>
+  <p class="signoff">Bon voyage.</p>
  </div>
 </footer>
 
@@ -317,7 +421,7 @@ const DAYS=[
 /* ---------- settimana ---------- */
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tabsEl=document.getElementById("tabs"),main=document.getElementById("day");
-document.getElementById("week").innerHTML=DAYS.map((d,i)=>`<li><button class="wk-row" data-i="${i}"><b>${d.short}</b><span>${esc(d.what)}</span><span class="wk-out"><small>esci entro</small>${d.first}</span></button></li>`).join("");
+document.getElementById("week").innerHTML=DAYS.map((d,i)=>`<li><button class="wk-row" data-i="${i}"><span class="wk-day">${d.short}</span><span class="wk-what">${esc(d.what)}</span><span class="wk-out"><small>esci entro</small>${d.first}</span></button></li>`).join("");
 
 /* ---------- orario ---------- */
 const badge=(k,l)=>{if(k==="w")return `<span class="lb wk" aria-label="a piedi">${WALK}</span>`;if(k==="t")return `<span class="lb tx">TAXI</span>`;const c=LC[l],rer=/[A-Z]/.test(l);return `<span class="lb${rer?" rer":""}" style="--c:${c[0]};--t:${c[1]}">${l}</span>`};
@@ -363,10 +467,10 @@ tabsEl.innerHTML=DAYS.map((d,i)=>`<button class="tab" role="tab" id="t-${d.id}" 
 let ro=null;
 const show=i=>{cur=i;const d=DAYS[i];
  for(const b of tabsEl.querySelectorAll(".tab"))b.setAttribute("aria-selected",String(+b.dataset.i===i));
- main.innerHTML=`<div class="wrap daywrap"><div class="dhead"><h2>${d.title}</h2><p>${d.sub}</p><div class="hours">${d.hours}</div></div>
+ main.innerHTML=`<div class="wrap daywrap"><div class="dhead"><p class="eyebrow">Giorno ${i+1} di ${DAYS.length}</p><h2>${d.title}</h2><p class="dsub">${d.sub}</p><div class="hours"><span class="eyebrow">Aperture e avvisi</span>${d.hours}</div></div>
  <div class="dgrid"><div class="mapcol"><div class="fig"><svg id="mapsvg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Mappa degli spostamenti di ${d.title}"></svg></div>
  <ul class="legend">${d.pins.map(([n,,t])=>`<li><span class="pin">${n}</span>${esc(t)}</li>`).join("")}</ul>
- <p class="key">Puntini neri = a piedi · linee colorate = metro e RER · verde chiaro = la vostra linea 12. Mappa schematica, non in scala.</p></div>
+ <p class="key">Puntini = a piedi · linee colorate = metro e RER · verde chiaro = la vostra linea 12. Mappa schematica, non in scala.</p></div>
  <ol class="tl">${d.steps.map(step).join("")}</ol></div></div>`;
  if(ro)ro.disconnect();ro=new ResizeObserver(draw);ro.observe(document.getElementById("mapsvg"));draw()};
 const go=(i,scroll)=>{if(location.hash!=="#"+DAYS[i].id)location.hash=DAYS[i].id;else show(i);if(scroll)document.querySelector(".tabs").scrollIntoView({behavior:"smooth"})};
