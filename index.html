@@ -571,7 +571,7 @@ const renderNext=()=>{const now=new Date(),idx=dayIndex(now),mins=now.getHours()
  <div><div class="nx-head"><span>Prossima uscita · ${d===idx?"oggi":esc(DAYS[d].title)}</span>${when?`<span class="nx-when${diff<=30?" soon":""}">${when}</span>`:""}</div>
  <h3 class="nx-title">→ ${esc(s.title)}</h3>
  ${s.legs?`<div class="nx-legs">${s.legs.map(([k,l])=>badge(k,l)).join("")}${s.dur?`<span class="dur">${esc(s.dur)}</span>`:""}</div>`:""}</div>
- <div class="nx-btns">${s.links?`<a class="btn" href="${esc(s.links[0][1])}" target="_blank" rel="noopener">Apri il percorso</a>`:""}<button class="btn alt" type="button" data-i="${d}">Vedi la giornata</button></div>`;
+ <div class="nx-btns">${s.links?`<a class="btn" href="${esc(s.links[0][1])}"${tgt}>Apri il percorso</a>`:""}<button class="btn alt" type="button" data-i="${d}">Vedi la giornata</button></div>`;
  nextEl.hidden=false};
 nextEl.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)go(+b.dataset.i,true)});
 renderNext();setInterval(renderNext,60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)renderNext()});
