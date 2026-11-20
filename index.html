@@ -7,244 +7,289 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Parigi 22–26 novembre: quando uscire, che metro prendere e i percorsi pronti su Google Maps.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#0F1B33">
+<meta name="theme-color" content="#0B1430">
 <meta property="og:title" content="Parigi in tasca · 22–26 novembre">
 <meta property="og:description" content="Quando uscire, che metro prendere e i percorsi pronti su Google Maps, giorno per giorno.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='11' width='58' height='42' rx='8' fill='%232D5A4C'/%3E%3Crect x='7' y='15' width='50' height='34' rx='5' fill='%231E4C93'/%3E%3Crect x='10' y='18' width='44' height='28' rx='3' fill='none' stroke='white' stroke-width='2'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='22' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1430'/%3E%3Crect x='9' y='17' width='46' height='30' rx='6' fill='%232349C4' stroke='%232D5A4C' stroke-width='3'/%3E%3Crect x='13' y='21' width='38' height='22' rx='3' fill='none' stroke='white' stroke-width='1.6'/%3E%3Ctext x='32' y='38' font-family='Arial' font-weight='800' font-size='15' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..700;1,6..96,500..700&family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* IDEA: Parigi vista dalla strada. La targa smaltata blu delle vie (cornice verde Guimard) apre la pagina,
-   il ferro battuto dei balconi Haussmann chiude la testata, la settimana è disegnata come una linea della metro.
-   TYPE: Bodoni Moda (didone, la Parigi di Dior e dell'Opéra) per i titoli · Barlow Condensed per orari e cartelli
-   (come la segnaletica RATP) · Figtree per il testo.
-   LAYOUT: testata notte con targa · settimana + cose da fare · cosa cambia · schede dei giorni (mappa e orario affiancati) · biglietti · fonti. */
+/* IDEA: app di viaggio moderna con l'anima di Parigi. Testata «Parigi di notte» (blu notte, alone dei lampioni),
+   la targa smaltata della via di casa, colori ufficiali delle linee. Schede arrotondate, «Prossima uscita» in cima,
+   giorni nella barra in basso sul telefono come un'app.
+   TYPE: Bricolage Grotesque per i titoli, Figtree per testo e orari.
+   LAYOUT: testata · prossima uscita · settimana + da fare · cosa cambia · giorno (mappa e orario) · biglietti · fonti. */
 :root{
- --paper:#F5F6F9;--raised:#FFFFFF;--card:#ECEFF4;--ink:#141A27;--mute:#576176;--rule:#D8DDE7;
- --night:#0F1B33;--plaque:#1E4C93;--guimard:#2D5A4C;--gilt:#D9B867;--gold:#9A7420;
- --go:#C21D2D;--warn:#8A5A00;--river:#B5CFE8;--champs:#C9A54E;--pin:#1C3A6B;--focus:#1E4C93;
- --display:"Bodoni Moda",Didot,"Bodoni 72",Georgia,serif;
- --sign:"Barlow Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
- --text:Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
- --gut-l:max(5vw,16px,env(safe-area-inset-left,0px));--gut-r:max(5vw,16px,env(safe-area-inset-right,0px));
+ --bg:#F2F4F8;--surface:#FFFFFF;--surface-2:#E9EDF4;--ink:#0D1324;--mute:#596277;--rule:#E0E5EE;
+ --brand:#2349C4;--brand-2:#1A3797;--night:#0B1430;--lamp:#F3C969;--go:#D9303A;--warn:#9A6200;
+ --river:#BCD4EC;--champs:#D4AC52;--pin:#2349C4;--focus:#2349C4;--l12:#007852;
+ --shadow:0 1px 2px rgb(13 19 36 / .05),0 12px 32px -14px rgb(13 19 36 / .20);
+ --shadow-lo:0 1px 2px rgb(13 19 36 / .05),0 4px 14px -8px rgb(13 19 36 / .16);
+ --r-xl:28px;--r-lg:22px;--r-md:16px;--r-sm:10px;
+ --display:"Bricolage Grotesque",Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
+ --text:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --gut-l:max(4vw,16px,env(safe-area-inset-left,0px));--gut-r:max(4vw,16px,env(safe-area-inset-right,0px));
  color-scheme:light}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
- --paper:#0C1220;--raised:#141C2E;--card:#121A2B;--ink:#E8ECF4;--mute:#A0AABE;--rule:#263049;
- --night:#0A1428;--gold:#D9B867;--go:#FF7668;--warn:#F0C35A;--river:#1D3954;--pin:#3E6CC2;--focus:#8DB2FF;color-scheme:dark}}
+ --bg:#070C18;--surface:#101828;--surface-2:#182236;--ink:#EDF1F9;--mute:#9AA5BC;--rule:#212C43;
+ --brand:#4767F0;--brand-2:#3654D6;--go:#FF6A6A;--warn:#F2C25B;--river:#1B3550;--pin:#4767F0;--focus:#8FA8FF;
+ --shadow:0 1px 2px rgb(0 0 0 / .4),0 14px 34px -16px rgb(0 0 0 / .8);--shadow-lo:0 1px 2px rgb(0 0 0 / .4),0 6px 16px -10px rgb(0 0 0 / .7);color-scheme:dark}}
 :root[data-theme="dark"]{
- --paper:#0C1220;--raised:#141C2E;--card:#121A2B;--ink:#E8ECF4;--mute:#A0AABE;--rule:#263049;
- --night:#0A1428;--gold:#D9B867;--go:#FF7668;--warn:#F0C35A;--river:#1D3954;--pin:#3E6CC2;--focus:#8DB2FF;color-scheme:dark}
+ --bg:#070C18;--surface:#101828;--surface-2:#182236;--ink:#EDF1F9;--mute:#9AA5BC;--rule:#212C43;
+ --brand:#4767F0;--brand-2:#3654D6;--go:#FF6A6A;--warn:#F2C25B;--river:#1B3550;--pin:#4767F0;--focus:#8FA8FF;
+ --shadow:0 1px 2px rgb(0 0 0 / .4),0 14px 34px -16px rgb(0 0 0 / .8);--shadow-lo:0 1px 2px rgb(0 0 0 / .4),0 6px 16px -10px rgb(0 0 0 / .7);color-scheme:dark}
 
 *{box-sizing:border-box;min-width:0}
-html{scroll-padding-top:80px}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--text);overflow-x:clip;-webkit-text-size-adjust:100%}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
-a{color:inherit;text-underline-offset:.18em}
+html{scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--text);overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
 h1,h2,h3{margin:0;text-wrap:balance}
-h2{font:600 clamp(30px,4.2vw,42px)/1.05 var(--display);letter-spacing:-.005em}
+h2{font:800 clamp(28px,3.8vw,40px)/1.08 var(--display);letter-spacing:-.025em}
 h3{font-size:17px;font-weight:700;line-height:1.3}
-.band{padding-block:clamp(36px,5vw,64px);padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.band{padding-block:clamp(28px,4vw,52px);padding-left:var(--gut-l);padding-right:var(--gut-r)}
 .wrap{max-width:1200px;margin:0 auto}
-.eyebrow{font:600 15px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.14em;margin:0}
-.sec-head{display:grid;gap:6px}
-.sec-head .eyebrow{color:var(--gold)}
+.kicker{margin:0 0 6px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
+.card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.note{font-size:14px;color:var(--mute)}
 
 /* ---------- testata ---------- */
-.hero{background:var(--night);color:#fff;margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);position:relative}
-.hero .band{padding-block:clamp(36px,6vw,80px) clamp(40px,5vw,64px)}
-.hero-in{display:grid;gap:32px}
-@media(min-width:880px){.hero-in{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:end;gap:56px}}
-.hero .eyebrow{color:var(--gilt)}
-h1{font:600 clamp(56px,12.5vw,118px)/.9 var(--display);letter-spacing:-.02em;margin-top:14px}
-h1 em{display:block;font-style:italic;font-weight:500;color:var(--gilt);letter-spacing:-.01em}
-.lede{margin:20px 0 0;max-width:34ch;font-size:clamp(17px,2vw,19px);line-height:1.5;color:#D7DEEC}
-.hero .btn{margin-top:26px;background:#fff;color:#0F1B33;border-color:#fff}
-.hero .btn:hover{background:var(--gilt);border-color:var(--gilt)}
-.home{display:grid;gap:16px;justify-items:start}
-.plaque{display:grid;justify-items:center;gap:2px;padding:12px 26px 13px;background:var(--plaque);color:#fff;border:5px solid var(--guimard);border-radius:12px;outline:2px solid #fff;outline-offset:-10px;box-shadow:0 14px 30px rgb(0 0 0 / .35);font-family:var(--sign);text-transform:uppercase;line-height:1}
-.pl-arr{font-size:13px;font-weight:600;letter-spacing:.08em;padding-top:4px}
+.hero{margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:calc(env(safe-area-inset-top,0px) + 12px);padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px))}
+.hero-card{max-width:1240px;margin:0 auto;border-radius:var(--r-xl);color:#fff;overflow:hidden;
+ background:radial-gradient(70% 90% at 100% 0%,rgb(243 201 105 / .30),transparent 60%),radial-gradient(80% 90% at 0% 100%,rgb(35 73 196 / .55),transparent 62%),#0B1430;
+ padding:clamp(26px,5vw,60px) clamp(20px,4.5vw,60px)}
+.hero-in{display:grid;gap:30px}
+@media(min-width:880px){.hero-in{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:end;gap:48px}}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgb(255 255 255 / .1);border:1px solid rgb(255 255 255 / .16);font-size:14px;font-weight:600;color:#E6EBF7}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--lamp);box-shadow:0 0 12px var(--lamp)}
+h1{font:800 clamp(48px,10.5vw,96px)/.95 var(--display);letter-spacing:-.04em;margin-top:18px}
+h1 span{color:var(--lamp)}
+.lede{margin:16px 0 0;max-width:36ch;font-size:clamp(17px,2vw,19px);line-height:1.5;color:#CCD5E8}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero .btn{background:#fff;color:#0B1430}
+.hero .btn:hover{background:var(--lamp);color:#0B1430}
+.home{display:grid;gap:14px;justify-items:start}
+.plaque{display:grid;justify-items:center;gap:2px;padding:12px 24px 13px;background:#1E4C93;color:#fff;border:5px solid #2D5A4C;border-radius:12px;outline:2px solid #fff;outline-offset:-10px;box-shadow:0 14px 30px rgb(0 0 0 / .35);text-transform:uppercase;line-height:1;transform:rotate(-2deg)}
+.pl-arr{font-size:12px;font-weight:700;letter-spacing:.08em;padding-top:4px}
 .pl-arr sup{font-size:.7em;vertical-align:.45em;text-transform:none}
-.pl-name{font-size:clamp(30px,4vw,38px);font-weight:700;letter-spacing:.04em;padding:0 4px 4px}
-.home-meta{margin:0;font-size:15px;line-height:1.55;color:#C9D2E4;max-width:42ch}
+.pl-name{font:800 clamp(26px,3.4vw,32px)/1 var(--display);letter-spacing:.01em;padding:2px 4px 4px}
+.home-meta{margin:0;font-size:15px;line-height:1.6;color:#C3CCE0;max-width:44ch}
 .home-meta b{color:#fff;font-weight:700}
-.home-meta .lb{vertical-align:-6px;margin-right:2px}
-.railing{height:30px;background:var(--night) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='30' viewBox='0 0 56 30'%3E%3Cg fill='none' stroke='%23D9B867' stroke-width='1.6'%3E%3Cpath d='M0 3H56M0 27H56M0 3V27M28 3V27'/%3E%3Cpath d='M14 3c-6 0-7 6-7 6M14 3c6 0 7 6 7 6M14 27c-6 0-7-6-7-6M14 27c6 0 7-6 7-6M42 3c-6 0-7 6-7 6M42 3c6 0 7 6 7 6M42 27c-6 0-7-6-7-6M42 27c6 0 7-6 7-6'/%3E%3Ccircle cx='14' cy='15' r='5'/%3E%3Ccircle cx='42' cy='15' r='5'/%3E%3C/g%3E%3C/svg%3E") repeat-x center/56px 30px;opacity:.9;border-bottom:3px solid var(--gilt)}
+.home-meta .lb{vertical-align:-7px;margin-right:2px}
 
 /* ---------- bottoni ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border-radius:10px;border:2px solid var(--plaque);background:var(--plaque);color:#fff;font:700 15px/1.2 var(--text);text-decoration:none;transition:background-color .15s,color .15s,border-color .15s}
-.btn:hover{background:var(--night);border-color:var(--night)}
-.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
-.btn.alt:hover{background:var(--ink);color:var(--paper)}
-.btn:focus-visible,.tab:focus-visible,.wk-row:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;border:0;background:var(--brand);color:#fff;font:700 15px/1.2 var(--text);text-decoration:none;cursor:pointer;transition:background-color .15s,transform .15s,box-shadow .15s}
+.btn:hover{background:var(--brand-2)}
+.btn.alt{background:var(--surface-2);color:var(--ink)}
+.btn.alt:hover{background:var(--rule)}
+@media(prefers-reduced-motion:no-preference){.btn:active{transform:scale(.97)}}
+.btn:focus-visible,.tab:focus-visible,.wk-row:focus-visible,a:focus-visible,.todo input:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 
-/* ---------- settimana: una linea della metro ---------- */
-.two{display:grid;gap:44px}
-@media(min-width:880px){.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}}
-.week{list-style:none;padding:0;margin:20px 0 0}
-.week li{position:relative;padding-left:34px}
-.week li::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:6px;background:#007852}
-.week li:first-child::before{top:50%}.week li:last-child::before{bottom:50%}
-.week li::after{content:"";position:absolute;left:4px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--paper);border:4px solid #007852}
-.wk-row{display:grid;grid-template-columns:4.2rem minmax(0,1fr) auto;gap:14px;align-items:center;width:100%;padding:14px 6px;border:0;border-bottom:1px solid var(--rule);background:none;color:var(--ink);font:inherit;text-align:left;cursor:pointer;min-height:58px;border-radius:0}
-.week li:last-child .wk-row{border-bottom:0}
-.wk-row:hover{background:var(--card)}
-.today{display:inline-block;margin-left:6px;padding:2px 6px;border-radius:5px;background:var(--go);color:#fff;font:700 11px/1.2 var(--sign);letter-spacing:.08em;text-transform:uppercase;vertical-align:2px}
-.tab .today{font-size:0;width:8px;height:8px;padding:0;margin-left:7px;border-radius:50%;vertical-align:2px}
-.wk-day{font:700 19px/1 var(--sign);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
-.wk-what{line-height:1.35}
-.wk-out{white-space:nowrap;color:var(--go);font:700 24px/1 var(--sign);text-align:right;font-variant-numeric:tabular-nums}
-.wk-out small{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
-.todo{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:14px}
-.todo li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start}
-.todo input{appearance:none;-webkit-appearance:none;margin:2px 0 0;width:24px;height:24px;border:2px solid var(--ink);border-radius:6px;background:transparent;cursor:pointer;display:grid;place-items:center}
-.todo input:checked{background:var(--plaque);border-color:var(--plaque)}
-.todo input:checked::after{content:"";width:6px;height:12px;border:solid #fff;border-width:0 3px 3px 0;transform:translateY(-2px) rotate(45deg)}
-.todo input:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+/* ---------- prossima uscita ---------- */
+.next-band{padding-block:16px 0}
+.next{display:grid;gap:16px;padding:20px;border:1px solid var(--rule)}
+@media(min-width:760px){.next{grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:28px;padding:22px 28px}}
+.nx-time{display:grid;gap:2px}
+.nx-time small{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--go)}
+.nx-time b{font:800 44px/1 var(--display);letter-spacing:-.03em;color:var(--go);font-variant-numeric:tabular-nums}
+.nx-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px;color:var(--mute);font-weight:600}
+.nx-when{padding:3px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink);font-weight:700}
+.nx-when.soon{background:var(--go);color:#fff}
+.nx-title{font:800 22px/1.2 var(--display);letter-spacing:-.015em;margin-top:6px}
+.nx-legs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
+.nx-legs .dur{margin-left:4px;font-size:15px}
+.nx-btns{display:flex;flex-wrap:wrap;gap:8px}
+
+/* ---------- settimana e da fare ---------- */
+.two{display:grid;gap:28px}
+@media(min-width:880px){.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}}
+.panel{padding:24px}
+@media(min-width:600px){.panel{padding:28px}}
+.week{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:4px}
+.wk-row{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:14px;align-items:center;width:100%;padding:10px;border:0;border-radius:var(--r-md);background:none;color:var(--ink);font:inherit;text-align:left;cursor:pointer;transition:background-color .15s}
+.wk-row:hover{background:var(--surface-2)}
+.wk-chip{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--surface-2);font:800 20px/1 var(--display);letter-spacing:-.02em}
+.wk-chip small{font:700 11px/1 var(--text);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:-6px}
+.is-today .wk-chip{background:var(--brand);color:#fff}.is-today .wk-chip small{color:#D6DEFA}
+.wk-what{line-height:1.35;font-weight:600}
+.wk-out{white-space:nowrap;text-align:right;color:var(--go);font:800 20px/1 var(--text);font-variant-numeric:tabular-nums}
+.wk-out small{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+.today{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:var(--go);color:#fff;font:700 11px/1.4 var(--text);letter-spacing:.05em;text-transform:uppercase;vertical-align:2px}
+.todo{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:4px}
+.todo li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:10px;align-items:start;padding:10px;border-radius:var(--r-md)}
+.todo li:has(input:checked){background:var(--surface-2)}
+.todo input{appearance:none;-webkit-appearance:none;margin:1px 0 0;width:26px;height:26px;border:2px solid var(--mute);border-radius:50%;background:transparent;cursor:pointer;display:grid;place-items:center;transition:background-color .15s,border-color .15s}
+.todo input:checked{background:var(--brand);border-color:var(--brand)}
+.todo input:checked::after{content:"";width:6px;height:12px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:translateY(-2px) rotate(45deg)}
 .todo label{cursor:pointer}
 .todo input:checked+label{color:var(--mute)}
-.todo-note{margin:12px 0 0}
-.every{margin:18px 0 0;padding:14px 16px;border-radius:12px;background:var(--raised);border:1px solid var(--rule);font-size:15px}
+.todo-note{margin:10px 10px 0}
+.every{margin:16px 0 0;padding:14px 16px;border-radius:var(--r-md);background:var(--surface-2);font-size:15px}
 
 /* ---------- cosa cambia ---------- */
-.chg{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.chg{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:14px}
 @media(min-width:760px){.chg{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}}
-.chg li{padding:16px 18px;border-radius:12px;background:var(--raised);border:1px solid var(--rule)}
-.chg b{display:block;font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;color:var(--plaque)}
+.chg li{padding:20px 22px;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow-lo)}
+.chg b{display:block;font:800 18px/1.2 var(--display);letter-spacing:-.01em;margin-bottom:6px}
 
-/* ---------- giorni ---------- */
-.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-block:1px solid var(--rule);padding-block:10px;padding-left:var(--gut-l);padding-right:var(--gut-r)}
-.tabs .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+/* ---------- barra dei giorni ---------- */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;padding-block:10px;padding-left:var(--gut-l);padding-right:var(--gut-r);background:var(--bg);background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.6) blur(14px);backdrop-filter:saturate(1.6) blur(14px)}
+.tabs .wrap{display:flex;gap:6px;padding:5px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow-lo);width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none}
 .tabs .wrap::-webkit-scrollbar{display:none}
-.tab{flex:none;min-height:44px;padding:0 16px;border-radius:8px;border:1.5px solid var(--rule);background:transparent;color:var(--ink);font:700 17px/1 var(--sign);text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
-.tab:hover{border-color:var(--ink)}
-.tab[aria-selected=true]{background:var(--plaque);color:#fff;border-color:var(--plaque)}
-.dhead{display:grid;gap:8px}
-.dhead h2{font-size:clamp(34px,5.2vw,56px)}
-.dhead .eyebrow{color:var(--gold)}
-.dsub{margin:0;font:italic 500 clamp(19px,2.4vw,23px)/1.3 var(--display);color:var(--mute)}
-.hours{margin-top:10px;padding:14px 18px;border-radius:12px;background:var(--raised);border:1px solid var(--rule);font-size:15px;line-height:1.6}
-.hours .eyebrow{display:block;font-size:13px;color:var(--mute);margin-bottom:4px}
-.hours b{font-weight:700}
-.dgrid{display:grid;gap:28px;margin-top:28px}
-@media(min-width:960px){.dgrid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px}.mapcol{position:sticky;top:84px;align-self:start}}
-.fig{position:relative;aspect-ratio:600/521;max-width:100%;border-radius:12px;overflow:hidden;background:var(--card);border:1px solid var(--rule)}
+.tab{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 18px;border-radius:999px;border:0;background:transparent;color:var(--mute);font:700 15px/1 var(--text);cursor:pointer;transition:background-color .15s,color .15s}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected=true]{background:var(--brand);color:#fff}
+.tab .today{font-size:0;width:7px;height:7px;padding:0;margin:0;border-radius:50%}
+.tab[aria-selected=true] .today{background:#fff}
+@media(max-width:719px){
+ html{scroll-padding-top:16px}
+ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+ .tabs{position:fixed;top:auto;left:0;right:0;bottom:0;padding-block:8px calc(8px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--rule);background:var(--surface);background:color-mix(in srgb,var(--surface) 88%,transparent)}
+ .tabs .wrap{width:auto;padding:0;background:none;box-shadow:none;border-radius:0;gap:4px}
+ .tab{flex:1 1 0;flex-direction:column;justify-content:center;gap:2px;min-height:54px;padding:0 4px;border-radius:14px;font-size:20px;font-family:var(--display);font-weight:800;letter-spacing:-.02em;color:var(--ink);position:relative}
+ .tab .t-d{font:700 11px/1 var(--text);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+ .tab[aria-selected=true] .t-d{color:#D6DEFA}
+ .tab .today{position:absolute;top:7px;right:calc(50% - 20px)}
+}
+
+/* ---------- giorno ---------- */
+.dhead{display:grid;gap:6px}
+.dhead h2{font-size:clamp(32px,5vw,52px)}
+.dsub{margin:0;font-size:clamp(17px,2vw,19px);color:var(--mute);font-weight:500}
+.chips{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{padding:8px 14px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow-lo);font-size:14px;line-height:1.4}
+.chips b{font-weight:700}
+.dgrid{display:grid;gap:24px;margin-top:24px}
+@media(min-width:960px){.dgrid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px}.mapcol{position:sticky;top:88px;align-self:start}}
+.mapcard{padding:12px}
+.fig{position:relative;aspect-ratio:600/521;max-width:100%;border-radius:var(--r-md);overflow:hidden;background:var(--surface-2)}
 .fig>svg{position:absolute;inset:0;width:100%;height:100%}
 .river{fill:none;stroke:var(--river);stroke-linecap:round;stroke-linejoin:round}
 .champs{fill:none;stroke:var(--champs);stroke-linecap:round}
 .l12{fill:none;stroke:#007852;stroke-linecap:round;stroke-linejoin:round;opacity:.35}
 .walk{fill:none;stroke:var(--ink);stroke-linecap:round;stroke-linejoin:round}
-.lbl{fill:var(--mute);paint-order:stroke;stroke:var(--card);stroke-linejoin:round;font-family:var(--sign);font-weight:600;letter-spacing:.02em}
-.pinc{fill:var(--pin)}.pint{fill:#fff;font-family:var(--sign);font-weight:700}
-.legend{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;font-size:15px}
+.lbl{fill:var(--mute);paint-order:stroke;stroke:var(--surface-2);stroke-linejoin:round;font-family:var(--text);font-weight:600}
+.pinc{fill:var(--pin)}.pint{fill:#fff;font-family:var(--text);font-weight:800}
+.legend{list-style:none;padding:0 8px;margin:14px 0 0;display:grid;gap:8px;font-size:15px}
 .legend li{display:flex;gap:10px;align-items:center}
-.key{font-size:13px;color:var(--mute);margin:12px 0 0}
-.pin{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--pin);color:#fff;font:700 14px/1 var(--sign)}
+.key{font-size:13px;color:var(--mute);margin:12px 8px 6px}
+.pin{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--pin);color:#fff;font:800 13px/1 var(--text)}
 
-/* orario: come le fermate di una linea */
+/* orario: come un itinerario */
 ol.tl{list-style:none;margin:0;padding:0}
-.tl>li{display:grid;grid-template-columns:5.2rem 20px minmax(0,1fr);column-gap:14px}
-.tm{text-align:right;font:700 25px/1 var(--sign);letter-spacing:.01em;white-space:nowrap;padding-top:1px;font-variant-numeric:tabular-nums}
-.tm small{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--go);margin-bottom:3px}
+.tl>li{display:grid;grid-template-columns:4.6rem 18px minmax(0,1fr);column-gap:14px}
+.tm{text-align:right;font:800 19px/1.1 var(--text);letter-spacing:-.01em;white-space:nowrap;padding-top:2px;font-variant-numeric:tabular-nums}
+.tm small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--go);margin-bottom:2px}
 .rail{position:relative}
-.rail::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:4px;background:var(--rule)}
+.rail::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:4px;border-radius:2px;background:var(--rule)}
 .tl>li:first-child .rail::before{top:8px}.tl>li:last-child .rail::before{bottom:auto;height:10px}
-.dot{position:absolute;left:2px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:4px solid var(--ink)}
-.go .tm{color:var(--go)}.go .dot{background:var(--go);border-color:var(--go)}
-.opt .dot{border-style:dashed;border-color:var(--mute)}
-.body{padding-bottom:26px}
-.opt .body{border:1.5px dashed var(--mute);border-radius:12px;padding:14px 16px;margin-bottom:26px}
+.dot{position:absolute;left:1px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:4px solid var(--mute)}
+.go .tm{color:var(--go)}.go .dot{background:var(--go);border-color:var(--go);box-shadow:0 0 0 4px color-mix(in srgb,var(--go) 22%,transparent)}
+.go .tm{padding-top:18px}.go .dot{top:21px}
+.opt .dot{border-style:dashed}
+.body{padding-bottom:22px}
+.go .body{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:16px 18px 18px;margin-bottom:18px}
+.opt .body{border:1.5px dashed var(--mute);border-radius:var(--r-lg);padding:16px 18px;margin-bottom:18px}
 .warnrow .tm{color:var(--warn)}.warnrow .dot{border-color:var(--warn)}
 .body h3{display:flex;gap:9px;align-items:flex-start}
+.go .body h3{font:800 19px/1.25 var(--display);letter-spacing:-.01em}
 .body p{margin:6px 0 0}
 .body ul{margin:8px 0 0;padding-left:18px}
 .body ul li{margin:3px 0}
-.legs{display:grid;gap:8px;margin-top:10px}
+.legs{display:grid;gap:8px;margin-top:12px}
 .leg{display:flex;gap:10px;align-items:flex-start;font-size:15px}
 .leg b{white-space:nowrap}
-.lb{flex:none;display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:50%;background:var(--c);color:var(--t);font:700 14px/1 var(--text)}
+.lb{flex:none;display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:50%;background:var(--c);color:var(--t);font:800 13px/1 var(--text)}
 .lb.rer{border-radius:7px}
 .lb.wk{background:transparent;border:2px dashed var(--mute);color:var(--mute)}
-.lb.tx{border-radius:7px;background:var(--ink);color:var(--paper);font-size:11px;padding:0 6px}
+.lb.tx{border-radius:7px;background:var(--ink);color:var(--bg);font-size:11px;padding:0 6px}
 .lb svg{width:15px;height:15px}
-.dur{font-weight:700}
+.dur{font-weight:700;margin-top:10px!important}
 .nb{color:var(--mute);font-size:15px}
 .nb b{color:var(--ink)}
-.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 
 /* ---------- biglietti ---------- */
-.tickets{background:var(--card)}
-.ticket{display:grid;grid-template-columns:auto minmax(0,1fr);margin-top:20px;background:var(--raised);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
-.stub{display:grid;align-content:center;justify-items:center;gap:4px;padding:16px 20px;border-right:2px dashed var(--rule);text-align:center}
-.stub .eyebrow{font-size:12px;color:var(--mute)}
-.price{font:600 40px/1 var(--display);font-variant-numeric:lining-nums;white-space:nowrap}
-.stub small{font-size:12px;color:var(--mute)}
-.ticket p{margin:0;padding:16px 18px;align-self:center}
-table{border-collapse:collapse;width:100%;font-size:15px;margin-top:18px}
-th,td{padding:9px 6px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
-th{font:700 14px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+.ticket{display:grid;grid-template-columns:auto minmax(0,1fr);margin-top:18px;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:var(--shadow)}
+.stub{display:grid;align-content:center;gap:4px;padding:18px 22px;border-right:2px dashed rgb(255 255 255 / .35)}
+.stub span{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#D6DEFA}
+.price{font:800 40px/1 var(--display);letter-spacing:-.03em;white-space:nowrap;color:#fff!important;text-transform:none!important}
+.stub small{font-size:13px;color:#D6DEFA}
+.ticket p{margin:0;padding:18px 20px;align-self:center;color:#EEF2FF}
+.tablecard{margin-top:16px;padding:6px 18px 10px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:10px 4px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
 td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 tfoot td{font-weight:800;border-bottom:0}
-.steps{margin:12px 0 0;padding-left:20px}.steps li{margin:6px 0}
-.tickets h3{font:700 19px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.06em}
-.note{font-size:14px;color:var(--mute)}
+.howto{padding:24px}
+.howto h3{font:800 20px/1.2 var(--display);letter-spacing:-.01em}
+.steps{margin:12px 0 0;padding-left:20px}.steps li{margin:7px 0}
 
 /* ---------- fonti ---------- */
-footer.band{border-top:1px solid var(--rule)}
-footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:.08em}
+footer.band{padding-top:12px}
+footer h3{font:800 18px/1.2 var(--display)}
 .src{font-size:14px;color:var(--mute);columns:2 320px;column-gap:32px;padding-left:18px}
 .src li{margin:4px 0;break-inside:avoid}
-.signoff{margin:32px 0 0;font:italic 500 28px/1 var(--display);color:var(--gold)}
+.signoff{margin:28px 0 0;font:800 26px/1 var(--display);letter-spacing:-.02em;color:var(--mute)}
 
 @media(max-width:600px){
  table{font-size:14px}
- .tl>li{grid-template-columns:4.3rem 20px minmax(0,1fr);column-gap:10px}
- .tm{font-size:21px}
- .wk-row{grid-template-columns:3.6rem minmax(0,1fr) auto;gap:10px}
- .wk-day{font-size:17px}.wk-out{font-size:21px}
- .tabs .wrap{gap:6px}.tab{padding:0 10px;font-size:16px;letter-spacing:.04em}
+ .tl>li{grid-template-columns:3.9rem 18px minmax(0,1fr);column-gap:10px}
+ .tm{font-size:17px}
+ .go .body{padding:14px 14px 16px}
+ .wk-row{grid-template-columns:48px minmax(0,1fr) auto;gap:12px;padding:8px}
+ .wk-chip{width:48px;height:48px}
+ .panel,.howto{padding:18px}
  .ticket{grid-template-columns:minmax(0,1fr)}
- .stub{border-right:0;border-bottom:2px dashed var(--rule);grid-auto-flow:column;justify-content:space-between;align-items:center;justify-items:start;text-align:left}
+ .stub{border-right:0;border-bottom:2px dashed rgb(255 255 255 / .35);grid-auto-flow:column;justify-content:space-between;align-items:end}
 }
-@media(prefers-reduced-motion:no-preference){.daywrap{animation:in .3s ease-out}@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+@media(prefers-reduced-motion:no-preference){.daywrap{animation:in .35s cubic-bezier(.2,.7,.2,1)}@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}}
 </style>
 </head>
 <body>
 <header class="hero">
- <div class="band">
-  <div class="wrap hero-in">
+ <div class="hero-card">
+  <div class="hero-in">
    <div>
-    <p class="eyebrow">Guida · 22–26 novembre 2026</p>
-    <h1>Parigi <em>in tasca</em></h1>
+    <span class="pill"><i></i>22–26 novembre 2026 · 5 giorni</span>
+    <h1>Parigi <span>in tasca</span></h1>
     <p class="lede">Quando uscire, che metro prendere e il percorso già pronto su Google Maps, giorno per giorno.</p>
-    <a class="btn" id="home" href="#" target="_blank" rel="noopener">Torna a casa da dove sei</a>
+    <div class="hero-btns"><a class="btn" id="home" href="#" target="_blank" rel="noopener">Torna a casa da dove sei</a></div>
    </div>
    <div class="home">
     <div class="plaque" role="img" aria-label="Casa: rue Duhesme, 18° arrondissement">
      <span class="pl-arr">18<sup>e</sup> Arr<sup>t</sup></span>
-     <span class="pl-name">Rue Duhesme</span>
+     <span class="pl-name">RUE DUHESME</span>
     </div>
-    <p class="home-meta"><b>Casa al n. 17</b> · metro <span class="lb" style="--c:#007852;--t:#fff">12</span> <b>Lamarck-Caulaincourt</b>, linea 12 (verde)<br>Orari e prezzi controllati il 20/11/2026. I tempi di viaggio sono stime con un po’ di margine.<br><b>Emergenze: 112</b> (polizia, ambulanza, pompieri)</p>
+    <p class="home-meta"><b>Casa al n. 17</b> · metro <span class="lb" style="--c:#007852;--t:#fff">12</span> <b>Lamarck-Caulaincourt</b><br>Orari e prezzi controllati il 20/11/2026 su fonti ufficiali. I tempi di viaggio sono stime con margine.<br><b>Emergenze: 112</b></p>
    </div>
   </div>
  </div>
- <div class="railing" aria-hidden="true"></div>
 </header>
+
+<section class="band next-band" aria-label="Prossima uscita">
+ <div class="wrap"><article class="card next" id="next" hidden></article></div>
+</section>
 
 <section class="band" aria-labelledby="wk">
  <div class="wrap two">
-  <div>
-   <div class="sec-head"><p class="eyebrow">Domenica → giovedì</p><h2 id="wk">La settimana in breve</h2></div>
+  <div class="card panel">
+   <p class="kicker">Domenica → giovedì</p>
+   <h2 id="wk">La settimana</h2>
    <ul class="week" id="week"></ul>
   </div>
-  <div>
-   <div class="sec-head"><p class="eyebrow">Prima di partire</p><h2>Da fare</h2></div>
+  <div class="card panel">
+   <p class="kicker">Prima di partire</p>
+   <h2>Da fare</h2>
    <ul class="todo">
-    <li><input type="checkbox" id="todo-notredame" aria-describedby="todo-notredame-t"><label for="todo-notredame" id="todo-notredame-t"><b>Notre-Dame:</b> prenotate l’ingresso gratuito di domenica alle 13:45 sul <a href="https://www.notredamedeparis.fr" target="_blank" rel="noopener">sito ufficiale</a>. Le prenotazioni si aprono 2–3 giorni prima.</label></li>
-    <li><input type="checkbox" id="todo-navigo" aria-describedby="todo-navigo-t"><label for="todo-navigo" id="todo-navigo-t"><b>Biglietti:</b> comprate il Navigo Semaine sul telefono (32,40 € a testa). Come fare è in fondo alla pagina.</label></li>
-    <li><input type="checkbox" id="todo-orangerie" aria-describedby="todo-orangerie-t"><label for="todo-orangerie" id="todo-orangerie-t"><b>Orangerie:</b> prenotate mercoledì 25 alle 15:15 sul <a href="https://www.musee-orangerie.fr" target="_blank" rel="noopener">sito ufficiale</a> (12,50 € a testa).</label></li>
-    <li><input type="checkbox" id="todo-crociera" aria-describedby="todo-crociera-t"><label for="todo-crociera" id="todo-crociera-t"><b>Crociera martedì (se la volete):</b> prenotate una partenza dalle 19:45 in poi.</label></li>
+    <li><input type="checkbox" id="todo-notredame"><label for="todo-notredame"><b>Notre-Dame, domenica mattina:</b> prenotate l’ingresso gratuito delle 13:45 sul <a href="https://www.notredamedeparis.fr/visiter/reserver-gratuitement/" target="_blank" rel="noopener">sito ufficiale</a>. Si può solo il giorno stesso, poche ore prima: fatelo appena svegli.</label></li>
+    <li><input type="checkbox" id="todo-navigo"><label for="todo-navigo"><b>Biglietti:</b> comprate il Navigo Semaine sul telefono (32,40 € a testa). Come fare è in fondo alla pagina.</label></li>
+    <li><input type="checkbox" id="todo-orangerie"><label for="todo-orangerie"><b>Orangerie:</b> prenotate mercoledì 25 alle 15:15 sul <a href="https://billetterie.musee-orangerie.fr/fr-FR/accueil-orangerie" target="_blank" rel="noopener">sito ufficiale</a> (12,50 € a testa online).</label></li>
+    <li><input type="checkbox" id="todo-crociera"><label for="todo-crociera"><b>Crociera martedì (se la volete):</b> prenotate la partenza delle 20:20 con Bateaux Parisiens.</label></li>
    </ul>
    <p class="note todo-note">Toccate un punto per spuntarlo: resta segnato su questo telefono.</p>
    <p class="every"><b>Ogni sera:</b> controllate scioperi e lavori del giorno dopo sull’app Bonjour RATP o Île-de-France Mobilités.</p>
@@ -254,11 +299,12 @@ footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:
 
 <section class="band" aria-labelledby="chgh" style="padding-top:0">
  <div class="wrap">
-  <div class="sec-head"><p class="eyebrow">Rispetto al programma</p><h2 id="chgh">Cosa cambia</h2></div>
+  <p class="kicker">Rispetto al programma</p>
+  <h2 id="chgh">Cosa cambia</h2>
   <ul class="chg">
    <li><b>Orangerie</b>È chiusa il martedì. Ci andate mercoledì alle 15:15, tornando da Versailles e prima di Dior.</li>
    <li><b>Domenica, dal pranzo a Notre-Dame</b>Servono circa 35 minuti. Con l’ingresso alle 13:45 uscite dal ristorante entro le 13:05.</li>
-   <li><b>Domenica sera</b>Accensione delle luminarie e primo giorno del mercatino degli Champs-Élysées, quindi tantissima gente. Negozi prima delle 18; per tornare, linea 12 da Madeleine.</li>
+   <li><b>Domenica sera</b>Accensione delle luminarie degli Champs-Élysées e primo giorno del mercatino: attese circa 150.000 persone. Negozi prima delle 18; per tornare, linea 12 da Madeleine.</li>
   </ul>
  </div>
 </section>
@@ -267,32 +313,35 @@ footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:
 
 <main class="band" id="day" aria-live="polite"></main>
 
-<section class="band tickets" aria-labelledby="tk">
+<section class="band" aria-labelledby="tk">
  <div class="wrap two">
   <div>
-   <div class="sec-head"><p class="eyebrow">Metro, RER e aeroporto</p><h2 id="tk">Biglietti</h2></div>
+   <p class="kicker">Metro, RER e aeroporto</p>
+   <h2 id="tk">Biglietti</h2>
    <div class="ticket">
-    <div class="stub"><span class="eyebrow">Navigo Semaine</span><span class="price">32,40 €</span><small>a testa</small></div>
-    <p><b>Consiglio: il Navigo Semaine sul telefono.</b> Vale da lunedì 23 a domenica 29, in tutte le zone: Disney, Versailles e Orly compresi.</p>
+    <div class="stub"><span>Navigo Semaine</span><b class="price">32,40 €</b><small>a testa</small></div>
+    <p><b>Consiglio: il Navigo Semaine sul telefono.</b> Vale da lunedì 23 a domenica 29, in tutte le zone: Disney, Versailles e Orly (metro 14) compresi.</p>
    </div>
-   <table>
-    <thead><tr><th>Con biglietti singoli</th><th class="n">a testa</th></tr></thead>
-    <tbody>
-     <tr><td>Lun: Disney andata e ritorno</td><td class="n">5,10 €</td></tr>
-     <tr><td>Mar: 4 corse</td><td class="n">10,20 €</td></tr>
-     <tr><td>Mer: 4 corse (per il RER si esce dalla metro: serve un biglietto in più)</td><td class="n">10,20 €</td></tr>
-     <tr><td>Gio: biglietto aeroporto</td><td class="n">14,00 €</td></tr>
-    </tbody>
-    <tfoot><tr><td>Totale lunedì–giovedì</td><td class="n">≈ 39,50 €</td></tr></tfoot>
-   </table>
-   <p class="note">Corsa singola metro/RER: 2,55 € (vale anche per Disney e Versailles). Aeroporto: 14 €. <b>Domenica il Navigo non vale:</b> servono 2 corse singole (pranzo → Notre-Dame, Madeleine → casa).</p>
+   <div class="card tablecard">
+    <table>
+     <thead><tr><th>Con biglietti singoli</th><th class="n">a testa</th></tr></thead>
+     <tbody>
+      <tr><td>Lun: Disney andata e ritorno</td><td class="n">5,10 €</td></tr>
+      <tr><td>Mar: 4 corse</td><td class="n">10,20 €</td></tr>
+      <tr><td>Mer: 3 corse (il cambio a piedi Solférino → Musée d’Orsay è compreso, entro 2 ore)</td><td class="n">7,65 €</td></tr>
+      <tr><td>Gio: biglietto aeroporto</td><td class="n">14,00 €</td></tr>
+     </tbody>
+     <tfoot><tr><td>Totale lunedì–giovedì</td><td class="n">≈ 36,95 €</td></tr></tfoot>
+    </table>
+   </div>
+   <p class="note">Corsa singola metro/RER: 2,55 € (vale anche per Disney e Versailles). Aeroporto: 14 €. <b>Domenica il Navigo non vale:</b> servono 2 corse singole a testa (pranzo → Notre-Dame, Madeleine → casa).</p>
   </div>
-  <div>
+  <div class="card howto">
    <h3>Come comprarlo</h3>
    <ol class="steps">
-    <li>Scaricate l’app <b>Île-de-France Mobilités</b> (Android e iPhone) e create l’account.</li>
-    <li>Comprate il <b>Navigo Semaine</b> per la settimana dal 23 al 29 novembre: si può già da venerdì 20.</li>
-    <li>Ognuno sul proprio telefono: è personale e il telefono deve avere l’NFC.</li>
+    <li>Scaricate l’app <b>Île-de-France Mobilités</b> e create l’account.</li>
+    <li>Comprate il <b>Navigo Semaine</b> per la settimana dal 23 al 29 novembre: si può da venerdì 20. Servono una foto e la data di nascita.</li>
+    <li>Ognuno sul proprio telefono, perché è personale. iPhone XR o più nuovo con iOS 17.5 o successivo; Android con NFC.</li>
     <li>Ai tornelli appoggiate il telefono sul lettore Navigo.</li>
    </ol>
    <h3 style="margin-top:26px">Come usare i link Maps</h3>
@@ -302,7 +351,7 @@ footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:
     <li>Per non arrivare tardi: toccate l’orario in alto (es. «Parti ora») e impostate l’ora di arrivo, 15 minuti prima dell’ingresso.</li>
     <li>Se Maps propone una strada diversa da questa pagina, seguite Maps: vede ritardi e lavori del giorno.</li>
    </ol>
-   <p class="note">Lamarck-Caulaincourt è profonda circa 25 metri: usate l’ascensore (le scale sono un centinaio di gradini). Linea 12: <b>dir. Mairie d’Issy</b> verso il centro, <b>dir. Mairie d’Aubervilliers</b> per tornare.</p>
+   <p class="note">Lamarck-Caulaincourt è profonda 25 metri: usate l’ascensore, le scale sono lunghissime. Linea 12: <b>dir. Mairie d’Issy</b> verso il centro, <b>dir. Mairie d’Aubervilliers</b> per tornare.</p>
   </div>
  </div>
 </section>
@@ -311,24 +360,27 @@ footer h3{font:700 17px/1.2 var(--sign);text-transform:uppercase;letter-spacing:
  <div class="wrap">
   <h3>Fonti (controllate il 20/11/2026)</h3>
   <ul class="src">
-   <li><a href="https://tarifs.org/it/orari-disneyland-paris" target="_blank" rel="noopener">Orari Disneyland Paris novembre 2026</a></li>
-   <li><a href="https://www.offi.fr/expositions-musees/musee-de-lorangerie-2889.html" target="_blank" rel="noopener">Orangerie: chiusa il martedì, 9–18</a></li>
-   <li><a href="https://www.musee-orsay.fr/fr/visite" target="_blank" rel="noopener">Musée d’Orsay: orari</a></li>
-   <li><a href="https://www.offi.fr/a-travers-paris/cathedrale-notre-dame-2852.html" target="_blank" rel="noopener">Notre-Dame: orari, ingresso libero</a></li>
-   <li><a href="https://www.offi.fr/tendances/a-travers-paris/illuminations-noel-2026-paris-1172.html" target="_blank" rel="noopener">Luminarie Champs-Élysées 2026 e mercatino</a></li>
+   <li><a href="https://www.notredamedeparis.fr/faq/horaires-ouverture-notre-dame" target="_blank" rel="noopener">Notre-Dame: orari</a> e <a href="https://www.notredamedeparis.fr/visiter/reserver-gratuitement/" target="_blank" rel="noopener">prenotazione gratuita</a></li>
+   <li><a href="https://www.sacre-coeur-montmartre.com/en/info-and-visits/practical-information/opening-hours-and-access" target="_blank" rel="noopener">Sacré-Cœur: orari e regole</a></li>
+   <li><a href="https://www.paris.fr/pages/les-champs-elysees-a-l-heure-des-illuminations-25395" target="_blank" rel="noopener">Luminarie degli Champs-Élysées 2026</a></li>
    <li><a href="https://www.paris.fr/evenements/edition-2026-de-la-magie-de-noel-des-tuileries-127134" target="_blank" rel="noopener">Mercatino delle Tuileries 2026</a></li>
-   <li><a href="https://en.chateauversailles.fr/news/calendar/2026-11-25" target="_blank" rel="noopener">Versailles: orari del 25/11/2026</a></li>
-   <li><a href="https://pro.visitparisregion.com/conseil-et-accompagnement/accessibilite/lieux-de-visites-accessibles/la-galerie-dior" target="_blank" rel="noopener">Galerie Dior: orari</a></li>
-   <li><a href="https://haussmann.galerieslafayette.com/en/the-terrace-at-galeries-lafayette" target="_blank" rel="noopener">Terrazza Galeries Lafayette</a> e <a href="https://www.sortiraparis.com/en/lieux/52429-galeries-lafayette-haussmann" target="_blank" rel="noopener">pista sul tetto dal 24/11</a></li>
-   <li><a href="https://www.ratp.fr/infos-trafic/rer-transilien/c" target="_blank" rel="noopener">RER C: lavori serali fino al 30/11</a></li>
-   <li><a href="https://www.sortiraparis.com/en/news/in-paris/articles/291320-metro-and-rer-disruptions-this-week-november-16-to-22-2026" target="_blank" rel="noopener">Metro: Saint-Michel (linea 4) chiusa fino al 19/12</a></li>
+   <li><a href="https://tarifs.org/it/orari-disneyland-paris" target="_blank" rel="noopener">Orari Disneyland Paris novembre 2026</a> (sito non ufficiale)</li>
+   <li><a href="https://www.musee-orsay.fr/fr/visite" target="_blank" rel="noopener">Musée d’Orsay: orari</a></li>
+   <li><a href="https://www.operadeparis.fr/visites/palais-garnier" target="_blank" rel="noopener">Opéra Garnier: visite</a></li>
+   <li><a href="https://haussmann.galerieslafayette.com/en/the-terrace-at-galeries-lafayette" target="_blank" rel="noopener">Terrazza Galeries Lafayette</a> e <a href="https://haussmann.galerieslafayette.com/en/events/the-most-magical-ice-rink-in-paris/" target="_blank" rel="noopener">pista sul tetto dal 24/11</a></li>
+   <li><a href="https://www.toureiffel.paris/fr/le-monument/illuminations" target="_blank" rel="noopener">Tour Eiffel: scintillio ogni ora</a></li>
+   <li><a href="https://www.bateauxparisiens.com/upload/pdf/1320/New%20FR%20Horaires%202026-2027.fr.pdf" target="_blank" rel="noopener">Bateaux Parisiens: orari 2026–2027</a></li>
+   <li><a href="https://www.chateauversailles.fr/preparer-ma-visite/informations-pratiques" target="_blank" rel="noopener">Versailles: orari</a> e <a href="https://en.chateauversailles.fr/news/calendar/2026-11-25" target="_blank" rel="noopener">calendario del 25/11</a></li>
+   <li><a href="https://www.musee-orangerie.fr/fr/visite/acces-horaires-tarifs" target="_blank" rel="noopener">Orangerie: orari e prezzi</a></li>
+   <li><a href="https://www.galeriedior.com/informations-pratiques" target="_blank" rel="noopener">Galerie Dior: orari</a></li>
+   <li><a href="https://www.ratp.fr/travaux/metro-ligne-4" target="_blank" rel="noopener">Metro 4: Saint-Michel chiusa fino al 19/12</a></li>
+   <li><a href="https://monrercetlignev.transilien.com/events/categorie/paris-versailles-chateau-rive-gauche" target="_blank" rel="noopener">RER C Parigi–Versailles: lavori solo di sera</a></li>
    <li><a href="https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026" target="_blank" rel="noopener">Prezzi biglietti 2026</a> e <a href="https://www.ratp.fr/titres-et-tarifs/forfait-navigo-semaine" target="_blank" rel="noopener">Navigo Semaine</a></li>
-   <li><a href="https://www.iledefrance-mobilites.fr/aide-et-contacts/titres-disponibles-sur-application/quels-titres-de-transport-charges-sur-telephone" target="_blank" rel="noopener">Navigo Semaine sul telefono</a></li>
-   <li><a href="https://entreprendre.service-public.gouv.fr/actualites/A15396?lang=fr&amp;profil=tout" target="_blank" rel="noopener">Taxi Orly ↔ Parigi riva destra: 45 €</a></li>
-   <li><a href="https://www.transavia.com/aide/fr-fr/preparation-et-enregistrement/aeroport/orly-transports-commun" target="_blank" rel="noopener">Linea 14 per Orly: tempi</a></li>
+   <li><a href="https://www.iledefrance-mobilites.fr/dossiers/validation-transports-iphone-apple" target="_blank" rel="noopener">Navigo su iPhone</a> e <a href="https://www.iledefrance-mobilites.fr/aide-et-contacts/titres-disponibles-sur-application/quels-titres-de-transport-charges-sur-telephone" target="_blank" rel="noopener">su telefono</a></li>
+   <li><a href="https://www.iledefrance-mobilites.fr/correspondance-voie-publique" target="_blank" rel="noopener">Cambi a piedi validi (Solférino ↔ Musée d’Orsay)</a></li>
+   <li><a href="https://www.service-public.gouv.fr/particuliers/actualites/A15396" target="_blank" rel="noopener">Taxi Orly ↔ Parigi riva destra: 45 €</a></li>
+   <li><a href="https://www.transavia.com/aide/fr-fr/preparation-et-enregistrement/aeroport/orly-transports-commun" target="_blank" rel="noopener">Metro 14 per Orly: tempi</a></li>
    <li><a href="https://www.tourmag.com/Travaux-a-Paris-Orly-3-000-vols-impactes-entre-aout-et-decembre-2026_a131750.html" target="_blank" rel="noopener">Orly: pista 4 chiusa fino al 17/12</a></li>
-   <li><a href="https://www.toureiffel.paris/en/news/visit/what-time-does-eiffel-tower-light-and-sparkle" target="_blank" rel="noopener">Tour Eiffel: scintillio ogni ora</a></li>
-   <li><a href="https://www.lechotouristique.com/transport/transports-ce-que-l-on-sait-des-perturbations-attendues-pour-la-greve-du-5-novembre" target="_blank" rel="noopener">Scioperi di novembre</a></li>
   </ul>
   <p class="signoff">Bon voyage.</p>
  </div>
@@ -358,20 +410,20 @@ const W=p=>({k:"w",p:seq(p)}),M=(l,p)=>({k:"m",l,p:Array.isArray(p[0])?p:seq(p)}
 
 const DAYS=[
 {id:"domenica",tab:"Dom 22",short:"Dom 22",what:"Arrivo, Montmartre, Notre-Dame, Champs-Élysées",first:"10:00",title:"Domenica 22 novembre",sub:"Arrivo, Montmartre e centro",
- hours:"<b>Notre-Dame</b> 8:15–19:30, gratis · <b>Mercatino Tuileries</b> aperto · <b>Champs-Élysées</b>: luminarie accese alle 18:30, viale chiuso alle auto, primo giorno del mercatino",
+ hours:"<b>Notre-Dame</b> 8:15–19:30, gratis · <b>Mercatino Tuileries</b> 11:00–23:45 · <b>Champs-Élysées</b>: luminarie accese alle 18:30, viale pedonale dalle 14 alle 21, primo giorno del mercatino",
  pins:[[1,"mtm","Giro di Montmartre"],[2,"nd","Notre-Dame"],[3,"louvre","Louvre, esterni"],[4,"tuil","Tuileries, mercatino"],[5,"glce","Champs-Élysées"]],
  route:[W(["casa","mr","mtm","sc","gal","mrouge","pig"]),M("2",["pig","anv","bar"]),M("4",["bar","gdn","gde","cha","ssd","rea","etm","hal","chat","cit"]),W(["cit","nd","pn","louvre","tuil","con","glce"]),W(["glce","mad"]),M("12",r12("mad","lam")),W(["lam","casa"])],
  steps:[
   {t:"08:05",title:"Orly → casa in taxi",legs:[["t","","35–50 min (stima)"]],nb:"Tariffa fissa 45 € da Orly a Parigi riva destra, bagagli compresi.",links:[["Percorso in auto",gm(H,{from:"Aéroport de Paris-Orly",mode:"driving"})]]},
   {t:"09:30",title:"A casa: lasciate i bagagli"},
-  {t:"10:00",go:1,n:1,title:"Giro di Montmartre a piedi",legs:[["w","","circa 2,5 km in due ore, salita solo all’inizio"]],list:["10:10 Maison Rose e Rue de l’Abreuvoir (10 min da casa)","10:30 Place du Tertre (5 min)","10:50 Sacré-Cœur, scalinata e vista (3 min)","11:25 giù per rue Lepic: Moulin de la Galette, Café des Deux Moulins (20 min)","11:50 Moulin Rouge, foto"],nb:"La domenica al Sacré-Cœur ci sono le funzioni: si entra in silenzio.",links:[["Percorso a piedi con le tappe",gm("Moulin Rouge, 82 Boulevard de Clichy, 75018 Paris",{from:H,mode:"walking",via:["La Maison Rose, 2 Rue de l'Abreuvoir, 75018 Paris","Place du Tertre, 75018 Paris","Basilique du Sacré-Cœur de Montmartre, Paris","Moulin de la Galette, Rue Lepic, 75018 Paris"]})]]},
+  {t:"10:00",go:1,n:1,title:"Giro di Montmartre a piedi",legs:[["w","","circa 2,5 km in due ore, salita solo all’inizio"]],list:["10:10 Maison Rose e Rue de l’Abreuvoir (10 min da casa)","10:30 Place du Tertre (5 min)","10:50 Sacré-Cœur, scalinata e vista (3 min)","11:25 giù per rue Lepic: Moulin de la Galette, Café des Deux Moulins (20 min)","11:50 Moulin Rouge, foto"],nb:"Al Sacré-Cœur alle 11 c’è la messa: si entra in silenzio e senza foto nella navata.",links:[["Percorso a piedi con le tappe",gm("Moulin Rouge, 82 Boulevard de Clichy, 75018 Paris",{from:H,mode:"walking",via:["La Maison Rose, 2 Rue de l'Abreuvoir, 75018 Paris","Place du Tertre, 75018 Paris","Basilique du Sacré-Cœur de Montmartre, Paris","Moulin de la Galette, Rue Lepic, 75018 Paris"]})]]},
   {t:"12:00",title:"Pranzo tra rue Lepic e Abbesses",nb:"Sedetevi alle 12 in punto o prenotate."},
   {t:"13:05",go:1,n:2,title:"Notre-Dame",legs:[["w","","5 min fino alla metro Pigalle"],["m","2","dir. Nation → Barbès-Rochechouart (2 fermate)"],["m","4","dir. Bagneux–Lucie Aubrac → Cité (9 fermate)"],["w","","4 min"]],dur:"≈ 35 min (stima)",nb:"<b>Scendete a Cité:</b> Saint-Michel è chiusa fino al 19/12. Se avete l’ingresso delle 13:30, uscite alle 12:50.",links:[["Metro fino a Notre-Dame",gm("Cathédrale Notre-Dame de Paris",{from:"Pigalle, 75009 Paris"})]]},
   {t:"13:45",title:"Notre-Dame (ingresso prenotato)",nb:"Gratis. La visita dura 45–60 minuti."},
   {t:"14:40",go:1,n:3,title:"Louvre, a piedi",legs:[["w","","1,6 km lungo la Senna, passando dal Pont Neuf"]],dur:"≈ 22 min",nb:"15:00–15:45: Piramide, Cour Carrée, Arc du Carrousel.",links:[["A piedi fino alla Piramide",gm("Pyramide du Louvre, Paris",{from:"Cathédrale Notre-Dame de Paris",mode:"walking",via:["Pont Neuf, Paris"]})]]},
   {t:"15:45",n:4,title:"Tuileries: mercatino di Natale",legs:[["w","","12–15 min attraverso il giardino, poi Place de la Concorde"]],links:[["A piedi fino a Concorde",gm("Place de la Concorde, Paris",{from:"Pyramide du Louvre, Paris",mode:"walking",via:["Jardin des Tuileries, Paris"]})]]},
   {t:"16:30",n:5,title:"Champs-Élysées: mercatino e negozi",legs:[["w","","1,6 km da Concorde a Galeries Lafayette (n. 60)"]],nb:"<b>Sephora e Galeries Lafayette prima delle 18:</b> dopo, il viale si riempie per l’accensione.",links:[["A piedi fino a Galeries Lafayette",gm("Galeries Lafayette Champs-Élysées, 60 Avenue des Champs-Élysées, Paris",{from:"Place de la Concorde, Paris",mode:"walking"})]]},
-  {t:"18:30",title:"Accensione delle luminarie",nb:"Luci e concerto sul viale. Tantissima gente: borsa piccola e telefono al sicuro."},
+  {t:"18:30",title:"Accensione delle luminarie",nb:"Luci e concerto sul viale. Attese circa 150.000 persone, con controllo delle borse: borsa piccola e telefono al sicuro."},
   {t:"19:30",go:1,lab:"verso le",title:"Casa, dalla metro Madeleine",legs:[["w","","15–20 min fino a Madeleine, per rue du Faubourg Saint-Honoré (anche lei illuminata)"],["m","12","dir. Mairie d’Aubervilliers → Lamarck-Caulaincourt (7 fermate)"],["w","","3 min"]],dur:"≈ 40 min",nb:"Le fermate della linea 1 sugli Champs-Élysées possono essere chiuse dalla polizia: meglio Madeleine. Cena lì vicino o vicino a casa.",links:[["Madeleine → casa",gm(H,{from:"Madeleine, 75008 Paris"})],["Torna a casa da dove sei",gm(H)]]}
  ]},
 {id:"lunedi",tab:"Lun 23",short:"Lun 23",what:"Disneyland Paris",first:"07:45",title:"Lunedì 23 novembre",sub:"Disneyland Paris",
@@ -394,11 +446,11 @@ const DAYS=[
   {t:"11:30",title:"Musée d’Orsay (prenotato)"},
   {t:"13:30",title:"Pranzo in zona Orsay o rue du Bac"},
   {t:"14:55",go:1,n:2,title:"Opéra Garnier",legs:[["w","","5 min fino a Solférino"],["m","12","dir. Mairie d’Aubervilliers → Madeleine (3 fermate)"],["w","","10 min sul Boulevard des Capucines"]],dur:"≈ 25 min",nb:"Oppure a piedi: 25–30 min passando da Tuileries e Place Vendôme. In quel caso uscite alle 14:45.",links:[["In metro",gm("Palais Garnier, Paris",{from:"Musée d'Orsay, Paris"})],["A piedi",gm("Palais Garnier, Paris",{from:"Musée d'Orsay, Paris",mode:"walking",via:["Place Vendôme, Paris"]})]]},
-  {t:"15:30",title:"Opéra Garnier (prenotato)",nb:"La visita dura circa 1 ora – 1 ora e un quarto."},
-  {t:"17:00",title:"Galeries Lafayette Haussmann",legs:[["w","","3 min"]],nb:"Cupola con l’albero di Natale e terrazza gratis all’8° piano, con la Tour Eiffel già accesa. Con pioggia o vento forte la terrazza chiude. Da oggi sul tetto c’è anche la pista di pattinaggio."},
+  {t:"15:30",title:"Opéra Garnier (prenotato)",nb:"La visita dura circa un’ora e mezza. La sala grande può essere chiusa per le prove: la sera c’è uno spettacolo."},
+  {t:"17:00",title:"Galeries Lafayette Haussmann",legs:[["w","","3 min"]],nb:"Cupola con l’albero di Natale e terrazza gratis all’8° piano, con la Tour Eiffel già accesa. Con pioggia o vento forte la terrazza chiude. Da oggi sul tetto c’è anche la pista di pattinaggio (a pagamento, su prenotazione): la terrazza potrebbe essere in parte occupata."},
   {t:"17:40",go:1,n:3,title:"Trocadéro",legs:[["w","","3 min fino a Chaussée d’Antin–La Fayette"],["m","9","dir. Pont de Sèvres → Trocadéro (8 fermate)"],["w","","3 min"]],dur:"≈ 25 min → arrivo verso le 18:05",links:[["Percorso fino al Trocadéro",gm("Place du Trocadéro, Paris",{from:"Galeries Lafayette Paris Haussmann, Paris"})]]},
-  {t:"19:00",title:"La Tour Eiffel scintilla",nb:"Scintilla 5 minuti all’inizio di ogni ora, quando è buio."},
-  {t:"19:30",title:"Crociera sulla Senna (se volete) e cena",legs:[["w","","12–15 min fino al molo sotto la Torre, attraverso il Pont d’Iéna"]],nb:"Prenotate una partenza dalle 19:45 in poi: dopo lo scintillio servono 15 minuti a piedi più l’imbarco.",links:[["A piedi al molo",gm("Bateaux Parisiens, Port de la Bourdonnais, Paris",{from:"Place du Trocadéro, Paris",mode:"walking"})]]},
+  {t:"19:00",title:"La Tour Eiffel scintilla",nb:"Scintilla 5 minuti all’inizio di ogni ora, quando è buio, fino alle 23."},
+  {t:"19:10",title:"Crociera sulla Senna (se la volete), poi cena",legs:[["w","","12–15 min fino al molo sotto la Torre, attraverso il Pont d’Iéna"]],nb:"Partenze serali da domenica a giovedì: 19:00, 19:40, 20:20, 21:00, 21:40. <b>Prenotate le 20:20:</b> c’è tempo per lo scintillio e per l’imbarco.",links:[["A piedi al molo",gm("Bateaux Parisiens, Port de la Bourdonnais, Paris",{from:"Place du Trocadéro, Paris",mode:"walking"})]]},
   {t:"Dopo",go:1,title:"Casa",dur:"≈ 40–45 min, con 1–2 cambi (stima)",nb:"Da qui non c’è una linea diretta: seguite Maps.",links:[["Torna a casa da dove sei",gm(H)]]}
  ]},
 {id:"mercoledi",tab:"Mer 25",short:"Mer 25",what:"Versailles, Orangerie, Galerie Dior",first:"08:30",title:"Mercoledì 25 novembre",sub:"Versailles, Orangerie e Galerie Dior",
@@ -410,26 +462,27 @@ const DAYS=[
   {t:"10:30",title:"Reggia di Versailles (Passport, prenotato)"},
   {t:"13:30",title:"Pranzo"},
   {t:"14:00",go:1,n:2,title:"Orangerie",legs:[["w","","10 min fino alla stazione Versailles Château Rive Gauche"],["m","C","dir. Paris → Musée d’Orsay (≈ 35 min)"],["w","","10 min sulla passerella pedonale Léopold-Sédar-Senghor, poi nelle Tuileries"]],dur:"≈ 1 h → arrivo verso le 15:00 (stima)",nb:"<b>Scendete a Musée d’Orsay</b>, non a Pont de l’Alma. Il RER C passa ogni 15 minuti circa: se ne perdete uno, arrivate comunque per le 15:15.",links:[["Percorso fino all’Orangerie",gm("Musée de l'Orangerie, Paris",{from:"Château de Versailles"})]]},
-  {t:"15:15",title:"Orangerie (prenotato)",nb:"Le Ninfee di Monet nelle due sale ovali. Biglietto 12,50 €. Un’ora basta."},
+  {t:"15:15",title:"Orangerie (prenotato)",nb:"Le Ninfee di Monet nelle due sale ovali. Biglietto 12,50 € online (11 € alla cassa). Un’ora basta."},
   {t:"16:15",go:1,n:3,title:"Galerie Dior, a piedi",legs:[["w","","25 min: Place de la Concorde, Cours la Reine, Avenue Montaigne"]],dur:"→ arrivo verso le 16:40",links:[["A piedi fino a Dior",gm("La Galerie Dior, 11 Rue François 1er, 75008 Paris",{from:"Musée de l'Orangerie, Paris",mode:"walking"})]]},
   {t:"17:00",title:"Galerie Dior (prenotato)"},
   {t:"18:30",title:"Passeggiata e cena",nb:"Avenue Montaigne e gli Champs-Élysées illuminati sono a 5 minuti."},
   {t:"Dopo",go:1,title:"Casa",legs:[["m","1","da Franklin D. Roosevelt, dir. Château de Vincennes → Concorde (2 fermate)"],["m","12","dir. Mairie d’Aubervilliers → Lamarck-Caulaincourt (8 fermate)"]],dur:"≈ 30 min",links:[["Torna a casa da dove sei",gm(H)]]}
  ]},
 {id:"giovedi",tab:"Gio 26",short:"Gio 26",what:"Volo per Olbia alle 12:45",first:"09:15",title:"Giovedì 26 novembre",sub:"Rientro: volo V7 2324 alle 12:45",
- hours:"<b>Volotea</b> parte di solito da Orly 1: controllate la carta d’imbarco · a Orly una pista è chiusa per lavori fino al 17/12: guardate lo stato del volo la sera prima",
+ hours:"<b>Volotea</b> parte da Orly 1: controllate la carta d’imbarco · a Orly una pista è chiusa per lavori fino al 17/12: guardate lo stato del volo la sera prima",
  pins:[[1,"ORY","Aeroporto di Orly"]],
  route:[W(["casa","lam"]),M("12",r12("lam","slz")),M("14",["slz","mad","pyr","chat","gdl","ORY"])],
  steps:[
   {t:"Mattina",title:"Colazione e check-out"},
-  {t:"09:15",go:1,n:1,title:"Orly in metro",legs:[["w","","3 min + ascensore, comodo con le valigie"],["m","12","dir. Mairie d’Issy → Saint-Lazare (6 fermate)"],["m","14","dir. Aéroport d’Orly (≈ 30 min)"]],dur:"≈ 1 h 05 → in aeroporto verso le 10:20 (stima)",nb:"Biglietto aeroporto 14 € a testa, già compreso nel Navigo Semaine.",links:[["Percorso fino a Orly",gm("Aéroport de Paris-Orly",{from:H})]]},
+  {t:"09:15",go:1,n:1,title:"Orly in metro",legs:[["w","","3 min + ascensore, comodo con le valigie"],["m","12","dir. Mairie d’Issy → Saint-Lazare (6 fermate)"],["m","14","dir. Aéroport d’Orly (≈ 30 min)"]],dur:"≈ 1 h 05 → in aeroporto verso le 10:20 (stima)",nb:"<b>La metro arriva a Orly 3:</b> per Orly 1 camminate qualche minuto dentro l’aeroporto, seguendo i cartelli. Biglietto aeroporto 14 € a testa, già compreso nel Navigo Semaine.",links:[["Percorso fino a Orly",gm("Aéroport de Paris-Orly",{from:H})]]},
   {t:"Oppure",title:"Taxi",legs:[["t","","45 € fissi da Parigi riva destra"]],dur:"40–60 min con il traffico del mattino (stima)",links:[["In auto",gm("Aéroport de Paris-Orly",{from:H,mode:"driving"})]]},
   {t:"12:45",title:"Volo per Olbia"}
  ]}
 ];
 
 /* ---------- oggi (durante il viaggio) ---------- */
-const NOW=new Date();const TODAY=NOW.getFullYear()===2026&&NOW.getMonth()===10?NOW.getDate()-22:-1;
+const dayIndex=t=>Math.round((new Date(t.getFullYear(),t.getMonth(),t.getDate())-new Date(2026,10,22))/864e5);
+const TODAY=dayIndex(new Date());
 const TAG='<span class="today">oggi</span>';
 
 /* ---------- spunte «Da fare», salvate su questo telefono ---------- */
@@ -439,7 +492,7 @@ for(const c of document.querySelectorAll(".todo input")){try{c.checked=localStor
 /* ---------- settimana ---------- */
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tabsEl=document.getElementById("tabs"),main=document.getElementById("day");
-document.getElementById("week").innerHTML=DAYS.map((d,i)=>`<li><button class="wk-row" data-i="${i}"><span class="wk-day">${d.short}</span><span class="wk-what">${esc(d.what)}${i===TODAY?TAG:""}</span><span class="wk-out"><small>esci entro</small>${d.first}</span></button></li>`).join("");
+document.getElementById("week").innerHTML=DAYS.map((d,i)=>`<li><button class="wk-row${i===TODAY?" is-today":""}" data-i="${i}"><span class="wk-chip"><small>${d.short.split(" ")[0]}</small>${d.short.split(" ")[1]}</span><span class="wk-what">${esc(d.what)}${i===TODAY?TAG:""}</span><span class="wk-out"><small>esci entro</small>${d.first}</span></button></li>`).join("");
 
 /* ---------- orario ---------- */
 const badge=(k,l)=>{if(k==="w")return `<span class="lb wk" aria-label="a piedi">${WALK}</span>`;if(k==="t")return `<span class="lb tx">TAXI</span>`;const c=LC[l],rer=/[A-Z]/.test(l);return `<span class="lb${rer?" rer":""}" style="--c:${c[0]};--t:${c[1]}">${l}</span>`};
@@ -481,23 +534,43 @@ const draw=()=>{const svg=document.getElementById("mapsvg");if(!svg)return;const
  svg.innerHTML=h};
 
 /* ---------- giorno ---------- */
-tabsEl.innerHTML=DAYS.map((d,i)=>`<button class="tab" role="tab" id="t-${d.id}" aria-controls="day" aria-selected="false" data-i="${i}">${d.tab}${i===TODAY?TAG:""}</button>`).join("");
+tabsEl.innerHTML=DAYS.map((d,i)=>`<button class="tab" role="tab" id="t-${d.id}" aria-controls="day" aria-selected="false" data-i="${i}"><span class="t-d">${d.tab.split(" ")[0]}</span> <span class="t-n">${d.tab.split(" ")[1]}</span>${i===TODAY?TAG:""}</button>`).join("");
 let ro=null;
 const show=i=>{cur=i;const d=DAYS[i];
  for(const b of tabsEl.querySelectorAll(".tab"))b.setAttribute("aria-selected",String(+b.dataset.i===i));
  {const b=tabsEl.querySelector(".tab[aria-selected=true]"),r=b.getBoundingClientRect(),t=tabsEl.getBoundingClientRect();if(r.left<t.left||r.right>t.right)tabsEl.scrollLeft+=r.left-t.left-(t.width-r.width)/2}
- main.innerHTML=`<div class="wrap daywrap"><div class="dhead"><p class="eyebrow">Giorno ${i+1} di ${DAYS.length}</p><h2>${d.title}</h2><p class="dsub">${d.sub}</p><div class="hours"><span class="eyebrow">Aperture e avvisi</span>${d.hours}</div></div>
- <div class="dgrid"><div class="mapcol"><div class="fig"><svg id="mapsvg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Mappa degli spostamenti di ${d.title}"></svg></div>
+ main.innerHTML=`<div class="wrap daywrap"><div class="dhead"><p class="kicker">Giorno ${i+1} di ${DAYS.length}</p><h2>${d.title}</h2><p class="dsub">${d.sub}</p><ul class="chips" aria-label="Aperture e avvisi">${d.hours.split(" · ").map(h=>`<li>${h}</li>`).join("")}</ul></div>
+ <div class="dgrid"><div class="mapcol"><div class="card mapcard"><div class="fig"><svg id="mapsvg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Mappa degli spostamenti di ${d.title}"></svg></div>
  <ul class="legend">${d.pins.map(([n,,t])=>`<li><span class="pin">${n}</span>${esc(t)}</li>`).join("")}</ul>
- <p class="key">Puntini = a piedi · linee colorate = metro e RER · verde chiaro = la vostra linea 12. Mappa schematica, non in scala.</p></div>
+ <p class="key">Puntini = a piedi · linee colorate = metro e RER · verde chiaro = la vostra linea 12. Mappa schematica, non in scala.</p></div></div>
  <ol class="tl">${d.steps.map(step).join("")}</ol></div></div>`;
  if(ro)ro.disconnect();ro=new ResizeObserver(draw);ro.observe(document.getElementById("mapsvg"));draw()};
-const go=(i,scroll)=>{if(location.hash!=="#"+DAYS[i].id)location.hash=DAYS[i].id;else show(i);if(scroll)document.querySelector(".tabs").scrollIntoView({behavior:"smooth"})};
-tabsEl.addEventListener("click",e=>{const b=e.target.closest(".tab");if(b)go(+b.dataset.i,false)});
+let wantScroll=false;
+const toDay=()=>{if(!wantScroll)return;wantScroll=false;const r=main.getBoundingClientRect();if(r.top<0||r.top>innerHeight*.5)main.scrollIntoView({behavior:"auto",block:"start"})};
+const go=(i,scroll)=>{wantScroll=scroll;if(location.hash!=="#"+DAYS[i].id)location.hash=DAYS[i].id;else{show(i);toDay()}};
+tabsEl.addEventListener("click",e=>{const b=e.target.closest(".tab");if(b)go(+b.dataset.i,true)});
 document.getElementById("week").addEventListener("click",e=>{const b=e.target.closest(".wk-row");if(b)go(+b.dataset.i,true)});
-const fromHash=()=>{const i=DAYS.findIndex(d=>"#"+d.id===location.hash);if(i>=0){show(i);return true}return false};
+const fromHash=()=>{const i=DAYS.findIndex(d=>"#"+d.id===location.hash);if(i>=0){show(i);toDay();return true}return false};
 window.addEventListener("hashchange",fromHash);
-if(!fromHash())show(TODAY>=0&&TODAY<5?TODAY:0)
+if(!fromHash())show(TODAY>=0&&TODAY<5?TODAY:0);
+
+/* ---------- prossima uscita (in base all'ora del telefono) ---------- */
+const nextEl=document.getElementById("next");
+const MIN=t=>{const m=/^(\d\d):(\d\d)$/.exec(t);return m?+m[1]*60+ +m[2]:null};
+const renderNext=()=>{const now=new Date(),idx=dayIndex(now),mins=now.getHours()*60+now.getMinutes();let f=null;
+ if(idx<=4)for(let d=Math.max(idx,0);d<DAYS.length&&!f;d++)for(const s of DAYS[d].steps){const m=MIN(s.t);if(s.go&&m!==null&&(d>idx||m>=mins-10)){f=[d,s,m];break}}
+ if(!f){nextEl.hidden=true;return}
+ const [d,s,m]=f,diff=d===idx?m-mins:null;
+ const when=diff===null?"":diff<=0?"adesso":diff<60?`tra ${diff} min`:`tra ${Math.floor(diff/60)} h ${String(diff%60).padStart(2,"0")}`;
+ const lab=s.lab!==undefined?s.lab:"esci entro";
+ nextEl.innerHTML=`<div class="nx-time"><small>${esc(lab)}</small><b>${esc(s.t)}</b></div>
+ <div><div class="nx-head"><span>Prossima uscita · ${d===idx?"oggi":esc(DAYS[d].title)}</span>${when?`<span class="nx-when${diff<=30?" soon":""}">${when}</span>`:""}</div>
+ <h3 class="nx-title">→ ${esc(s.title)}</h3>
+ ${s.legs?`<div class="nx-legs">${s.legs.map(([k,l])=>badge(k,l)).join("")}${s.dur?`<span class="dur">${esc(s.dur)}</span>`:""}</div>`:""}</div>
+ <div class="nx-btns">${s.links?`<a class="btn" href="${esc(s.links[0][1])}" target="_blank" rel="noopener">Apri il percorso</a>`:""}<button class="btn alt" type="button" data-i="${d}">Vedi la giornata</button></div>`;
+ nextEl.hidden=false};
+nextEl.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)go(+b.dataset.i,true)});
+renderNext();setInterval(renderNext,60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)renderNext()});
 }
 </script>
 </body>
