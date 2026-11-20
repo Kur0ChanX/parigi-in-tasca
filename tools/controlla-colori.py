@@ -10,3 +10,8 @@ if mancano:
     print("FALSO: colori usati ma non definiti:", ", ".join("--" + m for m in mancano))
     sys.exit(1)
 print(f"VERO: {len(usate)} variabili usate, tutte definite")
+# Nato da un errore del 20/11/2026: lo stile dei bottoni annullava «hidden» (bottone installa sempre visibile).
+if "[hidden]{display:none!important}" not in s:
+    print("FALSO: manca la regola [hidden]{display:none!important}")
+    sys.exit(1)
+print("VERO: gli elementi nascosti restano nascosti")

@@ -23,7 +23,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1430'/%3E%3Crect x='9' y='17' width='46' height='30' rx='6' fill='%232349C4' stroke='%232D5A4C' stroke-width='3'/%3E%3Crect x='13' y='21' width='38' height='22' rx='3' fill='none' stroke='white' stroke-width='1.6'/%3E%3Ctext x='32' y='38' font-family='Arial' font-weight='800' font-size='15' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
 <script>/* Installabile come app e apribile senza internet. Solo sul sito vero (https) o in prova su localhost. */
 if(location.protocol==='https:'&&location.hostname.endsWith('github.io')||location.hostname==='localhost'){[['manifest','manifest.webmanifest'],['apple-touch-icon','icona-180.png']].forEach(function(l){var e=document.createElement('link');e.rel=l[0];e.href=l[1];document.head.appendChild(e)});
- if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}</script>
+ if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}
+addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__bip=e;document.dispatchEvent(new Event('bip'))});</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -54,6 +55,7 @@ if(location.protocol==='https:'&&location.hostname.endsWith('github.io')||locati
  --shadow:0 1px 2px rgb(0 0 0 / .4),0 14px 34px -16px rgb(0 0 0 / .8);--shadow-lo:0 1px 2px rgb(0 0 0 / .4),0 6px 16px -10px rgb(0 0 0 / .7);color-scheme:dark}
 
 *{box-sizing:border-box;min-width:0}
+[hidden]{display:none!important}
 html{scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--text);overflow-x:clip}
@@ -86,6 +88,13 @@ h1 span{color:var(--lamp)}
 .hero .btn.ghost{background:rgb(255 255 255 / .12);color:#fff;border:1px solid rgb(255 255 255 / .28)}
 .hero .btn.ghost:hover{background:rgb(255 255 255 / .2);color:#fff}
 .offline-band{padding-block:12px 0}
+.pinst{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;max-width:520px;margin:0 auto;display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px 14px;align-items:center;padding:16px;border-radius:var(--r-lg);background:var(--surface);border:1px solid var(--rule);box-shadow:0 20px 50px -10px rgb(0 0 0 / .45)}
+.pinst img{border-radius:12px;display:block}
+.pi-tx{display:grid;gap:4px}.pi-tx b{font:800 17px/1.25 var(--display);letter-spacing:-.01em}.pi-tx span{font-size:14px;line-height:1.45;color:var(--mute)}
+.pi-btns{grid-column:1/-1;display:flex;gap:8px}.pi-btns .btn{flex:1}
+.pinst .pi-man{display:none}.pinst.manual .pi-man{display:block}.pinst.manual .pi-auto,.pinst.manual .pi-yes{display:none}
+@media(max-width:719px){.pinst{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:no-preference){.pinst.in{animation:pin .35s cubic-bezier(.2,.7,.2,1)}@keyframes pin{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}}
 .offline{margin:0;padding:12px 16px;border-radius:var(--r-md);background:var(--warn);color:var(--bg);font-size:15px;line-height:1.45}
 .home{display:grid;gap:14px;justify-items:start}
 .plaque{display:grid;justify-items:center;gap:2px;padding:12px 24px 13px;background:#1E4C93;color:#fff;border:5px solid #2D5A4C;border-radius:12px;outline:2px solid #fff;outline-offset:-10px;box-shadow:0 14px 30px rgb(0 0 0 / .35);text-transform:uppercase;line-height:1}
@@ -353,6 +362,14 @@ footer h3{font:800 18px/1.2 var(--display)}
   </ul>
  </div>
 </section>
+
+<div class="pinst" id="installa" role="dialog" aria-labelledby="pi-t" hidden>
+ <img src="icona-192.png" alt="" width="52" height="52">
+ <div class="pi-tx"><b id="pi-t">Installa «Parigi in tasca» come app</b>
+  <span class="pi-auto">Un’icona sul telefono: si apre al volo, anche senza internet.</span>
+  <span class="pi-man">Dal menu del browser (⋮ oppure ≡) scegliete «Installa app» o «Aggiungi a schermata Home».</span></div>
+ <div class="pi-btns"><button class="btn pi-yes" type="button">Installa</button><button class="btn alt pi-no" type="button">Non ora</button></div>
+</div>
 
 <nav class="tabs" aria-label="Giorni"><div class="wrap" role="tablist" id="tabs"></div></nav>
 
@@ -624,10 +641,23 @@ if(!fromHash())show(TODAY>=0&&TODAY<5?TODAY:0);
 
 /* ---------- senza internet: avviso e bottone «Aggiungi alla schermata Home» ---------- */
 {const off=document.getElementById("offline"),upd=()=>{off.hidden=navigator.onLine};upd();addEventListener("online",upd);addEventListener("offline",upd);
- const ins=document.getElementById("install");let pr=null;
- addEventListener("beforeinstallprompt",e=>{e.preventDefault();pr=e;ins.hidden=false});
- ins.addEventListener("click",async()=>{if(!pr)return;pr.prompt();try{await pr.userChoice}catch(e){}pr=null;ins.hidden=true});
- addEventListener("appinstalled",()=>{ins.hidden=true})}
+ /* Su Android, qualche secondo dopo l'apertura, il riquadro «Installa come app» (Mario 20/11).
+    L'installazione parte solo dal tocco della persona: è una regola del browser. */
+ const ins=document.getElementById("install"),pop=document.getElementById("installa"),ANDR=/Android/i.test(navigator.userAgent),
+  STAND=matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
+ const ls=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){}return null};
+ let pr=window.__bip||null,timer=null;
+ const later=()=>Date.now()-(+ls("pit:installa-no")||0)<12*3600e3;
+ const show=()=>{if(!ANDR||STAND||ls("pit:installata")==="1"||later()||!pop.hidden)return;pop.classList.toggle("manual",!pr);pop.hidden=false;pop.classList.add("in")};
+ const hide=()=>{pop.hidden=true;pop.classList.remove("in")};
+ const afterLoad=f=>document.readyState==="complete"?f():addEventListener("load",f,{once:true});
+ const ready=()=>{ins.hidden=false;if(pop.hidden){clearTimeout(timer);afterLoad(()=>{timer=setTimeout(show,4000)})}else pop.classList.remove("manual")};
+ if(pr)ready();document.addEventListener("bip",()=>{pr=window.__bip;ready()});
+ if(ANDR&&!STAND)afterLoad(()=>setTimeout(()=>{if(!pr)show()},25000)); /* browser senza installazione diretta: istruzioni a mano */
+ const doInstall=async()=>{if(!pr)return;pr.prompt();let ok=false;try{ok=(await pr.userChoice).outcome==="accepted"}catch(e){}pr=window.__bip=null;ins.hidden=true;hide();if(ok)ls("pit:installata","1")};
+ ins.addEventListener("click",doInstall);pop.querySelector(".pi-yes").addEventListener("click",doInstall);
+ pop.querySelector(".pi-no").addEventListener("click",()=>{ls("pit:installa-no",String(Date.now()));hide()});
+ addEventListener("appinstalled",()=>{ls("pit:installata","1");ins.hidden=true;hide()})}
 
 /* ---------- prossima uscita (in base all'ora del telefono) ---------- */
 const nextEl=document.getElementById("next");
