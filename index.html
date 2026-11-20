@@ -12,6 +12,9 @@
 <meta property="og:description" content="Quando uscire, che metro prendere e i percorsi pronti su Google Maps, giorno per giorno.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1430'/%3E%3Crect x='9' y='17' width='46' height='30' rx='6' fill='%232349C4' stroke='%232D5A4C' stroke-width='3'/%3E%3Crect x='13' y='21' width='38' height='22' rx='3' fill='none' stroke='white' stroke-width='1.6'/%3E%3Ctext x='32' y='38' font-family='Arial' font-weight='800' font-size='15' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
+<script>/* Installabile come app e apribile senza internet. Solo sul sito vero (https) o in prova su localhost. */
+if(location.protocol==='https:'&&location.hostname.endsWith('github.io')||location.hostname==='localhost'){[['manifest','manifest.webmanifest'],['apple-touch-icon','icona-180.png']].forEach(function(l){var e=document.createElement('link');e.rel=l[0];e.href=l[1];document.head.appendChild(e)});
+ if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -71,6 +74,10 @@ h1 span{color:var(--lamp)}
 .hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .hero .btn{background:#fff;color:#0B1430}
 .hero .btn:hover{background:var(--lamp);color:#0B1430}
+.hero .btn.ghost{background:rgb(255 255 255 / .12);color:#fff;border:1px solid rgb(255 255 255 / .28)}
+.hero .btn.ghost:hover{background:rgb(255 255 255 / .2);color:#fff}
+.offline-band{padding-block:12px 0}
+.offline{margin:0;padding:12px 16px;border-radius:var(--r-md);background:var(--warn);color:var(--bg);font-size:15px;line-height:1.45}
 .home{display:grid;gap:14px;justify-items:start}
 .plaque{display:grid;justify-items:center;gap:2px;padding:12px 24px 13px;background:#1E4C93;color:#fff;border:5px solid #2D5A4C;border-radius:12px;outline:2px solid #fff;outline-offset:-10px;box-shadow:0 14px 30px rgb(0 0 0 / .35);text-transform:uppercase;line-height:1}
 .pl-arr{font-size:12px;font-weight:700;letter-spacing:.08em;padding-top:4px}
@@ -285,7 +292,7 @@ footer h3{font:800 18px/1.2 var(--display)}
     <span class="pill"><i></i>22–26 novembre 2026 · 5 giorni</span>
     <h1>Parigi <span>in tasca</span></h1>
     <p class="lede">Quando uscire, che metro prendere e il percorso già pronto su Google Maps, giorno per giorno.</p>
-    <div class="hero-btns"><a class="btn" id="home" href="#" target="_blank" rel="noopener">Torna a casa da dove sei</a></div>
+    <div class="hero-btns"><a class="btn" id="home" href="#" target="_blank" rel="noopener">Torna a casa da dove sei</a><button class="btn ghost" id="install" type="button" hidden>Aggiungi alla schermata Home</button></div>
    </div>
    <div class="home">
     <div class="plaque" role="img" aria-label="Casa: rue Duhesme, 18° arrondissement">
@@ -297,6 +304,8 @@ footer h3{font:800 18px/1.2 var(--display)}
   </div>
  </div>
 </header>
+
+<div class="band offline-band" id="offline" hidden><div class="wrap"><p class="offline"><b>Senza internet:</b> state vedendo la copia salvata sul telefono. Orari, tragitti e mappa ci sono tutti; i bottoni di Google Maps funzionano solo con internet.</p></div></div>
 
 <section class="band next-band" aria-label="Prossima uscita">
  <div class="wrap"><article class="card next" id="next" hidden></article></div>
@@ -377,6 +386,12 @@ footer h3{font:800 18px/1.2 var(--display)}
     <li>Siete altrove? Toccate la partenza e scegliete «La tua posizione».</li>
     <li>Per non arrivare tardi: toccate l’orario in alto (es. «Parti ora») e impostate l’ora di arrivo, 15 minuti prima dell’ingresso.</li>
     <li>Se Maps propone una strada diversa da questa pagina, seguite Maps: vede ritardi e lavori del giorno.</li>
+   </ol>
+   <h3 style="margin-top:26px">Senza internet</h3>
+   <ol class="steps">
+    <li>Aprite questa pagina una volta con internet: da quel momento resta salvata sul telefono e si apre anche senza rete.</li>
+    <li>Per averla come un’app: toccate «Aggiungi alla schermata Home» in alto, se compare. Altrimenti dal menu del browser scegliete «Aggiungi a schermata Home» o «Installa app». Su iPhone: Condividi, poi «Aggiungi alla schermata Home».</li>
+    <li>Senza internet funzionano orari, tragitti e mappa. Google Maps ha bisogno di internet.</li>
    </ol>
    <p class="note">Lamarck-Caulaincourt è profonda 25 metri: usate l’ascensore, le scale sono lunghissime. Linea 12: <b>dir. Mairie d’Issy</b> verso il centro, <b>dir. Mairie d’Aubervilliers</b> per tornare.</p>
   </div>
@@ -597,6 +612,13 @@ document.getElementById("week").addEventListener("click",e=>{const b=e.target.cl
 const fromHash=()=>{const i=DAYS.findIndex(d=>"#"+d.id===location.hash);if(i>=0){show(i);toDay();return true}return false};
 window.addEventListener("hashchange",fromHash);
 if(!fromHash())show(TODAY>=0&&TODAY<5?TODAY:0);
+
+/* ---------- senza internet: avviso e bottone «Aggiungi alla schermata Home» ---------- */
+{const off=document.getElementById("offline"),upd=()=>{off.hidden=navigator.onLine};upd();addEventListener("online",upd);addEventListener("offline",upd);
+ const ins=document.getElementById("install");let pr=null;
+ addEventListener("beforeinstallprompt",e=>{e.preventDefault();pr=e;ins.hidden=false});
+ ins.addEventListener("click",async()=>{if(!pr)return;pr.prompt();try{await pr.userChoice}catch(e){}pr=null;ins.hidden=true});
+ addEventListener("appinstalled",()=>{ins.hidden=true})}
 
 /* ---------- prossima uscita (in base all'ora del telefono) ---------- */
 const nextEl=document.getElementById("next");

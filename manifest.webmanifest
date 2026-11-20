@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "Parigi in tasca",
+  "short_name": "Parigi",
+  "description": "Parigi 22–26 novembre: quando uscire, che metro prendere e i percorsi pronti su Google Maps.",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F4F8",
+  "theme_color": "#0B1430",
+  "icons": [
+    { "src": "icona-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icona-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icona-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
