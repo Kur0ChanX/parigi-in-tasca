@@ -9,6 +9,7 @@ Sito: https://kur0chanx.github.io/parigi-in-tasca/ (GitHub Pages, ramo `main`, c
 - In cima la scheda «Prossima uscita»: legge l'ora del telefono e mostra la prossima uscita (con «tra X min» e il link Maps). Prima del viaggio mostra la prima uscita di domenica; dopo giovedì sparisce.
 - Sul telefono i giorni sono nella barra in basso, come in un'app. Durante il viaggio la pagina apre il giorno di oggi e lo segna con «oggi».
 - Lunedì 23 (Disneyland): riquadro e bottoni «Guida Disneyland» verso la guida dell'amica con le sue date, https://guida-disneyland-paris-ynoy.pages.dev (repo `YNOY-Disneyland-Paris/Disneyland-Paris-Guida`, «Guida dell'amica»). Compare anche nella scheda «Prossima uscita» quando l'uscita è di lunedì.
+- Uscite: ogni tratto ha i minuti (4° valore in `legs`, con attese, cambi e passo tranquillo); la pagina calcola l'orario di ogni pezzo, l'arrivo e il margine sull'ingresso (`target`). Per spostare un'uscita basta cambiare `t`.
 - «Da fare»: le spunte restano salvate solo sul telefono di chi le tocca (localStorage).
 - I giorni sono nell'array `DAYS` dentro lo script: orari, tratti (`legs`), note (`nb`), link Maps (`gm(...)`), punti mappa (`pins`) e percorsi (`route`).
 - La mappa è uno schema SVG disegnato dallo script (coordinate in `S`), non in scala.
