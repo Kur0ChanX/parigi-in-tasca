@@ -72,13 +72,13 @@ h1 span{color:var(--lamp)}
 .hero .btn{background:#fff;color:#0B1430}
 .hero .btn:hover{background:var(--lamp);color:#0B1430}
 .home{display:grid;gap:14px;justify-items:start}
-.plaque{display:grid;justify-items:center;gap:2px;padding:12px 24px 13px;background:#1E4C93;color:#fff;border:5px solid #2D5A4C;border-radius:12px;outline:2px solid #fff;outline-offset:-10px;box-shadow:0 14px 30px rgb(0 0 0 / .35);text-transform:uppercase;line-height:1;transform:rotate(-2deg)}
+.plaque{display:grid;justify-items:center;gap:2px;padding:12px 24px 13px;background:#1E4C93;color:#fff;border:5px solid #2D5A4C;border-radius:12px;outline:2px solid #fff;outline-offset:-10px;box-shadow:0 14px 30px rgb(0 0 0 / .35);text-transform:uppercase;line-height:1}
 .pl-arr{font-size:12px;font-weight:700;letter-spacing:.08em;padding-top:4px}
 .pl-arr sup{font-size:.7em;vertical-align:.45em;text-transform:none}
 .pl-name{font:800 clamp(26px,3.4vw,32px)/1 var(--display);letter-spacing:.01em;padding:2px 4px 4px}
 .home-meta{margin:0;font-size:15px;line-height:1.6;color:#C3CCE0;max-width:44ch}
 .home-meta b{color:#fff;font-weight:700}
-.home-meta .lb{vertical-align:-7px;margin-right:2px}
+.home-meta .lb{min-width:22px;height:22px;font-size:12px;vertical-align:middle;margin:0 2px;position:relative;top:-1px}
 
 /* ---------- bottoni ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;border:0;background:var(--brand);color:#fff;font:700 15px/1.2 var(--text);text-decoration:none;cursor:pointer;transition:background-color .15s,transform .15s,box-shadow .15s}
@@ -188,7 +188,7 @@ ol.tl{list-style:none;margin:0;padding:0}
 .tl>li:first-child .rail::before{top:8px}.tl>li:last-child .rail::before{bottom:auto;height:10px}
 .dot{position:absolute;left:1px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:4px solid var(--mute)}
 .go .tm{color:var(--go)}.go .dot{background:var(--go);border-color:var(--go);box-shadow:0 0 0 4px color-mix(in srgb,var(--go) 22%,transparent)}
-.go .tm{padding-top:18px}.go .dot{top:21px}
+.go .tm{padding-top:4px}.go .dot{top:21px}
 .opt .dot{border-style:dashed}
 .body{padding-bottom:22px}
 .go .body{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:16px 18px 18px;margin-bottom:18px}
@@ -202,6 +202,7 @@ ol.tl{list-style:none;margin:0;padding:0}
 .legs{display:grid;gap:8px;margin-top:12px}
 .leg{display:flex;gap:10px;align-items:flex-start;font-size:15px}
 .leg b{white-space:nowrap}
+.leg>span:last-child{padding-top:calc((26px - 1.55em) / 2)}
 .lb{flex:none;display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:50%;background:var(--c);color:var(--t);font:800 13px/1 var(--text)}
 .lb.rer{border-radius:7px}
 .lb.wk{background:transparent;border:2px dashed var(--mute);color:var(--mute)}
@@ -545,7 +546,7 @@ const draw=()=>{const svg=document.getElementById("mapsvg");if(!svg)return;const
  const near=(q,r)=>pinPts.some(p=>Math.hypot(p[0]-q[0],p[1]-q[1])<r);
  for(const [c,t] of LAND){const q=P(c);if(!near(q,40/k))h+=`<text class="lbl" x="${q[0].toFixed(1)}" y="${q[1].toFixed(1)}" font-size="${u(12)}" stroke-width="${u(3)}" text-anchor="middle">${t}</text>`}
  for(const r of d.route){if(r.k==="w")h+=`<path d="${path(r.p)}" class="walk" stroke-width="${u(2.5)}" stroke-dasharray="${u(1)} ${u(6)}"/>`;else h+=`<path d="${path(r.p)}" fill="none" stroke="${LC[r.l][0]}" stroke-width="${u(5)}" stroke-linecap="round" stroke-linejoin="round"/>`}
- for(const s of L12){const q=P(S[s]);h+=`<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="${u(3.2)}" fill="var(--card)" stroke="#007852" stroke-width="${u(2)}"/>`}
+ for(const s of L12){const q=P(S[s]);h+=`<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="${u(3.2)}" fill="var(--surface-2)" stroke="#007852" stroke-width="${u(2)}"/>`}
  const sl=narrow?[["lam","Lamarck"],["slz","Saint-Lazare"],["con","Concorde"]]:[["lam","Lamarck"],["pig","Pigalle"],["slz","Saint-Lazare"],["mad","Madeleine"],["con","Concorde"],["sol","Solférino"]];
  for(const [s,t] of sl){const q=P(S[s]);if(!near(q,26/k))h+=`<text class="lbl" x="${(q[0]-8/k).toFixed(1)}" y="${(q[1]+4/k).toFixed(1)}" font-size="${u(12)}" stroke-width="${u(3)}" text-anchor="end">${t}</text>`}
  const c=P(S.casa);h+=`<rect x="${(c[0]-8/k).toFixed(1)}" y="${(c[1]-8/k).toFixed(1)}" width="${u(16)}" height="${u(16)}" rx="${u(3)}" fill="#007852"/><text class="lbl" x="${(c[0]+12/k).toFixed(1)}" y="${(c[1]+4/k).toFixed(1)}" font-size="${u(13)}" stroke-width="${u(3)}" style="fill:var(--ink)">Casa</text>`;
