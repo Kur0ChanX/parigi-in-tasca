@@ -11,6 +11,7 @@ Sito: https://kur0chanx.github.io/parigi-in-tasca/ (GitHub Pages, ramo `main`, c
 - Lunedì 23 (Disneyland): riquadro e bottoni «Guida Disneyland» verso la guida dell'amica con le sue date, https://guida-disneyland-paris-ynoy.pages.dev (repo `YNOY-Disneyland-Paris/Disneyland-Paris-Guida`, «Guida dell'amica»). Compare anche nella scheda «Prossima uscita» quando l'uscita è di lunedì.
 - Uscite: ogni tratto ha i minuti (4° valore in `legs`, con attese, cambi e passo tranquillo); la pagina calcola l'orario di ogni pezzo, l'arrivo e il margine sull'ingresso (`target`). Per spostare un'uscita basta cambiare `t`.
 - Senza internet e come app: `sw.js` (prima la rete, dopo 4 secondi la copia salvata; stesso metodo della guida Disney) e `manifest.webmanifest` con le icone `icona-*.png` (la targa «Parigi in tasca»). Si attivano solo sul sito vero (github.io) o su localhost. Avviso giallo quando manca la rete; bottone «Aggiungi alla schermata Home» quando il browser lo permette.
+- Anteprima per WhatsApp e altre chat: `anteprima.jpg` (1200×630, sotto 300 KB) nei tag `og:image` in testa alla pagina.
 - «Da fare»: le spunte restano salvate solo sul telefono di chi le tocca (localStorage).
 - I giorni sono nell'array `DAYS` dentro lo script: orari, tratti (`legs`), note (`nb`), link Maps (`gm(...)`), punti mappa (`pins`) e percorsi (`route`).
 - La mappa è uno schema SVG disegnato dallo script (coordinate in `S`), non in scala.
