@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parigi in tasca · 22–26 novembre</title>
+<meta name="description" content="Parigi 22–26 novembre: quando uscire, che metro prendere e i percorsi pronti su Google Maps.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#007852">
+<meta property="og:title" content="Parigi in tasca · 22–26 novembre">
+<meta property="og:description" content="Quando uscire, che metro prendere e i percorsi pronti su Google Maps, giorno per giorno.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23007852'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='white'%3E12%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: pratico, da tenere in tasca, frasi corte.
+   IDEA: la mappa della metro di Parigi; la linea 12 (verde) è la spina dorsale del viaggio.
+   PICTURE: mappa schematica del giorno + orario a fermate, come una linea della metro.
+   COLOUR and TYPE: bianco, verde linea 12, rosso per «esci entro», colori ufficiali delle linee; Figtree.
+   LAYOUT: banda verde, settimana in breve, cose da fare, schede dei giorni; mappa e orario affiancati su schermo largo. */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d1210);--ink:light-dark(#111614,#e9efec);--mute:light-dark(#55615b,#a0b2a9);--rule:light-dark(#dce4e0,#26332d);--card:light-dark(#f2f6f4,#141b18);--green:#007852;--go:light-dark(#c4302a,#ff7d70);--river:light-dark(#b8d8ec,#1d3b4e);--gold:light-dark(#c38f00,#e7b72e);--warn:light-dark(#8a5a00,#f0c35a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
+.band{padding:clamp(24px,4vw,56px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+a{color:inherit}html{scroll-padding-top:72px}
+h1,h2,h3{line-height:1.08;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,52px);font-weight:800}
+h2{font-size:clamp(26px,3.6vw,34px);font-weight:800}
+h3{font-size:17px;font-weight:800;line-height:1.25}
+.hero{background:var(--green);color:#fff}
+.hero p{margin:10px 0 0;max-width:60ch}
+.hero .meta{margin-top:12px;font-size:15px;opacity:.92}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:600;text-decoration:none;font-size:15px}
+.btn:focus-visible,.tab:focus-visible,.wk-row:focus-visible{outline:3px solid var(--go);outline-offset:2px}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.hero .btn{background:#fff;color:#0b3d2b;margin-top:18px}
+.week{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:0}
+.wk-row{display:grid;grid-template-columns:4.6em minmax(0,1fr) auto;gap:12px;align-items:baseline;width:100%;padding:12px 4px;border:0;border-top:1px solid var(--rule);background:none;color:var(--ink);font:inherit;text-align:left;cursor:pointer;min-height:48px}
+.wk-row b{font-weight:800;white-space:nowrap}
+.wk-out{white-space:nowrap;color:var(--go);font-weight:800;text-align:right}
+.wk-out small{display:block;font-size:12px;font-weight:600}
+.todo{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.todo li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start}
+.box{width:22px;height:22px;border:2.5px solid var(--ink);border-radius:6px;margin-top:2px}
+.chg{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.chg li{padding:12px 14px;border-radius:12px;background:var(--card)}
+.two{display:grid;gap:32px}
+@media(min-width:860px){.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
+.tabs{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule);padding:8px max(5vw,16px)}
+.tabs .wrap{display:flex;gap:6px;overflow-x:auto}
+.tab{flex:none;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid var(--rule);background:var(--bg);color:var(--ink);font:600 15px Figtree,system-ui,sans-serif;cursor:pointer}
+.tab[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dhead p{margin:6px 0 0;color:var(--mute)}
+.hours{margin-top:12px;padding:10px 14px;border-radius:12px;background:var(--card);font-size:15px}
+.hours b{font-weight:800}
+.dgrid{display:grid;gap:24px;margin-top:20px}
+@media(min-width:960px){.dgrid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px}.mapcol{position:sticky;top:76px;align-self:start}}
+.fig{position:relative;aspect-ratio:600/521;border-radius:14px;overflow:hidden;background:var(--card)}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%}
+.river{fill:none;stroke:var(--river);stroke-linecap:round;stroke-linejoin:round}
+.champs{fill:none;stroke:var(--gold);stroke-linecap:round}
+.l12{fill:none;stroke:var(--green);stroke-linecap:round;stroke-linejoin:round;opacity:.35}
+.walk{fill:none;stroke:var(--ink);stroke-linecap:round;stroke-linejoin:round}
+.lbl{fill:var(--mute);paint-order:stroke;stroke:var(--card);stroke-linejoin:round;font-family:Figtree,system-ui,sans-serif;font-weight:600}
+.pinc{fill:var(--ink)}.pint{fill:var(--bg);font-family:Figtree,system-ui,sans-serif;font-weight:800}
+.legend{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:6px;font-size:15px}
+.legend li{display:flex;gap:10px;align-items:center}
+.key{font-size:13px;color:var(--mute);margin-top:10px}
+.pin{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:13px;font-weight:800}
+ol.tl{list-style:none;margin:0;padding:0}
+.tl>li{display:grid;grid-template-columns:5.4em 20px minmax(0,1fr);column-gap:12px}
+.tm{text-align:right;font-weight:800;font-size:21px;line-height:1.1;white-space:nowrap;padding-top:2px}
+.tm small{display:block;font-size:12px;font-weight:600;color:var(--go)}
+.rail{position:relative}
+.rail::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:4px;background:var(--rule)}
+.tl>li:first-child .rail::before{top:8px}.tl>li:last-child .rail::before{bottom:auto;height:10px}
+.dot{position:absolute;left:2px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:4px solid var(--ink)}
+.go .tm{color:var(--go)}.go .dot{background:var(--go);border-color:var(--go)}
+.opt .dot{border-style:dashed;border-color:var(--mute)}
+.body{padding-bottom:22px}
+.opt .body{border:2px dashed var(--rule);border-radius:12px;padding:12px 14px;margin-bottom:22px}
+.warnrow .tm{color:var(--warn)}.warnrow .dot{border-color:var(--warn)}
+.body h3{display:flex;gap:8px;align-items:flex-start}
+.body p{margin:6px 0 0}
+.body ul{margin:6px 0 0;padding-left:18px}
+.legs{display:grid;gap:7px;margin-top:9px}
+.leg{display:flex;gap:9px;align-items:flex-start;font-size:15px}
+.leg b{white-space:nowrap}
+.lb{flex:none;display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:50%;background:var(--c);color:var(--t);font-weight:800;font-size:13px}
+.lb.rer{border-radius:7px}
+.lb.wk{background:transparent;border:2px dashed var(--mute);color:var(--mute)}
+.lb.tx{border-radius:7px;background:var(--ink);color:var(--bg);font-size:11px;padding:0 6px}
+.lb svg{width:15px;height:15px}
+.dur{font-weight:700}
+.nb{color:var(--mute);font-size:15px}
+.nb b{color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+table{border-collapse:collapse;width:100%;font-size:15px;margin-top:12px}
+th,td{padding:8px 6px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+tfoot td{font-weight:800}
+.steps{margin:12px 0 0;padding-left:20px}.steps li{margin:6px 0}
+.src{font-size:14px;color:var(--mute);columns:2 320px;column-gap:32px;padding-left:18px}
+.src li{margin:4px 0;break-inside:avoid}
+.note{font-size:14px;color:var(--mute)}
+@media(max-width:600px){table{font-size:14px}.tl>li{grid-template-columns:4.3em 20px minmax(0,1fr);column-gap:9px}.tm{font-size:18px}.wk-row{grid-template-columns:4.1em minmax(0,1fr) auto;gap:10px}}
+@media(prefers-reduced-motion:no-preference){.daywrap{animation:in .25s ease-out}@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<header class="band hero">
+ <div class="wrap">
+  <h1>Parigi in tasca</h1>
+  <p style="font-size:20px;font-weight:600;margin-top:6px">22–26 novembre</p>
+  <p>Quando uscire, che metro prendere e il percorso già pronto su Google Maps, giorno per giorno.</p>
+  <p class="meta">Casa: 17 rue Duhesme · Metro Lamarck-Caulaincourt, linea 12 (verde)<br>Orari e prezzi controllati il 20/11/2026 · i tempi di viaggio sono stime con un po’ di margine</p>
+  <a class="btn" id="home" href="#" target="_blank" rel="noopener">Torna a casa da dove sei</a>
+ </div>
+</header>
+
+<section class="band" aria-labelledby="wk">
+ <div class="wrap two">
+  <div>
+   <h2 id="wk">La settimana in breve</h2>
+   <ul class="week" id="week"></ul>
+  </div>
+  <div>
+   <h2>Da fare prima di partire</h2>
+   <ul class="todo">
+    <li><span class="box"></span><div><b>Notre-Dame:</b> prenotate l’ingresso gratuito di domenica alle 13:45 sul <a href="https://www.notredamedeparis.fr" target="_blank" rel="noopener">sito ufficiale</a>. Le prenotazioni si aprono 2–3 giorni prima.</div></li>
+    <li><span class="box"></span><div><b>Biglietti:</b> comprate il Navigo Semaine sul telefono (32,40 € a testa). Come fare è in fondo alla pagina.</div></li>
+    <li><span class="box"></span><div><b>Mercoledì:</b> scegliete tra Orangerie e Trianon (vedi mercoledì). Se Orangerie, prenotate l’orario delle 15:00.</div></li>
+    <li><span class="box"></span><div><b>Crociera martedì (se la volete):</b> prenotate una partenza dalle 19:45 in poi.</div></li>
+    <li><span class="box"></span><div><b>Ogni sera:</b> controllate scioperi e lavori del giorno dopo sull’app Bonjour RATP o Île-de-France Mobilités.</div></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="band" aria-labelledby="chgh" style="padding-top:0">
+ <div class="wrap">
+  <h2 id="chgh">Cosa cambia rispetto al programma</h2>
+  <ul class="chg">
+   <li><b>Orangerie:</b> è chiusa il martedì. Si sposta a mercoledì pomeriggio, tra Versailles e Dior.</li>
+   <li><b>Domenica, dal pranzo a Notre-Dame:</b> servono circa 35 minuti. Con l’ingresso alle 13:45 uscite dal ristorante entro le 13:05.</li>
+   <li><b>Domenica sera:</b> accensione delle luminarie e primo giorno del mercatino degli Champs-Élysées, quindi tantissima gente. Negozi prima delle 18; per tornare, linea 12 da Madeleine.</li>
+   <li><b>Versailles:</b> il biglietto Passport comprende anche il Trianon e la mostra «Marie-Antoinette» di Sofia Coppola. Con il programma attuale restano fuori: è l’alternativa all’Orangerie.</li>
+  </ul>
+ </div>
+</section>
+
+<nav class="tabs" aria-label="Giorni"><div class="wrap" role="tablist" id="tabs"></div></nav>
+
+<main class="band" id="day" aria-live="polite"></main>
+
+<section class="band" aria-labelledby="tk" style="background:var(--card)">
+ <div class="wrap two">
+  <div>
+   <h2 id="tk">Biglietti</h2>
+   <p><b>Consiglio: Navigo Semaine sul telefono, 32,40 € a testa.</b> Vale da lunedì 23 a domenica 29, in tutte le zone: Disney, Versailles e Orly compresi.</p>
+   <table>
+    <thead><tr><th>Con biglietti singoli</th><th class="n">a testa</th></tr></thead>
+    <tbody>
+     <tr><td>Lun: Disney andata e ritorno</td><td class="n">5,10 €</td></tr>
+     <tr><td>Mar: 4 corse</td><td class="n">10,20 €</td></tr>
+     <tr><td>Mer: 4 corse (per il RER si esce dalla metro: serve un biglietto in più)</td><td class="n">10,20 €</td></tr>
+     <tr><td>Gio: biglietto aeroporto</td><td class="n">14,00 €</td></tr>
+    </tbody>
+    <tfoot><tr><td>Totale lunedì–giovedì</td><td class="n">≈ 39,50 €</td></tr></tfoot>
+   </table>
+   <p class="note">Corsa singola metro/RER: 2,55 € (vale anche per Disney e Versailles). Aeroporto: 14 €. <b>Domenica il Navigo non vale:</b> servono 2 corse singole (pranzo → Notre-Dame, Madeleine → casa).</p>
+  </div>
+  <div>
+   <h3>Come comprarlo</h3>
+   <ol class="steps">
+    <li>Scaricate l’app <b>Île-de-France Mobilités</b> (Android e iPhone) e create l’account.</li>
+    <li>Comprate il <b>Navigo Semaine</b> per la settimana dal 23 al 29 novembre: si può già da venerdì 20.</li>
+    <li>Ognuno sul proprio telefono: è personale e il telefono deve avere l’NFC.</li>
+    <li>Ai tornelli appoggiate il telefono sul lettore Navigo.</li>
+   </ol>
+   <h3 style="margin-top:22px">Come usare i link Maps</h3>
+   <ol class="steps">
+    <li>Il bottone apre Google Maps con partenza, arrivo e mezzo già scelti.</li>
+    <li>Siete altrove? Toccate la partenza e scegliete «La tua posizione».</li>
+    <li>Per non arrivare tardi: toccate l’orario in alto (es. «Parti ora») e impostate l’ora di arrivo, 15 minuti prima dell’ingresso.</li>
+    <li>Se Maps propone una strada diversa da questa pagina, seguite Maps: vede ritardi e lavori del giorno.</li>
+   </ol>
+   <p class="note">Lamarck-Caulaincourt è profonda circa 25 metri: usate l’ascensore (le scale sono un centinaio di gradini). Linea 12: <b>dir. Mairie d’Issy</b> verso il centro, <b>dir. Mairie d’Aubervilliers</b> per tornare.</p>
+  </div>
+ </div>
+</section>
+
+<footer class="band" style="border-top:1px solid var(--rule)">
+ <div class="wrap">
+  <h3>Fonti (controllate il 20/11/2026)</h3>
+  <ul class="src">
+   <li><a href="https://tarifs.org/it/orari-disneyland-paris" target="_blank" rel="noopener">Orari Disneyland Paris novembre 2026</a></li>
+   <li><a href="https://www.offi.fr/expositions-musees/musee-de-lorangerie-2889.html" target="_blank" rel="noopener">Orangerie: chiusa il martedì, 9–18</a></li>
+   <li><a href="https://www.musee-orsay.fr/fr/visite" target="_blank" rel="noopener">Musée d’Orsay: orari</a></li>
+   <li><a href="https://www.offi.fr/a-travers-paris/cathedrale-notre-dame-2852.html" target="_blank" rel="noopener">Notre-Dame: orari, ingresso libero</a></li>
+   <li><a href="https://www.offi.fr/tendances/a-travers-paris/illuminations-noel-2026-paris-1172.html" target="_blank" rel="noopener">Luminarie Champs-Élysées 2026 e mercatino</a></li>
+   <li><a href="https://www.paris.fr/evenements/edition-2026-de-la-magie-de-noel-des-tuileries-127134" target="_blank" rel="noopener">Mercatino delle Tuileries 2026</a></li>
+   <li><a href="https://en.chateauversailles.fr/news/calendar/2026-11-25" target="_blank" rel="noopener">Versailles: orari del 25/11/2026</a></li>
+   <li><a href="https://pro.visitparisregion.com/conseil-et-accompagnement/accessibilite/lieux-de-visites-accessibles/la-galerie-dior" target="_blank" rel="noopener">Galerie Dior: orari</a></li>
+   <li><a href="https://haussmann.galerieslafayette.com/en/the-terrace-at-galeries-lafayette" target="_blank" rel="noopener">Terrazza Galeries Lafayette</a> e <a href="https://www.sortiraparis.com/en/lieux/52429-galeries-lafayette-haussmann" target="_blank" rel="noopener">pista sul tetto dal 24/11</a></li>
+   <li><a href="https://www.ratp.fr/infos-trafic/rer-transilien/c" target="_blank" rel="noopener">RER C: lavori serali fino al 30/11</a></li>
+   <li><a href="https://www.sortiraparis.com/en/news/in-paris/articles/291320-metro-and-rer-disruptions-this-week-november-16-to-22-2026" target="_blank" rel="noopener">Metro: Saint-Michel (linea 4) chiusa fino al 19/12</a></li>
+   <li><a href="https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026" target="_blank" rel="noopener">Prezzi biglietti 2026</a> e <a href="https://www.ratp.fr/titres-et-tarifs/forfait-navigo-semaine" target="_blank" rel="noopener">Navigo Semaine</a></li>
+   <li><a href="https://www.iledefrance-mobilites.fr/aide-et-contacts/titres-disponibles-sur-application/quels-titres-de-transport-charges-sur-telephone" target="_blank" rel="noopener">Navigo Semaine sul telefono</a></li>
+   <li><a href="https://entreprendre.service-public.gouv.fr/actualites/A15396?lang=fr&amp;profil=tout" target="_blank" rel="noopener">Taxi Orly ↔ Parigi riva destra: 45 €</a></li>
+   <li><a href="https://www.transavia.com/aide/fr-fr/preparation-et-enregistrement/aeroport/orly-transports-commun" target="_blank" rel="noopener">Linea 14 per Orly: tempi</a></li>
+   <li><a href="https://www.tourmag.com/Travaux-a-Paris-Orly-3-000-vols-impactes-entre-aout-et-decembre-2026_a131750.html" target="_blank" rel="noopener">Orly: pista 4 chiusa fino al 17/12</a></li>
+   <li><a href="https://www.toureiffel.paris/en/news/visit/what-time-does-eiffel-tower-light-and-sparkle" target="_blank" rel="noopener">Tour Eiffel: scintillio ogni ora</a></li>
+   <li><a href="https://www.lechotouristique.com/transport/transports-ce-que-l-on-sait-des-perturbations-attendues-pour-la-greve-du-5-novembre" target="_blank" rel="noopener">Scioperi di novembre</a></li>
+  </ul>
+ </div>
+</footer>
+
+<script>
+{
+const H="17 Rue Duhesme, 75018 Paris";
+const gm=(dest,o={})=>{let u="https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(dest)+"&travelmode="+(o.mode||"transit");if(o.from)u+="&origin="+encodeURIComponent(o.from);if(o.via)u+="&waypoints="+encodeURIComponent(o.via.join("|"));return u};
+document.getElementById("home").href=gm(H);
+
+const LC={"1":["#FFCD00","#111"],"2":["#003CA6","#fff"],"4":["#CF009E","#fff"],"9":["#B6BD00","#111"],"12":["#007852","#fff"],"14":["#62259D","#fff"],"A":["#E3051C","#fff"],"C":["#FFCE00","#111"]};
+const WALK='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2.2" fill="currentColor"/><path d="M13 8l-3 4 3 3-1 7M10 12l-3 1-1 4M13 8l3 4 3 1M13 15l3 2 1 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+/* luoghi [lat, lon] */
+const S={lam:[48.8891,2.3382],abb:[48.8844,2.3385],pig:[48.8821,2.3373],sgeo:[48.8785,2.3374],ndl:[48.8761,2.3381],tri:[48.8763,2.3328],slz:[48.8757,2.3257],mad:[48.8700,2.3246],con:[48.8655,2.3212],ass:[48.8611,2.3206],sol:[48.8585,2.3229],
+anv:[48.8829,2.3441],bar:[48.8838,2.3497],gdn:[48.8797,2.3548],gde:[48.8761,2.3582],cha:[48.8724,2.3561],ssd:[48.8696,2.3540],rea:[48.8664,2.3524],etm:[48.8637,2.3488],hal:[48.8623,2.3460],chat:[48.8590,2.3470],cit:[48.8550,2.3470],
+cda:[48.8730,2.3336],hav:[48.8735,2.3280],sau:[48.8745,2.3210],mir:[48.8735,2.3159],spr:[48.8723,2.3100],fdr:[48.8690,2.3096],alm:[48.8645,2.3010],ien:[48.8648,2.2937],tro:[48.8631,2.2873],cec:[48.8676,2.3140],
+mor:[48.8604,2.3240],inv:[48.8628,2.3145],pda:[48.8622,2.3005],cdm:[48.8557,2.2898],aub:[48.8722,2.3296],clh:[48.8619,2.3468],pyr:[48.8656,2.3349],gdl:[48.8443,2.3740],
+casa:[48.8906,2.3392],mr:[48.8875,2.3397],sc:[48.8865,2.3431],mtm:[48.8866,2.3412],gal:[48.8873,2.3365],mrouge:[48.8841,2.3322],nd:[48.8530,2.3499],pn:[48.8566,2.3418],louvre:[48.8610,2.3358],tuil:[48.8637,2.3265],glce:[48.8711,2.3045],
+orsay:[48.8600,2.3266],opera:[48.8720,2.3316],glh:[48.8738,2.3320],trocP:[48.8616,2.2893],bat:[48.8597,2.2928],orang:[48.8638,2.3227],dior:[48.8665,2.3045],
+DIS:{x:578,y:452},VER:{x:22,y:494},ORY:{x:520,y:494}};
+const L12=["lam","abb","pig","sgeo","ndl","tri","slz","mad","con","ass","sol"];
+const seq=a=>a.map(k=>S[k]);
+const r12=(a,b)=>{const i=L12.indexOf(a),j=L12.indexOf(b);const s=i<j?L12.slice(i,j+1):L12.slice(j,i+1).reverse();return seq(s)};
+const W=p=>({k:"w",p:seq(p)}),M=(l,p)=>({k:"m",l,p:Array.isArray(p[0])?p:seq(p)});
+
+const DAYS=[
+{id:"domenica",tab:"Dom 22",short:"Dom 22",what:"Arrivo, Montmartre, Notre-Dame, Champs-Élysées",first:"10:00",title:"Domenica 22 novembre",sub:"Arrivo, Montmartre e centro",
+ hours:"<b>Notre-Dame</b> 8:15–19:30, gratis · <b>Mercatino Tuileries</b> aperto · <b>Champs-Élysées</b>: luminarie accese alle 18:30, viale chiuso alle auto, primo giorno del mercatino",
+ pins:[[1,"mtm","Giro di Montmartre"],[2,"nd","Notre-Dame"],[3,"louvre","Louvre, esterni"],[4,"tuil","Tuileries, mercatino"],[5,"glce","Champs-Élysées"]],
+ route:[W(["casa","mr","mtm","sc","gal","mrouge","pig"]),M("2",["pig","anv","bar"]),M("4",["bar","gdn","gde","cha","ssd","rea","etm","hal","chat","cit"]),W(["cit","nd","pn","louvre","tuil","con","glce"]),W(["glce","mad"]),M("12",r12("mad","lam")),W(["lam","casa"])],
+ steps:[
+  {t:"08:05",title:"Orly → casa in taxi",legs:[["t","","35–50 min (stima)"]],nb:"Tariffa fissa 45 € da Orly a Parigi riva destra, bagagli compresi.",links:[["Percorso in auto",gm(H,{from:"Aéroport de Paris-Orly",mode:"driving"})]]},
+  {t:"09:30",title:"A casa: lasciate i bagagli"},
+  {t:"10:00",go:1,n:1,title:"Giro di Montmartre a piedi",legs:[["w","","circa 2,5 km in due ore, salita solo all’inizio"]],list:["10:10 Maison Rose e Rue de l’Abreuvoir (10 min da casa)","10:30 Place du Tertre (5 min)","10:50 Sacré-Cœur, scalinata e vista (3 min)","11:25 giù per rue Lepic: Moulin de la Galette, Café des Deux Moulins (20 min)","11:50 Moulin Rouge, foto"],nb:"La domenica al Sacré-Cœur ci sono le funzioni: si entra in silenzio.",links:[["Percorso a piedi con le tappe",gm("Moulin Rouge, 82 Boulevard de Clichy, 75018 Paris",{from:H,mode:"walking",via:["La Maison Rose, 2 Rue de l'Abreuvoir, 75018 Paris","Place du Tertre, 75018 Paris","Basilique du Sacré-Cœur de Montmartre, Paris","Moulin de la Galette, Rue Lepic, 75018 Paris"]})]]},
+  {t:"12:00",title:"Pranzo tra rue Lepic e Abbesses",nb:"Sedetevi alle 12 in punto o prenotate."},
+  {t:"13:05",go:1,n:2,title:"Notre-Dame",legs:[["w","","5 min fino alla metro Pigalle"],["m","2","dir. Nation → Barbès-Rochechouart (2 fermate)"],["m","4","dir. Bagneux–Lucie Aubrac → Cité (9 fermate)"],["w","","4 min"]],dur:"≈ 35 min (stima)",nb:"<b>Scendete a Cité:</b> Saint-Michel è chiusa fino al 19/12. Se avete l’ingresso delle 13:30, uscite alle 12:50.",links:[["Metro fino a Notre-Dame",gm("Cathédrale Notre-Dame de Paris",{from:"Pigalle, 75009 Paris"})]]},
+  {t:"13:45",title:"Notre-Dame (ingresso prenotato)",nb:"Gratis. La visita dura 45–60 minuti."},
+  {t:"14:40",go:1,n:3,title:"Louvre, a piedi",legs:[["w","","1,6 km lungo la Senna, passando dal Pont Neuf"]],dur:"≈ 22 min",nb:"15:00–15:45: Piramide, Cour Carrée, Arc du Carrousel.",links:[["A piedi fino alla Piramide",gm("Pyramide du Louvre, Paris",{from:"Cathédrale Notre-Dame de Paris",mode:"walking",via:["Pont Neuf, Paris"]})]]},
+  {t:"15:45",n:4,title:"Tuileries: mercatino di Natale",legs:[["w","","12–15 min attraverso il giardino, poi Place de la Concorde"]],links:[["A piedi fino a Concorde",gm("Place de la Concorde, Paris",{from:"Pyramide du Louvre, Paris",mode:"walking",via:["Jardin des Tuileries, Paris"]})]]},
+  {t:"16:30",n:5,title:"Champs-Élysées: mercatino e negozi",legs:[["w","","1,6 km da Concorde a Galeries Lafayette (n. 60)"]],nb:"<b>Sephora e Galeries Lafayette prima delle 18:</b> dopo, il viale si riempie per l’accensione.",links:[["A piedi fino a Galeries Lafayette",gm("Galeries Lafayette Champs-Élysées, 60 Avenue des Champs-Élysées, Paris",{from:"Place de la Concorde, Paris",mode:"walking"})]]},
+  {t:"18:30",title:"Accensione delle luminarie",nb:"Luci e concerto sul viale. Tantissima gente: borsa piccola e telefono al sicuro."},
+  {t:"19:30",go:1,lab:"verso le",title:"Casa, dalla metro Madeleine",legs:[["w","","15–20 min fino a Madeleine, per rue du Faubourg Saint-Honoré (anche lei illuminata)"],["m","12","dir. Mairie d’Aubervilliers → Lamarck-Caulaincourt (7 fermate)"],["w","","3 min"]],dur:"≈ 40 min",nb:"Le fermate della linea 1 sugli Champs-Élysées possono essere chiuse dalla polizia: meglio Madeleine. Cena lì vicino o vicino a casa.",links:[["Madeleine → casa",gm(H,{from:"Madeleine, 75008 Paris"})],["Torna a casa da dove sei",gm(H)]]}
+ ]},
+{id:"lunedi",tab:"Lun 23",short:"Lun 23",what:"Disneyland Paris",first:"07:45",title:"Lunedì 23 novembre",sub:"Disneyland Paris",
+ hours:"<b>Disneyland Park</b> e <b>Disney Adventure World</b>: 9:30–22:00",
+ pins:[[1,"DIS","Disneyland Paris"]],
+ route:[W(["casa","lam"]),M("12",r12("lam","slz")),W(["slz","aub"]),M("A",["aub","clh","gdl","DIS"])],
+ steps:[
+  {t:"07:45",go:1,n:1,title:"Disneyland",legs:[["w","","3 min + ascensore"],["m","12","dir. Mairie d’Issy → Saint-Lazare (6 fermate)"],["w","","10 min nei corridoi fino ad Auber"],["m","A","solo treni per Marne-la-Vallée–Chessy (ultima fermata)"]],dur:"≈ 1 h 25 → ai cancelli verso le 9:15, aprono alle 9:30 (stima, è ora di punta)",nb:"<b>Guardate la destinazione del RER A:</b> gli altri treni vanno a Boissy o Torcy. Se Maps propone un altro cambio, va bene lo stesso.",links:[["Percorso fino a Disneyland",gm("Marne-la-Vallée Chessy",{from:H})]]},
+  {t:"Mattina",title:"Disney Adventure World (ex Walt Disney Studios)"},
+  {t:"Pom.",title:"Disneyland Park"},
+  {t:"22:00",go:1,lab:"chiusura",title:"Casa, alla chiusura dei parchi",legs:[["m","A","dir. Paris → Auber"],["w","","10 min fino a Saint-Lazare"],["m","12","dir. Mairie d’Aubervilliers → Lamarck-Caulaincourt"]],dur:"≈ 1 h 25 → a casa verso le 23:30",nb:"Alla chiusura i treni sono pieni: per evitare la ressa uscite 10 minuti prima. Le metro chiudono poco dopo mezzanotte.",links:[["Torna a casa",gm(H,{from:"Marne-la-Vallée Chessy"})]]}
+ ]},
+{id:"martedi",tab:"Mar 24",short:"Mar 24",what:"Orsay, Opéra, Tour Eiffel",first:"10:30",title:"Martedì 24 novembre",sub:"Orsay, Opéra Garnier e Tour Eiffel",
+ hours:"<b>Orsay</b> 9:30–18:00 · <b>Opéra</b> visita prenotata alle 15:30 · <b>Orangerie chiusa</b> (il martedì)",
+ pins:[[1,"orsay","Musée d’Orsay"],[2,"opera","Opéra Garnier e Galeries Lafayette"],[3,"trocP","Trocadéro, Tour Eiffel e molo delle crociere"]],
+ route:[W(["casa","lam"]),M("12",r12("lam","sol")),W(["sol","orsay"]),M("12",r12("sol","mad")),W(["mad","opera","glh"]),M("9",["cda","hav","sau","mir","spr","fdr","alm","ien","tro"]),W(["tro","trocP","bat"])],
+ steps:[
+  {t:"Mattina",warn:1,title:"Libera (l’Orangerie è chiusa)",nb:"L’Orangerie chiude tutti i martedì: si sposta a mercoledì pomeriggio."},
+  {t:"10:30",go:1,n:1,title:"Musée d’Orsay",legs:[["w","","3 min + ascensore"],["m","12","dir. Mairie d’Issy → Solférino (10 fermate)"],["w","","5 min"]],dur:"≈ 30 min → arrivo verso le 11:00",nb:"L’ingresso è alle 11:30: mezz’ora per i controlli.",links:[["Percorso fino all’Orsay",gm("Musée d'Orsay, Paris",{from:H})]]},
+  {t:"11:30",title:"Musée d’Orsay (prenotato)"},
+  {t:"13:30",title:"Pranzo in zona Orsay o rue du Bac"},
+  {t:"14:55",go:1,n:2,title:"Opéra Garnier",legs:[["w","","5 min fino a Solférino"],["m","12","dir. Mairie d’Aubervilliers → Madeleine (3 fermate)"],["w","","10 min sul Boulevard des Capucines"]],dur:"≈ 25 min",nb:"Oppure a piedi: 25–30 min passando da Tuileries e Place Vendôme. In quel caso uscite alle 14:45.",links:[["In metro",gm("Palais Garnier, Paris",{from:"Musée d'Orsay, Paris"})],["A piedi",gm("Palais Garnier, Paris",{from:"Musée d'Orsay, Paris",mode:"walking",via:["Place Vendôme, Paris"]})]]},
+  {t:"15:30",title:"Opéra Garnier (prenotato)",nb:"La visita dura circa 1 ora – 1 ora e un quarto."},
+  {t:"17:00",title:"Galeries Lafayette Haussmann",legs:[["w","","3 min"]],nb:"Cupola con l’albero di Natale e terrazza gratis all’8° piano, con la Tour Eiffel già accesa. Con pioggia o vento forte la terrazza chiude. Da oggi sul tetto c’è anche la pista di pattinaggio."},
+  {t:"17:40",go:1,n:3,title:"Trocadéro",legs:[["w","","3 min fino a Chaussée d’Antin–La Fayette"],["m","9","dir. Pont de Sèvres → Trocadéro (8 fermate)"],["w","","3 min"]],dur:"≈ 25 min → arrivo verso le 18:05",links:[["Percorso fino al Trocadéro",gm("Place du Trocadéro, Paris",{from:"Galeries Lafayette Paris Haussmann, Paris"})]]},
+  {t:"19:00",title:"La Tour Eiffel scintilla",nb:"Scintilla 5 minuti all’inizio di ogni ora, quando è buio."},
+  {t:"19:30",title:"Crociera sulla Senna (se volete) e cena",legs:[["w","","12–15 min fino al molo sotto la Torre, attraverso il Pont d’Iéna"]],nb:"Prenotate una partenza dalle 19:45 in poi: dopo lo scintillio servono 15 minuti a piedi più l’imbarco.",links:[["A piedi al molo",gm("Bateaux Parisiens, Port de la Bourdonnais, Paris",{from:"Place du Trocadéro, Paris",mode:"walking"})]]},
+  {t:"Dopo",go:1,title:"Casa",dur:"≈ 40–45 min, con 1–2 cambi (stima)",nb:"Da qui non c’è una linea diretta: seguite Maps.",links:[["Torna a casa da dove sei",gm(H)]]}
+ ]},
+{id:"mercoledi",tab:"Mer 25",short:"Mer 25",what:"Versailles, Galerie Dior",first:"08:30",title:"Mercoledì 25 novembre",sub:"Versailles e Galerie Dior",
+ hours:"<b>Reggia</b> 9:00–17:30 · <b>Trianon</b> 12:00–17:30 · poca gente prevista · <b>Orangerie</b> 9:00–18:00 (ultimo ingresso 17:15) · <b>Galerie Dior</b> 11:00–19:00",
+ pins:[[1,"VER","Reggia di Versailles"],[2,"orang","Orangerie (idea A)"],[3,"dior","Galerie Dior"]],
+ route:[W(["casa","lam"]),M("12",r12("lam","sol")),W(["sol","mor"]),M("C",["mor","inv","pda","cdm","VER"]),W(["pda","dior"]),W(["mor","orang","dior"]),W(["dior","fdr"]),M("1",["fdr","cec","con"]),M("12",r12("con","lam"))],
+ steps:[
+  {t:"08:30",go:1,n:1,title:"Versailles",legs:[["w","","3 min + ascensore"],["m","12","dir. Mairie d’Issy → Solférino (10 fermate)"],["w","","5 min fino alla stazione RER Musée d’Orsay"],["m","C","treno per Versailles Château Rive Gauche"],["w","","10 min fino alla Reggia"]],dur:"≈ 1 h 25 → arrivo verso le 9:55 (stima)",nb:"<b>Non tutti i RER C vanno a Versailles:</b> guardate la destinazione sul tabellone. Se il RER C è fermo: linea 12 fino a Saint-Lazare, treno L per Versailles Rive Droite, poi 20 min a piedi.",links:[["Percorso fino alla Reggia",gm("Château de Versailles",{from:H})]]},
+  {t:"10:30",title:"Reggia di Versailles (Passport, prenotato)"},
+  {t:"13:30",title:"Pranzo"},
+  {t:"14:00",go:1,title:"Rientro a Parigi",legs:[["w","","10 min fino alla stazione"],["m","C","dir. Paris → Pont de l’Alma (≈ 30 min)"],["w","","8 min fino alla Galerie Dior"]],dur:"≈ 55 min → a Parigi verso le 15:00",nb:"Restano quasi 2 ore prima di Dior: scegliete una delle due idee.",links:[["Fino alla Galerie Dior",gm("La Galerie Dior, 11 Rue François 1er, 75008 Paris",{from:"Château de Versailles"})]]},
+  {t:"15:05",opt:1,n:2,title:"Idea A: Orangerie",legs:[["m","C","scendete a Musée d’Orsay invece che a Pont de l’Alma"],["w","","10 min sulla passerella pedonale"]],nb:"Visita 15:05–16:10. Biglietto 12,50 €, meglio prenotare l’orario. Poi 25 min a piedi fino a Dior (Concorde, Avenue Montaigne): arrivo verso le 16:35.",links:[["Orangerie → Dior a piedi",gm("La Galerie Dior, 11 Rue François 1er, 75008 Paris",{from:"Musée de l'Orangerie, Paris",mode:"walking"})]]},
+  {t:"Oppure",opt:1,title:"Idea B: Trianon, restando a Versailles",nb:"Già pagato con il Passport, con la mostra «Marie-Antoinette» di Sofia Coppola al Petit Trianon. Reggia più corta (2 ore bastano), Trianon 14:10–15:10, 35 min a piedi fino alla stazione, RER C fino a Pont de l’Alma: Dior verso le 16:35. Più tirato."},
+  {t:"17:00",n:3,title:"Galerie Dior (prenotato)"},
+  {t:"18:30",title:"Passeggiata e cena",nb:"Avenue Montaigne e gli Champs-Élysées illuminati sono a 5 minuti."},
+  {t:"Dopo",go:1,title:"Casa",legs:[["m","1","da Franklin D. Roosevelt, dir. Château de Vincennes → Concorde (2 fermate)"],["m","12","dir. Mairie d’Aubervilliers → Lamarck-Caulaincourt (8 fermate)"]],dur:"≈ 30 min",links:[["Torna a casa da dove sei",gm(H)]]}
+ ]},
+{id:"giovedi",tab:"Gio 26",short:"Gio 26",what:"Volo per Olbia alle 12:45",first:"09:15",title:"Giovedì 26 novembre",sub:"Rientro: volo V7 2324 alle 12:45",
+ hours:"<b>Volotea</b> parte di solito da Orly 1: controllate la carta d’imbarco · a Orly una pista è chiusa per lavori fino al 17/12: guardate lo stato del volo la sera prima",
+ pins:[[1,"ORY","Aeroporto di Orly"]],
+ route:[W(["casa","lam"]),M("12",r12("lam","slz")),M("14",["slz","mad","pyr","chat","gdl","ORY"])],
+ steps:[
+  {t:"Mattina",title:"Colazione e check-out"},
+  {t:"09:15",go:1,n:1,title:"Orly in metro",legs:[["w","","3 min + ascensore, comodo con le valigie"],["m","12","dir. Mairie d’Issy → Saint-Lazare (6 fermate)"],["m","14","dir. Aéroport d’Orly (≈ 30 min)"]],dur:"≈ 1 h 05 → in aeroporto verso le 10:20 (stima)",nb:"Biglietto aeroporto 14 € a testa, già compreso nel Navigo Semaine.",links:[["Percorso fino a Orly",gm("Aéroport de Paris-Orly",{from:H})]]},
+  {t:"Oppure",title:"Taxi",legs:[["t","","45 € fissi da Parigi riva destra"]],dur:"40–60 min con il traffico del mattino (stima)",links:[["In auto",gm("Aéroport de Paris-Orly",{from:H,mode:"driving"})]]},
+  {t:"12:45",title:"Volo per Olbia"}
+ ]}
+];
+
+/* ---------- settimana ---------- */
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tabsEl=document.getElementById("tabs"),main=document.getElementById("day");
+document.getElementById("week").innerHTML=DAYS.map((d,i)=>`<li><button class="wk-row" data-i="${i}"><b>${d.short}</b><span>${esc(d.what)}</span><span class="wk-out"><small>esci entro</small>${d.first}</span></button></li>`).join("");
+
+/* ---------- orario ---------- */
+const badge=(k,l)=>{if(k==="w")return `<span class="lb wk" aria-label="a piedi">${WALK}</span>`;if(k==="t")return `<span class="lb tx">TAXI</span>`;const c=LC[l],rer=/[A-Z]/.test(l);return `<span class="lb${rer?" rer":""}" style="--c:${c[0]};--t:${c[1]}">${l}</span>`};
+const legTxt=(k,l,t)=>k==="m"?`<span><b>${/[A-Z]/.test(l)?"RER":"Metro"} ${l}</b> ${esc(t)}</span>`:`<span>${esc(t)}</span>`;
+const step=s=>{const cls=[s.go?"go":"",s.opt?"opt":"",s.warn?"warnrow":""].join(" ").trim();
+ const lab=s.lab!==undefined?s.lab:(/^\d\d:\d\d$/.test(s.t)?"esci entro":"");const tm=s.go&&lab?`<small>${lab}</small>${esc(s.t)}`:esc(s.t);
+ return `<li class="${cls}"><div class="tm">${tm}</div><div class="rail"><span class="dot"></span></div><div class="body">
+ <h3>${s.n?`<span class="pin">${s.n}</span>`:""}<span>${s.go?"→ ":""}${esc(s.title)}</span></h3>
+ ${s.legs?`<div class="legs">${s.legs.map(([k,l,t])=>`<div class="leg">${badge(k,l)}${legTxt(k,l,t)}</div>`).join("")}</div>`:""}
+ ${s.dur?`<p class="dur">${esc(s.dur)}</p>`:""}
+ ${s.list?`<ul>${s.list.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
+ ${s.nb?`<p class="nb">${s.nb}</p>`:""}
+ ${s.links?`<div class="links">${s.links.map(([a,u],i)=>`<a class="btn${i?" alt":""}" href="${esc(u)}" target="_blank" rel="noopener">${esc(a)}</a>`).join("")}</div>`:""}
+ </div></li>`};
+
+/* ---------- mappa ---------- */
+const VW=600,VH=521,X=lon=>(lon-2.280)/0.098*VW,Y=lat=>(48.896-lat)/0.056*VH;
+const P=p=>p.x!==undefined?[p.x,p.y]:[X(p[1]),Y(p[0])];
+const path=a=>"M"+a.map(p=>P(p).map(v=>v.toFixed(1)).join(" ")).join("L");
+const SEINE=[[48.8500,2.2780],[48.8556,2.2860],[48.8592,2.2912],[48.8622,2.2975],[48.8636,2.3030],[48.8642,2.3100],[48.8638,2.3180],[48.8626,2.3240],[48.8606,2.3300],[48.8588,2.3360],[48.8570,2.3415],[48.8546,2.3480],[48.8524,2.3540],[48.8494,2.3600],[48.8458,2.3660],[48.8410,2.3730]];
+const LAND=[[[48.8584,2.2945],"Tour Eiffel"],[[48.8738,2.2950],"Arc de Triomphe"],[[48.8467,2.3640],"Senna"]];
+const EDGE={DIS:["Disneyland ≈ 32 km →","end",-16,5],VER:["← Versailles ≈ 18 km","start",-2,-18],ORY:["Orly ≈ 14 km ↓","end",-16,5]};
+let cur=0;
+const draw=()=>{const svg=document.getElementById("mapsvg");if(!svg)return;const d=DAYS[cur];const k=Math.max(svg.clientWidth,200)/VW;const u=v=>(v/k).toFixed(2);const narrow=svg.clientWidth<520;let h="";
+ h+=`<path d="${path(SEINE)}" class="river" stroke-width="${u(9)}"/>`;
+ h+=`<path d="${path([[48.8656,2.3212],[48.8738,2.2950]])}" class="champs" stroke-width="${u(4)}"/>`;
+ h+=`<path d="${path(seq(L12))}" class="l12" stroke-width="${u(6)}"/>`;
+ const pinPts=d.pins.map(p=>P(S[p[1]]));
+ const near=(q,r)=>pinPts.some(p=>Math.hypot(p[0]-q[0],p[1]-q[1])<r);
+ for(const [c,t] of LAND){const q=P(c);if(!near(q,40/k))h+=`<text class="lbl" x="${q[0].toFixed(1)}" y="${q[1].toFixed(1)}" font-size="${u(12)}" stroke-width="${u(3)}" text-anchor="middle">${t}</text>`}
+ for(const r of d.route){if(r.k==="w")h+=`<path d="${path(r.p)}" class="walk" stroke-width="${u(2.5)}" stroke-dasharray="${u(1)} ${u(6)}"/>`;else h+=`<path d="${path(r.p)}" fill="none" stroke="${LC[r.l][0]}" stroke-width="${u(5)}" stroke-linecap="round" stroke-linejoin="round"/>`}
+ for(const s of L12){const q=P(S[s]);h+=`<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="${u(3.2)}" fill="var(--card)" stroke="#007852" stroke-width="${u(2)}"/>`}
+ const sl=narrow?[["lam","Lamarck"],["slz","Saint-Lazare"],["con","Concorde"]]:[["lam","Lamarck"],["pig","Pigalle"],["slz","Saint-Lazare"],["mad","Madeleine"],["con","Concorde"],["sol","Solférino"]];
+ for(const [s,t] of sl){const q=P(S[s]);if(!near(q,26/k))h+=`<text class="lbl" x="${(q[0]-8/k).toFixed(1)}" y="${(q[1]+4/k).toFixed(1)}" font-size="${u(12)}" stroke-width="${u(3)}" text-anchor="end">${t}</text>`}
+ const c=P(S.casa);h+=`<rect x="${(c[0]-8/k).toFixed(1)}" y="${(c[1]-8/k).toFixed(1)}" width="${u(16)}" height="${u(16)}" rx="${u(3)}" fill="#007852"/><text class="lbl" x="${(c[0]+12/k).toFixed(1)}" y="${(c[1]+4/k).toFixed(1)}" font-size="${u(13)}" stroke-width="${u(3)}" style="fill:var(--ink)">Casa</text>`;
+ for(const [n,key] of d.pins){const q=P(S[key]);const e=EDGE[key];
+  if(e)h+=`<text class="lbl" x="${(q[0]+e[2]/k).toFixed(1)}" y="${(q[1]+e[3]/k).toFixed(1)}" font-size="${u(13)}" stroke-width="${u(3)}" text-anchor="${e[1]}" style="fill:var(--ink)">${e[0]}</text>`;
+  h+=`<circle class="pinc" cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="${u(11)}"/><text class="pint" x="${q[0].toFixed(1)}" y="${(q[1]+4.5/k).toFixed(1)}" font-size="${u(13)}" text-anchor="middle">${n}</text>`}
+ svg.innerHTML=h};
+
+/* ---------- giorno ---------- */
+tabsEl.innerHTML=DAYS.map((d,i)=>`<button class="tab" role="tab" id="t-${d.id}" aria-controls="day" aria-selected="false" data-i="${i}">${d.tab}</button>`).join("");
+let ro=null;
+const show=i=>{cur=i;const d=DAYS[i];
+ for(const b of tabsEl.querySelectorAll(".tab"))b.setAttribute("aria-selected",String(+b.dataset.i===i));
+ main.innerHTML=`<div class="wrap daywrap"><div class="dhead"><h2>${d.title}</h2><p>${d.sub}</p><div class="hours">${d.hours}</div></div>
+ <div class="dgrid"><div class="mapcol"><div class="fig"><svg id="mapsvg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Mappa degli spostamenti di ${d.title}"></svg></div>
+ <ul class="legend">${d.pins.map(([n,,t])=>`<li><span class="pin">${n}</span>${esc(t)}</li>`).join("")}</ul>
+ <p class="key">Puntini neri = a piedi · linee colorate = metro e RER · verde chiaro = la vostra linea 12. Mappa schematica, non in scala.</p></div>
+ <ol class="tl">${d.steps.map(step).join("")}</ol></div></div>`;
+ if(ro)ro.disconnect();ro=new ResizeObserver(draw);ro.observe(document.getElementById("mapsvg"));draw()};
+const go=(i,scroll)=>{if(location.hash!=="#"+DAYS[i].id)location.hash=DAYS[i].id;else show(i);if(scroll)document.querySelector(".tabs").scrollIntoView({behavior:"smooth"})};
+tabsEl.addEventListener("click",e=>{const b=e.target.closest(".tab");if(b)go(+b.dataset.i,false)});
+document.getElementById("week").addEventListener("click",e=>{const b=e.target.closest(".wk-row");if(b)go(+b.dataset.i,true)});
+const fromHash=()=>{const i=DAYS.findIndex(d=>"#"+d.id===location.hash);if(i>=0){show(i);return true}return false};
+window.addEventListener("hashchange",fromHash);
+if(!fromHash()){const now=new Date();const day=now.getFullYear()===2026&&now.getMonth()===10?now.getDate()-22:-1;show(day>=0&&day<5?day:0)}
+}
+</script>
+</body>
+</html>
