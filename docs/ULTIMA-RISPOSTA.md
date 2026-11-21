@@ -1,9 +1,10 @@
-# Ultima risposta di Claude (21/11/2026 17:18 ora italiana)
+# Ultima risposta di Claude (21/11/2026 17:22 ora italiana)
 
-La domanda sull'alloggio è quella di prima: 📌 serve per prenotare le 4 notti dal 13 al 17. Rispondi col numero: 1 · n. 4 · 2 · n. 8 · 3 · n. 12 (il mio consiglio) · 4 · n. 13 · 5 · un altro.
+Ho capito: è la sessione nuova (#8). Riparto da dove si era fermata la #7. Ho letto anche gli ultimi avvisi: il messaggio della #7 parla di cose che avevo già fatto, e su GitHub non c'è niente da sistemare. Per te non cambia nulla.
 
-Ho anche scritto nel diario degli errori la domanda sulle notti che ti ho fatto più volte, anche se l'avevi già decisa. E ho avvisato la sessione 8 di rileggere le consegne aggiornate.
+🧠 Continuo con Opus 5.5 · Extra, come la sessione di prima. Fable non serve: adesso aspettiamo le tue due scelte, non c'è un lavoro grande da pensare.
 
-⚠️ Aspettano te: 2
-- 🛑 Principale 4 · Quale alloggio prenotare
-- 🛑 Principale 6 · Link «web app» per l'amico
+🛑 **Prima di tutto, 2 scelte aspettano te:**
+
+**DOMANDA 1 · Quale alloggio prenotiamo?** Sono le 4 notti dal 13 al 17. Le cancellazioni gratuite scadono dal 29/11 e intanto i prezzi salgono.
+1 · n. 4 Chez …
