@@ -4,6 +4,7 @@
 |---|---|---|---|
 
 ## 0. Aspetta Mario
+- 21/11 · 🛑 · 🟢 Principale 8 · Pagina più facile: va bene così? 📌 Di cosa parliamo: la pagina di dicembre riordinata (Ki Space nei costi, barre che portano alla scheda, schede e tappe che si aprono col tocco: sul telefono è lunga il 42 % in meno); foto in `archivio/2026-11-21-pagina-facile/`; serve per pubblicarla come web app: 1 · va bene, pubblica · 2 · cambia qualcosa (scrivi cosa). Consiglio: 1. Ferma solo la pubblicazione, non la preparazione della web app.
 - 21/11 · 🛑 · 🟢 Principale 4 · Quale alloggio prenotare (sezione «Alloggi» della pagina). 📌 Di cosa parliamo: dove dormire le 4 notti 13→17 vicino a Disneyland; si vede in cima alla sezione «Alloggi» della pagina; serve adesso perché i prezzi salgono e molte cancellazioni gratuite scadono il 29/11: 1 · n. 4 Chez Stéphane, spendere poco · 2 · n. 8 Moxy, tutto comodo · 3 · n. 12 Relais Spa, spa · 4 · n. 13 Jungle Love, romantico · 5 · un altro: scrivi il suo numero (1–15). Consiglio: 3 (n. 12 Relais Spa, camera con letto matrimoniale e cancellazione gratuita fino all'8/12, 908 €: spa domenica sera, lun–mer 5 minuti + 1 fermata; cambiato il 21/11 sera dopo «relax solo il primo giorno … trasporti zero stress», C2). Pagina: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap
 
 ## 1. Claude da solo

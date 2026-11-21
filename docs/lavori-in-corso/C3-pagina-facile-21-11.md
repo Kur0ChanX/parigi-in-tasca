@@ -11,3 +11,7 @@
 4. Foto prima/dopo dal telefono a Mario; poi web app (`dicembre/` sul sito, skill `unione-pr`).
 
 ## Scelte in corsa
+- Pezzo 1 fatto (21/11 17:30): Ki Space nelle barre, 465 € + 544 € + 76 € (navetta gratis) = 1.085 €; barre = link alla scheda (`#al-N`), misto e Cheyenne → `#hoteldisney`; scheda evidenziata all'arrivo.
+- Misure al telefono (390 px): pagina 37.576 px; alloggi 16.750 (schede 12.470), domenica 7.025, trasporti 1.513, da fare 1.961, da ricontrollare 1.927, fonti 1.407. Pezzo 2: schede degli alloggi compatte (riga essenziale + «Dettagli»), tabella in un «Apri»; poi le altre sezioni.
+- Pezzo 2 fatto (21/11 17:31): schede degli alloggi compatte (numero, nome, voto, pulizia, prezzo, distanza; «Dettagli e prenotazione» col resto, anche «Usa questo nella pagina»); ogni link `#al-N` apre la scheda; tabella dei 15 in un «Apri»; nota «5 notti» spostata tra gli scartati (deciso 13→17); nel consiglio «Cosa lasciate» e «Attenzione» in un «Apri»; tappe del giorno per giorno: ora e titolo, il resto col tocco; chiusi «In che ordine comprare», «Da ricontrollare» e «Fonti». Pagina al telefono 37.576 → 21.860 px. Prove: 7 VERO (barra, tabella, «Usa questo», menu, tappa spa), nessun errore. Lasciati in vista: mega consiglio dei mercatini (chiesto da Mario in evidenza), «Da fare».
+- Prossimo: foto mandate (domanda in «Aspetta Mario»); intanto preparo la web app in `dicembre/`.
