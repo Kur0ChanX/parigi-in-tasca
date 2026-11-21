@@ -62,3 +62,6 @@ Certo che come icona potevi fare tipo um, Parigi piena di mercatini di Natale, f
 ## 2026-11-21 18:03 · 01WTjqUvsd71
 aggiungi anche topolino di Disney a forma di luna nello sfondo nell'icona e immagine 
 e poi publica
+
+## 2026-11-21 18:23 · 01WTjqUwUueB
+ok publica se abbiamo finito
