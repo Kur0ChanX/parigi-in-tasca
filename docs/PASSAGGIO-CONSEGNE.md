@@ -28,7 +28,7 @@ Sessione attuale: #11 (dopo la #10 `session_01WTjqUwUueBoLvRkqLpLRmU`, chiusa al
 - Pubblicato: ramo-copia `versione-dicembre-topolino` da `main` (solo `dicembre/`, prove rifatte sulla copia), PR #4 unita alle 18:15, `main` unito nel ramo, sito vero riletto (`curl`, `cmp`).
 - A Mario (18:20): 4 foto, link, passi per vedere icona e anteprima sul telefono, domanda sull'alloggio rifatta, parere sul marchio Disney, «basta Opus»; notifica mandata.
 - Mario 18:23-18:25 (passato a Opus): «ok publica» e la richiesta C5. Tolta la testa di Topolino (personaggio protetto: riga in `docs/ERRORI.md`), luna piena con le stelline, PR #5 unita 18:36, sito controllato; foto `archivio/2026-11-21-icona-luna/` a Mario alle 18:32; piano C5 scritto.
-- Sveglia `trig_01N9WtrZWmXKsSgoN9J13wpx` del 7/12 09:07 (ricontrollo della settimana prima), legata alla #10.
+- Sveglia del 7/12 09:07 (ricontrollo della settimana prima): quella della #10 cancellata, rifatta dalla #11.
 - Controllo Da fare: 0 voci dai messaggi (solo l'[AVVIO]); 1 voce dai «Prossimi passi» (ricontrollo della settimana prima).
 
 ## Strade provate e scartate (perché; così la prossima non le rifà)
@@ -45,7 +45,7 @@ Sessione attuale: #11 (dopo la #10 `session_01WTjqUwUueBoLvRkqLpLRmU`, chiusa al
 2. DOMANDA 2 (alloggio, 🛑): col numero di Mario, se non è il 12, aggiorno il consiglio in cima (sorgente `dicembre/parigi-disney-natale.html`) e rifaccio le prove; poi pubblico (ramo-copia da `main`, solo `dicembre/`, come la PR #4). Col 12: ricordare la navetta della reception (non confermata) e di prenotare la camera «con 1 letto matrimoniale large» (non la suite).
 3. Voci 👁 di `docs/DA-FARE.md`: si chiudono quando Mario le vede nell'app. Prova `prova-web-app.js`: un giro sulla copia ha dato 1 FALSO «service worker suo» e poi 3 giri verdi (ipotesi: controllo partito prima che il service worker prenda la pagina): se ricapita, alzare l'attesa di `sw()` e provarla.
 4. «A prova di stupido»: dopo la scelta, una passata sui testi (es. la riga dei trasporti a persona in «Come sono calcolati» ha ~15 numeri: farne una tabellina).
-5. Da ricontrollare la settimana prima (voce 👁 in `docs/DA-FARE.md`, sveglia `trig_01N9WtrZWmXKsSgoN9J13wpx` del 7/12 09:07 legata alla #10: la #11 la rifà sua con `send_later` e poi cancella quella): orari RER A 13–17/12, scioperi, terminal Volotea; vendita dei ticket della metro sul telefono (piano B Navigo Easy già nella pagina).
+5. Da ricontrollare la settimana prima (voce 👁 in `docs/DA-FARE.md`, sveglia `trig_01N9AmWxvrF8L9RdttrmTTJM` del 7/12 09:07, rifatta dalla #11): orari RER A 13–17/12, scioperi, terminal Volotea; vendita dei ticket della metro sul telefono (piano B Navigo Easy già nella pagina).
 
 ## Blocchi e rischi
 - Prezzi visti il 21/11: possono salire. Cancellazioni gratuite che scadono presto: 29/11 (n. 1, 4, 7, 10, 13), 6/12 (n. 11, 14), 8/12 (n. 12, camera con letto matrimoniale, 908 €), 10/12 (n. 2, 730 €, stima), 13/12 (n. 8, 577 €, si paga in hotel), 12/12 (n. 5).
