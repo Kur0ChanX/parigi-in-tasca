@@ -9,6 +9,7 @@
 - ⏳ Dopo: nessuna
 
 ## 0. Aspetta Mario
+- 22/11 · ❓ · 🟡 Principale 21 bis · DOMANDA 1: cosa volevi col link della v15? 📌 Di cosa parliamo: Mario ha aperto una chat nuova dal telefono mandando solo il link della pagina di dicembre; la pagina funziona e la v16 la fa già la «Principale 21»; serve per sapere se fare altro qui: 1 · solo controllare, chiudo questa chat · 2 · cambiare qualcosa (meglio nella Principale 21) · 3 · altro. Consiglio: 1.
 - 21/11 · ❓ · 🟢 Principale 11 · DOMANDA 3: come impaginare la pagina di dicembre (C6). 📌 Di cosa parliamo: Mario la trova confusa, troppe cose a schermo, senza togliere niente; serve prima di rifarla: 1 · app a 4 schede in basso (Alloggio · Domenica mercatini · Disney lun–mer · Info utili), ogni tocco mostra solo la sua parte · 2 · pagina unica come ora, ma ogni sezione chiusa (si vede il titolo, si apre toccando) · 3 · altro: cosa ti confonde di più. Consiglio: 1. Chiesta il 21/11 ~18:58 dalla Principale 11.
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
