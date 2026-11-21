@@ -44,7 +44,9 @@ Sessione attuale: #2 (dopo la #1 `session_01WTjqUtYZaKMxhjF5TrnL8N`, chiusa alla
 - Pacchetti Disney prenotati a meno di 30 giorni: forse pagamento intero subito (due pagine ufficiali discordano); non serve finché non si sceglie Disney.
 
 ## Ultimo messaggio di Mario
-«installa il kit  simbolo della torre va bene  ramo ok»
+«nella pagina tanti mercatini luci e atmosfera natalizia avvolgente non triste» (arrivato nella #1 dopo l'handoff → voce in `docs/DA-FARE.md` sezione 2, da fare subito)
+
+Prima: «installa il kit  simbolo della torre va bene  ramo ok»
 
 ## Numeri liberi
 Prossimo E libero: E1.

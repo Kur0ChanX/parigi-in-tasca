@@ -11,6 +11,7 @@
 ## 1. Claude da solo
 
 ## 2. Claude dopo scelta o ok di Mario
+- Pagina di dicembre, grafica (Mario 21/11, dopo l'handoff): «nella pagina tanti mercatini luci e atmosfera natalizia avvolgente non triste» → più casette e luci, colori caldi (oro, rosso, verde abete) al posto del blu notte freddo; ripubblicare sullo stesso link.
 - Pagina di dicembre: orari di uscita con l'hotel scelto, poi ripubblicare l'Artifact (sorgente `dicembre/parigi-disney-natale.html`).
 
 ## 3. Mario a mano
