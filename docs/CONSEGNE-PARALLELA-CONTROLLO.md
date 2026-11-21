@@ -43,6 +43,9 @@ tutto anche b&b affittacamere hotel  appartamenti ecc ecc»
 > su questo nostro sito rifai tutto con frontend da 0 solo migliorie
 → per la Controllo 2: tasto «Tutti» nell'interruttore; in vista nella riga di ogni alloggio distanza da Disney (tempo e km a piedi) e minuti a piedi dalla RER; ricerca anche sui siti diretti (senza portali); plugin `frontend-design`: prima leggerlo e dire a Mario costo e rischio (REGOLE «Divieti»), poi rifare l'aspetto da zero «solo migliorie».
 
+Poi Mario (22/11 ~00:47): «e
+usa 3 agenti» → per quel lavoro, 3 aiutanti.
+
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
