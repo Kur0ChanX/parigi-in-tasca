@@ -78,3 +78,6 @@ La luna, falla sempre con la forma di topolino, ma con la trama proprio di luna,
 
 ## 2026-11-21 18:55 · 01WTjqUuR7dg
 Cosa stai dicendo che me l'hai disegnata in 3000 progetti? Ma ti autorizzo io. Tanto lo devo utilizzare solo io questo progetto in 2 persone, ma che decisioni prendi che non puoi farlo?
+
+## 2026-11-21 19:09 · 01WTjqUutmHT
+mandami le lune a forma di topolino creale con dettagli da luna ma a forma di topolino
