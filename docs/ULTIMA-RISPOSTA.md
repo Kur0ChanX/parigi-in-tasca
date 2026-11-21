@@ -1,21 +1,21 @@
-# Ultima risposta di Claude (21/11/2026 16:51 ora italiana)
+# Ultima risposta di Claude (21/11/2026 17:18 ora italiana)
 
-Ho capito: nel tuo ultimo messaggio ci sono 4 cose. La spa può essere anche una jacuzzi. Vuoi il «mega consiglio» sui mercatini. La pagina deve cambiare secondo l'alloggio scelto. E vuoi un link «web app» da mandare all'amico.
+Ho capito: volete relax solo domenica, poi tre giorni di Disney senza pensieri per i trasporti, e tutto spiegato in modo semplice. Il mio parere: così l'alloggio giusto cambia, e ora vi consiglio il n. 12.
 
-🧠 Continuo con Opus 5.5 · Extra, come la sessione di prima. Fable non serve: è ricerca più una funzione della pagina, senza dati delicati.
+🧠 Ho lavorato con Opus 5.5 · Extra, come la sessione di prima. Fable non serviva: era un consiglio da rivedere più qualche testo della pagina.
 
 ───
 ✅ **FATTO**
-- Avvio fatto. Ho unito la copia di riserva della sessione #4: nel registro mancava il tuo messaggio delle 16:35.
-- Le 4 richieste sono scritte in un posto solo e salvate su GitHub.
-- Un aiutante sta cercando …
+- **La pagina è aggiornata, stesso link:** https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap
+- **Il mio consiglio ora è il n. 12, Relais Spa.** È l'unico con una spa vera, inclusa nel prezzo, e a 5 minuti a piedi dal treno.
+- …
 
 ## Domande a Mario
 
 ❓ **DOMANDE**
-🛑 Ancora aperte: le **notti**, dal 13 o dal 12 (consiglio: 1, dal 13). E **quale alloggio** (consiglio: Moxy, finché non arriva la risposta sulla jacuzzi).
-
-🛑 **DOMANDA nuova · Link per l'amico**
-A cosa serve: scegliere come l'amico apre la pagina dal telefono. Questa domanda prende il posto di quelle su «Sito» e «Unione».
-1. **Web app sul sito**, accanto alla guida di novembre, che resta com'è. Il link si apre su ogni telefono senza account, si mette sulla schermata Home come un'app e funziona anche senza rete.
-2. **Link della pagina su claude.ai.** Lo attivi tu dal browser, …
+🛑 **Quale alloggio prenotate?** Scrivimi il numero.
+1. n. 4: spendere poco
+2. n. 8 Moxy: comodo, senza spa
+3. **n. 12 Relais Spa: spa domenica e treno a 5 minuti (il mio consiglio)**
+4. n. 13: romantico, ma lontano dal treno
+5. Un altro: scrivi il suo numero
