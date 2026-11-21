@@ -14,3 +14,10 @@
 - 21/11 ~19:45 (dopo l'handoff della #13, passato alla #14): «Nel senso, non dove non andare, però c'è un aiuto per i mercatini migliori, che strada prendere, che cosa guardare. E poi nella pagina la sezione mercatini di Natale, tipo un pulsante sopra, c'è per andare direttamente tutti i pulsanti nella schermata in alto, per andare direttamente nelle cose interessate, tipo scelta hotel, confronto, mercatini, preparazioni, non lo so, sto inventando, però una cosa così.» → lettura: meno «dove non andare», più aiuto sui mercatini migliori (strada da prendere, cosa guardare); in cima alla pagina, già nella prima schermata, una fila di bottoni grandi per andare dritti alle parti (es. Scelta hotel, Confronto, Mercatini, Preparazione).
 - 21/11 ~19:47 (dopo l'handoff, passato alla #14): «Dove non andare ormai che l'hai messo, lascialo. Però si può fare in modo che in base all'hotel che scegliamo mi dai il consiglio sui mercatini.» → «Dove NON andare» resta; il consiglio sui mercatini (giro, partenza, rientro) cambia secondo l'alloggio scelto nella pagina, come già fanno giorni, costi e trasporti.
 - 21/11 ~19:50 (dopo l'handoff, passato alla #14): «Cioè mi dà il consiglio sui mercatini, ovviamente anche tutto il resto dovrebbe essere già impostato, no? Tutto il percorso che dobbiamo fare.» → con l'hotel scelto deve seguire tutto il percorso (mercatini compresi), non solo giorni, costi e trasporti.
+
+## Fatto dalla #14 (online ~20:15, PR #8)
+- Griglia di pulsanti grandi in cima al posto del bottone e della barra (doppione tolto).
+- Riquadro `#mkAl` in cima ai Mercatini: cambia con l'alloggio (`mkAl()` chiamata da `paint` e `applyAl`): spa (n. 12), arrivo entro le 22 (n. 7, `by22`), bus della sera (1, 3, 13), resto.
+- Ogni tappa: «🚶 La strada» (dagli stessi tratti del giorno per giorno) e cosa guardare.
+- N. 7: domenica veloce come il n. 12 (`spaSun` generalizzata).
+- Prossimo, se Mario dice 2: mappa disegnata del giro (come `tools/fai-mappe-dicembre.py`).
