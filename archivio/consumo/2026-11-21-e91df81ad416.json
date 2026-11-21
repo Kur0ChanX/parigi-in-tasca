@@ -1,0 +1,22 @@
+{
+"account": "108763",
+"sessione": "e91df81ad416",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 225137,
+"anomalie": [],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 1
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"19:34 · Notifica non letta (in coda dalle 19:33: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+]
+},
+"remota": "01WTjqUwvARs",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
