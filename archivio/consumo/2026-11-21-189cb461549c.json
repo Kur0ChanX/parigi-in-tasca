@@ -1,0 +1,30 @@
+{
+"account": "108763",
+"sessione": "189cb461549c",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 177762,
+"anomalie": [],
+"blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 5 · Notifica non letta (in coda": 1
+},
+"esempi_blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": [
+"21:28 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 7** (foto 1, 2 e 3 qui sopra). A cos», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso); mancano le sce"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"21:28 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Quel giorno ne arriveranno due uguali: puoi ignorarne uno.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: "
+],
+"Stop 5 · Notifica non letta (in coda": [
+"21:28 · Notifica non letta (in coda dalle 21:17: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+]
+},
+"remota": "01WTjqUvCPBb",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
