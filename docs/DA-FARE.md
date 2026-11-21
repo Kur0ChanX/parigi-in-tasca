@@ -9,6 +9,7 @@
 - ⏳ Dopo: nessuna
 
 ## 0. Aspetta Mario
+- 21/11 · 📷 · 🟢 Principale 17 · Foto della scelta dell'alloggio rifatta («impaginazione geniale non confusa», C11): `archivio/2026-11-21-c11-scegli-impaginazione/` (3). 📌 Di cosa parliamo: la sezione «Scegli dove dormire» passa da ~15 a ~5 schermate, righe corte che si aprono col tocco; serve l'ok per pubblicarla: 1 · va bene, pubblica · 2 · cambia (cosa). Consiglio: 1.
 - 21/11 · ❓ · 🟢 Principale 11 · DOMANDA 3: come impaginare la pagina di dicembre (C6). 📌 Di cosa parliamo: Mario la trova confusa, troppe cose a schermo, senza togliere niente; serve prima di rifarla: 1 · app a 4 schede in basso (Alloggio · Domenica mercatini · Disney lun–mer · Info utili), ogni tocco mostra solo la sua parte · 2 · pagina unica come ora, ma ogni sezione chiusa (si vede il titolo, si apre toccando) · 3 · altro: cosa ti confonde di più. Consiglio: 1. Chiesta il 21/11 ~18:58 dalla Principale 11.
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
