@@ -177,6 +177,31 @@ b,strong{font-weight:700}
 .topbar a{flex:1 1 0;max-width:11rem;display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 8px;border-radius:12px;color:#F4F1FF;text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid rgb(255 255 255 / .2);white-space:nowrap}
 .topbar a.hot{background:var(--lamp);color:var(--lamp-ink);border-color:transparent;font-weight:800}
 html{scroll-padding-top:72px}
+#scegli .sc-step{font:800 1.2rem/1.25 var(--display);margin:var(--s6) 0 var(--s2)}
+.sc-ban{background:var(--lamp);color:var(--lamp-ink);border-radius:var(--r-lg);padding:12px 16px;font-weight:700;margin-bottom:var(--s4)}
+.sc-list{display:grid;gap:12px}
+@media (min-width:720px){.sc-list{grid-template-columns:1fr 1fr}}
+.sc-g{font-weight:800;color:var(--mute);font-size:.9rem;margin:var(--s4) 0 var(--s2)}
+.sc-o{background:var(--surface);border:2px solid var(--rule);border-radius:var(--r-lg);padding:12px 14px;display:grid;gap:8px;min-width:0}
+.sc-o.on{border-color:var(--lamp);box-shadow:0 0 0 3px rgb(246 201 100 / .25)}
+.sc-o.off{opacity:.62}
+.sc-h{display:flex;align-items:flex-start;gap:10px;min-width:0}
+.sc-n{flex:1;min-width:0;font-weight:800;font-size:1.05rem;line-height:1.25}
+.sc-n small{display:block;font-weight:500;color:var(--mute);font-size:.84rem;margin-top:2px}
+.sc-p{font-weight:800;font-size:1.05rem;white-space:nowrap;text-align:right}
+.sc-p small{display:block;font-weight:500;color:var(--mute);font-size:.76rem}
+.sc-m{display:flex;flex-wrap:wrap;gap:6px;font-size:.86rem;line-height:1.3}
+.sc-m span{background:var(--surface-2);border-radius:10px;padding:4px 9px}
+.sc-l{display:grid;gap:4px;font-size:.92rem;padding-left:1.1em}
+.sc-up{color:var(--bad);font-weight:800}.sc-dn{color:var(--good);font-weight:800}.sc-eq{color:var(--mute);font-weight:700}
+.sc-o .pc{font-size:.9rem}
+.sc-act{display:flex;flex-wrap:wrap;gap:8px}
+.sc-act .btn{min-height:44px}
+.sc-t{width:100%;border-collapse:collapse;font-size:.93rem}
+.sc-t th,.sc-t td{padding:7px 4px;border-top:1px solid var(--rule);text-align:left;vertical-align:top}
+.sc-t th{font-weight:700;width:34%}
+.sc-t td:last-child{text-align:right;white-space:nowrap}
+.bar-row.is-me{outline:3px solid var(--lamp);outline-offset:3px;border-radius:12px}
 .go-more{margin-top:var(--s2);font-size:.92rem}.go-more a{color:var(--night-ink);display:inline-block;padding:10px 4px}
 .mk-btns{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s3) 0 var(--s4)}
 .mk-giro{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2);counter-reset:none}
@@ -488,7 +513,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
   <div class="pal" role="group" aria-label="Colori della pagina"><button type="button" data-pal="blu" aria-pressed="true">🌙 Blu notte</button><button type="button" data-pal="vino" aria-pressed="false">🍷 Vin brulé</button></div>
   <nav class="go" aria-label="Vai subito a">
    <a class="hot" href="#mercatini">🎄 Il giro dei mercatini<small>Domenica 13: dove andare, la strada, cosa guardare</small></a>
-   <a href="#hotel">🏨 Scegli l'alloggio<small>15 a confronto</small></a>
+   <a href="#scegli">🛏️ Scegli dove dormire<small>Domenica a Parigi o no, poi l'hotel</small></a>
    <a href="#costi">💶 Costi<small>Quanto spendete</small></a>
    <a href="#giorni">📅 Giorno per giorno<small>Orari e strade</small></a>
    <a href="#biglietti">🎟️ Biglietti Disney<small>Quale e quando</small></a>
@@ -573,20 +598,35 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
  </div>
 </header>
 
-<nav class="topbar" id="topbar" aria-label="Scorciatoie" aria-hidden="true"><a class="hot" href="#mercatini" tabindex="-1">🎄 Mercatini</a><a href="#hotel" tabindex="-1">🏨 Alloggio</a><a href="#giorni" tabindex="-1">📅 Giorni</a><a href="#top" tabindex="-1" aria-label="Tutti i pulsanti">☰ Menu</a></nav>
+<nav class="topbar" id="topbar" aria-label="Scorciatoie" aria-hidden="true"><a class="hot" href="#mercatini" tabindex="-1">🎄 Mercatini</a><a href="#scegli" tabindex="-1">🛏️ Dormire</a><a href="#giorni" tabindex="-1">📅 Giorni</a><a href="#top" tabindex="-1" aria-label="Tutti i pulsanti">☰ Menu</a></nav>
 <main>
+<section id="scegli" aria-labelledby="h-scegli"><div class="wrap">
+ <div class="sec-head"><p class="kicker">Prima di tutto · dove dormite</p><h2 id="h-scegli">Scegliete in 2 passi: tutta la pagina segue la vostra scelta.</h2>
+ <p class="lead">Ogni scelta è confrontata col mio consiglio: soldi, minuti, strada a piedi, pro e contro. Toccate «Scegli questo»: giorni, mercatini, costi e trasporti cambiano subito.</p></div>
+ <p class="sc-ban" id="scBan" hidden></p>
+ <div id="scRis"></div>
+ <h3 class="sc-step">1 · Domenica 13, la prima notte</h3>
+ <p class="small muted">Dormire a Parigi vuol dire niente treno con le valigie la sera dei mercatini: il treno per Disney lo prendete lunedì mattina. Prezzi con cancellazione gratuita, letti su Booking il 21/11/2026.</p>
+ <div id="scN"></div>
+ <h3 class="sc-step">2 · Lunedì–mercoledì, vicino a Disney</h3>
+ <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort3" role="group" aria-label="Ordina per" id="scSort"><button type="button" data-s="prezzo" aria-pressed="true">Prezzo</button><button type="button" data-s="vicino" aria-pressed="false">Vicino ai parchi</button><button type="button" data-s="voto" aria-pressed="false">Pulizia</button></div></div>
+ <div class="sc-list" id="scD"></div>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
 <section id="breve" aria-labelledby="h-breve"><div class="wrap">
  <div class="sec-head"><p class="kicker">La risposta in breve</p><h2 id="h-breve">Scegliete l'alloggio fra 15 e prenotate il biglietto Disney da 3 giorni. Il resto si paga sul posto.</h2></div>
  <div class="answer">
-  <div class="verdict"><span class="k">Dove dormire</span><span class="v">Il mio consiglio: n. 12 Relais Spa</span><p>Domenica sera la spa, inclusa, dopo i mercatini. Lunedì–mercoledì solo Disney: 5 minuti a piedi e 1 fermata di treno. Stesso posto per tutte e 4 le notti. <a href="#hotel">Vai agli alloggi</a></p></div>
+  <div class="verdict"><span class="k">Dove dormire</span><span class="v" id="brAlV">Il mio consiglio: domenica a Parigi, poi n. 8 Moxy</span><p id="brAlP">Domenica niente treno con le valigie la sera. Lunedì–mercoledì solo Disney: 8 minuti a piedi e 1 fermata di treno. <a href="#scegli">Scegli o cambia</a></p></div>
   <div class="verdict"><span class="k">Domenica, appena arrivati</span><span class="v">Il mega consiglio: Notre-Dame, Tuileries e Champs-Élysées</span><p>Un giro solo, da est a ovest: mercatini di giorno, luci la sera. <a href="#mercatini">Tutti i mercatini, dove andare e dove no</a> · <a href="#mega" data-day="0">Orari</a></p></div>
   <div class="verdict"><span class="k">Biglietti Disney</span><span class="v">3 giorni / 2 parchi, dal 14 al 16: 544 € in due</span><p>Costa come 1 parco lunedì + 2 giorni, ma vi dà tutti e due i parchi anche lunedì. <span class="bd nu">non ufficiale</span></p></div>
   <div class="verdict"><span class="k">Hotel Disney</span><span class="v">No</span><p>Il più economico con voto 8,0 costa circa 900 € più del n. 8 Moxy e circa 520 € più del n. 12. Unico vantaggio: entrate un'ora prima.</p></div>
   <div class="verdict"><span class="k">Trasporti</span><span class="v">Biglietti singoli sul telefono, niente abbonamento</span><p>Metro 14 dall'aeroporto e RER A, il treno regionale veloce che collega Parigi ai parchi.</p></div>
  </div>
  <div class="total">
-  <p class="t">Totale stimato per due col mio consiglio: alloggio, biglietti Disney e trasporti locali<small>N. 12 Relais Spa, letto matrimoniale e cancellazione gratuita. Con gli altri alloggi da circa 1.040 €. Voli, cibo e armadietto bagagli esclusi. <span class="bd es" style="background:rgb(0 0 0 / .1);color:var(--lamp-ink)">stima</span></small></p>
-  <p class="n">≈ 1.560 €</p>
+  <p class="t"><span id="brTotT">Totale stimato per due col mio consiglio: alloggi, biglietti Disney e trasporti locali</span><small><span id="brTotS"></span> Voli, cibo e armadietto bagagli esclusi. <span class="bd es" style="background:rgb(0 0 0 / .1);color:var(--lamp-ink)">stima</span></small></p>
+  <p class="n" id="brTot">≈ 1.370 €</p>
  </div>
 </div></section>
 
@@ -629,7 +669,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 <div class="lights" data-n="22" aria-hidden="true"></div>
 
 <section id="costi" aria-labelledby="h-costi"><div class="wrap">
- <div class="sec-head"><p class="kicker">Quanto costa, sette modi: toccate una barra</p><h2 id="h-costi">Da circa 1.040 € a 1.560 € in due, secondo l'alloggio. Gli hotel Disney costano molto di più.</h2></div>
+ <div class="sec-head"><p class="kicker">Quanto costa: toccate una barra per sceglierla</p><h2 id="h-costi">Da circa 1.040 € a 1.560 € in due, secondo l'alloggio. Gli hotel Disney costano molto di più.</h2></div>
  <div class="mine is-rec mycost" id="myCost"></div>
  <div class="bars" id="bars"></div>
  <div class="legend" aria-hidden="true">
@@ -637,13 +677,8 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
  </div>
  <details style="margin-top:var(--s5)"><summary>Come sono calcolati</summary><div class="in small">
   <p>Tutti i totali sono <span class="bd es">stima</span> per 2 persone. Ogni pezzo ha la sua etichetta nelle sezioni sotto.</p>
+  <ul class="clean" id="calc"></ul>
   <ul class="clean">
-   <li><b>N. 1 Love N Chic:</b> 391 € + 544 € biglietti + 109 € trasporti = 1.044 €.</li>
-   <li><b>N. 2 Ki Space:</b> 465 € (prezzo della vostra app, non rimborsabile) + 544 € + 76 € trasporti (navetta gratis ai parchi) = 1.085 €. Col bus invece della navetta: 1.110 €.</li>
-   <li><b>N. 4 Chez Stéphane &amp; Sophie:</b> 492 € + 544 € + 107 € = 1.143 €.</li>
-   <li><b>N. 8 Moxy:</b> 524 € + 544 € + 107 € = 1.175 €.</li>
-   <li><b>N. 8 Moxy con cancellazione gratuita:</b> circa 577 € + 544 € + 107 € = circa 1.228 €.</li>
-   <li><b>N. 12 Relais Spa, letto matrimoniale e cancellazione gratuita (il mio consiglio):</b> 908 € + 544 € + 107 € = 1.559 €. Suite non rimborsabile, letto non garantito: 763 € + 544 € + 107 € = 1.414 €.</li>
    <li><b>Misto:</b> pacchetto Disney Cheyenne 2 notti 14→16 con biglietti 1.103 € (stima ufficiale) + Moxy 13→14 e 16→17 circa 249 € (stima) + 87 € trasporti = 1.438 €.</li>
    <li><b>Tutto al Cheyenne:</b> pacchetto 4 notti 13→17 con biglietti 1.970 € (stima ufficiale) + 76 € trasporti = 2.047 €.</li>
    <li>Trasporti a persona: domenica 24,20 € (ticket aeroporto 14 € + 4 corse da 2,55 €), giovedì 14 €, più 15,30 € di treno ai parchi con un alloggio vicino alla stazione (con il bus 12,30 € più 2,05 € domenica sera e 2,05 € giovedì mattina; bus e treno insieme per il n. 13: 27,60 €); nel misto 5,10 € per i due spostamenti con le valigie. La navetta di Ki Space e quella Disney sono gratuite.</li>
@@ -654,25 +689,20 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 <div class="lights" data-n="22" aria-hidden="true"></div>
 
 <section id="hotel" aria-labelledby="h-hotel"><div class="wrap wide">
- <div class="sec-head"><p class="kicker">Dove dormire · 4 notti, 13→17 dic, 2 adulti, 1 camera</p><h2 id="h-hotel">Io prenderei il n. 12. Qui sotto tutti i 15: scrivetemi il numero che scegliete.</h2>
+ <div class="sec-head"><p class="kicker">Dove dormire · 4 notti, 13→17 dic, 2 adulti, 1 camera</p><h2 id="h-hotel">Vicino a Disney: i 15 a confronto. Si sceglie in cima alla pagina, insieme alla domenica.</h2>
  <p class="lead">Prezzi per 4 notti, tasse incluse, letti su Booking da computer il 21/11/2026. Nella vostra app, con Genius, spesso costano circa il 12 % in meno.</p></div>
 
- <div class="mine is-rec" id="mio">
+  <div class="mine is-rec" id="mio">
   <span class="rec"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>Il mio consiglio</span>
-  <h3 class="mine-t"><span class="nb">12</span><span>Io prenderei il Relais Spa Val d'Europe</span></h3>
-  <p>Camera con letto matrimoniale e cancellazione gratuita fino all'8/12: 908 € per 4 notti <span class="bd ok">visto il 21/11/2026</span>. Il prezzo vero lo leggete nell'app.</p>
+  <h3 class="mine-t"><span class="nb">8</span><span>Domenica all'Hotel Locomo, a Parigi; poi 3 notti al n. 8 Moxy</span></h3>
+  <p>Circa 720 € per le 4 notti, tutte con cancellazione gratuita: Locomo 190 € (fino al 12/12) + Moxy «Family Sleeper» con letto matrimoniale, 530 € (fino al 14/12) <span class="bd ok">visto il 21/11/2026</span>.</p>
   <ul class="clean mine-why">
-   <li><b>Domenica, relax:</b> dopo i mercatini siete in hotel verso le 20:10. Dalle 20:20 alle 22:00 piscina, idromassaggio, sauna e hammam, tutto incluso.</li>
-   <li><b>Lunedì–mercoledì, solo Disney:</b> 5 minuti a piedi e 1 fermata di treno (3 minuti). La sera, lo stesso al contrario.</li>
-   <li><b>Zero pensieri:</b> hotel vero, reception sempre aperta, pulito (8,9).</li>
-   <li><b>Giovedì</b> uscite alle 8:30 per il volo: il treno è a 5 minuti.</li>
+   <li><b>Domenica, relax vero:</b> valigie in hotel alle 9, a 3 minuti dalla Gare de Lyon; mercatini fino a sera, senza treni né valigie la sera.</li>
+   <li><b>Lunedì:</b> RER A con le valigie (36 minuti), valigie alla reception del Moxy, poi al parco. Si esce presto: verso le 7:10.</li>
+   <li><b>Lunedì–mercoledì, solo Disney:</b> 8 minuti a piedi e 1 fermata di treno. Reception sempre aperta, pulizia 9,0.</li>
+   <li><b>Volete la spa domenica sera?</b> 4 notti al n. 12 Relais Spa: circa 190 € in più (908 € contro 720 €).</li>
   </ul>
-  <p class="give"><b>Come prenotarlo:</b> su Booking scegliete la «Camera» da 25 m² con <b>1 letto matrimoniale large</b> e la tariffa con <b>cancellazione gratuita prima dell'8 dicembre</b>. Volete spendere meno? La suite da 763 € costa 145 € in meno, ma non è rimborsabile e il letto matrimoniale non è garantito.</p>
-  <details class="more"><summary>Cosa lasciate e a cosa stare attenti</summary><div class="in">
-  <p><b>Cosa lasciate:</b> costa circa 330 € più del n. 8 Moxy con cancellazione gratuita. Il Moxy è comodo uguale per i parchi, ma non ha la spa.</p>
-  <p><b>Attenzione:</b> davanti all'ingresso ci sono finti taxi. La navetta gratis per Disney è solo quella dell'hotel: chiedetela alla reception <span class="bd nu">non confermata</span>.</p>
-  </div></details>
-  <a class="btn gold" href="#al-12">Vedi la scheda del n. 12</a>
+  <a class="btn gold" href="#scegli">Scegli o cambia in cima alla pagina</a>
  </div>
 
  <h3 class="sub-h">Se cercate altro: il migliore per ogni desiderio</h3>
@@ -764,7 +794,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
  <div class="wrap">
   <div class="sec-head"><p class="kicker">Giorno per giorno</p><h2 id="h-giorni">Un giorno di mercatini a Parigi, tre giorni ai parchi, giovedì in volo.</h2>
   <p class="muted small">Toccate una tappa per vedere strade, treni e mappe. Durante il viaggio la pagina si apre da sola sul giorno di oggi. Gli orari dei treni sono quelli di inizio dicembre: controllateli la sera prima. </p>
-  <div class="chooser" id="chooser"><label for="selAl">Orari, strade, costi e «Da fare» con l'alloggio:</label><select id="selAl"></select><p class="small muted" id="chNote" aria-live="polite"></p><button type="button" class="btn ghost" id="backMio" hidden>Torna al mio consiglio, n. 12</button></div></div>
+  <div class="chooser" id="chooser"><label for="selPar">Domenica notte:</label><select id="selPar"></select><label for="selAl">Lunedì–mercoledì:</label><select id="selAl"></select><p class="small muted" id="chNote" aria-live="polite"></p><button type="button" class="btn ghost" id="backMio" hidden>Torna al mio consiglio</button></div></div>
   <div class="daybar" role="tablist" aria-label="Scegli il giorno" id="daybar">
    <span class="pill" aria-hidden="true"></span>
    <svg class="spark" id="spark" viewBox="0 0 46 46" aria-hidden="true"><g fill="var(--lamp)"><path d="M23 4l2.4 15.6L41 23l-15.6 2.4L23 42l-2.4-16.6L5 23l15.6-3.4z"/></g></svg>
@@ -776,7 +806,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 <div class="lights" data-n="22" aria-hidden="true"></div>
 
 <section id="trasporti" aria-labelledby="h-tr"><div class="wrap">
- <div class="sec-head"><p class="kicker">Trasporti e biglietti</p><h2 id="h-tr">Biglietti singoli sul telefono: circa 54 € a testa con il n. 12.</h2>
+ <div class="sec-head"><p class="kicker">Trasporti e biglietti</p><h2 id="h-tr">Biglietti singoli sul telefono: circa 54 € a testa col mio consiglio.</h2>
  <p class="lead">Il primo acquisto sul telefono deve essere il ticket aeroporto. Ognuno usa il proprio telefono.</p></div>
  <div class="tbl"><table>
   <thead><tr><th>Quando</th><th>Cosa comprate</th><th class="r">A testa</th></tr></thead>
@@ -786,7 +816,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
    <tr><td>dom 13, sera</td><td id="trSun">1 ticket Métro-Train-RER: RER A Gare de Lyon → Val d'Europe (uscendo per i bagagli il ticket precedente finisce)</td><td class="r" id="trSunV">2,55 €</td></tr>
    <tr><td>lun 14 – mer 16</td><td id="trPark">6 ticket Métro-Train-RER: andata e ritorno ai parchi</td><td class="r" id="trParkV">15,30 €</td></tr>
    <tr><td>gio 17</td><td id="trThu"><b>Ticket aeroporto</b>: Val d'Europe → Orly, RER A + metro 14 con un solo ticket</td><td class="r" id="trThuV">14,00 €</td></tr>
-   <tr><td colspan="2"><b>Totale</b> <span class="bd es">stima</span> <span id="trWho">· con il n. 12 Relais Spa Val d'Europe</span></td><td class="r"><b id="trTot">53,50 €</b></td></tr>
+   <tr><td colspan="2"><b>Totale</b> <span class="bd es">stima</span> <span id="trWho">· col mio consiglio</span></td><td class="r"><b id="trTot">53,50 €</b></td></tr>
   </tbody>
  </table></div>
  <div class="stack" style="margin-top:var(--s5)">
@@ -930,27 +960,21 @@ drawGarland();
 {let lw=innerWidth,tk=false;addEventListener('resize',()=>{if(tk||innerWidth===lw)return;tk=true;requestAnimationFrame(()=>{lw=innerWidth;drawLights();drawGarland();tk=false})},{passive:true})}
 
 /* ---------- barre dei costi ---------- */
-const SC=[
- {id:1,n:"N. 1 Love N Chic + biglietti",s:[["s-h",391,"alloggio 391 €"],["s-t",544,"biglietti 544 €"],["s-r",109.2,"trasporti 109 €"]],note:"Il più economico. Bus ogni giorno."},
- {id:2,n:"N. 2 Ki Space + biglietti",s:[["s-h",465,"alloggio 465 € (prezzo dell'app)"],["s-t",544,"biglietti 544 €"],["s-r",76.4,"trasporti 76 €"]],note:"Spa grande. Navetta gratis ai parchi, ma ogni 50 minuti. Non rimborsabile."},
- {id:4,n:"N. 4 Chez Stéphane & Sophie + biglietti",s:[["s-h",491.95,"alloggio 492 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"15–20 minuti a piedi dal treno."},
- {id:8,n:"N. 8 Moxy + biglietti",ref:1,s:[["s-h",524.2,"alloggio 524 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"Hotel a 8 minuti dal treno: è il riferimento per le differenze."},
- {id:12,n:"N. 12 Relais Spa + biglietti (il mio consiglio)",s:[["s-h",908,"alloggio 908 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"Spa inclusa, 5 minuti dal treno. Letto matrimoniale e cancellazione gratuita fino all'8/12."},
- {n:"Misto: 2 notti Cheyenne + 2 notti vicino",s:[["s-p",1102.78,"pacchetto 1.103 €"],["s-h",249,"2 notti Moxy 249 €"],["s-r",86.6,"trasporti 87 €"]],note:"Due cambi di hotel con le valigie."},
- {n:"Tutte e 4 le notti al Cheyenne",s:[["s-p",1970.24,"pacchetto 1.970 €"],["s-r",76.4,"trasporti 76 €"]],note:"Due giorni di biglietti inclusi ma non usati."}
-];
-const MAX=2100,REF=SC.find(c=>c.ref).s.reduce((a,b)=>a+b[1],0);
-{let h='';SC.forEach(c=>{const tot=c.s.reduce((a,b)=>a+b[1],0),d=tot-REF;
- const dl=c.ref?'<span class="bar-diff eq">riferimento</span>':`<span class="bar-diff ${d>0?'up':'dn'}">${d>0?'+':'−'}${fmt(Math.abs(d))}</span>`;
- const lab=c.s.map(x=>x[2]).join(', ');
- const go=c.id?'#al-'+c.id:'#hoteldisney';
- h+=`<a class="bar-row" href="${go}"><div class="bar-top"><span class="bar-name">${esc(c.n)}${c.rec?'<span class="rec">Consigliato</span>':''}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
+/* barre dei costi: si calcolano con conto() (C11), dopo che dati e profili sono pronti */
+const MAX=2100;
+const BARS=[{n:"lo",d:8,t:"Il mio consiglio. Domenica a Parigi, poi 8 minuti dal treno."},{n:"is",d:8,t:"Come il consiglio, con l'hotel di Parigi più economico e la colazione."},{n:"",d:8,t:"4 notti al Moxy: domenica sera valigie e treno."},{n:"",d:4,t:"4 notti nell'appartamento grande, 15–20 minuti a piedi dal treno."},{n:"",d:1,t:"Il più economico. Bus ogni giorno."},{n:"",d:12,t:"4 notti con la spa domenica sera, 5 minuti dal treno."}];
+const PKG=[{n:"Misto: 2 notti Cheyenne + 2 notti vicino",s:[["s-p",1102.78,"pacchetto 1.103 €"],["s-h",249,"2 notti Moxy 249 €"],["s-r",86.6,"trasporti 87 €"]],note:"Due cambi di hotel con le valigie."},{n:"Tutte e 4 le notti al Cheyenne",s:[["s-p",1970.24,"pacchetto 1.970 €"],["s-r",76.4,"trasporti 76 €"]],note:"Due giorni di biglietti inclusi ma non usati."}];
+const drawBars=()=>{const cm=conto(MIO_S),me=scStr(SCE);let h='',cl='';
+ const L=BARS.map(b=>{const c=conto(b);return c&&{sc:b,n:scName(b),s:[["s-h",c.al,(b.n?"alloggi ":"alloggio ")+fmt(c.al)],["s-t",544,"biglietti 544 €"],["s-r",c.tr,"trasporti "+fmt(c.tr)]],note:b.t}}).filter(Boolean).concat(PKG);
+ L.forEach(c=>{const tot=c.s.reduce((a,b)=>a+b[1],0),d=tot-cm.tot,k=c.sc?scStr(c.sc):'',ref=k===scStr(MIO_S);
+  const dl=ref?'<span class="bar-diff eq">il mio consiglio</span>':`<span class="bar-diff ${d>0?'up':'dn'}">${d>0?'+':'−'}${fmt(Math.abs(d))}</span>`;
+  const lab=c.s.map(x=>x[2]).join(', ');
+  h+=`<a class="bar-row${k===me?' is-me':''}" href="${k?'#scegli':'#hoteldisney'}"${k?` data-sc="${k}"`:''}><div class="bar-top"><span class="bar-name">${esc(c.n)}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
  <div class="track" role="img" aria-label="${esc(c.n)}: circa ${fmt(tot)} (${lab})"><span class="grid-lines">${[500,1000,1500,2000].map(v=>`<i style="left:${v/MAX*100}%"></i>`).join('')}</span><span class="fill" style="width:${tot/MAX*100}%">${c.s.map(x=>`<i class="${x[0]}" style="width:${x[1]/tot*100}%"></i>`).join('')}</span></div>
- <p class="bar-note">${esc(c.note)} <span class="bar-go">${c.id?'Apri la scheda ›':'Perché non conviene ›'}</span></p></a>`});
+ <p class="bar-note">${esc(c.note)} <span class="bar-go">${k?(k===me?'✓ La vostra scelta':'Scegli questo ›'):'Perché non conviene ›'}</span></p></a>`;
+  if(c.sc)cl+=`<li><b>${esc(c.n)}${ref?' (il mio consiglio)':''}:</b> ${c.s.map(x=>x[2]).join(' + ')} = ${fmt(tot)}.</li>`});
  h+=`<div class="axis" aria-hidden="true">${[0,500,1000,1500,2000].map(v=>`<span style="left:${v/MAX*100}%">${v?grp(v)+' €':'0 €'}</span>`).join('')}</div>`;
- $('#bars').innerHTML=h;
- if(!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){$('#bars').classList.add('cresce');io.disconnect()}})},{threshold:.35});io.observe($('#bars'))}
-}
+ $('#bars').innerHTML=h;$('#calc').innerHTML=cl};
 
 /* ---------- alloggi: 15 a confronto, numero fisso (ordinati per prezzo), filtri per desiderio ---------- */
 const BK=s=>`https://www.booking.com/hotel/fr/${s}.it.html?checkin=2026-12-13&checkout=2026-12-17&group_adults=2&group_children=0&no_rooms=1`;
@@ -974,7 +998,7 @@ const AL=[
  {id:14,n:"Disney Hotel New York",sub:"Hotel Disney 4 stelle · a piedi dai parchi",g:["parchi","spa"],sc:"8,4",cl:"9,0",p:2623,pr:"2.623 €",pl:`${VIS} Solo la camera, biglietti esclusi. Cancellazione gratuita fino al 6/12.`,min:0,ne:"a piedi ai parchi",dist:"10 minuti a piedi dai parchi, oppure navetta gratis.",sun:"Dalla stazione dei parchi, 10 minuti a piedi.",tr:"0 €.",spa:"Piscine coperta ed esterna riscaldate, idromassaggio, sauna e hammam (solo adulti, 7–22), inclusi.",pro:"Ai parchi a piedi, entrate un'ora prima (alle 8:00), piscina inclusa.",con:"Costa circa 2.100 € più del Moxy, solo per dormire.",u:BK('disney-39-s-new-york-r')},
  {id:15,n:"Hôtel l'Elysée Val d'Europe",sub:"Hotel 4 stelle · Serris",g:["comodo","vicino"],sc:"9,1",cl:"9,2",p:null,pr:"?",pl:`Su Booking ${B.nc('esaurito')} il 21/11: provate sul sito ufficiale.`,min:2,ne:"2 min",dist:"150 m: 2 minuti a piedi. Navetta gratis per i parchi.",sun:"Reception 24 ore.",tr:"Navetta gratis, oppure treno 30,60 € in due.",pro:"Il più comodo di tutti, col voto più alto tra gli hotel (9,1). Bar fino a mezzanotte, ristorante, negozi davanti.",con:"Niente spa. Su Booking non c'è posto: prezzo sconosciuto. Cauzione di 150 € in contanti.",u:"https://www.hotelelysee.com/",ul:"Apri il sito ufficiale"}
 ];
-const PICKS=[["Spendere poco",4,"492 €, pulizia 9,5, 47 m². A 15–20 minuti a piedi dal treno."],["Tutto comodo",8,"524 €, reception 24 ore, 8 minuti dal treno. Se si libera, il n. 15 è ancora meglio."],["Con la spa",12,"Il mio consiglio. Spa inclusa per la domenica sera, 5 minuti dal treno. 908 € con letto matrimoniale e cancellazione gratuita fino all'8/12."],["Romantico",13,"773 €, vasca idromassaggio privata, solo adulti."],["Il prezzo più basso",1,"391 €, pulizia 9,0. Serve il bus."],["Più spazio, vicino al treno",6,"509 €, 50 m² con terrazza, 8 minuti dal treno."]];
+const PICKS=[["Spendere poco",4,"492 €, pulizia 9,5, 47 m². A 15–20 minuti a piedi dal treno."],["Tutto comodo",8,"524 €, reception 24 ore, 8 minuti dal treno. Se si libera, il n. 15 è ancora meglio."],["Con la spa",12,"Il migliore per 4 notti nello stesso posto. Spa inclusa per la domenica sera, 5 minuti dal treno. 908 € con letto matrimoniale e cancellazione gratuita fino all'8/12."],["Romantico",13,"773 €, vasca idromassaggio privata, solo adulti."],["Il prezzo più basso",1,"391 €, pulizia 9,0. Serve il bus."],["Più spazio, vicino al treno",6,"509 €, 50 m² con terrazza, 8 minuti dal treno."]];
 const byId=id=>AL.find(h=>h.id===id);
 $('#picks').innerHTML=PICKS.map(([k,id,d])=>`<a class="pick" href="#al-${id}"><span class="nb">${id}</span><span class="k">${esc(k)}</span><span class="t">${esc(byId(id).n)}</span><span class="d">${esc(d)}</span></a>`).join('');
 const DUELS=[
@@ -987,10 +1011,46 @@ const DUELS=[
  ["Un alloggio vicino o il n. 14, hotel Disney?","Il 14 costa circa 2.100 € più del Moxy, solo per la camera. In cambio andate ai parchi a piedi, entrate un'ora prima e avete la piscina. Per me non vale la differenza."]
 ];
 $('#duels').innerHTML=DUELS.map(([q,a])=>`<details><summary>${esc(q)}</summary><div class="in"><p>${esc(a)}</p></div></details>`).join('');
-const MIO=12,STAR='<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>';
-let CHO=MIO;try{const q=+new URLSearchParams(location.search).get('alloggio')||+localStorage.getItem('pdn-alloggio');if(q>=1&&q<=15)CHO=q}catch(e){}
+const MIO=8,STAR='<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>';
+/* SCELTA (C11, Mario 21/11 20:52 «quando clicco mi cambia la pagina … l'itinerario e tutto»): domenica notte a Parigi (n) + alloggio vicino a Disney (d) */
+const BKP=s=>`https://www.booking.com/hotel/fr/${s}.it.html?checkin=2026-12-13&checkout=2026-12-14&group_adults=2&group_children=0&no_rooms=1`;
+/* stazioni RER A degli hotel di Parigi: minuti fino a Val d'Europe e Chessy (orario del fine settimana, appunti trasporti) */
+const RS={GL:{n:"Gare de Lyon",VDE:36,CH:39},AU:{n:"Auber",VDE:42,CH:45},CL:{n:"Châtelet–Les Halles",VDE:39,CH:42}};
+const PAR=[
+ {id:"lo",z:"gl",n:"Hotel Locomo",sub:"Hotel · 250 m dalla Gare de Lyon",a:"Hotel Locomo, Paris",st:"GL",w:3,sc:"8,6",cl:"9,0",p:190,pl:"Matrimoniale Classic, letto alla francese. Cancellazione gratuita fino al 12/12 (172 € non rimborsabile).",dep:"Deposito valigie, reception 24 ore.",ci:"Check-in dalle 14:00.",pro:"Il più vicino alla stazione (3 minuti) e fra i più economici. Pulizia 9,0, reception sempre aperta.",con:"Camere piccole, letto alla francese (stretto, circa 140 cm, stima). Cauzione 100 €.",u:BKP('adriatic')},
+ {id:"sb",z:"gl",n:"Sleeping Belle",sub:"Hotel · 400 m dalla Gare de Lyon",a:"Hôtel Sleeping Belle, Gare de Lyon, Paris",st:"GL",w:5,sc:"8,6",cl:"9,1",p:216,pl:"Matrimoniale Classic, letto alla francese. Cancellazione gratuita fino al 12/12 (196 € non rimborsabile). Colazione 17 € a testa.",dep:"Deposito valigie chiuso e sicuro (sito ufficiale).",ci:"Check-in 15:00–00:00.",pro:"Pulizia 9,1, deposito valigie sicuro, check-in fino a mezzanotte.",con:"Letto alla francese. Cauzione 100 € con carta.",u:BKP('elysee-gare-de-lyon')},
+ {id:"is",z:"gl",n:"ibis Styles Gare de Lyon",sub:"Hotel · 350 m dalla Gare de Lyon · colazione inclusa",a:"ibis Styles Paris Gare de Lyon TGV, Paris",st:"GL",w:5,sc:"8,5",cl:"9,0",p:175,pl:"Camera con letto matrimoniale alla francese, colazione inclusa. Cancellazione gratuita fino al 13/12, si paga in hotel (158 € non rimborsabile).",dep:"Deposito valigie (Booking).",ci:"Check-in 14:00–23:30.",pro:"Il più economico, con la colazione. Pulizia 9,0.",con:"Letto alla francese. Check-in solo fino alle 23:30: domenica non tardate.",u:BKP('hevetia')},
+ {id:"nv",z:"gl",n:"Novotel Gare de Lyon",sub:"Hotel · 350 m dalla Gare de Lyon · piscina coperta",a:"Novotel Paris Gare de Lyon, Paris",st:"GL",w:5,sc:"8,5",cl:"8,9",p:236,pl:"Matrimoniale Standard Queen 25 m². Cancellazione gratuita fino al 12/12, si paga in hotel (202 € non rimborsabile). Colazione 22 € a testa.",dep:"Deposito valigie gratuito (Booking).",ci:"Check-in dalle 15:00.",pro:"Camera più grande (25 m², letto Queen) e piscina coperta: orari da chiedere all'hotel.",con:"Pulizia 8,9, la più bassa di questi hotel.",u:BKP('novotel-gare-de-lyon')},
+ {id:"pa",z:"gl",n:"Hôtel Parisianer",sub:"Hotel · 350 m dalla Gare de Lyon",a:"Hôtel Parisianer, Paris",st:"GL",w:5,sc:"8,8",cl:"9,2",p:256,pl:"Matrimoniale Classic 17 m², letto matrimoniale. Cancellazione gratuita fino all'11/12 (232 € non rimborsabile). Colazione 19 € a testa.",dep:`Deposito valigie ${B.nc('non confermato')}: chiedetelo prima di prenotare.`,ci:"Check-in 14:00–00:00.",pro:"Il voto più alto vicino alla Gare de Lyon (8,8, pulizia 9,2), letto matrimoniale vero.",con:"Deposito valigie da confermare. Cauzione 150 €.",u:BKP('parisianer')},
+ {id:"sp",z:"ce",n:"Saint-Pétersbourg Opéra & Spa",sub:"Hotel con spa · accanto alle Galeries Lafayette",a:"Hôtel Saint-Pétersbourg Opéra & Spa, Paris",st:"AU",w:2,sc:"8,8",cl:"9,1",p:204.9,pl:"Matrimoniale Classic 17 m², letto alla francese. Cancellazione gratuita fino all'11/12 (180,40 € non rimborsabile), offerta Black Friday che può finire.",dep:`Reception 24 ore; deposito valigie ${B.nc('da chiedere')}.`,ci:"Check-in dalle 14:00.",pro:`Spa con idromassaggio e hammam per il relax della domenica ${B.nc('orari e prezzo da chiedere')}. Accanto alle Galeries Lafayette e alla RER A di Auber.`,con:"Il prezzo è un'offerta Black Friday: può sparire. Lunedì la RER A è più lunga (42 minuti fino a Val d'Europe).",u:BKP('saintpetersbourg')},
+ {id:"as",z:"ce",n:"Astra Opéra",sub:"Hotel · Opéra · il voto più alto",a:"Hôtel Astra Opéra, Paris",st:"AU",w:2,sc:"9,4",cl:"9,6",p:305,pl:"Camera Matrimoniale 16 m², letto alla francese. Cancellazione gratuita fino al 12/12 (276 € non rimborsabile).",dep:`Reception 24 ore; deposito valigie ${B.nc('da chiedere')}.`,ci:"Check-in dalle 15:00.",pro:"Il voto più alto (9,4, pulizia 9,6). Piscina coperta, hammam e sauna, bibite gratis.",con:"Costa circa 115 € più del Locomo. Camera piccola, letto alla francese.",u:BKP('astraopera')},
+ {id:"rh",z:"ce",n:"Le Relais des Halles",sub:"Hotel · Châtelet, via pedonale",a:"Hôtel Le Relais des Halles, Paris",st:"CL",w:4,sc:"9,1",cl:"9,5",p:317,pl:"Camera Matrimoniale 16 m², letto alla francese o 2 singoli. Cancellazione gratuita fino al 12/12 (290 € non rimborsabile).",dep:"Deposito valigie, reception 24 ore.",ci:"Check-in dalle 14:00.",pro:"Pulizia 9,5, stile d'epoca, in centro: Notre-Dame a 15 minuti a piedi. Metro 14 diretta da Orly.",con:"Il più caro: circa 125 € più del Locomo.",u:BKP('ha-tel-le-relais-des-halles-paris')}
+];
+/* prezzi per la scelta: [4 notti 13→17, 3 notti 14→17], con cancellazione gratuita dove c'è (appunti alloggi_prezzi_3notti_15.md e alloggi_notte_parigi_3notti.md, letti il 21/11/2026) */
+const Q={1:[[391,"letto matrimoniale, cancellazione gratuita fino al 29/11"],[296,"letto matrimoniale, cancellazione gratuita fino al 30/11"]],
+ 2:[[730,"cancellazione gratuita fino al 10/12 (stima)"],[548,"cancellazione gratuita fino all'11/12"]],
+ 3:[[475,"non rimborsabile"],[455,"letto alla francese, cancellazione gratuita fino al 12/12"]],
+ 4:[[492,"cancellazione gratuita fino al 29/11"],[382,"cancellazione gratuita fino al 30/11"]],
+ 5:[[497,"letto a castello, cancellazione gratuita fino al 12/12"],[383,"letto a castello, cancellazione gratuita fino al 13/12"]],
+ 6:[[509,"non rimborsabile"],[407,"non rimborsabile"]],
+ 7:[[518,"colazione inclusa, cancellazione gratuita fino al 29/11"],[421,"colazione inclusa, cancellazione gratuita fino al 30/11"]],
+ 8:[[677,"«Family Sleeper», letto matrimoniale, cancellazione gratuita fino al 13/12"],[530,"«Family Sleeper», letto matrimoniale, cancellazione gratuita fino al 14/12"]],
+ 9:[[529,"non rimborsabile"],[449,"cancellazione gratuita fino al 14/12"]],
+ 10:[[636,"cancellazione gratuita fino al 29/11"],[493,"cancellazione gratuita fino al 30/11"]],
+ 11:[[688,"cancellazione gratuita fino al 6/12"],[534,"cancellazione gratuita fino al 7/12"]],
+ 12:[[908,"camera con letto matrimoniale, cancellazione gratuita fino all'8/12"],[711,"camera con letto matrimoniale, cancellazione gratuita fino al 9/12"]],
+ 13:[[850,"cancellazione gratuita fino al 29/11"],[650,"cancellazione gratuita fino al 30/11"]],
+ 14:[[2623,"solo camera, cancellazione gratuita fino al 6/12"],[2112,"solo camera, cancellazione gratuita fino al 7/12"]],
+ 15:[null,null]};
+const REC=[2,3,8,9,11,12,14,15]; /* reception: le valigie del lunedì mattina si lasciano lì */
+const MIO_S={n:"lo",d:8},scStr=s=>(s.n||'4n')+'-'+s.d,isMio=()=>scStr(SCE)===scStr(MIO_S);
+const scParse=v=>{const m=/^(lo|sb|is|nv|pa|sp|as|rh|4n)-(\d{1,2})$/.exec(String(v||''));return m&&AL.some(h=>h.id===+m[2])?{n:m[1]==='4n'?'':m[1],d:+m[2]}:null};
+let SCE=null;try{const u=new URLSearchParams(location.search),a=+u.get('alloggio'),b=+localStorage.getItem('pdn-alloggio');SCE=scParse(u.get('scelta'))||(a>=1&&a<=15?{n:'',d:a}:null)||scParse(localStorage.getItem('pdn-scelta'))||(b>=1&&b<=15?{n:'',d:b}:null)}catch(e){}
+let SCELTO=!!SCE;if(!SCE)SCE={n:MIO_S.n,d:MIO_S.d};
+let CHO=SCE.d,PN=PAR.find(p=>p.id===SCE.n)||null;
+const scName=s=>{const p=PAR.find(x=>x.id===s.n),h=AL.find(x=>x.id===s.d);return p?`${p.n} + n. ${s.d} ${h.n}`:`n. ${s.d} ${h.n}, 4 notti`};
 const card=h=>`<article class="card${h.id===MIO?' is-rec':''}" id="al-${h.id}">
- <div class="card-top"><div class="ttl"><span class="nb" aria-label="numero ${h.id}">${h.id}</span><div><h3>${esc(h.n)}</h3><p class="small muted">${esc(h.sub)}</p></div></div>${h.id===MIO?`<span class="rec">${STAR}Il mio consiglio</span>`:''}</div>
+ <div class="card-top"><div class="ttl"><span class="nb" aria-label="numero ${h.id}">${h.id}</span><div><h3>${esc(h.n)}</h3><p class="small muted">${esc(h.sub)}</p></div></div>${h.id===MIO?`<span class="rec">${STAR}Nel mio consiglio</span>`:''}</div>
  <div class="facts"><div class="fact"><div class="k">Voto Booking</div><div class="v">${h.sc}</div></div><div class="fact"><div class="k">Pulizia</div><div class="v">${h.cl}</div></div><div class="fact"><div class="k">4 notti</div><div class="v">${h.pr}</div></div></div>
  <p class="small"><b>Dal treno:</b> ${h.dist}</p>
  <details class="more"><summary>Dov'è, dettagli e prenotazione</summary><div class="in">
@@ -1128,9 +1188,26 @@ const dove=n=>{const d=DV[n],mp=MP[n],a=ACC[n].a,s=RA[d[0]],acc=d[1];
  ${d[2]?`<p class="small">${esc(d[2])}</p>`:''}<p class="small muted">Tempi coi mezzi, senza l'attesa di treni e bus ${B.es()}. Distanze in linea d'aria. «Maps» vi dà il percorso all'ora giusta.</p>`};
 /* la scheda si riempie quando si apre (anche dalle barre dei costi): ACC e le mete sono già pronte */
 document.addEventListener('toggle',e=>{const t=e.target;if(!t.matches||!t.matches('details.more')||!t.open)return;const b=t.querySelector('.dove:empty');if(b)b.innerHTML=dove(+b.dataset.dove)},true);
+/* misure di una scelta, sempre contro il mio consiglio (C11): minuti coi mezzi senza le attese, a piedi 80 m al minuto (stima) */
+const hm=s=>{const [a,b]=String(s).split(':');return a*60+ +b};
+const accMin=d=>DV[d][1].reduce((x,l)=>x+l[1],0);
+const waitMin=d=>ACC[d].mode==='nav'?25:/bus/.test(ACC[d].mode)?10:0;
+const parkMin=d=>d===14?10:accMin(d)+RA[DV[d][0]].dz+2;
+const walkDay=d=>d===14?20:2*(DV[d][1].filter(l=>l[0]==='w').reduce((x,l)=>x+l[1],0)+2);
+const ppOf=d=>COMMON+LOC[ACC[d].mode];
+const monB=(pn,d)=>{const st=DV[d][0],acc=accMin(d),wt=waitMin(d),dz=RA[st].dz,to=pn.w+5+RS[pn.st][st]+acc+wt,bk=acc+wt+(dz?5+dz:0)+2,out=f5(510-(to+10+bk));return {out,arr:out+to,go:out+to+10}};
+const conto=s=>{const pn=PAR.find(p=>p.id===s.n)||null,q=(Q[s.d]||[])[pn?1:0];if(!q)return null;const a=ACC[s.d],st=DV[s.d][0],al=(pn?pn.p:0)+q[0],tr=2*ppOf(s.d);
+ return {pn,q,al,tr,tot:al+544+tr,park:parkMin(s.d),walk:walkDay(s.d),nav:waitMin(s.d),
+  bags:pn?pn.w+5+RS[pn.st][st]+accMin(s.d):10+RA[a.sunSt].gl+accMin(s.d),
+  mon:pn?monB(pn,s.d).out:hm(a.out),sunOut:pn?null:(a.spa||a.by22?'18:50':'20:40'),sunIn:pn?null:(a.spa?'20:10':a.by22?'20:30':a.sunT),thu:hm(a.thuT)}};
 let P=ACC[CHO];
-const goPark=(dest,name)=>({t:P.out,ti:"Uscite "+P.da,d:`Obiettivo: essere ai cancelli verso le ${P.early?'7:55':'8:30'}. ${name} apre alle 9:00${P.early?', per voi alle 8:00':''}.`,legs:P.go,maps:[["Apri in Google Maps",gm(dest,{from:P.a})]]});
+const goPark=(dest,name,tt)=>({t:tt||P.out,ti:"Uscite "+P.da,d:`Obiettivo: essere ai cancelli verso le ${P.early?'7:55':'8:30'}. ${name} apre alle 9:00${P.early?', per voi alle 8:00':''}.`,legs:P.go,maps:[["Apri in Google Maps",gm(dest,{from:P.a})]]});
 const amSpa=()=>P.am?[{t:"07:00",ti:"Spa dell'hotel",d:P.am}]:[];
+/* lunedì con la notte a Parigi: check-out, RER A con le valigie, valigie nell'alloggio, poi il parco */
+const legsDV=d=>DV[d][1].map(l=>l[0]==='w'?["w",`Circa ${l[1]} minuti a piedi ${B.es()}`]:["bus",`${/^\d/.test(l[2])?'Bus '+l[2]:l[2][0].toUpperCase()+l[2].slice(1)}, circa ${l[1]} minuti: orari nell'app Île-de-France Mobilités.`]);
+const monPre=()=>{if(!PN)return[];const m=monB(PN,CHO),st=DV[CHO][0],rec=REC.includes(CHO);
+ return [{t:T(m.out),ti:"Check-out e RER A con le valigie",d:`Obiettivo: valigie ${P.al} e ai cancelli verso le 8:30, come gli altri giorni. Volete dormire di più? Uscite mezz'ora dopo: ai cancelli verso le 9:00, all'apertura. Ticket 2,55 €.`,legs:[["w",`${PN.w} minuti a piedi fino a ${RS[PN.st].n} ${B.es()}`],["A",`Direzione Marne-la-Vallée–Chessy fino a ${SN[st]}, ${RS[PN.st][st]} minuti. Salite solo sui treni con scritto Marne-la-Vallée–Chessy.`],...legsDV(CHO)],maps:[["Apri in Google Maps",gm(P.a,{from:PN.a})]]},
+  {t:T(m.arr),ti:"Valigie "+P.al,d:rec?"Lasciatele alla reception: la camera è pronta nel pomeriggio.":`Prima di prenotare chiedete al gestore se potete lasciarle lunedì mattina ${B.nc('da chiedere')}. Se no: deposito della stazione di Chessy (livello +1, 7:00–22:00), e la sera le riprendete entro le 22:00.`}]};
 let DAYS=[];
 const mkDays=()=>[
 {id:"dom",dn:"Dom",dd:"13",date:"2026-12-13",mood:"market",h:"Domenica 13: mercatini di Natale a Parigi",sub:"Sveglia alle 4:00: è una giornata lunga. Se siete stanchi o piove, usate il percorso corto.",
@@ -1170,7 +1247,7 @@ const mkDays=()=>[
 },
 {id:"lun",dn:"Lun",dd:"14",date:"2026-12-14",mood:"magic",h:"Lunedì 14: Parco Disneyland",sub:"Parchi aperti 9:00–22:00. Con il biglietto 2 parchi potete passare anche all'altro.",
  items:[
-  ...amSpa(),goPark(DP,"Il Parco Disneyland"),
+  ...amSpa(),...monPre(),goPark(DP,"Il Parco Disneyland",PN?T(monB(PN,CHO).go):0),
   {t:"09:00",ti:"Parco Disneyland: prima le più richieste",d:"Peter Pan's Flight, Big Thunder Mountain, Star Wars Hyperspace Mountain. Indiana Jones apre alle 9:30."},
   {t:"Entro 17:00",ti:"Fantasyland, la parte da fiaba",d:"Alice's Curious Labyrinth, Casey Jr. e Le Pays des Contes de Fées chiudono alle 17:00. Dumbo, Biancaneve, Pinocchio, carosello e tazze alle 21:00."},
   {t:"17:45",ti:"Parata di Natale di Topolino",d:`${B.ok()} Anche alle 15:55. Quella delle 17:45 è col buio: i carri si illuminano ${B.nu()}.`},
@@ -1229,6 +1306,17 @@ const MEGA=()=>{const F=P.spa||P.by22;return `<div class="mine is-rec mega" id="
 /* tappa: in vista ora e titolo; col tocco si aprono descrizione, strade e mappe (Mario 21/11 17:24 «non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa») */
 const item=x=>{const more=`${x.d?`<p class="d">${x.d}</p>`:''}${x.legs&&x.legs.length?`<div class="legs">${x.legs.map(l=>`<div class="leg">${lb(l[0])}<span>${l[1]}</span></div>`).join('')}</div>`:''}${x.extra||''}${(x.maps||[]).map(m=>mapsBtn(m[0],m[1])).join('')}${x.ex||''}`;
  return `<li><time>${esc(x.t)}</time><div class="body">${more?`<details class="st"><summary><span class="t">${esc(x.ti)}</span></summary><div class="st-in">${more}</div></details>`:`<p class="t">${esc(x.ti)}</p>`}</div></li>`};
+/* domenica con l'hotel di Parigi (C11): valigie in hotel, niente armadietti né RER la sera */
+const parSun=d=>{const p=PN,rs=RS[p.st].n,ml=p.st==='GL'?[["14","Verso Parigi fino a Gare de Lyon, 23 minuti. Un treno ogni 2–5 minuti."]]:[["14",`Verso Parigi fino a Châtelet, 26 minuti ${B.es()}.`]].concat(p.st==='AU'?[["A",`Da Châtelet–Les Halles 1 fermata fino ad Auber, 3 minuti ${B.es()}. Stesso ticket aeroporto.`]]:[]);
+ const a=d.pre.findIndex(x=>x.ti.startsWith("Dall'aeroporto"));if(a>=0)d.pre[a]=Object.assign({},d.pre[a],{legs:ml});
+ const i=d.pre.findIndex(x=>x.ti.startsWith("Gare de Lyon: bagagli"));if(i>=0)d.pre[i]={t:"09:00",ti:"Valigie in hotel: "+p.n,d:`Dalla stazione ${rs} circa ${p.w} minuti a piedi ${B.es()}. ${p.dep} ${p.ci} La camera la prendete stasera.`,maps:[["Apri in Google Maps",gm(p.a,{from:rs+", Paris",mode:"walking"})]]};
+ const j=d.pre.findIndex(x=>x.ti.startsWith("Metro 1 fino a Hôtel de Ville"));if(j>=0)d.pre[j]=p.st==='GL'?Object.assign({},d.pre[j],{d:`Tornate a piedi alla Gare de Lyon (${p.w} minuti). Nuovo ticket da 2,55 €.`}):p.st==='CL'?{t:"09:45",ti:"A piedi fino a Hôtel de Ville",d:`Circa 10 minuti ${B.es()}, per rue de Rivoli.`,maps:[["Apri in Google Maps",gm(HDV,{from:p.a,mode:"walking"})]]}:{t:"09:45",ti:"RER A fino a Châtelet, poi a piedi",d:`Da Auber 1 fermata, 3 minuti, poi circa 8 minuti a piedi fino a Hôtel de Ville ${B.es()}. Ticket 2,55 €.`,maps:[["Apri in Google Maps",gm(HDV,{from:p.a})]]};
+ const k=d.full.length-1,bk=p.st==='GL'?[["1","Da Franklin D. Roosevelt, direzione Château de Vincennes, 10 fermate fino a Gare de Lyon, circa 16 minuti."]]:p.st==='CL'?[["1",`Da Franklin D. Roosevelt, direzione Château de Vincennes, fino a Châtelet, circa 10 minuti ${B.es()}.`]]:[["9",`Da Franklin D. Roosevelt, direzione Mairie de Montreuil, fino a Havre-Caumartin, circa 8 minuti ${B.es()}.`]];
+ d.full[k]={t:d.full[k].t,ti:"Metro fino all'hotel",d:"Niente valigie da prendere e niente treno: restate agli Champs-Élysées quanto volete (mercatino fino alle 23:00). Ticket 2,55 €.",legs:bk.concat([["w",`Circa ${p.w} minuti a piedi fino a ${p.n} ${B.es()}`]]),maps:[["Apri in Google Maps",gm(p.a,{from:FDR})]]};
+ d.post=[{t:"Quando volete",ti:"Check-in "+p.n,d:`Le valigie sono già lì. ${p.ci}`}];
+ const s=d.short.length-1;d.short[s]={t:d.short[s].t,ti:"In hotel: "+p.n,d:`Metro fino a ${rs}, poi ${p.w} minuti a piedi. Le valigie sono già lì; la sera è libera.`,maps:[["Apri in Google Maps",gm(p.a,{from:GL})]]};
+ d.cutNote="Niente fretta la sera: l'hotel è a un quarto d'ora di metro dagli Champs-Élysées. Stanchi? Saltate Hôtel de Ville, Saint-Michel e il Louvre.";
+};
 /* domenica con la spa dell'hotel (n. 12): stesse tappe da non perdere, più veloci dopo il tramonto, e alle 20:20 in spa */
 const spaSun=d=>{const g=d.full.findIndex(x=>x.ti.startsWith("Galeries"));if(g<0)return;
  d.full=d.full.slice(0,g+1).concat([
@@ -1246,7 +1334,9 @@ const spaSun=d=>{const g=d.full.findIndex(x=>x.ti.startsWith("Galeries"));if(g<0
 };
 /* sezione Mercatini: il consiglio segue l'alloggio scelto (Mario 21/11 ~19:47 «in base all'hotel che scegliamo mi dai il consiglio sui mercatini») */
 const mkAl=()=>{const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode==='bus'||P.mode==='busrer';let v,li;
- if(P.spa){v="Tutte e 7 le tappe, più svelti dopo il tramonto: alle 20:20 siete nella spa";
+ if(PN){v="Tutto il giro con calma, e la sera restate quanto volete";
+  li=["Champs-Élysées anche fino alle 22–23: il mercatino chiude alle 23:00.",`Metro fino a ${RS[PN.st].n}, poi ${PN.w} minuti a piedi fino a ${esc(PN.n)}: niente valigie e niente treni.`,`Lunedì mattina RER A con le valigie: uscite alle ${T(monB(PN,CHO).out)}.`]}
+ else if(P.spa){v="Tutte e 7 le tappe, più svelti dopo il tramonto: alle 20:20 siete nella spa";
   li=["Tuileries 45 minuti e Champs-Élysées 30, invece di 85 e 45.","Metro 1 alle 18:50 verso la Gare de Lyon e le valigie, RER A delle 19:25 fino a Val d'Europe, 5 minuti a piedi.",`Spa dell'hotel dalle 20:20 alle 22:00, inclusa.`]}
  else if(P.by22){v="Tutte e 7 le tappe, più svelti dopo il tramonto: il B&B accetta arrivi solo fino alle 22:00";
   li=["Tuileries 45 minuti e Champs-Élysées 30, invece di 85 e 45.",`Metro 1 alle 18:50, valigie, RER A delle 19:25 fino a ${st}, poi il bus: al B&B verso le 20:30 ${B.es()}.`,"Per restare di più a Parigi serve l'ok scritto del gestore per un arrivo dopo le 22:00."]}
@@ -1255,11 +1345,11 @@ const mkAl=()=>{const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode==='bus'
  else{v="Tutto il giro con calma, fino agli Champs-Élysées illuminati";
   li=["Champs-Élysées fino alle 20:15, poi metro 1 verso la Gare de Lyon e le valigie (armadietti fino alle 22:00).",`RER A delle 21:08 o 21:23 fino a ${st}${P.mode==='nav'?", poi la navetta dell'hotel":''}.`,`All'alloggio verso le ${P.sunT} ${B.es()}.`]}
  li.push("Stanchi o piove: il giro corto, quasi tutto al coperto, finisce alle 18:30.");
- $('#mkAl').innerHTML=`<p class="k">${CHO===MIO?'Col mio consiglio':'Con il vostro alloggio'} · n. ${CHO} ${esc(h.n)}</p><p class="v">${v}</p><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul><p class="small"><a href="#chooser">Cambia alloggio</a></p>`};
+ $('#mkAl').innerHTML=`<p class="k">${isMio()?'Col mio consiglio':'Con la vostra scelta'} · ${esc(scName(SCE))}</p><p class="v">${v}</p><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul><p class="small"><a href="#scegli">Cambia dove dormire</a></p>`};
 /* barra in alto quando i pulsanti grandi escono dallo schermo (Mario 21/11 19:52 «quando scrollo verso il basso i mercatini si nascondono») */
 {const tb=$('#topbar'),go=document.querySelector('.go');if(tb&&go&&'IntersectionObserver' in window){new IntersectionObserver(e=>{const on=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;tb.classList.toggle('on',on);tb.setAttribute('aria-hidden',on?'false':'true');tb.querySelectorAll('a').forEach(a=>a.tabIndex=on?0:-1)}).observe(go)}}
 let SHORT=false;
-const renderDays=()=>{DAYS=mkDays();if(P.spa||P.by22)spaSun(DAYS[0]);let html='';
+const renderDays=()=>{DAYS=mkDays();if(PN)parSun(DAYS[0]);else if(P.spa||P.by22)spaSun(DAYS[0]);let html='';
 DAYS.forEach((d,i)=>{
  let body;
  if(d.id==="dom"){
@@ -1297,7 +1387,7 @@ function route(s,quiet){SHORT=s;const rF=$('#rFull'),rS=$('#rShort');rF.setAttri
 
 /* ---------- checklist ---------- */
 const CK=[
- ["Oggi","Scegliete l'alloggio e prenotatelo nella vostra app","Il mio consiglio: n. 12 Relais Spa, «Camera» con 1 letto matrimoniale large e cancellazione gratuita prima dell'8 dicembre (908 €). Date 13→17 dicembre, 2 adulti."],
+ ["Oggi","Scegliete dove dormire e prenotate nella vostra app","Il mio consiglio: Hotel Locomo 13→14 dicembre (190 €, cancellazione gratuita fino al 12/12), poi n. 8 Moxy 14→17 dicembre, «Family Sleeper» con letto matrimoniale (530 €, cancellazione gratuita fino al 14/12). 2 adulti."],
  ["Subito dopo","Comprate il biglietto Disney 3 giorni / 2 parchi","Sul sito ufficiale, primo giorno 14/12. Controllate il prezzo nel carrello (circa 544 € in due). Rimborsabile fino all'11/12."],
  ["Questa settimana","Controllate la tariffa Volotea e il bagaglio a mano","Se non avete imbarco prioritario o Megavolotea, il trolley al gate costa 65 €: aggiungetelo online."],
  ["Prima di partire","Installate l'app Île-de-France Mobilités e l'app Disneyland Paris","Verificate che i due telefoni siano compatibili. Altrimenti: Navigo Easy da 2 € allo sportello."],
@@ -1342,37 +1432,91 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
 
 /* ---------- alloggio scelto: giorni, costi, trasporti, «Da fare» e «Da ricontrollare» lo seguono ---------- */
 {const sel=$('#selAl');
- sel.innerHTML=AL.map(h=>`<option value="${h.id}">${h.id}. ${esc(h.n)}${h.id===MIO?' ★ il mio consiglio':''}</option>`).join('');
+ sel.innerHTML=AL.map(h=>`<option value="${h.id}">${h.id}. ${esc(h.n)}${h.id===MIO?' ★ nel mio consiglio':''}</option>`).join('');
+ const sp=$('#selPar');sp.innerHTML=PAR.map(p=>`<option value="${p.id}">A Parigi: ${esc(p.n)}${p.id===MIO_S.n?' ★':''}</option>`).join('')+'<option value="">Già vicino a Disney (4 notti)</option>';
  const eur=n=>n.toFixed(2).replace('.',',')+' €',strip=x=>String(x).replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
  const RC1=RC[1];
  const paint=()=>{{const o=document.getElementById('thuOut');if(o)o.textContent=P.thuT.replace(/^0/,'')}const h=AL.find(x=>x.id===CHO),pp=COMMON+LOC[P.mode],bus=P.mode==='bus'||P.mode==='busrer';
-  sel.value=String(CHO);
-  $('#chNote').innerHTML=CHO===MIO?`★ È il mio consiglio. Cambiatelo qui, oppure con «Usa questo nella pagina» nelle schede degli alloggi.`:`Avete scelto il n. ${CHO}. Il mio consiglio resta il n. ${MIO} ${esc(byId(MIO).n)}.`;
-  $('#backMio').hidden=CHO===MIO;
-  const MP=CHO===MIO&&h.pc,hp=MP?h.pc[0]:h.p,tot=hp!=null?hp+544+2*pp:null;
-  $('#myCost').innerHTML=`<span class="rec">${STAR}${CHO===MIO?'Il mio consiglio':'La vostra scelta'}</span><h3 class="mine-t"><span class="nb">${CHO}</span><span>${esc(h.n)}: ${tot!=null?'circa '+fmt(tot)+' in due':'prezzo dell\'alloggio sconosciuto'}</span></h3><p>Alloggio ${hp!=null?fmt(hp):'?'}${MP?' ('+h.pc[1].toLowerCase()+')':''} + biglietti Disney 544 € + trasporti locali ${fmt(2*pp)} ${B.es()}.${MP?' La tariffa più bassa, '+fmt(h.p)+', non è rimborsabile.':h.pc?' '+h.pc[1]+': circa '+fmt(h.pc[0]+544+2*pp)+'.':''}</p><p class="give">Cambiate alloggio in «Giorno per giorno» o nelle schede: questo conto si aggiorna da solo. Sotto, sette modi a confronto: toccate una barra per la scheda.</p>`;
-  $('#h-tr').textContent=`Biglietti singoli sul telefono: circa ${Math.round(pp)} € a testa con il n. ${CHO}.`;
-  $('#trSun').innerHTML=`1 ticket Métro-Train-RER: RER A Gare de Lyon → ${SN[P.sunSt]} (uscendo per i bagagli il ticket precedente finisce)${bus?', poi 1 ticket bus da 2,05 €':''}`;
+  sel.value=String(CHO);sp.value=SCE.n;const c=conto(SCE),cm=conto(MIO_S);
+  $('#chNote').innerHTML=isMio()?`★ È il mio consiglio. Cambiatelo qui o in cima alla pagina, in «Scegli dove dormire».`:`La vostra scelta: ${esc(scName(SCE))}. Il mio consiglio resta ${esc(scName(MIO_S))}.`;
+  $('#backMio').hidden=isMio();
+  $('#myCost').innerHTML=`<span class="rec">${STAR}${isMio()?'Il mio consiglio':'La vostra scelta'}</span><h3 class="mine-t"><span>${esc(scName(SCE))}: ${c?'circa '+fmt(c.tot)+' in due':'prezzo per queste notti sconosciuto'}</span></h3><p>${c?`${c.pn?esc(c.pn.n)+', 1 notte '+fmt(c.pn.p)+' + ':''}n. ${CHO}, ${c.pn?3:4} notti ${fmt(c.q[0])} (${esc(c.q[1])}) + biglietti Disney 544 € + trasporti locali ${fmt(c.tr)} ${B.es()}.${isMio()?'':' Rispetto al mio consiglio: '+dEur(c.tot,cm.tot)+'.'}`:'Il prezzo per queste notti non si legge: guardate la scheda.'}</p><p class="give">Cambiate in cima alla pagina, in «Scegli dove dormire»: questo conto si aggiorna da solo. Toccate una barra per scegliere quella strada.</p>`;
+  $('#brAlV').textContent=isMio()?'Il mio consiglio: '+scName(MIO_S):'La vostra scelta: '+scName(SCE);
+  $('#brAlP').innerHTML=`${PN?`Domenica niente treno con le valigie la sera: dormite a ${PN.w} minuti da ${RS[PN.st].n}. Lunedì RER A con le valigie, uscita alle ${T(monB(PN,CHO).out)}.`:P.spa?'Domenica sera la spa, inclusa, dopo i mercatini. Stesso posto per tutte e 4 le notti.':'Stesso posto per tutte e 4 le notti: domenica sera valigie e RER A.'} Lunedì–mercoledì ai parchi circa ${parkMin(CHO)} minuti. <a href="#scegli">Scegli o cambia</a>`;
+  $('#brTotT').textContent=`Totale stimato per due ${isMio()?'col mio consiglio':'con la vostra scelta'}: alloggi, biglietti Disney e trasporti locali`;
+  $('#brTotS').textContent=c?`${scName(SCE)}, prezzi con cancellazione gratuita dove c'è.`:'Prezzo dell\'alloggio non disponibile.';
+  $('#brTot').textContent=c?'≈ '+fmt(c.tot):'?';
+  $('#h-tr').textContent=`Biglietti singoli sul telefono: circa ${Math.round(pp)} € a testa ${isMio()?'col mio consiglio':'con la vostra scelta'}.`;
+  $('#trSun').previousElementSibling.textContent=PN?'lun 14, mattina':'dom 13, sera';
+  $('#trSun').innerHTML=PN?`1 ticket Métro-Train-RER: RER A ${RS[PN.st].n} → ${SN[DV[CHO][0]]} con le valigie${bus?', poi 1 ticket bus da 2,05 €':''}`:`1 ticket Métro-Train-RER: RER A Gare de Lyon → ${SN[P.sunSt]} (uscendo per i bagagli il ticket precedente finisce)${bus?', poi 1 ticket bus da 2,05 €':''}`;
   $('#trSunV').textContent=eur(2.55+(bus?2.05:0));
   const PK={rer:["6 ticket Métro-Train-RER: andata e ritorno ai parchi",15.3],bus:["6 ticket bus da 2,05 €: andata e ritorno ai parchi",12.3],busrer:["6 ticket bus e 6 ticket Métro-Train-RER: bus fino a Val d'Europe, poi treno",27.6],nav:["Navetta gratuita dell'hotel",0],walk:["A piedi: niente biglietti",0]}[P.mode];
   $('#trPark').textContent=PK[0];$('#trParkV').textContent=eur(PK[1]);
   $('#trThu').innerHTML=`<b>Ticket aeroporto</b>: ${P.thu[P.thu.length-1]===RER_THU_VDE?"Val d'Europe":"Chessy"} → Orly, RER A + metro 14 con un solo ticket${bus?', più 1 ticket bus da 2,05 €':''}`;
   $('#trThuV').textContent=eur(14+(bus?2.05:0));
-  $('#trWho').textContent=`· con il n. ${CHO} ${h.n}`;$('#trTot').textContent=eur(pp);
+  $('#trWho').textContent=`· ${scName(SCE)}`;$('#trTot').textContent=eur(pp);
   const tx=document.querySelector('#check li .tx');
-  if(tx)tx.innerHTML=CHO===MIO?`${esc(CK[0][1])}<small>${esc(CK[0][2])}</small>`:`${esc('Prenotate il n. '+CHO+' '+h.n+' nella vostra app')}<small>${esc(strip(h.pl)+' Date 13→17 dicembre, 2 adulti.')}</small>`;
-  RC[1]=CHO===MIO?RC1:[`Prezzo del n. ${CHO} con Genius`,"Il prezzo visto è quello da computer senza login.",h.u,h.ul?"Sito ufficiale":`N. ${CHO} su Booking`];drawRC()};
- const applyAl=(id,say)=>{if(!ACC[id])return;CHO=id;P=ACC[id];
-  try{localStorage.setItem('pdn-alloggio',String(id))}catch(e){}
-  try{const u=new URL(location.href);if(id===MIO)u.searchParams.delete('alloggio');else u.searchParams.set('alloggio',id);history.replaceState(null,'',u)}catch(e){}
+  if(tx)tx.innerHTML=isMio()?`${esc(CK[0][1])}<small>${esc(CK[0][2])}</small>`:`${esc(PN?'Prenotate le due notti nella vostra app':'Prenotate il n. '+CHO+' '+h.n+' nella vostra app')}<small>${esc(c?(PN?`${PN.n}, 13→14 dicembre: ${fmt(PN.p)}. ${strip(PN.pl)} Poi n. ${CHO} ${h.n}, 14→17 dicembre: ${fmt(c.q[0])}, ${c.q[1]}.`:`${fmt(c.q[0])}, ${c.q[1]}. Date 13→17 dicembre, 2 adulti.`):strip(h.pl))}</small>`;
+  drawBars();renderSc();
+  RC[1]=isMio()?RC1:[`Prezzo del n. ${CHO} con Genius`,"Il prezzo visto è quello da computer senza login.",h.u,h.ul?"Sito ufficiale":`N. ${CHO} su Booking`];drawRC()};
+ const applySc=(s,say)=>{if(!s||!ACC[s.d])return;SCE={n:s.n,d:s.d};SCELTO=true;CHO=s.d;P=ACC[CHO];PN=PAR.find(p=>p.id===s.n)||null;
+  try{localStorage.setItem('pdn-scelta',scStr(SCE));localStorage.removeItem('pdn-alloggio')}catch(e){}
+  try{const u=new URL(location.href);u.searchParams.delete('alloggio');u.searchParams.set('scelta',scStr(SCE));history.replaceState(null,'',u)}catch(e){}
   renderDays();show(cur,{quiet:true});renderAl();paint();mkAl();
   if(say)$('#chNote').insertAdjacentHTML('beforeend',' <b>Pagina aggiornata.</b>')};
- sel.addEventListener('change',()=>applyAl(+sel.value,1));
- $('#backMio').addEventListener('click',()=>applyAl(MIO,1));
+ const applyAl=(id,say)=>applySc({n:SCE.n,d:id},say);
+ sp.addEventListener('change',()=>applySc({n:sp.value,d:SCE.d},1));
+ $('#backMio').addEventListener('click',()=>applySc(MIO_S,1));
+ $('#bars').addEventListener('click',e=>{const a=e.target.closest('[data-sc]');if(a)applySc(scParse(a.dataset.sc),1)});
+ sel.addEventListener('change',()=>applySc({n:SCE.n,d:+sel.value},1));
  $('#hotelCards').addEventListener('click',e=>{const b=e.target.closest('[data-use]');if(!b)return;const id=+b.dataset.use;applyAl(id);
   const dm=document.querySelector(`#al-${id} details.more`);if(dm)dm.open=true;
   const nb=document.querySelector(`#al-${id} [data-use]`);if(nb){nb.focus();nb.insertAdjacentHTML('afterend','<p class="small" role="status">Fatto: giorno per giorno, costi, trasporti e «Da fare» ora seguono questo alloggio.</p>')}});
- paint();mkAl()}
+ /* sezione «Scegli dove dormire» (C11) */
+ let SO2='prezzo';
+ const dEur=(a,b)=>Math.abs(a-b)<5?'<b class="sc-eq">uguale</b>':`<b class="${a>b?'sc-up':'sc-dn'}">${a>b?'+':'−'}${fmt(Math.abs(a-b))}</b>`;
+ const kmT=m=>(m*80/1000).toFixed(1).replace('.',',')+' km';
+ const dMin=(a,b)=>a===b?'<b class="sc-eq">uguale</b>':`<b class="${a>b?'sc-up':'sc-dn'}">${a>b?'+':'−'}${Math.abs(a-b)} min</b>`;
+ const dOra=(a,b)=>a===b?'<b class="sc-eq">uguale</b>':a<b?`<b class="sc-up">${b-a} min prima</b>`:`<b class="sc-dn">${a-b} min dopo</b>`;
+ const btn=(s,on)=>`<button type="button" class="btn ${on?'gold':'ghost'}" data-sc="${scStr(s)}" aria-pressed="${on}">${on?'✓ Scelto':'Scegli questo'}</button>`;
+ function renderSc(){const c=conto(SCE),cm=conto(MIO_S),me=scStr(SCE);
+  $('#scBan').hidden=SCELTO;$('#scBan').textContent=SCELTO?'':`Non avete ancora scelto: la pagina vi mostra il mio consiglio (${scName(MIO_S)}). Scegliete qui sotto, in 2 passi.`;
+  $('#scRis').innerHTML=`<div class="mine is-rec"><span class="rec">${STAR}${isMio()?'Il mio consiglio':'La vostra scelta'}</span><h3 class="mine-t"><span>${esc(scName(SCE))}</span></h3>${c?`<table class="sc-t"><tbody>
+<tr><th>Soldi, in due</th><td>≈ ${fmt(c.tot)}</td><td>${isMio()?'':dEur(c.tot,cm.tot)}</td></tr>
+<tr><th>Domenica sera</th><td>${c.pn?`a Parigi quanto volete; hotel a ${c.pn.w} min da ${RS[c.pn.st].n}`:`via da Parigi alle ${c.sunOut}, in camera verso le ${c.sunIn}`}</td><td></td></tr>
+<tr><th>Valigie sui mezzi</th><td>${c.pn?'lunedì mattina':'domenica sera'}, circa ${c.bags} min</td><td>${isMio()?'':dMin(c.bags,cm.bags)}</td></tr>
+<tr><th>Lunedì, uscita</th><td>${T(c.mon)}</td><td>${isMio()?'':dOra(c.mon,cm.mon)}</td></tr>
+<tr><th>Ai parchi, ogni mattina</th><td>${c.park} min${c.nav?' + attesa':''}</td><td>${isMio()?'':dMin(c.park,cm.park)}</td></tr>
+<tr><th>A piedi, ogni giorno</th><td>${c.walk} min, circa ${kmT(c.walk)}</td><td>${isMio()?'':dMin(c.walk,cm.walk)}</td></tr>
+<tr><th>Giovedì, uscita per il volo</th><td>${T(c.thu)}</td><td>${isMio()?'':dOra(c.thu,cm.thu)}</td></tr></tbody></table>
+<p class="small muted">Rosso = peggio del mio consiglio, verde = meglio. Tempi coi mezzi senza le attese; a piedi 80 m al minuto ${B.es()}.</p>`:'<p>Prezzo per queste notti non disponibile: sceglietene un altro.</p>'}
+<div class="sc-act"><button type="button" class="btn gold" id="scShare">Manda questa scelta</button>${isMio()?'':'<button type="button" class="btn ghost" id="scMio">Torna al mio consiglio</button>'}</div><p class="small" id="scShareOk" role="status"></p></div>`;
+  const nOpt=(o)=>{const s={n:o?o.id:'',d:SCE.d},k=conto(s),on=scStr(s)===me;
+   return `<article class="sc-o${on?' on':''}"><div class="sc-h"><div class="sc-n">${o?esc(o.n):'Già vicino a Disney'}<small>${o?esc(o.sub):'4 notti nello stesso posto, niente cambio di hotel'}</small></div><div class="sc-p">${o?fmt(o.p):'—'}<small>${o?'1 notte':'nessuna notte a Parigi'}</small></div></div>
+${o&&o.id===MIO_S.n||!o&&!MIO_S.n?`<span class="rec">${STAR}Il mio consiglio</span>`:''}
+<div class="sc-m"><span>Con il n. ${SCE.d}: ${k?'≈ '+fmt(k.tot):'?'}</span>${k&&cm&&scStr(s)!==scStr(MIO_S)?`<span>${dEur(k.tot,cm.tot)} rispetto al consiglio</span>`:''}${o?`<span>🧼 ${o.cl} · voto ${o.sc}</span>`:''}</div>
+<ul class="sc-l">${o?`<li>Domenica sera: restate a Parigi quanto volete, niente treni.</li><li>${o.dep} ${o.ci}</li><li>Lunedì: uscita alle ${T(monB(o,SCE.d).out)}, RER A da ${RS[o.st].n} con le valigie.</li>`:`<li>Domenica sera: valigie dagli armadietti e RER A${k?', in camera verso le '+k.sunIn:''}.</li><li>Lunedì: al parco senza valigie${k?', uscita alle '+T(k.mon):''}.</li>`}</ul>
+<div class="pc"><p class="p">${o?o.pro:"Un solo alloggio: valigie disfatte una volta. Col n. 12 la spa domenica sera."}</p><p class="c">${o?o.con:"Domenica sera valigie e treno: via da Parigi alle 20:40 (alle 18:50 col n. 12)."}</p></div>
+<div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>`:''}</div></article>`};
+  $('#scN').innerHTML=`<p class="sc-g">Vicino alla Gare de Lyon: i più comodi per i treni</p><div class="sc-list">${PAR.filter(p=>p.z==='gl').map(nOpt).join('')}</div><p class="sc-g">In centro, più belli (Opéra, Châtelet)</p><div class="sc-list">${PAR.filter(p=>p.z==='ce').map(nOpt).join('')}</div><p class="sc-g">Oppure</p><div class="sc-list">${nOpt(null)}</div>`;
+  const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
+  const SRT={prezzo:(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),vicino:(a,b)=>(a.c?a.c.park:1e9)-(b.c?b.c.park:1e9)||(a.c?a.c.tot:0)-(b.c?b.c.tot:0),voto:(a,b)=>num(b.h.cl)-num(a.h.cl)};
+  $('#scD').innerHTML=L.sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
+   return `<article class="sc-o${on?' on':''}${c?'':' off'}"><div class="sc-h"><span class="nb sm">${h.id}</span><div class="sc-n">${esc(h.n)}<small>${esc(h.sub)}</small></div><div class="sc-p">${c?fmt(c.q[0]):'?'}<small>${SCE.n?'3 notti':'4 notti'}</small></div></div>
+${h.id===MIO_S.d?`<span class="rec">${STAR}Nel mio consiglio</span>`:''}
+<p class="small muted">${c?esc(c.q[1]):'Prezzo per queste notti non disponibile (esaurito su Booking).'}</p>
+${c?`<div class="sc-m"><span>Totale ≈ ${fmt(c.tot)} ${scStr(s)===scStr(MIO_S)?'':dEur(c.tot,cm.tot)}</span><span>🚆 ai parchi ${c.park} min${c.nav?' + attesa':''} ${dMin(c.park,cm.park)}</span><span>🚶 a piedi ${c.walk} min al giorno (${kmT(c.walk)}) ${dMin(c.walk,cm.walk)}</span><span>🧼 ${h.cl} · voto ${h.sc}</span></div>`:''}
+<div class="pc"><p class="p">${h.pro}</p><p class="c">${h.con}${sp?' Con la domenica a Parigi la spa quasi non la usate: chiude alle 22:00, come i parchi.':''}${SCE.n&&!REC.includes(h.id)?' Lunedì mattina le valigie: da chiedere al gestore, oppure deposito della stazione di Chessy.':''}</p></div>
+<div class="sc-act">${c?btn(s,on):''}<a class="btn ghost" href="#al-${h.id}">Scheda</a></div></article>`}).join('');
+  document.querySelectorAll('#scSort button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===SO2)))}
+ $('#scSort').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;SO2=b.dataset.s;renderSc()});
+ $('#scegli').addEventListener('click',e=>{const b=e.target.closest('[data-sc]');if(b){const s=scParse(b.dataset.sc),k=b.dataset.sc;applySc(s,1);const nb=document.querySelector(`#scegli [data-sc="${k}"]`);if(nb)nb.insertAdjacentHTML('afterend','<p class="small" role="status">✓ Fatto: giorni, mercatini, costi e trasporti seguono questa scelta. <a href="#scRis">Riepilogo ↑</a></p>');return}
+  if(e.target.closest('#scMio')){applySc(MIO_S,1);return}
+  if(e.target.closest('#scShare')){const u=location.origin+location.pathname+'?scelta='+scStr(SCE),ok=$('#scShareOk');
+   if(navigator.share)navigator.share({title:'Parigi e Disney a Natale: la nostra scelta',text:scName(SCE),url:u}).catch(()=>{});
+   else if(navigator.clipboard)navigator.clipboard.writeText(u).then(()=>{ok.textContent='Link copiato: mandatelo su WhatsApp.'},()=>{ok.textContent=u});else ok.textContent=u}});
+ paint();mkAl();
+ if(!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){$('#bars').classList.add('cresce');io.disconnect()}})},{threshold:.35});io.observe($('#bars'))}}
 
 /* ---------- stelle su tutta la pagina: tre strati di immagini ripetute, due brillano ---------- */
 {const st=$('#stars');if(st){const SC=['#FFFFFF','#FFFFFF','#DCE6FF','#FFF1D2'];
