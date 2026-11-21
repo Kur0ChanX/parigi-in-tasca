@@ -48,6 +48,7 @@ Sessione attuale: #17 (dopo la #16 `session_01WTjqUxzyRm4m8Sb2F76sME`, chiusa al
 - C10 (letti 21/11 sera, senza Genius): Sleeping Belle 216 € canc. fino al 12/12 (letto «alla francese», circa 140 cm, stima); Moxy 3 notti 530 € canc. fino al 14/12; Relais Junior Suite 3 notti 598,80 € solo NR (Black Friday). Elysée esaurito su Booking per 14→17. Biglietti 544 € = non ufficiale.
 
 ## Ultimo messaggio di Mario
+«mi raccomando studiati un impaginazione geniale non confusa» (21/11 ~21:17, alla #16 dopo l'handoff → passato alla #17): vale per `#scegli` prima delle foto (passo 1 dei Prossimi passi) e per la DOMANDA 3.
 «Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono ancora hotel, appartamenti, stanze, B&B molto validi e non le stai valutando.» (21/11 20:59) → 2 aiutanti di ricerca larga; 8 hotel di Parigi nella scelta (Locomo, Saint-Pétersbourg, Astra, Relais des Halles nuovi); i nuovi vicino a Disney ancora da mettere (passo 3).
 Prima (20:52): «Mettimi le scelte nella pagina, tutte le migliori scelte con le opzioni, e quando clicco mi cambia la pagina corretta con quell'abbinamento. … E all'inizio mi deve scegliere nella pagina. … Fammi capire bene le differenze, i soldi che perdo, i minuti che ci metto in più ad andare nei posti, quanta strada devo fare di più a piedi, i pro, i contro, valuta tutto.» (intero in `docs/lavori-in-corso/C11-scelta-alloggio-pagina.md`).
 
