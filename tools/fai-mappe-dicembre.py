@@ -59,9 +59,10 @@ ORLY = (48.730060, 2.367831)     # Aeroporto di Orly (OSM)
 # Stazione che usa ogni alloggio (la stessa dei tempi nella pagina, DV): VDE o CH
 STAZIONE = {1: CH, 2: CH, 3: CH, 7: CH, 11: CH, 14: CH, 22: CH, 24: CH}
 NOMI = {VDE: "Val d'Europe", CH: 'Chessy · Disney'}
-# Airbnb (n. 16–21, 23 e 25–28): l'indirizzo esatto arriva solo dopo la prenotazione. Niente mappa (il segno sarebbe inventato):
+# Airbnb (n. 16–21, 23, 25–28 e 31–35): l'indirizzo esatto arriva solo dopo la prenotazione. Niente mappa (il segno sarebbe inventato):
 # solo le distanze, contate dalla stazione scritta nell'annuncio («posizione indicativa», z:1 nella pagina).
-ZONA = {16: VDE, 17: VDE, 18: VDE, 19: VDE, 20: VDE, 21: VDE, 23: VDE, 25: VDE, 26: VDE, 27: VDE, 28: VDE}
+ZONA = {16: VDE, 17: VDE, 18: VDE, 19: VDE, 20: VDE, 21: VDE, 23: VDE, 25: VDE, 26: VDE, 27: VDE, 28: VDE,
+        31: VDE, 32: VDE, 33: VDE, 34: VDE, 35: VDE}
 # Hotel di Parigi per la notte 13→14 (C11 pezzo 7, PAR nella pagina): indirizzo dal sito ufficiale dell'hotel
 # (Locomo, Sleeping Belle, Accor per ibis Styles e Novotel, Parisianer, Saint-Pétersbourg, Astotel per Astra,
 # Relais des Halles; letti il 21/11/2026), posizione = geocodifica ufficiale IGN di quell'indirizzo.
