@@ -141,3 +141,6 @@ Cioè, valuta 3 giorni dormire proprio vicino Disneyland o nei pressi di Disneyl
 
 ## 2026-11-21 20:52 · 01WTjqUxzyRm
 Mettimi le scelte nella pagina, tutte le migliori scelte con le opzioni, e quando clicco mi cambia la pagina corretta con quell'abbinamento. Però fallo bene per ogni hotel, clicco e mi cambia l'abbinamento, l'itinerario e tutto. Ok? E all'inizio mi deve scegliere nella pagina. Cioè deve essere molto chiaro, mi deve far vedere tutti gli alberghi con i pro, contro, le differenze eccetera, e poi mi deve mettere a scegliere in modo chiaro. Fammi capire bene le differenze, i soldi che perdo, i minuti che ci metto in più ad andare nei posti, quanta strada devo fare di più a piedi, i pro, i contro, valuta tutto.
+
+## 2026-11-21 20:59 · 01WTjqUxzyRm
+Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono ancora hotel, appartamenti, stanze, B&B molto validi e non le stai valutando.
