@@ -5,7 +5,7 @@
 
 ## Nastro delle versioni
 - 🚀 Online: v4 · 🟢 Principale 10 · 21/11 18:36 · luna piena, anteprima
-- 🧪 In prova: nessuna
+- 🧪 In prova: v5 · 🟢 Principale 11 · mappe negli alloggi e luna-Topolino (nel ramo, aspetta la DOMANDA 4)
 - ⏳ Dopo: nessuna
 
 ## 0. Aspetta Mario
