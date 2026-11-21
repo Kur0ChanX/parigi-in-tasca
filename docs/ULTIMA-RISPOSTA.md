@@ -1,25 +1,8 @@
-# Ultima risposta di Claude (21/11/2026 22:04 ora italiana)
+# Ultima risposta di Claude (21/11/2026 22:23 ora italiana)
 
-Ho capito: vuoi alloggi su Airbnb vicino a Disneyland, per le 3 notti dal 14 al 17 dicembre, raggiungibili a piedi dal treno.
-🧠 Opus · Medio
+Ho capito: vuoi la lista scritta degli alloggi buoni trovati su Airbnb.
 
-✅ FATTO
-Su Airbnb ci sono circa 20 alloggi liberi in quelle date. Ne ho letti 11 per bene e li ho salvati negli appunti: distanza dal treno, pulizia, cancellazione e orario di arrivo. Tutti nuovi, nessuno era già nella pagina.
+Sono tutti per **14→17 dicembre (3 notti), 2 persone**, letti stasera. I prezzi Airbnb sono in dollari; in euro è una **stima**, quello vero lo vedi nell'app.
 
-I 4 migliori (prezzi in dollari come li mostra Airbnb, in euro è una **stima**):
-
-| | Dal treno | Voto · pulizia | 3 notti | Cancellazione |
-|---|---|---|---|---|
-| ⭐ **Nice studio**, Vincent | **1 minuto** | 4,95 su 5 (571 …
-
-## Domande a Mario
-
-❓ DOMANDE
-**DOMANDA 10 🛑: metto gli Airbnb nella pagina?**
-📌 Di cosa parliamo: hai chiesto di cercare su Airbnb. Ne ho trovati di buoni, a meno del Moxy. Mi serve sapere se li vuoi fra le scelte della pagina.
-1 · sì, i 4 migliori nella scelta dell'alloggio (correggo anche la frase su Ki Space) · 2 · no, mi basta questo elenco · 3 · cambia il mio consiglio e metti un Airbnb al posto del Moxy
-Consiglio: **1**. Il consiglio resta il Moxy, perché ha la reception e lunedì potete lasciare le valigie in hotel.
-
-⚠️ Aspettano te: 3
-- Principale 18 · Airbnb nella pagina
-- Principale 11 · come …
+**Vicinissimi al treno (Val d'Europe, poi 1 fermata fino a Disney)**
+1. ⭐ **Nice studio** (Vincent): 1 minuto a piedi · voto 4,95 su 5 (571 recensioni), pulizia 4,9 · letto queen + divano letto · **≈ 369 €** · si arriva fino alle 2 di notte · cancellazione: gratis 24 ore, poi rimborso parziale fino al 7/12. [Apri su …
