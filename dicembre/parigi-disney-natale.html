@@ -4,41 +4,46 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* Layout: una colonna di lettura (max 46rem) dentro bande a tutta larghezza; hero notturno con scena disegnata,
-   divisori a filo di lampadine, giorni come app con barra in basso su telefono. Dark-first. */
+/* Layout: una colonna di lettura (max 48rem) dentro bande a tutta larghezza; hero notturno con un mercatino di casette
+   illuminate davanti al castello, festoni di lampadine, giorni come app con barra in basso su telefono.
+   Dark-first, palette calda: vin brulé (fondo), oro delle lampadine, abete, rosso mirtillo, rosa zucchero. */
 :root{
- --bg:#070C18;--surface:#0F1729;--surface-2:#172137;--ink:#EEF1F8;--mute:#A3ADC3;--rule:#233049;
- --brand:#8FA8FF;--brand-ink:#0B1430;--lamp:#F3C969;--lamp-text:#F3C969;--lamp-ink:#1D1606;
- --fir:#4FB88A;--wine:#F07468;--good:#62D6A0;--warn:#F2C25B;--bad:#FF8A80;
- --badge-good-bg:rgb(98 214 160 / .14);--badge-warn-bg:rgb(242 194 91 / .14);--badge-bad-bg:rgb(255 138 128 / .14);--badge-est-bg:rgb(143 168 255 / .14);
- --night-1:#0B1430;--night-2:#060A16;--night-ink:#F4F2EA;--night-mute:#BAC4DB;--sil-1:#16224A;--sil-2:#0E1736;--sil-3:#1F2E5E;--win:#F3C969;--snow:#FFFFFF;
- --seg-hotel:#F3C969;--seg-ticket:#7F9BFF;--seg-pack:#E77D9A;--seg-trans:#8892A8;
- --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#3A4763;--walkt:#FFFFFF;
+ --bg:#1A0D10;--surface:#27151A;--surface-2:#351F24;--ink:#FFF3E6;--mute:#D6BCB0;--rule:#4A2A2F;
+ --brand:#FFB0C4;--brand-ink:#2A0B16;--lamp:#F6C964;--lamp-text:#F6C964;--lamp-ink:#241703;
+ --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
+ --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(255 176 196 / .15);
+ --night-1:#3A1224;--night-2:#14070C;--night-ink:#FFF3E6;--night-mute:#E6CDBF;--sil-1:#4A1A31;--sil-2:#2A0E1A;--sil-3:#6A2740;--win:#F6C964;--snow:#FFFFFF;
+ --ember:#FF9A52;--tower:#B8743C;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#2A120E;
+ --seg-hotel:#F6C964;--seg-ticket:#4FBF86;--seg-pack:#EE5A66;--seg-trans:#A8918A;
+ --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#5B3A35;--walkt:#FFFFFF;
  --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
- --snowground:#DCE4F4;--snowshade:#B9C6E2;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
- --mood-market:rgb(240 116 104 / .16);--mood-magic:rgb(127 155 255 / .18);
+ --snowground:#F6ECE6;--snowshade:#E0C9C0;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
+ --mood-market:rgb(242 96 106 / .18);--mood-magic:rgb(255 176 196 / .16);
+ --wire:#6A4234;--bk-1:rgb(246 201 100 / .11);--bk-2:rgb(242 96 106 / .12);--bk-3:rgb(63 174 122 / .09);
  --display:"Bricolage Grotesque",Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
  --text:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
  --r-lg:20px;--r-md:14px;--r-sm:9px;
  color-scheme:dark}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
- --bg:#F2F4F8;--surface:#FFFFFF;--surface-2:#E9EDF4;--ink:#0D1324;--mute:#535C70;--rule:#DCE2EC;
- --brand:#2349C4;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#187A52;--wine:#B8352B;--good:#127A4A;--warn:#8F5A00;--bad:#B4232C;
- --badge-good-bg:rgb(18 122 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(35 73 196 / .09);
- --seg-ticket:#2F56D0;--seg-pack:#C2456A;--seg-trans:#8A93A6;--walk:#5A6680;--focus:#2349C4;
- --shadow:0 1px 2px rgb(13 19 36 / .06),0 14px 30px -16px rgb(13 19 36 / .25);
- --mood-market:rgb(184 53 43 / .08);--mood-magic:rgb(35 73 196 / .09);color-scheme:light}}
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#A08A82;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}}
 :root[data-theme="light"]{
- --bg:#F2F4F8;--surface:#FFFFFF;--surface-2:#E9EDF4;--ink:#0D1324;--mute:#535C70;--rule:#DCE2EC;
- --brand:#2349C4;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#187A52;--wine:#B8352B;--good:#127A4A;--warn:#8F5A00;--bad:#B4232C;
- --badge-good-bg:rgb(18 122 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(35 73 196 / .09);
- --seg-ticket:#2F56D0;--seg-pack:#C2456A;--seg-trans:#8A93A6;--walk:#5A6680;--focus:#2349C4;
- --shadow:0 1px 2px rgb(13 19 36 / .06),0 14px 30px -16px rgb(13 19 36 / .25);
- --mood-market:rgb(184 53 43 / .08);--mood-magic:rgb(35 73 196 / .09);color-scheme:light}
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#A08A82;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}
 
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{position:relative;z-index:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
 h2{font-size:clamp(1.65rem,1.2rem + 2vw,2.3rem);font-weight:800}
 h3{font-size:1.2rem;font-weight:700}
@@ -55,18 +60,23 @@ a{color:var(--brand);text-underline-offset:3px}
 .small{font-size:.92rem}
 b,strong{font-weight:700}
 
+/* bagliore caldo fisso dietro tutta la pagina */
+.bokeh{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(30rem 22rem at 6% 14%,var(--bk-1),transparent 70%),radial-gradient(26rem 20rem at 98% 46%,var(--bk-2),transparent 70%),radial-gradient(32rem 24rem at 24% 92%,var(--bk-3),transparent 70%)}
+
 /* ---------- HERO ---------- */
 .hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 75% 0%,var(--sil-3) 0%,var(--night-1) 38%,var(--night-2) 100%);color:var(--night-ink);isolation:isolate}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.hero .wrap{position:relative;z-index:2}.hero-top{padding-block:var(--s6) 0}.hero-bottom{padding-block:var(--s4) var(--s5)}
-.hb{animation:chase 2.6s ease-in-out infinite}@keyframes chase{0%,100%{opacity:1}45%{opacity:.25}}
+.hero .wrap{position:relative;z-index:2}.hero-top{padding-block:calc(var(--s6) + 26px) 0}
+.garland{position:absolute;top:0;left:0;width:100%;height:64px;z-index:1;pointer-events:none;display:block}.hero-bottom{padding-block:var(--s4) var(--s5)}
+.hb{animation:chase 2.6s ease-in-out infinite}@keyframes chase{0%,100%{opacity:1}45%{opacity:.3}}
+.tw{animation:twk 1.8s ease-in-out infinite}@keyframes twk{0%,100%{opacity:.15}50%{opacity:1}}
 .hero .kicker{color:var(--lamp)}
 .hero h1{font-size:clamp(2.45rem,1.5rem + 5.5vw,4.4rem);font-weight:800;margin-top:var(--s3);letter-spacing:-.025em}
 .hero h1 .gold{color:var(--lamp)}
 .hero-meta{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
 .chip{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 12px;border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .14);font-weight:600;font-size:.95rem;color:var(--night-ink)}
 .flights{display:grid;grid-template-columns:1fr 1fr;gap:1px;border-radius:var(--r-md);overflow:hidden;background:rgb(255 255 255 / .14);max-width:36rem}
-.flight{background:rgb(8 14 34 / .82);padding:var(--s3) var(--s4);display:grid;gap:2px;min-width:0}
+.flight{background:rgb(32 10 18 / .78);padding:var(--s3) var(--s4);display:grid;gap:2px;min-width:0}
 .flight .d{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lamp);font-weight:700}
 .flight .r{font-family:var(--display);font-weight:700;font-size:1.12rem;line-height:1.2}
 .flight .r span{color:var(--night-mute);font-weight:600}
@@ -82,8 +92,8 @@ b,strong{font-weight:700}
 .jump a:active{transform:scale(.96)}
 
 /* ---------- divisore a lampadine ---------- */
-.lights{display:block;height:34px;width:100%;overflow:hidden;color:var(--rule)}
-.lights svg{display:block;width:100%;height:34px}
+.lights{display:block;height:40px;width:100%;overflow:hidden;color:var(--wire)}
+.lights svg{display:block;width:100%;height:40px}
 .lights .wire{fill:none;stroke:currentColor;stroke-width:1.5}
 .lights .b{transform-box:fill-box;transform-origin:center}
 @media (prefers-reduced-motion:no-preference){
@@ -200,6 +210,10 @@ tr.hl td{background:var(--badge-warn-bg)}
 .opt .price small{font-size:.9rem;font-family:var(--text);font-weight:600;color:var(--mute)}
 .opt:active{transform:scale(.99)}
 
+/* cartolina del mercatino: domenica e piede della pagina */
+.market{display:block;width:100%;max-width:100%;height:112px;border-radius:var(--r-md);background:linear-gradient(var(--night-1),var(--night-2));margin-top:var(--s2)}
+.foot-market{display:block;width:100%;height:120px;background:linear-gradient(var(--night-1),var(--night-2))}
+
 /* ---------- giorni ---------- */
 #giorni{position:relative;overflow:hidden}
 .mood{position:absolute;inset:0;pointer-events:none;transition:opacity .8s ease;opacity:0}
@@ -278,14 +292,16 @@ tr.hl td{background:var(--badge-warn-bg)}
 .src ul{margin:0 0 var(--s5);padding-left:1.1rem;display:grid;gap:4px;font-size:.95rem}
 .src li a{word-break:break-word}
 
-footer{border-top:1px solid var(--rule)}
+footer{margin-top:var(--s4)}
 footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 
+<div class="bokeh" aria-hidden="true"></div>
 <header class="hero" id="top">
  <canvas id="sky" aria-hidden="true"></canvas>
+ <svg class="garland" id="garland" aria-hidden="true"></svg>
  <div class="wrap wide hero-top">
   <p class="kicker">dom 13 – gio 17 dicembre 2026</p>
   <h1>Parigi e Disney <span class="gold">a Natale</span></h1>
@@ -294,17 +310,25 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
  <svg class="scene" viewBox="0 0 800 290" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
   <defs>
    <radialGradient id="cglow" cx="50%" cy="55%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.42"/><stop offset=".55" style="stop-color:var(--lamp);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
-   <radialGradient id="kglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.55"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="kglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.5"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="hglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--ember);stop-opacity:.42"/><stop offset=".6" style="stop-color:var(--ember);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--ember);stop-opacity:0"/></radialGradient>
+   <radialGradient id="pool" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.6"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
    <pattern id="awnR" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--wine)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
    <pattern id="awnG" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--fir)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
+   <pattern id="awnY" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--lamp)"/><rect x="6" width="6" height="14" style="fill:var(--roof-r)"/></pattern>
   </defs>
-  <!-- strato lontano: tetti di Parigi e la torre -->
+  <!-- bagliore caldo della città sull'orizzonte -->
+  <ellipse cx="400" cy="250" rx="560" ry="150" fill="url(#hglow)"/>
+  <!-- strato lontano: tetti di Parigi e la Torre Eiffel accesa -->
   <g class="par" data-depth="0.04">
-   <path d="M196 265 Q210 210 214 150 L216 128 L218 150 Q222 210 236 265 H226 Q216 236 206 265Z" style="fill:var(--sil-3)"/>
-   <rect x="208" y="196" width="16" height="3" style="fill:var(--sil-3)"/>
    <g id="roofs" style="fill:var(--sil-3)"></g>
+   <ellipse cx="262" cy="170" rx="46" ry="70" fill="url(#kglow)" opacity=".55"/>
+   <path d="M242 265 Q256 210 260 150 L262 128 L264 150 Q268 210 282 265 H272 Q262 236 252 265Z" style="fill:var(--tower)"/>
+   <rect x="254" y="196" width="16" height="3" style="fill:var(--tower)"/><rect x="258" y="160" width="8" height="2" style="fill:var(--tower)"/>
+   <line x1="262" y1="128" x2="262" y2="116" style="stroke:var(--tower);stroke-width:1.5"/>
+   <g id="towerlights"></g>
   </g>
-  <!-- strato medio: castello originale -->
+  <!-- strato medio: castello -->
   <g class="par" data-depth="0.09">
    <ellipse cx="502" cy="170" rx="175" ry="125" fill="url(#cglow)"/>
    <g style="fill:var(--sil-1)">
@@ -319,32 +343,28 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
    </g>
    <line x1="502" y1="46" x2="502" y2="22" style="stroke:var(--sil-1);stroke-width:2"/>
    <path d="M503 22 l20 6 -20 6z" style="fill:var(--wine)"/>
-   <path d="M488 265 v-36 a14 14 0 0 1 28 0 v36z" style="fill:var(--sil-2)"/>
-   <path d="M492 265 v-34 a10 10 0 0 1 20 0 v34z" style="fill:var(--lamp)" opacity=".35"/>
    <g style="fill:var(--win)">
-    <rect x="417" y="188" width="6" height="10" rx="3"/><rect x="417" y="214" width="6" height="10" rx="3"/>
-    <rect x="449" y="152" width="6" height="10" rx="3"/><rect x="460" y="152" width="6" height="10" rx="3"/><rect x="454" y="180" width="6" height="10" rx="3"/><rect x="454" y="210" width="6" height="10" rx="3"/>
+    <rect x="417" y="188" width="6" height="10" rx="3"/>
+    <rect x="449" y="152" width="6" height="10" rx="3"/><rect x="460" y="152" width="6" height="10" rx="3"/>
     <rect x="489" y="124" width="6" height="11" rx="3"/><rect x="499" y="124" width="6" height="11" rx="3"/><rect x="509" y="124" width="6" height="11" rx="3"/>
-    <rect x="494" y="152" width="6" height="11" rx="3"/><rect x="504" y="152" width="6" height="11" rx="3"/><rect x="499" y="182" width="6" height="11" rx="3"/>
-    <rect x="543" y="162" width="6" height="10" rx="3"/><rect x="543" y="190" width="6" height="10" rx="3"/><rect x="543" y="218" width="6" height="10" rx="3"/>
-    <rect x="579" y="192" width="6" height="10" rx="3"/><rect x="579" y="218" width="6" height="10" rx="3"/>
-    <rect x="430" y="232" width="6" height="10" rx="3"/><rect x="468" y="236" width="6" height="10" rx="3"/><rect x="530" y="236" width="6" height="10" rx="3"/><rect x="565" y="232" width="6" height="10" rx="3"/>
+    <rect x="494" y="152" width="6" height="11" rx="3"/><rect x="504" y="152" width="6" height="11" rx="3"/>
+    <rect x="543" y="162" width="6" height="10" rx="3"/><rect x="579" y="192" width="6" height="10" rx="3"/>
    </g>
   </g>
-  <!-- primo piano: mercatino, abete, lampadine, neve -->
+  <!-- primo piano: la fila di casette del mercatino, l'abete, i festoni, la neve -->
   <g class="par" data-depth="0.16">
    <g id="chalets"></g>
+   <path d="M0 290 V262 Q100 252 200 262 T400 260 T600 263 T800 258 V290Z" style="fill:var(--snowground)"/>
+   <g id="pools"></g>
    <g>
-    <polygon points="390,138 372,186 408,186" style="fill:var(--fir)"/>
-    <polygon points="390,162 367,216 413,216" style="fill:var(--fir)"/>
-    <polygon points="390,192 362,252 418,252" style="fill:var(--fir)"/>
-    <rect x="386" y="250" width="8" height="14" style="fill:var(--sil-2)"/>
-    <path d="M390 128 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" style="fill:var(--lamp)"/>
+    <polygon points="345,132 325,184 365,184" style="fill:var(--fir)"/>
+    <polygon points="345,158 320,216 370,216" style="fill:var(--fir)"/>
+    <polygon points="345,190 314,256 376,256" style="fill:var(--fir)"/>
+    <rect x="341" y="254" width="8" height="12" style="fill:var(--wood-dk)"/>
+    <path d="M345 121 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" style="fill:var(--lamp)"/>
     <g id="firlights"></g>
    </g>
-   <path id="hbw" d="M120 176 Q170 204 213 166 Q262 204 309 176 Q346 200 380 160" fill="none" style="stroke:var(--night-mute)" stroke-width="1.3" opacity=".7"/>
-   <g id="hbulbs"></g>
-   <path d="M0 290 V262 Q100 252 200 262 T400 260 T600 263 T800 258 V290Z" style="fill:var(--snowground)"/>
+   <g id="festoons"></g>
    <path d="M0 290 V272 Q120 266 260 272 T540 270 T800 268 V290Z" style="fill:var(--snowshade)"/>
   </g>
  </svg>
@@ -560,7 +580,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 </div></section>
 </main>
 
-<footer><div class="wrap">Piano di viaggio preparato con dati controllati il 21/11/2026. Le cifre segnate "stima" sono calcoli, non prezzi letti. In caso di dubbio fa fede il sito ufficiale.</div></footer>
+<footer><svg class="foot-market" id="footMarket" viewBox="0 0 800 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg><div class="wrap">Piano di viaggio preparato con dati controllati il 21/11/2026. Le cifre segnate "stima" sono calcoli, non prezzi letti. In caso di dubbio fa fede il sito ufficiale.</div></footer>
 
 <script>
 (()=>{
@@ -579,33 +599,73 @@ const LINES={"1":["--l1","--l1t",1],"7":["--l7","--l7t",1],"8":["--l8","--l8t",1
 const lb=l=>{if(l==="w")return `<span class="lb walk" aria-label="a piedi">${WALK}</span>`;const c=LINES[l];return `<span class="lb${c[2]?' round':''}" style="--c:var(${c[0]});--tc:var(${c[1]})" aria-label="${c[2]?'metro':'RER'} ${l}">${l}</span>`};
 const B={ok:t=>`<span class="bd ok">${t||'ufficiale'}</span>`,nu:t=>`<span class="bd nu">${t||'non ufficiale'}</span>`,nc:t=>`<span class="bd nc">${t||'non confermato'}</span>`,es:t=>`<span class="bd es">${t||'stima'}</span>`};
 
-/* ---------- divisori a lampadine ---------- */
+/* ---------- luci, casette e festoni ---------- */
+const BU=['var(--lamp)','var(--wine)','var(--lamp)','var(--fir-light)','var(--lamp)','var(--brand)'];
+const qpt=(a,c,b,t)=>[(1-t)*(1-t)*a[0]+2*(1-t)*t*c[0]+t*t*b[0],(1-t)*(1-t)*a[1]+2*(1-t)*t*c[1]+t*t*b[1]];
+const f1=n=>n.toFixed(1);
+/* divisori fra le sezioni: disegnati alla larghezza vera, così le lampadine restano tonde */
 const BULB=['var(--lamp)','var(--wine)','var(--fir)','var(--lamp)','var(--brand)'];
-document.querySelectorAll('.lights').forEach((el,k)=>{
- const n=+el.dataset.n||20,W=1000;let s=`<svg viewBox="0 0 ${W} 34" preserveAspectRatio="none"><path class="wire" d="M0 6 Q ${W/4} 22 ${W/2} 8 T ${W} 6"/>`;
- for(let i=0;i<n;i++){const x=(i+.5)*W/n;const t=x/W;const u=t<.5?t*2:(t-.5)*2;const y=t<.5?(1-u)*(1-u)*6+2*(1-u)*u*22+u*u*8:(1-u)*(1-u)*8+2*(1-u)*u*(-6)+u*u*6;
-  s+=`<g class="b"><rect x="${x-1.5}" y="${y}" width="3" height="4" fill="var(--mute)"/><ellipse cx="${x}" cy="${y+10}" rx="4.2" ry="6" fill="${BULB[(i+k)%BULB.length]}"/></g>`}
- el.innerHTML=s+'</svg>';
-});
-/* scena: tetti, merli, chalet, lampadine */
-{const NS=s=>s;let r='';let x=0,seed=7;const rnd=()=>(seed=(seed*9301+49297)%233280)/233280;
+const drawLights=()=>document.querySelectorAll('.lights').forEach((el,k)=>{
+ const W=Math.max(320,el.clientWidth||400),n=Math.round(W/22),P0=[0,7],C1=[W/4,24],M=[W/2,9],C2=[3*W/4,-6],P1=[W,7];
+ let s=`<svg viewBox="0 0 ${W} 40" preserveAspectRatio="none"><path class="wire" d="M0 7 Q ${W/4} 24 ${W/2} 9 T ${W} 7"/>`;
+ for(let i=0;i<n;i++){const x=(i+.5)*W/n,t=x/W,y=(t<.5?qpt(P0,C1,M,t*2):qpt(M,C2,P1,(t-.5)*2))[1],c=BULB[(i+k)%BULB.length];
+  s+=`<g class="b"><ellipse cx="${f1(x)}" cy="${f1(y+11)}" rx="9" ry="10" style="fill:${c}" opacity=".2"/><rect x="${f1(x-1.6)}" y="${f1(y)}" width="3.2" height="4" style="fill:var(--mute)"/><ellipse cx="${f1(x)}" cy="${f1(y+11)}" rx="4.2" ry="6" style="fill:${c}"/></g>`}
+ el.innerHTML=s+'</svg>'});
+drawLights();
+const MK={};
+{let seed=7;const rnd=()=>(seed=(seed*9301+49297)%233280)/233280;
+ /* tetti di Parigi e merli del castello */
+ let r='';let x=0;
  while(x<800){const w=40+rnd()*36,h=34+rnd()*34,top=265-h;r+=`<polygon points="${x},265 ${x},${top+10} ${x+8},${top} ${x+w-8},${top} ${x+w},${top+10} ${x+w},265"/>`;
   if(rnd()<.8){const cx=x+10+rnd()*(w-26);r+=`<rect x="${cx.toFixed(0)}" y="${top-9}" width="6" height="10"/>`}x+=w+2}
  const ro=document.getElementById('roofs');if(ro)ro.innerHTML=r;
  let c='';for(let i=0;i<10;i++)c+=`<rect x="${417+i*17}" y="188" width="9" height="8"/>`;const cr=document.getElementById('cren');if(cr)cr.innerHTML=c;
- const chalet=(x,w,tip,awn)=>{const eave=tip+w*.42,b=265;return `<polygon points="${x-9},${eave+2} ${x+w/2},${tip} ${x+w+9},${eave+2}" style="fill:var(--sil-3)"/>
-  <path d="M${x-9} ${eave+2} L${x+w/2} ${tip} L${x+w+9} ${eave+2} L${x+w+4} ${eave+6} Q${x+w*.78} ${eave-4} ${x+w*.66} ${eave+1} Q${x+w*.5} ${eave-9} ${x+w*.36} ${eave} Q${x+w*.2} ${eave-3} ${x-4} ${eave+7}Z" style="fill:var(--snowground)"/>
-  <rect x="${x}" y="${eave}" width="${w}" height="${b-eave}" style="fill:var(--sil-2)"/>
-  <rect x="${x+8}" y="${eave+22}" width="${w-16}" height="${b-eave-38}" rx="2" style="fill:var(--lamp)"/>
-  <rect x="${x+8}" y="${eave+22}" width="${w-16}" height="${(b-eave-38)*.45}" style="fill:var(--lamp-hot)" opacity=".7"/>
-  <rect x="${x+4}" y="${eave+10}" width="${w-8}" height="14" fill="url(#${awn})"/>
-  <rect x="${x+5}" y="${b-17}" width="${w-10}" height="5" style="fill:var(--sil-3)"/>`};
- const ch=document.getElementById('chalets');if(ch)ch.innerHTML=chalet(118,70,150,'awnG')+chalet(213,84,140,'awnR')+chalet(306,66,156,'awnG');
- const BU=['var(--lamp)','var(--wine)','var(--lamp)','var(--fir-light)','var(--lamp)','var(--brand)'];
- const g=document.getElementById('hbulbs'),p=document.getElementById('hbw');
- if(g&&p&&p.getTotalLength){const L=p.getTotalLength(),n=24;let s='';for(let i=0;i<n;i++){const q=p.getPointAtLength(L*(i+.5)/n);s+=`<circle class="hb" style="animation-delay:${(i*.11).toFixed(2)}s;fill:${BU[i%BU.length]}" cx="${q.x.toFixed(1)}" cy="${(q.y+4.5).toFixed(1)}" r="3.8"/>`}g.innerHTML=s}
- const fl=document.getElementById('firlights');if(fl){const pts=[[382,176],[396,168],[388,196],[378,206],[400,200],[386,228],[372,238],[398,236],[408,244],[390,158]];fl.innerHTML=pts.map((q,i)=>`<circle class="hb" style="animation-delay:${(i*.23).toFixed(2)}s;fill:${BU[(i+1)%BU.length]}" cx="${q[0]}" cy="${q[1]}" r="2.8"/>`).join('')}
+ /* una casetta vista di fronte: legno, tetto con la neve, tenda a righe, banco acceso con la merce, ghirlanda, lampadine */
+ const G=['var(--wine)','var(--fir)','var(--lamp)','var(--roof-r)','var(--fir-light)'];
+ const chalet=(x,w,tip,awn,roof,b,k)=>{const eave=tip+w*.38,cx=x+w/2,H=b-eave,oh=w*.12,aw=eave+H*.08,ah=H*.2,oy=aw+ah,oh2=H*.5,cy=oy+oh2;
+  let s=`<rect x="${f1(x)}" y="${f1(eave)}" width="${f1(w)}" height="${f1(H)}" style="fill:var(--wood)"/><polygon points="${f1(x)},${f1(eave+.5)} ${f1(cx)},${f1(tip+3)} ${f1(x+w)},${f1(eave+.5)}" style="fill:var(--wood)"/>`;
+  s+=`<rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2)}" style="fill:var(--lamp)"/><rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2*.45)}" style="fill:var(--lamp-hot)" opacity=".75"/>`;
+  const n=Math.max(3,Math.round(w/11));for(let i=0;i<n;i++)s+=`<circle cx="${f1(x+w*.17+i*w*.66/(n-1))}" cy="${f1(cy-H*.07)}" r="${f1(Math.max(1.4,H*.06))}" style="fill:${G[(i+k)%G.length]}"/>`;
+  for(let i=0;i<3;i++){const hx=x+w*(.28+i*.22),hl=H*(.09+((i+k)%2)*.06);s+=`<line x1="${f1(hx)}" y1="${f1(oy)}" x2="${f1(hx)}" y2="${f1(oy+hl)}" style="stroke:var(--wood-dk)" stroke-width=".8"/><circle cx="${f1(hx)}" cy="${f1(oy+hl+1.4)}" r="${f1(Math.max(1.2,H*.035))}" style="fill:${G[(i+k+2)%G.length]}"/>`}
+  s+=`<rect x="${f1(x+w*.04)}" y="${f1(cy)}" width="${f1(w*.92)}" height="${f1(H*.09)}" style="fill:var(--wood-dk)"/><rect x="${f1(x+1)}" y="${f1(aw)}" width="${f1(w-2)}" height="${f1(ah)}" fill="url(#${awn})"/><rect x="${f1(x+1)}" y="${f1(aw+ah-1.2)}" width="${f1(w-2)}" height="1.2" style="fill:var(--wood-dk)" opacity=".6"/>`;
+  s+=`<polyline points="${f1(x-oh)},${f1(eave+5)} ${f1(cx)},${f1(tip)} ${f1(x+w+oh)},${f1(eave+5)}" fill="none" style="stroke:var(${roof})" stroke-width="${f1(w*.1)}" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${f1(x-oh+2)},${f1(eave+1.5)} ${f1(cx)},${f1(tip-3.2)} ${f1(x+w+oh-2)},${f1(eave+1.5)}" fill="none" style="stroke:var(--snowground)" stroke-width="${f1(w*.05)}" stroke-linejoin="round" stroke-linecap="round"/>`;
+  const gy=tip+(eave-tip)*.6,gr=Math.max(2.2,w*.06);s+=`<circle cx="${f1(cx)}" cy="${f1(gy)}" r="${f1(gr)}" fill="none" style="stroke:var(--fir-light)" stroke-width="${f1(gr*.55)}"/><circle cx="${f1(cx)}" cy="${f1(gy+gr)}" r="${f1(gr*.42)}" style="fill:var(--wine)"/>`;
+  for(let i=1;i<=4;i++){const t=i/5;[[x-oh*.4,eave+7],[x+w+oh*.4,eave+7]].forEach((e,j)=>{s+=`<circle cx="${f1(e[0]+(cx-e[0])*t)}" cy="${f1(e[1]+(tip+6-e[1])*t)}" r="${f1(Math.max(1.1,w*.022))}" style="fill:${BU[(i+j+k)%BU.length]}"/>`})}
+  return s};
+ const row=(L,b,k)=>L.map((c,i)=>chalet(c[0],c[1],c[2],c[3],c[4],b,i+k)).join('');
+ const tips=L=>L.map(c=>[c[0]+c[1]/2,c[2]+1]);
+ const pools=(L,b)=>L.map(c=>`<ellipse cx="${f1(c[0]+c[1]/2)}" cy="${b-3}" rx="${f1(c[1]*.62)}" ry="6" fill="url(#pool)"/>`).join('');
+ /* festone: filo che pende da una casetta all'altra, lampadine con alone */
+ const festoon=(P,k)=>{let w='',bl='';for(let i=0;i<P.length-1;i++){const a=P[i],b=P[i+1],c=[(a[0]+b[0])/2,Math.max(a[1],b[1])+(b[0]-a[0])*.26];
+   w+=`M${f1(a[0])} ${f1(a[1])} Q${f1(c[0])} ${f1(c[1])} ${f1(b[0])} ${f1(b[1])} `;const n=Math.max(3,Math.round((b[0]-a[0])/12));
+   for(let j=1;j<n;j++){const q=qpt(a,c,b,j/n),col=BU[(i*n+j+k)%BU.length];bl+=`<g class="hb" style="animation-delay:${(((i*n+j)*.13)%2.6).toFixed(2)}s"><circle cx="${f1(q[0])}" cy="${f1(q[1]+3)}" r="5.5" style="fill:${col}" opacity=".24"/><circle cx="${f1(q[0])}" cy="${f1(q[1]+3)}" r="2.3" style="fill:${col}"/></g>`}}
+  return `<path d="${w}" fill="none" style="stroke:var(--night-wire)" stroke-width="1.1"/>`+bl};
+ const genRow=(W,minT,maxT)=>{const out=[],A=['awnR','awnY','awnG'],R=['--roof-g','--roof-r','--roof-r'];let x=-12,i=0;while(x<W){const w=50+rnd()*14;out.push([x,w,minT+rnd()*(maxT-minT),A[i%3],R[i%3]]);x+=w+7;i++}return out};
+ /* cartolina: cielo, stelle, bagliore, casette, neve, festone */
+ MK.mini=(W,H,k)=>{const b=H-6,L=genRow(W,b-64,b-52);let st='';for(let i=0;i<Math.round(W/34);i++)st+=`<circle cx="${(rnd()*W).toFixed(0)}" cy="${(4+rnd()*(b-80)).toFixed(0)}" r="${(.6+rnd()*.9).toFixed(1)}" style="fill:var(--snow)" opacity=".7"/>`;
+  return `<ellipse cx="${W/2}" cy="${b}" rx="${W*.7}" ry="${H*.7}" fill="url(#hglow)"/>`+st+row(L,b,k)+`<path d="M0 ${H+2} V${b-3} Q${W*.25} ${b-8} ${W*.5} ${b-3} T${W} ${b-4} V${H+2}Z" style="fill:var(--snowground)"/>`+pools(L,b)+festoon([[-10,b-74],...tips(L),[W+10,b-74]],k)};
+ /* la scena grande: casette a sinistra e a destra dell'abete */
+ const CL=[[-12,64,186,'awnR','--roof-g'],[56,60,192,'awnY','--roof-r'],[120,68,182,'awnG','--roof-r'],[194,62,188,'awnR','--roof-g'],[262,54,194,'awnY','--roof-r']];
+ const CR=[[388,62,190,'awnG','--roof-r'],[454,68,182,'awnR','--roof-g'],[526,58,190,'awnY','--roof-r'],[588,66,184,'awnG','--roof-r'],[658,62,190,'awnR','--roof-g'],[724,82,180,'awnY','--roof-r']];
+ const set=(id,h)=>{const e=document.getElementById(id);if(e)e.innerHTML=h};
+ set('chalets',row(CL,266,0)+row(CR,266,5));
+ set('pools',pools(CL.concat(CR),266));
+ set('festoons',festoon([[-20,176],...tips(CL)],0)+festoon([...tips(CR),[820,172]],3));
+ const fl=[[337,174],[351,166],[343,196],[331,206],[357,200],[341,228],[325,240],[353,236],[365,248],[345,156],[333,188],[359,216],[319,252],[371,254],[345,214]];
+ set('firlights',fl.map((q,i)=>`<circle class="hb" style="animation-delay:${(i*.21).toFixed(2)}s;fill:${BU[(i+1)%BU.length]}" cx="${q[0]}" cy="${q[1]}" r="2.8"/>`).join(''));
+ let tw='';for(let i=0;i<18;i++){const y=124+i*4.2,half=1.5+(y-124)/137*15;tw+=`<circle class="tw" style="animation-delay:${(rnd()*1.8).toFixed(2)}s;fill:var(--lamp-hot)" cx="${f1(262+(rnd()*2-1)*half)}" cy="${f1(y)}" r="1.1"/>`}
+ set('towerlights',tw);
+ const fm=document.getElementById('footMarket');if(fm)fm.innerHTML=MK.mini(800,120,2);
 }
+/* festone in cima alla pagina, disegnato alla larghezza vera */
+const gar=$('#garland'),HERO=$('#top');
+const drawGarland=()=>{if(!gar||!HERO)return;const W=HERO.clientWidth||400,n=Math.max(2,Math.round(W/170)),sp=W/n;let w='',bl='';
+ gar.setAttribute('viewBox',`0 0 ${W} 64`);
+ for(let i=0;i<n;i++){const a=[i*sp,3],b=[(i+1)*sp,3],c=[a[0]+sp/2,3+Math.min(70,sp*.5)];w+=`M${f1(a[0])} 3 Q${f1(c[0])} ${f1(c[1])} ${f1(b[0])} 3 `;const m=Math.max(4,Math.round(sp/24));
+  for(let j=1;j<m;j++){const q=qpt(a,c,b,j/m),col=BU[(i*m+j)%BU.length];bl+=`<g class="hb" style="animation-delay:${(((i*m+j)*.17)%2.6).toFixed(2)}s"><circle cx="${f1(q[0])}" cy="${f1(q[1]+6)}" r="8" style="fill:${col}" opacity=".2"/><rect x="${f1(q[0]-1.4)}" y="${f1(q[1])}" width="2.8" height="3" style="fill:var(--night-mute)" opacity=".6"/><ellipse cx="${f1(q[0])}" cy="${f1(q[1]+6)}" rx="2.8" ry="3.9" style="fill:${col}"/></g>`}}
+ gar.innerHTML=`<path d="${w}" fill="none" style="stroke:var(--night-mute)" stroke-opacity=".35" stroke-width="1.2"/>`+bl};
+drawGarland();
+{let lw=innerWidth,tk=false;addEventListener('resize',()=>{if(tk||innerWidth===lw)return;tk=true;requestAnimationFrame(()=>{lw=innerWidth;drawLights();drawGarland();tk=false})},{passive:true})}
 
 /* ---------- barre dei costi ---------- */
 const SC=[
@@ -742,7 +802,7 @@ DAYS.forEach((d,i)=>{
   <div id="routeFull"><p class="small muted" style="margin-bottom:var(--s3)">Circa 8–9 km a piedi. ${d.cutNote}</p><ol class="tl">${d.full.map(item).join('')}${d.post.map(item).join('')}</ol></div>
   <div id="routeShort" hidden><p class="small muted" style="margin-bottom:var(--s3)">Solo Notre-Dame, grandi magazzini e Tuileries. Quasi sempre al coperto, finisce alle 18:30.</p><ol class="tl">${d.short.map(item).join('')}</ol></div>`;
  }else body=`<ol class="tl">${d.items.map(item).join('')}</ol>${d.foot||''}`;
- html+=`<div class="panel" role="tabpanel" id="p-${d.id}" aria-labelledby="t-${d.id}" ${i?'hidden':''}><div class="day-head"><p class="kicker">${d.mood==="market"?"Mercatini e città":"Parchi"}</p><h3>${esc(d.h)}</h3><p class="muted">${esc(d.sub)}</p></div>${body}</div>`;
+ html+=`<div class="panel" role="tabpanel" id="p-${d.id}" aria-labelledby="t-${d.id}" ${i?'hidden':''}><div class="day-head"><p class="kicker">${d.mood==="market"?"Mercatini e città":"Parchi"}</p><h3>${esc(d.h)}</h3><p class="muted">${esc(d.sub)}</p>${d.id==="dom"?`<svg class="market" viewBox="0 0 400 112" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${MK.mini(400,112,1)}</svg>`:""}</div>${body}</div>`;
 });
 $('#panels').innerHTML=html;
 const bar=$('#daybar');
@@ -815,11 +875,11 @@ if(cv&&cv.getContext){
  const ctx=cv.getContext('2d');let W=0,H=0,dpr=1,flakes=[],glows=[],arc=[],t0=performance.now(),run=false,vis=true,raf=0;
  const size=()=>{dpr=Math.min(devicePixelRatio||1,2);W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
   const n=Math.round(Math.min(90,W*H/9000));flakes=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,v:.15+Math.random()*.45,w:Math.random()*6.28}));
-  glows=Array.from({length:14},()=>({x:Math.random()*W,y:Math.random()*H*.6,r:10+Math.random()*26,p:Math.random()*6.28,g:Math.random()<.7}))};
+  const GC=['246,201,100','246,201,100','255,150,96','255,140,120','255,176,196','143,227,184'];glows=Array.from({length:24},()=>({x:Math.random()*W,y:Math.random()*H*.7,r:8+Math.random()*34,p:Math.random()*6.28,c:GC[Math.floor(Math.random()*GC.length)]}))};
  const sceneMap=()=>{const s=document.querySelector('.scene');const r=s.getBoundingClientRect(),hr=hero.getBoundingClientRect();const sc=Math.max(r.width/800,r.height/290);const ox=r.left-hr.left+(r.width-800*sc)/2,oy=r.top-hr.top+(r.height-290*sc);return (x,y)=>[ox+x*sc,oy+y*sc]};
  /* fuochi di scintille sopra il castello: tre al caricamento, poi uno ogni tanto */
  const LAUNCH=[[440,200,452,62],[562,205,582,72],[505,150,505,30],[420,210,410,90],[585,215,612,96]];
- const COL=['#FFE7A3','#FFFFFF','#F7B2C4','#BFD0FF'];
+ const COL=['#FFE7A3','#FFFFFF','#FFB0C4','#9FE8C0'];
  let rockets=[],sparks=[],nextAuto=9;
  const fire=(k,t)=>rockets.push({k,t0:t,dur:1.05,c:COL[k%COL.length]});
  [[0,.35],[1,1.05],[2,1.75]].forEach(([k,d])=>fire(k,d));
@@ -832,7 +892,7 @@ if(cv&&cv.getContext){
   for(let i=sparks.length-1;i>=0;i--){const s=sparks[i];s.x+=s.vx;s.y+=s.vy;s.vx*=.975;s.vy=s.vy*.975+.025;s.l-=.014;if(s.l<=0){sparks.splice(i,1);continue}ctx.globalAlpha=Math.min(1,s.l*1.2);ctx.fillStyle=s.c;ctx.fillRect(s.x-s.s/2,s.y-s.s/2,s.s,s.s)}
   ctx.globalAlpha=1};
  const draw=(now)=>{const t=(now-t0)/1000;ctx.clearRect(0,0,W,H);
-  for(const g of glows){const a=.10+.08*Math.sin(t*.6+g.p);const gr=ctx.createRadialGradient(g.x,g.y,0,g.x,g.y,g.r);gr.addColorStop(0,g.g?`rgba(243,201,105,${a})`:`rgba(170,190,255,${a})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(g.x,g.y,g.r,0,6.28);ctx.fill()}
+  for(const g of glows){const a=.10+.08*Math.sin(t*.6+g.p);const gr=ctx.createRadialGradient(g.x,g.y,0,g.x,g.y,g.r);gr.addColorStop(0,`rgba(${g.c},${a})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(g.x,g.y,g.r,0,6.28);ctx.fill()}
   ctx.fillStyle='rgba(255,255,255,.85)';
   for(const f of flakes){f.y+=f.v;f.x+=Math.sin(t*.5+f.w)*.25;if(f.y>H+4){f.y=-4;f.x=Math.random()*W}ctx.globalAlpha=.35+f.r*.25;ctx.beginPath();ctx.arc(f.x,f.y,f.r,0,6.28);ctx.fill()}
   ctx.globalAlpha=1;
