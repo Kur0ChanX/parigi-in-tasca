@@ -112,3 +112,25 @@ Quando scrollo verso il basso i mercatini si nascondono. Quindi cioè, l'obietti
 
 ## 2026-11-21 19:57 · 01WTjqUtLt7R
 cosa è ?!?
+
+## 2026-11-21 20:06 · 01WTjqUvmMKr
+scritte sovrapposte è un lavoro certosino questo...
+
+## 2026-11-21 20:14 · 01WTjqUvmMKr
+veloce
+link ora con immagine di condivisione corretta
+veloce
+veloce 
+veloceeeeeeeeeeeeeeeeeeeee
+
+## 2026-11-21 20:22 · 01WTjqUvmMKr
+Hai valutato la comodità anche di andare a Disneyland? Se magari è valutabile avere una notte e dormire in un posto per vedere giusto Parigi e i mercatini e poi spostarsi in un'altra zona più vicino a Disneyland. L'hai valutato?
+
+## 2026-11-21 20:24 · 01WTjqUvmMKr
+Non per forza gli hotel citati, cioè, non focalizzarti solo su quelli che abbiamo messo, se no non ha senso la ricerca.
+
+## 2026-11-21 20:25 · 01WTjqUvmMKr
+Beh, inizialmente abbiamo fatto una super ricerca con Fable. Penso che avrai cercato dappertutto, questi dati ce li avrai già, no? O devi rifare la ricerca adesso con Opus di nuovo tutta quanta?
+
+## 2026-11-21 20:27 · 01WTjqUvmMKr
+Cioè, valuta 3 giorni dormire proprio vicino Disneyland o nei pressi di Disneyland. Più comodo, cioè valuta tutto. Sia nei parchi che fuori dai parchi, sia in periferia, sia molto vicino, basandoti sul prezzo, la bellezza del posto, che sia decente il prezzo, la comodità delle navette, taxi, bus per andare a Disneyland.
