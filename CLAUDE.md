@@ -12,5 +12,5 @@ Se il contesto viene compresso, conserva: l'ultimo messaggio di Mario parola per
 # Parigi in tasca
 Guida di viaggio a Parigi sul telefono. Sito: https://kur0chanx.github.io/parigi-in-tasca/ (GitHub Pages, da `main`: tutto ciò che è in `main` è pubblico). Dettagli in `README.md`.
 - `index.html` (+ `sw.js`, `manifest.webmanifest`, icone): guida 22–26/11/2026. Prima di pubblicare: `python3 -I tools/controlla-colori.py`.
-- Viaggio 13–17/12/2026: appunti in `research_notes/`; pagina: si modifica solo `dicembre/parigi-disney-natale.html` (anche Artifact), poi `python3 -I tools/fai-dicembre.py` rifà la web app `dicembre/index.html` (sito `/dicembre/`, service worker suo). Prima di pubblicare anche `python3 -I tools/fai-dicembre.py --controlla` e `node tools/prova-web-app.js`.
+- Viaggio 13–17/12/2026: appunti in `research_notes/`; pagina: si modifica solo `dicembre/parigi-disney-natale.html` (anche Artifact), poi `python3 -I tools/fai-dicembre.py` rifà la web app `dicembre/index.html` (sito `/dicembre/`, service worker suo). Prima di pubblicare anche `python3 -I tools/fai-dicembre.py --controlla`, `node tools/prova-web-app.js` e `node tools/prova-scritte.js` (scritte sovrapposte).
 - Ogni fatto dalla pagina ufficiale, link nelle fonti; i siti non ufficiali si segnano così.
