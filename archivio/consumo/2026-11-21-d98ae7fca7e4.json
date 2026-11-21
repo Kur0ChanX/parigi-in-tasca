@@ -1,0 +1,22 @@
+{
+"account": "108763",
+"sessione": "d98ae7fca7e4",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 110211,
+"anomalie": [],
+"blocchi": {
+"Stop 9 · Versione unita in questo turno:": 1
+},
+"esempi_blocchi": {
+"Stop 9 · Versione unita in questo turno:": [
+"21:34 · Versione unita in questo turno: aggiorna in docs/DA-FARE.md la sezione «## Nastro delle versioni» (3 righe): «🚀 Online: v<N> · <segno e catena> · 21/11 <ora> · <3 parole>», poi «🧪 In prova» e «⏳ Dopo»"
+]
+},
+"remota": "01WTjqUvDTBB",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
