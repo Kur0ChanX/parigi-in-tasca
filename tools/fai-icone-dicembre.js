@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* Disegna l'icona della web app di dicembre e l'immagine dell'anteprima del link (WhatsApp, Telegram).
    Parigi di notte coi mercatini di Natale: Torre Eiffel accesa, casette con le tende a righe, festoni di lucine, neve,
-   luna a forma di testa di Topolino.
+   luna piena con le stelline.
    Tutto disegnato qui (niente immagini prese da internet): si rifà uguale quando serve.
    Uso:  node tools/fai-icone-dicembre.js            scrive dicembre/icona-*.png e dicembre/anteprima.jpg
          node tools/fai-icone-dicembre.js <cartella>  scrive le stesse immagini in un'altra cartella (prove)  */
@@ -66,12 +66,14 @@ function neveCade(x, y, l, a, n, seme) {
   return out;
 }
 
-/* Luna a forma di testa di Topolino (chiesta da Mario il 21/11): tre cerchi pieni color luna, la testa e due
-   orecchie, con l'alone; niente faccia. (cx, cy) = centro della testa, r = raggio della testa. */
+/* Luna piena con le stelline (disegno originale; 21/11: tolta la testa di Topolino, personaggio protetto di Disney).
+   (cx, cy) = centro, r = raggio. Grande e rotonda così si riconosce anche nell'icona a 60 px. */
 function luna(cx, cy, r) {
-  const o = r * 0.6, dx = r * 0.95, dy = r * 0.85;
-  return `<circle cx="${cx}" cy="${f(cy - r * .25)}" r="${f(r * 3.1)}" fill="url(#aloneLuna)" opacity=".75"/>
-  <g fill="${C.luna}"><circle cx="${cx}" cy="${cy}" r="${r}"/><circle cx="${f(cx - dx)}" cy="${f(cy - dy)}" r="${f(o)}"/><circle cx="${f(cx + dx)}" cy="${f(cy - dy)}" r="${f(o)}"/></g>`;
+  const stella = (x, y, s) => `<path d="M${f(x)} ${f(y - s)} L${f(x + s * .24)} ${f(y - s * .24)} L${f(x + s)} ${f(y)} L${f(x + s * .24)} ${f(y + s * .24)} L${f(x)} ${f(y + s)} L${f(x - s * .24)} ${f(y + s * .24)} L${f(x - s)} ${f(y)} L${f(x - s * .24)} ${f(y - s * .24)}Z" fill="#FFF6DA"/>`;
+  return `<circle cx="${cx}" cy="${cy}" r="${f(r * 2.8)}" fill="url(#aloneLuna)" opacity=".75"/>
+  <circle cx="${cx}" cy="${cy}" r="${r}" fill="${C.luna}"/>
+  <g fill="#E9DDB8" opacity=".55"><circle cx="${f(cx - r * .3)}" cy="${f(cy - r * .22)}" r="${f(r * .2)}"/><circle cx="${f(cx + r * .28)}" cy="${f(cy + r * .3)}" r="${f(r * .14)}"/><circle cx="${f(cx + r * .32)}" cy="${f(cy - r * .38)}" r="${f(r * .09)}"/></g>
+  ${stella(cx + r * 1.45, cy - r * .55, r * .32)}${stella(cx - r * 1.35, cy + r * .75, r * .22)}${stella(cx + r * 1.1, cy + r * 1.05, r * .16)}`;
 }
 
 /* Torre Eiffel: base a terra in (cx, base), alta h, larga l alla base. */
