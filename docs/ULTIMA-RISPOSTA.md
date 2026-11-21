@@ -1,14 +1,11 @@
-# Ultima risposta di Claude (21/11/2026 19:56 ora italiana)
+# Ultima risposta di Claude (21/11/2026 20:24 ora italiana)
 
-Ho capito: vuoi la conferma che, scelto l'hotel, cambia tutto l'itinerario. E vuoi che i pulsanti dei Mercatini non spariscano quando scorri.
+Ho capito: la ricerca deve essere larga, non solo sugli hotel che abbiamo già nella pagina.
+🧠 Opus · Extra
 
 ───
 ✅ **FATTO**
-- **Sì, te lo confermo con una prova.** Ho aperto la pagina con 3 hotel diversi e cambia tutto:
-
-| Cosa | n. 12 Relais Spa | n. 1 Love N Chic | n. 14 Disney New York |
-|---|---|---|---|
-| Uscita per i parchi | 8:05, treno | 7:55, bus | 7:45, a piedi (entrate alle 8:00) |
-| Domenica sera | 20:10 in hotel, poi spa | 22:20, bus | 22:15, a piedi |
-| Totale in due | circa 1.559 € | circa 1.044 € | circa 3.243 € |
-| Trasporti a testa | circa …
+- Ho girato la tua indicazione all'aiutante: la ricerca riparte da capo, su tutte e due le parti.
+  - **Parigi (1 notte):** non solo Gare de Lyon. Va bene anche Châtelet, Nation o Bastille, purché ci sia la metro diretta da Orly e il treno diretto per Disney.
+  - **Vicino a Disney (3 notti):** tutti i paesi intorno, più gli Hotel Disney e gli hotel partner Disney con biglietti inclusi. I 15 alloggi di prima servono solo come metro di paragone.
+- Gli ho chiesto le 3 …
