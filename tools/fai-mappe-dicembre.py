@@ -12,7 +12,7 @@ Uso:
 Poi: python3 -I tools/fai-dicembre.py (rifà la web app). Mappa cambiata: alza VERSIONE qui sotto.
 
 Regole rispettate (lette il 21/11/2026): Géoplateforme IGN, WMS-Raster al massimo 40 richieste al secondo
-(https://cartes.gouv.fr/cgu); qui 23 richieste in tutto, una alla volta, con nome del programma.
+(https://cartes.gouv.fr/cgu); qui 27 richieste in tutto, una alla volta, con nome del programma.
 Tessere di tile.openstreetmap.org NON usate: la loro regola vieta di scaricarle per l'uso senza rete.
 """
 import io
@@ -49,6 +49,8 @@ ALLOGGI = {
     13: (48.843224, 2.792680, 'IGN'), 14: (48.870489, 2.787769, 'IGN'), 15: (48.855587, 2.775849, 'IGN'),
     22: (48.854226, 2.792897, 'IGN'),  # All Suites, 16 rue de Magellan, Serris (IGN, letto il 21/11/2026)
     24: (48.8542292, 2.8137138, 'OSM'),  # Staycity, Allée de l'Orme Rond, Bailly-Romainvilliers (OSM: IGN dà solo la via)
+    29: (48.855873, 2.774927, 'IGN'),  # ARIANE 1, 9 Place d'Ariane, Serris (IGN, letto il 21/11/2026)
+    30: (48.85495, 2.770771, 'IGN'),   # Residhome, 3 place Jean Monnet, Montévrain (IGN, letto il 21/11/2026)
 }
 VDE = (48.855639, 2.773812)      # Gare de Val d'Europe (IGN)
 CH = (48.869921, 2.782744)       # Gare de Marne-la-Vallée–Chessy, davanti ai parchi (IGN)
@@ -57,9 +59,9 @@ ORLY = (48.730060, 2.367831)     # Aeroporto di Orly (OSM)
 # Stazione che usa ogni alloggio (la stessa dei tempi nella pagina, DV): VDE o CH
 STAZIONE = {1: CH, 2: CH, 3: CH, 7: CH, 11: CH, 14: CH, 22: CH, 24: CH}
 NOMI = {VDE: "Val d'Europe", CH: 'Chessy · Disney'}
-# Airbnb (n. 16–21 e 23): l'indirizzo esatto arriva solo dopo la prenotazione. Niente mappa (il segno sarebbe inventato):
+# Airbnb (n. 16–21, 23 e 25–28): l'indirizzo esatto arriva solo dopo la prenotazione. Niente mappa (il segno sarebbe inventato):
 # solo le distanze, contate dalla stazione scritta nell'annuncio («posizione indicativa», z:1 nella pagina).
-ZONA = {16: VDE, 17: VDE, 18: VDE, 19: VDE, 20: VDE, 21: VDE, 23: VDE}
+ZONA = {16: VDE, 17: VDE, 18: VDE, 19: VDE, 20: VDE, 21: VDE, 23: VDE, 25: VDE, 26: VDE, 27: VDE, 28: VDE}
 # Hotel di Parigi per la notte 13→14 (C11 pezzo 7, PAR nella pagina): indirizzo dal sito ufficiale dell'hotel
 # (Locomo, Sleeping Belle, Accor per ibis Styles e Novotel, Parisianer, Saint-Pétersbourg, Astotel per Astra,
 # Relais des Halles; letti il 21/11/2026), posizione = geocodifica ufficiale IGN di quell'indirizzo.

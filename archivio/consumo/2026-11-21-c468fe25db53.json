@@ -1,0 +1,34 @@
+{
+"account": "108763",
+"sessione": "c468fe25db53",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 160654,
+"anomalie": [],
+"blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": 1,
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 15 · There are uncommitted changes in": 1,
+"Stop 8 · Segno delle domande nel titolo": 1
+},
+"esempi_blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": [
+"23:31 · Consegne non su GitHub (C226, blocco 1/3): docs/PASSAGGIO-CONSEGNE.md fuori dal commit. Fai commit e push adesso (`git push -u origin claude/parigi-ramo-definitivo`), controlla `git rev-parse HEAD ori"
+],
+"Stop 5 · Notifica non letta (in coda": [
+"23:31 · Notifica non letta (in coda dalle 23:28: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 15 · There are uncommitted changes in": [
+"23:31 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 8 · Segno delle domande nel titolo": [
+"23:31 · Segno delle domande nel titolo «🟢 🗼 Principale 20 ❓4 · info hotel» (era «🟢 🗼 Principale 20 ❓3 · info hotel»; C454: « ❓N» dopo il numero, N = risposte che Mario deve dare alle righe della tua catena in"
+]
+},
+"remota": "01WTjqUxoKhC",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
