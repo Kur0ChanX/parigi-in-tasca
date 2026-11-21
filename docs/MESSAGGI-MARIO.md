@@ -32,3 +32,8 @@ va bene
 
 ## 2026-11-21 16:35 · 01WTjqUxBAKZ
 E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.
+
+## 2026-11-21 16:44 · 01WTjqUubYgz
+mandamelo con link web app da inviare ad amico 
+Spa posso intendere anche un hotel con una spa dentro, oppure con una jacuzzi dentro, un idromassaggio, ecco. Se ne vale la pena, abbiamo un po' di relax.
+dobbiamo sceglierlo In base a cosa scegliamo di quelli si trasforma la pagina. E mi raccomando, il mega consiglio sui mercatini, non dimenticartene, che per noi è importante appena arriviamo, vedere i migliori mercatini è il miglior giro da fare.
