@@ -1,0 +1,24 @@
+{
+"account": "108763",
+"sessione": "793a61a528be",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 279517,
+"anomalie": [
+"avvio pesante: 279k token dopo le letture d'avvio (tetto 130k)"
+],
+"blocchi": {
+"Stop 14 · Ti fermi ad aspettare Mario": 1
+},
+"esempi_blocchi": {
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"15:56 · Ti fermi ad aspettare Mario con il contesto a 279k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+]
+},
+"remota": "01WTjqUtoS2V",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
