@@ -62,10 +62,10 @@ Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal regist
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-21 23:23 · [AVVIO] Sessione #20 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → 
-- 2026-11-21 23:29 · https://www.online-reservations.com/?hotelid=14974972&gacc=gmcc&gad_source=1&gad… → 
-- 2026-11-21 23:44 · aggiungi un agente → 
-- 2026-11-21 23:46 · Aparthotel Adagio Val d'Europe https://www.online-reservations.com/?hotelid=5166… → 
+- 2026-11-21 23:23 · [AVVIO] Sessione #20 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → avvio, v14 (PR #15)
+- 2026-11-21 23:29 · https://www.online-reservations.com/?hotelid=14974972&gacc=gmcc&gad_source=1&gad… → All Suites → n. 22 (v14)
+- 2026-11-21 23:44 · aggiungi un agente → 1 aiutante per le foto, 1 per la ricerca
+- 2026-11-21 23:46 · Aparthotel Adagio Val d'Europe https://www.online-reservations.com/?hotelid=5166… → v15 (ordine a 4 pulsanti, n. 24 Staycity, PR #16), Adagio scartato, 6 nuovi da inserire (Prossimi passi 1)
 
 Ultimo, intero:
 > Aparthotel Adagio Val d'Europe
