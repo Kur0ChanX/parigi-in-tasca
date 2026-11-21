@@ -1,49 +1,51 @@
 # Passaggio di consegne
 
-Sessione attuale: #3 (dopo la #2 `session_01WTjqUtoS2VAb6mUQypVwHC`, chiusa alla soglia 21/11 15:56; la apre la #2 con `create_session` (catena 2 di 8)).
+Sessione attuale: #4 (dopo la #3 `session_01WTjqUtMTqKATxiNksYn1nS`, chiusa alla soglia 21/11 16:08; la apre la #3 con `create_session` (catena 3 di 8)).
 
 - **Già deciso da Mario (non richiedere):** viaggio dom 13 → gio 17/12/2026 in 2, senza auto; dom mercatini a Parigi, lun–mer Disneyland; hotel con voto Booking sopra 8 e pulizia buona, comodo alla RER A Val d'Europe; kit installato (21/11), icona 🗼, ramo `claude/parigi-ramo-definitivo`; pagina moderna «un po' disneyana, un po' mercatini», effetto wow, professionale.
-- **Da non rifare:** la ricerca (5 filoni, appunti in `research_notes/Parigi mercatini e Disneyland dicembre/`, dati del 21/11); la pagina (pubblicata); la grafica calda della pagina (versione 3, fatta dalla #2: aspetta solo l'ok di Mario); `add_repo` di RVC (vietato dal kit, vedi `docs/ERRORI.md`).
-- **Cosa preme a Mario adesso:** scegliere e prenotare l'hotel (prezzi che salgono) guardando le sue 28 foto di Booking, con trasporti economici e veloci verso i parchi (niente taxi né Uber); poi biglietti Disney.
+- **Da non rifare:** la ricerca (5 filoni, appunti in `research_notes/Parigi mercatini e Disneyland dicembre/`, dati del 21/11); la pagina (pubblicata); il confronto delle 28 foto di Booking (fatto dalla #3: `research_notes/Parigi mercatini e Disneyland dicembre/hotel_foto_booking_mario.md`, indirizzi, pulizia, orari d'arrivo, distanze dalla RER); `add_repo` di RVC (vietato dal kit, vedi `docs/ERRORI.md`).
+- **Cosa preme a Mario adesso:** scegliere e prenotare l'alloggio (prezzi che salgono) fra TANTE opzioni spiegate una contro l'altra, con almeno una spa, trasporti economici e veloci (niente taxi né Uber); la pagina di dicembre come sera romantica blu con stelle e lucine; poi biglietti Disney.
 
-## Stato (21/11 15:56 ora italiana)
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorta della #2 unita (merge normale).
+## Stato (21/11 16:08 ora italiana)
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorta della #3 (`scorta-principale-20261121-01WTjqUtMTqK/…`): solo copie automatiche di lavoro già nel ramo (versioni più vecchie di `docs/DA-FARE.md` e consegne): NON unirla, la toglie il giro notturno.
 - Kit 43 · 19/11/2026 · Preferenze v38 installato, prove 43/43 verdi (verifica: `docs/kit-progetto/VERSIONE`; tutti i `tools/test-*.py` con `python3 -I`).
-- Pagina «Parigi e Disney a Natale» pubblicata come Artifact: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap (privata; sorgente `dicembre/parigi-disney-natale.html`; verifica: la sorgente nel ramo è quella pubblicata, versione 3 del 21/11 ~15:53, grafica calda). Mario non ha ancora scritto di averla vista: promessa aperta (voce «👁 Lo vedi» in `docs/DA-FARE.md`, foto in `archivio/foto-dicembre/`).
+- Pagina «Parigi e Disney a Natale» pubblicata come Artifact: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap (privata; sorgente `dicembre/parigi-disney-natale.html`; verifica: la sorgente nel ramo è quella pubblicata, versione 3 del 21/11 ~15:53, grafica calda). Mario l'ha vista e ha risposto «cambia» (ultimo messaggio): da rifare blu notte con stelle (voce in `docs/DA-FARE.md` sezione 1).
 - Sito `main` (https://kur0chanx.github.io/parigi-in-tasca/) ancora con la guida 22–26/11: non toccato (verifica: `git diff origin/main -- index.html` vuoto).
 
 ## Riferimenti
 - Appunti: `research_notes/Parigi mercatini e Disneyland dicembre/` → `hotel_val_d_europe.md`, `hotel_disney.md`, `biglietti_disney.md`, `mercatini_natale.md`, `trasporti_bagagli.md`.
 - Foto di Mario di oggi (prenotazione voli, Ki Space su Booking): solo in chat, non salvate in `archivio/` (contengono il codice di prenotazione: non vanno nel repo).
+- Confronto alloggi della #3: `research_notes/Parigi mercatini e Disneyland dicembre/hotel_foto_booking_mario.md` (candidati vicini alla RER con pulizia e orari; lontani; tutte le strutture delle foto; costi dei trasporti; cose non verificate).
 - 28 foto di Booking di Mario (ricerca «Moxy Paris Val d'Europe · 12–17 dic», 5 notti, 2 adulti; Moxy 689 €, Residence du Parc 546 €, molti appartamenti privati con voti 8–9,8): `archivio/2026-11-21-booking-12-17-dic-mario/01…28-booking.jpg` (600 px).
 
 ## Sessione appena chiusa
-- #2 (Opus 5.5 · Extra): avvio, poi la richiesta di Mario arrivata dopo l'handoff della #1: pagina di dicembre «tanti mercatini luci e atmosfera natalizia avvolgente non triste».
-- Fatto: colori caldi (fondo vin brulé, oro, abete, rosso; tema chiaro crema), fila di 11 casette del mercatino accese con festoni davanti al castello, Torre Eiffel dorata che scintilla, festone in cima alla pagina, cartolina del mercatino nella domenica e in fondo alla pagina, divisori di lampadine con alone. Testi, prezzi e orari non toccati. Ripubblicata sullo stesso link (versione 3). Prove: 400 e 1280 px, tema scuro e chiaro, nessun errore né scorrimento di lato; non provata su un telefono vero.
-- Foto mandate a Mario (domanda in «## 0. Aspetta Mario»): `archivio/foto-dicembre/2026-11-21-pagina-calda-apertura.jpg` (prima/dopo) e `…-domenica-e-chiaro.jpg`.
-- Idea detta a Mario nel parere, non fatta: aggiungere il mercatino di La Défense alla domenica (rischio orario armadietti 22:00, date 2026 da verificare).
-- Errore: foto di lavoro aperte senza scritta in alto (E314) → riga in `docs/ERRORI.md`.
-- Mentre lavoravo, nella #1 sono arrivate le 28 foto di Booking e il criterio trasporti (vedi «Ultimo messaggio»): non ancora guardate.
-- Controllo Da fare: 1 voce aggiunta (hotel con le 28 foto e criterio trasporti, sezione 1).
+- #3 (Opus 5.5 · Extra): avvio, poi confronto delle 28 foto di Booking (circa 60 alloggi) col criterio trasporti di Mario.
+- Scoperta: il «km dal centro» di Booking è dal paese di Montévrain, non dalla stazione: 2,4–2,8 km ≈ vicino alla RER Val d'Europe; 0,2–1,4 km ≈ lontano (bus 2233 o 25–30 min a piedi). Gli appartamenti con le sigle (B206, B309, C016, C101, 212…) sono tutti in Avenue de la Société des Nations, a ~2,2 km dalla RER.
+- Migliori vicino alla RER (5 notti, prezzi delle foto): Stylish Apartment Rentaway 597 € (9,3, pulizia 9,3, 12 min a piedi, arrivo fino a mezzanotte), Moxy 689 € (8,7, pulizia 9,0, 8 min, reception 24 ore; la foto è forse la camera a 2 letti singoli), Chez Stéphane & Sophie 589 € (9,4, pulizia 9,5, 15 min, arrivo fino alle 23), Studio parking wifi 611 € (letto a castello), Grand Appartement Dreams 657 € (cauzione 500 € con bonifico). Dettagli e fonti nel file.
+- Domanda nuova: notti dal 13 o dal 12 (riga in «## 0. Aspetta Mario»). La domanda «quale alloggio» NON è stata fatta: Mario intanto ha chiesto tante opzioni e una spa (ultimo messaggio).
+- Niente mandato a Mario in questa sessione (nessuna foto, nessuna scelta): il primo messaggio della #4 è il suo.
+- Controllo Da fare: 0 voci aggiunte (le due richieste dell'ultimo messaggio le ha già scritte la #2; la #3 ha aggiornato la voce hotel con «fatto» e «manca»).
 
 ## Strade provate e scartate (perché; così la prossima non le rifà)
 - Negozio ufficiale Disney e motore di prenotazione Disney con browser automatico: 403, bloccati. Prezzi dai siti non ufficiali concordi; il vero si legge alla cassa.
 - Booking dal computer senza accesso: non mostra lo sconto Genius né il prezzo «solo su mobile» di Mario; il prezzo vero lo legge Mario nell'app.
+- Elenchi di Booking con browser automatico (Playwright): pagina vuota; cambiare l'«user agent» lo blocca il filtro di sicurezza (aggirare un blocco di un sito = vietato). Funziona invece `web_fetch` di Parallel Search sulle schede Booking (dà pulizia, orari, cauzioni) e la ricerca per nome (indirizzi da planetofhotels, Google Maps, Airbnb).
+- Lodge du Petit Lion (9,6): arrivo solo 16–20, domenica si arriva verso le 21:45. La Coudraie: 5,4 km dalla RER, in campagna. Ki Space: 3,1 km dalla RER (serve il bus): fuori dal criterio trasporti, ma ha la spa → rivalutarlo come «opzione spa».
 - Unire la scorta automatica `scorta-principale-20261121-01WTjqUtYZaK/…`: più vecchia del ramo, avrebbe rimesso `docs/ERRORI.md.prima-del-kit` già tolto. Non unita.
 
 ## Prossimi passi
-0. Nuovo messaggio di Mario (vedi «Ultimo messaggio»): la pagina va rifatta come sera romantica blu con tante stelle e lucine (non colori caldi), e l'hotel va presentato come tante opzioni spiegate, con almeno una spa. Voci in `docs/DA-FARE.md` sezione 1.
-1. All'avvio: `subscribe_pr_activity` sulla PR #2 (nessun controllo automatico sul ramo: solo `pulisci-scorte.yml` di notte).
-2. Hotel (voce in `docs/DA-FARE.md` sezione 1): Mario ha scritto «aspetta le altre foto prima di pensare». Se scrive che ha finito (o non manda altro), guarda le 28 foto e fai per ogni candidato valido (voto sopra 8, pulizia buona): prezzo, minuti a piedi dalla RER A Val d'Europe o Chessy (o bus), costo e tempo mattina ai parchi, ultimo ritorno dopo le 22:00. Criterio di Mario: niente taxi né Uber, mattina economica e veloce, sera senza ore di viaggio né costi alti. Appartamenti privati: segnala check-in di sera e cauzioni.
-3. Prima del confronto, domanda a Mario sulle date: la ricerca nelle foto è sab 12 → gio 17 (5 notti), il volo d'andata è dom 13 (4 notti). Arrivate un giorno prima? Riga in «## 0. Aspetta Mario».
-4. Ricordare le righe di «## 0. Aspetta Mario» (blocco «⚠️ Aspettano te»); la domanda intera quando Mario scrive, una per messaggio con le foto.
-5. Hotel scelto → nella pagina: scheda «Consigliato» sull'hotel scelto, orari di uscita lun–gio per quell'hotel, ripubblicare l'Artifact (prima `Artifact read` con `path: index.html` e confronto con `git show HEAD:dicembre/parigi-disney-natale.html`; poi publish con `url`: il primo publish viene rifiutato e conta come lettura, il secondo uguale passa), commit della sorgente.
+1. All'avvio: `subscribe_pr_activity` sulla PR #2.
+2. Hotel, tante opzioni (voce in `docs/DA-FARE.md` sezione 1; Mario «fammi capire perché questo è meglio di questo … tante opzioni … una spa»): parti dal file `hotel_foto_booking_mario.md` e da `hotel_val_d_europe.md`. Aggiungi gli alloggi con spa o piscina comodi senza auto: Relais Spa Val d'Europe (4★, 400 m dalla RER, 712,53 € per 4 notti da computer il 21/11), Ki Space Hotel & Spa (spa, 465 € per 4 notti nell'app di Mario, ma 3,1 km dalla RER), hotel Disney con piscina (`hotel_disney.md`), e cerca altri (ricerca aggiornata, prezzi del giorno). Fai gruppi chiari, ognuno col suo «perché sì / perché no»: più economico vicino alla RER, più comodo (reception 24 ore, poco cammino), più spazioso, con spa, a piedi dai parchi. Per ogni opzione: prezzo (foto di Mario o pagina ufficiale, con data), minuti a piedi dalla RER, pulizia, arrivo domenica sera (verso le 21:45), costo dei trasporti lun–mer (RER 2,55 € a corsa, 30,60 € in due per 3 giorni).
+3. Mettile nella pagina di dicembre (Mario: «metti anche diverse opzioni per l'hotel»): sezione «Scegli l'alloggio» con le schede a confronto. Insieme al punto 4 (stessa ripubblicazione).
+4. Pagina blu romantica (voce in sezione 1): cielo blu notte o celeste con tante stelle, tante lucine, sera; tieni casette e festoni; via i colori caldi vin brulé. Foto prima/dopo con `tools/confronta-foto.py` (skill `foto`, scritta in alto), poi ripubblica sullo stesso link (prima `Artifact read` con `path: index.html`, poi publish con `url`).
+5. Poi a Mario, in un messaggio: le foto, e le domande «quale alloggio» (scelte numerate, una per gruppo) e «notti dal 13 o dal 12» (già in «## 0. Aspetta Mario»).
 6. Risposta «sito»: con 1 → nuova `index.html` per dicembre sul modello della guida di novembre; poi `python3 -I tools/controlla-colori.py`.
 7. Risposta «unione»: unire la #2 solo col suo ok scritto (skill `unione-pr`).
 8. Da ricontrollare la settimana prima (lista nella pagina): orari RER A del 13–17/12, scioperi, terminal Volotea a Orly.
 
 ## Blocchi e rischi
-- Prezzi hotel visti il 21/11: possono salire. Tariffe più basse non rimborsabili.
+- Prezzi hotel visti il 21/11: possono salire. Tariffe più basse non rimborsabili (Stylish e Moxy: nelle foto niente «Cancellazione gratuita»).
+- Appartamenti privati: niente reception, codici il giorno stesso, penali per pulizia (Stylish 300 €), età minima 24–25, cauzioni con bonifico (Grand Appartement Dreams 500 €).
 - Pacchetti Disney prenotati a meno di 30 giorni: forse pagamento intero subito (due pagine ufficiali discordano); non serve finché non si sceglie Disney.
 
 ## Ultimo messaggio di Mario
@@ -65,9 +67,9 @@ Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal regist
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-21 15:42 · [AVVIO] Sessione #2 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cla… → testo d'avvio della #2 (fatto: avvio, poi pagina calda versione 3)
+- 2026-11-21 15:57 · [AVVIO] Sessione #3 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cla… → testo d'avvio della #3 (fatto: avvio, confronto delle 28 foto in `hotel_foto_booking_mario.md`)
 
 Ultimo, intero:
-> [AVVIO] Sessione #2 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
+> [AVVIO] Sessione #3 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
 > Leggi CLAUDE.md, docs/ERRORI.md e docs/PASSAGGIO-CONSEGNE.md; continua da sola dai «Prossimi passi».
 
