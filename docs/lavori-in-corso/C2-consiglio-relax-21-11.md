@@ -14,5 +14,5 @@
 ## Stato
 - [x] pagina: consiglio, domenica con la spa, costi, «Da fare», «Da ricontrollare» (navetta a chiamata da confermare)
 - [x] prove (browser, telefono 390 px, controlla-colori)
-- [ ] pubblicazione Artifact (v7 = v6 + questo)
+- [x] pubblicazione Artifact (v7 = v6 + questo), 21/11 ~17:20
 - [x] domanda «Quale alloggio» aggiornata col consiglio nuovo

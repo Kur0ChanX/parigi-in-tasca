@@ -2,16 +2,16 @@
 
 La scrive la sessione che chiude, nello stesso commit delle consegne (skill `consegne`, fase 5; righe di fatto da `tools/consegne.py`). Di solito la apre Claude con `create_session`; Mario la apre da qui solo a 8 della catena o al cambio account (i suoi passi: `docs/kit-progetto/CAMBIO-ACCOUNT.md`).
 
-Scritta da: #6 per la #7 · 21/11/2026 · la apre la #6 con `create_session` (catena 6 di 8), motore Opus 5.5, impegno Extra.
+Scritta da: #7 per la #8 · 21/11/2026 · la apre la #7 con `create_session` (catena 7 di 8), motore Opus 5.5, impegno Extra.
 
 - Dove: https://claude.ai/code → repo `Kur0ChanX/parigi-in-tasca`, ramo `claude/parigi-ramo-definitivo`
 - Motore: Opus 5.5 · impegno Extra (C474: uguali alla sessione che chiude; aperta da Mario: li sceglie lui così)
 
 ## Titolo
-🟢 🗼 Principale 7 · pubblica pagina v6
+🟢 🗼 Principale 8 · scelta alloggio e
 
 ## Testo da incollare
 ```
-[AVVIO] Sessione #7 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
+[AVVIO] Sessione #8 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
 Leggi CLAUDE.md, docs/ERRORI.md e docs/PASSAGGIO-CONSEGNE.md; continua da sola dai «Prossimi passi».
 ```

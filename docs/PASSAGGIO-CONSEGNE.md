@@ -1,15 +1,15 @@
 # Passaggio di consegne
 
-Sessione attuale: #7 (dopo la #6 `session_01WTjqUuDpVAWjVu6EeFF7G2`, chiusa alla soglia 21/11 17:03; la apre la #6 con `create_session` (catena 6 di 8)).
+Sessione attuale: #8 (dopo la #7 `session_01WTjqUxvERSiPgYyfyxxMEr`, chiusa alla soglia 21/11 17:16; la apre la #7 con `create_session` (catena 7 di 8)).
 
-- **Già deciso da Mario (non richiedere):** viaggio dom 13 → gio 17/12/2026 in 2, senza auto; dom mercatini a Parigi, lun–mer Disneyland; alloggio con voto sopra 8 e pulizia buona, comodo senza auto (niente taxi né Uber); vanno bene hotel, B&B, appartamenti, stanze; kit installato (21/11), icona 🗼, ramo `claude/parigi-ramo-definitivo`; pagina «un po' disneyana, un po' mercatini», sera romantica; DUE colori a scelta (Blu notte · Vin brulé, interruttore sotto il titolo: Mario «va bene» 21/11).
-- **Da non rifare:** la ricerca alloggi (fatta dalla #4 con 2 aiutanti: `alloggi_spa_comodi.md` 10 schede, `alloggi_ricerca_ampia.md` 16 schede, prezzi Booking 13→17 del 21/11); la sezione «Alloggi» della pagina (15 numerati, pubblicata); la pagina blu e l'interruttore dei colori (pubblicati); il mio consiglio unico n. 8 Moxy con cancellazione gratuita (versione 5, pubblicata dalla #5); il confronto delle 28 foto (`hotel_foto_booking_mario.md`); la ricerca jacuzzi/idromassaggio privato (#6, `alloggi_jacuzzi.md`); il verdetto spa nella pagina; il mega consiglio dei mercatini; la pagina che segue l'alloggio scelto (C1, nel ramo); `add_repo` di RVC (vietato).
-- **Cosa preme a Mario adesso:** scegliere e prenotare l'alloggio (prezzi che salgono, cancellazioni gratuite che scadono il 29/11) scrivendo il NUMERO (1–15) della pagina (mio consiglio: n. 8 Moxy con cancellazione gratuita, circa 577 €); i mercatini (domenica) sono importanti per lui; poi biglietti Disney. Le sue 4 richieste del 21/11 (spa anche jacuzzi, mega consiglio mercatini, pagina che cambia secondo l'alloggio, link «web app» per l'amico) sono fatte nel ramo (C1, `docs/lavori-in-corso/C1-pagina-dicembre-21-11.md`) ma la versione 6 NON è ancora pubblicata: è il primo passo.
+- **Già deciso da Mario (non richiedere):** viaggio dom 13 → gio 17/12/2026 in 2, senza auto; dom mercatini a Parigi, lun–mer Disneyland; alloggio con voto sopra 8 e pulizia buona, comodo senza auto (niente taxi né Uber); vanno bene hotel, B&B, appartamenti, stanze; kit installato (21/11), icona 🗼, ramo `claude/parigi-ramo-definitivo`; pagina «un po' disneyana, un po' mercatini», sera romantica; DUE colori a scelta (Blu notte · Vin brulé, interruttore sotto il titolo: Mario «va bene» 21/11). Notti: 4, dal 13 al 17 («le notti le conti in base al biglietto del volo», 21/11). Relax SOLO il primo giorno (domenica), lun–mer solo Disney con trasporti zero stress; tutto «a prova di stupido» (21/11, dopo l'handoff della #6).
+- **Da non rifare:** la ricerca alloggi (fatta dalla #4 con 2 aiutanti: `alloggi_spa_comodi.md` 10 schede, `alloggi_ricerca_ampia.md` 16 schede, prezzi Booking 13→17 del 21/11); la sezione «Alloggi» della pagina (15 numerati, pubblicata); la pagina blu e l'interruttore dei colori (pubblicati); il mio consiglio unico n. 8 Moxy con cancellazione gratuita (versione 5, pubblicata dalla #5); il confronto delle 28 foto (`hotel_foto_booking_mario.md`); la ricerca jacuzzi/idromassaggio privato (#6, `alloggi_jacuzzi.md`); il verdetto spa nella pagina; il mega consiglio dei mercatini; la pagina che segue l'alloggio scelto (C1, nel ramo); `add_repo` di RVC (vietato). Il consiglio nuovo n. 12 Relais Spa e la domenica con la spa (C2, versione 7 pubblicata dalla #7); la rilettura delle tariffe del Relais Spa (21/11 sera, `alloggi_spa_comodi.md`).
+- **Cosa preme a Mario adesso:** prenotare l'alloggio (cancellazioni gratuite che scadono il 29/11, prezzi che salgono) scrivendo il NUMERO; mio consiglio ora **n. 12 Relais Spa**, «Camera» 25 m² con letto matrimoniale e cancellazione gratuita fino all'8/12, 908 € (spa inclusa domenica sera 20:20–22:00; lun–mer 5 minuti + 1 fermata). Poi biglietti Disney e il link per l'amico.
 
-## Stato (21/11 17:03 ora italiana)
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-principale-20261121-01WTjqUuDpVA/claude/parigi-ramo-definitivo.
+## Stato (21/11 17:16 ora italiana)
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-principale-20261121-01WTjqUxvERS/claude/parigi-ramo-definitivo.
 - Kit 43 · 19/11/2026 · Preferenze v38 installato, prove 43/43 verdi (verifica: `docs/kit-progetto/VERSIONE`; tutti i `tools/test-*.py` con `python3 -I`).
-- Pagina «Parigi e Disney a Natale» come Artifact: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap (privata). Online c'è ancora la **versione 5** (verificato il 21/11 ~16:55: copia online = `git show d4bd286:dicembre/parigi-disney-natale.html`, a parte la riga `<title>` in testa e `</body></html>` in fondo). Nel ramo c'è la **versione 6** non pubblicata (commit a9f49e0 e prima 2154da4): scelta dell'alloggio (menu in «Giorno per giorno» + tasto «Usa questo nella pagina» nelle schede; giorni, costi, trasporti, «Da fare» e «Da ricontrollare» seguono la scelta; ricordata sul telefono e con `?alloggio=N`), mega consiglio dei mercatini in cima alla domenica e in «In breve», verdetto «spa o jacuzzi: vale la pena?» nel riquadro del consiglio, n. 13 con bus 2234 e regola delle 23. Prove: browser senza errori, telefono 390 px ok, `controlla-colori.py` VERO. Foto per Mario (mandate dalla #6 alle ~17:10): `archivio/2026-11-21-pagina-v6/1…4-*.jpg`.
+- Pagina «Parigi e Disney a Natale» come Artifact: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap (privata). Online la **versione 7** = v6 (scelta dell'alloggio, mega consiglio mercatini) + C2 (consiglio n. 12, domenica con la spa), pubblicata dalla #7 il 21/11 ~17:20 (verifica: `Artifact read` con `path: "index.html"` e `diff` con `dicembre/parigi-disney-natale.html` del ramo: uguali a parte la riga `<title>` e `</body></html>`). Prove: browser senza errori, telefono 390 px, Moxy scelto dal menu torna alla domenica normale, `controlla-colori.py` VERO. Foto della v7 non fatte (soglia): la prossima le fa se Mario le vuole.
 - Sito `main` (https://kur0chanx.github.io/parigi-in-tasca/) ancora con la guida 22–26/11: non toccato (verifica: `git diff origin/main -- index.html` vuoto).
 
 ## Riferimenti
@@ -21,11 +21,10 @@ Sessione attuale: #7 (dopo la #6 `session_01WTjqUuDpVAWjVu6EeFF7G2`, chiusa alla
 - 28 foto di Booking di Mario (ricerca «Moxy Paris Val d'Europe · 12–17 dic», 5 notti, 2 adulti; Moxy 689 €, Residence du Parc 546 €, molti appartamenti privati con voti 8–9,8): `archivio/2026-11-21-booking-12-17-dic-mario/01…28-booking.jpg` (600 px).
 
 ## Sessione appena chiusa
-- #6 (Opus 5.5 · Extra): unita la scorta della #4 (mancava nel registro il messaggio di Mario delle 16:35); lette le 4 richieste di Mario arrivate nella #5 dopo l'handoff e fatte nel ramo (C1, sopra).
-- Spa (C1a): 1 aiutante (motore leggero) → `alloggi_jacuzzi.md`. Verdetto scritto nella pagina: nei giorni dei parchi spa e jacuzzi non valgono (spa tutte chiuse entro le 22; vasca del n. 13: in camera verso le 23 col bus, un ospite dice niente vasca dopo le 23); se il relax conta, n. 12 Relais Spa con spa dalle 7:00 (+~190 € sul Moxy cancellabile, non rimborsabile). Consiglio unico invariato: n. 8 Moxy.
-- Link per l'amico (C1d): domanda 🛑 nuova in «## 0. Aspetta Mario» (prende il posto di «Sito» e «Unione»; consiglio 1 = web app sul sito accanto a novembre). Fatto verificato: il repo GitHub è pubblico (`api.github.com/repos/...` → `"visibility": "public"`); condividere l'Artifact si fa dal browser (Condividi → «Chiunque abbia il link»), non dall'app; fonti in disaccordo se serve un account Claude.
-- La guida di novembre (22–26/11) serve da domani: non toccarla.
-- Controllo Da fare: 0 voci aggiunte (nessun messaggio nuovo di Mario in questa sessione; le 4 richieste avevano già le voci 👁 scritte dalla #5).
+- #7 (Opus 5.5 · Extra): unita la scorta della #5 (mancava nel registro il messaggio delle 16:44; ripristinata la `ULTIMA-RISPOSTA.md` più nuova). La #6, già chiusa, ha ricevuto 3 messaggi di Mario dopo l'handoff e li ha scritti in `docs/DA-FARE.md` (notti risolte, «a prova di stupido», relax solo domenica).
+- C2 (`docs/lavori-in-corso/C2-consiglio-relax-21-11.md`): consiglio unico da n. 8 Moxy a **n. 12 Relais Spa** (unico con spa vera inclusa 7–22 E a 5 minuti dal treno). Domenica col n. 12: stesse 3 tappe, più veloci dopo il tramonto, rientro 20:10, spa 20:20–22:00; tolta la spa del mattino lun–mer. Conti, «Da fare», «Da ricontrollare», duelli e filtro Spa allineati. Domanda «Quale alloggio»: consiglio ora 3.
+- Errore trovato: gli appunti dicevano «908 € con 2 letti singoli»; riletto su Booking: 908 € è la camera con letto matrimoniale. Riga in `docs/ERRORI.md`.
+- Controllo Da fare: 0 voci aggiunte (i 3 messaggi di Mario avevano già le voci 👁, scritte dalla #6).
 
 ## Strade provate e scartate (perché; così la prossima non le rifà)
 - Negozio ufficiale Disney e motore di prenotazione Disney con browser automatico: 403, bloccati. Prezzi dai siti non ufficiali concordi; il vero si legge alla cassa.
@@ -37,12 +36,12 @@ Sessione attuale: #7 (dopo la #6 `session_01WTjqUuDpVAWjVu6EeFF7G2`, chiusa alla
 - CSS inserito dopo una regola che sta dentro `@media` sulla stessa riga finisce nella media query: controllare la riga intera.
 
 ## Prossimi passi
-1. SUBITO: pubblicare la versione 6. `Artifact read` dell'URL SENZA `path` (con `path` non vale per ripubblicare), poi Read di TUTTE le righe del file salvato che indica (~1090 righe, a pezzi), controllare che sia ancora la v5 (diff con `git show d4bd286:dicembre/parigi-disney-natale.html`), poi publish con `file_path` = `dicembre/parigi-disney-natale.html` e `url` = quello della pagina. Poi commit «versione 6 pubblicata» e a Mario una riga «v6 sul link» (le 4 foto le ha già); chiudere le voci 👁 solo quando Mario le vede.
-2. Domanda «Link per l'amico» (🛑): con 1 → web app in `dicembre/` sul sito (manifest e icona, `noindex`, senza toccare `index.html`, `sw.js` e la guida di novembre), unione in `main` con la skill `unione-pr` (giro completo verde); con 2 → passi guidati a Mario per Condividi dal browser.
-3. Quando Mario sceglie l'alloggio: nella pagina basta che lui lo scelga dal menu; io aggiorno il consiglio in cima se cambia, e verifico gli orari dei bus/navette non verificati di quello scelto (2233, 2234, navette: IDFM ufficiale).
-4. Risposta «notti 13 o 12»: con 2 → prezzi 12→17 in `alloggi_ricerca_ampia.md` «Partire sabato 12».
-5. Se Mario vuole la seconda sera ai mercatini (proposta: mercoledì, Tuileries fino alle 23:45): aggiungerla al giorno di mercoledì.
-6. Da ricontrollare la settimana prima (lista nella pagina): orari RER A del 13–17/12, scioperi, terminal Volotea a Orly.
+1. A Mario, se non l'ha già letto: la v7 è sul link; chiudere le voci 👁 (consiglio, relax, a prova di stupido, mega consiglio, pagina che cambia) solo quando lui le vede.
+2. Domanda «Quale alloggio» (🛑): quando Mario scrive il numero, lo sceglie dal menu della pagina; se non è il 12, aggiorno il consiglio in cima e verifico bus/navette del suo (2233, 2234: IDFM ufficiale). Col 12: chiedere alla reception la navetta gratis per Disney (non confermata).
+3. Domanda «Link per l'amico» (🛑): con 1 → web app in `dicembre/` sul sito (manifest e icona, `noindex`, senza toccare `index.html`, `sw.js` e la guida di novembre), unione in `main` con la skill `unione-pr`; con 2 → passi guidati per Condividi dal browser.
+4. «A prova di stupido»: alla prossima modifica della pagina, una passata di semplificazione dei testi (frasi più corte, meno numeri) prima di aggiungere altro; proporla a Mario in una riga.
+5. Se Mario vuole la seconda sera ai mercatini (proposta: mercoledì, Tuileries fino alle 23:45): aggiungerla al mercoledì.
+6. Da ricontrollare la settimana prima (lista nella pagina): orari RER A del 13–17/12 (anche la domenica sera verso le 19:25, stimata «ogni 15 minuti»), scioperi, terminal Volotea.
 
 ## Blocchi e rischi
 - Prezzi visti il 21/11: possono salire. Cancellazioni gratuite che scadono presto: 29/11 (n. 1, 4, 7, 10, 13), 6/12 (n. 11, 14), 8/12 (n. 12, solo camera 2 letti), 12/12 (n. 5).
@@ -50,11 +49,9 @@ Sessione attuale: #7 (dopo la #6 `session_01WTjqUuDpVAWjVu6EeFF7G2`, chiusa alla
 - Da verificare: navetta a chiamata del Relais Spa per tutti (non ufficiale), reception 24 ore del Crowne Plaza, fermata del bus 2234 e orario della domenica per Jungle Love, linea del bus del n. 7, ultime corse del 2233 per il n. 3, prezzo dell'Elysée sul sito ufficiale. Nella pagina sono segnati «non confermato».
 
 ## Ultimo messaggio di Mario
-«mandamelo con link web app da inviare ad amico 
-Spa posso intendere anche un hotel con una spa dentro, oppure con una jacuzzi dentro, un idromassaggio, ecco. Se ne vale la pena, abbiamo un po' di relax.
-dobbiamo sceglierlo In base a cosa scegliamo di quelli si trasforma la pagina. E mi raccomando, il mega consiglio sui mercatini, non dimenticartene, che per noi è importante appena arriviamo, vedere i migliori mercatini è il miglior giro da fare.» (arrivato nella #5 dopo l'handoff → 4 voci nuove in `docs/DA-FARE.md` sezione 1: link per l'amico, spa anche jacuzzi/idromassaggio, pagina che cambia secondo l'alloggio scelto, mega consiglio sui mercatini; tutte e 4 fatte dalla #6 nel ramo, versione 6 da pubblicare)
+«Allora, la spa la vogliamo fare o l'idromassaggio o insomma modalità relax è solo il primo giorno, poi gli altri 3 giorni ce li dedichiamo solo a Disneyland ed vogliamo essere comodi con i trasporti, ecco. Con i trasporti, zero stress, vogliamo proprio rilassarci a Disneyland.» (arrivato alla #6 dopo l'handoff → voce 👁 in `docs/DA-FARE.md`; fatto dalla #7: C2, versione 7 pubblicata)
 
-Prima: «E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.» (arrivato nella #4 dopo l'handoff → voce in `docs/DA-FARE.md` sezione 1: il mio consiglio unico sull'alloggio, nella pagina e nella domanda; fatto dalla #5: n. 8 Moxy, versione 5; voce 👁 aperta finché Mario lo vede)
+Prima: «Fai tutto di facile comprensione, a prova di stupido, eh?» e «le notti le conti in base al biglietto del volo» (alla #6 dopo l'handoff → voce 👁; notti risolte: 13→17).
 
 (I messaggi più vecchi: `docs/MESSAGGI-MARIO.md`.)
 
@@ -66,9 +63,9 @@ Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal regist
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-21 16:44 · [AVVIO] Sessione #6 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cla… → avvio fatto; 4 richieste di Mario (C1) fatte nel ramo, versione 6 da pubblicare (commit 2154da4, a9f49e0)
+- 2026-11-21 17:05 · [AVVIO] Sessione #7 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cla… → 
 
 Ultimo, intero:
-> [AVVIO] Sessione #6 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
+> [AVVIO] Sessione #7 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
 > Leggi CLAUDE.md, docs/ERRORI.md e docs/PASSAGGIO-CONSEGNE.md; continua da sola dai «Prossimi passi».
 
