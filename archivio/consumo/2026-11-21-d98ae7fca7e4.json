@@ -2,10 +2,10 @@
 "account": "108763",
 "sessione": "d98ae7fca7e4",
 "giorno": "2026-11-21",
-"turni": 4,
-"peso": 349086,
-"uscita": 12362,
-"contesto_max": 167259,
+"turni": 5,
+"peso": 621032,
+"uscita": 14306,
+"contesto_max": 169788,
 "anomalie": [],
 "blocchi": {
 "Stop 9 · Versione unita in questo turno:": 1,
@@ -35,10 +35,11 @@
 },
 "remota": "01WTjqUvDTBB",
 "aiutanti": 0,
-"strumenti": 22,
+"strumenti": 26,
 "bilancia": 2,
 "motori": {
-"opus": 349086
+"opus": 349086,
+"sonnet": 271946
 },
 "grezzi": {
 "opus": [
@@ -47,7 +48,24 @@
 29053,
 0,
 12362
+],
+"sonnet": [
+8,
+499855,
+169786,
+0,
+1944
 ]
 },
-"costo": 0.9816
+"costo": 1.7302,
+"costo_fredde": 0.6599,
+"memoria_scaduta": 1,
+"ricreati": 164977,
+"fredde": [
+[
+164,
+7,
+0
+]
+]
 }
