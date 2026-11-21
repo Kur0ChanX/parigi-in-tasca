@@ -50,6 +50,8 @@ Sessione attuale: #8 (dopo la #7 `session_01WTjqUxvERSiPgYyfyxxMEr`, chiusa alla
 - Da verificare: navetta a chiamata del Relais Spa per tutti (non ufficiale), reception 24 ore del Crowne Plaza, fermata del bus 2234 e orario della domenica per Jungle Love, linea del bus del n. 7, ultime corse del 2233 per il n. 3, prezzo dell'Elysée sul sito ufficiale. Nella pagina sono segnati «non confermato».
 
 ## Ultimo messaggio di Mario
+«Metti qui anche il ki space, quello che ti avevo consigliato io, che abbiamo guardato. Metti anche quello in confronto tra i costi e tutto. Poi metti che se clicco uno di quelli mi porta al discorso o qualche altra pagina, insomma, utile. Comunque rendila veramente facile e intuitiva a livello di visiva. Anche non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa, però non troppissime informazioni, cioè non ti sto dicendo di toglierle, ma di riorganizzarle meglio.» (21/11 17:24, arrivato alla #7 dopo l'handoff, con la foto delle barre dei costi della v7 → `archivio/2026-11-21-foto-mario/1-confronto-costi-v7.jpg`; voce 👁 in `docs/DA-FARE.md` sezione 1; passato alla #8)
+
 «Allora, la spa la vogliamo fare o l'idromassaggio o insomma modalità relax è solo il primo giorno, poi gli altri 3 giorni ce li dedichiamo solo a Disneyland ed vogliamo essere comodi con i trasporti, ecco. Con i trasporti, zero stress, vogliamo proprio rilassarci a Disneyland.» (arrivato alla #6 dopo l'handoff → voce 👁 in `docs/DA-FARE.md`; fatto dalla #7: C2, versione 7 pubblicata)
 
 Prima: «Fai tutto di facile comprensione, a prova di stupido, eh?» e «le notti le conti in base al biglietto del volo» (alla #6 dopo l'handoff → voce 👁; notti risolte: 13→17).
