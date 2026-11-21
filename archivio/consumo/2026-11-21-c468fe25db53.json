@@ -1,0 +1,22 @@
+{
+"account": "108763",
+"sessione": "c468fe25db53",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 160654,
+"anomalie": [],
+"blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": 1
+},
+"esempi_blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": [
+"23:31 · Consegne non su GitHub (C226, blocco 1/3): docs/PASSAGGIO-CONSEGNE.md fuori dal commit. Fai commit e push adesso (`git push -u origin claude/parigi-ramo-definitivo`), controlla `git rev-parse HEAD ori"
+]
+},
+"remota": "01WTjqUxoKhC",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
