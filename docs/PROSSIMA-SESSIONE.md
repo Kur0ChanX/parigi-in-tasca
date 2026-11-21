@@ -8,7 +8,7 @@ Scritta da: #18 per la #19 · 21/11/2026 · la apre Mario (catena a 8 di 8, o ca
 - Motore: Opus 5.5 · impegno Extra (C474: uguali alla sessione che chiude; aperta da Mario: li sceglie lui così)
 
 ## Titolo
-🟢 🗼 Principale 19 · Airbnb nella pagina
+🟢 🗼 Principale 19 · Airbnb online
 
 ## Testo da incollare
 ```

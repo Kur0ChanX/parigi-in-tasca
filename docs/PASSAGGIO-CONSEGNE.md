@@ -1,13 +1,13 @@
 # Passaggio di consegne
 
-Sessione attuale: #19 (dopo la #18 `session_01WTjqUvDTBBd1JEeep7v6m6`, chiusa alla soglia 21/11 22:05; la apre Mario (catena a 8 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`).
+Sessione attuale: #19 (dopo la #18 `session_01WTjqUvDTBBd1JEeep7v6m6`, chiusa alla soglia 21/11 22:48; la apre Mario (catena a 8 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`).
 
 - **Già deciso da Mario (non richiedere):** viaggio dom 13 → gio 17/12/2026 in 2, senza auto; dom mercatini a Parigi, lun–mer Disneyland; alloggio con voto sopra 8 e pulizia buona, comodo senza auto (niente taxi né Uber); vanno bene hotel, B&B, appartamenti, stanze; kit installato (21/11), icona 🗼, ramo `claude/parigi-ramo-definitivo`; pagina «un po' disneyana, un po' mercatini», sera romantica; DUE colori a scelta (Blu notte · Vin brulé, interruttore sotto il titolo: Mario «va bene» 21/11). Notti: 4, dal 13 al 17 («le notti le conti in base al biglietto del volo», 21/11). Relax SOLO il primo giorno (domenica), lun–mer solo Disney con trasporti zero stress; tutto «a prova di stupido» (21/11, dopo l'handoff della #6). Link per l'amico = **web app** sul sito (21/11 17:25); pagina riordinata approvata («ok», 17:34). **Luna a forma di Topolino** con la trama della luna e le stelline (Mario 18:55 «ti autorizzo io»): niente obiezioni sul marchio. Mappe e distanze dentro la scheda dell'alloggio (C5). **Luna-Topolino come la foto di Mario** (21/11 19:13, `archivio/2026-11-21-lune-topolino-dettagli/mario-esempio-luna-topolino.jpg`): 3 lune piene vere, beige.
 - **Da non rifare:** ricerca alloggi (#4, `alloggi_spa_comodi.md`, `alloggi_ricerca_ampia.md`, prezzi Booking 13→17 del 21/11), confronto delle 28 foto (`hotel_foto_booking_mario.md`), ricerca jacuzzi (`alloggi_jacuzzi.md`), rilettura tariffe del Relais Spa; nella pagina (tutto pubblicato): «Alloggi» 15 numerati, colori Blu notte · Vin brulé, consiglio n. 12 e domenica con la spa (C2), verdetto spa, mega consiglio dei mercatini, pagina che segue l'alloggio scelto (C1), Ki Space nei costi e barre che portano alla scheda (C3), icona e anteprima del link (C4); `add_repo` di RVC (vietato). #11: C5 riquadro «Dov'è» (`tools/fai-mappe-dicembre.py`, `dicembre/mappe/`) e C7 luna-Topolino con la trama (`luna()` di `tools/fai-icone-dicembre.js`): nel ramo, prove 24 VERO, foto mandate. #12: luna «come la foto di Mario» (`lunaFoto()` in `tools/luna-topolino.js`) e 3 versioni di prova (`lunaTopolino()`: argento, oro, con l'ombra; foto in `archivio/2026-11-21-lune-topolino-dettagli/lavoro/`). #14: pulsanti grandi in cima (`nav.go`, tolta la barra `.jump`), barra fissa `#topbar`, riquadro `#mkAl` (`mkAl()`), «🚶 La strada» nelle 7 tappe, n. 7 domenica veloce (`by22`): tutto online (v7 PR #8, v8 PR #9). #15: v10 online (PR #11): casette e Torre Eiffel intere scorrendo (`data-max`), costi in una colonna (classe `cresce` al posto di `go`), barra in alto piena; prove `tools/prova-scritte.js` e casette in `prova-web-app.js`. C10: prezzi 1 notte Parigi 13→14 + 3 notti 14→17 (4 gruppi) in `research_notes/…/alloggi_notte_parigi_3notti.md`: NON rifarli. #16: prezzi 3 notti 14→17 dei 15 + 4 hotel di Parigi (`alloggi_prezzi_3notti_15.md`), ricerca larga notte a Parigi (`alloggi_parigi_1notte_ampia.md`), ricerca larga 3 notti vicino a Disney (`alloggi_3notti_disney_nuovi.md`); sezione `#scegli` e motore della scelta (C11 pezzi 1–6). Già deciso (#16): consiglio ★ = Hotel Locomo + n. 8 Moxy; Zenitude ed East-Blue fuori (cauzione addebitata 7 giorni prima). #18: v11 (scelta dell'alloggio corta) e v12 (PC: menù a sinistra, testata intera) online; ricerca Airbnb 14→17 (`alloggi_airbnb_disney_14_17.md`, 11 letti, 3 con jacuzzi scartati perché serve l'auto).
-- **Cosa preme a Mario adesso:** DOMANDA 10 (riga in «## 0»): mettere nella pagina gli Airbnb trovati vicino a Disney (miglior: «Nice studio» di Vincent, 1 minuto dal treno Val d'Europe, 4,95 su 571, ≈ 369 € per 14→17 contro i 530 € del Moxy). Poi la frase su Ki Space da correggere (voce 👁 in Da fare) e l'ok di Mario sulla pagina per PC. Link attuale: `https://kur0chanx.github.io/parigi-in-tasca/dicembre/?v=12`.
+- **Cosa preme a Mario adesso:** v13 online (PR #14): 6 Airbnb n. 16–21 col filtro «Airbnb» (prezzi in euro letti su airbnb.it; 18, 20, 21 liberi solo dal 14), Ki Space come stima. Mario deve vederla sul telefono (voce 👁). Link: `https://kur0chanx.github.io/parigi-in-tasca/dicembre/?v=13`. Il viaggio è dal 13 al 17 (Mario 22:3x «si ma dal 13 al 17 ricordati eh»).
 
-## Stato (21/11 22:05 ora italiana)
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
+## Stato (21/11 22:48 ora italiana)
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-principale-20261121-01WTjqUvDTBB/claude/parigi-ramo-definitivo.
 - Kit 43 · 19/11/2026 · Preferenze v38 installato, prove 43/43 verdi (verifica: `docs/kit-progetto/VERSIONE`; tutti i `tools/test-*.py` con `python3 -I`).
 - **v12 ONLINE** (#18, PR #13 unita 21/11 21:44; v11 PR #12 21:33): verifica `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c 'class="side"'` → 1. Prove: `node tools/prova-web-app.js` 29/29, `node tools/prova-scritte.js` 20/20 (ora anche a 1470 e 1920 px).
 - Catena: la #18 era la 8 di 8 (`send_later` e `create_session` bloccati): la #19 l'apre Mario, la catena riparte da 1 di 8. Sveglie del 7/12 doppie (#16 `trig_01WKYt5jL4JvvWe6oUFnTtSJ` e #17 `trig_01WLZG77twJrNjVRuvgC85rE`), non cancellabili dalla #18 (permesso negato): voce 👁 in Da fare.
@@ -39,7 +39,7 @@ Sessione attuale: #19 (dopo la #18 `session_01WTjqUvDTBBd1JEeep7v6m6`, chiusa al
 - Più vecchie (Disney 403, Booking senza Genius ed elenchi vuoti, PR #2 per pubblicare, service worker su 127.0.0.1, Static Maps, OSM…): in `docs/STRADE-SCARTATE.md`.
 
 ## Prossimi passi
-1. **DOMANDA 10** (riga in «## 0»): se 1 → i 4 Airbnb migliori nella scelta dell'alloggio come n. 16+ (dati e link in `alloggi_airbnb_disney_14_17.md`; nei contro il giro delle valigie di lunedì: check-in dalle 15–16, deposito SNCF di Chessy 7–22), insieme la frase su Ki Space (voce 👁), testi «15» resi generici; foto a Mario, poi versione come la #13 (skill `pr`, ramo-copia `versione-v13` da `origin/main` + solo `dicembre/index.html`). Se 3 → cambiare il consiglio ★. Prezzi Airbnb in dollari: in euro sono stime (× 0,912).
+1. Fatto dalla #18: DOMANDA 10 = sì, Airbnb nella pagina e pubblicati (v13). Chiedere a Mario se li vede bene; dettagli del lavoro nel resoconto dell'aiutante: campo `ab:1` in `AL`, `Q` 4 notti `null` per 18/20/21, `ZONA` in `tools/fai-mappe-dicembre.py` (niente mappa inventata), `.pc>main{min-width:0}`.
 2. Chiedere a Mario l'ok sulla pagina per PC vista sul suo PC (voce 👁).
 3. C11 pezzo 7: mappe e «Dov'è» degli 8 hotel di Parigi (`tools/fai-mappe-dicembre.py`) e degli Airbnb se entrano.
 4. Da verificare: spa del Saint-Pétersbourg, deposito valigie di Astra e Saint-Pétersbourg, piscina del Novotel; distanza della Bucolic Suite; cancellazione dell'Airbnb di David.
@@ -53,7 +53,8 @@ Sessione attuale: #19 (dopo la #18 `session_01WTjqUvDTBBd1JEeep7v6m6`, chiusa al
 - C10 (letti 21/11 sera, senza Genius): Sleeping Belle 216 € canc. fino al 12/12 (letto «alla francese», circa 140 cm, stima); Moxy 3 notti 530 € canc. fino al 14/12; Relais Junior Suite 3 notti 598,80 € solo NR (Black Friday). Elysée esaurito su Booking per 14→17. Biglietti 544 € = non ufficiale.
 
 ## Ultimo messaggio di Mario
-«Cerca su air B&B  qualcosa di interessante vicino a Disneyland» (21/11 22:00) → ricerca Airbnb 14→17, DOMANDA 10.
+«si ma dal 13 al 17 ricordati eh» (21/11 ~22:40) → l'aiutante ha controllato 13→17 per ogni Airbnb; v13 online.
+Prima: «aggiungi sezione air b e b con i top migliori mettine diversi e pro contro info ecc ecc come hai sempre fatto aggiungi agli altri e publica», «aggiungi aiutanti per fare prima e publica», «puoi dirmi gli hotel per iscritto quelli validi trovati su air», link Airbnb di David (poi «scusa non era per te»).
 
 ## Numeri liberi
 Prossimo E libero: E1.
@@ -70,7 +71,14 @@ Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o
 - 2026-11-21 21:43 · publica → risposta alla DOMANDA 9: v12 online (PR #13)
 - 2026-11-21 21:52 · domande veloci perché dici kinsoace domenica arrivate Spa chiusa? → spiegato (stima), voce 👁 per correggere la frase
 - 2026-11-21 22:00 · Cerca su air B&B qualcosa di interessante vicino a Disneyland → `alloggi_airbnb_disney_14_17.md`, DOMANDA 10
+- 2026-11-21 22:08 · aggiungi sezione air b e b con i top migliori mettine diversi e pro contro info … → v13 online (PR #14), 6 Airbnb
+- 2026-11-21 22:12 · aggiungi aiutanti per fare prima e publica → 1 aiutante (più aiutanti sullo stesso file si sovrascrivono), poi v13
+- 2026-11-21 22:22 · quanto manca? → stima ~22:45
+- 2026-11-21 22:23 · puoi dirmi gli hotel per iscritto quelli validi trovati su air → elenco scritto in chat
+- 2026-11-21 22:27 · https://www.airbnb.it/rooms/1233363305858745902?unique_share_id=[segreto tolto d… → dati letti, n. 21 David
+- 2026-11-21 22:28 · scusa non era per te → il n. 21 resta (fra i migliori)
+- 2026-11-21 22:30 · si ma dal 13 al 17 ricordati eh → prezzi 13→17 letti; 18, 20, 21 liberi solo dal 14
 
 Ultimo, intero:
-> Cerca su air B&B  qualcosa di interessante vicino a Disneyland
+> si ma dal 13 al 17 ricordati eh
 
