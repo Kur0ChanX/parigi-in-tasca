@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (21/11/2026 21:28 ora italiana)
+# Ultima risposta di Claude (21/11/2026 21:36 ora italiana)
 
-Mi fermo e aspetto la tua risposta alla DOMANDA 7: la scelta dell'alloggio rifatta si può pubblicare?
+DOMANDA 8, le scelte in breve: 1 · menù a sinistra, contenuto largo · 2 · solo più larga · 3 · lascia com'è.

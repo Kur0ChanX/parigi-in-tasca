@@ -7,7 +7,7 @@ const file = path.resolve(process.argv[2] || path.join(__dirname, '..', 'dicembr
 (async () => {
   const b = await chromium.launch({ executablePath: fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined });
   let falsi = 0;
-  for (const w of [360, 390, 412]) for (const tema of ['blu', 'vin']) for (const aperte of [false, true]) {
+  for (const w of [360, 390, 412, 1470, 1920]) for (const tema of ['blu', 'vin']) for (const aperte of [false, true]) {
     const p = await b.newPage({ viewport: { width: w, height: 800 } });
     await p.goto('file://' + file); await p.waitForTimeout(400);
     if (tema === 'vin') await p.evaluate(() => { const x = [...document.querySelectorAll('.switch button')]; if (x[1]) x[1].click(); });
