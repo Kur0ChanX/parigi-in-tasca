@@ -7,6 +7,7 @@ Sessione attuale: #18 (dopo la #17 `session_01WTjqUvCPBbm8KqjbGWDG3h`, chiusa al
 - **Cosa preme a Mario adesso:** C11 «Scegli dove dormire»: impaginazione rifatta dalla #17 (righe che si aprono, 3 numeri in cima, ~5 schermate invece di ~15), nel ramo, NON pubblicata; aspetta la DOMANDA 7 (ok a pubblicare, foto `archivio/2026-11-21-c11-scegli-impaginazione/` mandate 21:27). Poi alloggi nuovi vicino a Disney (pezzo 9). Link attuale: `https://kur0chanx.github.io/parigi-in-tasca/dicembre/?v=10`.
 
 ## Stato (21/11 21:28 ora italiana)
+- #18 = sessione 8 di 8 della catena: `send_later` e `create_session` bloccati; la #19 la apre Mario da `docs/PROSSIMA-SESSIONE.md`. v11 ONLINE (PR #12, 21/11 21:33). Sveglie del 7/12 doppie (#16 e #17) non cancellabili.
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-principale-20261121-01WTjqUvCPBb/claude/parigi-ramo-definitivo.
 - Kit 43 · 19/11/2026 · Preferenze v38 installato, prove 43/43 verdi (verifica: `docs/kit-progetto/VERSIONE`; tutti i `tools/test-*.py` con `python3 -I`).
 - **v10 ONLINE** (#15, PR #11 unita 21/11 ~20:13; prima v9 PR #10, v8 PR #9, C5/C7 PR #6): verifica `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c "add('cresce')\|data-max=\"18\""` → 2. Prove: `node tools/prova-web-app.js` 25/25 (6 giri di fila), `node tools/prova-scritte.js` 12/12.
