@@ -172,6 +172,11 @@ b,strong{font-weight:700}
 .go a:active{transform:scale(.97)}
 @media (hover:hover){.go a:hover{background:rgb(255 255 255 / .14)}}
 .go a.hot{grid-column:1/-1;min-height:72px;font-size:1.15rem;font-weight:800;background:var(--lamp);color:var(--lamp-ink);border-color:transparent;box-shadow:0 0 0 4px rgb(246 201 100 / .18),0 10px 26px -10px rgb(246 201 100 / .6)}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:6px;justify-content:center;padding:8px max(10px,env(safe-area-inset-left,0px));padding-top:calc(8px + env(safe-area-inset-top,0px));background:rgb(10 18 48 / .94);border-bottom:1px solid rgb(255 255 255 / .14);transform:translateY(-110%);transition:transform .25s ease}
+.topbar.on{transform:none}
+.topbar a{flex:1 1 0;max-width:11rem;display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 8px;border-radius:12px;color:#F4F1FF;text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid rgb(255 255 255 / .2);white-space:nowrap}
+.topbar a.hot{background:var(--lamp);color:var(--lamp-ink);border-color:transparent;font-weight:800}
+html{scroll-padding-top:72px}
 .go-more{margin-top:var(--s2);font-size:.92rem}.go-more a{color:var(--night-ink);display:inline-block;padding:10px 4px}
 .mk-btns{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s3) 0 var(--s4)}
 .mk-giro{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2);counter-reset:none}
@@ -568,6 +573,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
  </div>
 </header>
 
+<nav class="topbar" id="topbar" aria-label="Scorciatoie" aria-hidden="true"><a class="hot" href="#mercatini" tabindex="-1">🎄 Mercatini</a><a href="#hotel" tabindex="-1">🏨 Alloggio</a><a href="#giorni" tabindex="-1">📅 Giorni</a><a href="#top" tabindex="-1" aria-label="Tutti i pulsanti">☰ Menu</a></nav>
 <main>
 <section id="breve" aria-labelledby="h-breve"><div class="wrap">
  <div class="sec-head"><p class="kicker">La risposta in breve</p><h2 id="h-breve">Scegliete l'alloggio fra 15 e prenotate il biglietto Disney da 3 giorni. Il resto si paga sul posto.</h2></div>
@@ -1250,6 +1256,8 @@ const mkAl=()=>{const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode==='bus'
   li=["Champs-Élysées fino alle 20:15, poi metro 1 verso la Gare de Lyon e le valigie (armadietti fino alle 22:00).",`RER A delle 21:08 o 21:23 fino a ${st}${P.mode==='nav'?", poi la navetta dell'hotel":''}.`,`All'alloggio verso le ${P.sunT} ${B.es()}.`]}
  li.push("Stanchi o piove: il giro corto, quasi tutto al coperto, finisce alle 18:30.");
  $('#mkAl').innerHTML=`<p class="k">${CHO===MIO?'Col mio consiglio':'Con il vostro alloggio'} · n. ${CHO} ${esc(h.n)}</p><p class="v">${v}</p><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul><p class="small"><a href="#chooser">Cambia alloggio</a></p>`};
+/* barra in alto quando i pulsanti grandi escono dallo schermo (Mario 21/11 19:52 «quando scrollo verso il basso i mercatini si nascondono») */
+{const tb=$('#topbar'),go=document.querySelector('.go');if(tb&&go&&'IntersectionObserver' in window){new IntersectionObserver(e=>{const on=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;tb.classList.toggle('on',on);tb.setAttribute('aria-hidden',on?'false':'true');tb.querySelectorAll('a').forEach(a=>a.tabIndex=on?0:-1)}).observe(go)}}
 let SHORT=false;
 const renderDays=()=>{DAYS=mkDays();if(P.spa||P.by22)spaSun(DAYS[0]);let html='';
 DAYS.forEach((d,i)=>{
