@@ -2,18 +2,18 @@
 "account": "108763",
 "sessione": "e71524274efb",
 "giorno": "2026-11-21",
-"turni": 5,
-"peso": 430040,
-"uscita": 16093,
-"contesto_max": 240995,
+"turni": 7,
+"peso": 559570,
+"uscita": 17734,
+"contesto_max": 397065,
 "anomalie": [
 "avvio pesante: 204k token dopo le letture d'avvio (tetto 130k)",
 "1 uscite di strumento enormi (444 KB la più grande): leggere a pezzi (grep -n, sed -n)"
 ],
 "blocchi": {
 "Stop 5 · Notifica non letta (in coda": 1,
-"Stop 10 · Promessa a Mario senza voce": 2,
-"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 10 · Promessa a Mario senza voce": 3,
+"Stop 7 · Domanda a Mario poco chiara": 2,
 "Stop 8 · Il turno finisce con una": 1
 },
 "esempi_blocchi": {
@@ -22,10 +22,12 @@
 ],
 "Stop 10 · Promessa a Mario senza voce": [
 "16:20 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «La pubblico insieme agli alloggi, così il link cambia una volta sola.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario",
-"16:23 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Lo vedi sulla pagina vera quando la pubblico insieme agli alloggi.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> ·"
+"16:23 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Lo vedi sulla pagina vera quando la pubblico insieme agli alloggi.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> ·",
+"16:35 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Ho passato il tuo messaggio alla sessione nuova, che aggiungerà il suo consiglio unico sull'alloggio: https://claude.ai/code/session_01WTjqU»."
 ],
 "Stop 7 · Domanda a Mario poco chiara": [
-"16:20 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1** · 📌 Di cosa parliamo: i colori d», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l"
+"16:20 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1** · 📌 Di cosa parliamo: i colori d», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l",
+"16:35 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1** · 📌 Di cosa parliamo: quale allo», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l"
 ],
 "Stop 8 · Il turno finisce con una": [
 "16:23 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
@@ -33,19 +35,19 @@
 },
 "remota": "01WTjqUxBAKZ",
 "aiutanti": 0,
-"strumenti": 11,
+"strumenti": 13,
 "bilancia": 2,
 "motori": {
-"opus": 430040
+"opus": 559570
 },
 "grezzi": {
 "opus": [
-30,
-3168227,
-26178,
+36,
+4355230,
+28273,
 0,
-16093
+17734
 ]
 },
-"costo": 1.165
+"costo": 1.452
 }
