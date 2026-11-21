@@ -53,6 +53,8 @@ Sessione attuale: #9 (dopo la #8 `session_01WTjqUwT3GsbcTs9uTQhbck`, chiusa alla
 - Da verificare: navetta a chiamata del Relais Spa per tutti (non ufficiale), reception 24 ore del Crowne Plaza, fermata del bus 2234 e orario della domenica per Jungle Love, linea del bus del n. 7, ultime corse del 2233 per il n. 3, prezzo dell'Elysée sul sito ufficiale. Nella pagina sono segnati «non confermato».
 
 ## Ultimo messaggio di Mario
+«Sì, questa app conta che ci serve principalmente per i mercatini di Natale e per scegliere il miglior hotel in base agli spostamenti, il prezzo, comodità, eccetera, i servizi. Per quello dobbiamo ancora scegliere l'hotel, perché ci stai aiutando tu. Guarda se è tutto perfetto per aiutarci e basta. Certo che come icona potevi fare tipo um, Parigi piena di mercatini di Natale, fatto bene, pieno di luci, di decorazioni, potevi farla così l'icona. E metti anche l'immagine se la invio su Telegram e su WhatsApp, allegato al link.» (21/11 17:5x, arrivato alla #8 dopo l'handoff → voce 👁 in `docs/DA-FARE.md` sezione 1; passato alla #9)
+
 «ok» (21/11 17:34, risposta a «mi serve il tuo ok per metterla online come web app» → pubblicata, v2).
 
 Prima, in questa sessione: «web app dopo aver risposto alla domanda della sessione precedente.» (17:25 → web app dopo C3). Alla #7 dopo l'handoff (17:24): «Metti qui anche il ki space … rendila veramente facile e intuitiva … non ti sto dicendo di toglierle, ma di riorganizzarle meglio.» (intero in `docs/lavori-in-corso/C3-pagina-facile-21-11.md`).
