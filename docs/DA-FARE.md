@@ -5,7 +5,7 @@
 
 ## 0. Aspetta Mario
 - 21/11 · 🛑 · 🟡 Principale 3 · Quante notti prenotare, dal 13 o dal 12 dicembre: 1 dal 13 al 17 (4 notti, come il volo) · 2 dal 12 al 17 (5 notti, come la ricerca nelle foto).
-- 21/11 · 🛑 · 🟢 Principale 4 · Quale alloggio prenotare: scrivi il numero (1–15) della sezione «Alloggi» della pagina. Consiglio: 4 spendere poco · 8 tutto comodo · 12 spa · 13 romantico. Pagina: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap
+- 21/11 · 🛑 · 🟢 Principale 4 · Quale alloggio prenotare (sezione «Alloggi» della pagina): 1 · n. 4 Chez Stéphane, spendere poco · 2 · n. 8 Moxy, tutto comodo · 3 · n. 12 Relais Spa, spa · 4 · n. 13 Jungle Love, romantico · 5 · un altro: scrivi il suo numero (1–15). Pagina: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap
 - 🟡 Principale 1 · 21/11 · Sito: 1 sostituire la guida di novembre con dicembre · 2 lasciarla · 3 tenere tutti e due i viaggi.
 - 🟡 Principale 1 · 21/11 · Unione del ramo in `main` (pubblica sul sito anche appunti e pagina di dicembre): 1 unisci tutto · 2 aspetta.
 
