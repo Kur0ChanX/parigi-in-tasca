@@ -62,3 +62,9 @@ Certo che come icona potevi fare tipo um, Parigi piena di mercatini di Natale, f
 ## 2026-11-21 18:03 · 01WTjqUvsd71
 aggiungi anche topolino di Disney a forma di luna nello sfondo nell'icona e immagine 
 e poi publica
+
+## 2026-11-21 18:23 · 01WTjqUwUueB
+ok publica se abbiamo finito
+
+## 2026-11-21 18:25 · 01WTjqUwUueB
+Aggiungimi quando clicco negli hotel anche la distanza con la mappa di Maps che mi mette l'hotel dai mercatini, l'hotel da Disney e l'hotel dall'aeroporto. Mi fa vedere anche su Maps o qualcosa di simile, una foto di Maps per capire dov'è.
