@@ -1,0 +1,46 @@
+{
+"account": "108763",
+"sessione": "e71524274efb",
+"giorno": "2026-11-21",
+"turni": 3,
+"peso": 320925,
+"uscita": 14540,
+"contesto_max": 232417,
+"anomalie": [
+"avvio pesante: 204k token dopo le letture d'avvio (tetto 130k)",
+"1 uscite di strumento enormi (444 KB la più grande): leggere a pezzi (grep -n, sed -n)"
+],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"16:20 · Notifica non letta (in coda dalle 16:11: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"16:20 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «La pubblico insieme agli alloggi, così il link cambia una volta sola.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario"
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"16:20 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1** · 📌 Di cosa parliamo: i colori d», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l"
+]
+},
+"remota": "01WTjqUxBAKZ",
+"aiutanti": 0,
+"strumenti": 8,
+"bilancia": 2,
+"motori": {
+"opus": 320925
+},
+"grezzi": {
+"opus": [
+21,
+2216937,
+21208,
+0,
+14540
+]
+},
+"costo": 0.9039
+}

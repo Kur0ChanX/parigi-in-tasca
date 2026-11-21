@@ -1,15 +1,20 @@
-# Ultima risposta di Claude (21/11/2026 15:58 ora italiana)
+# Ultima risposta di Claude (21/11/2026 16:23 ora italiana)
 
-Ho capito: con «calda» intendevi l'atmosfera, non i colori. Vuoi una sera romantica con cielo blu, tante stelle e lucine, e per l'hotel tante opzioni spiegate, anche con una spa.
-🧠 Opus · Extra
-
-Ho passato tutto alla sessione nuova (Principale 3): il tuo messaggio parola per parola, più le voci aggiornate in Da fare, ora salvate su GitHub.
+Ho capito: vuoi poter scegliere fra i due colori della pagina, il vino di prima e il blu nuovo.
 
 ───
-⚠️ ATTENZIONE
-- Questa sessione ha consumato molto: circa 279.000 token contro un tetto di 130.000. Il motivo: ho letto tutto il codice della pagina e ho guardato molte foto di prova.
+✅ **FATTO**
+- In alto nella pagina, sotto il titolo, c'è un **interruttore** (due pulsanti) con due scelte: «🌙 Blu notte» e «🍷 Vin brulé».
+- Con «Vin brulé» la pagina torna com'era prima, con la neve e senza luna. Con «Blu notte» avete il cielo stellato, la luna e le stelle cadenti.
+- Il telefono si ricorda la scelta: riaprendo la pagina ritrovate gli stessi colori.
+- Prova fatta sul telefono simulato: tocco, ricarico la pagina, torno al blu, anche col telefono in modalità chiara. Funziona …
 
-───
-⚠️ Aspettano te: 3
-- Principale 1 · 21/11 · Hotel 13–17/12
-- …
+## Domande a Mario
+
+❓ **DOMANDE**
+**DOMANDA 1** · 📌 Di cosa parliamo: dove sta l'interruttore dei colori (foto sopra).
+A cosa serve: decidere se lasciarlo in alto.
+1 · Va bene così, sotto il titolo (consiglio: si vede subito)
+2 · Mettilo più in basso, vicino a «In breve»
+
+⏭ Vado avanti col 1 finché non mi dici altro.
