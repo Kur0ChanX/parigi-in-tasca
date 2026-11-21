@@ -1,29 +1,20 @@
-# Ultima risposta di Claude (21/11/2026 19:18 ora italiana)
+# Ultima risposta di Claude (21/11/2026 19:35 ora italiana)
 
-Ho capito la tua foto: testa e orecchie sono tre lune piene vere, color beige. Ho rifatto la luna così.
-
-───
-✅ **FATTO** (salvato su GitHub, non ancora online)
-- La foto 1 è la luna nuova. Testa e orecchie sono tre lune piene intere, ognuna con le sue macchie scure come la luna vera. Ha il colore beige della tua foto e le stelline vicino.
-- La foto 2 è la stessa luna dentro l'icona, grande e piccola come la vedi sul telefono.
-- L'ho disegnata io. La tua foto viene da Pinterest e copiarla vorrebbe dire usare la foto di un altro.
+Ho capito: vuoi che la pagina sia pubblicata.
+🧠 Opus · Medio
 
 ───
-💡 **PARERE**
-- Nell'icona piccola la luna si riconosce, ma …
+✅ **FATTO**
+- È già tutta online dalle 19:33: la luna nuova (anche nella testata) e le mappe negli alloggi.
+- L'ho ricontrollato adesso: il sito vero ha la versione nuova e non resta niente da pubblicare.
+- Link: https://kur0chanx.github.io/parigi-in-tasca/dicembre/
 
-## Domande a Mario
+───
+👉 **DA FARE TU**
+A cosa serve: vedere la luna nuova anche nell'icona del telefono.
+1. Se hai l'icona sulla schermata Home, tienila premuta e scegli «Rimuovi».
+2. Apri il link qui sopra e rimetti l'icona sulla Home.
 
-❓ **DOMANDE**
-**DOMANDA 5** · La luna nuova (foto 1 e 2) va bene?
-📌 Di cosa parliamo: la luna nell'icona dell'app e nell'anteprima quando mandi il link. Mi serve la risposta per metterla online.
-1 · Sì, mettila e pubblica.
-2 · Cambiare qualcosa: dimmi cosa (es. più grande).
-3 · Voglio vedere le altre 3 versioni che ho fatto prima (argento, oro, con l'ombra).
-Consiglio: **1**.
-
-⚠️ Aspettano te: 4
-- 🛑 Principale 4 · Quale alloggio prenotare
-- Principale 11 · come impaginare la pagina di dicembre
-- Principale 11 · mappe negli alloggi vanno bene
-- poi altre 1: tutte nella Bacheca delle 8:40
+───
+⚠️ Aspettano te: 3
+- 🛑 Principale 4 · …
