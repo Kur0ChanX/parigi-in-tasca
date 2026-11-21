@@ -36,6 +36,7 @@ Sessione attuale: #8 (dopo la #7 `session_01WTjqUxvERSiPgYyfyxxMEr`, chiusa alla
 - CSS inserito dopo una regola che sta dentro `@media` sulla stessa riga finisce nella media query: controllare la riga intera.
 
 ## Prossimi passi
+0. Iscriversi alla PR #2 (bozza) con `subscribe_pr_activity` (la #6 si è tolta, la #7 non l'ha fatto: soglia).
 1. A Mario, se non l'ha già letto: la v7 è sul link; chiudere le voci 👁 (consiglio, relax, a prova di stupido, mega consiglio, pagina che cambia) solo quando lui le vede.
 2. Domanda «Quale alloggio» (🛑): quando Mario scrive il numero, lo sceglie dal menu della pagina; se non è il 12, aggiorno il consiglio in cima e verifico bus/navette del suo (2233, 2234: IDFM ufficiale). Col 12: chiedere alla reception la navetta gratis per Disney (non confermata).
 3. Domanda «Link per l'amico» (🛑): con 1 → web app in `dicembre/` sul sito (manifest e icona, `noindex`, senza toccare `index.html`, `sw.js` e la guida di novembre), unione in `main` con la skill `unione-pr`; con 2 → passi guidati per Condividi dal browser.
