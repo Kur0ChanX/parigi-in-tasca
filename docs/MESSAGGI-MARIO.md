@@ -2,6 +2,10 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
+## 2026-11-21 18:33 · 01WTjqUwUueB
+Comunque lo vedo ancora molto confuso. Non lo so, va studiato meglio, è ancora un po' confuso. Non lo so, senza eliminare nulla volevo proprio impaginarlo meglio, cioè sono troppe cose a schermo, ti confonde un po', non riesci a capire che cosa sta succedendo, che cosa ti sta spiegando.
+No, andava bene la... Chi ti ha dato il permesso di cambiare la testa di Topolino? Fammi capire, da cosa è nata questa tua idea di rimettere la luna Normale.????!?!?
+
 ## 2026-11-21 18:34 · 01WTjqUwUueB
 La luna, falla sempre con la forma di topolino, ma con la trama proprio di luna, con la grafica della luna, stelle vicino. Come è fatta adesso quella tonda, però a forma di topolino, di Mickey Mouse, della Disney.
 
@@ -88,10 +92,6 @@ Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci son
 
 ## 2026-11-21 21:17 · 01WTjqUxzyRm
 mi raccomando studiati un impaginazione geniale non confusa
-
-## 2026-11-21 21:29 · 01WTjqUvCPBb
-quanto ti manca a publicare?
-publica
 
 ## 2026-11-21 21:35 · 01WTjqUvDTBB
 riesci a impaginare per windows?

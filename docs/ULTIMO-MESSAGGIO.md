@@ -1,4 +1,3 @@
-# Ultimo messaggio di Mario (21/11/2026 21:29 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 22:30 ora italiana)
 
-quanto ti manca a publicare?
-publica
+si ma dal 13 al 17 ricordati eh
