@@ -176,6 +176,21 @@ b,strong{font-weight:700}
 .topbar.on{transform:none}
 .topbar a{flex:1 1 0;max-width:11rem;display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 8px;border-radius:12px;color:#F4F1FF;text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid rgb(255 255 255 / .2);white-space:nowrap}
 .topbar a.hot{background:var(--lamp);color:var(--lamp-ink);border-color:transparent;font-weight:800}
+/* PC (Windows, MacBook): menù fisso a sinistra e contenuto largo (Mario 21/11 «ottimizza gli spazi per windows o MacBook») */
+.side{display:none}
+@media (min-width:1100px){
+ .pc{display:grid;grid-template-columns:232px minmax(0,1fr)}
+ .side{display:flex;flex-direction:column;gap:4px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;padding:var(--s5) 12px var(--s5) 16px;border-right:1px solid var(--rule)}
+ .side p{font:700 .74rem/1 var(--text);letter-spacing:.12em;text-transform:uppercase;color:var(--lamp-text);margin:0 0 8px 10px}
+ .side a{display:flex;align-items:center;gap:8px;min-height:40px;padding:6px 10px;border-radius:10px;color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;line-height:1.2}
+ .side a:hover{background:var(--surface-2)}
+ .side a[aria-current="true"]{background:var(--lamp);color:var(--lamp-ink);font-weight:800}
+ .topbar{display:none}
+ main .wrap{max-width:80rem;padding-left:40px;padding-right:40px}
+ .sc-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .answer{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .cards.two{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+}
 html{scroll-padding-top:72px}
 #scegli .sc-step{display:flex;align-items:center;gap:10px;font:800 1.2rem/1.25 var(--display);margin:var(--s6) 0 var(--s1)}
 .sc-now{margin:0 0 var(--s2);font-size:.95rem}
@@ -613,6 +628,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 </header>
 
 <nav class="topbar" id="topbar" aria-label="Scorciatoie" aria-hidden="true"><a class="hot" href="#mercatini" tabindex="-1">🎄 Mercatini</a><a href="#scegli" tabindex="-1">🛏️ Dormire</a><a href="#giorni" tabindex="-1">📅 Giorni</a><a href="#top" tabindex="-1" aria-label="Tutti i pulsanti">☰ Menu</a></nav>
+<div class="pc"><aside class="side" aria-label="Sezioni"><p>Vai a</p><a href="#scegli">🛏️ Dove dormire</a><a href="#breve">⚡ In breve</a><a href="#mercatini">🎄 Mercatini</a><a href="#costi">💶 Costi</a><a href="#hotel">🏨 Alloggi</a><a href="#biglietti">🎟️ Biglietti Disney</a><a href="#hoteldisney">🏰 Hotel Disney</a><a href="#giorni">📅 Giorno per giorno</a><a href="#trasporti">🚆 Trasporti</a><a href="#dafare">✅ Preparativi</a><a href="#ricontrollare">🔎 Da ricontrollare</a><a href="#fonti">📚 Fonti</a></aside>
 <main>
 <section id="scegli" aria-labelledby="h-scegli"><div class="wrap">
  <div class="sec-head"><p class="kicker">Prima di tutto · dove dormite</p><h2 id="h-scegli">Scegliete in 2 passi: tutta la pagina segue la vostra scelta.</h2>
@@ -885,7 +901,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
  <div class="sec-head"><p class="kicker">Fonti</p><h2 id="h-fo">Da dove vengono i dati, prima le fonti ufficiali.</h2></div>
  <details><summary>Apri tutte le fonti</summary><div class="in"><div id="sources"></div></div></details>
 </div></section>
-</main>
+</main></div>
 
 <footer><svg class="foot-market" id="footMarket" viewBox="0 0 800 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg><div class="wrap">Piano di viaggio preparato con dati controllati il 21/11/2026. Le cifre segnate "stima" sono calcoli, non prezzi letti. In caso di dubbio fa fede il sito ufficiale.</div></footer>
 
@@ -1364,6 +1380,8 @@ const mkAl=()=>{const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode==='bus'
  $('#mkAl').innerHTML=`<p class="k">${isMio()?'Col mio consiglio':'Con la vostra scelta'} · ${esc(scName(SCE))}</p><p class="v">${v}</p><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul><p class="small"><a href="#scegli">Cambia dove dormire</a></p>`};
 /* barra in alto quando i pulsanti grandi escono dallo schermo (Mario 21/11 19:52 «quando scrollo verso il basso i mercatini si nascondono») */
 {const tb=$('#topbar'),go=document.querySelector('.go');if(tb&&go&&'IntersectionObserver' in window){new IntersectionObserver(e=>{const on=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;tb.classList.toggle('on',on);tb.setAttribute('aria-hidden',on?'false':'true');tb.querySelectorAll('a').forEach(a=>a.tabIndex=on?0:-1)}).observe(go)}}
+/* menù del PC: la sezione che state leggendo è evidenziata */
+{const sa=[...document.querySelectorAll('.side a')];if(sa.length&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){sa.forEach(a=>{if(a.getAttribute('href')==='#'+e.target.id)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});}})},{rootMargin:'-35% 0px -60% 0px'});sa.forEach(a=>{const t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t)})}}
 let SHORT=false;
 const renderDays=()=>{DAYS=mkDays();if(PN)parSun(DAYS[0]);else if(P.spa||P.by22)spaSun(DAYS[0]);let html='';
 DAYS.forEach((d,i)=>{
