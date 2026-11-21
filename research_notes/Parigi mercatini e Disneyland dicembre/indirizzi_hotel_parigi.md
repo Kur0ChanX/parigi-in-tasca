@@ -16,6 +16,6 @@ Posizione sulla mappa = geocodifica ufficiale IGN (data.geopf.fr/geocodage) di q
 Stazioni (IGN, punti d'interesse): Gare de Lyon 48.844162, 2.374677 · Auber 48.872395, 2.329855 · Châtelet–Les Halles 48.861661, 2.346743.
 
 ## Fatti nuovi trovati insieme (per i «da verificare»)
-- Saint-Pétersbourg: reception aperta 24/7 (sito ufficiale, pagina «Hotel and Services»); spa con jacuzzi e hammam **su prenotazione, 9:00–23:00** (Paris je t'aime, ufficio del turismo ufficiale); «Jacuzzi privatisé 1h» (sito ufficiale). Deposito valigie: non trovato, resta «da chiedere».
+- Saint-Pétersbourg: reception aperta 24/7 (sito ufficiale, pagina «Hotel and Services»); spa con jacuzzi e hammam **su prenotazione, 9:00–23:00** (Paris je t'aime, ufficio del turismo ufficiale) ([pagina](https://parisjetaime.com/eng/accommodation/hotel-saint-petersbourg-paris-opera-spa-p3148), riletta il 21/11/2026 dalla #20); «Jacuzzi privatisé 1h» (sito ufficiale). Deposito valigie: non trovato, resta «da chiedere».
 - Astra Opéra: piscina aperta 7:00–22:00 tutti i giorni (Astotel). Deposito valigie: non trovato.
 - Relais des Halles: deposito valigie e reception 24 ore (sito ufficiale); metro Châtelet (linee 1, 7, 11, 14) a 6 minuti, RER Châtelet–Les Halles a 3 (sito ufficiale).
