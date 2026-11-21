@@ -28,3 +28,7 @@
 - Aspetto: titoli corti (max ~6 parole) con una riga sotto, una sola carta per idea, spazi regolari, niente lucine fra ogni sezione (solo in testata).
 - Pezzi: 1 struttura a schede + barra in basso · 2 scheda Dormire (13→17 prima, C12) · 3 Giorni con i mercatini · 4 Info e Piano · 5 prove (`prova-web-app.js`, `prova-scritte.js`), foto a Mario, poi pubblico.
 - Si scrive nella pagina solo dopo la v16 della Principale 21 su main (non toccare i suoi file).
+
+## Fatto
+- 22/11 ~00:40 pezzo 1 (schede): `C6-pezzo1-schede.patch` (CSS + script a parte in fondo, sezioni assegnate per id, giorni prima dei mercatini, link interni e `scrollIntoView` aprono la scheda giusta, scheda ricordata in `pdn-scheda`). NON nella pagina finché la v16 non è su main: poi `git apply`. Foto `archivio/2026-11-22-bozza-schede.jpg` mandata.
+- Visto: la pagina nel ramo (v16 a metà) dà un errore in `card` (riga ~1099) e le liste della scelta restano vuote: è della v16 in corso, detto alla Principale 21.

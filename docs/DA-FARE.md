@@ -9,6 +9,7 @@
 - ⏳ Dopo: nessuna
 
 ## 0. Aspetta Mario
+- 22/11 · ❓ · 🟩 Controllo 1 · DOMANDA 1: la pagina divisa in 4 schede con la barra in basso ti va bene? 📌 Di cosa parliamo: la prima bozza del riordino della pagina di dicembre, foto `archivio/2026-11-22-bozza-schede.jpg` (mandata ~00:40); serve per andare avanti a sistemare dentro ogni scheda: 1 · sì, vai avanti così · 2 · cambia i nomi o cosa va in ogni scheda (dimmi cosa) · 3 · no, altra strada. Consiglio: 1 (intanto vado avanti con questa).
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
