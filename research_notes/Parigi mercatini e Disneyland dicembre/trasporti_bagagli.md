@@ -1,6 +1,7 @@
 # Trasporti pubblici, tariffe e bagagli: Orly → Parigi → Val d'Europe / Disneyland Paris → Orly (13–17 dicembre 2026, 2 adulti senza auto)
 
 > Note di ricerca. Tutte le fonti sono state consultate il **21/11/2026** (alcune pagine sono state restituite dallo strumento di ricerca in copia cache: dove la copia era più vecchia di una settimana lo segnalo). "Non ufficiale" = sito non gestito da IDFM/RATP/SNCF/ADP/Volotea/Disney/operatore del servizio. I tempi sono "da orario ufficiale" solo dove indicato; altrimenti sono stime.
+> Ogni punto ancora aperto è elencato nei paragrafi "Gaps" con la dicitura **non verificato** e la pagina esatta da aprire per controllarlo.
 > **Avvertenza orari RER A**: gli orari ufficiali scaricabili il 21/11 arrivano solo alla settimana 30/11–6/12/2026 (i PDF 7–13/12 e 14–20/12 non erano ancora pubblicati: errore 404). Li uso come riferimento per frequenze e tempi; vanno ricontrollati su https://malignea.fr/horaires/ pochi giorni prima (domenica 13/12 è anche la data tipica del cambio orario ferroviario annuale: mia osservazione, non verificata per la RER A).
 
 ## 1. Domenica mattina: Orly → centro di Parigi con la metro 14
@@ -33,11 +34,11 @@ Dalla stazione "Aéroport d'Orly" la linea 14 porta a Gare de Lyon in 23 min e a
 - Costo domenica mattina: 14 € × 2 = **28 €**.
 
 ### Gaps
-- Tempo a piedi ufficiale dagli arrivi di Orly 1 (hall A) alla stazione della metro 14: non trovato. Da verificare sul posto / sulla mappa Paris Aéroport.
-- Frequenza esatta della linea 14 la domenica mattina (orario treno per treno): non recuperata; solo "2–5 minuti in media" (Paris Aéroport) e "~4 minuti nel weekend" da sito non ufficiale.
-- Non verificato se ai distributori della stazione Aéroport d'Orly si compri la Navigo Easy già caricata (lo afferma solo un sito non ufficiale: [orly-aeroport.fr](https://www.orly-aeroport.fr/acces-transport/metro-14-orly/acces), cons. 21/11/2026).
-- Dopo aver usato il ticket aeroporto, quanto bisogna aspettare per poter caricare ticket Métro-Train-RER sullo stesso telefono: le CGVU precisano le 2 ore solo nel verso opposto. Da provare nell'app; piano B: una Navigo Easy da 2 €.
-- La pagina RATP lavori va ricontrollata la settimana prima: i lavori vengono pubblicati con poco anticipo.
+- **Non verificato** — tempo a piedi ufficiale dagli arrivi di Orly 1 (hall A) alla stazione della metro 14 (ho solo "~7 min" da un sito non ufficiale). Pagina da aprire: https://www.parisaeroport.fr/fr/passagers/a-l-aeroport/plans-terminaux/ory
+- **Non verificato** — frequenza esatta della linea 14 la domenica mattina (ho solo "2–5 minuti in media"). Pagina da aprire: https://www.bonjour-ratp.fr/horaires-metro/ligne-14
+- **Non verificato** — se ai distributori della stazione Aéroport d'Orly si compri la Navigo Easy già caricata (lo dice solo [orly-aeroport.fr, non ufficiale](https://www.orly-aeroport.fr/acces-transport/metro-14-orly/acces)). Pagina da aprire: https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-easy
+- **Non verificato** — quanto bisogna aspettare, dopo aver usato il ticket aeroporto, per poter caricare ticket Métro-Train-RER sullo stesso telefono (le CGVU precisano le 2 ore solo nel verso opposto). Pagina da aprire: https://www.iledefrance-mobilites.fr/cgvu-tickets-aeroport (art. 4.5); piano B: una Navigo Easy da 2 €.
+- **Non verificato per il 13/12** — chiusure della linea 14 pubblicate dopo il 16/11/2026. Pagina da riaprire la settimana prima: https://www.ratp.fr/travaux/metro-ligne-14
 
 ## 2. Bagagli domenica 13 dicembre: armadietti ufficiali, alternative, oppure passare prima dall'hotel
 
@@ -68,11 +69,11 @@ La soluzione più comoda è il deposito ufficiale SNCF di **Paris Gare de Lyon**
 - Ordine di preferenza suggerito: (1) armadietto SNCF a Gare de Lyon; (2) se pieno, Nannybag/Bounce prenotato dal telefono (4–5 € a bagaglio); (3) City Locker/Stow Your Bags se si preferisce un armadietto automatico.
 
 ### Gaps
-- Nessuna fonte ufficiale RATP trovata su depositi bagagli dentro Châtelet–Les Halles, Auber o Nation: **non verificato** (l'elenco SNCF non li include; le alternative vicino a Châtelet sono solo private).
-- Stato reale dei lavori di settembre 2026 al deposito di Gare de Lyon (solo carta? riaperto?): verificare la pagina Gares & Connexions o l'app "Ma Gare SNCF" il giorno prima.
-- Eventuali costi di servizio aggiunti al checkout da Nannybag/Bounce: un blog non ufficiale segnala supplementi per un altro operatore; per questi due non verificato.
-- Disponibilità reale degli armadietti la domenica 13/12 al mattino: non prevedibile.
-- Se l'hotel a Val d'Europe accetti i bagagli prima del check-in: da chiedere all'hotel.
+- **Non verificato** — esistenza di depositi bagagli ufficiali dentro Châtelet–Les Halles, Auber o Nation (l'elenco SNCF non li include; nessuna pagina RATP trovata). Pagina da aprire: https://www.garesetconnexions.sncf/fr/vos-gares-services/services-aide-assistance/service-consignes
+- **Non verificato** — metodo di pagamento oggi in uso (solo carta? monete?) e fine dei lavori di settembre 2026 al deposito di Gare de Lyon. Pagina da aprire il giorno prima: https://www.garesetconnexions.sncf/fr/gares-services/paris-gare-lyon/services-commerces/consignes
+- **Non verificato** — eventuali costi di servizio aggiunti al checkout da Nannybag e Bounce. Pagine da aprire (simulare una prenotazione per il 13/12): https://www.nannybag.com/fr/consigne-bagage/paris/gare-de-lyon e https://fr.bounce.com/luggage-storage/paris/gare-de-lyon
+- **Non verificato** — disponibilità reale degli armadietti SNCF domenica 13/12 al mattino (non prenotabili). Stessa pagina Gares & Connexions: mostra lo stato "Ouvert/Fermé".
+- **Non verificato** — se l'hotel a Val d'Europe accetti i bagagli prima del check-in: da chiedere direttamente all'hotel (nessuna pagina: l'hotel non è noto).
 
 ## 3. Domenica sera: centro di Parigi → Val d'Europe con la RER A
 
@@ -96,8 +97,8 @@ Tutti i treni RER A con destinazione **Marne-la-Vallée–Chessy** fermano a Val
 - Costo domenica sera: 2,55–5,10 € a testa.
 
 ### Gaps
-- Orario ufficiale proprio di domenica 13/12/2026 non ancora pubblicato il 21/11 (PDF 7–13/12 assente): frequenze e ultimo treno sono quelli del fine settimana 5–6/12 e vanno riconfermati.
-- Calendario lavori RER A: il PDF "Calendrier travaux octobre 2026–janvier 2027" (versione 15/10/2026, [malignea.fr](https://malignea.fr/wp-content/uploads/2026/10/Calendrier-travaux-octobre-novembre-et-decembre-2026-et-janvier-2027.pdf), cons. 21/11/2026) è una griglia grafica che non sono riuscito a leggere casella per casella; nel testo estratto compaiono solo i cantieri ovest e La Varenne–Boissy (16–29/10). Ricontrollare a mano la griglia di dicembre.
+- **Non verificato** — orario ufficiale di domenica 13/12/2026 (il 21/11 il PDF 7–13/12 non era pubblicato; frequenze e ultimo treno sopra sono quelli del 5–6/12). Pagina da aprire: https://malignea.fr/horaires/
+- **Non verificato** — assenza di lavori serali sul ramo Marne-la-Vallée il 13/12: la griglia grafica del calendario non è leggibile dal testo estratto. Pagine da aprire: https://malignea.fr/wp-content/uploads/2026/10/Calendrier-travaux-octobre-novembre-et-decembre-2026-et-janvier-2027.pdf e https://www.ratp.fr/travaux/rer-a
 
 ## 4. Lunedì–mercoledì: Val d'Europe ↔ Marne-la-Vallée Chessy (parchi)
 
@@ -125,11 +126,11 @@ La RER A fa Val d'Europe → Chessy in 3 minuti, con un treno ogni 5–8 minuti 
 - A piedi: 30 minuti all'andata sono fattibili; al ritorno, a dicembre, è buio dalle 17 circa e si cammina lungo viali a scorrimento veloce: sconsiglierei di contarci la sera (valutazione mia, non verificata).
 
 ### Gaps
-- Sicurezza e piacevolezza del percorso a piedi dopo il tramonto: **non verificato** (nessuna fonte ufficiale; non ho verificato illuminazione e marciapiedi lungo tutto il tracciato).
-- Orario ufficiale RER A per il 14–16/12 non ancora pubblicato; gli orari sopra sono della settimana 30/11–4/12.
-- Orari ufficiali dei parchi per data: confermare su disneylandparis.com o nell'app.
-- Frequenze e orari di 2261 e 2231 non letti dalle fiches ufficiali; durata 2233 e 2234 presa da fonti non ufficiali.
-- Navetta gratuita dell'hotel prescelto: dipende dall'hotel (non noto).
+- **Non verificato** — sicurezza e piacevolezza del percorso a piedi Val d'Europe ↔ parchi dopo il tramonto (nessuna fonte ufficiale; illuminazione e marciapiedi non controllati). Pagina da aprire per il tracciato: https://www.bonjour-ratp.fr/itineraires/marne-la-vallee-chessy/val-d-europe
+- **Non verificato** — orario ufficiale RER A del 14–16/12 (gli orari sopra sono della settimana 30/11–4/12). Pagina da aprire: https://malignea.fr/horaires/
+- **Non verificato su fonte ufficiale** — orari dei parchi 14–16/12 (9:00–22:00 da siti non ufficiali). Pagina da aprire: https://www.disneylandparis.com/en-int/calendars/park-hours
+- **Non verificato** — frequenze e orari dei bus 2261 e 2231; durata ufficiale di 2233 e 2234. Pagine da aprire: https://www.bonjour-ratp.fr/lignes-bus/transdev-marne-la-vallee-ligne-2261-c00943 , https://www.bonjour-ratp.fr/lignes-bus/transdev-marne-la-vallee-ligne-2233-c00635 , https://www.bonjour-ratp.fr/lignes-bus/transdev-marne-la-vallee-ligne-2234-c00632
+- **Non verificato** — navetta gratuita dell'hotel prescelto: dipende dall'hotel (non noto); da chiedere all'hotel.
 
 ## 5. Strategia biglietti per 2 adulti, domenica 13 → giovedì 17 dicembre
 
@@ -166,10 +167,10 @@ Conteggio corse a persona (calcoli miei sulle tariffe ufficiali):
 - Gestione pratica di (a) sul telefono, per rispettare la regola di coabitazione: domenica comprare 1 ticket aeroporto; dopo averlo usato, comprare i ticket Métro-Train-RER nel numero esatto che serve (anche a blocchi), senza avanzarne; giovedì mattina, a più di 2 ore dall'ultima corsa di mercoledì sera, comprare il ticket aeroporto. Se avanzano ticket Métro-Train-RER, il ticket aeroporto va caricato su un altro supporto (Navigo Easy da 2 €).
 
 ### Gaps
-- Se per il Navigo Semaine **sul telefono** serva una foto: le pagine consultate chiedono la foto solo per la Navigo Découverte e l'account IDFM Connect per il telefono; **non verificato** in modo esplicito. Da controllare nell'app prima di decidere.
-- Se un non residente possa attivare Navigo Liberté+ dall'app con IBAN italiano (SEPA): tecnicamente previsto dalle CGU, in pratica **non verificato**. Risparmio potenziale modesto (0,51 € a corsa).
-- Se l'app accetti senza problemi carte bancarie e numeri di telefono italiani: non verificato.
-- Tariffe: nessun cambiamento annunciato per dicembre 2026 nelle pagine consultate; le nuove tariffe 2027 scatterebbero semmai dal 1° gennaio (per analogia con gli anni precedenti, non verificato).
+- **Non verificato** — se per il Navigo Semaine **sul telefono** serva una foto (le pagine la chiedono solo per la Navigo Découverte; per il telefono chiedono l'account IDFM Connect). Pagina da aprire: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-navigo-semaine
+- **Non verificato** — se un non residente possa attivare Navigo Liberté+ con IBAN italiano (previsto "zona SEPA" nelle CGU, non provato). Pagina da aprire: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/liberte-plus
+- **Non verificato** — se l'app accetti senza problemi carte bancarie e numeri di telefono italiani. Pagina da aprire: https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/telephone
+- **Non verificato** — assenza di ritocchi tariffari entro dicembre 2026 (nessuno annunciato nelle pagine consultate). Pagina da aprire: https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026
 
 ## 6. Giovedì 17 dicembre mattina: hotel a Val d'Europe → Orly 1 per il volo delle 12:45
 
@@ -200,11 +201,11 @@ Percorso migliore: **RER A da Val d'Europe a Gare de Lyon (33–36 min) + metro 
 - Piano B in caso di RER A interrotta: taxi/VTC diretto per Orly (45–65 min più traffico); da decidere entro le 8:30 circa.
 
 ### Gaps
-- Orario ufficiale RER A di giovedì 17/12 non ancora pubblicato il 21/11: ricontrollare i minuti esatti su malignea.fr o nell'app IDFM il giorno prima.
-- Tempo di cambio RER A → metro 14 a Gare de Lyon e tempo a piedi dalla stazione metro alle partenze di Orly 1: stime, nessun dato ufficiale trovato.
-- Ordine delle righe nella tabella "Disneyland Paris > Paris-Orly" del PDF Magical Shuttle: ricostruito (intestazione e orari in grassetto = Chessy Nord); confermare gli orari di Chessy Nord al momento della prenotazione su magicalshuttle.fr.
-- Prezzo reale di taxi/Uber Val d'Europe → Orly un giovedì alle 8–9: solo stime non ufficiali e nel verso opposto (Orly → Chessy); chiedere un preventivo nell'app la sera prima.
-- Tempo di attesa ai controlli di sicurezza a Orly 1 il giovedì mattina: non verificato.
+- **Non verificato** — orario ufficiale RER A di giovedì 17/12 (i minuti sopra sono della settimana 30/11–4/12). Pagina da aprire il giorno prima: https://malignea.fr/horaires/
+- **Non verificato** — tempo di cambio RER A → metro 14 a Gare de Lyon e tempo a piedi dalla stazione metro alle partenze di Orly 1 (stime mie). Pagine da aprire: calcolo itinerario su https://www.iledefrance-mobilites.fr/ e https://www.parisaeroport.fr/fr/passagers/a-l-aeroport/plans-terminaux/ory
+- **Non verificato** — orari Magical Shuttle da Chessy Nord verso Orly (7:50 e 9:05): ordine delle righe del PDF ricostruito da me. Pagina da aprire: https://magicalshuttle.fr/navette/orly (selezionare "Hôtels Disney › Orly" e "Chessy gare routière")
+- **Non verificato** — prezzo reale di taxi/Uber Val d'Europe → Orly un giovedì alle 8–9 (solo stime non ufficiali e nel verso opposto). Pagina da aprire: https://www.uber.com/global/en/r/routes/orly-idf-fr-to-chessy-idf-fr oppure preventivo nell'app la sera prima.
+- **Non verificato** — tempi di attesa ai controlli di sicurezza di Orly 1 il giovedì mattina. Pagina da aprire: https://www.parisaeroport.fr/fr/passagers/ory
 
 ## 7. Lavori, chiusure e scioperi dal 13 al 17 dicembre 2026 (RER A, metro 14, Orly)
 
@@ -231,10 +232,10 @@ Al 21/11/2026 non risultano lavori né chiusure programmati sulla metro 14 e sul
 - Dove controllare: [RATP lavori RER A](https://www.ratp.fr/travaux/rer-a), [RATP lavori linea 14](https://www.ratp.fr/travaux/metro-ligne-14), [malignea.fr](https://malignea.fr/travaux), app Île-de-France Mobilités (gli itinerari includono lavori e scioperi), stato del volo su volotea.com.
 
 ### Gaps
-- Griglia di dicembre del calendario lavori RER A (PDF grafico) non letta casella per casella: verifica manuale consigliata.
-- Dettaglio dei lavori sulla linea 4 fino al 19/12 (passa da Châtelet e Les Halles): non letto; può incidere sugli spostamenti di domenica in centro.
-- Nessuna fonte ufficiale ADP trovata su eventuali modifiche di terminal o di orari voli legate alla riapertura della pista del 17–18/12: **non verificato**; controllare lo stato del volo.
-- Gli scioperi in Francia vengono annunciati con pochi giorni di anticipo: la situazione al 21/11 non garantisce nulla per il 13–17/12.
+- **Non verificato** — caselle di dicembre del calendario lavori RER A (PDF grafico, non leggibile casella per casella). Pagine da aprire: https://malignea.fr/wp-content/uploads/2026/10/Calendrier-travaux-octobre-novembre-et-decembre-2026-et-janvier-2027.pdf e https://malignea.fr/travaux
+- **Non verificato** — dettaglio (tratti, orari) dei lavori sulla linea 4 fino al 19/12, che passa da Châtelet e Les Halles e può incidere sulla domenica in centro. Pagina da aprire: https://www.ratp.fr/les-travaux-en-cours-et-a-venir
+- **Non verificato** — eventuali modifiche di terminal o di orari dei voli legate alla riapertura della pista 4 del 17–18/12 (nessuna fonte ADP trovata). Pagine da aprire: https://entrevoisins.groupeadp.fr/projets/travaux-de-la-piste-4-a-paris-orly-ce-qui-va-se-passer-du-10-aout-au-17-decembre-2026 e lo stato del volo su https://www.volotea.com/it/
+- **Non verificato per il 13–17/12** — scioperi: in Francia vengono annunciati con pochi giorni di anticipo, la situazione al 21/11 non garantisce nulla. Pagine da aprire 48 ore prima: https://me-deplacer.iledefrance-mobilites.fr/infos-trafic/detail/line%3AIDFM%3AC01742 (RER A), https://www.ratp.fr/travaux/rer-a , https://www.transilien.com/fr/page-lignes/ligne-a
 
 ## 8. Volotea: bagaglio a mano per tariffa e scadenze di check-in, consegna bagagli e imbarco a Orly
 
@@ -260,7 +261,7 @@ Con la tariffa base Volotea è inclusa solo **una borsa piccola 40×30×20 cm** 
 - Fare il check-in online e salvare le carte d'imbarco sul telefono prima di lasciare l'hotel: evita i 30 € a testa in aeroporto.
 
 ### Gaps
-- Finestra ufficiale di apertura/chiusura del check-in online: non trovata su volotea.com (solo AirHelp, non ufficiale). Verificare nella mail di conferma o nel centro assistenza Volotea.
-- Terminal e hall ufficiali di Volotea a Orly per dicembre 2026: la pagina Paris Aéroport della compagnia ([parisaeroport.fr](https://www.parisaeroport.fr/fr/passagers/vols/compagnies-aeriennes/compagnie?airline=V7)) non è risultata leggibile con gli strumenti; confermare sulla carta d'imbarco o sui tabelloni.
-- Tariffa effettivamente acquistata dai due viaggiatori (Standard o con priorità/Megavolotea): non nota.
-- Prezzi "da" di priorità e bagagli variano per rotta e stagione: il prezzo esatto compare solo nella gestione della prenotazione.
+- **Non verificato su fonte ufficiale** — finestra di apertura/chiusura del check-in online (da 4 giorni prima fino a 2h30 prima: solo AirHelp). Pagina da aprire: https://www.volotea.com/it/la-tua-prenotazione/check-in-online
+- **Non verificato su fonte ufficiale** — terminal e hall di Volotea a Orly a dicembre 2026 (Orly 1 secondo siti non ufficiali, "Terminal 3" secondo Bonjour RATP). Pagina da aprire: https://www.parisaeroport.fr/fr/passagers/vols/compagnies-aeriennes/compagnie?airline=V7 ; in ogni caso fa fede la carta d'imbarco.
+- **Non verificato** — tariffa effettivamente acquistata dai due viaggiatori (Standard, con priorità o Megavolotea). Pagina da aprire: https://www.volotea.com/it/la-tua-prenotazione/
+- **Non verificato** — prezzo esatto di imbarco prioritario e bagagli per questa rotta e data (i "da" variano per rotta e stagione). Pagina da aprire: https://www.volotea.com/it/tariffe e la gestione della prenotazione.
