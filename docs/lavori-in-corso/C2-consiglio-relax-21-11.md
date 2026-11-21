@@ -12,7 +12,7 @@
 - Scartato: Moxy + massaggio esterno al Relais (la spa per esterni richiede un trattamento di 45 minuti, la domenica i trattamenti finiscono alle 21: non ci si arriva dopo i mercatini).
 
 ## Stato
-- [ ] pagina: consiglio, domenica con la spa, costi, «Da fare», «Da ricontrollare» (navetta a chiamata da confermare)
-- [ ] prove (browser, telefono 390 px, controlla-colori)
+- [x] pagina: consiglio, domenica con la spa, costi, «Da fare», «Da ricontrollare» (navetta a chiamata da confermare)
+- [x] prove (browser, telefono 390 px, controlla-colori)
 - [ ] pubblicazione Artifact (v7 = v6 + questo)
-- [ ] domanda «Quale alloggio» aggiornata col consiglio nuovo
+- [x] domanda «Quale alloggio» aggiornata col consiglio nuovo
