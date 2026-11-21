@@ -2,10 +2,10 @@
 "account": "108763",
 "sessione": "dcb27a74a198",
 "giorno": "2026-11-21",
-"turni": 1,
-"peso": 1463277,
-"uscita": 38226,
-"contesto_max": 237291,
+"turni": 3,
+"peso": 1639975,
+"uscita": 41516,
+"contesto_max": 259484,
 "anomalie": [
 "2 uscite di strumento enormi (48 KB la più grande): leggere a pezzi (grep -n, sed -n)",
 "un turno ha aggiunto 134k token al contesto",
@@ -13,19 +13,39 @@
 ],
 "remota": "01WTjqUvuvWh",
 "aiutanti": 0,
-"strumenti": 63,
+"strumenti": 67,
 "motori": {
-"opus": 1463277
+"opus": 1639975
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-115,
-11036918,
-134672,
+126,
+12578577,
+139529,
 0,
-38226
+41516
 ]
 },
-"costo": 4.0497
+"costo": 4.4627,
+"blocchi": {
+"Stop 8 · Il turno finisce con una": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1
+},
+"esempi_blocchi": {
+"Stop 8 · Il turno finisce con una": [
+"23:22 · Il turno finisce con una domanda o un passo a mano per Mario: il messaggio ha una domanda decisiva (🛑): metti «🛑» nella sua riga di oggi in «## 0. Aspetta Mario» («- gg/mm · 🛑 · <segno giallo> <Nome> "
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"23:22 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Ti arriverà un messaggio solo.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura dei dati ver"
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"23:22 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 11** 🛑. Ti vanno bene le mappe degli», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso); mancano le sce"
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"23:22 · Ti fermi ad aspettare Mario con il contesto a 237k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+]
+}
 }
