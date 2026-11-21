@@ -2,38 +2,42 @@
 "account": "108763",
 "sessione": "264cb72e7ec4",
 "giorno": "2026-11-21",
-"turni": 2,
-"peso": 531506,
-"uscita": 25785,
-"contesto_max": 193991,
+"turni": 3,
+"peso": 593673,
+"uscita": 28685,
+"contesto_max": 220218,
 "anomalie": [
 "5 uscite di strumento enormi (399 KB la più grande): leggere a pezzi (grep -n, sed -n)",
 "avvio pesante: 184k token dopo le letture d'avvio (tetto 130k)",
 "25k token scritti in un turno"
 ],
 "blocchi": {
-"Stop 7 · Domanda a Mario poco chiara": 1
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1
 },
 "esempi_blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": [
 "19:01 · Domanda a Mario poco chiara («❓ **DOMANDE** (rispondi col numero, es. «4: 1») - 🛑 **DOMAND», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"19:18 · Ti fermi ad aspettare Mario con il contesto a 193k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
 ]
 },
 "remota": "01WTjqUutmHT",
 "aiutanti": 0,
-"strumenti": 20,
+"strumenti": 22,
 "bilancia": 2,
 "motori": {
-"opus": 531506
+"opus": 593673
 },
 "grezzi": {
 "opus": [
-37,
-3603570,
-33750,
+41,
+4037954,
+37130,
 0,
-25785
+28685
 ]
 },
-"costo": 1.5066
+"costo": 1.6785
 }
