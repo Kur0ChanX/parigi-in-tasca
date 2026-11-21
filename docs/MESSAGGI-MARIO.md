@@ -53,3 +53,7 @@ web app dopo aver risposto alla domanda della sessione precedente.
 
 ## 2026-11-21 17:34 · 01WTjqUwT3Gs
 ok
+
+## 2026-11-21 18:03 · 01WTjqUvsd71
+aggiungi anche topolino di Disney a forma di luna nello sfondo nell'icona e immagine 
+e poi publica
