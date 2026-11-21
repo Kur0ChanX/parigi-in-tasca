@@ -24,6 +24,7 @@
 - 👁 Lo vedi: nella sezione «Quanto costa» e negli alloggi della pagina di dicembre · prova: Mario tocca una barra e arriva alla scheda giusta, e trova la pagina più ordinata · Ki Space nel confronto dei costi, barre cliccabili, pagina più facile e meno piena (Mario 21/11 17:24 dopo l'handoff della #7, con foto `archivio/2026-11-21-foto-mario/1-confronto-costi-v7.jpg`: «Metti qui anche il ki space, quello che ti avevo consigliato io, che abbiamo guardato. Metti anche quello in confronto tra i costi e tutto. Poi metti che se clicco uno di quelli mi porta al discorso o qualche altra pagina, insomma, utile. Comunque rendila veramente facile e intuitiva a livello di visiva. Anche non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa, però non troppissime informazioni, cioè non ti sto dicendo di toglierle, ma di riorganizzarle meglio.»): n. 2 Ki Space nelle barre dei costi; ogni barra apre la scheda dell'alloggio; riorganizzare (meno a schermo, dettagli che si aprono toccando), senza togliere informazioni.
 
 ## 2. Claude dopo scelta o ok di Mario
+- 👁 Lo vedi: la pagina di dicembre riordinata sul sito, come web app · prova: Mario la apre dal telefono e la manda all'amico · Pubblicare la pagina facile (C3) come web app dopo l'ok di Mario alle foto (promessa del 21/11 17:3x: «La pubblico quando mi dici che la pagina ti va bene.»); intanto preparo la web app nel ramo.
 - Pagina di dicembre: orari di uscita con l'hotel scelto, poi ripubblicare l'Artifact (sorgente `dicembre/parigi-disney-natale.html`).
 
 ## 3. Mario a mano
