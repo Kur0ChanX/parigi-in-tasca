@@ -171,7 +171,7 @@ b,strong{font-weight:700}
 
 /* ---------- barre costi ---------- */
 .bars{display:grid;gap:var(--s4);margin-top:var(--s2)}
-.bar-row{display:grid;gap:6px;color:inherit;text-decoration:none;border-radius:var(--r-md);padding:8px;margin:-8px;-webkit-tap-highlight-color:transparent}a.bar-row:hover,a.bar-row:focus-visible{background:var(--surface)}.bar-go{font-weight:700;color:var(--brand);white-space:nowrap}.card.flash{box-shadow:0 0 0 3px var(--focus)}
+.bar-row{display:grid;gap:6px;color:inherit;text-decoration:none;border-radius:var(--r-md);padding:8px;margin:-8px;-webkit-tap-highlight-color:transparent}a.bar-row:hover,a.bar-row:focus-visible{background:var(--surface)}.bar-go{font-weight:700;color:var(--brand);white-space:nowrap}.card details.more,.mine details.more{background:transparent}.card details.more>summary{min-height:44px;font-size:.95rem}.card.flash{box-shadow:0 0 0 3px var(--focus)}
 .bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);flex-wrap:wrap}
 .bar-name{font-weight:700}
 .bar-name .rec{margin-left:6px;padding:5px 8px;font-size:.68rem}
@@ -537,21 +537,22 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
    <li><b>Giovedì</b> uscite alle 8:30 per il volo: il treno è a 5 minuti.</li>
   </ul>
   <p class="give"><b>Come prenotarlo:</b> su Booking scegliete la «Camera» da 25 m² con <b>1 letto matrimoniale large</b> e la tariffa con <b>cancellazione gratuita prima dell'8 dicembre</b>. Volete spendere meno? La suite da 763 € costa 145 € in meno, ma non è rimborsabile e il letto matrimoniale non è garantito.</p>
-  <p class="give"><b>Cosa lasciate:</b> costa circa 330 € più del n. 8 Moxy con cancellazione gratuita. Il Moxy è comodo uguale per i parchi, ma non ha la spa.</p>
-  <p class="give"><b>Attenzione:</b> davanti all'ingresso ci sono finti taxi. La navetta gratis per Disney è solo quella dell'hotel: chiedetela alla reception <span class="bd nu">non confermata</span>.</p>
+  <details class="more"><summary>Cosa lasciate e a cosa stare attenti</summary><div class="in">
+  <p><b>Cosa lasciate:</b> costa circa 330 € più del n. 8 Moxy con cancellazione gratuita. Il Moxy è comodo uguale per i parchi, ma non ha la spa.</p>
+  <p><b>Attenzione:</b> davanti all'ingresso ci sono finti taxi. La navetta gratis per Disney è solo quella dell'hotel: chiedetela alla reception <span class="bd nu">non confermata</span>.</p>
+  </div></details>
   <a class="btn gold" href="#al-12">Vedi la scheda del n. 12</a>
  </div>
 
  <h3 class="sub-h">Se cercate altro: il migliore per ogni desiderio</h3>
  <div class="picks" id="picks"></div>
 
- <div class="callout" style="margin-top:var(--s5)"><p><b>Se partite dal 12 (5 notti):</b> una notte in più costa 114 € con il n. 5 e 176 € con il n. 4. I n. 1 e 6 sabato 12 sono già pieni.</p></div>
 
  <h3 class="sub-h" style="margin-top:var(--s6)">Tutti, uno contro l'altro</h3>
  <div class="filters" role="group" aria-label="Mostra solo" id="filters"></div>
  <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort3" role="group" aria-label="Ordina per" id="sort"><button type="button" data-s="prezzo" aria-pressed="true">Prezzo</button><button type="button" data-s="vicino" aria-pressed="false">Vicino al treno</button><button type="button" data-s="voto" aria-pressed="false">Voto</button></div></div>
  <p class="small muted" id="fdesc"></p>
- <div class="tbl"><table class="cmp"><thead><tr><th>N.</th><th>Alloggio</th><th class="r">4 notti</th><th>Dal treno</th><th class="r">Voto</th></tr></thead><tbody id="cmpBody"></tbody></table></div>
+ <details><summary>Tutti i 15 in una tabella</summary><div class="in"><div class="tbl"><table class="cmp"><thead><tr><th>N.</th><th>Alloggio</th><th class="r">4 notti</th><th>Dal treno</th><th class="r">Voto</th></tr></thead><tbody id="cmpBody"></tbody></table></div></div></details>
 
  <div class="cards two" id="hotelCards" style="margin-top:var(--s5)"></div>
 
@@ -565,6 +566,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
    <li><b>Cauzioni scomode:</b> Grand Appartement Dreams (500 € con bonifico 7 giorni prima), Zenitude (300 € addebitati 7 giorni prima).</li>
    <li><b>Prezzo non visibile:</b> Marriott's Village (piscina gratis, ma a 4,9 km dal treno), Disneyland Hotel.</li>
    <li><b>Voto Booking 8,0 o meno:</b> Dream Castle e Grand Magic (7,6), Villages Nature (7,3, reception solo 10–19), love room 123home (7,7), Adagio (7,6–7,9), B&amp;B Hotel Magny (7,7), Campanile (7,6), Explorers (7,3), Eklo (7,5), Dali (7,8).</li>
+   <li><b>Partire sabato 12 (5 notti):</b> il volo è il 13. Una notte in più costerebbe 114 € con il n. 5 e 176 € con il n. 4; i n. 1 e 6 sabato 12 sono già pieni.</li>
    <li><b>Bussy-Saint-Georges e Torcy:</b> stesso biglietto, ogni corsa 3–9 minuti in più, e gli alloggi buoni sono quasi tutti esauriti.</li>
   </ul>
  </div></details>
@@ -857,12 +859,15 @@ const MIO=12,STAR='<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="tru
 let CHO=MIO;try{const q=+new URLSearchParams(location.search).get('alloggio')||+localStorage.getItem('pdn-alloggio');if(q>=1&&q<=15)CHO=q}catch(e){}
 const card=h=>`<article class="card${h.id===MIO?' is-rec':''}" id="al-${h.id}">
  <div class="card-top"><div class="ttl"><span class="nb" aria-label="numero ${h.id}">${h.id}</span><div><h3>${esc(h.n)}</h3><p class="small muted">${esc(h.sub)}</p></div></div>${h.id===MIO?`<span class="rec">${STAR}Il mio consiglio</span>`:''}</div>
- <div class="tags">${h.g.map(x=>`<span class="tag">${GN[x]}</span>`).join('')}</div>
  <div class="facts"><div class="fact"><div class="k">Voto Booking</div><div class="v">${h.sc}</div></div><div class="fact"><div class="k">Pulizia</div><div class="v">${h.cl}</div></div><div class="fact"><div class="k">4 notti</div><div class="v">${h.pr}</div></div></div>
+ <p class="small"><b>Dal treno:</b> ${h.dist}</p>
+ <details class="more"><summary>Dettagli: domenica sera, parchi${h.spa?', spa':''}, pro e contro</summary><div class="in">
+ <div class="tags">${h.g.map(x=>`<span class="tag">${GN[x]}</span>`).join('')}</div>
  <p class="small">${h.pl}</p>
- <dl class="kv"><div><dt>Dal treno</dt><dd>${h.dist}</dd></div><div><dt>Domenica sera</dt><dd>${h.sun}</dd></div><div><dt>Ai parchi</dt><dd>${h.tr}</dd></div>${h.spa?`<div><dt>Spa</dt><dd>${h.spa}</dd></div>`:''}</dl>
+ <dl class="kv"><div><dt>Domenica sera</dt><dd>${h.sun}</dd></div><div><dt>Ai parchi</dt><dd>${h.tr}</dd></div>${h.spa?`<div><dt>Spa</dt><dd>${h.spa}</dd></div>`:''}</dl>
  <div class="pc"><p class="p">${h.pro}</p><p class="c">${h.con}</p></div>
  <a class="btn ghost" href="${h.u}" target="_blank" rel="noopener">${h.ul||'Apri su Booking: 13→17 dic, 2 adulti'}${OUT}</a>
+ </div></details>
  <button type="button" class="btn ghost use-al" data-use="${h.id}" aria-pressed="${h.id===CHO}">${h.id===CHO?'✓ La pagina segue questo alloggio':'Usa questo nella pagina'}</button>
 </article>`;
 let FI='tutti',SO='prezzo';
@@ -879,8 +884,8 @@ $('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if
 $('#sort').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;SO=b.dataset.s;renderAl()});
 renderAl();
 const toCard=e=>{const a=e.target.closest('a[href^="#al-"]');if(!a)return;const id=a.getAttribute('href');if(!document.querySelector(id)){FI='tutti';renderAl()}
- const c=document.querySelector(id);if(c){c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash');setTimeout(()=>c.classList.remove('flash'),2400)}};
-$('#picks').addEventListener('click',toCard);$('#bars').addEventListener('click',toCard);
+ const c=document.querySelector(id);if(c){const d=c.querySelector('details.more');if(d)d.open=true;c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash');setTimeout(()=>c.classList.remove('flash'),2400)}};
+document.addEventListener('click',toCard);
 
 /* ---------- giorni ---------- */
 const MOXY="Moxy Paris Val d'Europe, 2 Avenue de l'Europe, 77144 Montévrain",ORLY="Aéroport de Paris-Orly",GDL="Gare de Lyon, Paris",VDE="Gare de Val d'Europe, Serris",CH="Gare de Marne-la-Vallée Chessy",HDV="Hôtel de Ville, Paris",ND="Cathédrale Notre-Dame de Paris",SV="Square René-Viviani, Paris",SM="Place Saint-Michel, Paris",SG="Église de Saint-Germain-des-Prés, Paris",LV="Pyramide du Louvre, Paris",GL="Galeries Lafayette Paris Haussmann, 40 Boulevard Haussmann, Paris",PV="Place Vendôme, Paris",TU="Jardin des Tuileries, Paris",CE="Rond-Point des Champs-Élysées, Paris",FDR="Franklin D. Roosevelt, Paris",DP="Parc Disneyland, Chessy",DAW="Disney Adventure World, Chessy";

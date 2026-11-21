@@ -11,3 +11,5 @@
 4. Foto prima/dopo dal telefono a Mario; poi web app (`dicembre/` sul sito, skill `unione-pr`).
 
 ## Scelte in corsa
+- Pezzo 1 fatto (21/11 17:30): Ki Space nelle barre, 465 € + 544 € + 76 € (navetta gratis) = 1.085 €; barre = link alla scheda (`#al-N`), misto e Cheyenne → `#hoteldisney`; scheda evidenziata all'arrivo.
+- Misure al telefono (390 px): pagina 37.576 px; alloggi 16.750 (schede 12.470), domenica 7.025, trasporti 1.513, da fare 1.961, da ricontrollare 1.927, fonti 1.407. Pezzo 2: schede degli alloggi compatte (riga essenziale + «Dettagli»), tabella in un «Apri»; poi le altre sezioni.
