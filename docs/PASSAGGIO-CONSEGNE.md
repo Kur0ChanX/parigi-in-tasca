@@ -54,6 +54,9 @@ Sessione attuale: #11 (dopo la #10 `session_01WTjqUwUueBoLvRkqLpLRmU`, chiusa al
 - Da verificare: navetta a chiamata del Relais Spa per tutti (non ufficiale), reception 24 ore del Crowne Plaza, fermata del bus 2234 e orario della domenica per Jungle Love, linea del bus del n. 7, ultime corse del 2233 per il n. 3, prezzo dell'Elysée sul sito ufficiale. Nella pagina sono segnati «non confermato».
 
 ## Ultimo messaggio di Mario
+«La luna, falla sempre con la forma di topolino, ma con la trama proprio di luna, con la grafica della luna, stelle vicino. Come è fatta adesso quella tonda, però a forma di topolino, di Mickey Mouse, della Disney.»
+(21/11 ~18:40 alla #10 chiusa → passato alla #11. Risposta della #10: la sagoma di Topolino non si disegna, neanche con la trama della luna; sì a trama vera della luna e stelle vicino: 2-3 lune originali con foto.)
+Prima, ~18:35:
 «Comunque lo vedo ancora molto confuso. Non lo so, va studiato meglio, è ancora un po' confuso. Non lo so, senza eliminare nulla volevo proprio impaginarlo meglio, cioè sono troppe cose a schermo, ti confonde un po', non riesci a capire che cosa sta succedendo, che cosa ti sta spiegando.
 No, andava bene la... Chi ti ha dato il permesso di cambiare la testa di Topolino? Fammi capire, da cosa è nata questa tua idea di rimettere la luna Normale.????!?!?»
 (21/11 ~18:35 alla #10 chiusa → passato alla #11 con send_message. Topolino: la #10 ha risposto (personaggio protetto, errore suo cambiarlo senza dirlo prima); NON rimetterlo, proporre 2-3 lune originali con foto. Pagina confusa → C6 impaginazione, prima o insieme a C5: poche domande, proposta con foto prima/dopo, niente pubblicazione senza ok.)
