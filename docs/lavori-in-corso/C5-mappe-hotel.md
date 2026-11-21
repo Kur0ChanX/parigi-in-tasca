@@ -30,4 +30,4 @@ Nella scheda che si apre toccando un alloggio (15 alloggi, dati `{n:…}` in `di
 - Nessuna per partire: mercatino, Disney e aeroporto si leggono negli appunti. Da chiedere solo se gli appunti non bastano.
 
 ## Stato
-- 21/11 18:40: scritto dalla #10 (Opus · Extra), lavoro passato alla #11.
+- 21/11 18:32: scritto dalla #10 (Opus · Extra), lavoro passato alla #11.

@@ -27,7 +27,7 @@ Sessione attuale: #11 (dopo la #10 `session_01WTjqUwUueBoLvRkqLpLRmU`, chiusa al
 - Luna = testa di Topolino (`luna()` di `tools/fai-icone-dicembre.js`), `?v=` icone 3 e anteprima 2, prova nuova sul `?v=` (provata anche rotta). Prove: web app 19 VERO, colori, `--controlla`, kit 43/43.
 - Pubblicato: ramo-copia `versione-dicembre-topolino` da `main` (solo `dicembre/`, prove rifatte sulla copia), PR #4 unita alle 18:15, `main` unito nel ramo, sito vero riletto (`curl`, `cmp`).
 - A Mario (18:20): 4 foto, link, passi per vedere icona e anteprima sul telefono, domanda sull'alloggio rifatta, parere sul marchio Disney, «basta Opus»; notifica mandata.
-- Mario 18:23-18:25 (passato a Opus): «ok publica» e la richiesta C5. Tolta la testa di Topolino (personaggio protetto: riga in `docs/ERRORI.md`), luna piena con le stelline, PR #5 unita 18:36, sito controllato; foto `archivio/2026-11-21-icona-luna/` a Mario alle 18:40; piano C5 scritto.
+- Mario 18:23-18:25 (passato a Opus): «ok publica» e la richiesta C5. Tolta la testa di Topolino (personaggio protetto: riga in `docs/ERRORI.md`), luna piena con le stelline, PR #5 unita 18:36, sito controllato; foto `archivio/2026-11-21-icona-luna/` a Mario alle 18:32; piano C5 scritto.
 - Sveglia `trig_01N9WtrZWmXKsSgoN9J13wpx` del 7/12 09:07 (ricontrollo della settimana prima), legata alla #10.
 - Controllo Da fare: 0 voci dai messaggi (solo l'[AVVIO]); 1 voce dai «Prossimi passi» (ricontrollo della settimana prima).
 
@@ -41,7 +41,7 @@ Sessione attuale: #11 (dopo la #10 `session_01WTjqUwUueBoLvRkqLpLRmU`, chiusa al
 - #10: `list_triggers` senza filtri = ~20k token di sveglie di altri progetti: usare `enabled: true` e `limit` basso. `merge_pull_request`: `expectedHeadSha` di 40 caratteri.
 
 ## Prossimi passi
-1. PRIMA DI TUTTO: **C5 distanze e mappa negli alloggi**, piano e scelte in `docs/lavori-in-corso/C5-mappe-hotel.md` (occhio critico lì; mappe OpenStreetMap fatte da uno script, bottone Google Maps col percorso; dati dagli appunti e dalle pagine ufficiali). Foto a Mario PRIMA di pubblicare. Nel primo messaggio: «⚠️ Aspettano te» a turno; le foto delle 2 righe le ha già mandate la #10 alle 18:20 e 18:40.
+1. PRIMA DI TUTTO: **C5 distanze e mappa negli alloggi**, piano e scelte in `docs/lavori-in-corso/C5-mappe-hotel.md` (occhio critico lì; mappe OpenStreetMap fatte da uno script, bottone Google Maps col percorso; dati dagli appunti e dalle pagine ufficiali). Foto a Mario PRIMA di pubblicare. Nel primo messaggio: «⚠️ Aspettano te» a turno; le foto delle 2 righe le ha già mandate la #10 alle 18:20 e 18:32.
 2. DOMANDA 2 (alloggio, 🛑): col numero di Mario, se non è il 12, aggiorno il consiglio in cima (sorgente `dicembre/parigi-disney-natale.html`) e rifaccio le prove; poi pubblico (ramo-copia da `main`, solo `dicembre/`, come la PR #4). Col 12: ricordare la navetta della reception (non confermata) e di prenotare la camera «con 1 letto matrimoniale large» (non la suite).
 3. Voci 👁 di `docs/DA-FARE.md`: si chiudono quando Mario le vede nell'app. Prova `prova-web-app.js`: un giro sulla copia ha dato 1 FALSO «service worker suo» e poi 3 giri verdi (ipotesi: controllo partito prima che il service worker prenda la pagina): se ricapita, alzare l'attesa di `sw()` e provarla.
 4. «A prova di stupido»: dopo la scelta, una passata sui testi (es. la riga dei trasporti a persona in «Come sono calcolati» ha ~15 numeri: farne una tabellina).
