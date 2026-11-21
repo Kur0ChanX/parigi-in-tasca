@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (21/11/2026 22:00 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 22:30 ora italiana)
 
-Cerca su air B&B  qualcosa di interessante vicino a Disneyland
+si ma dal 13 al 17 ricordati eh
