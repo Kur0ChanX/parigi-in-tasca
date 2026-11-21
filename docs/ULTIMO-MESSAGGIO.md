@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (21/11/2026 16:26 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 16:35 ora italiana)
 
-va bene
+E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.
