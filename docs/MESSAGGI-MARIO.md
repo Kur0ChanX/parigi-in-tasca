@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 16:21 · 01WTjqUxBAKZ
-mi raccomando i mercatini sono importanti c'è tutto vero?
-
 ## 2026-11-21 16:22 · 01WTjqUxBAKZ
 Mettile tutti e due i colori selezionabili, dai. Sia quello vino, sia quello blu.
 
@@ -137,3 +134,6 @@ Mettimi le scelte nella pagina, tutte le migliori scelte con le opzioni, e quand
 
 ## 2026-11-21 20:59 · 01WTjqUxzyRm
 Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono ancora hotel, appartamenti, stanze, B&B molto validi e non le stai valutando.
+
+## 2026-11-21 21:17 · 01WTjqUxzyRm
+mi raccomando studiati un impaginazione geniale non confusa
