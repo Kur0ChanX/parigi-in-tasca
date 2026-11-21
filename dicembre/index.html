@@ -1,0 +1,1275 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<!-- File fatto da tools/fai-dicembre.py: non modificarlo a mano, si cambia dicembre/parigi-disney-natale.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Parigi e Disneyland a Natale, 13–17 dicembre: alloggi, costi, mercatini e giorno per giorno.">
+<meta name="theme-color" content="#0A1230">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Natale">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icona-192.png">
+<link rel="apple-touch-icon" href="icona-180.png">
+<title>Parigi e Disney a Natale</title>
+<script>try{if(localStorage.getItem('palette')==='vino')document.documentElement.dataset.palette='vino'}catch(e){}</script>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: una colonna di lettura (max 48rem) dentro bande a tutta larghezza; hero notturno con un mercatino di casette
+   illuminate davanti al castello, festoni di lampadine, giorni come app con barra in basso su telefono.
+   Dark-first, sera romantica: cielo blu notte pieno di stelle, oro delle lampadine, abete, rosso dei tendoni, azzurro ghiaccio.
+   Tema chiaro: celeste. Le stelle su tutta la pagina solo nel tema scuro (--stars-op).
+   Seconda tavolozza «Vin brulé» (la prima versione): data-palette="vino" sulla radice, scelta dall'interruttore in alto. */
+:root{
+ --bg:#0A1230;--surface:#111C42;--surface-2:#1A2853;--ink:#F1F5FF;--mute:#B3C0E3;--rule:#2B3B6E;
+ --brand:#A9CBFF;--brand-ink:#0A1230;--lamp:#F6C964;--lamp-text:#F6C964;--lamp-ink:#241703;
+ --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
+ --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(169 203 255 / .15);
+ --night-1:#16296A;--night-2:#050A1F;--night-ink:#F4F7FF;--night-mute:#C9D4F2;--sil-1:#141D47;--sil-2:#0F173A;--sil-3:#2C3F86;--win:#F6C964;--snow:#FFFFFF;
+ --ember:#FFC27A;--tower:#D9A24A;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#0B1233;--moon:#FFF4D6;--moon-op:1;--stars-op:1;--flight-bg:rgb(8 14 40 / .78);
+ --seg-hotel:#F6C964;--seg-ticket:#4FBF86;--seg-pack:#EE5A66;--seg-trans:#8E9CC2;
+ --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#3B4A7A;--walkt:#FFFFFF;
+ --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
+ --snowground:#EEF3FF;--snowshade:#C9D6F2;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
+ --mood-market:rgb(246 201 100 / .12);--mood-magic:rgb(169 203 255 / .14);
+ --wire:#4A5A8C;--bk-1:rgb(246 201 100 / .10);--bk-2:rgb(110 150 255 / .16);--bk-3:rgb(170 140 255 / .10);
+ --display:"Bricolage Grotesque",Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
+ --text:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
+ --r-lg:20px;--r-md:14px;--r-sm:9px;
+ color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+ --bg:#EAF1FD;--surface:#FFFFFF;--surface-2:#DCE6FA;--ink:#0D1838;--mute:#475577;--rule:#C8D5EF;
+ --brand:#2447A6;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(36 71 166 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#8D99B8;--walk:#475577;--focus:#2447A6;
+ --shadow:0 1px 2px rgb(13 24 56 / .07),0 14px 30px -16px rgb(13 24 56 / .26);
+ --mood-market:rgb(200 140 20 / .08);--mood-magic:rgb(36 71 166 / .08);
+ --wire:#9DB0D6;--bk-1:rgb(246 190 80 / .18);--bk-2:rgb(90 140 255 / .14);--bk-3:rgb(150 120 255 / .08);--stars-op:0;color-scheme:light}}
+:root[data-theme="light"]{
+ --bg:#EAF1FD;--surface:#FFFFFF;--surface-2:#DCE6FA;--ink:#0D1838;--mute:#475577;--rule:#C8D5EF;
+ --brand:#2447A6;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(36 71 166 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#8D99B8;--walk:#475577;--focus:#2447A6;
+ --shadow:0 1px 2px rgb(13 24 56 / .07),0 14px 30px -16px rgb(13 24 56 / .26);
+ --mood-market:rgb(200 140 20 / .08);--mood-magic:rgb(36 71 166 / .08);
+ --wire:#9DB0D6;--bk-1:rgb(246 190 80 / .18);--bk-2:rgb(90 140 255 / .14);--bk-3:rgb(150 120 255 / .08);--stars-op:0;color-scheme:light}
+
+/* tavolozza «Vin brulé» (quella di prima): si sceglie con l'interruttore in alto */
+:root[data-palette="vino"]{
+ --bg:#210F14;--surface:#2E171D;--surface-2:#3D2228;--ink:#FFF3E6;--mute:#D6BCB0;--rule:#55303A;
+ --brand:#FFB0C4;--brand-ink:#2A0B16;--lamp:#F6C964;--lamp-text:#F6C964;--lamp-ink:#241703;
+ --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
+ --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(255 176 196 / .15);
+ --night-1:#3A1224;--night-2:#14070C;--night-ink:#FFF3E6;--night-mute:#E6CDBF;--sil-1:#2F0F22;--sil-2:#2A0E1A;--sil-3:#6A2740;--win:#F6C964;--snow:#FFFFFF;
+ --ember:#FF9A52;--tower:#B8743C;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#2A120E;
+ --seg-hotel:#F6C964;--seg-ticket:#4FBF86;--seg-pack:#EE5A66;--seg-trans:#A8918A;
+ --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#5B3A35;--walkt:#FFFFFF;
+ --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
+ --snowground:#F6ECE6;--snowshade:#E0C9C0;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
+ --mood-market:rgb(242 96 106 / .18);--mood-magic:rgb(255 176 196 / .16);
+ --wire:#6A4234;--bk-1:rgb(246 201 100 / .16);--bk-2:rgb(242 96 106 / .17);--bk-3:rgb(63 174 122 / .12);
+ --moon:#FFF4D6;--moon-op:0;--stars-op:0;--flight-bg:rgb(32 10 18 / .78);color-scheme:dark}
+@media (prefers-color-scheme:light){:root[data-palette="vino"]:not([data-theme="dark"]){
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#A08A82;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}}
+:root[data-palette="vino"][data-theme="light"]{
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#A08A82;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;position:relative;z-index:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.65rem,1.2rem + 2vw,2.3rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+a{color:var(--brand);text-underline-offset:3px}
+.num,time,td,.price{font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:48rem;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:var(--s7)}
+.wide{max-width:64rem}
+.kicker{font:700 .78rem/1 var(--text);letter-spacing:.12em;text-transform:uppercase;color:var(--lamp-text)}
+.lead{font-size:1.18rem;font-weight:600;line-height:1.45;margin-top:var(--s3);max-width:40rem}
+.sec-head{display:grid;gap:var(--s2);margin-bottom:var(--s5)}
+.muted{color:var(--mute)}
+.small{font-size:.92rem}
+b,strong{font-weight:700}
+
+/* bagliore caldo fisso dietro tutta la pagina */
+.bokeh{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(30rem 22rem at 6% 14%,var(--bk-1),transparent 70%),radial-gradient(26rem 20rem at 98% 46%,var(--bk-2),transparent 70%),radial-gradient(32rem 24rem at 24% 92%,var(--bk-3),transparent 70%)}
+
+/* cielo stellato fisso dietro tutta la pagina (le immagini le crea lo script) */
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:var(--stars-op)}
+.stars i{position:absolute;inset:0;background-repeat:repeat}
+@media (prefers-reduced-motion:no-preference){.stars i.tw2{animation:stw 4.6s ease-in-out infinite}.stars i.tw3{animation:stw 6.2s ease-in-out -2.3s infinite}}
+@keyframes stw{0%,100%{opacity:.25}50%{opacity:1}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 75% 0%,var(--sil-3) 0%,var(--night-1) 38%,var(--night-2) 100%);color:var(--night-ink);isolation:isolate}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero .wrap{position:relative;z-index:2}.hero-top{padding-block:calc(var(--s6) + 26px) 0}
+.garland{position:absolute;top:0;left:0;width:100%;height:64px;z-index:1;pointer-events:none;display:block}.hero-bottom{padding-block:var(--s4) var(--s5)}
+.hb{animation:chase 2.6s ease-in-out infinite}@keyframes chase{0%,100%{opacity:1}45%{opacity:.3}}
+.tw{animation:twk 1.8s ease-in-out infinite}@keyframes twk{0%,100%{opacity:.15}50%{opacity:1}}
+.hero .kicker{color:var(--lamp)}
+.hero h1{font-size:clamp(2.45rem,1.5rem + 5.5vw,4.4rem);font-weight:800;margin-top:var(--s3);letter-spacing:-.025em}
+.hero h1 .gold{color:var(--lamp)}
+.pal{display:inline-flex;gap:4px;padding:4px;margin-top:var(--s3);border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .16)}
+.pal button{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:var(--night-ink);font:700 .95rem var(--text);cursor:pointer;transition:background-color .2s,color .2s,transform .15s}
+.pal button:active{transform:scale(.96)}
+.pal button[aria-pressed="true"]{background:var(--lamp);color:var(--lamp-ink)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 12px;border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .14);font-weight:600;font-size:.95rem;color:var(--night-ink)}
+.flights{display:grid;grid-template-columns:1fr 1fr;gap:1px;border-radius:var(--r-md);overflow:hidden;background:rgb(255 255 255 / .14);max-width:36rem}
+.flight{background:var(--flight-bg);padding:var(--s3) var(--s4);display:grid;gap:2px;min-width:0}
+.flight .d{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lamp);font-weight:700}
+.flight .r{font-family:var(--display);font-weight:700;font-size:1.12rem;line-height:1.2}
+.flight .r span{color:var(--night-mute);font-weight:600}
+.flight .x{font-size:.86rem;color:var(--night-mute)}
+.checked{margin-top:var(--s4);font-size:.92rem;color:var(--night-mute)}
+.checked b{color:var(--night-ink)}
+.scene{position:relative;z-index:1;display:block;width:100%;height:clamp(270px,16vw + 210px,380px);margin-top:var(--s3);max-width:100%}
+.scene .par{will-change:transform}
+.jump{position:relative;z-index:2;background:var(--night-2);border-top:1px solid rgb(255 255 255 / .08)}
+.jump .row{display:flex;gap:var(--s2);overflow-x:auto;padding-block:var(--s3);scrollbar-width:none;max-width:64rem;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.jump a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;color:var(--night-ink);text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid rgb(255 255 255 / .16);transition:transform .15s ease,background-color .15s}
+.jump a:hover{background:rgb(255 255 255 / .08)}
+.jump a:active{transform:scale(.96)}
+
+/* ---------- divisore a lampadine ---------- */
+.lights{display:block;height:40px;width:100%;overflow:hidden;color:var(--wire)}
+.lights svg{display:block;width:100%;height:40px}
+.lights .wire{fill:none;stroke:currentColor;stroke-width:1.5}
+.lights .b{transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){
+ .lights .b{animation:tw 3.2s ease-in-out infinite}
+ .lights .b:nth-child(3n){animation-delay:-1.1s}.lights .b:nth-child(3n+1){animation-delay:-2.2s}
+}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ---------- risposta in breve ---------- */
+.answer{display:grid;gap:var(--s3);grid-template-columns:1fr}
+@media (min-width:640px){.answer{grid-template-columns:1fr 1fr}}
+.verdict{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md);padding:var(--s4);display:grid;gap:6px;align-content:start;min-width:0}
+.verdict .k{font:700 .76rem/1 var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.verdict .v{font-family:var(--display);font-weight:700;font-size:1.22rem;line-height:1.2}
+.verdict p{color:var(--mute);font-size:.96rem}
+.total{margin-top:var(--s4);display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--s3);padding:var(--s4) var(--s5);border-radius:var(--r-lg);background:var(--lamp);color:var(--lamp-ink)}
+.total .t{font-weight:700;font-size:1rem;max-width:26rem}
+.total .n{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;font-variant-numeric:tabular-nums}
+.total small{display:block;font-weight:500;font-size:.88rem;margin-top:4px}
+
+/* badge */
+.bd{display:inline-flex;align-items:center;gap:5px;font:700 .72rem/1 var(--text);letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:6px;white-space:nowrap;vertical-align:middle}
+.bd::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.bd.ok{color:var(--good);background:var(--badge-good-bg)}
+.bd.nu{color:var(--warn);background:var(--badge-warn-bg)}
+.bd.nc{color:var(--bad);background:var(--badge-bad-bg)}
+.bd.es{color:var(--brand);background:var(--badge-est-bg)}
+.rec{display:inline-flex;align-items:center;gap:6px;font:800 .8rem/1 var(--text);letter-spacing:.08em;text-transform:uppercase;background:var(--lamp);color:var(--lamp-ink);padding:7px 11px;border-radius:999px}
+.rec svg{width:13px;height:13px}
+
+/* ---------- barre costi ---------- */
+.bars{display:grid;gap:var(--s4);margin-top:var(--s2)}
+.bar-row{display:grid;gap:6px;color:inherit;text-decoration:none;border-radius:var(--r-md);padding:8px;margin:-8px;-webkit-tap-highlight-color:transparent}a.bar-row:hover,a.bar-row:focus-visible{background:var(--surface)}.bar-go{font-weight:700;color:var(--brand);white-space:nowrap}.card details.more,.mine details.more{background:transparent}.card details.more>summary{min-height:44px;font-size:.95rem}.card.flash{box-shadow:0 0 0 3px var(--focus)}
+.bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);flex-wrap:wrap}
+.bar-name{font-weight:700}
+.bar-name .rec{margin-left:6px;padding:5px 8px;font-size:.68rem}
+.bar-val{font-family:var(--display);font-weight:800;font-size:1.25rem;font-variant-numeric:tabular-nums}
+.bar-diff{font-size:.88rem;font-weight:700;margin-left:6px}
+.bar-diff.up{color:var(--bad)}.bar-diff.dn{color:var(--good)}.bar-diff.eq{color:var(--mute)}
+.track{position:relative;height:26px;border-radius:7px;background:var(--surface-2)}
+.fill{position:absolute;inset:0 auto 0 0;display:flex;border-radius:7px;overflow:hidden;transform-origin:left center}
+.fill i{display:block;height:100%}
+.fill i+i{box-shadow:inset 2px 0 0 var(--bg)}
+.s-h{background:var(--seg-hotel)}.s-t{background:var(--seg-ticket)}.s-p{background:var(--seg-pack)}.s-r{background:var(--seg-trans)}
+.bars.go .fill{animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+.bars.go .bar-row:nth-child(2) .fill{animation-delay:.12s}.bars.go .bar-row:nth-child(3) .fill{animation-delay:.24s}.bars.go .bar-row:nth-child(4) .fill{animation-delay:.36s}.bars.go .bar-row:nth-child(5) .fill{animation-delay:.48s}.bars.go .bar-row:nth-child(6) .fill{animation-delay:.6s}
+@keyframes grow{from{transform:scaleX(.03)}to{transform:scaleX(1)}}
+.axis{position:relative;height:22px;margin-top:2px;font-size:.78rem;color:var(--mute);font-variant-numeric:tabular-nums}
+.axis span{position:absolute;top:4px;transform:translateX(-50%);white-space:nowrap}.axis span:last-child{transform:translateX(-100%)}
+.axis span:first-child{transform:none}
+.grid-lines{position:absolute;inset:0;pointer-events:none}
+.grid-lines i{position:absolute;top:0;bottom:0;width:1px;background:var(--rule)}
+.legend{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);font-size:.9rem;color:var(--mute);margin-top:var(--s3)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px}
+.bar-note{font-size:.88rem;color:var(--mute)}
+
+/* ---------- card hotel ---------- */
+.cards{display:grid;gap:var(--s4)}
+@media (min-width:760px){.cards.two{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-lg);padding:var(--s5);display:grid;gap:var(--s3);align-content:start;min-width:0;transition:transform .18s ease,box-shadow .18s ease}
+.card.is-rec{border:2px solid var(--lamp);box-shadow:var(--shadow);position:relative}
+.card:active{transform:translateY(-2px) scale(.995)}
+@media (hover:hover){.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s3);flex-wrap:wrap}
+.card h3{font-size:1.3rem}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2)}
+.fact{background:var(--surface-2);border-radius:var(--r-sm);padding:var(--s2) var(--s3);min-width:0}
+.fact .k{font-size:.74rem;color:var(--mute);font-weight:600;letter-spacing:.02em}
+.fact .v{font-family:var(--display);font-weight:800;font-size:1.3rem;font-variant-numeric:tabular-nums;line-height:1.15}
+.fact .v small{font-family:var(--text);font-size:.78rem;font-weight:600;color:var(--mute)}
+.kv{display:grid;gap:6px;font-size:.97rem}
+.kv div{display:grid;grid-template-columns:7.2rem 1fr;gap:var(--s2)}
+.kv dt{color:var(--mute);font-weight:600}
+.kv dd{margin:0;min-width:0}
+.pc{display:grid;gap:6px;font-size:.97rem}
+.pc p{display:grid;grid-template-columns:22px 1fr;gap:6px}
+.pc .p::before{content:"+";color:var(--good);font-weight:800}
+.pc .c::before{content:"–";color:var(--bad);font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--brand);color:var(--brand-ink);border:0;cursor:pointer;transition:transform .15s ease,filter .15s;font-size:1rem;font-family:var(--text)}
+.btn:hover{filter:brightness(1.08)}
+.btn:active{transform:scale(.97)}
+.btn.gold{background:var(--lamp);color:var(--lamp-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--rule)}
+.btn svg{width:18px;height:18px;flex:none}
+.mini{display:grid;gap:var(--s3)}
+.mini .card{padding:var(--s4)}
+details{border:1px solid var(--rule);border-radius:var(--r-md);background:var(--surface)}
+details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:var(--s3);min-height:52px;padding:var(--s3) var(--s4);font-weight:700}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"";width:10px;height:10px;border-right:2.5px solid var(--mute);border-bottom:2.5px solid var(--mute);transform:rotate(45deg) translateY(-3px);transition:transform .2s;flex:none}
+details[open]>summary::after{transform:rotate(-135deg) translateY(-2px)}
+details>.in{padding:0 var(--s4) var(--s4);display:grid;gap:var(--s3)}
+.stack{display:grid;gap:var(--s4)}
+.callout{border-left:4px solid var(--lamp);background:var(--surface);padding:var(--s4);border-radius:0 var(--r-md) var(--r-md) 0}
+.callout b{color:var(--lamp-text)}
+ul.clean{margin:0;padding-left:1.1rem;display:grid;gap:6px}
+
+/* tabelle */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:var(--r-md);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;min-width:34rem}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);font-weight:700;background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right}
+tr.hl td{background:var(--badge-warn-bg)}
+
+/* alloggi: consigli, filtri, tabella */
+.sub-h{font-size:1.25rem;margin-bottom:var(--s3)}
+.nb{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--lamp);color:var(--lamp-ink);font:800 1.05rem/1 var(--display);flex:none;font-variant-numeric:tabular-nums}
+.nb.sm{width:28px;height:28px;font-size:.9rem}
+.picks{display:grid;gap:var(--s3);grid-template-columns:1fr}
+@media (min-width:560px){.picks{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.picks{grid-template-columns:repeat(3,1fr)}}
+.pick{display:grid;grid-template-columns:auto 1fr;gap:2px var(--s3);align-content:start;padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md);color:var(--ink);text-decoration:none;min-width:0;transition:transform .15s,border-color .15s}
+.pick .nb{grid-row:span 3}
+.pick .k{font:700 .74rem/1.3 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--lamp-text)}
+.pick .t{font-weight:700;font-size:1.05rem}
+.pick .d{font-size:.92rem;color:var(--mute)}
+.pick:active{transform:scale(.98)}
+@media (hover:hover){.pick:hover{border-color:var(--brand)}}
+.mine{display:grid;gap:var(--s3);padding:var(--s4) var(--s4) var(--s5);margin-bottom:var(--s6);background:var(--surface);border-radius:var(--r-lg)}
+.mine-t{display:flex;align-items:center;gap:var(--s3);font-size:1.3rem;line-height:1.25;text-wrap:balance;min-width:0}
+.mine-why{display:grid;gap:8px}
+.mine-why li,.mine p{max-width:65ch}
+.mine .give{color:var(--mute);font-size:.96rem}
+.mine .btn,.mine .rec{justify-self:start}
+.mega{margin:var(--s4) 0 var(--s5)}
+.chooser{display:grid;grid-template-columns:minmax(0,1fr);min-width:0;gap:10px;margin-top:var(--s4);padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md)}
+.chooser label{font-weight:700}
+.chooser select{font:inherit;font-size:1rem;min-height:48px;padding:0 12px;border-radius:12px;border:1.5px solid var(--rule);background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.chooser .btn{justify-self:start}
+.use-al{margin-top:8px}
+.use-al[aria-pressed=true]{border-color:var(--lamp);background:var(--surface-2)}
+.mycost{margin-bottom:var(--s5)}
+.mega-route{display:grid;gap:10px}
+.mega-route li{display:grid;grid-template-columns:3.4em 1fr;gap:var(--s3);align-items:baseline}
+.mega-route time{font-family:var(--display);font-weight:800;text-align:right}
+.mega-route b{display:block}
+.mega-route span{color:var(--mute);font-size:.94rem}
+.filters{display:flex;gap:var(--s2);overflow-x:auto;scrollbar-width:none;padding-block:2px var(--s2)}
+.filters button{flex:none;min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);font:700 .93rem var(--text);cursor:pointer;transition:background-color .15s,border-color .15s,transform .15s}
+.filters button:active{transform:scale(.96)}
+.filters button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.sortbar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s3);margin-top:var(--s2)}
+.switch.sort3{grid-template-columns:repeat(3,auto);margin:0}
+#fdesc{margin:var(--s2) 0 var(--s3);max-width:44rem}
+table.cmp{min-width:0;font-size:.93rem}
+table.cmp th,table.cmp td{padding:8px 10px;vertical-align:middle}
+table.cmp a{color:var(--ink);font-weight:700;text-decoration:none}
+table.cmp td.r{white-space:nowrap}
+.card{scroll-margin-top:16px}
+.ttl{display:flex;gap:var(--s3);align-items:flex-start;min-width:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font:700 .76rem/1 var(--text);padding:6px 9px;border-radius:999px;background:var(--surface-2);color:var(--mute)}
+
+/* biglietti */
+.opts{display:grid;gap:var(--s3)}
+@media (min-width:720px){.opts{grid-template-columns:repeat(3,1fr)}}
+.opt{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-lg);padding:var(--s4);display:grid;gap:var(--s2);align-content:start;transition:transform .18s ease}
+.opt.is-rec{border:2px solid var(--lamp);box-shadow:var(--shadow)}
+.opt .price{font-family:var(--display);font-weight:800;font-size:2rem;line-height:1}
+.opt .price small{font-size:.9rem;font-family:var(--text);font-weight:600;color:var(--mute)}
+.opt:active{transform:scale(.99)}
+
+/* cartolina del mercatino: domenica e piede della pagina */
+.market{display:block;width:100%;max-width:100%;height:112px;border-radius:var(--r-md);background:linear-gradient(var(--night-1),var(--night-2));margin-top:var(--s2)}
+.foot-market{display:block;width:100%;height:120px;background:linear-gradient(var(--night-1),var(--night-2))}
+
+/* ---------- giorni ---------- */
+#giorni{position:relative;overflow:hidden}
+.mood{position:absolute;inset:0;pointer-events:none;transition:opacity .8s ease;opacity:0}
+.mood.market{background:radial-gradient(90% 60% at 10% 0%,var(--mood-market),transparent 70%)}
+.mood.magic{background:radial-gradient(90% 60% at 90% 0%,var(--mood-magic),transparent 70%)}
+#giorni[data-mood="market"] .mood.market,#giorni[data-mood="magic"] .mood.magic{opacity:1}
+#giorni .wrap{position:relative}
+.daybar{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:6px;position:relative;margin-bottom:var(--s5)}
+.daybar button{position:relative;z-index:1;min-height:56px;border:0;background:transparent;border-radius:11px;color:var(--mute);font-family:var(--text);cursor:pointer;display:grid;place-content:center;gap:1px;padding:4px 2px;transition:color .2s,transform .15s}
+.daybar button:active{transform:scale(.95)}
+.daybar button .dn{font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.daybar button .dd{font-family:var(--display);font-weight:800;font-size:1.35rem;line-height:1;font-variant-numeric:tabular-nums}
+.daybar button[aria-selected="true"]{color:var(--lamp-ink)}
+.daybar .pill{position:absolute;z-index:0;top:6px;bottom:6px;left:6px;border-radius:11px;background:var(--lamp);transition:transform .38s cubic-bezier(.3,.9,.3,1);width:calc((100% - 12px - 24px)/5)}
+.daybar .today-dot{position:absolute;top:6px;right:8px;width:7px;height:7px;border-radius:50%;background:var(--wine)}
+.spark{position:absolute;z-index:2;pointer-events:none;width:46px;height:46px;margin:-23px 0 0 -23px;opacity:0}
+.spark.on{animation:spk .7s ease-out}
+@keyframes spk{0%{opacity:1;transform:scale(.3) rotate(0)}100%{opacity:0;transform:scale(1.25) rotate(40deg)}}
+@media (max-width:719px){
+ .daybar{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;border-radius:18px 18px 0 0;border-width:1px 0 0;
+  padding:6px max(10px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));box-shadow:0 -10px 30px -12px rgb(0 0 0 / .5)}
+ .daybar .pill{top:6px;bottom:calc(6px + env(safe-area-inset-bottom,0px));left:max(10px,env(safe-area-inset-left,0px));width:calc((100% - max(10px,env(safe-area-inset-left,0px)) - max(10px,env(safe-area-inset-right,0px)) - 24px)/5)}
+ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
+.day-head{display:grid;gap:var(--s2);margin-bottom:var(--s4)}
+.day-head h3{font-size:clamp(1.45rem,1.2rem + 1.2vw,1.9rem);font-weight:800}
+.panel.enter{animation:pin .45s cubic-bezier(.2,.8,.2,1)}
+.panel.enter.back{animation-name:pinb}
+@keyframes pin{from{opacity:.25;transform:translateX(28px)}to{opacity:1;transform:none}}
+@keyframes pinb{from{opacity:.25;transform:translateX(-28px)}to{opacity:1;transform:none}}
+.switch{display:inline-grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:14px;background:var(--surface-2);margin:var(--s2) 0 var(--s3);max-width:100%}
+.switch button{min-height:46px;border:0;border-radius:10px;background:transparent;color:var(--mute);font:700 .95rem var(--text);padding:0 14px;cursor:pointer;transition:background-color .2s,color .2s}
+.switch button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tl>li{display:grid;grid-template-columns:4.1rem 1fr;gap:var(--s3);position:relative;padding-bottom:var(--s4)}
+.tl>li::before{content:"";position:absolute;left:calc(4.1rem + 18px);top:14px;bottom:0;width:2px;background:var(--rule)}
+.tl>li:last-child::before{display:none}
+.tl time{font-family:var(--display);font-weight:800;font-size:1.06rem;padding-top:2px;text-align:right}
+.tl .body{position:relative;padding-left:var(--s5);display:grid;gap:6px;min-width:0}
+.tl .body::before{content:"";position:absolute;left:-1px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--lamp)}
+#giorni[data-mood="magic"] .tl .body::before{border-color:var(--brand)}
+.tl .t{font-weight:700;font-size:1.08rem;line-height:1.3}.tl details.st{border:0;border-radius:0;background:none}.tl details.st>summary{min-height:0;padding:0 0 2px;font-weight:inherit;align-items:flex-start}.tl details.st>summary .t{flex:1;min-width:0}.tl details.st>summary::after{margin-top:6px}.tl details.st[open]>summary .t{color:var(--brand)}.st-in{display:grid;gap:6px;margin-top:6px}
+.tl .d{color:var(--mute);font-size:.98rem}
+.tl .d b{color:var(--ink)}
+.legs{display:grid;gap:6px;margin-top:2px}
+.leg{display:flex;gap:8px;align-items:flex-start;font-size:.96rem}
+.lb{flex:none;display:inline-grid;place-items:center;min-width:28px;height:24px;padding:0 6px;border-radius:6px;font:800 .82rem/1 var(--text);background:var(--c);color:var(--tc)}
+.lb.round{border-radius:50%;width:26px;min-width:26px;height:26px}
+.lb.walk{background:var(--walk);color:var(--walkt)}
+.lb.walk svg{width:14px;height:14px}
+.maps{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:11px;border:1.5px solid var(--rule);color:var(--ink);text-decoration:none;font-weight:700;font-size:.93rem;margin-top:4px;justify-self:start;transition:transform .15s,border-color .15s}
+.maps:hover{border-color:var(--brand)}
+.maps:active{transform:scale(.97)}
+.maps svg{width:16px;height:16px;color:var(--wine)}
+.note{font-size:.92rem;background:var(--surface-2);border-radius:var(--r-sm);padding:var(--s2) var(--s3)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.check label{display:grid;grid-template-columns:30px 1fr;gap:var(--s3);align-items:start;padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md);cursor:pointer;min-height:56px;transition:transform .15s,opacity .2s}
+.check label:active{transform:scale(.99)}
+.check input{appearance:none;-webkit-appearance:none;width:28px;height:28px;margin:0;border-radius:8px;border:2px solid var(--mute);display:grid;place-items:center;cursor:pointer;transition:background-color .15s,border-color .15s}
+.check input:checked{background:var(--good);border-color:var(--good)}
+.check input:checked::after{content:"";width:8px;height:14px;border:solid var(--bg);border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-2px)}
+.check .w{display:block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--lamp-text)}
+.check .tx{font-weight:600}
+.check .tx small{display:block;font-weight:400;color:var(--mute);font-size:.92rem;margin-top:2px}
+.check input:checked~span .tx{text-decoration:line-through;text-decoration-color:var(--mute)}
+.check li.done label{opacity:.72}
+.progress{font-weight:700;margin-bottom:var(--s3)}
+
+.recheck{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.recheck li{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md);padding:var(--s3) var(--s4);display:grid;gap:4px}
+.recheck a{font-weight:700;display:inline-flex;align-items:center;min-height:40px}
+
+.src h3{font-size:1rem;margin-bottom:var(--s2);color:var(--lamp-text);text-transform:uppercase;letter-spacing:.08em;font-family:var(--text)}
+.src ul{margin:0 0 var(--s5);padding-left:1.1rem;display:grid;gap:4px;font-size:.95rem}
+.src li a{word-break:break-word}
+
+footer{margin-top:var(--s4)}
+footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="bokeh" aria-hidden="true"></div>
+<div class="stars" id="stars" aria-hidden="true"><i class="tw1"></i><i class="tw2"></i><i class="tw3"></i></div>
+<header class="hero" id="top">
+ <canvas id="sky" aria-hidden="true"></canvas>
+ <svg class="garland" id="garland" aria-hidden="true"></svg>
+ <div class="wrap wide hero-top">
+  <p class="kicker">dom 13 – gio 17 dicembre 2026</p>
+  <h1>Parigi e Disney <span class="gold">a Natale</span></h1>
+  <div class="hero-meta"><span class="chip">2 persone · senza auto</span><span class="chip">4 notti</span></div>
+  <div class="pal" role="group" aria-label="Colori della pagina"><button type="button" data-pal="blu" aria-pressed="true">🌙 Blu notte</button><button type="button" data-pal="vino" aria-pressed="false">🍷 Vin brulé</button></div>
+ </div>
+ <svg class="scene" viewBox="0 0 800 290" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+   <radialGradient id="cglow" cx="50%" cy="55%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.42"/><stop offset=".55" style="stop-color:var(--lamp);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="kglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.5"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="hglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--ember);stop-opacity:.42"/><stop offset=".6" style="stop-color:var(--ember);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--ember);stop-opacity:0"/></radialGradient>
+   <radialGradient id="pool" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.6"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="mglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--moon);stop-opacity:.38"/><stop offset=".5" style="stop-color:var(--moon);stop-opacity:.1"/><stop offset="1" style="stop-color:var(--moon);stop-opacity:0"/></radialGradient>
+   <mask id="moonm" maskUnits="userSpaceOnUse" x="190" y="50" width="60" height="60"><circle cx="216" cy="80" r="13" fill="#fff"/><circle cx="222.5" cy="75" r="11.5" fill="#000"/></mask>
+   <pattern id="awnR" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--wine)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
+   <pattern id="awnG" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--fir)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
+   <pattern id="awnY" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--lamp)"/><rect x="6" width="6" height="14" style="fill:var(--roof-r)"/></pattern>
+  </defs>
+  <!-- bagliore caldo della città sull'orizzonte -->
+  <ellipse cx="400" cy="250" rx="560" ry="150" fill="url(#hglow)"/>
+  <!-- strato lontano: tetti di Parigi e la Torre Eiffel accesa -->
+  <g class="par" data-depth="0.04">
+   <g style="opacity:var(--moon-op)"><circle cx="216" cy="80" r="44" fill="url(#mglow)"/><circle cx="216" cy="80" r="13" style="fill:var(--moon)" mask="url(#moonm)"/></g>
+   <g id="roofs" style="fill:var(--sil-3)"></g>
+   <ellipse cx="262" cy="170" rx="46" ry="70" fill="url(#kglow)" opacity=".55"/>
+   <path d="M242 265 Q256 210 260 150 L262 128 L264 150 Q268 210 282 265 H272 Q262 236 252 265Z" style="fill:var(--tower)"/>
+   <rect x="254" y="196" width="16" height="3" style="fill:var(--tower)"/><rect x="258" y="160" width="8" height="2" style="fill:var(--tower)"/>
+   <line x1="262" y1="128" x2="262" y2="116" style="stroke:var(--tower);stroke-width:1.5"/>
+   <g id="towerlights"></g>
+  </g>
+  <!-- strato medio: castello -->
+  <g class="par" data-depth="0.09">
+   <ellipse cx="502" cy="170" rx="175" ry="125" fill="url(#cglow)"/>
+   <g style="fill:var(--sil-1)">
+    <rect x="415" y="195" width="170" height="70"/>
+    <g id="cren"></g>
+    <rect x="405" y="170" width="30" height="95"/><polygon points="400,172 420,120 440,172"/>
+    <rect x="440" y="135" width="34" height="130"/><polygon points="435,137 457,80 479,137"/>
+    <rect x="480" y="110" width="44" height="155"/><polygon points="474,112 502,46 530,112"/>
+    <rect x="530" y="145" width="32" height="120"/><polygon points="525,147 546,94 567,147"/>
+    <rect x="568" y="175" width="28" height="90"/><polygon points="563,177 582,133 601,177"/>
+    <rect x="462" y="112" width="10" height="26"/><polygon points="459,114 467,96 475,114"/>
+   </g>
+   <line x1="502" y1="46" x2="502" y2="22" style="stroke:var(--sil-1);stroke-width:2"/>
+   <path d="M503 22 l20 6 -20 6z" style="fill:var(--wine)"/>
+   <g style="fill:var(--win)">
+    <rect x="417" y="188" width="6" height="10" rx="3"/>
+    <rect x="449" y="152" width="6" height="10" rx="3"/><rect x="460" y="152" width="6" height="10" rx="3"/>
+    <rect x="489" y="124" width="6" height="11" rx="3"/><rect x="499" y="124" width="6" height="11" rx="3"/><rect x="509" y="124" width="6" height="11" rx="3"/>
+    <rect x="494" y="152" width="6" height="11" rx="3"/><rect x="504" y="152" width="6" height="11" rx="3"/>
+    <rect x="543" y="162" width="6" height="10" rx="3"/><rect x="579" y="192" width="6" height="10" rx="3"/>
+   </g>
+  </g>
+  <!-- primo piano: la fila di casette del mercatino, l'abete, i festoni, la neve -->
+  <g class="par" data-depth="0.16">
+   <g id="chalets"></g>
+   <path d="M0 290 V262 Q100 252 200 262 T400 260 T600 263 T800 258 V290Z" style="fill:var(--snowground)"/>
+   <g id="pools"></g>
+   <g>
+    <polygon points="345,132 325,184 365,184" style="fill:var(--fir)"/>
+    <polygon points="345,158 320,216 370,216" style="fill:var(--fir)"/>
+    <polygon points="345,190 314,256 376,256" style="fill:var(--fir)"/>
+    <rect x="341" y="254" width="8" height="12" style="fill:var(--wood-dk)"/>
+    <path d="M345 121 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" style="fill:var(--lamp)"/>
+    <g id="firlights"></g>
+   </g>
+   <g id="festoons"></g>
+   <path d="M0 290 V272 Q120 266 260 272 T540 270 T800 268 V290Z" style="fill:var(--snowshade)"/>
+  </g>
+ </svg>
+ <div class="wrap wide hero-bottom">
+  <div class="flights" role="list" aria-label="I due voli Volotea">
+   <div class="flight" role="listitem"><span class="d">Andata · dom 13</span><span class="r num">06:05 Olbia <span>→</span> 08:05 Orly</span><span class="x">Volotea · Orly 1, hall A</span></div>
+   <div class="flight" role="listitem"><span class="d">Ritorno · gio 17</span><span class="r num">12:45 Orly <span>→</span> 14:45 Olbia</span><span class="x">Uscite dall'hotel alle 8:30</span></div>
+  </div>
+  <p class="checked"><b>Dati controllati il 21/11/2026.</b> Prezzi e orari cambiano: dove serve, la pagina vi dice cosa ricontrollare.</p>
+ </div>
+ <nav class="jump" aria-label="Sezioni della pagina"><div class="row">
+  <a href="#breve">In breve</a><a href="#costi">Costi</a><a href="#hotel">Alloggi</a><a href="#biglietti">Biglietti Disney</a><a href="#hoteldisney">Hotel Disney</a><a href="#giorni">Giorno per giorno</a><a href="#trasporti">Trasporti</a><a href="#dafare">Da fare</a><a href="#ricontrollare">Da ricontrollare</a><a href="#fonti">Fonti</a>
+ </div></nav>
+</header>
+
+<main>
+<section id="breve" aria-labelledby="h-breve"><div class="wrap">
+ <div class="sec-head"><p class="kicker">La risposta in breve</p><h2 id="h-breve">Scegliete l'alloggio fra 15 e prenotate il biglietto Disney da 3 giorni. Il resto si paga sul posto.</h2></div>
+ <div class="answer">
+  <div class="verdict"><span class="k">Dove dormire</span><span class="v">Il mio consiglio: n. 12 Relais Spa</span><p>Domenica sera la spa, inclusa, dopo i mercatini. Lunedì–mercoledì solo Disney: 5 minuti a piedi e 1 fermata di treno. Stesso posto per tutte e 4 le notti. <a href="#hotel">Vai agli alloggi</a></p></div>
+  <div class="verdict"><span class="k">Domenica, appena arrivati</span><span class="v">Il mega consiglio: Notre-Dame, Tuileries e Champs-Élysées</span><p>Un giro solo, da est a ovest: mercatini di giorno, luci la sera. <a href="#mega" data-day="0">Vedi il giro</a></p></div>
+  <div class="verdict"><span class="k">Biglietti Disney</span><span class="v">3 giorni / 2 parchi, dal 14 al 16: 544 € in due</span><p>Costa come 1 parco lunedì + 2 giorni, ma vi dà tutti e due i parchi anche lunedì. <span class="bd nu">non ufficiale</span></p></div>
+  <div class="verdict"><span class="k">Hotel Disney</span><span class="v">No</span><p>Il più economico con voto 8,0 costa circa 900 € in più. Unico vantaggio: entrate un'ora prima.</p></div>
+  <div class="verdict"><span class="k">Trasporti</span><span class="v">Biglietti singoli sul telefono, niente abbonamento</span><p>Metro 14 dall'aeroporto e RER A, il treno regionale veloce che collega Parigi ai parchi.</p></div>
+ </div>
+ <div class="total">
+  <p class="t">Totale stimato per due col mio consiglio: alloggio, biglietti Disney e trasporti locali<small>N. 12 Relais Spa, letto matrimoniale e cancellazione gratuita. Con gli altri alloggi da circa 1.040 €. Voli, cibo e armadietto bagagli esclusi. <span class="bd es" style="background:rgb(0 0 0 / .1);color:var(--lamp-ink)">stima</span></small></p>
+  <p class="n">≈ 1.560 €</p>
+ </div>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="costi" aria-labelledby="h-costi"><div class="wrap">
+ <div class="sec-head"><p class="kicker">Quanto costa, sette modi: toccate una barra</p><h2 id="h-costi">Da circa 1.040 € a 1.560 € in due, secondo l'alloggio. Gli hotel Disney costano molto di più.</h2></div>
+ <div class="mine is-rec mycost" id="myCost"></div>
+ <div class="bars" id="bars"></div>
+ <div class="legend" aria-hidden="true">
+  <span><i class="s-h"></i>Alloggio vicino</span><span><i class="s-t"></i>Biglietti Disney</span><span><i class="s-p"></i>Pacchetto Disney (hotel + biglietti)</span><span><i class="s-r"></i>Trasporti locali</span>
+ </div>
+ <details style="margin-top:var(--s5)"><summary>Come sono calcolati</summary><div class="in small">
+  <p>Tutti i totali sono <span class="bd es">stima</span> per 2 persone. Ogni pezzo ha la sua etichetta nelle sezioni sotto.</p>
+  <ul class="clean">
+   <li><b>N. 1 Love N Chic:</b> 391 € + 544 € biglietti + 109 € trasporti = 1.044 €.</li>
+   <li><b>N. 2 Ki Space:</b> 465 € (prezzo della vostra app, non rimborsabile) + 544 € + 76 € trasporti (navetta gratis ai parchi) = 1.085 €. Col bus invece della navetta: 1.110 €.</li>
+   <li><b>N. 4 Chez Stéphane &amp; Sophie:</b> 492 € + 544 € + 107 € = 1.143 €.</li>
+   <li><b>N. 8 Moxy:</b> 524 € + 544 € + 107 € = 1.175 €.</li>
+   <li><b>N. 8 Moxy con cancellazione gratuita:</b> circa 577 € + 544 € + 107 € = circa 1.228 €.</li>
+   <li><b>N. 12 Relais Spa, letto matrimoniale e cancellazione gratuita (il mio consiglio):</b> 908 € + 544 € + 107 € = 1.559 €. Suite non rimborsabile, letto non garantito: 763 € + 544 € + 107 € = 1.414 €.</li>
+   <li><b>Misto:</b> pacchetto Disney Cheyenne 2 notti 14→16 con biglietti 1.103 € (stima ufficiale) + Moxy 13→14 e 16→17 circa 249 € (stima) + 87 € trasporti = 1.438 €.</li>
+   <li><b>Tutto al Cheyenne:</b> pacchetto 4 notti 13→17 con biglietti 1.970 € (stima ufficiale) + 76 € trasporti = 2.047 €.</li>
+   <li>Trasporti a persona: domenica 24,20 € (ticket aeroporto 14 € + 4 corse da 2,55 €), giovedì 14 €, più 15,30 € di treno ai parchi con un alloggio vicino alla stazione (con il bus 12,30 € più 2,05 € domenica sera e 2,05 € giovedì mattina; bus e treno insieme per il n. 13: 27,60 €); nel misto 5,10 € per i due spostamenti con le valigie. La navetta di Ki Space e quella Disney sono gratuite.</li>
+  </ul>
+ </div></details>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="hotel" aria-labelledby="h-hotel"><div class="wrap wide">
+ <div class="sec-head"><p class="kicker">Dove dormire · 4 notti, 13→17 dic, 2 adulti, 1 camera</p><h2 id="h-hotel">Io prenderei il n. 12. Qui sotto tutti i 15: scrivetemi il numero che scegliete.</h2>
+ <p class="lead">Prezzi per 4 notti, tasse incluse, letti su Booking da computer il 21/11/2026. Nella vostra app, con Genius, spesso costano circa il 12 % in meno.</p></div>
+
+ <div class="mine is-rec" id="mio">
+  <span class="rec"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>Il mio consiglio</span>
+  <h3 class="mine-t"><span class="nb">12</span><span>Io prenderei il Relais Spa Val d'Europe</span></h3>
+  <p>Camera con letto matrimoniale e cancellazione gratuita fino all'8/12: 908 € per 4 notti <span class="bd ok">visto il 21/11/2026</span>. Il prezzo vero lo leggete nell'app.</p>
+  <ul class="clean mine-why">
+   <li><b>Domenica, relax:</b> dopo i mercatini siete in hotel verso le 20:10. Dalle 20:20 alle 22:00 piscina, idromassaggio, sauna e hammam, tutto incluso.</li>
+   <li><b>Lunedì–mercoledì, solo Disney:</b> 5 minuti a piedi e 1 fermata di treno (3 minuti). La sera, lo stesso al contrario.</li>
+   <li><b>Zero pensieri:</b> hotel vero, reception sempre aperta, pulito (8,9).</li>
+   <li><b>Giovedì</b> uscite alle 8:30 per il volo: il treno è a 5 minuti.</li>
+  </ul>
+  <p class="give"><b>Come prenotarlo:</b> su Booking scegliete la «Camera» da 25 m² con <b>1 letto matrimoniale large</b> e la tariffa con <b>cancellazione gratuita prima dell'8 dicembre</b>. Volete spendere meno? La suite da 763 € costa 145 € in meno, ma non è rimborsabile e il letto matrimoniale non è garantito.</p>
+  <details class="more"><summary>Cosa lasciate e a cosa stare attenti</summary><div class="in">
+  <p><b>Cosa lasciate:</b> costa circa 330 € più del n. 8 Moxy con cancellazione gratuita. Il Moxy è comodo uguale per i parchi, ma non ha la spa.</p>
+  <p><b>Attenzione:</b> davanti all'ingresso ci sono finti taxi. La navetta gratis per Disney è solo quella dell'hotel: chiedetela alla reception <span class="bd nu">non confermata</span>.</p>
+  </div></details>
+  <a class="btn gold" href="#al-12">Vedi la scheda del n. 12</a>
+ </div>
+
+ <h3 class="sub-h">Se cercate altro: il migliore per ogni desiderio</h3>
+ <div class="picks" id="picks"></div>
+
+
+ <h3 class="sub-h" style="margin-top:var(--s6)">Tutti, uno contro l'altro</h3>
+ <div class="filters" role="group" aria-label="Mostra solo" id="filters"></div>
+ <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort3" role="group" aria-label="Ordina per" id="sort"><button type="button" data-s="prezzo" aria-pressed="true">Prezzo</button><button type="button" data-s="vicino" aria-pressed="false">Vicino al treno</button><button type="button" data-s="voto" aria-pressed="false">Voto</button></div></div>
+ <p class="small muted" id="fdesc"></p>
+ <details><summary>Tutti i 15 in una tabella</summary><div class="in"><div class="tbl"><table class="cmp"><thead><tr><th>N.</th><th>Alloggio</th><th class="r">4 notti</th><th>Dal treno</th><th class="r">Voto</th></tr></thead><tbody id="cmpBody"></tbody></table></div></div></details>
+
+ <div class="cards two" id="hotelCards" style="margin-top:var(--s5)"></div>
+
+ <h3 class="sub-h" style="margin-top:var(--s6)">Questo o quello?</h3>
+ <div class="stack" id="duels"></div>
+
+ <details style="margin-top:var(--s5)"><summary>Scartati, e perché</summary><div class="in">
+  <ul class="clean small">
+   <li><b>Arrivo domenica troppo presto:</b> Sunny Studio (fino alle 22:00, cauzione 450 €), Maison Tobias (fino alle 21:00, 2,7 km dal treno di Bussy), stanza con colazione su Airbnb a Chessy (fino alle 20:00), Lodge du Petit Lion (fino alle 20:00).</li>
+   <li><b>Pulizia bassa o letti sbagliati:</b> appartamento «Varsovie» (pulizia 7,8), L'Ambre (2 letti singoli).</li>
+   <li><b>Cauzioni scomode:</b> Grand Appartement Dreams (500 € con bonifico 7 giorni prima), Zenitude (300 € addebitati 7 giorni prima).</li>
+   <li><b>Prezzo non visibile:</b> Marriott's Village (piscina gratis, ma a 4,9 km dal treno), Disneyland Hotel.</li>
+   <li><b>Voto Booking 8,0 o meno:</b> Dream Castle e Grand Magic (7,6), Villages Nature (7,3, reception solo 10–19), love room 123home (7,7), Adagio (7,6–7,9), B&amp;B Hotel Magny (7,7), Campanile (7,6), Explorers (7,3), Eklo (7,5), Dali (7,8).</li>
+   <li><b>Partire sabato 12 (5 notti):</b> il volo è il 13. Una notte in più costerebbe 114 € con il n. 5 e 176 € con il n. 4; i n. 1 e 6 sabato 12 sono già pieni.</li>
+   <li><b>Bussy-Saint-Georges e Torcy:</b> stesso biglietto, ogni corsa 3–9 minuti in più, e gli alloggi buoni sono quasi tutti esauriti.</li>
+  </ul>
+ </div></details>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="biglietti" aria-labelledby="h-big"><div class="wrap wide">
+ <div class="sec-head"><p class="kicker">Biglietti Disney · lun 14 – mer 16</p><h2 id="h-big">Comprate il 3 giorni / 2 parchi: 272 € a testa, 544 € in due.</h2>
+ <p class="lead">Costa uguale all'opzione B e vi dà anche lunedì tutti e due i parchi. Tre biglietti singoli costano 56 € in più.</p></div>
+ <div class="opts">
+  <article class="opt is-rec"><span class="rec"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>Consigliato</span><h3>A · 3 giorni / 2 parchi</h3><p class="price">544 € <small>in due</small></p><p class="small">272 € a testa, primo giorno lun 14. Un solo acquisto. Entrambi i parchi tutti e tre i giorni.</p></article>
+  <article class="opt"><h3>B · 1 parco lun + 2 giorni</h3><p class="price">544 € <small>in due</small></p><p class="small">76 € (lun 14, 1 parco) + 196 € (2 giorni dal 15) = 272 € a testa. Due acquisti. Lunedì un solo parco.</p></article>
+  <article class="opt"><h3>C · tre giorni singoli</h3><p class="price">600 € <small>in due</small></p><p class="small">76 € (lun, 1 parco) + 113 € (mar, 2 parchi) + 111 € (mer, 2 parchi) = 300 € a testa.</p></article>
+ </div>
+ <div class="callout" style="margin-top:var(--s4)"><p><span class="bd nu">non ufficiale</span> I prezzi vengono da due siti che leggono la biglietteria ufficiale e coincidono all'euro. La biglietteria ufficiale ha bloccato i controlli automatici: <b>leggete il prezzo vero nel carrello</b> prima di pagare. Il prezzo cambia con la domanda.</p></div>
+ <p style="margin-top:var(--s4)"><a class="btn gold" href="https://tickets.disneylandparis.com/it-it/tickets" target="_blank" rel="noopener">Apri la biglietteria ufficiale<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4h9v9M16 4 5 15"/></svg></a></p>
+ <p class="small muted" style="margin-top:var(--s2)">Percorso: "3 giorni" → "Biglietto datato" → primo giorno 14 dicembre 2026 → 2 adulti.</p>
+ <details style="margin-top:var(--s4)"><summary>Condizioni e cose utili</summary><div class="in small">
+  <ul class="clean">
+   <li><b>Rimborso:</b> i biglietti datati da 1 a 4 giorni si annullano con rimborso fino a 3 giorni prima. Per il primo giorno 14/12 il termine è la mezzanotte dell'11/12 <span class="bd es">stima</span>.</li>
+   <li><b>Cambio data:</b> si annulla e si ricompra al prezzo del momento.</li>
+   <li><b>Età:</b> adulto dai 12 anni.</li>
+   <li><b>Registrazione della data:</b> non serve con un biglietto datato.</li>
+   <li><b>Giorni consecutivi:</b> 14, 15 e 16 lo sono, quindi nessun problema.</li>
+   <li><b>Alla cassa del parco</b> il 3 giorni costa 521 € a testa, e si compra solo in pochi casi: compratelo online.</li>
+   <li><b>Sconti:</b> nessuna offerta Black Friday sui biglietti. Comprate solo dal sito ufficiale.</li>
+   <li><b>Disney Premier Access</b> (il passaggio a pagamento per saltare la fila): in tre giorni feriali non serve. Al massimo un "One" per Frozen Ever After, circa 16–23 € <span class="bd nu">non ufficiale</span>, si compra nell'app il giorno stesso.</li>
+  </ul>
+ </div></details>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="hoteldisney" aria-labelledby="h-hd"><div class="wrap wide">
+ <div class="sec-head"><p class="kicker">Hotel Disney</p><h2 id="h-hd">No, non conviene: Cheyenne 4 notti costa circa 900 € più di Moxy e biglietti.</h2>
+ <p class="lead">L'unico vantaggio vero: chi dorme in un hotel Disney entra un'ora prima, dalle 8:00 alle 9:00, in tutti e due i parchi.</p></div>
+ <div class="tbl"><table>
+  <thead><tr><th>Hotel Disney (camera base)</th><th class="r">Voto Booking</th><th class="r">4 notti 13→17</th><th class="r">3 notti 14→17</th><th class="r">2 notti 14→16</th></tr></thead>
+  <tbody>
+   <tr><td>Santa Fe ★★</td><td class="r">7,5</td><td class="r">1.680 €</td><td class="r">1.388 €</td><td class="r">1.039 €</td></tr>
+   <tr class="hl"><td><b>Cheyenne ★★★</b> · il più economico a 8,0</td><td class="r">8,0</td><td class="r"><b>1.970 €</b></td><td class="r">1.495 €</td><td class="r">1.103 €</td></tr>
+   <tr><td>Sequoia Lodge ★★★</td><td class="r">8,0</td><td class="r">nessuna stima</td><td class="r">nessuna stima</td><td class="r">1.264 €</td></tr>
+   <tr><td>Newport Bay Club ★★★★</td><td class="r">7,5</td><td class="r">2.602 €</td><td class="r">2.079 €</td><td class="r">1.500 €</td></tr>
+   <tr><td>New York – The Art of Marvel ★★★★</td><td class="r">8,4</td><td class="r">3.250 €</td><td class="r">2.745 €</td><td class="r">1.944 €</td></tr>
+   <tr><td>Disneyland Hotel ★★★★★</td><td class="r">8,5</td><td class="r">nessuna stima</td><td class="r">nessuna stima</td><td class="r">nessuna stima</td></tr>
+  </tbody>
+ </table></div>
+ <p class="small muted" style="margin-top:var(--s2)">2 adulti, biglietti per entrambi i parchi inclusi per ogni giorno del soggiorno (notti + 1). Colazione non inclusa. <span class="bd es">stima</span> dal calendario prezzi ufficiale, che Disney chiama "informativo e non contrattuale", letto il 21/11/2026.</p>
+ <details style="margin-top:var(--s4)"><summary>Perché no, in dettaglio</summary><div class="in small">
+  <ul class="clean">
+   <li><b>Tutto al Cheyenne:</b> 1.970 € con 5 giorni di biglietti, ma due li sprecate (dom 13 a Parigi, gio 17 in volo). Hotel vicino + biglietti: 524 + 544 = 1.068 €. Differenza circa 900 €.</li>
+   <li><b>Misto</b> (2 notti Cheyenne 14→16 + 2 notti vicino): circa 1.352 € prima dei trasporti, cioè circa 260 € più del Moxy, e <b>due cambi di hotel</b> con le valigie.</li>
+   <li><b>Voto:</b> Cheyenne e Sequoia sono a 8,0 esatto, non "sopra 8". Santa Fe e Newport (7,5) non passano. Quelli sopra 8 (New York, Disneyland Hotel) sono i più cari.</li>
+   <li>Navetta Disney gratuita ogni 15–20 minuti; a piedi 20 minuti dal Cheyenne. Cancellazione gratuita fino a 7 giorni prima.</li>
+  </ul>
+ </div></details>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="giorni" aria-labelledby="h-giorni" data-mood="market">
+ <div class="mood market"></div><div class="mood magic"></div>
+ <div class="wrap">
+  <div class="sec-head"><p class="kicker">Giorno per giorno</p><h2 id="h-giorni">Un giorno di mercatini a Parigi, tre giorni ai parchi, giovedì in volo.</h2>
+  <p class="muted small">Toccate una tappa per vedere strade, treni e mappe. Durante il viaggio la pagina si apre da sola sul giorno di oggi. Gli orari dei treni sono quelli di inizio dicembre: controllateli la sera prima. </p>
+  <div class="chooser" id="chooser"><label for="selAl">Orari, strade, costi e «Da fare» con l'alloggio:</label><select id="selAl"></select><p class="small muted" id="chNote" aria-live="polite"></p><button type="button" class="btn ghost" id="backMio" hidden>Torna al mio consiglio, n. 12</button></div></div>
+  <div class="daybar" role="tablist" aria-label="Scegli il giorno" id="daybar">
+   <span class="pill" aria-hidden="true"></span>
+   <svg class="spark" id="spark" viewBox="0 0 46 46" aria-hidden="true"><g fill="var(--lamp)"><path d="M23 4l2.4 15.6L41 23l-15.6 2.4L23 42l-2.4-16.6L5 23l15.6-3.4z"/></g></svg>
+  </div>
+  <div id="panels"></div>
+ </div>
+</section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="trasporti" aria-labelledby="h-tr"><div class="wrap">
+ <div class="sec-head"><p class="kicker">Trasporti e biglietti</p><h2 id="h-tr">Biglietti singoli sul telefono: circa 54 € a testa con il n. 12.</h2>
+ <p class="lead">Il primo acquisto sul telefono deve essere il ticket aeroporto. Ognuno usa il proprio telefono.</p></div>
+ <div class="tbl"><table>
+  <thead><tr><th>Quando</th><th>Cosa comprate</th><th class="r">A testa</th></tr></thead>
+  <tbody>
+   <tr><td>dom 13, mattina</td><td><b>Ticket Paris Région ↔ Aéroports</b>: Orly → Gare de Lyon con la metro 14 (vale 2 ore, cambi inclusi)</td><td class="r">14,00 €</td></tr>
+   <tr><td>dom 13, in città</td><td>3 ticket <b>Métro-Train-RER</b> da 2,55 €: metro 1 andata, metro 7, metro 1 ritorno</td><td class="r">7,65 €</td></tr>
+   <tr><td>dom 13, sera</td><td id="trSun">1 ticket Métro-Train-RER: RER A Gare de Lyon → Val d'Europe (uscendo per i bagagli il ticket precedente finisce)</td><td class="r" id="trSunV">2,55 €</td></tr>
+   <tr><td>lun 14 – mer 16</td><td id="trPark">6 ticket Métro-Train-RER: andata e ritorno ai parchi</td><td class="r" id="trParkV">15,30 €</td></tr>
+   <tr><td>gio 17</td><td id="trThu"><b>Ticket aeroporto</b>: Val d'Europe → Orly, RER A + metro 14 con un solo ticket</td><td class="r" id="trThuV">14,00 €</td></tr>
+   <tr><td colspan="2"><b>Totale</b> <span class="bd es">stima</span> <span id="trWho">· con il n. 12 Relais Spa Val d'Europe</span></td><td class="r"><b id="trTot">53,50 €</b></td></tr>
+  </tbody>
+ </table></div>
+ <div class="stack" style="margin-top:var(--s5)">
+  <details><summary>In che ordine comprare (regola del telefono)</summary><div class="in small">
+   <ul class="clean">
+    <li>Installate a casa l'app <b>Île-de-France Mobilités</b>. Va bene un iPhone XR/XS o più recente con iOS 17.5, oppure un Android con NFC (il chip per pagare avvicinando il telefono) e Android 9 o più recente. Esclusi Huawei e Honor.</li>
+    <li>Ognuno deve avere il proprio telefono. Se un telefono non va bene: una tessera <b>Navigo Easy</b> da 2 € allo sportello.</li>
+    <li>Prima di aver usato il telefono una volta potete fare un solo acquisto: fate che sia il <b>ticket aeroporto</b> (anche prima di partire).</li>
+    <li>Ticket aeroporto e ticket Métro-Train-RER non possono stare insieme sullo stesso telefono. Domenica, dopo aver usato il ticket aeroporto, comprate i ticket da 2,55 € nel numero giusto, senza avanzarne.</li>
+    <li>Giovedì mattina comprate il ticket aeroporto, almeno 2 ore dopo l'ultima corsa di mercoledì sera.</li>
+    <li>A Orly non si entra in metro con la carta bancaria: serve il ticket.</li>
+   </ul>
+  </div></details>
+  <details><summary>Perché niente abbonamento</summary><div class="in small">
+   <p>Il Navigo Semaine costa 32,40 €, vale da lunedì a domenica e non copre domenica 13. In totale costa circa 3 € in più a testa. Conviene solo con almeno 8 corse tra lunedì e mercoledì. Navigo Jour e Paris Visite costano di più.</p>
+   <p class="muted">Le note di ricerca stimavano 48–51 € a testa contando 1–2 corse in città domenica. Con gli armadietti alla Gare de Lyon le corse diventano 3, quindi qui usiamo la cifra più prudente.</p>
+  </div></details>
+  <details><summary>Bagagli domenica: dove lasciarli</summary><div class="in small">
+   <ul class="clean">
+    <li><b>1 · Armadietti ufficiali Gare de Lyon</b>: Hall 3, livello -1, vicino all'accesso rue de Bercy. Tutti i giorni 6:15–22:00. Per 24 ore: piccolo 5,50 €, medio 7,50 €, grande 9,50 €. Un grande dovrebbe bastare per due trolley da cabina <span class="bd es">stima</span>. Non si prenota e può essere pieno. Portate monete e carta: le pagine ufficiali non sono d'accordo su come si paga.</li>
+    <li><b>2 · Se è pieno:</b> Nannybag o Bounce, prenotati dal telefono, circa 4–5 € a bagaglio. Alcuni punti vicino alla stazione sono aperti 24 ore.</li>
+    <li><b>3 · Armadietti automatici privati:</b> City Locker (69 rue de Lyon, 12–15 € ad armadietto, ritiro entro le 22:00) o Stow Your Bags (27 bis bd Diderot, 7:00–23:00, 16,99 € al giorno).</li>
+    <li><b>Passare prima dall'hotel:</b> costa solo 2,55 € a testa in più, ma perdete circa 1 ora e 30–45 minuti della domenica. E l'hotel deve accettare i bagagli al mattino.</li>
+    <li><b>Volo:</b> con la tariffa Volotea base è inclusa solo una borsa 40×30×20 cm. Il trolley 55×40×25 cm serve l'imbarco prioritario o la tariffa Megavolotea. Al gate costa 65 €: aggiungetelo online se manca.</li>
+   </ul>
+  </div></details>
+ </div>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="dafare" aria-labelledby="h-df"><div class="wrap">
+ <div class="sec-head"><p class="kicker">Da fare, in quest'ordine</p><h2 id="h-df">Oggi l'hotel, subito dopo i biglietti Disney.</h2>
+ <p class="muted small">Le spunte restano salvate solo su questo telefono.</p></div>
+ <p class="progress num" id="prog" aria-live="polite"></p>
+ <ul class="check" id="check"></ul>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="ricontrollare" aria-labelledby="h-rc"><div class="wrap">
+ <div class="sec-head"><p class="kicker">Da ricontrollare</p><h2 id="h-rc">Queste cose non si potevano verificare il 21/11/2026: aprite il link quando indicato.</h2></div>
+ <details><summary>Apri la lista: cosa e quando</summary><div class="in"><ul class="recheck" id="recheck"></ul></div></details>
+</div></section>
+
+<div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="fonti" aria-labelledby="h-fo"><div class="wrap src">
+ <div class="sec-head"><p class="kicker">Fonti</p><h2 id="h-fo">Da dove vengono i dati, prima le fonti ufficiali.</h2></div>
+ <details><summary>Apri tutte le fonti</summary><div class="in"><div id="sources"></div></div></details>
+</div></section>
+</main>
+
+<footer><svg class="foot-market" id="footMarket" viewBox="0 0 800 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg><div class="wrap">Piano di viaggio preparato con dati controllati il 21/11/2026. Le cifre segnate "stima" sono calcoli, non prezzi letti. In caso di dubbio fa fede il sito ufficiale.</div></footer>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s);
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const grp=n=>String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.');const fmt=n=>grp(n)+' €';
+const OUT='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg>';
+const PIN='<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1a6.5 6.5 0 0 0-6.5 6.5c0 4.9 6.5 11.5 6.5 11.5s6.5-6.6 6.5-11.5A6.5 6.5 0 0 0 10 1zm0 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>';
+const WALK='<svg viewBox="0 0 16 16" fill="currentColor"><circle cx="9" cy="2.4" r="1.6"/><path d="M7.3 5.2 5 6.6V9h1.4V7.4l1-.6-1 4.7L4.7 15h1.6l1.4-2.6.9 1.1V15H10v-2.2L8.7 11l.5-2.4.8 1.2H12V8.4h-1.2L9.6 6.3c-.4-.7-1.4-1.1-2.3-1.1z"/></svg>';
+
+/* Google Maps: origine, destinazione, modo */
+const gm=(dest,o={})=>{let u="https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(dest)+"&travelmode="+(o.mode||"transit");if(o.from)u+="&origin="+encodeURIComponent(o.from);return u};
+const mapsBtn=(label,url)=>`<a class="maps" href="${url}" target="_blank" rel="noopener">${PIN}${esc(label)}</a>`;
+const LINES={"1":["--l1","--l1t",1],"7":["--l7","--l7t",1],"8":["--l8","--l8t",1],"14":["--l14","--l14t",1],"A":["--rera","--rerat",0]};
+const BUSI='<svg viewBox="0 0 16 16" fill="currentColor" fill-rule="evenodd"><path d="M3.5 1h9A1.5 1.5 0 0 1 14 2.5v9a1 1 0 0 1-1 1h-.3v1.3a.7.7 0 0 1-1.4 0v-1.3H4.7v1.3a.7.7 0 0 1-1.4 0v-1.3H3a1 1 0 0 1-1-1v-9A1.5 1.5 0 0 1 3.5 1zM3.5 3v4h9V3zm1 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>';
+const lb=l=>{if(l==="w")return `<span class="lb walk" aria-label="a piedi">${WALK}</span>`;if(l==="bus")return `<span class="lb walk" aria-label="bus o navetta">${BUSI}</span>`;const c=LINES[l];return `<span class="lb${c[2]?' round':''}" style="--c:var(${c[0]});--tc:var(${c[1]})" aria-label="${c[2]?'metro':'RER'} ${l}">${l}</span>`};
+const B={ok:t=>`<span class="bd ok">${t||'ufficiale'}</span>`,nu:t=>`<span class="bd nu">${t||'non ufficiale'}</span>`,nc:t=>`<span class="bd nc">${t||'non confermato'}</span>`,es:t=>`<span class="bd es">${t||'stima'}</span>`};
+
+/* ---------- luci, casette e festoni ---------- */
+const BU=['var(--lamp)','var(--wine)','var(--lamp)','var(--fir-light)','var(--lamp)','var(--brand)'];
+const qpt=(a,c,b,t)=>[(1-t)*(1-t)*a[0]+2*(1-t)*t*c[0]+t*t*b[0],(1-t)*(1-t)*a[1]+2*(1-t)*t*c[1]+t*t*b[1]];
+const f1=n=>n.toFixed(1);
+/* divisori fra le sezioni: disegnati alla larghezza vera, così le lampadine restano tonde */
+const BULB=['var(--lamp)','var(--wine)','var(--fir)','var(--lamp)','var(--brand)'];
+const drawLights=()=>document.querySelectorAll('.lights').forEach((el,k)=>{
+ const W=Math.max(320,el.clientWidth||400),n=Math.round(W/22),P0=[0,7],C1=[W/4,24],M=[W/2,9],C2=[3*W/4,-6],P1=[W,7];
+ let s=`<svg viewBox="0 0 ${W} 40" preserveAspectRatio="none"><path class="wire" d="M0 7 Q ${W/4} 24 ${W/2} 9 T ${W} 7"/>`;
+ for(let i=0;i<n;i++){const x=(i+.5)*W/n,t=x/W,y=(t<.5?qpt(P0,C1,M,t*2):qpt(M,C2,P1,(t-.5)*2))[1],c=BULB[(i+k)%BULB.length];
+  s+=`<g class="b"><ellipse cx="${f1(x)}" cy="${f1(y+11)}" rx="9" ry="10" style="fill:${c}" opacity=".2"/><rect x="${f1(x-1.6)}" y="${f1(y)}" width="3.2" height="4" style="fill:var(--mute)"/><ellipse cx="${f1(x)}" cy="${f1(y+11)}" rx="4.2" ry="6" style="fill:${c}"/></g>`}
+ el.innerHTML=s+'</svg>'});
+drawLights();
+const MK={};
+{let seed=7;const rnd=()=>(seed=(seed*9301+49297)%233280)/233280;
+ /* tetti di Parigi e merli del castello */
+ let r='';let x=0;
+ while(x<800){const w=40+rnd()*36,h=34+rnd()*34,top=265-h;r+=`<polygon points="${x},265 ${x},${top+10} ${x+8},${top} ${x+w-8},${top} ${x+w},${top+10} ${x+w},265"/>`;
+  if(rnd()<.8){const cx=x+10+rnd()*(w-26);r+=`<rect x="${cx.toFixed(0)}" y="${top-9}" width="6" height="10"/>`}x+=w+2}
+ const ro=document.getElementById('roofs');if(ro)ro.innerHTML=r;
+ let c='';for(let i=0;i<10;i++)c+=`<rect x="${417+i*17}" y="188" width="9" height="8"/>`;const cr=document.getElementById('cren');if(cr)cr.innerHTML=c;
+ /* una casetta vista di fronte: legno, tetto con la neve, tenda a righe, banco acceso con la merce, ghirlanda, lampadine */
+ const G=['var(--wine)','var(--fir)','var(--lamp)','var(--roof-r)','var(--fir-light)'];
+ const chalet=(x,w,tip,awn,roof,b,k)=>{const eave=tip+w*.38,cx=x+w/2,H=b-eave,oh=w*.12,aw=eave+H*.08,ah=H*.2,oy=aw+ah,oh2=H*.5,cy=oy+oh2;
+  let s=`<rect x="${f1(x)}" y="${f1(eave)}" width="${f1(w)}" height="${f1(H)}" style="fill:var(--wood)"/><polygon points="${f1(x)},${f1(eave+.5)} ${f1(cx)},${f1(tip+3)} ${f1(x+w)},${f1(eave+.5)}" style="fill:var(--wood)"/>`;
+  s+=`<rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2)}" style="fill:var(--lamp)"/><rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2*.45)}" style="fill:var(--lamp-hot)" opacity=".75"/>`;
+  const n=Math.max(3,Math.round(w/11));for(let i=0;i<n;i++)s+=`<circle cx="${f1(x+w*.17+i*w*.66/(n-1))}" cy="${f1(cy-H*.07)}" r="${f1(Math.max(1.4,H*.06))}" style="fill:${G[(i+k)%G.length]}"/>`;
+  for(let i=0;i<3;i++){const hx=x+w*(.28+i*.22),hl=H*(.09+((i+k)%2)*.06);s+=`<line x1="${f1(hx)}" y1="${f1(oy)}" x2="${f1(hx)}" y2="${f1(oy+hl)}" style="stroke:var(--wood-dk)" stroke-width=".8"/><circle cx="${f1(hx)}" cy="${f1(oy+hl+1.4)}" r="${f1(Math.max(1.2,H*.035))}" style="fill:${G[(i+k+2)%G.length]}"/>`}
+  s+=`<rect x="${f1(x+w*.04)}" y="${f1(cy)}" width="${f1(w*.92)}" height="${f1(H*.09)}" style="fill:var(--wood-dk)"/><rect x="${f1(x+1)}" y="${f1(aw)}" width="${f1(w-2)}" height="${f1(ah)}" fill="url(#${awn})"/><rect x="${f1(x+1)}" y="${f1(aw+ah-1.2)}" width="${f1(w-2)}" height="1.2" style="fill:var(--wood-dk)" opacity=".6"/>`;
+  s+=`<polyline points="${f1(x-oh)},${f1(eave+5)} ${f1(cx)},${f1(tip)} ${f1(x+w+oh)},${f1(eave+5)}" fill="none" style="stroke:var(${roof})" stroke-width="${f1(w*.1)}" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${f1(x-oh+2)},${f1(eave+1.5)} ${f1(cx)},${f1(tip-3.2)} ${f1(x+w+oh-2)},${f1(eave+1.5)}" fill="none" style="stroke:var(--snowground)" stroke-width="${f1(w*.05)}" stroke-linejoin="round" stroke-linecap="round"/>`;
+  const gy=tip+(eave-tip)*.6,gr=Math.max(2.2,w*.06);s+=`<circle cx="${f1(cx)}" cy="${f1(gy)}" r="${f1(gr)}" fill="none" style="stroke:var(--fir-light)" stroke-width="${f1(gr*.55)}"/><circle cx="${f1(cx)}" cy="${f1(gy+gr)}" r="${f1(gr*.42)}" style="fill:var(--wine)"/>`;
+  for(let i=1;i<=4;i++){const t=i/5;[[x-oh*.4,eave+7],[x+w+oh*.4,eave+7]].forEach((e,j)=>{s+=`<circle cx="${f1(e[0]+(cx-e[0])*t)}" cy="${f1(e[1]+(tip+6-e[1])*t)}" r="${f1(Math.max(1.1,w*.022))}" style="fill:${BU[(i+j+k)%BU.length]}"/>`})}
+  return s};
+ const row=(L,b,k)=>L.map((c,i)=>chalet(c[0],c[1],c[2],c[3],c[4],b,i+k)).join('');
+ const tips=L=>L.map(c=>[c[0]+c[1]/2,c[2]+1]);
+ const pools=(L,b)=>L.map(c=>`<ellipse cx="${f1(c[0]+c[1]/2)}" cy="${b-3}" rx="${f1(c[1]*.62)}" ry="6" fill="url(#pool)"/>`).join('');
+ /* festone: filo che pende da una casetta all'altra, lampadine con alone */
+ const festoon=(P,k)=>{let w='',bl='';for(let i=0;i<P.length-1;i++){const a=P[i],b=P[i+1],c=[(a[0]+b[0])/2,Math.max(a[1],b[1])+(b[0]-a[0])*.26];
+   w+=`M${f1(a[0])} ${f1(a[1])} Q${f1(c[0])} ${f1(c[1])} ${f1(b[0])} ${f1(b[1])} `;const n=Math.max(3,Math.round((b[0]-a[0])/12));
+   for(let j=1;j<n;j++){const q=qpt(a,c,b,j/n),col=BU[(i*n+j+k)%BU.length];bl+=`<g class="hb" style="animation-delay:${(((i*n+j)*.13)%2.6).toFixed(2)}s"><circle cx="${f1(q[0])}" cy="${f1(q[1]+3)}" r="5.5" style="fill:${col}" opacity=".24"/><circle cx="${f1(q[0])}" cy="${f1(q[1]+3)}" r="2.3" style="fill:${col}"/></g>`}}
+  return `<path d="${w}" fill="none" style="stroke:var(--night-wire)" stroke-width="1.1"/>`+bl};
+ const genRow=(W,minT,maxT)=>{const out=[],A=['awnR','awnY','awnG'],R=['--roof-g','--roof-r','--roof-r'];let x=-12,i=0;while(x<W){const w=50+rnd()*14;out.push([x,w,minT+rnd()*(maxT-minT),A[i%3],R[i%3]]);x+=w+7;i++}return out};
+ /* cartolina: cielo, stelle, bagliore, casette, neve, festone */
+ MK.mini=(W,H,k)=>{const b=H-6,L=genRow(W,b-64,b-52);let st='';for(let i=0;i<Math.round(W/34);i++)st+=`<circle cx="${(rnd()*W).toFixed(0)}" cy="${(4+rnd()*(b-80)).toFixed(0)}" r="${(.6+rnd()*.9).toFixed(1)}" style="fill:var(--snow)" opacity=".7"/>`;
+  return `<ellipse cx="${W/2}" cy="${b}" rx="${W*.7}" ry="${H*.7}" fill="url(#hglow)"/>`+st+row(L,b,k)+`<path d="M0 ${H+2} V${b-3} Q${W*.25} ${b-8} ${W*.5} ${b-3} T${W} ${b-4} V${H+2}Z" style="fill:var(--snowground)"/>`+pools(L,b)+festoon([[-10,b-74],...tips(L),[W+10,b-74]],k)};
+ /* la scena grande: casette a sinistra e a destra dell'abete */
+ const CL=[[-12,64,186,'awnR','--roof-g'],[56,60,192,'awnY','--roof-r'],[120,68,182,'awnG','--roof-r'],[194,62,188,'awnR','--roof-g'],[262,54,194,'awnY','--roof-r']];
+ const CR=[[388,62,190,'awnG','--roof-r'],[454,68,182,'awnR','--roof-g'],[526,58,190,'awnY','--roof-r'],[588,66,184,'awnG','--roof-r'],[658,62,190,'awnR','--roof-g'],[724,82,180,'awnY','--roof-r']];
+ const set=(id,h)=>{const e=document.getElementById(id);if(e)e.innerHTML=h};
+ set('chalets',row(CL,266,0)+row(CR,266,5));
+ set('pools',pools(CL.concat(CR),266));
+ set('festoons',festoon([[-20,176],...tips(CL)],0)+festoon([...tips(CR),[820,172]],3));
+ const fl=[[337,174],[351,166],[343,196],[331,206],[357,200],[341,228],[325,240],[353,236],[365,248],[345,156],[333,188],[359,216],[319,252],[371,254],[345,214]];
+ set('firlights',fl.map((q,i)=>`<circle class="hb" style="animation-delay:${(i*.21).toFixed(2)}s;fill:${BU[(i+1)%BU.length]}" cx="${q[0]}" cy="${q[1]}" r="2.8"/>`).join(''));
+ let tw='';for(let i=0;i<18;i++){const y=124+i*4.2,half=1.5+(y-124)/137*15;tw+=`<circle class="tw" style="animation-delay:${(rnd()*1.8).toFixed(2)}s;fill:var(--lamp-hot)" cx="${f1(262+(rnd()*2-1)*half)}" cy="${f1(y)}" r="1.1"/>`}
+ set('towerlights',tw);
+ const fm=document.getElementById('footMarket');if(fm)fm.innerHTML=MK.mini(800,120,2);
+}
+/* festone in cima alla pagina, disegnato alla larghezza vera */
+const gar=$('#garland'),HERO=$('#top');
+const drawGarland=()=>{if(!gar||!HERO)return;const W=HERO.clientWidth||400,n=Math.max(2,Math.round(W/170)),sp=W/n;let w='',bl='';
+ gar.setAttribute('viewBox',`0 0 ${W} 64`);
+ for(let i=0;i<n;i++){const a=[i*sp,3],b=[(i+1)*sp,3],c=[a[0]+sp/2,3+Math.min(70,sp*.5)];w+=`M${f1(a[0])} 3 Q${f1(c[0])} ${f1(c[1])} ${f1(b[0])} 3 `;const m=Math.max(4,Math.round(sp/24));
+  for(let j=1;j<m;j++){const q=qpt(a,c,b,j/m),col=BU[(i*m+j)%BU.length];bl+=`<g class="hb" style="animation-delay:${(((i*m+j)*.17)%2.6).toFixed(2)}s"><circle cx="${f1(q[0])}" cy="${f1(q[1]+6)}" r="8" style="fill:${col}" opacity=".2"/><rect x="${f1(q[0]-1.4)}" y="${f1(q[1])}" width="2.8" height="3" style="fill:var(--night-mute)" opacity=".6"/><ellipse cx="${f1(q[0])}" cy="${f1(q[1]+6)}" rx="2.8" ry="3.9" style="fill:${col}"/></g>`}}
+ gar.innerHTML=`<path d="${w}" fill="none" style="stroke:var(--night-mute)" stroke-opacity=".35" stroke-width="1.2"/>`+bl};
+drawGarland();
+{let lw=innerWidth,tk=false;addEventListener('resize',()=>{if(tk||innerWidth===lw)return;tk=true;requestAnimationFrame(()=>{lw=innerWidth;drawLights();drawGarland();tk=false})},{passive:true})}
+
+/* ---------- barre dei costi ---------- */
+const SC=[
+ {id:1,n:"N. 1 Love N Chic + biglietti",s:[["s-h",391,"alloggio 391 €"],["s-t",544,"biglietti 544 €"],["s-r",109.2,"trasporti 109 €"]],note:"Il più economico. Bus ogni giorno."},
+ {id:2,n:"N. 2 Ki Space + biglietti",s:[["s-h",465,"alloggio 465 €"],["s-t",544,"biglietti 544 €"],["s-r",76.4,"trasporti 76 €"]],note:"Spa grande. Navetta gratis ai parchi, ma ogni 50 minuti. Non rimborsabile."},
+ {id:4,n:"N. 4 Chez Stéphane & Sophie + biglietti",s:[["s-h",491.95,"alloggio 492 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"15–20 minuti a piedi dal treno."},
+ {id:8,n:"N. 8 Moxy + biglietti",ref:1,s:[["s-h",524.2,"alloggio 524 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"Hotel a 8 minuti dal treno: è il riferimento per le differenze."},
+ {id:12,n:"N. 12 Relais Spa + biglietti (il mio consiglio)",s:[["s-h",908,"alloggio 908 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"Spa inclusa, 5 minuti dal treno. Letto matrimoniale e cancellazione gratuita fino all'8/12."},
+ {n:"Misto: 2 notti Cheyenne + 2 notti vicino",s:[["s-p",1102.78,"pacchetto 1.103 €"],["s-h",249,"2 notti Moxy 249 €"],["s-r",86.6,"trasporti 87 €"]],note:"Due cambi di hotel con le valigie."},
+ {n:"Tutte e 4 le notti al Cheyenne",s:[["s-p",1970.24,"pacchetto 1.970 €"],["s-r",76.4,"trasporti 76 €"]],note:"Due giorni di biglietti inclusi ma non usati."}
+];
+const MAX=2100,REF=SC.find(c=>c.ref).s.reduce((a,b)=>a+b[1],0);
+{let h='';SC.forEach(c=>{const tot=c.s.reduce((a,b)=>a+b[1],0),d=tot-REF;
+ const dl=c.ref?'<span class="bar-diff eq">riferimento</span>':`<span class="bar-diff ${d>0?'up':'dn'}">${d>0?'+':'−'}${fmt(Math.abs(d))}</span>`;
+ const lab=c.s.map(x=>x[2]).join(', ');
+ const go=c.id?'#al-'+c.id:'#hoteldisney';
+ h+=`<a class="bar-row" href="${go}"><div class="bar-top"><span class="bar-name">${esc(c.n)}${c.rec?'<span class="rec">Consigliato</span>':''}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
+ <div class="track" role="img" aria-label="${esc(c.n)}: circa ${fmt(tot)} (${lab})"><span class="grid-lines">${[500,1000,1500,2000].map(v=>`<i style="left:${v/MAX*100}%"></i>`).join('')}</span><span class="fill" style="width:${tot/MAX*100}%">${c.s.map(x=>`<i class="${x[0]}" style="width:${x[1]/tot*100}%"></i>`).join('')}</span></div>
+ <p class="bar-note">${esc(c.note)} <span class="bar-go">${c.id?'Apri la scheda ›':'Perché non conviene ›'}</span></p></a>`});
+ h+=`<div class="axis" aria-hidden="true">${[0,500,1000,1500,2000].map(v=>`<span style="left:${v/MAX*100}%">${v?grp(v)+' €':'0 €'}</span>`).join('')}</div>`;
+ $('#bars').innerHTML=h;
+ if(!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){$('#bars').classList.add('go');io.disconnect()}})},{threshold:.35});io.observe($('#bars'))}
+}
+
+/* ---------- alloggi: 15 a confronto, numero fisso (ordinati per prezzo), filtri per desiderio ---------- */
+const BK=s=>`https://www.booking.com/hotel/fr/${s}.it.html?checkin=2026-12-13&checkout=2026-12-17&group_adults=2&group_children=0&no_rooms=1`;
+const VIS=B.ok('visto il 21/11/2026');
+const GN={meno:"Spendere meno",vicino:"Vicino al treno",comodo:"Tutto comodo",spa:"Spa e piscina",romantico:"Romantico",spazio:"Più spazio",parchi:"A piedi dai parchi"};
+const GD={tutti:"Tutti i 15, con il numero fisso: ordinateli come volete.",meno:"Il prezzo più basso con pulizia buona.",vicino:"Al massimo 10 minuti a piedi dalla stazione Val d'Europe, poi 3 minuti di treno fino ai parchi.",comodo:"Reception 24 ore, poco cammino, bar e negozi vicino: la vacanza più rilassata.",spa:"Piscina, sauna o idromassaggio. Tutte le spa chiudono entro le 22:00: col n. 12 la usate domenica sera, dopo i mercatini. Vicino al treno ce n'è una sola: il n. 12.",romantico:"Vasca privata, una casa curata con colazione o una spa con massaggi di coppia.",spazio:"Appartamenti da 47 a 53 m² con cucina.",parchi:"Dormire dentro Disney: a piedi ai parchi, ma costa molto di più."};
+const AL=[
+ {id:1,n:"Love N Chic",sub:"Monolocale · Chessy, il paese",g:["meno"],sc:"8,9",cl:"9,0",p:391,pr:"391 €",pl:`${VIS} Cancellazione gratuita fino al 29/11.`,min:30,ne:"bus",dist:"Lontano (4 km): bus 2233, circa 10 minuti fino alla stazione dei parchi.",sun:"Arrivo fino alle 23:30. Domenica il bus da Val d'Europe parte alle 22:00 e arriva alle 22:16.",tr:"Bus: 24,60 € in due da lunedì a mercoledì.",pro:"Il prezzo più basso tra gli alloggi buoni, con tante recensioni (548). 27 m², letto matrimoniale, cucina.",con:"Dipendete dal bus: la sera, dopo le 22:00, potete aspettare fino a 40 minuti.",u:BK('studio-1-chessy')},
+ {id:2,n:"Ki Space Hotel & Spa",sub:"Hotel 4 stelle con spa · Serris",g:["spa","meno"],sc:"8,4",cl:"8,9",p:465,pr:"465 €",pl:`Prezzo che avete visto nella vostra app. Da computer ${VIS} 559 €. Non rimborsabile.`,min:30,ne:"navetta",dist:"3,1 km: navetta gratuita circa ogni 50 minuti.",sun:"Reception 24 ore, ma dalla stazione serve la navetta: anche 50 minuti di attesa.",tr:"Navetta gratis, oppure bus 24,60 € in due.",spa:"Piscina di 23 m con idromassaggio, inclusa (7–22). Sauna e hammam 20 € a persona all'ora se prenotate su Booking, dai 16 anni.",pro:"La spa più grande della zona al prezzo più basso. Camera di 27 m² con cucina.",con:"Senza auto è scomodo: la navetta è rara e la sera è piena. Hotel per famiglie, niente negozi vicino.",u:BK('ki-space-amp-spa')},
+ {id:3,n:"Residence du Parc",sub:"Aparthotel · Montévrain",g:["meno"],sc:"8,5",cl:"8,8",p:475,pr:"475 €",pl:`${VIS} Non rimborsabile.`,min:25,ne:"bus",dist:"1,8 km: bus 2233 davanti alla porta, circa ogni 20 minuti.",sun:"Reception 24 ore.",tr:"Bus: 24,60 € in due.",pro:"Reception 24 ore e angolo cottura a un prezzo basso. Monolocale di 30 m².",con:"Dipendete dal bus. Check-out alle 11:00.",u:BK('residence-du-parc-montevrain')},
+ {id:4,n:"Chez Stéphane & Sophie",sub:"Appartamento con giardino · Montévrain",g:["meno","spazio"],sc:"9,4",cl:"9,5",p:492,pr:"492 €",pl:`${VIS} 491,95 €, cancellazione gratuita fino al 29/11.`,min:17,ne:"15–20 min",dist:"1,4 km: 15–20 minuti a piedi.",sun:"Arrivo fino alle 23:00.",tr:"Treno: 30,60 € in due, oppure a piedi fino ai parchi.",pro:"La pulizia più alta (9,5). 47 m² con giardino e cucina, e costa meno del Moxy.",con:"Lontano dal treno a piedi, di più con le valigie domenica sera. Silenzio dalle 20:00, età minima 24 anni.",u:BK('chez-stephanie-amp-sophie')},
+ {id:5,n:"Studio parking wifi",sub:"Monolocale · Montévrain",g:["vicino","meno"],sc:"9,1",cl:"8,8",p:497,pr:"497 €",pl:`${VIS} Cancellazione gratuita fino al 12/12: la più flessibile.`,min:5,ne:"5 min",dist:"400 m: circa 5 minuti a piedi.",sun:"Arrivo fino a mezzanotte.",tr:"Treno: 30,60 € in due.",pro:"Vicinissimo al treno. Si cancella gratis fino al giorno prima della partenza.",con:"Letto a castello più divano letto: niente letto matrimoniale vero.",u:BK('studio-parking-wifi-disney-5mn-val-d-europe')},
+ {id:6,n:"Peter Pan lodge",sub:"Appartamento con terrazza · Chessy, vicino alla stazione",g:["vicino","spazio"],sc:"9,0",cl:"9,4",p:509,pr:"509 €",pl:`${VIS} Non rimborsabile.`,min:8,ne:"8 min",dist:"600 m: circa 8 minuti a piedi.",sun:"Arrivo fino alle 23:00.",tr:"Treno: 30,60 € in due.",pro:"50 m² con cucina e terrazza vicino al treno. Minimarket e ristorante sotto casa. Dal balcone si vedono le luci dello spettacolo Disney.",con:"Non rimborsabile, solo 39 recensioni, check-out alle 10:00.",u:BK('peter-pan-5min-walk-to-rer-station-4p-app')},
+ {id:7,n:"Les Chambres d'Oriane",sub:"B&B con colazione · Chessy, il paese",g:["romantico"],sc:"9,7",cl:"–",p:518,pr:"518 €",pl:`${VIS} 517,60 € con colazione, cancellazione gratuita fino al 29/11.`,min:30,ne:"bus",dist:"Lontano: fermata del bus a 100 m.",sun:`Arrivo solo fino alle 22:00 ${B.nc('da chiedere')}: prenotate solo con l'ok scritto del gestore.`,tr:"Bus: 24,60 € in due.",pro:"Il voto più alto di tutti (9,7). Colazione inclusa, che gli ospiti chiamano «ottima».",con:"Domenica arrivate al limite dell'orario. Dipendete dal bus.",u:BK('les-chambres-d-39-oriane')},
+ {id:8,pc:[577,"Con cancellazione gratuita"],n:"Moxy Paris Val d'Europe",sub:"Hotel · Montévrain",g:["vicino","comodo"],sc:"8,7",cl:"9,0",p:524,pr:"524 €",pl:`${VIS} Non rimborsabile. Con cancellazione gratuita circa 577 € ${B.es()}.`,min:8,ne:"8 min",dist:"650 m: circa 8 minuti a piedi.",sun:"Reception 24 ore.",tr:"Treno: 30,60 € in due.",pro:"Hotel pulito con reception 24 ore e bar: nessun orario da rispettare.",con:"Camera piccola (17 m²). Colazione 25 € a testa.",u:BK('moxy-paris-val-d-europe')},
+ {id:9,n:"ibis Val d'Europe",sub:"Hotel · Montévrain",g:["vicino","comodo"],sc:"8,2",cl:"8,4",p:529,pr:"529 €",pl:`${VIS} Non rimborsabile.`,min:7,ne:"7 min",dist:"550 m, all'uscita della stazione.",sun:"Reception 24 ore.",tr:"Treno: 30,60 € in due.",pro:"Il più attaccato alla stazione tra gli hotel semplici.",con:"Pulizia 8,4: più lamentele del Moxy.",u:BK('ibis-marne-la-vallee-val-d-europe')},
+ {id:10,n:"Stylish Apartment",sub:"Appartamento · Montévrain",g:["spazio"],sc:"9,3",cl:"9,3",p:586,pr:"586 €",pl:`${VIS} Non rimborsabile. 636 € con cancellazione gratuita fino al 29/11.`,min:12,ne:"12 min",dist:"1 km: circa 12 minuti a piedi.",sun:"Arrivo fino a mezzanotte; i codici arrivano il giorno stesso.",tr:"Treno: 30,60 € in due.",pro:"53 m² con letto queen, bello e pulito.",con:"Penale di 300 € se lo lasciate sporco, età minima 25 anni. Costa circa 95 € più del n. 4.",u:BK('stylish-apartment-disneyland-paris-montevrain')},
+ {id:11,n:"Crowne Plaza Marne-la-Vallée",sub:"Hotel 4 stelle con spa · Magny-le-Hongre (era il Radisson Blu)",g:["spa"],sc:"8,3",cl:"8,7",p:628,pr:"628 €",pl:`${VIS} Parzialmente rimborsabile. 688 € con cancellazione gratuita fino al 6/12.`,min:25,ne:"navetta",dist:"4,2 km: navetta gratuita ogni 30 minuti fino ai parchi (7–9 minuti).",sun:`Navetta dalla stazione dei parchi, l'ultima verso le 23:15 ${B.es()}. Reception 24 ore da chiedere.`,tr:"Navetta gratis.",spa:"Piscina coperta, sauna e hammam 6–21, sembrano inclusi (da confermare). Trattamenti a pagamento.",pro:"Appena rinnovato, nel verde, con navetta frequente. Tre ristoranti e un bar.",con:"Dipendete dalla navetta. La spa chiude alle 21: dopo i parchi non c'è tempo. Col nome nuovo ha solo 237 recensioni.",u:"https://www.ihg.com/crowneplaza/hotels/gb/en/magny-le-hongre/parpm/hoteldetail/amenities",ul:"Apri il sito ufficiale"},
+ {id:12,pc:[908,"Con letto matrimoniale e cancellazione gratuita fino all'8/12"],n:"Relais Spa Val d'Europe",sub:"Aparthotel 4 stelle con spa · Chessy",g:["spa","comodo","vicino","romantico"],sc:"8,6",cl:"8,9",p:763,pr:"763 €",pl:`${VIS} Suite non rimborsabile, letto non garantito. Camera con letto matrimoniale: 831 € non rimborsabile, 908 € con cancellazione gratuita fino all'8/12 (il mio consiglio).`,min:5,ne:"5 min",dist:`400 m: circa 5 minuti a piedi. C'è anche una navetta gratis a chiamata ${B.nu()}.`,sun:"Reception 24 ore, a 5 minuti dal treno.",tr:"Navetta gratis, oppure treno 30,60 € in due.",spa:"Spa NUXE inclusa: piscina di 13 m, idromassaggio, sauna e hammam, 7–22, dai 16 anni. Massaggi di coppia a pagamento.",pro:"L'unica spa vera vicino al treno. Junior suite con angolo cottura, ristorante, centro Val d'Europe accanto.",con:"Costa circa 330 € più del Moxy con cancellazione gratuita. La spa chiude alle 22:00: la usate domenica sera, dopo i mercatini. Attenzione ai finti taxi davanti all'ingresso: la navetta vera è dell'hotel.",u:BK('relais-spa-chessy')},
+ {id:13,n:"Jungle Love",sub:"Love room con vasca idromassaggio · Serris",g:["romantico","spa"],sc:"9,1",cl:"9,3",p:773,pr:"773 €",pl:`${VIS} Non rimborsabile. 850 € con cancellazione gratuita fino al 29/11.`,min:25,ne:"bus",dist:"2,5 km: bus 2234 (la fermata più vicina chiedetela al gestore) o 30 minuti a piedi.",sun:"Arrivo dalle 17:00, ingresso autonomo: avvisate dell'orario.",tr:`Bus fino a Val d'Europe e poi treno: circa 55 € in due da lunedì a mercoledì ${B.es()}.`,spa:"Vasca idromassaggio doppia e privata in bagno, sempre vostra.",pro:"La più romantica: solo adulti, vasca privata, pulizia 9,3.",con:`30 m² per 773 €. Niente reception, lontano dal treno. La sera il bus 2234 da Val d'Europe passa alle 22:00, 22:35 e 23:05 ${B.ok()}: in camera verso le 23:00, e un ospite scrive che dopo le 23:00 la vasca non si usa ${B.nu()}.`,u:BK('jungle-love')},
+ {id:14,n:"Disney Hotel New York",sub:"Hotel Disney 4 stelle · a piedi dai parchi",g:["parchi","spa"],sc:"8,4",cl:"9,0",p:2623,pr:"2.623 €",pl:`${VIS} Solo la camera, biglietti esclusi. Cancellazione gratuita fino al 6/12.`,min:0,ne:"a piedi ai parchi",dist:"10 minuti a piedi dai parchi, oppure navetta gratis.",sun:"Dalla stazione dei parchi, 10 minuti a piedi.",tr:"0 €.",spa:"Piscine coperta ed esterna riscaldate, idromassaggio, sauna e hammam (solo adulti, 7–22), inclusi.",pro:"Ai parchi a piedi, entrate un'ora prima (alle 8:00), piscina inclusa.",con:"Costa circa 2.100 € più del Moxy, solo per dormire.",u:BK('disney-39-s-new-york-r')},
+ {id:15,n:"Hôtel l'Elysée Val d'Europe",sub:"Hotel 4 stelle · Serris",g:["comodo","vicino"],sc:"9,1",cl:"9,2",p:null,pr:"?",pl:`Su Booking ${B.nc('esaurito')} il 21/11: provate sul sito ufficiale.`,min:2,ne:"2 min",dist:"150 m: 2 minuti a piedi. Navetta gratis per i parchi.",sun:"Reception 24 ore.",tr:"Navetta gratis, oppure treno 30,60 € in due.",pro:"Il più comodo di tutti, col voto più alto tra gli hotel (9,1). Bar fino a mezzanotte, ristorante, negozi davanti.",con:"Niente spa. Su Booking non c'è posto: prezzo sconosciuto. Cauzione di 150 € in contanti.",u:"https://www.hotelelysee.com/",ul:"Apri il sito ufficiale"}
+];
+const PICKS=[["Spendere poco",4,"492 €, pulizia 9,5, 47 m². A 15–20 minuti a piedi dal treno."],["Tutto comodo",8,"524 €, reception 24 ore, 8 minuti dal treno. Se si libera, il n. 15 è ancora meglio."],["Con la spa",12,"Il mio consiglio. Spa inclusa per la domenica sera, 5 minuti dal treno. Da 763 €."],["Romantico",13,"773 €, vasca idromassaggio privata, solo adulti."],["Il prezzo più basso",1,"391 €, pulizia 9,0. Serve il bus."],["Più spazio, vicino al treno",6,"509 €, 50 m² con terrazza, 8 minuti dal treno."]];
+const byId=id=>AL.find(h=>h.id===id);
+$('#picks').innerHTML=PICKS.map(([k,id,d])=>`<a class="pick" href="#al-${id}"><span class="nb">${id}</span><span class="k">${esc(k)}</span><span class="t">${esc(byId(id).n)}</span><span class="d">${esc(d)}</span></a>`).join('');
+const DUELS=[
+ ["N. 12 Relais Spa o n. 8 Moxy?","Per i parchi sono uguali: 5–8 minuti a piedi e 1 fermata di treno, reception sempre aperta. Il 12 ha la spa inclusa per la domenica sera. Il Moxy costa circa 330 € in meno, ma niente spa. Volete il relax della domenica: 12. Volete spendere meno: 8."],
+ ["N. 4 Chez Stéphane o n. 8 Moxy?","Il 4 costa 32 € in meno, è grande quasi il triplo (47 m² contro 17) ed è più pulito. L'8 è a 8 minuti dal treno invece di 15–20 e ha la reception 24 ore: domenica con le valigie e ogni sera dopo i parchi camminate meno. Volete spazio: 4. Volete camminare poco: 8."],
+ ["N. 12 Relais Spa o n. 2 Ki Space?","Il 2 costa circa 300 € in meno (465 € nella vostra app) e ha la piscina più grande. Però è a 3 km dal treno: ogni sera dipendete da una navetta ogni 50 minuti, spesso piena, e sauna e hammam si pagano a parte. Il 12 è a 5 minuti a piedi e la spa è tutta inclusa fino alle 22. Senza auto, se la spa conta, il 12 vale la differenza."],
+ ["N. 1 Love N Chic o n. 5 Studio parking?","L'1 costa 106 € in meno e ha un vero letto matrimoniale. Il 5 è a 5 minuti dal treno e si cancella gratis fino al 12/12, ma ha il letto a castello. Con l'1, ogni sera dopo le 22:00 aspettate il bus anche 40 minuti."],
+ ["N. 12 Relais Spa o n. 13 Jungle Love?","Costano quasi uguale. Il 12 ha la spa grande, la reception e il treno a 5 minuti: la spa la usate domenica sera, fino alle 22:00. Il 13 ha la vasca privata in camera e più intimità, ma è a 2,5 km dal treno, non ha reception e la sera col bus arrivate verso le 23:00, l'ora in cui un ospite dice che la vasca non si usa più (chiedetelo al gestore). Per il relax: 12. Il 13 solo se una sera uscite prima dai parchi."],
+ ["N. 6 Peter Pan o n. 8 Moxy?","Stessa distanza dal treno. Il 6 costa 15 € in meno e ha 50 m² con cucina e terrazza. L'8 ha la reception 24 ore e si può prendere con cancellazione gratuita, pagando circa 50 € in più. Il 6 non è rimborsabile e ha poche recensioni."],
+ ["Un alloggio vicino o il n. 14, hotel Disney?","Il 14 costa circa 2.100 € più del Moxy, solo per la camera. In cambio andate ai parchi a piedi, entrate un'ora prima e avete la piscina. Per me non vale la differenza."]
+];
+$('#duels').innerHTML=DUELS.map(([q,a])=>`<details><summary>${esc(q)}</summary><div class="in"><p>${esc(a)}</p></div></details>`).join('');
+const MIO=12,STAR='<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>';
+let CHO=MIO;try{const q=+new URLSearchParams(location.search).get('alloggio')||+localStorage.getItem('pdn-alloggio');if(q>=1&&q<=15)CHO=q}catch(e){}
+const card=h=>`<article class="card${h.id===MIO?' is-rec':''}" id="al-${h.id}">
+ <div class="card-top"><div class="ttl"><span class="nb" aria-label="numero ${h.id}">${h.id}</span><div><h3>${esc(h.n)}</h3><p class="small muted">${esc(h.sub)}</p></div></div>${h.id===MIO?`<span class="rec">${STAR}Il mio consiglio</span>`:''}</div>
+ <div class="facts"><div class="fact"><div class="k">Voto Booking</div><div class="v">${h.sc}</div></div><div class="fact"><div class="k">Pulizia</div><div class="v">${h.cl}</div></div><div class="fact"><div class="k">4 notti</div><div class="v">${h.pr}</div></div></div>
+ <p class="small"><b>Dal treno:</b> ${h.dist}</p>
+ <details class="more"><summary>Dettagli e prenotazione</summary><div class="in">
+ <div class="tags">${h.g.map(x=>`<span class="tag">${GN[x]}</span>`).join('')}</div>
+ <p class="small">${h.pl}</p>
+ <dl class="kv"><div><dt>Domenica sera</dt><dd>${h.sun}</dd></div><div><dt>Ai parchi</dt><dd>${h.tr}</dd></div>${h.spa?`<div><dt>Spa</dt><dd>${h.spa}</dd></div>`:''}</dl>
+ <div class="pc"><p class="p">${h.pro}</p><p class="c">${h.con}</p></div>
+ <a class="btn ghost" href="${h.u}" target="_blank" rel="noopener">${h.ul||'Apri su Booking: 13→17 dic, 2 adulti'}${OUT}</a>
+ <button type="button" class="btn ghost use-al" data-use="${h.id}" aria-pressed="${h.id===CHO}">${h.id===CHO?'✓ La pagina segue questo alloggio':'Usa questo nella pagina'}</button>
+ </div></details>
+</article>`;
+let FI='tutti',SO='prezzo';
+const num=s=>parseFloat(String(s).replace(',','.'))||0;
+const SORT={prezzo:(a,b)=>(a.p??1e9)-(b.p??1e9),vicino:(a,b)=>a.min-b.min||(a.p??1e9)-(b.p??1e9),voto:(a,b)=>num(b.sc)-num(a.sc)||(a.p??1e9)-(b.p??1e9)};
+$('#filters').innerHTML=[['tutti','Tutti'],...Object.entries(GN)].map(([k,t])=>`<button type="button" data-f="${k}" aria-pressed="${k===FI}">${esc(t)}</button>`).join('');
+const renderAl=()=>{const L=AL.filter(h=>FI==='tutti'||h.g.includes(FI)).sort(SORT[SO]);
+ $('#fdesc').textContent=GD[FI]+(FI==='tutti'?'':` Sono ${L.length}.`);
+ $('#cmpBody').innerHTML=L.map(h=>`<tr><td class="num"><span class="nb sm">${h.id}</span></td><td><a href="#al-${h.id}">${esc(h.n)}</a>${h.id===MIO?' <span class="small muted">★ il mio consiglio</span>':''}</td><td class="r num">${h.pr}</td><td>${esc(h.ne)}</td><td class="r num">${h.sc}</td></tr>`).join('');
+ $('#hotelCards').innerHTML=L.map(card).join('');
+ document.querySelectorAll('#filters button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.f===FI)));
+ document.querySelectorAll('#sort button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===SO)))};
+$('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;FI=b.dataset.f;renderAl()});
+$('#sort').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;SO=b.dataset.s;renderAl()});
+renderAl();
+const toCard=e=>{const a=e.target.closest('a[href^="#al-"]');if(!a)return;const id=a.getAttribute('href');if(!document.querySelector(id)){FI='tutti';renderAl()}
+ const c=document.querySelector(id);if(c){const d=c.querySelector('details.more');if(d)d.open=true;c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash');setTimeout(()=>c.classList.remove('flash'),2400)}};
+document.addEventListener('click',toCard);
+
+/* ---------- giorni ---------- */
+const MOXY="Moxy Paris Val d'Europe, 2 Avenue de l'Europe, 77144 Montévrain",ORLY="Aéroport de Paris-Orly",GDL="Gare de Lyon, Paris",VDE="Gare de Val d'Europe, Serris",CH="Gare de Marne-la-Vallée Chessy",HDV="Hôtel de Ville, Paris",ND="Cathédrale Notre-Dame de Paris",SV="Square René-Viviani, Paris",SM="Place Saint-Michel, Paris",SG="Église de Saint-Germain-des-Prés, Paris",LV="Pyramide du Louvre, Paris",GL="Galeries Lafayette Paris Haussmann, 40 Boulevard Haussmann, Paris",PV="Place Vendôme, Paris",TU="Jardin des Tuileries, Paris",CE="Rond-Point des Champs-Élysées, Paris",FDR="Franklin D. Roosevelt, Paris",DP="Parc Disneyland, Chessy",DAW="Disney Adventure World, Chessy";
+/* ---------- profili di viaggio dei 15 alloggi: la pagina segue quello scelto ---------- */
+const T=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0'),r5=m=>Math.round(m/5)*5,f5=m=>Math.floor(m/5)*5;
+const RER_GO=["A","Direzione Marne-la-Vallée–Chessy, 1 fermata, 3 minuti. Treni ogni 5–8 minuti al mattino. Ticket 2,55 €."];
+const RER_BACK=["A","Da Chessy verso Val d'Europe, 3 minuti: dopo le 22:00 un treno circa ogni 15 minuti, l'ultimo alle 0:22 (orario di inizio dicembre)."];
+const RER_THU_VDE=["A","Direzione Parigi, treno delle <b>8:41 o 8:47</b>, fino a Gare de Lyon (9:17–9:22). Alcuni treni del mattino non fermano a Val d'Europe: guardate il tabellone."];
+const RER_THU_CH=["A",`Da Chessy direzione Parigi, un treno prima delle 8:40 ${B.es()}, fino a Gare de Lyon in circa 40 minuti.`];
+const vde=(min,o)=>{const mt=o.mt||min;return Object.assign({sunSt:"VDE",mode:"rer",out:T(r5(492-min)),
+ go:[["w",`Fino alla stazione Val d'Europe, circa ${mt} minuti a piedi ${B.es()}`],RER_GO],
+ back:[RER_BACK,["w",`Dalla stazione ${o.al} circa ${mt} minuti ${B.es()}`]],
+ sunT:T(r5(1304+min)),sunLeg:[["w",`Circa ${mt} minuti dalla stazione ${B.es()}`]],
+ thuT:T(f5(518-min)),thu:[["w",`Circa ${mt} minuti fino alla stazione ${B.es()}`],RER_THU_VDE]},o)};
+const ACC={
+ 1:{da:"da Love N Chic",al:"a Love N Chic",a:"10 Chemin des Reneuves, 77700 Chessy",sunSt:"VDE",mode:"bus",out:"07:55",
+  go:[["w",`5 minuti fino alla fermata Mairie de Chessy ${B.nu('recensione')}`],["bus",`Bus 2233 fino a Marne-la-Vallée Chessy Nord, circa 10 minuti, ogni 10–20 minuti al mattino ${B.ok()}. Ticket bus 2,05 €.`]],
+  back:[["bus","Bus 2233 da Chessy Nord a Mairie de Chessy: dopo le 22:00 passa circa ogni 40 minuti. L'orario esatto è nell'app Île-de-France Mobilités."],["w","5 minuti a piedi."]],
+  sunT:"22:20",sunLeg:[["bus",`Bus 2233 da Val d'Europe alle 22:00, arrivo a Mairie de Chessy alle 22:16; il successivo alle 22:50 ${B.ok()}. Ticket bus 2,05 €.`],["w","5 minuti a piedi."]],
+  thuT:"08:05",thu:[["bus","Bus 2233 fino a Chessy Nord, circa 10 minuti. Ticket bus 2,05 €."],RER_THU_CH]},
+ 2:{da:"dal Ki Space",al:"al Ki Space",a:"Ki Space Hotel & Spa, 4 Avenue Johannes Gutenberg, 77700 Serris",sunSt:"CH",mode:"nav",out:"07:40",
+  go:[["bus",`Navetta gratuita dell'hotel fino a Chessy, circa ogni 50 minuti: gli orari chiedeteli alla reception ${B.nc()}.`]],
+  back:[["bus",`Navetta dalla stazione di Chessy: l'ultima entro le 00:10, spesso piena ${B.es()}. Piano B: bus 2231 o taxi (11–15 €).`]],
+  sunT:"22:30",sunLeg:[["bus",`Navetta dal capolinea Chessy, l'ultima entro le 00:10 ${B.es()}. Oppure bus 2231 o taxi (11–15 €).`]],
+  thuT:"08:00",thu:[["bus","Navetta fino a Chessy: chiedete alla reception quella che arriva prima delle 8:40."],RER_THU_CH]},
+ 3:{da:"dal Residence du Parc",al:"al Residence du Parc",a:"Residence du Parc, 2 rue Edouard Buffard, 77144 Montévrain",sunSt:"VDE",mode:"bus",out:"07:50",
+  go:[["bus",`Bus 2233 davanti alla porta fino ai parchi, circa ogni 20 minuti, 15–25 minuti di viaggio ${B.es()}. Ticket bus 2,05 €.`]],
+  back:[["bus",`Bus 2233 dalla stazione dei parchi: l'ultima corsa della sera guardatela nell'app Île-de-France Mobilités ${B.nc()}.`]],
+  sunT:"22:15",sunLeg:[["bus",`Bus 2233 fino alla porta: l'orario della domenica sera è nell'app ${B.nc()}. Oppure circa 22 minuti a piedi ${B.es()}.`]],
+  thuT:"08:05",thu:[["bus",`Bus 2233 fino a Val d'Europe ${B.nc()}, oppure circa 22 minuti a piedi ${B.es()}.`],RER_THU_VDE]},
+ 4:vde(18,{mt:"15–20",da:"dall'appartamento",al:"all'appartamento",a:"40 Avenue de la Société des Nations, 77144 Montévrain"}),
+ 5:vde(5,{da:"dallo studio",al:"allo studio",a:"38 Rue de la Charbonnière, 77144 Montévrain"}),
+ 6:vde(8,{da:"dall'appartamento",al:"all'appartamento",a:"9 Rue du Pré Verson, 77700 Chessy"}),
+ 7:{da:"dal B&B",al:"al B&B",a:"8 Chemin des Fosses Rouges, 77700 Chessy",sunSt:"CH",mode:"bus",out:"07:50",
+  go:[["w","100 metri fino alla fermata del bus."],["bus",`Bus fino alla stazione dei parchi: linea e orari chiedeteli al gestore ${B.nc()}. Ticket bus 2,05 €.`]],
+  back:[["bus",`Bus dalla stazione dei parchi: l'ultima corsa chiedetela al gestore ${B.nc()}.`]],
+  sunT:"22:00",sunLeg:[["bus",`Bus dalla stazione: gli orari della domenica chiedeteli al gestore ${B.nc()}.`]],
+  warn:`Il B&B accetta arrivi solo fino alle 22:00: prenotate solo con l'ok scritto del gestore per un arrivo più tardi, oppure lasciate Parigi verso le 20:00 ${B.es()}.`,
+  thuT:"08:00",thu:[["bus",`Bus fino a Chessy: orario da chiedere al gestore ${B.nc()}. Ticket bus 2,05 €.`],RER_THU_CH]},
+ 8:vde(8,{da:"dal Moxy",al:"al Moxy",a:MOXY}),
+ 9:vde(7,{da:"dall'ibis",al:"all'ibis",a:"ibis Marne-la-Vallée Val d'Europe, 77144 Montévrain"}),
+ 10:vde(12,{da:"dall'appartamento",al:"all'appartamento",a:"66 Rue de Prague, 77144 Montévrain"}),
+ 11:{da:"dal Crowne Plaza",al:"al Crowne Plaza",a:"Crowne Plaza Paris Marne-la-Vallée, 40 Allée de la Mare Houleuse, 77700 Magny-le-Hongre",sunSt:"CH",mode:"nav",out:"07:55",
+  go:[["bus","Navetta gratuita dell'hotel fino ai parchi, ogni 30 minuti, 7–9 minuti di viaggio."]],
+  back:[["bus",`Navetta dalla stazione dei parchi, l'ultima verso le 23:15 ${B.es()}.`]],
+  sunT:"22:20",sunLeg:[["bus",`Navetta dalla stazione dei parchi, l'ultima verso le 23:15 ${B.es()}. Reception 24 ore da chiedere.`]],
+  thuT:"08:05",thu:[["bus","Navetta fino alla stazione di Chessy."],RER_THU_CH]},
+ 12:vde(5,{da:"dal Relais Spa",al:"al Relais Spa",a:"Relais Spa Val d'Europe, 1 rue des Grands Prés, 77700 Chessy",spa:"Piscina, idromassaggio, sauna e hammam: inclusi, fino alle 22:00. Dai 16 anni. Così la domenica finisce in relax; da lunedì solo parchi."}),
+ 13:{da:"da Jungle Love",al:"a Jungle Love",a:"1 Ter Allée des Marguerites, 77700 Serris",sunSt:"VDE",mode:"busrer",out:"07:40",
+  go:[["bus",`Bus 2234 fino a Val d'Europe: fermata e orari del mattino chiedeteli al gestore ${B.nc()}. Oppure circa 30 minuti a piedi. Ticket bus 2,05 €.`],RER_GO],
+  back:[RER_BACK,["bus",`Bus 2234 da Val d'Europe alle 22:00, 22:35, 23:05 e 23:35 (lunedì–venerdì) ${B.ok()}. Ticket bus 2,05 €.`]],
+  sunT:"22:30",sunLeg:[["bus",`Bus 2234 da Val d'Europe: l'orario della domenica non l'ho potuto leggere ${B.nc()} (il sabato 22:18 e 22:48). Oppure circa 30 minuti a piedi con le valigie.`]],
+  warn:"Ingresso autonomo dalle 17:00: avvisate il gestore dell'orario di arrivo.",
+  thuT:"07:55",thu:[["bus","Bus 2234 fino a Val d'Europe, oppure circa 30 minuti a piedi. Ticket bus 2,05 €."],RER_THU_VDE]},
+ 14:{da:"dal Disney Hotel New York",al:"al Disney Hotel New York",a:"Disney Hotel New York - The Art of Marvel, 77700 Chessy",sunSt:"CH",mode:"walk",out:"07:45",early:1,
+  go:[["w","10 minuti a piedi fino ai parchi, oppure navetta gratuita. Gli ospiti degli hotel Disney entrano dalle 8:00."]],
+  back:[["w","10 minuti a piedi dai parchi, oppure navetta gratuita."]],
+  sunT:"22:15",sunLeg:[["w","10 minuti a piedi dalla stazione di Chessy."]],
+  thuT:"08:25",thu:[["w","10 minuti a piedi fino alla stazione di Chessy."],RER_THU_CH]},
+ 15:vde(2,{da:"dall'Elysée",al:"all'Elysée",a:"Hôtel l'Elysée Val d'Europe, 7 Cours du Danube, 77700 Serris"})
+};
+const SN={VDE:"Val d'Europe",CH:"Marne-la-Vallée–Chessy"};
+/* euro a testa da lunedì a mercoledì (6 corse) più l'eventuale bus di domenica sera e di giovedì mattina */
+const LOC={rer:15.3,bus:12.3+4.1,busrer:27.6+4.1,nav:0,walk:0};
+const COMMON=38.2; /* a testa: aeroporto andata e ritorno, metro in città, RER di domenica sera */
+let P=ACC[CHO];
+const goPark=(dest,name)=>({t:P.out,ti:"Uscite "+P.da,d:`Obiettivo: essere ai cancelli verso le ${P.early?'7:55':'8:30'}. ${name} apre alle 9:00${P.early?', per voi alle 8:00':''}.`,legs:P.go,maps:[["Apri in Google Maps",gm(dest,{from:P.a})]]});
+const amSpa=()=>P.am?[{t:"07:00",ti:"Spa dell'hotel",d:P.am}]:[];
+let DAYS=[];
+const mkDays=()=>[
+{id:"dom",dn:"Dom",dd:"13",date:"2026-12-13",mood:"market",h:"Domenica 13: mercatini di Natale a Parigi",sub:"Sveglia alle 4:00: è una giornata lunga. Se siete stanchi o piove, usate il percorso corto.",
+ pre:[
+  {t:"04:00",ti:"Sveglia",d:"Il volo parte alle 06:05. A Olbia il banco Volotea chiude 40 minuti prima, alle 05:25. Carte d'imbarco già sul telefono."},
+  {t:"06:05",ti:"Volo Olbia → Parigi Orly",d:"Arrivo alle 08:05 a Orly 1, hall A. Fa fede quello che c'è scritto sulla carta d'imbarco."},
+  {t:"08:20",ti:"Dall'aeroporto alla metro 14",d:"Seguite i cartelli <b>Métro 14</b>: la stazione è vicino a Orly 3, a piedi o con la navetta gratuita. Ognuno valida il proprio ticket aeroporto (14 €).",legs:[["14","Verso Parigi fino a Gare de Lyon, 23 minuti. Un treno ogni 2–5 minuti."]],maps:[["Apri in Google Maps",gm(GDL,{from:ORLY})]]},
+  {t:"09:00",ti:"Gare de Lyon: bagagli negli armadietti",d:"Uscite dai tornelli e andate agli armadietti ufficiali: <b>Hall 3, livello -1, lato rue de Bercy</b>. Aperti fino alle 22:00. Se sono pieni: Nannybag o Bounce dal telefono (vedi Trasporti).",maps:[["Apri in Google Maps",gm("Gare de Lyon Hall 3, Rue de Bercy, Paris",{mode:"walking"})]]},
+  {t:"09:45",ti:"Metro 1 fino a Hôtel de Ville",d:"Avete margine: se c'è coda agli armadietti, lo recuperate qui. Nuovo ticket da 2,55 €.",legs:[["1","Direzione La Défense, 3 fermate, circa 6 minuti."]],maps:[["Apri in Google Maps",gm(HDV,{from:GDL})]]}
+ ],
+ full:[
+  {t:"10:15",ti:"Hôtel de Ville e vetrine del BHV",cut:1,d:`15 minuti. Villaggio di Natale 2026 ${B.nc()}: guardate passando.`,legs:[["w","7 minuti fino a Notre-Dame, sul pont d'Arcole."]],maps:[["Apri in Google Maps",gm(ND,{from:HDV,mode:"walking"})]]},
+  {t:"10:40",ti:"Notre-Dame: albero, interno, presepe",d:`50 minuti. Ingresso gratuito; la prenotazione gratuita è facoltativa e riduce la coda. La domenica ci sono messe alle 10:00 e alle 11:30.`,legs:[["w","4 minuti fino al mercatino, sul pont au Double."]],maps:[["Apri in Google Maps",gm(SV,{from:ND,mode:"walking"})]]},
+  {t:"11:35",ti:"Mercatino di Notre-Dame, Square René-Viviani",d:`${B.ok()} 10:00–20:00. 45 minuti. Il più autentico: 40 artigiani francesi, caldarroste e specialità.`,legs:[["w","5 minuti lungo rue de la Huchette."]],maps:[["Apri in Google Maps",gm(SM,{from:SV,mode:"walking"})]]},
+  {t:"12:25",ti:"Mercatino di place Saint-Michel",cut:1,d:`Date ${B.ok()}, orario ${B.nu()} 10:00–20:00. Piccolo, 15 minuti.`,legs:[["w","12 minuti per rue Saint-André-des-Arts e rue de Buci."]],maps:[["Apri in Google Maps",gm(SG,{from:SM,mode:"walking"})]]},
+  {t:"12:55",ti:"Saint-Germain-des-Prés: pranzo",d:`Pranzo in una brasserie o crêperie della zona (nessun locale verificato). Mercatino accanto alla chiesa ${B.nu('date non ufficiali')}: probabile, non garantito.`,legs:[["w","15 minuti per rue Bonaparte e il pont du Carrousel."]],maps:[["Apri in Google Maps",gm(LV,{from:SG,mode:"walking"})]]},
+  {t:"14:35",ti:"Louvre, solo fuori",cut:1,d:"15 minuti: Piramide e Arc du Carrousel.",legs:[["w","4 minuti fino a Palais Royal–Musée du Louvre."],["7","Direzione La Courneuve, 3 fermate fino a Chaussée d'Antin–La Fayette, circa 5 minuti. Ticket 2,55 €."]],maps:[["Apri in Google Maps",gm(GL,{from:LV})]]},
+  {t:"15:05",ti:"Galeries Lafayette e Printemps",d:`Aperti 11:00–20:00. Albero sotto la cupola, pausa caffè. <b>16:40 terrazza delle Galeries</b> per il tramonto delle 16:53 (chiude se piove o c'è vento). Alle 17:00 vetrine illuminate su boulevard Haussmann.`,legs:[["w","12 minuti davanti all'Opéra e per rue de la Paix."]],maps:[["Apri in Google Maps",gm(PV,{from:GL,mode:"walking"})]]},
+  {t:"17:35",ti:"Place Vendôme illuminata",d:"10 minuti. Otto abeti giganti attorno alla colonna.",legs:[["w","5 minuti per rue de Castiglione. Angelina è lì: cioccolata da asporto."]],maps:[["Apri in Google Maps",gm(TU,{from:PV,mode:"walking"})]]},
+  {t:"17:50",ti:"Tuileries di sera: cena agli stand",d:`${B.ok()} 11:00–23:45. 85 minuti. Tartiflette, raclette, crêpes. Ruota panoramica alle 18:00 o alle 19:00 per vedere la Torre Eiffel che scintilla (5 minuti a inizio ora).`,legs:[["w","6–8 minuti attraversando place de la Concorde."]],maps:[["Apri in Google Maps",gm(CE,{from:TU,mode:"walking"})]]},
+  {t:"19:25",ti:"Mercatino degli Champs-Élysées",d:`${B.ok()} 10:00–23:00. Circa 200 chalet sotto le luci dei viali. 45 minuti, poi andate verso il Rond-Point.`,legs:[["w","Fino alla metro Franklin D. Roosevelt."]],maps:[["Apri in Google Maps",gm(FDR,{from:CE,mode:"walking"})]]},
+  {t:"20:15",ti:"Metro 1 fino a Gare de Lyon",d:"Così arrivate agli armadietti con largo anticipo sulle 22:00. Ticket 2,55 €.",legs:[["1","Da Franklin D. Roosevelt, direzione Château de Vincennes, 10 fermate, circa 16 minuti, senza cambi."]],maps:[["Apri in Google Maps",gm(GDL,{from:FDR})]]}
+ ],
+ short:[
+  {t:"10:20",ti:"Notre-Dame: interno e presepe",d:"45 minuti, al coperto. Ingresso gratuito.",legs:[["w","7 minuti da Hôtel de Ville; poi 4 minuti fino al mercatino."]],maps:[["Apri in Google Maps",gm(ND,{from:HDV,mode:"walking"})]]},
+  {t:"11:10",ti:"Mercatino di Notre-Dame",d:`${B.ok()} 40 minuti: bevanda calda e regali artigianali.`,legs:[["w","10–12 minuti fino a Châtelet–Les Halles."],["A","1 fermata fino ad Auber, circa 3 minuti, poi 5 minuti a piedi al coperto. Ticket 2,55 €."]],maps:[["Apri in Google Maps",gm(GL,{from:SV})]]},
+  {t:"12:20",ti:"Galeries Lafayette e Printemps fino alle 16:30",d:"Pranzo seduti dentro, albero sotto la cupola, vetrine sotto le pensiline. Terrazza solo se non piove.",legs:[["8","Da Opéra a Concorde, 2 fermate, circa 4 minuti. Oppure 15 minuti a piedi per place Vendôme."]],maps:[["Apri in Google Maps",gm(TU,{from:GL})]]},
+  {t:"16:45",ti:"Tuileries all'imbrunire, cena presto",d:`${B.ok()} 90 minuti. Le luci si accendono mentre siete lì.`,legs:[["1","Da Tuileries, direzione Château de Vincennes, 7 fermate fino a Gare de Lyon, circa 11 minuti."]],maps:[["Apri in Google Maps",gm(GDL,{from:"Tuileries, Paris"})]]},
+  {t:"18:30",ti:"Gare de Lyon: bagagli e treno",d:`RER A per ${SN[P.sunSt]}: un treno circa ogni 10 minuti, circa 36–40 minuti di viaggio. All'alloggio verso le 19:30–20:00 ${B.es()}.`,maps:[["Apri in Google Maps",gm(P.a,{from:GDL})]]}
+ ],
+ post:[
+  {t:"20:40",ti:"Ritiro bagagli (chiude alle 22:00)",d:"Riprendeteli entro le 21:30 per stare tranquilli."},
+  {t:"21:08",ti:"RER A fino a "+SN[P.sunSt],d:"Salite solo sui treni con scritto <b>Marne-la-Vallée–Chessy</b>: quelli per Torcy o Boissy non ci arrivano. Ticket nuovo da 2,55 €.",legs:[["A",P.sunSt==="VDE"?"Treni da Gare de Lyon alle 21:08 o 21:23, arrivo 21:44 o 21:59 (orario della domenica 6/12, da ricontrollare).":`Treni da Gare de Lyon alle 21:08 o 21:23, arrivo al capolinea verso le 21:47 o 22:02 ${B.es()} (orario della domenica 6/12, da ricontrollare).`]],maps:[["Apri in Google Maps",gm(P.sunSt==="VDE"?VDE:CH,{from:GDL})]]},
+  {t:P.sunT,ti:"Check-in "+P.al,d:AL.find(h=>h.id===CHO).sun,legs:P.sunLeg,maps:[["Apri in Google Maps",gm(P.a,{from:P.sunSt==="VDE"?VDE:CH})]],ex:P.warn?`<p class="note">${P.warn}</p>`:''}
+ ],
+ cutNote:"Se siete stanchi, tagliate per prime Hôtel de Ville, Saint-Michel e il Louvre."
+},
+{id:"lun",dn:"Lun",dd:"14",date:"2026-12-14",mood:"magic",h:"Lunedì 14: Parco Disneyland",sub:"Parchi aperti 9:00–22:00. Con il biglietto 2 parchi potete passare anche all'altro.",
+ items:[
+  ...amSpa(),goPark(DP,"Il Parco Disneyland"),
+  {t:"09:00",ti:"Parco Disneyland: prima le più richieste",d:"Peter Pan's Flight, Big Thunder Mountain, Star Wars Hyperspace Mountain. Indiana Jones apre alle 9:30."},
+  {t:"Entro 17:00",ti:"Fantasyland, la parte da fiaba",d:"Alice's Curious Labyrinth, Casey Jr. e Le Pays des Contes de Fées chiudono alle 17:00. Dumbo, Biancaneve, Pinocchio, carosello e tazze alle 21:00."},
+  {t:"17:45",ti:"Parata di Natale di Topolino",d:`${B.ok()} Anche alle 15:55. Quella delle 17:45 è col buio: i carri si illuminano ${B.nu()}.`},
+  {t:"19:35",ti:"Accensione dell'albero di Natale",d:"A Town Square, l'albero di 24 metri all'ingresso."},
+  {t:"22:00",ti:"Disney Tales of Magic, sul castello",d:"Lo spettacolo notturno di questo parco. Stasera vedete questo: l'altro è quasi alla stessa ora.",legs:[]},
+  {t:"Dopo",ti:"Ritorno "+P.al,d:"",legs:P.back,maps:[["Apri in Google Maps",gm(P.a,{from:CH})]]}
+ ],
+ foot:`<p class="note">Chiusi per lavori: Pirate Galleon e due stazioni del treno del parco. Il treno gira solo tra Main Street e Fantasyland, 9:30–17:00.</p>`},
+{id:"mar",dn:"Mar",dd:"15",date:"2026-12-15",mood:"magic",h:"Martedì 15: Disney Adventure World, poi liberi",sub:"Disney Adventure World è l'ex Walt Disney Studios. Si comincia da World of Frozen.",
+ items:[
+  ...amSpa(),goPark(DAW,"Disney Adventure World"),
+  {t:"09:00",ti:"Subito Frozen Ever After",d:"In World of Frozen, la novità del 2026. Poi Raiponce Tangled Spin, Ratatouille, Tower of Terror, Avengers e Spider-Man."},
+  {t:"12:20",ti:"I Cantori di Arendelle",d:"Anche 13:10, 16:00, 16:45, 17:35. Festeggia la Stagione con Elsa e Anna: 12:00, 12:45, 13:30, 16:25, 17:10, 18:05."},
+  {t:"Pomeriggio",ti:"Liberi",d:"Tornate al Parco Disneyland per quello che vi è piaciuto, oppure restate. Cars ROAD TRIP è aperta 10:00–20:30."},
+  {t:"20:20",ti:"Doctor Strange: Mystery of the Mystics!",d:"Anche alle 21:05."},
+  {t:"21:50",ti:"Disney Cascade of Lights",d:"Lo spettacolo notturno di Disney Adventure World. Stasera questo."},
+  {t:"Dopo",ti:"Ritorno "+P.al,d:"",legs:P.back,maps:[["Apri in Google Maps",gm(P.a,{from:CH})]]}
+ ],
+ foot:`<p class="note">Chiuso per lavori: Crush's Coaster.</p>`},
+{id:"mer",dn:"Mer",dd:"16",date:"2026-12-16",mood:"magic",h:"Mercoledì 16: i preferiti e quello che manca",sub:"Ultimo giorno ai parchi. Domani si esce alle 8:30: non fate troppo tardi.",
+ items:[
+  ...amSpa(),goPark(DP,"Il parco"),
+  {t:"09:00",ti:"Rifate i preferiti",d:"Al mattino le code sono più corte: cominciate da quello che volete rifare."},
+  {t:"Giornata",ti:"Quello che vi è mancato",d:"Fantasyland entro le 17:00, la parata delle 15:55 o 17:45, l'albero alle 19:35."},
+  {t:"18:55",ti:"Doctor Strange, solo a quest'ora oggi",d:"Mercoledì c'è un solo spettacolo, non alle 20:20."},
+  {t:"Sera",ti:"Uno spettacolo notturno",d:"Quello che vi è piaciuto di più: Disney Tales of Magic alle 22:00 o Disney Cascade of Lights alle 21:50. Non tutti e due: si sovrappongono."},
+  {t:"Dopo",ti:"Ritorno "+P.al+" e preparativi",d:"Check-in online del volo e carte d'imbarco sul telefono. Il ticket aeroporto compratelo almeno 2 ore dopo l'ultimo treno.",legs:P.back,maps:[["Apri in Google Maps",gm(P.a,{from:CH})]]}
+ ]},
+{id:"gio",dn:"Gio",dd:"17",date:"2026-12-17",mood:"market",h:"Giovedì 17: rientro",sub:`Volo alle 12:45. Uscite alle ${P.thuT.replace(/^0/,'')}: in terminal verso le 10:00.`,
+ items:[
+  ...amSpa(),{t:P.thuT,ti:"Check-out e uscita "+P.da,d:"Un solo ticket aeroporto da 14 € copre treno e metro, entro 2 ore.",legs:P.thu,maps:[["Apri in Google Maps",gm(ORLY,{from:P.a})]]},
+  {t:"09:25",ti:"Gare de Lyon: cambio con la metro 14",d:"Seguite i cartelli Métro 14 senza uscire.",legs:[["14","Direzione Aéroport d'Orly, 23 minuti."]],maps:[["Apri in Google Maps",gm(ORLY,{from:GDL})]]},
+  {t:"09:55",ti:"Orly: a piedi fino a Orly 1",d:"Circa 7–10 minuti "+B.es()+". Seguite la carta d'imbarco per il terminal."},
+  {t:"10:05",ti:"In terminal",d:"2 ore e 40 prima del volo. Banco Volotea chiude alle 12:10, imbarco dalle 12:05, gate chiuso alle 12:25."},
+  {t:"12:45",ti:"Volo Orly → Olbia",d:"Arrivo alle 14:45."}
+ ],
+ foot:`<p class="note"><b>Ultimo treno sicuro:</b> 9:26 da Val d'Europe, ma senza margine. <b>Se la RER A è ferma:</b> taxi o auto con autista fino a Orly, circa 50–110 € ${B.nu()}. Decidete entro le 8:30.</p>`}
+];
+const MEGA=()=>`<div class="mine is-rec mega" id="mega">
+ <span class="rec">${STAR}Il mio mega consiglio</span>
+ <h4 class="mine-t">Il giro dei mercatini: da Notre-Dame agli Champs-Élysées, senza mai tornare indietro</h4>
+ <p>Di giorno i mercatini degli artigiani, al tramonto la terrazza delle Galeries Lafayette, col buio le luci. Si parte appena lasciate le valigie alla Gare de Lyon.</p>
+ <ol class="clean mega-route">
+  <li><time>10:40</time><div><b>Notre-Dame e il suo mercatino</b><span>Albero e presepe, poi il mercatino più autentico: artigiani francesi e caldarroste.</span></div></li>
+  <li><time>12:55</time><div><b>Saint-Germain-des-Prés</b><span>Pranzo seduti, in una brasserie o crêperie.</span></div></li>
+  <li><time>15:05</time><div><b>Galeries Lafayette</b><span>Albero sotto la cupola; alle 16:40 la terrazza per il tramonto delle 16:53.</span></div></li>
+  <li><time>${P.spa?'17:10':'17:35'}</time><div><b>Place Vendôme illuminata</b><span>Otto abeti giganti, a 5 minuti dalle Tuileries.</span></div></li>
+  <li><time>${P.spa?'17:25':'17:50'}</time><div><b>Tuileries di sera</b><span>Il più grande e il più magico: cena agli stand e ruota panoramica.</span></div></li>
+  <li><time>${P.spa?'18:15':'19:25'}</time><div><b>Champs-Élysées</b><span>Circa 200 chalet sotto le luci dei viali. Poi metro 1 verso i bagagli.</span></div></li>
+ </ol>
+ <p><b>Da non perdere:</b> Notre-Dame, Tuileries di sera, Champs-Élysées. Tutti e tre aperti domenica 13 ${B.ok()}.</p>
+ <p class="give"><b>Da saltare:</b> La Défense (lontana, allunga il rientro); Montmartre (per il 2026 nessuna data ufficiale); Torre Eiffel (date provvisorie). Davanti all'Hôtel de Ville passate soltanto: il suo villaggio 2026 non è confermato.</p>
+ ${P.spa?'<p><b>Con il n. 12:</b> stesse tappe, più veloci dopo il tramonto. Alle 20:20 siete nella spa dell\'hotel, fino alle 22:00.</p>':''}
+ <p class="give">Qui sotto gli orari minuto per minuto. Se piove o siete stanchi: «Stanchi o pioggia».</p>
+</div>`;
+/* tappa: in vista ora e titolo; col tocco si aprono descrizione, strade e mappe (Mario 21/11 17:24 «non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa») */
+const item=x=>{const more=`${x.d?`<p class="d">${x.d}</p>`:''}${x.legs&&x.legs.length?`<div class="legs">${x.legs.map(l=>`<div class="leg">${lb(l[0])}<span>${l[1]}</span></div>`).join('')}</div>`:''}${x.extra||''}${(x.maps||[]).map(m=>mapsBtn(m[0],m[1])).join('')}${x.ex||''}`;
+ return `<li><time>${esc(x.t)}</time><div class="body">${more?`<details class="st"><summary><span class="t">${esc(x.ti)}</span></summary><div class="st-in">${more}</div></details>`:`<p class="t">${esc(x.ti)}</p>`}</div></li>`};
+/* domenica con la spa dell'hotel (n. 12): stesse tappe da non perdere, più veloci dopo il tramonto, e alle 20:20 in spa */
+const spaSun=d=>{const g=d.full.findIndex(x=>x.ti.startsWith("Galeries"));if(g<0)return;
+ d.full=d.full.slice(0,g+1).concat([
+  {t:"17:10",ti:"Place Vendôme illuminata",cut:1,d:"5 minuti, passando: otto abeti giganti attorno alla colonna.",legs:[["w","5 minuti per rue de Castiglione."]],maps:[["Apri in Google Maps",gm(TU,{from:PV,mode:"walking"})]]},
+  {t:"17:25",ti:"Tuileries: cena agli stand",d:`${B.ok()} 45 minuti. Tartiflette, raclette, crêpes. Ruota panoramica alle 18:00: la Torre Eiffel scintilla per 5 minuti.`,legs:[["w","6–8 minuti attraversando place de la Concorde."]],maps:[["Apri in Google Maps",gm(CE,{from:TU,mode:"walking"})]]},
+  {t:"18:15",ti:"Mercatino degli Champs-Élysées",d:`${B.ok()} 30 minuti sotto le luci dei viali, poi verso il Rond-Point.`,legs:[["w","Fino alla metro Franklin D. Roosevelt."]],maps:[["Apri in Google Maps",gm(FDR,{from:CE,mode:"walking"})]]},
+  {t:"18:50",ti:"Metro 1 fino a Gare de Lyon",d:"Ticket 2,55 €.",legs:[["1","Da Franklin D. Roosevelt, direzione Château de Vincennes, 10 fermate, circa 16 minuti, senza cambi."]],maps:[["Apri in Google Maps",gm(GDL,{from:FDR})]]}]);
+ const h=AL.find(x=>x.id===CHO),spa={t:"20:20",ti:"Spa dell'hotel fino alle 22:00",d:P.spa};
+ d.post=[
+  {t:"19:10",ti:"Ritiro bagagli",d:"Gli armadietti chiudono alle 22:00: siete in largo anticipo."},
+  {t:"19:25",ti:"RER A fino a Val d'Europe",d:"Salite solo sui treni con scritto <b>Marne-la-Vallée–Chessy</b>: quelli per Torcy o Boissy non ci arrivano. Ticket nuovo da 2,55 €.",legs:[["A",`Un treno circa ogni 15 minuti, 36 minuti di viaggio: arrivo verso le 20:00 ${B.es()}.`]],maps:[["Apri in Google Maps",gm(VDE,{from:GDL})]]},
+  {t:"20:10",ti:"Check-in "+P.al,d:h.sun,legs:P.sunLeg,maps:[["Apri in Google Maps",gm(P.a,{from:VDE})]]},spa];
+ d.short=d.short.concat([Object.assign({},spa,{t:"20:00"})]);
+ d.cutNote="Si chiude alle 18:50 per essere in spa alle 20:20. In ritardo? Saltate Hôtel de Ville, Saint-Michel, il Louvre e place Vendôme.";
+};
+let SHORT=false;
+const renderDays=()=>{DAYS=mkDays();if(P.spa)spaSun(DAYS[0]);let html='';
+DAYS.forEach((d,i)=>{
+ let body;
+ if(d.id==="dom"){
+  body=`${MEGA()}<ol class="tl">${d.pre.map(item).join('')}</ol>
+  <p class="t" style="font-weight:700;margin-top:var(--s2)">Che percorso fate?</p>
+  <div class="switch" role="group" aria-label="Percorso della domenica"><button type="button" id="rFull" aria-pressed="true">Percorso completo</button><button type="button" id="rShort" aria-pressed="false">Stanchi o pioggia</button></div>
+  <div id="routeFull"><p class="small muted" style="margin-bottom:var(--s3)">Circa 8–9 km a piedi. ${d.cutNote}</p><ol class="tl">${d.full.map(item).join('')}${d.post.map(item).join('')}</ol></div>
+  <div id="routeShort" hidden><p class="small muted" style="margin-bottom:var(--s3)">Solo Notre-Dame, grandi magazzini e Tuileries. Quasi sempre al coperto, finisce alle 18:30.</p><ol class="tl">${d.short.map(item).join('')}</ol></div>`;
+ }else body=`<ol class="tl">${d.items.map(item).join('')}</ol>${d.foot||''}`;
+ html+=`<div class="panel" role="tabpanel" id="p-${d.id}" aria-labelledby="t-${d.id}" ${i?'hidden':''}><div class="day-head"><p class="kicker">${d.mood==="market"?"Mercatini e città":"Parchi"}</p><h3>${esc(d.h)}</h3><p class="muted">${esc(d.sub)}</p>${d.id==="dom"?`<svg class="market" viewBox="0 0 400 112" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${MK.mini(400,112,1)}</svg>`:""}</div>${body}</div>`;
+});
+$('#panels').innerHTML=html;
+ const rF=$('#rFull'),rS=$('#rShort');rF.addEventListener('click',()=>route(false));rS.addEventListener('click',()=>route(true));if(SHORT)route(true,1)};
+renderDays();
+const bar=$('#daybar');
+bar.insertAdjacentHTML('beforeend',DAYS.map((d,i)=>`<button type="button" role="tab" id="t-${d.id}" aria-controls="p-${d.id}" aria-selected="${i?'false':'true'}" tabindex="${i?'-1':'0'}"><span class="dn">${d.dn}</span><span class="dd">${d.dd}</span></button>`).join(''));
+const tabs=[...bar.querySelectorAll('[role=tab]')],pill=bar.querySelector('.pill'),spark=$('#spark');
+let cur=0;
+const place=()=>{pill.style.transform=`translateX(calc(${cur*100}% + ${cur*6}px))`};
+function show(i,opt={}){
+ if(i<0||i>=DAYS.length)return;const prev=cur;cur=i;
+ tabs.forEach((t,k)=>{t.setAttribute('aria-selected',k===i);t.tabIndex=k===i?0:-1});
+ DAYS.forEach((d,k)=>{const p=$('#p-'+d.id);p.hidden=k!==i;if(k===i&&!opt.quiet&&!RM){p.classList.remove('enter','back');void p.offsetWidth;p.classList.add('enter');if(i<prev)p.classList.add('back')}});
+ $('#giorni').dataset.mood=DAYS[i].mood;place();
+ if(!opt.quiet&&!RM){const r=tabs[i].getBoundingClientRect(),br=bar.getBoundingClientRect();spark.style.left=(r.left-br.left+r.width/2)+'px';spark.style.top=(r.top-br.top+8)+'px';spark.classList.remove('on');void spark.getBoundingClientRect();spark.classList.add('on')}
+ if(opt.scroll){const s=$('#giorni');const y=s.getBoundingClientRect().top+scrollY;if(scrollY<y-40||scrollY>y+s.offsetHeight-200)scrollTo({top:y,behavior:RM?'auto':'smooth'})}
+}
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>show(i,{scroll:true}));t.addEventListener('keydown',e=>{let j=null;if(e.key==='ArrowRight')j=(i+1)%5;if(e.key==='ArrowLeft')j=(i+4)%5;if(e.key==='Home')j=0;if(e.key==='End')j=4;if(j!==null){e.preventDefault();show(j);tabs[j].focus()}})});
+/* oggi */
+{const n=new Date(),k=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');const i=DAYS.findIndex(d=>d.date===k);if(i>=0){tabs[i].insertAdjacentHTML('beforeend','<span class="today-dot" aria-hidden="true"></span>');tabs[i].setAttribute('aria-label',DAYS[i].dn+' '+DAYS[i].dd+', oggi');show(i,{quiet:true})}else place()}
+/* link a un giorno preciso (es. «Vedi il giro» del mega consiglio) */
+document.addEventListener('click',e=>{const a=e.target.closest('a[data-day]');if(a)show(+a.dataset.day,{quiet:true})});
+/* switch percorso */
+function route(s,quiet){SHORT=s;const rF=$('#rFull'),rS=$('#rShort');rF.setAttribute('aria-pressed',!s);rS.setAttribute('aria-pressed',s);$('#routeFull').hidden=s;$('#routeShort').hidden=!s;const el=s?$('#routeShort'):$('#routeFull');if(!RM&&!quiet){el.classList.remove('enter');void el.offsetWidth;el.classList.add('enter','panel')}}
+
+/* ---------- checklist ---------- */
+const CK=[
+ ["Oggi","Scegliete l'alloggio e prenotatelo nella vostra app","Il mio consiglio: n. 12 Relais Spa, «Camera» con 1 letto matrimoniale large e cancellazione gratuita prima dell'8 dicembre (908 €). Date 13→17 dicembre, 2 adulti."],
+ ["Subito dopo","Comprate il biglietto Disney 3 giorni / 2 parchi","Sul sito ufficiale, primo giorno 14/12. Controllate il prezzo nel carrello (circa 544 € in due). Rimborsabile fino all'11/12."],
+ ["Questa settimana","Controllate la tariffa Volotea e il bagaglio a mano","Se non avete imbarco prioritario o Megavolotea, il trolley al gate costa 65 €: aggiungetelo online."],
+ ["Prima di partire","Installate l'app Île-de-France Mobilités e l'app Disneyland Paris","Verificate che i due telefoni siano compatibili. Altrimenti: Navigo Easy da 2 € allo sportello."],
+ ["Prima di partire","Comprate il ticket aeroporto (14 €) su ogni telefono","Deve essere il primo acquisto nell'app."],
+ ["Gio 10 dicembre circa","Check-in online Volotea, andata e ritorno","Gratuito online, 30 € a testa in aeroporto. Salvate le carte d'imbarco sul telefono."],
+ ["Sab 12, sera","Scioperi, lavori e meteo per domenica","RER A, metro 14, armadietti della Gare de Lyon, previsioni di Parigi. Preparate monete e carta per l'armadietto."],
+ ["Sab 12, sera","Prenotate l'ingresso gratuito a Notre-Dame (facoltativo)","Solo sul sito o l'app ufficiale della cattedrale: diffidate dei biglietti a pagamento."],
+ ["Mar 15, sera","Scioperi e orari della RER A per giovedì mattina","Se la RER A è a rischio, pensate a un taxi o un'auto con autista prenotata."],
+ ["Mer 16, sera","Carte d'imbarco del ritorno e ticket aeroporto","Il ticket aeroporto almeno 2 ore dopo l'ultima corsa della sera."]
+];
+let saved={};try{saved=JSON.parse(localStorage.getItem('pdn-check')||'{}')||{}}catch(e){saved={}}
+$('#check').innerHTML=CK.map((c,i)=>`<li class="${saved[i]?'done':''}"><label for="ck${i}"><input type="checkbox" id="ck${i}" ${saved[i]?'checked':''}><span><span class="w">${esc(c[0])}</span><span class="tx">${esc(c[1])}<small>${esc(c[2])}</small></span></span></label></li>`).join('');
+const prog=()=>{const n=CK.filter((c,i)=>saved[i]).length;$('#prog').textContent=n===CK.length?'Tutto fatto. Buon viaggio.':`Fatte ${n} su ${CK.length}`};prog();
+$('#check').addEventListener('change',e=>{const i=+e.target.id.slice(2);saved[i]=e.target.checked;e.target.closest('li').classList.toggle('done',e.target.checked);try{localStorage.setItem('pdn-check',JSON.stringify(saved))}catch(err){}prog()});
+
+/* ---------- da ricontrollare ---------- */
+const RC=[
+ ["Prezzo vero dei biglietti Disney","Letti da siti non ufficiali: guardate il carrello.","https://tickets.disneylandparis.com/it-it/tickets","Biglietteria ufficiale"],
+ ["Prezzo del Relais Spa con Genius","Il prezzo visto è quello da computer senza login.","https://www.booking.com/hotel/fr/relais-spa-chessy.it.html?checkin=2026-12-13&checkout=2026-12-17&group_adults=2&group_children=0&no_rooms=1","Relais Spa su Booking"],
+ ["Orari della RER A dal 13 al 17 dicembre","Gli orari usati sono della settimana 30/11–6/12. Il 13/12 può cambiare l'orario annuale dei treni.","https://malignea.fr/horaires/","Orari RER A"],
+ ["Lavori serali sulla RER A a dicembre","Il calendario dei lavori non era leggibile casella per casella.","https://www.ratp.fr/travaux/rer-a","Lavori RER A (RATP)"],
+ ["Scioperi","Si annunciano pochi giorni prima. Controllate sab 12 e mar 15.","https://www.transilien.com/fr/page-lignes/ligne-a","Info linea A"],
+ ["Armadietti della Gare de Lyon: come si paga","Pagina francese e inglese non sono d'accordo su carta e monete.","https://www.garesetconnexions.sncf/fr/gares-services/paris-gare-lyon/services-commerces/consignes","Armadietti ufficiali"],
+ ["Terminal Volotea a Orly","Orly 1 secondo diversi siti, Terminal 3 secondo un elenco RATP. Fa fede la carta d'imbarco.","https://www.parisaeroport.fr/fr/passagers/vols/compagnies-aeriennes/compagnie?airline=V7","Paris Aéroport, Volotea"],
+ ["Quando apre il check-in online Volotea","Da 4 giorni prima solo secondo un sito non ufficiale.","https://www.volotea.com/it/la-tua-prenotazione/check-in-online","Check-in Volotea"],
+ ["Navetta di Ki Space","Orari ufficiali non trovati: solo una pagina del 2025 e recensioni.","https://kispace-hotel.com/en/ki-space/hotel-near-disneyland-paris.html","Sito Ki Space"],
+ ["Orari e chiusure dei parchi, orari degli spettacoli","Possono cambiare: controllate 2–3 giorni prima o nell'app.","https://www.disneylandparis.com/it-it/calendari/orari-parco","Orari ufficiali dei parchi"],
+ ["Mercatino di Saint-Germain-des-Prés","Date 2026 solo provvisorie.","https://parisjetaime.com/article/les-marches-de-noel-paris-a018","Office de tourisme"]
+];
+const drawRC=()=>{$('#recheck').innerHTML=RC.map(r=>`<li><b>${esc(r[0])}</b><span class="small muted">${esc(r[1])}</span><a href="${r[2]}" target="_blank" rel="noopener">${esc(r[3])} ${OUT.replace('<svg','<svg style="width:15px;height:15px"')}</a></li>`).join('');};drawRC();
+
+/* ---------- fonti ---------- */
+const SRC=[
+ ["Hotel",[["IDFM, orari del bus 2234 (validi 24/8/2026–18/7/2027)","https://ilico.iledefrance-mobilites.fr/uploads/fiches/20260810T152545Z-10849dbf-e6d0-430c-98f2-7d3e5c4fec76.pdf",0],["Recensioni del n. 13 Jungle Love (vasca dopo le 23:00)","https://fr.planetofhotels.com/france/serris/loveroom-jungle-love-proche-disneyland",1],["Booking.com, schede degli hotel (13→17/12/2026)","https://www.booking.com/hotel/fr/moxy-paris-val-d-europe.it.html?checkin=2026-12-13&checkout=2026-12-17&group_adults=2&no_rooms=1",0],["Disneyland Paris, hotel partner","https://www.disneylandparis.com/fr-fr/hotels-partenaires",0],["Résidence du Parc, FAQ","https://www.laresidenceduparc.fr/faq/",0],["Ki Space, sito ufficiale","https://kispace-hotel.com/en",0],["Magical Shuttle, pagina Ki Space","https://magicalshuttle.co.uk/hotel/ki-space-hotel-spa",1],["Planet of Hotels, recensioni Ki Space","https://en.planetofhotels.com/france/serris/ki-space-hotel-spa-near-disneyland-paris",1]]],
+ ["Biglietti e parchi Disney",[["Biglietteria ufficiale","https://tickets.disneylandparis.com/it-it/tickets",0],["Orari dei parchi e spettacoli","https://www.disneylandparis.com/it-it/calendari/orari-parco",0],["Natale a Disneyland Paris","https://www.disneylandparis.com/it-it/le-stagioni/natale-a-disneyland-paris",0],["Calendario stima prezzi (pacchetti)","https://www.disneylandparis.com/it-it/calendario-stima-prezzi-disneyland-paris",0],["Condizioni di prenotazione","https://www.disneylandparis.com/it-it/condizioni-prenotazione-disney",0],["dein-dlrp.de, Ticket Finder","https://www.dein-dlrp.de/en/trip-planning/tickets.html",1],["julieears.com, calendario prezzi","https://julieears.com/en/prices/disneyland-paris-tickets",1]]],
+ ["Mercatini e Natale a Parigi",[["paris.fr, Tuileries","https://www.paris.fr/evenements/edition-2026-de-la-magie-de-noel-des-tuileries-127134",0],["paris.fr, Notre-Dame","https://www.paris.fr/evenements/marche-de-noel-notre-dame-124520",0],["Mercatino Champs-Élysées, organizzatore","https://xmaschampselysees.com/",0],["Office de tourisme, mercatini","https://parisjetaime.com/article/les-marches-de-noel-paris-a018",0],["Notre-Dame de Paris, orari","https://www.notredamedeparis.fr/",0],["Galeries Lafayette, orari","https://haussmann.galerieslafayette.com/en/our-opening-hours-2/",0],["sortiraparis.com, Saint-Germain","https://www.sortiraparis.com/actualites/noel-et-fetes/articles/46509-le-marche-de-noel-2026-de-saint-germain-des-pres-de-retour-sur-la-rive-gauche-les-dates",1],["christmaswanders.com","https://christmaswanders.com/market/paris-christmas-market",1]]],
+ ["Trasporti e bagagli",[["Île-de-France Mobilités, tariffe 2026","https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026",0],["IDFM, condizioni ticket aeroporto","https://www.iledefrance-mobilites.fr/cgvu-tickets-aeroport",0],["Paris Aéroport, metro 14 per Orly","https://www.parisaeroport.fr/fr/passagers/transports-parking/transports-publics-paris/metro-ligne-14-orly/ory",0],["RER A, orari (malignea)","https://malignea.fr/horaires/",0],["RATP, lavori RER A","https://www.ratp.fr/travaux/rer-a",0],["SNCF, armadietti Gare de Lyon","https://www.garesetconnexions.sncf/fr/gares-services/paris-gare-lyon/services-commerces/consignes",0],["Volotea, condizioni di trasporto","https://www.volotea.com/it/condizioni-legali",0],["Volotea, bagaglio","https://www.volotea.com/it/bagaglio",0],["Nannybag, Gare de Lyon","https://www.nannybag.com/fr/consigne-bagage/paris/gare-de-lyon",1],["Bounce, Gare de Lyon","https://fr.bounce.com/luggage-storage/paris/gare-de-lyon",1]]]
+];
+$('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li><a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])}</a>${s[2]?' '+B.nu():''}</li>`).join('')}</ul>`).join('');
+
+
+/* ---------- alloggio scelto: giorni, costi, trasporti, «Da fare» e «Da ricontrollare» lo seguono ---------- */
+{const sel=$('#selAl');
+ sel.innerHTML=AL.map(h=>`<option value="${h.id}">${h.id}. ${esc(h.n)}${h.id===MIO?' ★ il mio consiglio':''}</option>`).join('');
+ const eur=n=>n.toFixed(2).replace('.',',')+' €',strip=x=>String(x).replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
+ const RC1=RC[1];
+ const paint=()=>{const h=AL.find(x=>x.id===CHO),pp=COMMON+LOC[P.mode],bus=P.mode==='bus'||P.mode==='busrer';
+  sel.value=String(CHO);
+  $('#chNote').innerHTML=CHO===MIO?`★ È il mio consiglio. Cambiatelo qui, oppure con «Usa questo nella pagina» nelle schede degli alloggi.`:`Avete scelto il n. ${CHO}. Il mio consiglio resta il n. ${MIO} ${esc(byId(MIO).n)}.`;
+  $('#backMio').hidden=CHO===MIO;
+  const MP=CHO===MIO&&h.pc,hp=MP?h.pc[0]:h.p,tot=hp!=null?hp+544+2*pp:null;
+  $('#myCost').innerHTML=`<span class="rec">${STAR}${CHO===MIO?'Il mio consiglio':'La vostra scelta'}</span><h3 class="mine-t"><span class="nb">${CHO}</span><span>${esc(h.n)}: ${tot!=null?'circa '+fmt(tot)+' in due':'prezzo dell\'alloggio sconosciuto'}</span></h3><p>Alloggio ${hp!=null?fmt(hp):'?'}${MP?' ('+h.pc[1].toLowerCase()+')':''} + biglietti Disney 544 € + trasporti locali ${fmt(2*pp)} ${B.es()}.${MP?' La tariffa più bassa, '+fmt(h.p)+', non è rimborsabile.':h.pc?' '+h.pc[1]+': circa '+fmt(h.pc[0]+544+2*pp)+'.':''}</p><p class="give">Cambiate alloggio in «Giorno per giorno» o nelle schede: questo conto si aggiorna da solo. Sotto, sette modi a confronto: toccate una barra per la scheda.</p>`;
+  $('#h-tr').textContent=`Biglietti singoli sul telefono: circa ${Math.round(pp)} € a testa con il n. ${CHO}.`;
+  $('#trSun').innerHTML=`1 ticket Métro-Train-RER: RER A Gare de Lyon → ${SN[P.sunSt]} (uscendo per i bagagli il ticket precedente finisce)${bus?', poi 1 ticket bus da 2,05 €':''}`;
+  $('#trSunV').textContent=eur(2.55+(bus?2.05:0));
+  const PK={rer:["6 ticket Métro-Train-RER: andata e ritorno ai parchi",15.3],bus:["6 ticket bus da 2,05 €: andata e ritorno ai parchi",12.3],busrer:["6 ticket bus e 6 ticket Métro-Train-RER: bus fino a Val d'Europe, poi treno",27.6],nav:["Navetta gratuita dell'hotel",0],walk:["A piedi: niente biglietti",0]}[P.mode];
+  $('#trPark').textContent=PK[0];$('#trParkV').textContent=eur(PK[1]);
+  $('#trThu').innerHTML=`<b>Ticket aeroporto</b>: ${P.thu[P.thu.length-1]===RER_THU_VDE?"Val d'Europe":"Chessy"} → Orly, RER A + metro 14 con un solo ticket${bus?', più 1 ticket bus da 2,05 €':''}`;
+  $('#trThuV').textContent=eur(14+(bus?2.05:0));
+  $('#trWho').textContent=`· con il n. ${CHO} ${h.n}`;$('#trTot').textContent=eur(pp);
+  const tx=document.querySelector('#check li .tx');
+  if(tx)tx.innerHTML=CHO===MIO?`${esc(CK[0][1])}<small>${esc(CK[0][2])}</small>`:`${esc('Prenotate il n. '+CHO+' '+h.n+' nella vostra app')}<small>${esc(strip(h.pl)+' Date 13→17 dicembre, 2 adulti.')}</small>`;
+  RC[1]=CHO===MIO?RC1:[`Prezzo del n. ${CHO} con Genius`,"Il prezzo visto è quello da computer senza login.",h.u,h.ul?"Sito ufficiale":`N. ${CHO} su Booking`];drawRC()};
+ const applyAl=(id,say)=>{if(!ACC[id])return;CHO=id;P=ACC[id];
+  try{localStorage.setItem('pdn-alloggio',String(id))}catch(e){}
+  try{const u=new URL(location.href);if(id===MIO)u.searchParams.delete('alloggio');else u.searchParams.set('alloggio',id);history.replaceState(null,'',u)}catch(e){}
+  renderDays();show(cur,{quiet:true});renderAl();paint();
+  if(say)$('#chNote').insertAdjacentHTML('beforeend',' <b>Pagina aggiornata.</b>')};
+ sel.addEventListener('change',()=>applyAl(+sel.value,1));
+ $('#backMio').addEventListener('click',()=>applyAl(MIO,1));
+ $('#hotelCards').addEventListener('click',e=>{const b=e.target.closest('[data-use]');if(!b)return;const id=+b.dataset.use;applyAl(id);
+  const nb=document.querySelector(`#al-${id} [data-use]`);if(nb){nb.focus();nb.insertAdjacentHTML('afterend','<p class="small" role="status">Fatto: giorno per giorno, costi, trasporti e «Da fare» ora seguono questo alloggio.</p>')}});
+ paint()}
+
+/* ---------- stelle su tutta la pagina: tre strati di immagini ripetute, due brillano ---------- */
+{const st=$('#stars');if(st){const SC=['#FFFFFF','#FFFFFF','#DCE6FF','#FFF1D2'];
+ const tile=(S,n,r0,r1,a0,a1,halo)=>{let c='';for(let i=0;i<n;i++){const x=(Math.random()*S).toFixed(1),y=(Math.random()*S).toFixed(1),r=r0+Math.random()*(r1-r0),a=a0+Math.random()*(a1-a0),f=SC[i%SC.length];
+   if(halo)c+=`<circle cx="${x}" cy="${y}" r="${(r*3.2).toFixed(1)}" fill="#BFD4FF" opacity="${(a*.16).toFixed(2)}"/>`;c+=`<circle cx="${x}" cy="${y}" r="${r.toFixed(2)}" fill="${f}" opacity="${a.toFixed(2)}"/>`}
+  return `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="${S}" height="${S}">${c}</svg>`)}")`};
+ const L=st.children;L[0].style.backgroundImage=tile(520,42,.35,.95,.22,.6)+','+tile(770,26,.45,1.15,.28,.7);
+ L[1].style.backgroundImage=tile(610,12,.8,1.35,.6,1,1);L[2].style.backgroundImage=tile(880,11,.9,1.6,.6,1,1)}}
+
+/* ---------- interruttore dei colori: Blu notte / Vin brulé (scelta ricordata su questo telefono) ---------- */
+const VINO=()=>document.documentElement.dataset.palette==='vino';
+const palBtns=[...document.querySelectorAll('.pal button')];
+const setPal=(v,save)=>{if(v==='vino')document.documentElement.dataset.palette='vino';else delete document.documentElement.dataset.palette;
+ palBtns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.pal===(v==='vino'?'vino':'blu'))));
+ if(save){try{localStorage.setItem('palette',v)}catch(e){}}document.dispatchEvent(new Event('palette'))};
+palBtns.forEach(b=>b.addEventListener('click',()=>setPal(b.dataset.pal,true)));setPal(VINO()?'vino':'blu',false);
+
+/* ---------- cielo dell'intestazione: stelle, stelle cadenti, neve, luci, arco di scintille ---------- */
+const cv=$('#sky'),hero=$('#top');
+if(cv&&cv.getContext){
+ const ctx=cv.getContext('2d');let W=0,H=0,dpr=1,flakes=[],glows=[],stars=[],shoot=null,nextShoot=2.2,arc=[],t0=performance.now(),run=false,vis=true,raf=0;
+ const size=()=>{dpr=Math.min(devicePixelRatio||1,2);W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  const ns=Math.round(Math.min(280,W*H/1500));stars=Array.from({length:ns},()=>{const r=.35+Math.pow(Math.random(),3)*1.55;return {x:Math.random()*W,y:H*.88*Math.pow(Math.random(),1.35),r,b:.35+Math.random()*.65,sp:.6+Math.random()*1.8,p:Math.random()*6.28,g:r>1.25}});
+  const n=VINO()?Math.round(Math.min(90,W*H/9000)):Math.round(Math.min(48,W*H/16000));flakes=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,v:.15+Math.random()*.45,w:Math.random()*6.28}));
+  const GC=VINO()?['246,201,100','246,201,100','255,150,96','255,140,120','255,176,196','143,227,184']:['246,201,100','246,201,100','255,214,150','150,190,255','150,190,255','190,170,255'];glows=Array.from({length:24},()=>({x:Math.random()*W,y:Math.random()*H*.7,r:8+Math.random()*34,p:Math.random()*6.28,c:GC[Math.floor(Math.random()*GC.length)]}))};
+ const sceneMap=()=>{const s=document.querySelector('.scene');const r=s.getBoundingClientRect(),hr=hero.getBoundingClientRect();const sc=Math.max(r.width/800,r.height/290);const ox=r.left-hr.left+(r.width-800*sc)/2,oy=r.top-hr.top+(r.height-290*sc);return (x,y)=>[ox+x*sc,oy+y*sc]};
+ /* fuochi di scintille sopra il castello: tre al caricamento, poi uno ogni tanto */
+ const LAUNCH=[[440,200,452,62],[562,205,582,72],[505,150,505,30],[420,210,410,90],[585,215,612,96]];
+ const COL=['#FFE7A3','#FFFFFF','#BFD8FF','#FFE7A3'];
+ let rockets=[],sparks=[],nextAuto=9;
+ const COLV=['#FFE7A3','#FFFFFF','#FFB0C4','#9FE8C0'];
+ const fire=(k,t)=>{const C=VINO()?COLV:COL;rockets.push({k,t0:t,dur:1.05,c:C[k%C.length]})};
+ [[0,.35],[1,1.05],[2,1.75]].forEach(([k,d])=>fire(k,d));
+ const fireworks=(t)=>{const m=sceneMap();
+  if(t>nextAuto){fire(Math.floor(Math.random()*LAUNCH.length),t);if(Math.random()<.5)fire(Math.floor(Math.random()*LAUNCH.length),t+.4);nextAuto=t+6+Math.random()*4}
+  for(let i=rockets.length-1;i>=0;i--){const r=rockets[i],u=(t-r.t0)/r.dur;if(u<0)continue;const L=LAUNCH[r.k];
+   const e=1-Math.pow(1-Math.min(u,1),2),X=L[0]+(L[2]-L[0])*e,Y=L[1]+(L[3]-L[1])*e-Math.sin(e*Math.PI)*18;const [px,py]=m(X,Y);
+   if(u<1){sparks.push({x:px,y:py,vx:(Math.random()-.5)*.5,vy:Math.random()*.5+.2,l:.8,c:'#FFE7A3',s:1.6});ctx.fillStyle='#FFF4D6';ctx.beginPath();ctx.arc(px,py,2.4,0,6.28);ctx.fill()}
+   else{const n=34;for(let j=0;j<n;j++){const a=j/n*6.283+Math.random()*.2,v=1.3+Math.random()*1.3;sparks.push({x:px,y:py,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,c:j%3?r.c:'#FFFFFF',s:2.2})}rockets.splice(i,1)}}
+  for(let i=sparks.length-1;i>=0;i--){const s=sparks[i];s.x+=s.vx;s.y+=s.vy;s.vx*=.975;s.vy=s.vy*.975+.025;s.l-=.014;if(s.l<=0){sparks.splice(i,1);continue}ctx.globalAlpha=Math.min(1,s.l*1.2);ctx.fillStyle=s.c;ctx.fillRect(s.x-s.s/2,s.y-s.s/2,s.s,s.s)}
+  ctx.globalAlpha=1};
+ const draw=(now)=>{const t=(now-t0)/1000;ctx.clearRect(0,0,W,H);
+  if(!VINO())for(const s of stars){const a=s.b*(.5+.5*Math.sin(t*s.sp+s.p));ctx.globalAlpha=Math.max(.06,a);ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.28);ctx.fill();
+   if(s.g){ctx.globalAlpha=a*.55;ctx.fillStyle='#DCE6FF';const L=s.r*4.2;ctx.fillRect(s.x-L,s.y-.35,L*2,.7);ctx.fillRect(s.x-.35,s.y-L,.7,L*2)}}
+  ctx.globalAlpha=1;
+  if(!RM&&!VINO()){if(!shoot&&t>nextShoot){const dir=Math.random()<.5?1:-1;shoot={x:W*(dir>0?.08+Math.random()*.45:.47+Math.random()*.45),y:H*(.04+Math.random()*.22),dx:dir*Math.cos(.42),dy:Math.sin(.42),len:80+Math.random()*70,t0:t,dur:.95};nextShoot=t+4.5+Math.random()*5}
+   if(shoot){const u=(t-shoot.t0)/shoot.dur;if(u>=1)shoot=null;else{const d=u*shoot.len*2.4,hx=shoot.x+shoot.dx*d,hy=shoot.y+shoot.dy*d,tx=hx-shoot.dx*shoot.len,ty=hy-shoot.dy*shoot.len,a=Math.sin(u*Math.PI);
+    const gr=ctx.createLinearGradient(tx,ty,hx,hy);gr.addColorStop(0,'rgba(220,232,255,0)');gr.addColorStop(1,`rgba(255,255,255,${(.9*a).toFixed(3)})`);ctx.strokeStyle=gr;ctx.lineWidth=1.6;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(tx,ty);ctx.lineTo(hx,hy);ctx.stroke();
+    ctx.globalAlpha=a;ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(hx,hy,1.7,0,6.28);ctx.fill();ctx.globalAlpha=1}}}
+  for(const g of glows){const a=.10+.08*Math.sin(t*.6+g.p);const gr=ctx.createRadialGradient(g.x,g.y,0,g.x,g.y,g.r);gr.addColorStop(0,`rgba(${g.c},${a})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(g.x,g.y,g.r,0,6.28);ctx.fill()}
+  ctx.fillStyle='rgba(255,255,255,.85)';
+  for(const f of flakes){f.y+=f.v;f.x+=Math.sin(t*.5+f.w)*.25;if(f.y>H+4){f.y=-4;f.x=Math.random()*W}ctx.globalAlpha=.35+f.r*.25;ctx.beginPath();ctx.arc(f.x,f.y,f.r,0,6.28);ctx.fill()}
+  ctx.globalAlpha=1;
+  if(!RM)fireworks(t);
+  ctx.globalAlpha=1};
+ const loop=now=>{draw(now);if(run)raf=requestAnimationFrame(loop)};
+ const start=()=>{if(run||RM||!vis||document.hidden)return;run=true;raf=requestAnimationFrame(loop)};
+ const stop=()=>{run=false;cancelAnimationFrame(raf)};
+ size();draw(t0+1600);
+ addEventListener('resize',()=>{size();if(!run)draw(performance.now())},{passive:true});
+ document.addEventListener('palette',()=>{size();if(!run)draw(performance.now())});
+ if(!RM){if('IntersectionObserver' in window)new IntersectionObserver(e=>{vis=e[0].isIntersecting;vis?start():stop()}).observe(hero);
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());start();
+  /* parallasse leggero della scena */
+  const pars=[...document.querySelectorAll('.scene .par')];let tick=false;
+  addEventListener('scroll',()=>{if(tick)return;tick=true;requestAnimationFrame(()=>{const y=Math.min(scrollY,600);pars.forEach(p=>p.style.transform=`translateY(${(y*+p.dataset.depth).toFixed(1)}px)`);tick=false})},{passive:true});}
+}
+})();
+</script>
+
+<script>
+/* Senza rete (metro, roaming): la pagina si salva sul telefono alla prima apertura. */
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  addEventListener('load', () => { navigator.serviceWorker.register('sw.js', { scope: './' }).catch(() => {}); });
+}
+</script>
+</body>
+</html>

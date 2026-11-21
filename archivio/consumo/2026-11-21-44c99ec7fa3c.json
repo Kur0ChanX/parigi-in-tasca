@@ -1,0 +1,35 @@
+{
+"account": "108763",
+"sessione": "44c99ec7fa3c",
+"giorno": "2026-11-21",
+"turni": 2,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 210342,
+"anomalie": [],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 2,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 8 · Il turno finisce con una": 1
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"17:22 · Notifica non letta (in coda dalle 17:19: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"17:34 · Notifica non letta (in coda dalle 17:25: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"17:34 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «La pubblico quando mi dici che la pagina ti va bene.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto "
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"17:34 · Domanda a Mario poco chiara («❓ **DOMANDE** 🛑 **DOMANDA 1 · La pagina così ti va bene?** S», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+],
+"Stop 8 · Il turno finisce con una": [
+"17:34 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+]
+},
+"remota": "01WTjqUwT3Gs",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
