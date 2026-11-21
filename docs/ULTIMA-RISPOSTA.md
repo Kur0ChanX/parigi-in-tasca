@@ -1,14 +1,21 @@
-# Ultima risposta di Claude (21/11/2026 19:56 ora italiana)
+# Ultima risposta di Claude (21/11/2026 20:33 ora italiana)
 
-Ho capito: vuoi la conferma che, scelto l'hotel, cambia tutto l'itinerario. E vuoi che i pulsanti dei Mercatini non spariscano quando scorri.
+Ho capito: volevi la valutazione completa. Ecco il risultato.
 
 ───
 ✅ **FATTO**
-- **Sì, te lo confermo con una prova.** Ho aperto la pagina con 3 hotel diversi e cambia tutto:
+- Ho letto i prezzi di oggi: 8 hotel a Parigi e circa 20 alloggi vicino a Disney, nei 4 gruppi.
+- Tutto è salvato negli appunti.
+- Nei totali qui sotto ci sono alloggio + biglietti Disney (544 € per voi due: prezzo **non ufficiale**). Tutti i prezzi sono con cancellazione gratuita.
 
-| Cosa | n. 12 Relais Spa | n. 1 Love N Chic | n. 14 Disney New York |
-|---|---|---|---|
-| Uscita per i parchi | 8:05, treno | 7:55, bus | 7:45, a piedi (entrate alle 8:00) |
-| Domenica sera | 20:10 in hotel, poi spa | 22:20, bus | 22:15, a piedi |
-| Totale in due | circa 1.559 € | circa 1.044 € | circa 3.243 € |
-| Trasporti a testa | circa …
+| N. | Strada | Dove dormite | Totale per 2 | Cancelli gratis fino al |
+|---|---|---|---|---|
+| 1 | 4 notti vicino a Disney | Moxy, 8 min a piedi dal treno, pulizia 9,0 | circa 1.221 € | 13/12 |
+| 2 | 4 notti vicino a Disney | Relais …
+
+## Domande a Mario
+
+❓ **DOMANDE**
+🛑 **DOMANDA 2 (rinnovata)**: quale strada scegliete?
+A cosa serve: con la tua scelta aggiorno la pagina (consiglio in cima, domenica, costi, trasporti).
+Rispondi con il numero, da 1 a 6. Il mio consiglio è la **3**.
