@@ -4,9 +4,9 @@
 Prima: «ma se ti scrivo dal 13 al 17 perché mi metti dal 14 che problemi hai?»
 Poi: «metti alloggi dal 14 al 17 e in priorità dal 13 al 17 rifai la ricerca accurata profonda i piú validi dal web con i criteri che ti ho detto e sistema tutto il nostro sito c'è un disordine allucinante rendi tutto ordinato chiaro e di facile lettura non listoni chilometrici risistema in modo intelligente e von Logica e bello da vedere professionale non amatoriale»
 
-## Messaggio di Mario 22/11 00:4x (chat «Controllo 2»)
-«qui» + foto `archivio/2026-11-22-mario-qui-vicino-a-disney.jpg` (scelta 4 notti Moxy, scheda Hotel, ordine «Vicino a Disney»: primi n. 30 Residhome, 11 Crowne Plaza con navetta ogni 30 min, 12; il n. 14 Hotel Disney solo 4°).
-Letto come (ipotesi, da confermare con Mario): l'ordine «Vicino a Disney» è sbagliato. Causa vera: ordinava per minuti coi mezzi SENZA le attese (Residhome 8 min col treno batte l'Hotel Disney a 10 min a piedi; la navetta ogni 30 min contava 10 min). Scelta: «Vicino a Disney» = distanza dai parchi in linea d'aria (km del blocco MAPPE, IGN), a pari km i minuti; nella riga il segno «📍 km dai parchi».
+## Messaggio di Mario 22/11 ~00:45 (arrivato alla Controllo 1 dopo l'handoff, passato qui; «qui» + foto `archivio/2026-11-22-mario-dormire-tasto-tutti.jpg`)
+Parole intere in `docs/CONSEGNE-PARALLELA-CONTROLLO.md` «Messaggio di Mario arrivato dopo l'handoff». In breve: tasto «Tutti» nell'interruttore; in vista distanza da Disney (tempo e km a piedi) e minuti a piedi dalla RER; ricerca anche sui siti diretti (3 aiutanti); aspetto più chiaro (colori, font, spazi); plugin `frontend-design` e «rifai tutto con frontend da 0, solo migliorie».
+Visto nella foto (ordine «Vicino a Disney», scheda Hotel): primi n. 30, 11 (navetta ogni 30 min), 12; il n. 14 Hotel Disney solo 4°. Causa: si ordinava per minuti coi mezzi SENZA le attese. Scelta: «Vicino a Disney» = distanza dai parchi in linea d'aria (km del blocco MAPPE, IGN), a pari km i minuti; nella riga km e minuti in vista.
 
 ## Scelte
 - Date: 13→17 (4 notti tutte vicino a Disney) in primo piano; 14→17 (con la domenica a Parigi) come seconda strada. Supera «non rifare la ricerca» del 21/11 20:25: ora Mario la chiede.
