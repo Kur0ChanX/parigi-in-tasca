@@ -19,6 +19,8 @@
 
 - 👁 Lo vedi: nella pagina di dicembre e in ogni messaggio · prova: Mario legge senza dover chiedere spiegazioni · Tutto a prova di stupido (Mario 21/11 dopo l'handoff della #6: «Fai tutto di facile comprensione, a prova di stupido, eh?»): pagina e messaggi più semplici, niente domande inutili. Notti risolte da Mario: «le notti le conti in base al biglietto del volo» → 4 notti, dal 13 al 17 (volo 13/12 andata, 17/12 ritorno).
 
+- 👁 Lo vedi: nel consiglio unico della pagina · prova: Mario legge il consiglio rivisto · Relax solo il primo giorno, poi 3 giorni di Disneyland senza stress di trasporti (Mario 21/11 dopo l'handoff della #6: «Allora, la spa la vogliamo fare o l'idromassaggio o insomma modalità relax è solo il primo giorno, poi gli altri 3 giorni ce li dedichiamo solo a Disneyland ed vogliamo essere comodi con i trasporti, ecco. Con i trasporti, zero stress, vogliamo proprio rilassarci a Disneyland.»): rivedere il consiglio unico (domenica sera spa o idromassaggio, lun–mer comodi ai parchi).
+
 ## 2. Claude dopo scelta o ok di Mario
 - Pagina di dicembre: orari di uscita con l'hotel scelto, poi ripubblicare l'Artifact (sorgente `dicembre/parigi-disney-natale.html`).
 
