@@ -24,3 +24,6 @@ Mettile tutti e due i colori selezionabili, dai. Sia quello vino, sia quello blu
 
 ## 2026-11-21 16:26 · 01WTjqUxBAKZ
 va bene
+
+## 2026-11-21 16:35 · 01WTjqUxBAKZ
+E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.
