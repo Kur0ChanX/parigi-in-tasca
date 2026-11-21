@@ -13,3 +13,6 @@ Certo che come icona potevi fare tipo um, Parigi piena di mercatini di Natale, f
 
 ## Scelte in corsa
 - Icona e anteprima disegnate in SVG e trasformate in PNG/JPG da uno script (`tools/fai-icone-dicembre.js`): si rifanno uguali, niente immagini prese da internet (diritti).
+- Controllo dell'aiutante (21/11 ~18:20), punti verificati sugli appunti e corretti nella pagina: n. 12 a 831 € (letto matrimoniale; la suite da 763 € non lo garantisce); n. 2 Ki Space: 440 € in meno (non 300), 730 € cancellabile fino al 10/12 (stima), domenica arrivo 22:30 a spa chiusa, colazione 22 €; n. 8 Moxy: 524 € = 2 letti singoli («Queen Room» nell'app), 577 € cancellabile fino al 13/12; colazioni n. 11 e n. 12; Hotel Disney anche rispetto al n. 12 (+520 €); Vendôme 17:15 col n. 12; numeri non ufficiali tolti (abeti, chalet); piano B dei ticket (Navigo Easy); borseggiatori; uscita del giovedì in testa giusta per ogni alloggio; ultimo treno per chi sta a Chessy; «Usa questo» lascia aperta la scheda; colonna «Pulizia»; fonti ufficiali del Relais Spa.
+- Scartati dal controllo: «n. 13 circa 100 € in meno» (vero: circa 60 € a parità di tariffa); «Queen Room» col prezzo (non c'è negli appunti: da leggere nell'app); meteo e code alle Tuileries (non negli appunti).
+- Pubblico tutto insieme (icona, anteprima, correzioni) quando Mario dà l'ok all'icona: un giro solo.
