@@ -94,3 +94,6 @@ publica
 
 ## 2026-11-21 19:36 · 01WTjqUwvARs
 Scusa, la sezione più importante a mercatini con il percorso, dove andare, dove non andare, e il pulsante mercatini sopra, che era molto importante, non, lei l'ha fatto in modo superficiale.
+
+## 2026-11-21 19:51 · 01WTjqUtLt7R
+ok publica
