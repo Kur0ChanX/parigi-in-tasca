@@ -41,6 +41,7 @@ Sessione attuale: #11 (dopo la #10 `session_01WTjqUwUueBoLvRkqLpLRmU`, chiusa al
 - #10: `list_triggers` senza filtri = ~20k token di sveglie di altri progetti: usare `enabled: true` e `limit` basso. `merge_pull_request`: `expectedHeadSha` di 40 caratteri.
 
 ## Prossimi passi
+0. PRIMA DI TUTTO il messaggio di Mario delle ~18:35 (sotto, «Ultimo messaggio»): C6 pagina confusa e lune originali al posto di Topolino.
 1. PRIMA DI TUTTO: **C5 distanze e mappa negli alloggi**, piano e scelte in `docs/lavori-in-corso/C5-mappe-hotel.md` (occhio critico lì; mappe OpenStreetMap fatte da uno script, bottone Google Maps col percorso; dati dagli appunti e dalle pagine ufficiali). Foto a Mario PRIMA di pubblicare. Nel primo messaggio: «⚠️ Aspettano te» a turno; le foto delle 2 righe le ha già mandate la #10 alle 18:20 e 18:32.
 2. DOMANDA 2 (alloggio, 🛑): col numero di Mario, se non è il 12, aggiorno il consiglio in cima (sorgente `dicembre/parigi-disney-natale.html`) e rifaccio le prove; poi pubblico (ramo-copia da `main`, solo `dicembre/`, come la PR #4). Col 12: ricordare la navetta della reception (non confermata) e di prenotare la camera «con 1 letto matrimoniale large» (non la suite).
 3. Voci 👁 di `docs/DA-FARE.md`: si chiudono quando Mario le vede nell'app. Prova `prova-web-app.js`: un giro sulla copia ha dato 1 FALSO «service worker suo» e poi 3 giri verdi (ipotesi: controllo partito prima che il service worker prenda la pagina): se ricapita, alzare l'attesa di `sw()` e provarla.
@@ -53,6 +54,10 @@ Sessione attuale: #11 (dopo la #10 `session_01WTjqUwUueBoLvRkqLpLRmU`, chiusa al
 - Da verificare: navetta a chiamata del Relais Spa per tutti (non ufficiale), reception 24 ore del Crowne Plaza, fermata del bus 2234 e orario della domenica per Jungle Love, linea del bus del n. 7, ultime corse del 2233 per il n. 3, prezzo dell'Elysée sul sito ufficiale. Nella pagina sono segnati «non confermato».
 
 ## Ultimo messaggio di Mario
+«Comunque lo vedo ancora molto confuso. Non lo so, va studiato meglio, è ancora un po' confuso. Non lo so, senza eliminare nulla volevo proprio impaginarlo meglio, cioè sono troppe cose a schermo, ti confonde un po', non riesci a capire che cosa sta succedendo, che cosa ti sta spiegando.
+No, andava bene la... Chi ti ha dato il permesso di cambiare la testa di Topolino? Fammi capire, da cosa è nata questa tua idea di rimettere la luna Normale.????!?!?»
+(21/11 ~18:35 alla #10 chiusa → passato alla #11 con send_message. Topolino: la #10 ha risposto (personaggio protetto, errore suo cambiarlo senza dirlo prima); NON rimetterlo, proporre 2-3 lune originali con foto. Pagina confusa → C6 impaginazione, prima o insieme a C5: poche domande, proposta con foto prima/dopo, niente pubblicazione senza ok.)
+Prima, 18:25:
 «Aggiungimi quando clicco negli hotel anche la distanza con la mappa di Maps che mi mette l'hotel dai mercatini, l'hotel da Disney e l'hotel dall'aeroporto. Mi fa vedere anche su Maps o qualcosa di simile, una foto di Maps per capire dov'è.»
 (21/11 18:25 alla #10 → C5, Prossimi passi 1.) Prima, 18:23: «ok publica se abbiamo finito» (→ già online; poi luna piena, PR #5). 18:03 alla #9: «aggiungi anche topolino … e poi publica» (→ fatto, poi Topolino tolto: personaggio protetto).
 
