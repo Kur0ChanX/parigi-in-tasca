@@ -74,8 +74,44 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   ok('anteprima: file sotto 300 KB', !!fileImg && fs.existsSync(fileImg) && fs.statSync(fileImg).size < 300 * 1024);
   ok('anteprima: 1200×630', !!img && await q.evaluate((src) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i.naturalWidth === 1200 && i.naturalHeight === 630); i.onerror = () => ok(false); i.src = src; }), img[1]));
   ok('anteprima: in testa alla pagina (primi 300 KB)', fs.readFileSync(path.join(__dirname, '..', 'dicembre', 'index.html'), 'utf8').indexOf('og:image') < 4000);
+  // Dov'è (C5): ogni scheda degli alloggi, aperta, ha mappa, 3 distanze e 3 bottoni Maps col percorso coi mezzi
+  const mappeOk = require('child_process').spawnSync('python3', ['-I', path.join(__dirname, 'fai-mappe-dicembre.py'), '--controlla'], { encoding: 'utf8' });
+  ok('mappe: immagini e blocco MAPPE allineati', mappeOk.status === 0); if (mappeOk.status) console.log(mappeOk.stdout);
+  const pesi = [...Array(15)].map((_, i) => path.join(__dirname, '..', 'dicembre', 'mappe', `al-${i + 1}.jpg`)).map((f) => (fs.existsSync(f) ? fs.statSync(f).size : 1e9));
+  ok('mappe: 15 immagini sotto 100 KB', pesi.every((x) => x < 100 * 1024));
+  const dove = await q.evaluate(async () => {
+    const out = [];
+    for (let n = 1; n <= 15; n++) {
+      const d = document.querySelector(`#al-${n} details.more`); d.open = true;
+      await new Promise((r) => setTimeout(r, 60));
+      const b = d.querySelector('.dove'), img = b && b.querySelector('.mappa img');
+      if (img && !img.complete) await new Promise((r) => { img.onload = img.onerror = r; });
+      const links = b ? [...b.querySelectorAll('.dr a.maps')].map((a) => new URL(a.href)) : [];
+      const h = b && b.querySelector('.mk-h');
+      out.push({ n, img: !!img && img.naturalWidth === 800 && img.naturalHeight === 534,
+        righe: b ? b.querySelectorAll('.dr li').length : 0,
+        tempi: b ? [...b.querySelectorAll('.dr-t')].every((t) => /^circa \d/.test(t.textContent)) : false,
+        maps: links.length === 3 && links.every((u) => u.searchParams.get('travelmode') === 'transit' && !!u.searchParams.get('origin')),
+        segno: !!h && h.textContent === String(n) && [h.style.left, h.style.top].every((v) => parseFloat(v) >= 0 && parseFloat(v) <= 100),
+        posizione: !!b && b.querySelector('a.mappa').href.startsWith('https://www.google.com/maps/search/') });
+      d.open = false;
+    }
+    return out;
+  });
+  const male = dove.filter((x) => !(x.img && x.righe === 3 && x.tempi && x.maps && x.segno && x.posizione));
+  ok('Dov\'è: 15 schede con mappa, 3 distanze e Maps', male.length === 0); if (male.length) console.log(male);
+  ok('Dov\'è: la barra dei costi apre la scheda già con la mappa', await q.evaluate(async () => {
+    document.querySelector('#bars a.bar-row').click(); await new Promise((r) => setTimeout(r, 300));
+    const id = document.querySelector('#bars a.bar-row').getAttribute('href');
+    return !!document.querySelector(id + ' details.more[open] .dove .mappa img');
+  }));
   await q.reload(); await q.waitForTimeout(800);
   await c2.setOffline(true); await q.reload(); ok('amico senza rete: dicembre si apre', (await q.title()) === 'Parigi e Disney a Natale');
+  ok('amico senza rete: mappa già vista si vede', await q.evaluate(async () => {
+    const d = document.querySelector('#al-12 details.more'); d.open = true; await new Promise((r) => setTimeout(r, 100));
+    const img = d.querySelector('.mappa img'); if (!img.complete) await new Promise((r) => { img.onload = img.onerror = r; });
+    return img.naturalWidth === 800;
+  }));
   ok('nessun errore nella pagina', errs.length === 0); if (errs.length) console.log(errs);
   await b.close(); server.kill(); fs.unlinkSync(path.join(DIR, 'parigi-in-tasca')); fs.rmdirSync(DIR);
   process.exit(falsi ? 1 : 0);
