@@ -4,41 +4,46 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* Layout: una colonna di lettura (max 46rem) dentro bande a tutta larghezza; hero notturno con scena disegnata,
-   divisori a filo di lampadine, giorni come app con barra in basso su telefono. Dark-first. */
+/* Layout: una colonna di lettura (max 48rem) dentro bande a tutta larghezza; hero notturno con un mercatino di casette
+   illuminate davanti al castello, festoni di lampadine, giorni come app con barra in basso su telefono.
+   Dark-first, palette calda: vin brulé (fondo), oro delle lampadine, abete, rosso mirtillo, rosa zucchero. */
 :root{
- --bg:#070C18;--surface:#0F1729;--surface-2:#172137;--ink:#EEF1F8;--mute:#A3ADC3;--rule:#233049;
- --brand:#8FA8FF;--brand-ink:#0B1430;--lamp:#F3C969;--lamp-text:#F3C969;--lamp-ink:#1D1606;
- --fir:#4FB88A;--wine:#F07468;--good:#62D6A0;--warn:#F2C25B;--bad:#FF8A80;
- --badge-good-bg:rgb(98 214 160 / .14);--badge-warn-bg:rgb(242 194 91 / .14);--badge-bad-bg:rgb(255 138 128 / .14);--badge-est-bg:rgb(143 168 255 / .14);
- --night-1:#0B1430;--night-2:#060A16;--night-ink:#F4F2EA;--night-mute:#BAC4DB;--sil-1:#16224A;--sil-2:#0E1736;--sil-3:#1F2E5E;--win:#F3C969;--snow:#FFFFFF;
- --seg-hotel:#F3C969;--seg-ticket:#7F9BFF;--seg-pack:#E77D9A;--seg-trans:#8892A8;
- --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#3A4763;--walkt:#FFFFFF;
+ --bg:#1A0D10;--surface:#27151A;--surface-2:#351F24;--ink:#FFF3E6;--mute:#D6BCB0;--rule:#4A2A2F;
+ --brand:#FFB0C4;--brand-ink:#2A0B16;--lamp:#F6C964;--lamp-text:#F6C964;--lamp-ink:#241703;
+ --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
+ --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(255 176 196 / .15);
+ --night-1:#3A1224;--night-2:#14070C;--night-ink:#FFF3E6;--night-mute:#E6CDBF;--sil-1:#4A1A31;--sil-2:#2A0E1A;--sil-3:#6A2740;--win:#F6C964;--snow:#FFFFFF;
+ --ember:#FF9A52;--tower:#B8743C;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#2A120E;
+ --seg-hotel:#F6C964;--seg-ticket:#4FBF86;--seg-pack:#EE5A66;--seg-trans:#A8918A;
+ --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#5B3A35;--walkt:#FFFFFF;
  --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
- --snowground:#DCE4F4;--snowshade:#B9C6E2;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
- --mood-market:rgb(240 116 104 / .16);--mood-magic:rgb(127 155 255 / .18);
+ --snowground:#F6ECE6;--snowshade:#E0C9C0;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
+ --mood-market:rgb(242 96 106 / .18);--mood-magic:rgb(255 176 196 / .16);
+ --wire:#6A4234;--bk-1:rgb(246 201 100 / .11);--bk-2:rgb(242 96 106 / .12);--bk-3:rgb(63 174 122 / .09);
  --display:"Bricolage Grotesque",Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
  --text:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
  --r-lg:20px;--r-md:14px;--r-sm:9px;
  color-scheme:dark}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
- --bg:#F2F4F8;--surface:#FFFFFF;--surface-2:#E9EDF4;--ink:#0D1324;--mute:#535C70;--rule:#DCE2EC;
- --brand:#2349C4;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#187A52;--wine:#B8352B;--good:#127A4A;--warn:#8F5A00;--bad:#B4232C;
- --badge-good-bg:rgb(18 122 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(35 73 196 / .09);
- --seg-ticket:#2F56D0;--seg-pack:#C2456A;--seg-trans:#8A93A6;--walk:#5A6680;--focus:#2349C4;
- --shadow:0 1px 2px rgb(13 19 36 / .06),0 14px 30px -16px rgb(13 19 36 / .25);
- --mood-market:rgb(184 53 43 / .08);--mood-magic:rgb(35 73 196 / .09);color-scheme:light}}
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#A08A82;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}}
 :root[data-theme="light"]{
- --bg:#F2F4F8;--surface:#FFFFFF;--surface-2:#E9EDF4;--ink:#0D1324;--mute:#535C70;--rule:#DCE2EC;
- --brand:#2349C4;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#187A52;--wine:#B8352B;--good:#127A4A;--warn:#8F5A00;--bad:#B4232C;
- --badge-good-bg:rgb(18 122 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(35 73 196 / .09);
- --seg-ticket:#2F56D0;--seg-pack:#C2456A;--seg-trans:#8A93A6;--walk:#5A6680;--focus:#2349C4;
- --shadow:0 1px 2px rgb(13 19 36 / .06),0 14px 30px -16px rgb(13 19 36 / .25);
- --mood-market:rgb(184 53 43 / .08);--mood-magic:rgb(35 73 196 / .09);color-scheme:light}
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#A08A82;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}
 
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{position:relative;z-index:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
 h2{font-size:clamp(1.65rem,1.2rem + 2vw,2.3rem);font-weight:800}
 h3{font-size:1.2rem;font-weight:700}
@@ -55,10 +60,14 @@ a{color:var(--brand);text-underline-offset:3px}
 .small{font-size:.92rem}
 b,strong{font-weight:700}
 
+/* bagliore caldo fisso dietro tutta la pagina */
+.bokeh{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(30rem 22rem at 6% 14%,var(--bk-1),transparent 70%),radial-gradient(26rem 20rem at 98% 46%,var(--bk-2),transparent 70%),radial-gradient(32rem 24rem at 24% 92%,var(--bk-3),transparent 70%)}
+
 /* ---------- HERO ---------- */
 .hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 75% 0%,var(--sil-3) 0%,var(--night-1) 38%,var(--night-2) 100%);color:var(--night-ink);isolation:isolate}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.hero .wrap{position:relative;z-index:2}.hero-top{padding-block:var(--s6) 0}.hero-bottom{padding-block:var(--s4) var(--s5)}
+.hero .wrap{position:relative;z-index:2}.hero-top{padding-block:calc(var(--s6) + 26px) 0}
+.garland{position:absolute;top:0;left:0;width:100%;height:64px;z-index:1;pointer-events:none;display:block}.hero-bottom{padding-block:var(--s4) var(--s5)}
 .hb{animation:chase 2.6s ease-in-out infinite}@keyframes chase{0%,100%{opacity:1}45%{opacity:.25}}
 .hero .kicker{color:var(--lamp)}
 .hero h1{font-size:clamp(2.45rem,1.5rem + 5.5vw,4.4rem);font-weight:800;margin-top:var(--s3);letter-spacing:-.025em}
@@ -66,7 +75,7 @@ b,strong{font-weight:700}
 .hero-meta{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
 .chip{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 12px;border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .14);font-weight:600;font-size:.95rem;color:var(--night-ink)}
 .flights{display:grid;grid-template-columns:1fr 1fr;gap:1px;border-radius:var(--r-md);overflow:hidden;background:rgb(255 255 255 / .14);max-width:36rem}
-.flight{background:rgb(8 14 34 / .82);padding:var(--s3) var(--s4);display:grid;gap:2px;min-width:0}
+.flight{background:rgb(32 10 18 / .78);padding:var(--s3) var(--s4);display:grid;gap:2px;min-width:0}
 .flight .d{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lamp);font-weight:700}
 .flight .r{font-family:var(--display);font-weight:700;font-size:1.12rem;line-height:1.2}
 .flight .r span{color:var(--night-mute);font-weight:600}
@@ -82,8 +91,8 @@ b,strong{font-weight:700}
 .jump a:active{transform:scale(.96)}
 
 /* ---------- divisore a lampadine ---------- */
-.lights{display:block;height:34px;width:100%;overflow:hidden;color:var(--rule)}
-.lights svg{display:block;width:100%;height:34px}
+.lights{display:block;height:40px;width:100%;overflow:hidden;color:var(--wire)}
+.lights svg{display:block;width:100%;height:40px}
 .lights .wire{fill:none;stroke:currentColor;stroke-width:1.5}
 .lights .b{transform-box:fill-box;transform-origin:center}
 @media (prefers-reduced-motion:no-preference){
@@ -200,6 +209,10 @@ tr.hl td{background:var(--badge-warn-bg)}
 .opt .price small{font-size:.9rem;font-family:var(--text);font-weight:600;color:var(--mute)}
 .opt:active{transform:scale(.99)}
 
+/* cartolina del mercatino: domenica e piede della pagina */
+.market{display:block;width:100%;max-width:100%;height:112px;border-radius:var(--r-md);background:linear-gradient(var(--night-1),var(--night-2));margin-top:var(--s2)}
+.foot-market{display:block;width:100%;height:120px;background:linear-gradient(var(--night-1),var(--night-2))}
+
 /* ---------- giorni ---------- */
 #giorni{position:relative;overflow:hidden}
 .mood{position:absolute;inset:0;pointer-events:none;transition:opacity .8s ease;opacity:0}
@@ -284,8 +297,10 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 
+<div class="bokeh" aria-hidden="true"></div>
 <header class="hero" id="top">
  <canvas id="sky" aria-hidden="true"></canvas>
+ <svg class="garland" id="garland" aria-hidden="true"></svg>
  <div class="wrap wide hero-top">
   <p class="kicker">dom 13 – gio 17 dicembre 2026</p>
   <h1>Parigi e Disney <span class="gold">a Natale</span></h1>
@@ -294,17 +309,25 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
  <svg class="scene" viewBox="0 0 800 290" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
   <defs>
    <radialGradient id="cglow" cx="50%" cy="55%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.42"/><stop offset=".55" style="stop-color:var(--lamp);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
-   <radialGradient id="kglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.55"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="kglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.5"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="hglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--ember);stop-opacity:.42"/><stop offset=".6" style="stop-color:var(--ember);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--ember);stop-opacity:0"/></radialGradient>
+   <radialGradient id="pool" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.6"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
    <pattern id="awnR" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--wine)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
    <pattern id="awnG" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--fir)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
+   <pattern id="awnY" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--lamp)"/><rect x="6" width="6" height="14" style="fill:var(--roof-r)"/></pattern>
   </defs>
-  <!-- strato lontano: tetti di Parigi e la torre -->
+  <!-- bagliore caldo della città sull'orizzonte -->
+  <ellipse cx="400" cy="250" rx="560" ry="150" fill="url(#hglow)"/>
+  <!-- strato lontano: tetti di Parigi e la Torre Eiffel accesa -->
   <g class="par" data-depth="0.04">
-   <path d="M196 265 Q210 210 214 150 L216 128 L218 150 Q222 210 236 265 H226 Q216 236 206 265Z" style="fill:var(--sil-3)"/>
-   <rect x="208" y="196" width="16" height="3" style="fill:var(--sil-3)"/>
    <g id="roofs" style="fill:var(--sil-3)"></g>
+   <ellipse cx="262" cy="170" rx="46" ry="70" fill="url(#kglow)" opacity=".55"/>
+   <path d="M242 265 Q256 210 260 150 L262 128 L264 150 Q268 210 282 265 H272 Q262 236 252 265Z" style="fill:var(--tower)"/>
+   <rect x="254" y="196" width="16" height="3" style="fill:var(--tower)"/><rect x="258" y="160" width="8" height="2" style="fill:var(--tower)"/>
+   <line x1="262" y1="128" x2="262" y2="116" style="stroke:var(--tower);stroke-width:1.5"/>
+   <g id="towerlights"></g>
   </g>
-  <!-- strato medio: castello originale -->
+  <!-- strato medio: castello -->
   <g class="par" data-depth="0.09">
    <ellipse cx="502" cy="170" rx="175" ry="125" fill="url(#cglow)"/>
    <g style="fill:var(--sil-1)">
@@ -319,32 +342,28 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
    </g>
    <line x1="502" y1="46" x2="502" y2="22" style="stroke:var(--sil-1);stroke-width:2"/>
    <path d="M503 22 l20 6 -20 6z" style="fill:var(--wine)"/>
-   <path d="M488 265 v-36 a14 14 0 0 1 28 0 v36z" style="fill:var(--sil-2)"/>
-   <path d="M492 265 v-34 a10 10 0 0 1 20 0 v34z" style="fill:var(--lamp)" opacity=".35"/>
    <g style="fill:var(--win)">
-    <rect x="417" y="188" width="6" height="10" rx="3"/><rect x="417" y="214" width="6" height="10" rx="3"/>
-    <rect x="449" y="152" width="6" height="10" rx="3"/><rect x="460" y="152" width="6" height="10" rx="3"/><rect x="454" y="180" width="6" height="10" rx="3"/><rect x="454" y="210" width="6" height="10" rx="3"/>
+    <rect x="417" y="188" width="6" height="10" rx="3"/>
+    <rect x="449" y="152" width="6" height="10" rx="3"/><rect x="460" y="152" width="6" height="10" rx="3"/>
     <rect x="489" y="124" width="6" height="11" rx="3"/><rect x="499" y="124" width="6" height="11" rx="3"/><rect x="509" y="124" width="6" height="11" rx="3"/>
-    <rect x="494" y="152" width="6" height="11" rx="3"/><rect x="504" y="152" width="6" height="11" rx="3"/><rect x="499" y="182" width="6" height="11" rx="3"/>
-    <rect x="543" y="162" width="6" height="10" rx="3"/><rect x="543" y="190" width="6" height="10" rx="3"/><rect x="543" y="218" width="6" height="10" rx="3"/>
-    <rect x="579" y="192" width="6" height="10" rx="3"/><rect x="579" y="218" width="6" height="10" rx="3"/>
-    <rect x="430" y="232" width="6" height="10" rx="3"/><rect x="468" y="236" width="6" height="10" rx="3"/><rect x="530" y="236" width="6" height="10" rx="3"/><rect x="565" y="232" width="6" height="10" rx="3"/>
+    <rect x="494" y="152" width="6" height="11" rx="3"/><rect x="504" y="152" width="6" height="11" rx="3"/>
+    <rect x="543" y="162" width="6" height="10" rx="3"/><rect x="579" y="192" width="6" height="10" rx="3"/>
    </g>
   </g>
-  <!-- primo piano: mercatino, abete, lampadine, neve -->
+  <!-- primo piano: la fila di casette del mercatino, l'abete, i festoni, la neve -->
   <g class="par" data-depth="0.16">
    <g id="chalets"></g>
+   <path d="M0 290 V262 Q100 252 200 262 T400 260 T600 263 T800 258 V290Z" style="fill:var(--snowground)"/>
+   <g id="pools"></g>
    <g>
-    <polygon points="390,138 372,186 408,186" style="fill:var(--fir)"/>
-    <polygon points="390,162 367,216 413,216" style="fill:var(--fir)"/>
-    <polygon points="390,192 362,252 418,252" style="fill:var(--fir)"/>
-    <rect x="386" y="250" width="8" height="14" style="fill:var(--sil-2)"/>
-    <path d="M390 128 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" style="fill:var(--lamp)"/>
+    <polygon points="345,132 325,184 365,184" style="fill:var(--fir)"/>
+    <polygon points="345,158 320,216 370,216" style="fill:var(--fir)"/>
+    <polygon points="345,190 314,256 376,256" style="fill:var(--fir)"/>
+    <rect x="341" y="254" width="8" height="12" style="fill:var(--wood-dk)"/>
+    <path d="M345 121 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" style="fill:var(--lamp)"/>
     <g id="firlights"></g>
    </g>
-   <path id="hbw" d="M120 176 Q170 204 213 166 Q262 204 309 176 Q346 200 380 160" fill="none" style="stroke:var(--night-mute)" stroke-width="1.3" opacity=".7"/>
-   <g id="hbulbs"></g>
-   <path d="M0 290 V262 Q100 252 200 262 T400 260 T600 263 T800 258 V290Z" style="fill:var(--snowground)"/>
+   <g id="festoons"></g>
    <path d="M0 290 V272 Q120 266 260 272 T540 270 T800 268 V290Z" style="fill:var(--snowshade)"/>
   </g>
  </svg>
@@ -560,7 +579,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 </div></section>
 </main>
 
-<footer><div class="wrap">Piano di viaggio preparato con dati controllati il 21/11/2026. Le cifre segnate "stima" sono calcoli, non prezzi letti. In caso di dubbio fa fede il sito ufficiale.</div></footer>
+<footer><svg class="foot-market" id="footMarket" viewBox="0 0 800 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg><div class="wrap">Piano di viaggio preparato con dati controllati il 21/11/2026. Le cifre segnate "stima" sono calcoli, non prezzi letti. In caso di dubbio fa fede il sito ufficiale.</div></footer>
 
 <script>
 (()=>{
