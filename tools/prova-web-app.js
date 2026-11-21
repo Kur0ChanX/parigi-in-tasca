@@ -22,6 +22,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   const nov = await p.title();
   await p.goto(B + 'dicembre/'); await sw(p); await p.reload(); await p.waitForTimeout(1200);
   ok('dicembre: titolo giusto', (await p.title()) === 'Parigi e Disney a Natale');
+  await p.waitForFunction(() => navigator.serviceWorker.controller && navigator.serviceWorker.controller.scriptURL.endsWith('/dicembre/sw.js'), null, { timeout: 8000 }).catch(() => {}); // primo avvio lento (E del 21/11)
   ok('dicembre: service worker suo', await p.evaluate(() => !!navigator.serviceWorker.controller && navigator.serviceWorker.controller.scriptURL.endsWith('/dicembre/sw.js')));
   const cassetti = await p.evaluate(async () => {
     const o = {};
