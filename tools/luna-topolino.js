@@ -102,10 +102,16 @@ function lunaTopolino(cx, cy, r, opz = {}) {
 module.exports = { lunaTopolino };
 
 /* Versione «come la foto di Mario» (21/11 19:13, foto `archivio/2026-11-21-lune-topolino-dettagli/mario-esempio-luna-topolino.jpg`):
-   testa e orecchie sono TRE lune piene intere, ognuna con la sua faccia della luna (mari come sulla luna vera), color beige caldo,
+   testa e orecchie sono TRE lune piene intere, ognuna con la sua faccia della luna (mari come sulla luna vera),
    luce piena (niente ombre nei crateri: solo puntini chiari e raggi), bordo un po' più scuro; la testa sta davanti alle orecchie.
-   Proporzioni prese dalla foto: orecchie 0,625 della testa, spostate di 1,09 di lato e 0,9 in su. */
-const TONO_FOTO = { centro: '#E9D9BA', medio: '#D9C6A2', bordo: '#B39770', mari: '#76644A', chiaro: '#FFF6E4', alone: '#FFEBC8' };
+   Proporzioni prese dalla foto: orecchie 0,625 della testa, spostate di 1,09 di lato e 0,9 in su.
+   Toni: 'luminosa' (scelta, Mario 21/11 ~19:22: «un pochettino più luminosa», «cambiali un po' il colore») · 'beige' (la #12).
+   opz.alone (sì di base) = l'effetto intorno: bagliore che segue la sagoma + alone largo («un effetto intorno … per renderla un po' viva»);
+   opz.stelle (sì di base) = stelline vicino. Senza tutti e due: solo la luna (la testata della pagina mette il suo bagliore che respira). */
+const TONI_FOTO = {
+  luminosa: { centro: '#FFF8E8', medio: '#F6E8C8', bordo: '#DCC59C', mari: '#9C8560', mariOp: '.8', limbo: '.24', chiaro: '#FFFDF6', alone: '#FFF1CF' },
+  beige: { centro: '#E9D9BA', medio: '#D9C6A2', bordo: '#B39770', mari: '#76644A', mariOp: '.88', limbo: '.38', chiaro: '#FFF6E4', alone: '#FFEBC8' },
+};
 // Mari della faccia visibile della luna, in un disco di raggio 1 (x a destra, y in giù): [x, y, rx, ry, rotazione]
 const MARI_VERI = [
   [-.28, -.42, .27, .24, 0], [.2, -.42, .17, .16, 0], [.38, -.12, .2, .17, 20], [.72, -.33, .13, .1, 0], [.6, .14, .11, .2, -15],
@@ -113,7 +119,7 @@ const MARI_VERI = [
   [.02, -.2, .1, .07, 0], [-.05, -.72, .5, .07, -5], [-.02, .02, .07, .06, 0], [-.3, .12, .09, .08, 0], [.52, -.02, .08, .14, 0]];
 
 function lunaFoto(cx, cy, r, opz = {}) {
-  const T = TONO_FOTO, id = opz.id || 'lf';
+  const T = TONI_FOTO[opz.tono || 'luminosa'], id = opz.id || 'lf';
   const o = r * 0.625, dx = r * 1.09, dy = r * 0.9;
   const dischi = [[cx - dx, cy - dy, o], [cx + dx, cy - dy, o], [cx, cy, r]];   // prima le orecchie, la testa sta davanti
   const sagoma = dischi.map(([x, y, R]) => `<circle cx="${f(x)}" cy="${f(y)}" r="${f(R)}"/>`).join('');
@@ -142,7 +148,7 @@ function lunaFoto(cx, cy, r, opz = {}) {
     <g clip-path="url(#${id}-d${k})">
      <circle cx="${f(x)}" cy="${f(y)}" r="${f(R)}" fill="url(#${id}-b${k})"/>
      <rect x="${f(x - R)}" y="${f(y - R)}" width="${f(2 * R)}" height="${f(2 * R)}" filter="url(#${id}-macchie)" opacity=".4"/>
-     <g fill="${T.mari}" opacity=".88" filter="url(#${id}-mari)">${mari}</g>
+     <g fill="${T.mari}" opacity="${T.mariOp}" filter="url(#${id}-mari)">${mari}</g>
      <g fill="${T.mari}" opacity=".45" filter="url(#${id}-mari)">${nuclei}</g>
      <rect x="${f(x - R)}" y="${f(y - R)}" width="${f(2 * R)}" height="${f(2 * R)}" filter="url(#${id}-grana)" opacity=".2"/>
      <g filter="url(#${id}-sfuma)">${raggi(-.1, .64, 20, 1.2, .1)}${raggi(-.33, -.05, 12, .45, .08)}</g>
@@ -153,20 +159,22 @@ function lunaFoto(cx, cy, r, opz = {}) {
   const stella = (x, y, s, op = 1) => `<circle cx="${f(x)}" cy="${f(y)}" r="${f(s * .9)}" fill="url(#${id}-bagliore)" opacity="${op}"/><path d="M${f(x)} ${f(y - s)} L${f(x + s * .2)} ${f(y - s * .2)} L${f(x + s)} ${f(y)} L${f(x + s * .2)} ${f(y + s * .2)} L${f(x)} ${f(y + s)} L${f(x - s * .2)} ${f(y + s * .2)} L${f(x - s)} ${f(y)} L${f(x - s * .2)} ${f(y - s * .2)} Z" fill="#FFF8E2" opacity="${op}"/>`;
   const puntino = (x, y, s) => `<circle cx="${f(x)}" cy="${f(y)}" r="${f(s)}" fill="#FFF8E2"/>`;
   return `<defs>
-   <radialGradient id="${id}-limbo"><stop offset=".7" stop-color="#5A3E1C" stop-opacity="0"/><stop offset=".93" stop-color="#5A3E1C" stop-opacity=".16"/><stop offset="1" stop-color="#5A3E1C" stop-opacity=".38"/></radialGradient>
-   <radialGradient id="${id}-alone"><stop offset="0" stop-color="${T.alone}" stop-opacity=".26"/><stop offset=".35" stop-color="${T.alone}" stop-opacity=".09"/><stop offset="1" stop-color="${T.alone}" stop-opacity="0"/></radialGradient>
+   <radialGradient id="${id}-limbo"><stop offset=".7" stop-color="#5A3E1C" stop-opacity="0"/><stop offset=".93" stop-color="#5A3E1C" stop-opacity=".16"/><stop offset="1" stop-color="#5A3E1C" stop-opacity="${T.limbo}"/></radialGradient>
+   <radialGradient id="${id}-alone"><stop offset="0" stop-color="${T.alone}" stop-opacity=".42"/><stop offset=".35" stop-color="${T.alone}" stop-opacity=".14"/><stop offset="1" stop-color="${T.alone}" stop-opacity="0"/></radialGradient>
    <radialGradient id="${id}-bagliore"><stop offset="0" stop-color="#FFF8E2" stop-opacity=".7"/><stop offset="1" stop-color="#FFF8E2" stop-opacity="0"/></radialGradient>
    <filter id="${id}-mari" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency="${f(3.6 / r * 1000) / 1000}" numOctaves="3" seed="21" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="${f(r * .26)}" xChannelSelector="R" yChannelSelector="G" result="d"/><feGaussianBlur in="d" stdDeviation="${f(r * .034)}"/></filter>
    <filter id="${id}-macchie" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="${f(3 / r * 1000) / 1000}" numOctaves="4" seed="5"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .28  1.7 0 0 0 -.68"/></filter>
    <filter id="${id}-grana" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="${f(16 / r * 1000) / 1000}" numOctaves="3" seed="17" result="g"/><feColorMatrix in="g" values="0 0 0 0 .4  0 0 0 0 .34  0 0 0 0 .26  2.2 0 0 0 -1.05" result="s"/><feColorMatrix in="g" values="0 0 0 0 1  0 0 0 0 .98  0 0 0 0 .93  -2.2 0 0 0 .95" result="c"/><feMerge><feMergeNode in="s"/><feMergeNode in="c"/></feMerge></filter>
    <filter id="${id}-sfuma" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="${f(r * .01)}"/></filter>
    <filter id="${id}-sfumaAlone" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="${f(r * .14)}"/></filter>
+   <filter id="${id}-sfumaLargo" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="${f(r * .42)}"/></filter>
   </defs>
-  <circle cx="${f(cx)}" cy="${f(cy - r * .35)}" r="${f(r * 3.1)}" fill="url(#${id}-alone)"/>
-  <g fill="${T.alone}" opacity=".22" filter="url(#${id}-sfumaAlone)">${sagoma}</g>
+  ${opz.alone === false ? '' : `<circle cx="${f(cx)}" cy="${f(cy - r * .35)}" r="${f(r * 3.1)}" fill="url(#${id}-alone)"/>
+  <g fill="${T.alone}" opacity=".5" filter="url(#${id}-sfumaLargo)">${sagoma}</g>
+  <g fill="${T.alone}" opacity=".5" filter="url(#${id}-sfumaAlone)">${sagoma}</g>`}
   ${dischi.map(disco).join('')}
-  ${stella(cx + r * 1.85, cy + r * .3, r * .28)}${stella(cx - r * 1.95, cy + r * .5, r * .22)}${stella(cx + r * 1.4, cy + r * 1.1, r * .16, .9)}${stella(cx - r * .1, cy - r * 2.1, r * .15, .85)}${stella(cx - r * 1.5, cy + r * 1.25, r * .12, .8)}
-  ${puntino(cx + r * 2.2, cy - r * 1.1, r * .035)}${puntino(cx - r * 2.15, cy - r * .35, r * .03)}${puntino(cx + r * .8, cy - r * 2.05, r * .03)}${puntino(cx - r * 1.1, cy - r * 2.0, r * .025)}`;
+  ${opz.stelle === false ? '' : `${stella(cx + r * 1.85, cy + r * .3, r * .28)}${stella(cx - r * 1.95, cy + r * .5, r * .22)}${stella(cx + r * 1.4, cy + r * 1.1, r * .16, .9)}${stella(cx - r * .1, cy - r * 2.1, r * .15, .85)}${stella(cx - r * 1.5, cy + r * 1.25, r * .12, .8)}
+  ${puntino(cx + r * 2.2, cy - r * 1.1, r * .035)}${puntino(cx - r * 2.15, cy - r * .35, r * .03)}${puntino(cx + r * .8, cy - r * 2.05, r * .03)}${puntino(cx - r * 1.1, cy - r * 2.0, r * .025)}`}`;
 }
 
 module.exports.lunaFoto = lunaFoto;
