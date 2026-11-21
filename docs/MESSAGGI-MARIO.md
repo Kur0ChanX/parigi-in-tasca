@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 17:06 · 01WTjqUuDpVA
-Allora, la spa la vogliamo fare o l'idromassaggio o insomma modalità relax è solo il primo giorno, poi gli altri 3 giorni ce li dedichiamo solo a Disneyland ed vogliamo essere comodi con i trasporti, ecco. Con i trasporti, zero stress, vogliamo proprio rilassarci a Disneyland.
-
 ## 2026-11-21 17:25 · 01WTjqUxvERS
 Metti qui anche il ki space, quello che ti avevo consigliato io, che abbiamo guardato. Metti anche quello in confronto tra i costi e tutto. Poi metti che se clicco uno di quelli mi porta al discorso o qualche altra pagina, insomma, utile. Comunque rendila veramente facile e intuitiva a livello di visiva. Anche non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa, però non troppissime informazioni, cioè non ti sto dicendo di toglierle, ma di riorganizzarle meglio.
 
@@ -134,3 +131,6 @@ publica
 
 ## 2026-11-21 21:52 · 01WTjqUvDTBB
 domande veloci  perché dici kinsoace domenica arrivate Spa chiusa?
+
+## 2026-11-21 22:00 · 01WTjqUvDTBB
+Cerca su air B&B  qualcosa di interessante vicino a Disneyland
