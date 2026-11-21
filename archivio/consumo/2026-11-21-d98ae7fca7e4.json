@@ -1,0 +1,53 @@
+{
+"account": "108763",
+"sessione": "d98ae7fca7e4",
+"giorno": "2026-11-21",
+"turni": 4,
+"peso": 349086,
+"uscita": 12362,
+"contesto_max": 167259,
+"anomalie": [],
+"blocchi": {
+"Stop 9 · Versione unita in questo turno:": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 8 · Il turno finisce con una": 2,
+"Stop 5 · Notifica non letta (in coda": 2,
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 9 · Versione unita in questo turno:": [
+"21:34 · Versione unita in questo turno: aggiorna in docs/DA-FARE.md la sezione «## Nastro delle versioni» (3 righe): «🚀 Online: v<N> · <segno e catena> · 21/11 <ora> · <3 parole>», poi «🧪 In prova» e «⏳ Dopo»"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"21:34 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Il 7/12 arriveranno 2 promemoria uguali («»): le sessioni vecchie li avevano messi doppi e da qui non posso cancellarli». Nella sua voce (o in"
+],
+"Stop 8 · Il turno finisce con una": [
+"21:34 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> ",
+"21:36 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+],
+"Stop 5 · Notifica non letta (in coda": [
+"21:34 · Notifica non letta (in coda dalle 21:33: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"21:45 · Notifica non letta (in coda dalle 21:44: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"21:36 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 8 🛑: come vuoi la pagina sul PC?** (foto», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l"
+]
+},
+"remota": "01WTjqUvDTBB",
+"aiutanti": 0,
+"strumenti": 22,
+"bilancia": 2,
+"motori": {
+"opus": 349086
+},
+"grezzi": {
+"opus": [
+31,
+2509292,
+29053,
+0,
+12362
+]
+},
+"costo": 0.9816
+}

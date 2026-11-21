@@ -2,20 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 16:22 · 01WTjqUxBAKZ
-Mettile tutti e due i colori selezionabili, dai. Sia quello vino, sia quello blu.
-
-## 2026-11-21 16:26 · 01WTjqUxBAKZ
-va bene
-
-## 2026-11-21 16:35 · 01WTjqUxBAKZ
-E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.
-
-## 2026-11-21 16:44 · 01WTjqUubYgz
-mandamelo con link web app da inviare ad amico 
-Spa posso intendere anche un hotel con una spa dentro, oppure con una jacuzzi dentro, un idromassaggio, ecco. Se ne vale la pena, abbiamo un po' di relax.
-dobbiamo sceglierlo In base a cosa scegliamo di quelli si trasforma la pagina. E mi raccomando, il mega consiglio sui mercatini, non dimenticartene, che per noi è importante appena arriviamo, vedere i migliori mercatini è il miglior giro da fare.
-
 ## 2026-11-21 17:05 · 01WTjqUuDpVA
 Fai tutto di facile comprensione, a prova di stupido, eh?
 Beh, le notti le conti in base al biglietto del volo che ti ho mandato. Scusa, che domanda è?
@@ -137,3 +123,15 @@ Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci son
 
 ## 2026-11-21 21:17 · 01WTjqUxzyRm
 mi raccomando studiati un impaginazione geniale non confusa
+
+## 2026-11-21 21:35 · 01WTjqUvDTBB
+riesci a impaginare per windows?
+
+## 2026-11-21 21:36 · 01WTjqUvDTBB
+ottimizza gli spazi per windows o MacBook
+
+## 2026-11-21 21:37 · 01WTjqUvDTBB
+la foto tagliata
+
+## 2026-11-21 21:43 · 01WTjqUvDTBB
+publica
