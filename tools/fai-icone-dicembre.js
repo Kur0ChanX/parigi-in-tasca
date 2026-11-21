@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* Disegna l'icona della web app di dicembre e l'immagine dell'anteprima del link (WhatsApp, Telegram).
    Parigi di notte coi mercatini di Natale: Torre Eiffel accesa, casette con le tende a righe, festoni di lucine, neve,
-   luna piena con le stelline.
+   luna a forma di Topolino con la trama della luna e le stelline (chiesta da Mario).
    Tutto disegnato qui (niente immagini prese da internet): si rifà uguale quando serve.
    Uso:  node tools/fai-icone-dicembre.js            scrive dicembre/icona-*.png e dicembre/anteprima.jpg
          node tools/fai-icone-dicembre.js <cartella>  scrive le stesse immagini in un'altra cartella (prove)  */
@@ -66,14 +66,39 @@ function neveCade(x, y, l, a, n, seme) {
   return out;
 }
 
-/* Luna piena con le stelline (disegno originale; 21/11: tolta la testa di Topolino, personaggio protetto di Disney).
-   (cx, cy) = centro, r = raggio. Grande e rotonda così si riconosce anche nell'icona a 60 px. */
+/* Luna a forma di Topolino (testa + 2 orecchie) con la trama vera della luna e le stelline vicino.
+   Chiesta da Mario (21/11 ~18:40: «falla sempre con la forma di topolino, ma con la trama proprio di luna … stelle vicino»;
+   «ti autorizzo io», uso personale in 2 persone). (cx, cy) = centro della testa, r = raggio della testa.
+   Trama: luce da sinistra in alto, «mari» scuri sfumati, crateri col bordo chiaro, ombra sul bordo destro. */
 function luna(cx, cy, r) {
-  const stella = (x, y, s) => `<path d="M${f(x)} ${f(y - s)} L${f(x + s * .24)} ${f(y - s * .24)} L${f(x + s)} ${f(y)} L${f(x + s * .24)} ${f(y + s * .24)} L${f(x)} ${f(y + s)} L${f(x - s * .24)} ${f(y + s * .24)} L${f(x - s)} ${f(y)} L${f(x - s * .24)} ${f(y - s * .24)}Z" fill="#FFF6DA"/>`;
-  return `<circle cx="${cx}" cy="${cy}" r="${f(r * 2.8)}" fill="url(#aloneLuna)" opacity=".75"/>
-  <circle cx="${cx}" cy="${cy}" r="${r}" fill="${C.luna}"/>
-  <g fill="#E9DDB8" opacity=".55"><circle cx="${f(cx - r * .3)}" cy="${f(cy - r * .22)}" r="${f(r * .2)}"/><circle cx="${f(cx + r * .28)}" cy="${f(cy + r * .3)}" r="${f(r * .14)}"/><circle cx="${f(cx + r * .32)}" cy="${f(cy - r * .38)}" r="${f(r * .09)}"/></g>
-  ${stella(cx + r * 1.45, cy - r * .55, r * .32)}${stella(cx - r * 1.35, cy + r * .75, r * .22)}${stella(cx + r * 1.1, cy + r * 1.05, r * .16)}`;
+  const o = r * 0.6, dx = r * 0.95, dy = r * 0.85;
+  const sagoma = `<circle cx="${cx}" cy="${cy}" r="${r}"/><circle cx="${f(cx - dx)}" cy="${f(cy - dy)}" r="${f(o)}"/><circle cx="${f(cx + dx)}" cy="${f(cy - dy)}" r="${f(o)}"/>`;
+  const x0 = cx - dx - o, y0 = cy - dy - o, l = 2 * (dx + o), a = dy + o + r;   // riquadro della sagoma
+  const mari = [[-.32, -.12, .42, .3], [.22, .28, .34, .24], [.36, -.3, .2, .16], [-.98, -.9, .3, .22], [.86, -.78, .24, .2], [-.05, .52, .22, .12]]
+    .map(([u, v, rx, ry]) => `<ellipse cx="${f(cx + u * r)}" cy="${f(cy + v * r)}" rx="${f(rx * r)}" ry="${f(ry * r)}"/>`).join('');
+  const rnd = caso(97);
+  let crateri = '';
+  for (let i = 0; i < 26; i++) {
+    const x = x0 + rnd() * l, y = y0 + rnd() * a, k = rnd();
+    const dentro = Math.hypot(x - cx, y - cy) < r * .92 || Math.hypot(x - cx + dx, y - cy + dy) < o * .85 || Math.hypot(x - cx - dx, y - cy + dy) < o * .85;
+    if (!dentro) continue;
+    const rr = r * (.035 + k * .085);
+    crateri += `<circle cx="${f(x + rr * .18)}" cy="${f(y + rr * .18)}" r="${f(rr)}" fill="#FFFBEA" opacity=".55"/><circle cx="${f(x)}" cy="${f(y)}" r="${f(rr)}" fill="#B9A57A" opacity=".55"/>`;
+  }
+  const stella = (x, y, s) => `<path d="M${f(x)} ${f(y - s)} L${f(x + s * .24)} ${f(y - s * .24)} L${f(x + s)} ${f(y)} L${f(x + s * .24)} ${f(y + s * .24)} L${f(x)} ${f(y + s)} L${f(x - s * .24)} ${f(y + s * .24)} L${f(x - s)} ${f(y)} L${f(x - s * .24)} ${f(y - s * .24)} Z" fill="#FFF6DA"/>`;
+  return `<defs>
+   <clipPath id="sagomaLuna">${sagoma}</clipPath>
+   <radialGradient id="luceLuna" gradientUnits="userSpaceOnUse" cx="${f(cx - r * .55)}" cy="${f(cy - r * .9)}" r="${f(r * 2.3)}"><stop offset="0" stop-color="#FFFDF2"/><stop offset=".45" stop-color="#F7EBC8"/><stop offset=".8" stop-color="#E4D3A6"/><stop offset="1" stop-color="#CDB98A"/></radialGradient>
+   <filter id="sfumaMari" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${f(r * .09)}"/></filter>
+  </defs>
+  <circle cx="${cx}" cy="${f(cy - r * .3)}" r="${f(r * 3.2)}" fill="url(#aloneLuna)" opacity=".8"/>
+  <g clip-path="url(#sagomaLuna)">
+   <rect x="${f(x0 - 2)}" y="${f(y0 - 2)}" width="${f(l + 4)}" height="${f(a + 4)}" fill="url(#luceLuna)"/>
+   <g fill="#A8966C" opacity=".38" filter="url(#sfumaMari)">${mari}</g>
+   ${crateri}
+  </g>
+  ${stella(cx + r * 1.75, cy - r * .2, r * .3)}${stella(cx - r * 1.7, cy + r * .55, r * .22)}${stella(cx + r * 1.3, cy + r * 1.05, r * .16)}${stella(cx - r * .2, cy - r * 2.05, r * .14)}
+  <circle cx="${f(cx + r * 2.05)}" cy="${f(cy - r * 1.05)}" r="1.6" fill="#FFF6DA"/><circle cx="${f(cx - r * 1.95)}" cy="${f(cy - r * .35)}" r="1.4" fill="#FFF6DA"/>`;
 }
 
 /* Torre Eiffel: base a terra in (cx, base), alta h, larga l alla base. */
