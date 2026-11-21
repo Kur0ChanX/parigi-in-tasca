@@ -40,6 +40,7 @@ self.addEventListener('fetch', (e) => {
     return;
   }
   if (url.origin !== self.location.origin) return; // Google Maps, guida Disney: non si toccano
+  if (/\/dicembre(\/|$)/.test(url.pathname)) return; // pagina di dicembre: ha il suo service worker e il suo cassetto
   const pagina = r.mode === 'navigate';
   const chiave = pagina ? './' : r;
   const daRete = fetch(r).then((risposta) => {
