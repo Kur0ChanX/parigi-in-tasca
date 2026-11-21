@@ -1,6 +1,6 @@
 # Una notte a Parigi + 3 notti vicino a Disney (C10)
 
-Letto il 21/11/2026 da un aiutante (Booking dal computer, senza Genius; pacchetti Disney dalle stime già in `hotel_disney.md`). Richiesta di Mario in `docs/lavori-in-corso/C10-notte-a-parigi.md`. Da ricontrollare: Relais 4 notti «1.039 € con canc.» contro i 908 € (letto matrimoniale) del 21/11 mattina: forse un'altra camera o prezzo salito.
+Letto il 21/11/2026 da un aiutante (Booking dal computer, senza Genius; pacchetti Disney dalle stime già in `hotel_disney.md`). Richiesta di Mario in `docs/lavori-in-corso/C10-notte-a-parigi.md`. Relais 4 notti, ricontrollato (#16, 21/11 sera): nessun aumento, sono due camere diverse (`alloggi_spa_comodi.md` «Cancellazione»): 1.039 € = Junior Suite con cancellazione fino all'8/12; 908 € = camera 25 m² con letto matrimoniale, cancellazione fino all'8/12.
 
 Tutto letto il 21/11/2026 sulle schede Booking con le date, dal computer e senza account. I prezzi sono totali con tasse. Nell'app con Genius possono essere più bassi: gli appunti stimano circa il 12% in meno. Ogni prezzo è scritto con la camera e il letto dello stesso blocco. «NR» = non rimborsabile, «canc.» = cancellazione gratuita fino alla data indicata. I minuti a piedi sono una **stima**: metri della scheda diviso 80 m al minuto. Non ho modificato nessun file del repo.
 
