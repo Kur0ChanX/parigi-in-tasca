@@ -12,7 +12,7 @@ Uso:
 Poi: python3 -I tools/fai-dicembre.py (rifà la web app). Mappa cambiata: alza VERSIONE qui sotto.
 
 Regole rispettate (lette il 21/11/2026): Géoplateforme IGN, WMS-Raster al massimo 40 richieste al secondo
-(https://cartes.gouv.fr/cgu); qui 15 richieste in tutto, una alla volta, con nome del programma.
+(https://cartes.gouv.fr/cgu); qui 23 richieste in tutto, una alla volta, con nome del programma.
 Tessere di tile.openstreetmap.org NON usate: la loro regola vieta di scaricarle per l'uso senza rete.
 """
 import io
@@ -23,6 +23,7 @@ import re
 import sys
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 
 RADICE = pathlib.Path(__file__).resolve().parent.parent
@@ -56,6 +57,19 @@ NOMI = {VDE: "Val d'Europe", CH: 'Chessy · Disney'}
 # Airbnb (n. 16–21): l'indirizzo esatto arriva solo dopo la prenotazione. Niente mappa (il segno sarebbe inventato):
 # solo le distanze, contate dalla stazione scritta nell'annuncio («posizione indicativa», z:1 nella pagina).
 ZONA = {16: VDE, 17: VDE, 18: VDE, 19: VDE, 20: VDE, 21: VDE}
+# Hotel di Parigi per la notte 13→14 (C11 pezzo 7, PAR nella pagina): indirizzo dal sito ufficiale dell'hotel
+# (Locomo, Sleeping Belle, Accor per ibis Styles e Novotel, Parisianer, Saint-Pétersbourg, Astotel per Astra,
+# Relais des Halles; letti il 21/11/2026), posizione = geocodifica ufficiale IGN di quell'indirizzo.
+GL = (48.844162, 2.374677)       # Gare de Lyon (IGN, punti d'interesse)
+AU = (48.872395, 2.329855)       # Auber, RER A (IGN)
+CL = (48.861661, 2.346743)       # Châtelet–Les Halles, RER A (IGN)
+PARIGI = {
+    'lo': (48.847092, 2.372050, 'IGN', GL), 'sb': (48.846654, 2.369834, 'IGN', GL), 'is': (48.845916, 2.375592, 'IGN', GL),
+    'nv': (48.845372, 2.375268, 'IGN', GL), 'pa': (48.845650, 2.375372, 'IGN', GL), 'sp': (48.872154, 2.328131, 'IGN', AU),
+    'as': (48.871806, 2.328095, 'IGN', AU), 'rh': (48.863192, 2.348896, 'IGN', CL),
+}
+NOMI.update({GL: 'Gare de Lyon', AU: 'Auber', CL: 'Châtelet–Les Halles'})
+SIGLA = {VDE: 'VDE', CH: 'CH', GL: 'GL', AU: 'AU', CL: 'CL'}
 
 
 def merc(p):
@@ -73,9 +87,17 @@ def km_testo(d):
     return f'{d:.1f}'.replace('.', ',') + ' km' if d < 10 else f'{round(d)} km'
 
 
+def punti(n):
+    """Alloggio e stazioni da mettere sulla mappa: vicino a Disney anche Chessy; a Parigi solo la sua stazione."""
+    if n in PARIGI:
+        return PARIGI[n], [PARIGI[n][3]]
+    return ALLOGGI[n], [VDE, CH]
+
+
 def cornice(n):
-    """Riquadro (in metri Mercator) con alloggio, sua stazione e Chessy, margini e formato 16:9."""
-    pts = [merc(ALLOGGI[n]), merc(STAZIONE.get(n, VDE)), merc(CH)]
+    """Riquadro (in metri Mercator) con alloggio e stazioni, margini e formato 3:2."""
+    al, st = punti(n)
+    pts = [merc(al)] + ([merc(st[0])] if n in PARIGI else [merc(STAZIONE.get(n, VDE)), merc(CH)])
     xs, ys = [p[0] for p in pts], [p[1] for p in pts]
     w, h = max(xs) - min(xs), max(ys) - min(ys)
     w, h = max(w * 1.5, 1800.0), max(h * 1.5, 1800.0 * ALTO / LARGO)   # margini e larghezza minima
@@ -113,11 +135,12 @@ def fuori(s):
 
 def etichette(n, c):
     """Segni delle stazioni nel riquadro; per ogni etichetta il lato che copre meno l'alloggio e le altre scritte."""
-    hx, hy = pos(ALLOGGI[n], c)
+    al, stazioni = punti(n)
+    hx, hy = pos(al, c)
     pr, pv = 18 / SCHERMO * 100, 18 / (SCHERMO * ALTO / LARGO) * 100
     occupato = [(hx - pr, hy - pv, hx + pr, hy + pv), (82, 91, 100, 100)]   # alloggio e scritta «© IGN»
     segni = []
-    for st in (VDE, CH):
+    for st in stazioni:
         x, y = pos(st, c)
         if not (3 <= x <= 97 and 5 <= y <= 95):
             continue
@@ -127,7 +150,7 @@ def etichette(n, c):
             prove.append((sum(sopra(s, o) for o in occupato) + 40 * fuori(s), i, lato, su, s))
         _, _, lato, su, s = min(prove)
         occupato.append(s)
-        segni.append([x, y, 'VDE' if st == VDE else 'CH', lato, su])
+        segni.append([x, y, SIGLA[st], lato, su])
     return [hx, hy], segni
 
 
@@ -137,16 +160,23 @@ def scarica(c, dove):
          'STYLES': '', 'CRS': 'EPSG:3857', 'BBOX': ','.join(map(str, c)), 'WIDTH': LARGO, 'HEIGHT': ALTO,
          'FORMAT': 'image/png'}
     req = urllib.request.Request(WMS + '?' + urllib.parse.urlencode(q), headers={'User-Agent': UA})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        if not r.headers.get('Content-Type', '').startswith('image/'):
-            raise SystemExit(f'Risposta strana da IGN per {dove.name}: {r.headers.get("Content-Type")}')
-        im = Image.open(io.BytesIO(r.read())).convert('RGB')
+    for prova in range(3):   # IGN a volte risponde 400 o 5xx a caso (visto il 21/11): riprova dopo una pausa
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                if not r.headers.get('Content-Type', '').startswith('image/'):
+                    raise SystemExit(f'Risposta strana da IGN per {dove.name}: {r.headers.get("Content-Type")}')
+                im = Image.open(io.BytesIO(r.read())).convert('RGB')
+            break
+        except urllib.error.HTTPError:
+            if prova == 2:
+                raise
+            time.sleep(3)
     im.save(dove, 'JPEG', quality=68, optimize=True, progressive=True)
 
 
 def blocco(dati):
     righe = []
-    for n in sorted(dati):
+    for n in sorted(dati, key=lambda k: (isinstance(k, str), k if isinstance(k, int) else 0)):
         d = dati[n]
         if d.get('z'):
             righe.append(f' {n}:{{z:1,km:{json.dumps(d["km"], ensure_ascii=False)}}}')
@@ -163,9 +193,25 @@ def calcola():
         p = ALLOGGI[n]
         dati[n] = {'h': h, 'm': m, 'km': [km_testo(km(p, ND)), km_testo(km(p, CH)), km_testo(km(p, ORLY))]}
         cornici[str(n)] = {'bbox': c, 'v': VERSIONE, 'fonte': p[2]}
+    for n, p in PARIGI.items():
+        c = cornice(n)
+        h, m = etichette(n, c)
+        dati[n] = {'h': h, 'm': m, 'km': [km_testo(km(p, ND)), km_testo(km(p, CH)), km_testo(km(p, ORLY))]}
+        cornici['par-' + n] = {'bbox': c, 'v': VERSIONE, 'fonte': p[2]}
     for n, p in ZONA.items():
         dati[n] = {'z': 1, 'km': [km_testo(km(p, ND)), km_testo(km(p, CH)), km_testo(km(p, ORLY))]}
     return dati, cornici
+
+
+def immagine(k):
+    return CARTELLA / (f'par-{k}.jpg' if isinstance(k, str) else f'al-{k}.jpg')
+
+
+def chiave(k):
+    return 'par-' + k if isinstance(k, str) else str(k)
+
+
+TUTTI = list(ALLOGGI) + list(PARIGI)
 
 
 def main():
@@ -181,27 +227,27 @@ def main():
         errori = []
         if trovato.group(0) != nuovo:
             errori.append('blocco MAPPE della pagina diverso: rilanciare lo script')
-        for n in ALLOGGI:
-            f = CARTELLA / f'al-{n}.jpg'
+        for n in TUTTI:
+            f = immagine(n)
             if not f.exists():
                 errori.append(f'manca {f.name}')
-            elif vecchio.get(str(n)) != cornici[str(n)]:
+            elif vecchio.get(chiave(n)) != cornici[chiave(n)]:
                 errori.append(f'{f.name} fatta con un riquadro vecchio')
-        print('\n'.join(errori) or f'Mappe allineate: {len(ALLOGGI)} immagini, {len(ZONA)} alloggi solo con la zona e blocco MAPPE.')
+        print('\n'.join(errori) or f'Mappe allineate: {len(TUTTI)} immagini, {len(ZONA)} alloggi solo con la zona e blocco MAPPE.')
         sys.exit(1 if errori else 0)
     CARTELLA.mkdir(exist_ok=True)
     scaricate = 0
-    for n in sorted(ALLOGGI):
-        f = CARTELLA / f'al-{n}.jpg'
-        if f.exists() and vecchio.get(str(n)) == cornici[str(n)]:
+    for n in TUTTI:
+        f = immagine(n)
+        if f.exists() and vecchio.get(chiave(n)) == cornici[chiave(n)]:
             continue   # già fatta con lo stesso riquadro: niente richiesta (le regole chiedono di non ripetere)
-        scarica(cornici[str(n)]['bbox'], f)
+        scarica(cornici[chiave(n)]['bbox'], f)
         scaricate += 1
         time.sleep(0.5)
     REGISTRO.write_text(json.dumps(cornici, indent=1) + '\n', encoding='utf-8')
     PAGINA.write_text(testo[:trovato.start()] + nuovo + testo[trovato.end():], encoding='utf-8')
-    pesi = [(CARTELLA / f'al-{n}.jpg').stat().st_size for n in ALLOGGI]
-    print(f'Mappe: {scaricate} scaricate, {len(ALLOGGI) - scaricate} già pronte; '
+    pesi = [immagine(n).stat().st_size for n in TUTTI]
+    print(f'Mappe: {scaricate} scaricate, {len(TUTTI) - scaricate} già pronte; '
           f'peso da {min(pesi) // 1024} a {max(pesi) // 1024} KB, totale {sum(pesi) // 1024} KB.')
 
 

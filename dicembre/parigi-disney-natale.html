@@ -1204,7 +1204,15 @@ const MPV=1,MP={
  18:{z:1,km:["31 km", "1,7 km", "33 km"]},
  19:{z:1,km:["31 km", "1,7 km", "33 km"]},
  20:{z:1,km:["31 km", "1,7 km", "33 km"]},
- 21:{z:1,km:["31 km", "1,7 km", "33 km"]}
+ 21:{z:1,km:["31 km", "1,7 km", "33 km"]},
+ lo:{h:[41.9, 29.4],m:[[58.1, 70.6, "GL", "r", ""]],km:["1,9 km", "30 km", "13 km"]},
+ sb:{h:[35.0, 32.5],m:[[65.0, 67.5, "GL", "l", ""]],km:["1,7 km", "30 km", "13 km"]},
+ is:{h:[52.8, 37.6],m:[[47.2, 62.3, "GL", "r", ""]],km:["2,2 km", "30 km", "13 km"]},
+ nv:{h:[51.8, 41.5],m:[[48.2, 58.5, "GL", "r", ""]],km:["2,2 km", "30 km", "13 km"]},
+ pa:{h:[52.1, 39.5],m:[[47.8, 60.5, "GL", "r", ""]],km:["2,2 km", "30 km", "13 km"]},
+ sp:{h:[44.7, 51.7],m:[[55.3, 48.3, "AU", "r", ""]],km:["2,6 km", "33 km", "16 km"]},
+ as:{h:[44.6, 54.2],m:[[55.5, 45.9, "AU", "r", ""]],km:["2,6 km", "33 km", "16 km"]},
+ rh:{h:[56.7, 39.2],m:[[43.3, 60.8, "CL", "r", ""]],km:["1,2 km", "32 km", "15 km"]}
 };
 /* FINE MAPPE */
 /* ---------- Dov'è: mappa e distanze nella scheda di ogni alloggio (C5) ----------
@@ -1232,8 +1240,21 @@ const dove=n=>{const d=DV[n],mp=MP[n],a=ACC[n].a,s=RA[d[0]],acc=d[1];
  <p class="small muted">Tocca la mappa per aprirla in Google Maps.</p>`}
  <ul class="dr">${rows.map(([k,sub,legs,dest])=>`<li><div><span class="dr-k">${k} <span class="muted small nw">${esc(sub)}</span></span><span class="dr-t">${durata(legs.reduce((x,l)=>x+l[1],0))}${d[3]?' <span class="small">+ attesa della navetta</span>':''}</span><span class="dr-l">${legs.map(legChip).join('')}</span></div><a class="maps" href="${gm(dest,{from:a})}" target="_blank" rel="noopener" aria-label="Percorso coi mezzi in Google Maps: ${k}">${PIN}Maps</a></li>`).join('')}</ul>
  ${d[2]?`<p class="small">${esc(d[2])}</p>`:''}<p class="small muted">Tempi coi mezzi, senza l'attesa di treni e bus ${B.es()}. Distanze in linea d'aria. «Maps» vi dà il percorso all'ora giusta.</p>`};
+/* Dov'è degli hotel di Parigi (C11 pezzo 7): indirizzi dai siti ufficiali, posizioni IGN (tools/fai-mappe-dicembre.py).
+   Tempi: RER A e metro 14 ufficiali (RS, Paris Aéroport: Orly→Gare de Lyon 23, →Châtelet 26); stime: RER A Gare de Lyon o
+   Auber→Châtelet 3 (differenza degli orari da Val d'Europe), cambio 8, Relais des Halles→Notre-Dame 15 a piedi, a Châtelet
+   metro 14 a 6 minuti (sito dell'hotel). */
+const SNP={VDE:"Val d'Europe",CH:'Chessy · Disney',GL:'Gare de Lyon',AU:'Auber',CL:'Châtelet–Les Halles'};
+const doveP=id=>{const o=PAR.find(p=>p.id===id),mp=MP[id],w=["w",o.w],a=o.a;
+ const nd=o.st==='CL'?[["w",15]]:[w,["A",3],["w",20]],orly=o.st==='GL'?[w,["14",23],["w",8]]:o.st==='CL'?[["w",6],["14",26],["w",8]]:[w,["A",3],["w",8],["14",26],["w",8]];
+ const rows=[["Mercatini di Natale","Notre-Dame, "+mp.km[0],nd,SV],["Parchi Disney",mp.km[1],[w,["A",RS[o.st].CH],["w",2]],DP],["Aeroporto di Orly",mp.km[2],orly,ORLY]];
+ const st=mp.m.map(([x,y,k,l,u])=>`<span class="mk-s ${l} ${u}" style="left:${x}%;top:${y}%"><span>${lb('A')}${SNP[k]}</span></span>`).join('');
+ return `<a class="mappa" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a)}" target="_blank" rel="noopener" aria-label="Apri la posizione di ${esc(o.n)} in Google Maps"><img src="mappe/par-${id}.jpg?v=${MPV}" width="800" height="534" loading="lazy" alt="Mappa: dove si trova ${esc(o.n)} rispetto alla stazione ${esc(RS[o.st].n)}">${st}<span class="mk-h" style="left:${mp.h[0]}%;top:${mp.h[1]}%">H</span><span class="mk-c">© IGN</span></a>
+ <p class="small muted">Tocca la mappa per aprirla in Google Maps.</p>
+ <ul class="dr">${rows.map(([k,sub,legs,dest])=>`<li><div><span class="dr-k">${k} <span class="muted small nw">${esc(sub)}</span></span><span class="dr-t">${durata(legs.reduce((x,l)=>x+l[1],0))}</span><span class="dr-l">${legs.map(legChip).join('')}</span></div><a class="maps" href="${gm(dest,{from:a})}" target="_blank" rel="noopener" aria-label="Percorso coi mezzi in Google Maps: ${k}">${PIN}Maps</a></li>`).join('')}</ul>
+ <p class="small muted">Tempi coi mezzi, senza l'attesa di treni e metro ${B.es()}. Distanze in linea d'aria. «Maps» vi dà il percorso all'ora giusta.</p>`};
 /* la scheda si riempie quando si apre (anche dalle barre dei costi): ACC e le mete sono già pronte */
-document.addEventListener('toggle',e=>{const t=e.target;if(!t.matches||!t.matches('details.more')||!t.open)return;const b=t.querySelector('.dove:empty');if(b)b.innerHTML=dove(+b.dataset.dove)},true);
+document.addEventListener('toggle',e=>{const t=e.target;if(!t.matches||!t.matches('details.more')||!t.open)return;const b=t.querySelector('.dove:empty');if(b)b.innerHTML=b.dataset.par?doveP(b.dataset.par):dove(+b.dataset.dove)},true);
 /* misure di una scelta, sempre contro il mio consiglio (C11): minuti coi mezzi senza le attese, a piedi 80 m al minuto (stima) */
 const hm=s=>{const [a,b]=String(s).split(':');return a*60+ +b};
 const accMin=d=>DV[d][1].reduce((x,l)=>x+l[1],0);
@@ -1552,6 +1573,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
 `<ul class="sc-l">${o?`<li>Domenica sera: restate a Parigi quanto volete, niente treni.</li><li>${o.dep} ${o.ci}</li><li>Lunedì: uscita alle ${T(monB(o,SCE.d).out)}, RER A da ${RS[o.st].n} con le valigie.</li>`:`<li>Domenica sera: valigie dagli armadietti e RER A${k?', in camera verso le '+k.sunIn:''}.</li><li>Lunedì: al parco senza valigie${k?', uscita alle '+T(k.mon):''}.</li>`}</ul>
 ${k?`<p class="small">Con il n. ${SCE.d}: totale del viaggio ≈ ${fmt(k.tot)}${rc?'':' ('+dEur(k.tot,cm.tot)+' rispetto al consiglio)'}.</p>`:''}
 <div class="pc"><p class="p">${o?o.pro:"Un solo alloggio: valigie disfatte una volta. Col n. 12 la spa domenica sera."}</p><p class="c">${o?o.con:"Domenica sera valigie e treno: via da Parigi alle 20:40 (alle 18:50 col n. 12)."}</p></div>
+${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class="in"><div class="dove" data-par="${o.id}"></div></div></details>`:''}
 <div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>`:''}</div>`)};
   $('#scN').innerHTML=`<p class="sc-g">Vicino alla Gare de Lyon: i più comodi per i treni</p><div class="sc-list">${PAR.filter(p=>p.z==='gl').map(nOpt).join('')}</div><p class="sc-g">In centro, più belli (Opéra, Châtelet)</p><div class="sc-list">${PAR.filter(p=>p.z==='ce').map(nOpt).join('')}</div><p class="sc-g">Oppure</p><div class="sc-list">${nOpt(null)}</div>`;
   const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
