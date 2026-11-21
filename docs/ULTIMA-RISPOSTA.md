@@ -1,14 +1,10 @@
-# Ultima risposta di Claude (21/11/2026 19:56 ora italiana)
+# Ultima risposta di Claude (21/11/2026 19:58 ora italiana)
 
-Ho capito: vuoi la conferma che, scelto l'hotel, cambia tutto l'itinerario. E vuoi che i pulsanti dei Mercatini non spariscano quando scorri.
+Ho capito: hai mandato il link al tuo amico e nell'anteprima è uscita la guida di novembre, non quella di dicembre.
+🧠 Opus · Alto
 
 ───
 ✅ **FATTO**
-- **Sì, te lo confermo con una prova.** Ho aperto la pagina con 3 hotel diversi e cambia tutto:
-
-| Cosa | n. 12 Relais Spa | n. 1 Love N Chic | n. 14 Disney New York |
-|---|---|---|---|
-| Uscita per i parchi | 8:05, treno | 7:55, bus | 7:45, a piedi (entrate alle 8:00) |
-| Domenica sera | 20:10 in hotel, poi spa | 22:20, bus | 22:15, a piedi |
-| Totale in due | circa 1.559 € | circa 1.044 € | circa 3.243 € |
-| Trasporti a testa | circa …
+- **La causa**: nel tuo messaggio il link era spezzato da due spazi, così: «…/parigi-in-tasca / dicembre/». WhatsApp ha preso solo la prima parte, cioè la guida di novembre.
+- **La pagina di dicembre è a posto**: l'ho controllato sul sito, la sua anteprima è «Parigi e Disney a Natale · 13–17 dicembre».
+- **Errore mio**: ti avevo dato il link come testo semplice e non in un riquadro da copiare. L'ho scritto nel diario degli errori. Da ora ogni link …
