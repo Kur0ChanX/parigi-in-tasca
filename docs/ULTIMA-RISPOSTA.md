@@ -1,14 +1,3 @@
-# Ultima risposta di Claude (21/11/2026 16:26 ora italiana)
+# Ultima risposta di Claude (21/11/2026 16:44 ora italiana)
 
-Ho capito: va bene così, l'interruttore dei colori resta sotto il titolo.
-
-───
-✅ **FATTO**
-- Ho tolto la domanda dalla lista.
-- Adesso aspetto il secondo aiutante (hotel, B&B, appartamenti, stanze). Poi preparo le schede numerate degli alloggi e pubblico la pagina.
-
-───
-⚠️ Aspettano te: 3
-- 🛑 Principale 3 · Quante notti prenotare, dal 13 o dal 12…
-- Principale 1 · 21/11 · Sito
-- Principale 1 · 21/11 · Unione del ramo in main
+Ho passato il tuo messaggio alla sessione nuova (Principale 6): pensa lei al link per l'amico, alla spa con jacuzzi, alla pagina che cambia secondo l'alloggio e al mega consiglio sui mercatini. Scrivile qui: https://claude.ai/code/[segreto tolto dalla scorta]
