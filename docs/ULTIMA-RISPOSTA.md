@@ -1,14 +1,8 @@
-# Ultima risposta di Claude (21/11/2026 19:56 ora italiana)
+# Ultima risposta di Claude (21/11/2026 20:01 ora italiana)
 
-Ho capito: vuoi la conferma che, scelto l'hotel, cambia tutto l'itinerario. E vuoi che i pulsanti dei Mercatini non spariscano quando scorri.
+Ho capito: vuoi sistemate subito, qui, due cose: le casette dei mercatini disegnate in alto che spariscono quando scorri, e l'anteprima sbagliata del link.
 
 ───
 ✅ **FATTO**
-- **Sì, te lo confermo con una prova.** Ho aperto la pagina con 3 hotel diversi e cambia tutto:
-
-| Cosa | n. 12 Relais Spa | n. 1 Love N Chic | n. 14 Disney New York |
-|---|---|---|---|
-| Uscita per i parchi | 8:05, treno | 7:55, bus | 7:45, a piedi (entrate alle 8:00) |
-| Domenica sera | 20:10 in hotel, poi spa | 22:20, bus | 22:15, a piedi |
-| Totale in due | circa 1.559 € | circa 1.044 € | circa 3.243 € |
-| Trasporti a testa | circa …
+- **Casette dei mercatini**: ora restano ferme quando scorri. Prima scendevano e uscivano dal disegno. È online: l'ho controllato sul sito. Nella foto 1 vedi prima e dopo.
+- **Anteprima del link**: sul sito l'anteprima di dicembre è giusta, è la foto 2. Su WhatsApp ti esce novembre perché il link è spezzato da due spazi («…parigi-in-tasca / dicembre/»). WhatsApp legge solo «…parigi-in-tasca», cioè la guida di novembre. …
