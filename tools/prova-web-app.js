@@ -107,7 +107,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   // Airbnb (n. 16–21, 23 e 25–28; Mario 21/11 ~22:15 «aggiungi sezione air b e b»): niente indirizzo → niente mappa inventata, ma posizione indicativa, 3 distanze e Maps
   const airbnb = await q.evaluate(async () => {
     const out = [];
-    for (const n of [16, 17, 18, 19, 20, 21, 23, 25, 26, 27, 28]) {
+    for (const n of [16, 17, 18, 19, 20, 21, 23, 25, 26, 27, 28, 31, 32, 33, 34, 35]) {
       const d = document.querySelector(`#al-${n} details.more`); if (!d) { out.push({ n, manca: true }); continue; }
       d.open = true; await new Promise((r) => setTimeout(r, 60));
       const b = d.querySelector('.dove'), links = b ? [...b.querySelectorAll('.dr a.maps')].map((a) => new URL(a.href)) : [];
@@ -121,7 +121,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     document.querySelector('#filters [data-f="airbnb"]').click(); await new Promise((r) => setTimeout(r, 100));
     const solo = [...document.querySelectorAll('#hotelCards article')].map((a) => +a.id.slice(3)).sort((a, b) => a - b).join(',');
     document.querySelector('#filters [data-f="tutti"]').click(); await new Promise((r) => setTimeout(r, 100));
+    // dalla v18 il consiglio è 4 notti vicino a Disney: per i prezzi con la domenica a Parigi si sceglie Locomo + Moxy, poi si torna al consiglio
+    document.querySelector('#scegli [data-sc="lo-8"]').click(); await new Promise((r) => setTimeout(r, 250));
     const prezzi = [...document.querySelectorAll('#scD details[data-k^="d-"]')].filter((x) => +x.dataset.k.slice(2) >= 16).map((x) => x.querySelector('.sc-p').textContent);
+    document.querySelector('#scegli [data-sc="4n-8"]').click(); await new Promise((r) => setTimeout(r, 250));
     return { out, solo, prezzi, tutti: document.querySelectorAll('#hotelCards article').length };
   });
   // 21/11 (#20): i numeri degli annunci Airbnb (19 cifre) scritti come numeri JavaScript venivano arrotondati → link all'annuncio sbagliato
@@ -146,19 +149,43 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       document.querySelector('#sort [data-s="prezzo"]').click(); document.querySelector('#scSort [data-s="prezzo"]').click(); await w();
       return out;
     });
-    const tutti = Object.values(ord).every((o) => o.ids.length === 30 && o.sc.length === 30 && o.pre === 'true' && o.preSc === 'true');
+    const tutti = Object.values(ord).every((o) => o.ids.length === 35 && o.sc.length === 35 && o.pre === 'true' && o.preSc === 'true');
     const diversi = new Set(Object.values(ord).map((o) => o.ids.join(','))).size === 4;
-    ok('Ordine: 4 pulsanti nelle due liste, tutti e 30 sempre, 4 ordini diversi', tutti && diversi); if (!tutti || !diversi) console.log(JSON.stringify(ord).slice(0, 600));
-    // «Vicino a Disney» = minuti fino ai parchi coi mezzi, senza le attese (gli stessi 🚆 della scelta): attaccati a Val d'Europe o il New York
-    const vicini = [14, 15, 16, 17, 19, 29, 30], primi = ord.disney.ids.slice(0, 3).every((n) => vicini.includes(n)) && ord.disney.sc.slice(0, 3).every((n) => vicini.includes(n)) && [19, 21, 23, 25, 26, 27].includes(ord.pulizia.ids[0]) && [16, 17].includes(ord.rer.ids[0]);
-    ok('Ordine: «Vicino a Disney» mette in cima i più vicini ai parchi, «Vicino alla RER» quelli a 1 minuto a piedi, «Più puliti» un 5,0', primi); if (!primi) console.log(Object.fromEntries(Object.entries(ord).map(([k, o]) => [k, o.ids.slice(0, 4).join(',') + ' | ' + o.sc.slice(0, 4).join(',')])));
+    ok('Ordine: 4 pulsanti nelle due liste, tutti e 35 sempre, 4 ordini diversi', tutti && diversi); if (!tutti || !diversi) console.log(JSON.stringify(ord).slice(0, 600));
+    // «Vicino a Disney» = km dai parchi in linea d'aria (Mario 22/11 ~00:45, foto: prima in cima c'erano il n. 30 e il n. 11 con la navetta): primo il n. 14 Hotel Disney
+    const primi = ord.disney.ids[0] === 14 && ord.disney.sc[0] === 14 && [19, 21, 23, 25, 26, 27].includes(ord.pulizia.ids[0]) && [16, 17].includes(ord.rer.ids[0]);
+    ok('Ordine: «Vicino a Disney» mette in cima l\'Hotel Disney (il più vicino ai parchi), «Vicino alla RER» quelli a 1 minuto a piedi, «Più puliti» un 5,0', primi); if (!primi) console.log(Object.fromEntries(Object.entries(ord).map(([k, o]) => [k, o.ids.slice(0, 4).join(',') + ' | ' + o.sc.slice(0, 4).join(',')])));
+  }
+  // v18 (Mario 22/11 ~00:45 «metti un tasto tutti … in vista distanza Disney con tempi e km … rer a piedi»; «in priorità dal 13 al 17»)
+  {
+    const v = await q.evaluate(async () => {
+      const w = () => new Promise((r) => setTimeout(r, 150)), vis = (el) => !!el && getComputedStyle(el).display !== 'none';
+      const righe = () => [...document.querySelectorAll('#scD>details[data-k^="d-"]')].filter(vis);
+      const bt = [...document.querySelectorAll('.tyswitch button')].map((b) => b.dataset.ty);
+      document.querySelector('.tyswitch [data-ty="tutti"]').click(); await w();
+      const tutti = righe().length, bbT = vis(document.getElementById('scBB'));
+      document.querySelector('.tyswitch [data-ty="hotel"]').click(); await w();
+      const hotel = righe().length, bbH = vis(document.getElementById('scBB'));
+      document.querySelector('.tyswitch [data-ty="bb"]').click(); await w();
+      const bbB = vis(document.getElementById('scBB')), bbLink = !!document.querySelector('#scBB a[href*="jolie-appartement-pres-de-rer-a"]');
+      document.querySelector('.tyswitch [data-ty="tutti"]').click(); await w();
+      const r8 = document.querySelector('#scD details[data-k="d-8"] .sc-m');
+      const chip = r8 ? r8.textContent : '';
+      const tuttiChip = righe().every((d) => !d.querySelector('.sc-m span') || /🏰 Disney \d+ min/.test(d.querySelector('.sc-m').textContent) && /RER/.test(d.querySelector('.sc-m').textContent) || /Libero solo dal 14|Esaurito/.test(d.querySelector('.sc-m').textContent));
+      return { bt: bt.join(','), tutti, hotel, bbT, bbH, bbB, bbLink, chip, tuttiChip, mio: document.querySelector('#mio .mine-t').textContent, dovekm: (document.querySelector('#al-8 .dr') || {}).textContent || '' };
+    });
+    ok('v18: interruttore con «Tutti» per primo, «Tutti» mostra tutti e 35, «Hotel» meno', v.bt === 'tutti,hotel,bb,casa' && v.tutti === 35 && v.hotel > 0 && v.hotel < 35); if (v.bt !== 'tutti,hotel,bb,casa' || v.tutti !== 35) console.log(v);
+    ok('v18: camera di Bussy visibile con «B&B» e «Tutti», nascosta con «Hotel», link Booking', v.bbT && v.bbB && !v.bbH && v.bbLink);
+    // la riga mostra i km del blocco MAPPE (n. 8: 1,9 km), non i km a piedi del giorno (22/11: due funzioni col nome kmT)
+    ok('v18: nella riga Disney (minuti e km dai parchi) e RER a piedi, n. 8 = 1,9 km come la scheda', /🏰 Disney 13 min · 1,9 km/.test(v.chip) && /🚉 RER a piedi 8 min/.test(v.chip) && v.tuttiChip); if (!/1,9 km/.test(v.chip)) console.log(v.chip);
+    ok('v18: il mio consiglio è 4 notti al n. 8 Moxy (13→17)', /4 notti al n\. 8 Moxy/.test(v.mio));
   }
   // 21/11 sera: la pagina era larga 735 px su un telefono da 412 (classe .pc del contenitore uguale a quella dei pro/contro)
   ok('telefono 390 px: la pagina non scorre di lato', await q.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   const maleA = airbnb.out.filter((x) => !x.ok);
-  ok('Airbnb: 11 schede senza mappa inventata, con posizione indicativa, 3 distanze, Maps e link Airbnb', maleA.length === 0); if (maleA.length) console.log(maleA);
-  ok('Airbnb: il filtro mostra solo i n. 16–21, 23 e 25–28, «Tutti» li mostra tutti e 30', airbnb.solo === '16,17,18,19,20,21,23,25,26,27,28' && airbnb.tutti === 30); if (airbnb.solo !== '16,17,18,19,20,21,23,25,26,27,28') console.log(airbnb.solo, airbnb.tutti);
-  ok('Airbnb e n. 22, 24, 29, 30: nella scelta (domenica a Parigi) tutti e 15 col prezzo', airbnb.prezzi.length === 15 && airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))); if (!airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))) console.log(airbnb.prezzi);
+  ok('Airbnb: 16 schede senza mappa inventata, con posizione indicativa, 3 distanze, Maps e link Airbnb', maleA.length === 0); if (maleA.length) console.log(maleA);
+  ok('Airbnb: il filtro mostra solo i n. 16–21, 23, 25–28 e 31–35, «Tutti» li mostra tutti e 35', airbnb.solo === '16,17,18,19,20,21,23,25,26,27,28,31,32,33,34,35' && airbnb.tutti === 35); if (airbnb.solo !== '16,17,18,19,20,21,23,25,26,27,28,31,32,33,34,35') console.log(airbnb.solo, airbnb.tutti);
+  ok('Airbnb e n. 22, 24, 29, 30: nella scelta (domenica a Parigi) tutti e 20 col prezzo', airbnb.prezzi.length === 20 && airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))); if (!airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))) console.log(airbnb.prezzi);
   ok('Dov\'è: «Scheda» nella scelta apre la scheda già con la mappa', await q.evaluate(async () => {
     // il primo con la mappa: in cima (per prezzo) ora può esserci un Airbnb, che la mappa non ce l'ha apposta
     const a = [...document.querySelectorAll('#scD a[href^="#al-"]')].find((x) => +x.getAttribute('href').slice(4) <= 15); a.click(); await new Promise((r) => setTimeout(r, 300));
