@@ -53,6 +53,9 @@ ORLY = (48.730060, 2.367831)     # Aeroporto di Orly (OSM)
 # Stazione che usa ogni alloggio (la stessa dei tempi nella pagina, DV): VDE o CH
 STAZIONE = {1: CH, 2: CH, 3: CH, 7: CH, 11: CH, 14: CH}
 NOMI = {VDE: "Val d'Europe", CH: 'Chessy · Disney'}
+# Airbnb (n. 16–21): l'indirizzo esatto arriva solo dopo la prenotazione. Niente mappa (il segno sarebbe inventato):
+# solo le distanze, contate dalla stazione scritta nell'annuncio («posizione indicativa», z:1 nella pagina).
+ZONA = {16: VDE, 17: VDE, 18: VDE, 19: VDE, 20: VDE, 21: VDE}
 
 
 def merc(p):
@@ -145,6 +148,9 @@ def blocco(dati):
     righe = []
     for n in sorted(dati):
         d = dati[n]
+        if d.get('z'):
+            righe.append(f' {n}:{{z:1,km:{json.dumps(d["km"], ensure_ascii=False)}}}')
+            continue
         righe.append(f' {n}:{{h:{json.dumps(d["h"])},m:{json.dumps(d["m"], ensure_ascii=False)},km:{json.dumps(d["km"], ensure_ascii=False)}}}')
     return f'{INIZIO}\nconst MPV={VERSIONE},MP={{\n' + ',\n'.join(righe) + f'\n}};\n{FINE}'
 
@@ -157,6 +163,8 @@ def calcola():
         p = ALLOGGI[n]
         dati[n] = {'h': h, 'm': m, 'km': [km_testo(km(p, ND)), km_testo(km(p, CH)), km_testo(km(p, ORLY))]}
         cornici[str(n)] = {'bbox': c, 'v': VERSIONE, 'fonte': p[2]}
+    for n, p in ZONA.items():
+        dati[n] = {'z': 1, 'km': [km_testo(km(p, ND)), km_testo(km(p, CH)), km_testo(km(p, ORLY))]}
     return dati, cornici
 
 
@@ -179,7 +187,7 @@ def main():
                 errori.append(f'manca {f.name}')
             elif vecchio.get(str(n)) != cornici[str(n)]:
                 errori.append(f'{f.name} fatta con un riquadro vecchio')
-        print('\n'.join(errori) or f'Mappe allineate: {len(ALLOGGI)} immagini e blocco MAPPE.')
+        print('\n'.join(errori) or f'Mappe allineate: {len(ALLOGGI)} immagini, {len(ZONA)} alloggi solo con la zona e blocco MAPPE.')
         sys.exit(1 if errori else 0)
     CARTELLA.mkdir(exist_ok=True)
     scaricate = 0

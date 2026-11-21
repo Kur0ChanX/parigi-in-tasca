@@ -42,7 +42,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   await ctx.setOffline(true);
   await p.goto(B); ok('senza rete: novembre apre novembre', (await p.title()) === nov);
   await p.goto(B + 'dicembre/'); ok('senza rete: dicembre apre dicembre', (await p.title()) === 'Parigi e Disney a Natale');
-  ok('senza rete: 8 barre dei costi', (await p.$$('#bars a.bar-row')).length === 8);
+  ok('senza rete: 9 barre dei costi', (await p.$$('#bars a.bar-row')).length === 9); // 9 dal 21/11 sera: barra Locomo + Airbnb n. 16
   await ctx.close();
   // L'amico: apre solo dicembre
   const c2 = await b.newContext({ viewport: { width: 390, height: 844 } }); const q = await c2.newPage();
@@ -104,9 +104,40 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   });
   const male = dove.filter((x) => !(x.img && x.righe === 3 && x.tempi && x.maps && x.segno && x.posizione));
   ok('Dov\'è: 15 schede con mappa, 3 distanze e Maps', male.length === 0); if (male.length) console.log(male);
+  // Airbnb (n. 16–21, Mario 21/11 ~22:15 «aggiungi sezione air b e b»): niente indirizzo → niente mappa inventata, ma posizione indicativa, 3 distanze e Maps
+  const airbnb = await q.evaluate(async () => {
+    const out = [];
+    for (let n = 16; n <= 21; n++) {
+      const d = document.querySelector(`#al-${n} details.more`); if (!d) { out.push({ n, manca: true }); continue; }
+      d.open = true; await new Promise((r) => setTimeout(r, 60));
+      const b = d.querySelector('.dove'), links = b ? [...b.querySelectorAll('.dr a.maps')].map((a) => new URL(a.href)) : [];
+      const bt = d.querySelector('a.btn.ghost');
+      out.push({ n, ok: !!b && !b.querySelector('.mappa img') && /Posizione indicativa/.test(b.textContent) && b.querySelectorAll('.dr li').length === 3
+        && [...b.querySelectorAll('.dr-t')].every((t) => /^circa \d/.test(t.textContent)) && links.length === 3 && links.every((u) => u.searchParams.get('travelmode') === 'transit')
+        && !!bt && /^https:\/\/www\.airbnb\.(com|it)\/rooms\//.test(bt.href) && /Airbnb/.test(bt.textContent)
+        && document.querySelector(`#al-${n} .fact .k`).textContent === 'Voto Airbnb' });
+      d.open = false;
+    }
+    document.querySelector('#filters [data-f="airbnb"]').click(); await new Promise((r) => setTimeout(r, 100));
+    const solo = [...document.querySelectorAll('#hotelCards article')].map((a) => +a.id.slice(3)).sort((a, b) => a - b).join(',');
+    document.querySelector('#filters [data-f="tutti"]').click(); await new Promise((r) => setTimeout(r, 100));
+    const prezzi = [...document.querySelectorAll('#scD details[data-k^="d-"]')].filter((x) => +x.dataset.k.slice(2) >= 16).map((x) => x.querySelector('.sc-p').textContent);
+    return { out, solo, prezzi, tutti: document.querySelectorAll('#hotelCards article').length };
+  });
+  // 21/11 sera: la pagina era larga 735 px su un telefono da 412 (classe .pc del contenitore uguale a quella dei pro/contro)
+  ok('telefono 390 px: la pagina non scorre di lato', await q.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+  const maleA = airbnb.out.filter((x) => !x.ok);
+  ok('Airbnb: 6 schede senza mappa inventata, con posizione indicativa, 3 distanze, Maps e link Airbnb', maleA.length === 0); if (maleA.length) console.log(maleA);
+  ok('Airbnb: il filtro mostra solo i n. 16–21, «Tutti» li mostra tutti e 21', airbnb.solo === '16,17,18,19,20,21' && airbnb.tutti === 21); if (airbnb.solo !== '16,17,18,19,20,21') console.log(airbnb.solo);
+  ok('Airbnb: nella scelta (domenica a Parigi) tutti e 6 col prezzo', airbnb.prezzi.length === 6 && airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))); if (!airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))) console.log(airbnb.prezzi);
   ok('Dov\'è: «Scheda» nella scelta apre la scheda già con la mappa', await q.evaluate(async () => {
-    const a = document.querySelector('#scD a[href^="#al-"]'); a.click(); await new Promise((r) => setTimeout(r, 300));
+    // il primo con la mappa: in cima (per prezzo) ora può esserci un Airbnb, che la mappa non ce l'ha apposta
+    const a = [...document.querySelectorAll('#scD a[href^="#al-"]')].find((x) => +x.getAttribute('href').slice(4) <= 15); a.click(); await new Promise((r) => setTimeout(r, 300));
     return !!document.querySelector(a.getAttribute('href') + ' details.more[open] .dove .mappa img');
+  }));
+  ok('Airbnb: «Scheda» nella scelta apre la scheda con la posizione indicativa', await q.evaluate(async () => {
+    const a = document.querySelector('#scD a[href="#al-16"]'); a.click(); await new Promise((r) => setTimeout(r, 300));
+    return !!document.querySelector('#al-16 details.more[open] .dove .dove-z');
   }));
   // C11 (Mario 21/11 20:52 «quando clicco mi cambia la pagina … l'itinerario e tutto»)
   const sc = await q.evaluate(async () => {
