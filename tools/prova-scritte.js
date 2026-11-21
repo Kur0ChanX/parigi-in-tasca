@@ -29,8 +29,10 @@ const file = path.resolve(process.argv[2] || path.join(__dirname, '..', 'dicembr
       }
       const out = [];
       for (let i = 0; i < righe.length; i++) for (let j = i + 1; j < righe.length; j++) {
-        const a = righe[i], c = righe[j]; if (a.el === c.el || a.el.contains(c.el) || c.el.contains(a.el)) continue; // righe dello stesso paragrafo (titolo a righe strette)
+        const a = righe[i], c = righe[j]; if (a.el === c.el) continue;
         const ox = Math.min(a.r, c.r) - Math.max(a.x, c.x), oy = Math.min(a.b, c.b) - Math.max(a.y, c.y);
+        // stesso paragrafo su righe vicine (titolo a righe strette): si salta; sulla STESSA riga invece conta (C11: etichetta dentro il «pro» finita sopra il testo)
+        if ((a.el.contains(c.el) || c.el.contains(a.el)) && oy < 0.5 * Math.min(a.b - a.y, c.b - c.y)) continue;
         if (ox > 3 && oy > 4) out.push(`«${a.t}» su «${c.t}» (y ${Math.round(a.y)})`);
       }
       return out;
