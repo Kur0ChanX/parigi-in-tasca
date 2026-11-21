@@ -2,12 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 15:42 · 01WTjqUtYZaK
-nella pagina tanti mercatini luci e atmosfera natalizia avvolgente non triste
-
-## 2026-11-21 15:45 · 01WTjqUtYZaK
-aspetta le altre foto prima di pensare
-
 ## 2026-11-21 15:47 · 01WTjqUtYZaK
 conta che dobbiamo non oagare una fucilata nei trasporti ubber o taxi per andare a Disneyland no spostarci per i mercatini vorremmo se è possibile la mattina per andare a Disneyland un opzione non troppo costosa e non troppo lenta per andare a Dianeyland e se non essere un problema ritornare a dormire con mille mila ore di viaggio o troppi costi
 
@@ -112,6 +106,19 @@ Quando scrollo verso il basso i mercatini si nascondono. Quindi cioè, l'obietti
 
 ## 2026-11-21 19:57 · 01WTjqUtLt7R
 cosa è ?!?
+
+## 2026-11-21 19:58 · 01WTjqUtLt7R
+Non sono i pulsanti che spariscono quando scorro, sono i marcatini che si nascondono, ecco. Poi per l'altra domanda, hai già guardato?
+l'immagine dv è?
+
+## 2026-11-21 19:58 · 01WTjqUtLt7R
+Correggi qui velocemente l'immagine.
+
+## 2026-11-21 20:00 · 01WTjqUtLt7R
+anche questa immagine sbagliata veloce
+
+## 2026-11-21 20:01 · 01WTjqUtLt7R
+veloce
 
 ## 2026-11-21 20:06 · 01WTjqUvmMKr
 scritte sovrapposte è un lavoro certosino questo...
