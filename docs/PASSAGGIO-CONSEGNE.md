@@ -59,9 +59,9 @@ Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal regist
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-21 20:35 · [AVVIO] Sessione #16 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → 
-- 2026-11-21 20:52 · Mettimi le scelte nella pagina, tutte le migliori scelte con le opzioni, e quand… → 
-- 2026-11-21 20:59 · Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono… → 
+- 2026-11-21 20:35 · [AVVIO] Sessione #16 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → avvio, scorta della #14 unita, sveglia del 7/12 rifatta, DOMANDA 2 rifatta in 2 schede
+- 2026-11-21 20:52 · Mettimi le scelte nella pagina, tutte le migliori scelte con le opzioni, e quand… → C11 pezzi 1–6 nel ramo (commit 44013b4), prove 29/29 e 12/12; risposta alla DOMANDA 2
+- 2026-11-21 20:59 · Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono… → C11, 2 aiutanti di ricerca larga, appunti nuovi, 4 hotel nuovi di Parigi nella scelta
 
 Ultimo, intero:
 > Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono ancora hotel, appartamenti, stanze, B&B molto validi e non le stai valutando.
