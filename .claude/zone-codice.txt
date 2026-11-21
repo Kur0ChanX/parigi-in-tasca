@@ -1,0 +1,6 @@
+# Codice del progetto (file esatti o cartelle che finiscono con /)
+index.html
+sw.js
+manifest.webmanifest
+dicembre/
+tools/

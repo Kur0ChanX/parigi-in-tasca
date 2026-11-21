@@ -1,0 +1,41 @@
+{
+"account": "108763",
+"sessione": "793a61a528be",
+"giorno": "2026-11-21",
+"turni": 2,
+"peso": 84492,
+"uscita": 3395,
+"contesto_max": 313599,
+"anomalie": [
+"avvio pesante: 279k token dopo le letture d'avvio (tetto 130k)"
+],
+"blocchi": {
+"Stop 14 · Ti fermi ad aspettare Mario": 1,
+"Stop 5 · Notifica non letta (in coda": 1
+},
+"esempi_blocchi": {
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"15:56 · Ti fermi ad aspettare Mario con il contesto a 279k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+],
+"Stop 5 · Notifica non letta (in coda": [
+"15:56 · Notifica non letta (in coda dalle 15:47: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+]
+},
+"remota": "01WTjqUtoS2V",
+"aiutanti": 0,
+"strumenti": 2,
+"bilancia": 2,
+"motori": {
+"opus": 84492
+},
+"grezzi": {
+"opus": [
+4,
+619494,
+4451,
+0,
+3395
+]
+},
+"costo": 0.2274
+}

@@ -1,0 +1,63 @@
+{
+"account": "108763",
+"sessione": "44c99ec7fa3c",
+"giorno": "2026-11-21",
+"turni": 4,
+"peso": 1235629,
+"uscita": 35227,
+"contesto_max": 307180,
+"anomalie": [
+"33k token scritti in un turno"
+],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 3,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 8 · Il turno finisce con una": 1,
+"Stop 9 · Versione unita in questo turno:": 1,
+"Stop 8 · Segno delle domande nel titolo": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"17:22 · Notifica non letta (in coda dalle 17:19: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"17:34 · Notifica non letta (in coda dalle 17:25: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"17:43 · Notifica non letta (in coda dalle 17:43: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"17:34 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «La pubblico quando mi dici che la pagina ti va bene.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto "
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"17:34 · Domanda a Mario poco chiara («❓ **DOMANDE** 🛑 **DOMANDA 1 · La pagina così ti va bene?** S», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+],
+"Stop 8 · Il turno finisce con una": [
+"17:34 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+],
+"Stop 9 · Versione unita in questo turno:": [
+"17:43 · Versione unita in questo turno: aggiorna in docs/DA-FARE.md la sezione «## Nastro delle versioni» (3 righe): «🚀 Online: v<N> · <segno e catena> · 21/11 <ora> · <3 parole>», poi «🧪 In prova» e «⏳ Dopo»"
+],
+"Stop 8 · Segno delle domande nel titolo": [
+"17:43 · Segno delle domande nel titolo «🟢 🗼 Principale 8 ❓1 · prepara web app» (era «🟢 🗼 Principale 8 ❓2 · prepara web app»; C454: « ❓N» dopo il numero, N = risposte che Mario deve dare alle righe della tua c"
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"17:44 · Ti fermi ad aspettare Mario con il contesto a 275k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+]
+},
+"remota": "01WTjqUwT3Gs",
+"aiutanti": 0,
+"strumenti": 41,
+"bilancia": 2,
+"motori": {
+"opus": 1235629
+},
+"grezzi": {
+"opus": [
+77,
+9970708,
+49877,
+0,
+35227
+]
+},
+"costo": 3.098
+}

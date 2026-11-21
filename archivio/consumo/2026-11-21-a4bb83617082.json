@@ -1,0 +1,47 @@
+{
+"account": "108763",
+"sessione": "a4bb83617082",
+"giorno": "2026-11-21",
+"turni": 2,
+"peso": 118839,
+"uscita": 3507,
+"contesto_max": 322205,
+"anomalie": [],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"16:42 · Notifica non letta (in coda dalle 16:35: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"16:42 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Per le notti consiglio di partire dal 13: il volo arriva domenica alle 8:05, quindi la notte del 12 non vi serve.». Nella sua voce (o in una n"
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"16:42 · Ti fermi ad aspettare Mario con il contesto a 288k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"16:42 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1 🛑 · Quale alloggio prenoto per voi?** », C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+]
+},
+"remota": "01WTjqUubYgz",
+"aiutanti": 0,
+"strumenti": 2,
+"bilancia": 2,
+"motori": {
+"opus": 118839
+},
+"grezzi": {
+"opus": [
+5,
+957589,
+4432,
+0,
+3507
+]
+},
+"costo": 0.2971
+}
