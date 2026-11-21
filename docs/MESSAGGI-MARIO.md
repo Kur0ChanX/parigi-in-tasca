@@ -2,11 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 16:10 · 01WTjqUtMTqK
-Queste sono solo alcune, te le ho mandate un po' così a caso, cercale tu al meglio. Queste sono solo così un pochino a caso, però cercale tu al meglio, in base alle tue ricerca intelligente e profonda.
-Sì, vanno bene anche appartamenti privati, non ce ne frega niente. Non solo appartamenti privati, insomma, valutiamo tutto.
-Hotel B&B appartenenti  stanze vanno bene
-
 ## 2026-11-21 16:21 · 01WTjqUxBAKZ
 mi raccomando i mercatini sono importanti c'è tutto vero?
 
@@ -133,6 +128,9 @@ Beh, inizialmente abbiamo fatto una super ricerca con Fable. Penso che avrai cer
 
 ## 2026-11-21 20:27 · 01WTjqUvmMKr
 Cioè, valuta 3 giorni dormire proprio vicino Disneyland o nei pressi di Disneyland. Più comodo, cioè valuta tutto. Sia nei parchi che fuori dai parchi, sia in periferia, sia molto vicino, basandoti sul prezzo, la bellezza del posto, che sia decente il prezzo, la comodità delle navette, taxi, bus per andare a Disneyland.
+
+## 2026-11-21 20:35 · 01WTjqUvmMKr
+fai le opzioni belle chiare non consuse riguarda un po' l'ordine cosa vedere prima cosa dopo ecc le priorità ecc
 
 ## 2026-11-21 20:52 · 01WTjqUxzyRm
 Mettimi le scelte nella pagina, tutte le migliori scelte con le opzioni, e quando clicco mi cambia la pagina corretta con quell'abbinamento. Però fallo bene per ogni hotel, clicco e mi cambia l'abbinamento, l'itinerario e tutto. Ok? E all'inizio mi deve scegliere nella pagina. Cioè deve essere molto chiaro, mi deve far vedere tutti gli alberghi con i pro, contro, le differenze eccetera, e poi mi deve mettere a scegliere in modo chiaro. Fammi capire bene le differenze, i soldi che perdo, i minuti che ci metto in più ad andare nei posti, quanta strada devo fare di più a piedi, i pro, i contro, valuta tutto.
