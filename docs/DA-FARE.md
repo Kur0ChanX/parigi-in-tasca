@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-- 🚀 Online: v13 · 🟢 Principale 18 · 21/11 22:47 · Airbnb vicino Disney
-- 🧪 In prova: v14 · 🟢 Principale 20 · mappe e 2 alloggi
+- 🚀 Online: v14 · 🟢 Principale 20 · 21/11 23:43 · mappe e 2 alloggi
+- 🧪 In prova: v15 · 🟢 Principale 20 · ordine e Staycity
 - ⏳ Dopo: nessuna
 
 ## 0. Aspetta Mario
