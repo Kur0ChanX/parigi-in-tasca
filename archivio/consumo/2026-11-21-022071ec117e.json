@@ -2,21 +2,61 @@
 "account": "108763",
 "sessione": "022071ec117e",
 "giorno": "2026-11-21",
-"turni": 1,
-"peso": 0,
-"uscita": 0,
-"contesto_max": 268479,
-"anomalie": [],
+"turni": 2,
+"peso": 1313518,
+"uscita": 29721,
+"contesto_max": 312436,
+"anomalie": [
+"2 uscite di strumento enormi (195 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"un turno ha aggiunto 312k token al contesto",
+"29k token scritti in un turno"
+],
 "blocchi": {
-"Stop 5 · Notifica non letta (in coda": 1
+"Stop 5 · Notifica non letta (in coda": 2,
+"Stop 8 · Il turno finisce con una": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1,
+"Stop 9 · Versione unita in questo turno:": 1
 },
 "esempi_blocchi": {
 "Stop 5 · Notifica non letta (in coda": [
-"18:20 · Notifica non letta (in coda dalle 18:15: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+"18:20 · Notifica non letta (in coda dalle 18:15: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"18:33 · Notifica non letta (in coda dalle 18:29: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 8 · Il turno finisce con una": [
+"18:20 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"18:20 · Ti fermi ad aspettare Mario con il contesto a 268k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+],
+"Stop 9 · Versione unita in questo turno:": [
+"18:33 · Versione unita in questo turno: aggiorna in docs/DA-FARE.md la sezione «## Nastro delle versioni» (3 righe): «🚀 Online: v<N> · <segno e catena> · 21/11 <ora> · <3 parole>», poi «🧪 In prova» e «⏳ Dopo»"
 ]
 },
 "remota": "01WTjqUwUueB",
 "aiutanti": 0,
-"strumenti": 0,
-"bilancia": 2
+"strumenti": 33,
+"bilancia": 2,
+"motori": {
+"opus": 1313518
+},
+"grezzi": {
+"opus": [
+106,
+8520306,
+250221,
+0,
+29721
+]
+},
+"costo": 4.3007,
+"costo_fredde": 1.6295,
+"memoria_scaduta": 1,
+"ricreati": 203683,
+"fredde": [
+[
+265,
+4,
+0
+]
+]
 }
