@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (21/11/2026 23:46 ora italiana)
+# Ultima risposta di Claude (21/11/2026 23:28 ora italiana)
 
-La v14 è unita su GitHub. Sto aspettando 2 cose: che il sito vero si aggiorni e le foto dell'aiutante. Poi ti mando il resoconto con le foto.
+Ho passato anche questo link alla sessione nuova, la 20: lo valuta insieme agli altri. Quel sito però non è dell'hotel, fa solo da intermediario: le ho chiesto di trovare il sito ufficiale e di prendere i prezzi da lì.

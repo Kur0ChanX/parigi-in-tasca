@@ -2,16 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 19:09 · 01WTjqUutmHT
-mandami le lune a forma di topolino creale con dettagli da luna ma a forma di topolino
-
-## 2026-11-21 19:20 · 01WTjqUutmHT
-e le foto delle modifiche che hai fatto 
-Metti questa con un effetto intorno, carino, professionale, per renderla un po' viva. Poi fai gli ultimi aggiornamenti che ti ho detto e pubblica.
-e mettila anche nella home animata, insomma, mettila in qualche modo che ci sta bene, cambiali un po' il colore, insomma, valuta tu la grandezza, insomma.
-Rendila un pochettino più luminosa, ecco.
-E mi sembra un po' troppo grande, come luna, rispetto al contesto.
-
 ## 2026-11-21 19:35 · 01WTjqUwvARs
 publica
 
@@ -121,6 +111,16 @@ scusa non era per te
 
 ## 2026-11-21 22:30 · 01WTjqUvDTBB
 si ma dal 13 al 17 ricordati eh
+
+## 2026-11-21 23:23 · 01WTjqUvuvWh
+https://www.airbnb.it/rooms/1373321838576210343?unique_share_id=[segreto tolto dalla scorta]&viralityEntryPoint=1&s=76
+https://www.airbnb.it/rooms/5115238?unique_share_id=[segreto tolto dalla scorta]&viralityEntryPoint=1&s=76
+valuta tutto e poi publica 
+https://www.airbnb.it/rooms/1376052056754954936?unique_share_id=[segreto tolto dalla scorta]&viralityEntryPoint=1&s=76
+https://all.accor.com/booking/it/accor/hotel/5646?dateIn=2026-12-13&nights=4&compositions=2&stayplus=false&snu=false&accessibleRooms=false&hideWDR=false&productCode=null&hideHotelDetails=true&basketId=[segreto tolto dalla scorta]
+
+## 2026-11-21 23:28 · 01WTjqUvuvWh
+https://www.online-reservations.com/?hotelid=14974972&gacc=gmcc&gad_source=1&gad_campaignid=24455503605&gbraid=[segreto tolto dalla scorta]&gclid=[segreto tolto dalla scorta]
 
 ## 2026-11-21 23:29 · 01WTjqUxoKhC
 https://www.online-reservations.com/?hotelid=14974972&gacc=gmcc&gad_source=1&gad_campaignid=24455503605&gbraid=[segreto tolto dalla scorta]&gclid=[segreto tolto dalla scorta]
