@@ -3,7 +3,7 @@
 Mario 21/11 20:52, parola per parola: «Mettimi le scelte nella pagina, tutte le migliori scelte con le opzioni, e quando clicco mi cambia la pagina corretta con quell'abbinamento. Però fallo bene per ogni hotel, clicco e mi cambia l'abbinamento, l'itinerario e tutto. Ok? E all'inizio mi deve scegliere nella pagina. Cioè deve essere molto chiaro, mi deve far vedere tutti gli alberghi con i pro, contro, le differenze eccetera, e poi mi deve mettere a scegliere in modo chiaro. Fammi capire bene le differenze, i soldi che perdo, i minuti che ci metto in più ad andare nei posti, quanta strada devo fare di più a piedi, i pro, i contro, valuta tutto.»
 → È la risposta alla DOMANDA 2 (C10): niente numero, la scelta la fa la pagina.
 
-Mario 21/11 ~21:12, parola per parola: «Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono ancora hotel, appartamenti, stanze, B&B molto validi e non le stai valutando.»
+Mario 21/11 20:59, parola per parola: «Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono ancora hotel, appartamenti, stanze, B&B molto validi e non le stai valutando.»
 → 2 aiutanti in più (#16): alloggi NUOVI vicino a Disney per 3 notti 14→17 (anche appartamenti, stanze, B&B; anche gli scartati solo per l'arrivo di domenica sera) e per la notte a Parigi 13→14 (anche fuori da Gare de Lyon, lungo RER A / metro 1 / metro 14). La scelta nella pagina deve reggere più dei 15 attuali: ogni alloggio con prezzo per 4 notti e/o per 3 notti; se un prezzo manca, quella combinazione si vede grigia con il motivo.
 
 ## Scelte prese (#16, perché)
@@ -27,5 +27,5 @@ Mario 21/11 ~21:12, parola per parola: «Ovviamente non mettere solo la lista de
 9. (dopo) Hotel Disney Cheyenne e altri con navetta come scelta per lun–mer.
 
 ## Stato
-- 21/11 ~21:05 (#16): piano scritto, aiutante dei prezzi (3 notti dei 15 + 4 hotel di Parigi) partito.
-- 21/11 ~21:15 (#16): partiti altri 2 aiutanti (ricerca larga Disney 3 notti, ricerca larga Parigi 1 notte). Codice non ancora toccato. Il deposito SNCF di Chessy (7–22) aiuta chi non può lasciare le valigie lunedì mattina.
+- 21/11 ~20:56 (#16): piano scritto, aiutante dei prezzi (3 notti dei 15 + 4 hotel di Parigi) partito.
+- 21/11 21:00 (#16): partiti altri 2 aiutanti (ricerca larga Disney 3 notti, ricerca larga Parigi 1 notte). Codice non ancora toccato. Il deposito SNCF di Chessy (7–22) aiuta chi non può lasciare le valigie lunedì mattina.
