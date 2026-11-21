@@ -2,11 +2,13 @@
 "account": "108763",
 "sessione": "d98ae7fca7e4",
 "giorno": "2026-11-21",
-"turni": 5,
-"peso": 621032,
-"uscita": 14306,
-"contesto_max": 169788,
-"anomalie": [],
+"turni": 6,
+"peso": 1182871,
+"uscita": 31859,
+"contesto_max": 274141,
+"anomalie": [
+"un turno ha aggiunto 103k token al contesto"
+],
 "blocchi": {
 "Stop 9 · Versione unita in questo turno:": 1,
 "Stop 10 · Promessa a Mario senza voce": 1,
@@ -39,19 +41,19 @@
 },
 "remota": "01WTjqUvDTBB",
 "aiutanti": 0,
-"strumenti": 26,
+"strumenti": 47,
 "bilancia": 2,
 "motori": {
-"opus": 349086,
+"opus": 910925,
 "sonnet": 271946
 },
 "grezzi": {
 "opus": [
-31,
-2509292,
-29053,
+62,
+5954533,
+132668,
 0,
-12362
+29915
 ],
 "sonnet": [
 8,
@@ -61,7 +63,7 @@
 1944
 ]
 },
-"costo": 1.7302,
+"costo": 3.5994,
 "costo_fredde": 0.6599,
 "memoria_scaduta": 1,
 "ricreati": 164977,
