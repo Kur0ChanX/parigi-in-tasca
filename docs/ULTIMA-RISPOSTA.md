@@ -1,19 +1,12 @@
-# Ultima risposta di Claude (21/11/2026 15:56 ora italiana)
+# Ultima risposta di Claude (21/11/2026 16:09 ora italiana)
 
-Ho capito: la pagina di dicembre era fredda e triste. La volevi calda, piena di mercatini e di luci. L'ho rifatta e ripubblicata sullo stesso link.
+Ho capito: dovevo ripartire dalle consegne e confrontare gli alloggi delle tue 28 foto di Booking col tuo criterio sui trasporti.
 
-🧠 Continuo con Opus 5.5 · Extra, come la sessione precedente · Fable: non serve, è un lavoro piccolo di grafica.
+🧠 Ho lavorato con Opus 5.5 · Extra, come la sessione precedente. Fable non serviva: era confronto e documenti.
 
+───
 ✅ FATTO
-- Pagina «Parigi e Disney a Natale» ripubblicata sullo stesso link: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap
-- **Colori**: ora caldi, con fondo color vin brulé, oro, verde abete e rosso. Il blu notte non c'è più.
-- **Apertura**: c'è una fila di casette del mercatino accese, con tende a righe, merce sul banco e …
-
-## Domande a Mario
-
-❓ DOMANDE
-**DOMANDA 1 · Com'è la pagina nuova?**
-📌 Di cosa parliamo: è la pagina del viaggio di dicembre, rifatta calda come hai chiesto. Foto 1: l'apertura, prima e dopo. Foto 2: la domenica e il tema chiaro. Con la tua risposta chiudo il lavoro o lo correggo.
-1 · Va bene così
-2 · Cambia qualcosa (dimmi cosa: più luci, altri colori, più casette…)
-Consiglio: aprila dal link sul telefono e scorri. Le luci e la neve si muovono, nelle foto no.
+- Ho guardato tutte le 28 foto: sono circa 60 alloggi.
+- Ho scoperto una cosa importante. Il «km dal centro» di Booking si conta dal paese di Montévrain, non dalla stazione.
+  - **2,4–2,8 km** dal centro = vicino al treno (la stazione RER A di Val d'Europe).
+  - **0,2–1,4 km** dal centro = lontano dal treno. Ci vuole il bus o 25–30 minuti a …
