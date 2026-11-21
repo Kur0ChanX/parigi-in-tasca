@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (21/11/2026 21:45 ora italiana)
+# Ultima risposta di Claude (21/11/2026 21:53 ora italiana)
 
-Nessuna novità per te: aspetto il tuo «ok» dal PC.
+Tutto salvato su GitHub; aspetto il tuo «sì».
