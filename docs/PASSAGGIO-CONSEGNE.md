@@ -44,7 +44,9 @@ Sessione attuale: #2 (dopo la #1 `session_01WTjqUtYZaKMxhjF5TrnL8N`, chiusa alla
 - Pacchetti Disney prenotati a meno di 30 giorni: forse pagamento intero subito (due pagine ufficiali discordano); non serve finché non si sceglie Disney.
 
 ## Ultimo messaggio di Mario
-«nella pagina tanti mercatini luci e atmosfera natalizia avvolgente non triste» (arrivato nella #1 dopo l'handoff → voce in `docs/DA-FARE.md` sezione 2, da fare subito)
+«aspetta le altre foto prima di pensare» (con 20 foto di Booking, ricerca «Moxy Paris Val d'Europe · 12 dic - 17 dic», prezzi per 5 notti: `archivio/2026-11-21-booking-12-17-dic/`; nota: il volo è dom 13, la ricerca parte dal 12)
+
+Prima: «nella pagina tanti mercatini luci e atmosfera natalizia avvolgente non triste» (arrivato nella #1 dopo l'handoff → voce in `docs/DA-FARE.md` sezione 2, da fare subito)
 
 Prima: «installa il kit  simbolo della torre va bene  ramo ok»
 
