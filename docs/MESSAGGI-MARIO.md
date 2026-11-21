@@ -2,10 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 18:33 · 01WTjqUwUueB
-Comunque lo vedo ancora molto confuso. Non lo so, va studiato meglio, è ancora un po' confuso. Non lo so, senza eliminare nulla volevo proprio impaginarlo meglio, cioè sono troppe cose a schermo, ti confonde un po', non riesci a capire che cosa sta succedendo, che cosa ti sta spiegando.
-No, andava bene la... Chi ti ha dato il permesso di cambiare la testa di Topolino? Fammi capire, da cosa è nata questa tua idea di rimettere la luna Normale.????!?!?
-
 ## 2026-11-21 18:34 · 01WTjqUwUueB
 La luna, falla sempre con la forma di topolino, ma con la trama proprio di luna, con la grafica della luna, stelle vicino. Come è fatta adesso quella tonda, però a forma di topolino, di Mickey Mouse, della Disney.
 
@@ -131,3 +127,10 @@ scusa non era per te
 
 ## 2026-11-21 22:30 · 01WTjqUvDTBB
 si ma dal 13 al 17 ricordati eh
+
+## 2026-11-21 23:23 · 01WTjqUvuvWh
+https://www.airbnb.it/rooms/1373321838576210343?unique_share_id=[segreto tolto dalla scorta]&viralityEntryPoint=1&s=76
+https://www.airbnb.it/rooms/5115238?unique_share_id=[segreto tolto dalla scorta]&viralityEntryPoint=1&s=76
+valuta tutto e poi publica 
+https://www.airbnb.it/rooms/1376052056754954936?unique_share_id=[segreto tolto dalla scorta]&viralityEntryPoint=1&s=76
+https://all.accor.com/booking/it/accor/hotel/5646?dateIn=2026-12-13&nights=4&compositions=2&stayplus=false&snu=false&accessibleRooms=false&hideWDR=false&productCode=null&hideHotelDetails=true&basketId=[segreto tolto dalla scorta]
