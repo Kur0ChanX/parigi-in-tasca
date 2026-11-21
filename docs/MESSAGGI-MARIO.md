@@ -2,12 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 17:25 · 01WTjqUxvERS
-Metti qui anche il ki space, quello che ti avevo consigliato io, che abbiamo guardato. Metti anche quello in confronto tra i costi e tutto. Poi metti che se clicco uno di quelli mi porta al discorso o qualche altra pagina, insomma, utile. Comunque rendila veramente facile e intuitiva a livello di visiva. Anche non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa, però non troppissime informazioni, cioè non ti sto dicendo di toglierle, ma di riorganizzarle meglio.
-
-## 2026-11-21 17:25 · 01WTjqUwT3Gs
-web app dopo aver risposto alla domanda della sessione precedente.
-
 ## 2026-11-21 17:34 · 01WTjqUwT3Gs
 ok
 
@@ -134,3 +128,9 @@ domande veloci  perché dici kinsoace domenica arrivate Spa chiusa?
 
 ## 2026-11-21 22:00 · 01WTjqUvDTBB
 Cerca su air B&B  qualcosa di interessante vicino a Disneyland
+
+## 2026-11-21 22:08 · 01WTjqUvDTBB
+aggiungi sezione air b e  b con i top migliori mettine diversi e pro contro info ecc ecc come hai sempre fatto aggiungi agli altri e publica
+
+## 2026-11-21 22:12 · 01WTjqUvDTBB
+aggiungi aiutanti per fare prima e publica
