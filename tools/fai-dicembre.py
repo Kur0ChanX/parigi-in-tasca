@@ -32,15 +32,15 @@ TESTA = """<!doctype html>
 <meta property="og:url" content="https://kur0chanx.github.io/parigi-in-tasca/dicembre/">
 <meta property="og:site_name" content="Parigi in tasca">
 <meta property="og:locale" content="it_IT">
-<meta property="og:image" content="https://kur0chanx.github.io/parigi-in-tasca/dicembre/anteprima.jpg?v=3">
+<meta property="og:image" content="https://kur0chanx.github.io/parigi-in-tasca/dicembre/anteprima.jpg?v=4">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Parigi di notte coi mercatini di Natale, la Torre Eiffel accesa e la luna piena: «Parigi e Disney a Natale, 13–17 dicembre 2026»">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="192x192" href="icona-192.png?v=4">
-<link rel="apple-touch-icon" href="icona-180.png?v=4">
+<link rel="icon" type="image/png" sizes="192x192" href="icona-192.png?v=5">
+<link rel="apple-touch-icon" href="icona-180.png?v=5">
 """
 
 CODA = """

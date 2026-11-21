@@ -8,3 +8,7 @@
 - La #10 l'aveva tolta da sola (personaggio protetto) e gli aveva detto no due volte. Rivisto: è la pagina personale di Mario, non si vende niente, la sagoma a 3 cerchi è un marchio Disney ma il rischio pratico per un uso così è basso. Mario ha deciso due volte: si fa. Se un giorno la pagina diventasse pubblica o a pagamento, si toglie.
 - Cosa: in icona e anteprima la luna diventa la sagoma (testa + 2 orecchie) con la trama della luna piena di adesso (crateri, sfumature, luce) e le stelline vicino. Script `tools/fai-icone-dicembre.js` (`luna()`); la versione a 3 cerchi della #10 è nella storia di git (PR #4).
 - Foto a Mario prima di pubblicare (cambia l'aspetto), poi `?v=` alzato in `tools/fai-dicembre.py` e nel manifest.
+
+## Stato
+- Mario 21/11 ~19:02: «Ma ti autorizzo io. Tanto lo devo utilizzare solo io questo progetto in 2 persone».
+- 21/11 ~19:10 (#11): fatta nel ramo (`luna()` di `tools/fai-icone-dicembre.js`; ?v= icone 5 in `tools/fai-dicembre.py` e nel manifest, anteprima 4), prove 24 VERO, foto `archivio/2026-11-21-luna-topolino/`. Si pubblica con C5 dopo l'ok di Mario (DOMANDA 4).
