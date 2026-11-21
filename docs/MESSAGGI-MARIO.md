@@ -37,3 +37,10 @@ E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello ch
 mandamelo con link web app da inviare ad amico 
 Spa posso intendere anche un hotel con una spa dentro, oppure con una jacuzzi dentro, un idromassaggio, ecco. Se ne vale la pena, abbiamo un po' di relax.
 dobbiamo sceglierlo In base a cosa scegliamo di quelli si trasforma la pagina. E mi raccomando, il mega consiglio sui mercatini, non dimenticartene, che per noi è importante appena arriviamo, vedere i migliori mercatini è il miglior giro da fare.
+
+## 2026-11-21 17:05 · 01WTjqUuDpVA
+Fai tutto di facile comprensione, a prova di stupido, eh?
+Beh, le notti le conti in base al biglietto del volo che ti ho mandato. Scusa, che domanda è?
+
+## 2026-11-21 17:06 · 01WTjqUuDpVA
+Allora, la spa la vogliamo fare o l'idromassaggio o insomma modalità relax è solo il primo giorno, poi gli altri 3 giorni ce li dedichiamo solo a Disneyland ed vogliamo essere comodi con i trasporti, ecco. Con i trasporti, zero stress, vogliamo proprio rilassarci a Disneyland.
