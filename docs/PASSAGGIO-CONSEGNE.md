@@ -58,6 +58,8 @@ Sessione attuale: #14 (dopo la #13 `session_01WTjqUwvARsjNcG2at72Bng`, chiusa al
 - Da verificare: navetta a chiamata del Relais Spa per tutti (non ufficiale), reception 24 ore del Crowne Plaza, fermata del bus 2234 e orario della domenica per Jungle Love, linea del bus del n. 7, ultime corse del 2233 per il n. 3, prezzo dell'Elysée sul sito ufficiale. Nella pagina sono segnati «non confermato».
 
 ## Ultimo messaggio di Mario
+«Dove non andare ormai che l'hai messo, lascialo. Però si può fare in modo che in base all'hotel che scegliamo mi dai il consiglio sui mercatini.»
+(21/11 ~19:47, dopo l'handoff → C8: «Dove NON andare» resta; consiglio sui mercatini che segue l'alloggio scelto.) Prima:
 «Nel senso, non dove non andare, però c'è un aiuto per i mercatini migliori, che strada prendere, che cosa guardare. E poi nella pagina la sezione mercatini di Natale, tipo un pulsante sopra, c'è per andare direttamente tutti i pulsanti nella schermata in alto, per andare direttamente nelle cose interessate, tipo scelta hotel, confronto, mercatini, preparazioni, non lo so, sto inventando, però una cosa così.»
 (21/11 ~19:45, dopo l'handoff → C8: più guida sui mercatini migliori, strada e cosa guardare; bottoni grandi in cima alla prima schermata per ogni parte. Risponde in parte alla DOMANDA 7 e tocca la DOMANDA 3.) Prima:
 «Scusa, la sezione più importante a mercatini con il percorso, dove andare, dove non andare, e il pulsante mercatini sopra, che era molto importante, non, lei l'ha fatto in modo superficiale.»
