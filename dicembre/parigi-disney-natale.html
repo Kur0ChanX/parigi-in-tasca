@@ -171,7 +171,7 @@ b,strong{font-weight:700}
 
 /* ---------- barre costi ---------- */
 .bars{display:grid;gap:var(--s4);margin-top:var(--s2)}
-.bar-row{display:grid;gap:6px}
+.bar-row{display:grid;gap:6px;color:inherit;text-decoration:none;border-radius:var(--r-md);padding:8px;margin:-8px;-webkit-tap-highlight-color:transparent}a.bar-row:hover,a.bar-row:focus-visible{background:var(--surface)}.bar-go{font-weight:700;color:var(--brand);white-space:nowrap}.card.flash{box-shadow:0 0 0 3px var(--focus)}
 .bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);flex-wrap:wrap}
 .bar-name{font-weight:700}
 .bar-name .rec{margin-left:6px;padding:5px 8px;font-size:.68rem}
@@ -498,9 +498,9 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 <div class="lights" data-n="22" aria-hidden="true"></div>
 
 <section id="costi" aria-labelledby="h-costi"><div class="wrap">
- <div class="sec-head"><p class="kicker">Quanto costa, sei modi</p><h2 id="h-costi">Da circa 1.040 € a 1.560 € in due, secondo l'alloggio. Gli hotel Disney costano molto di più.</h2></div>
+ <div class="sec-head"><p class="kicker">Quanto costa, sette modi: toccate una barra</p><h2 id="h-costi">Da circa 1.040 € a 1.560 € in due, secondo l'alloggio. Gli hotel Disney costano molto di più.</h2></div>
  <div class="mine is-rec mycost" id="myCost"></div>
- <div class="bars" id="bars" role="list"></div>
+ <div class="bars" id="bars"></div>
  <div class="legend" aria-hidden="true">
   <span><i class="s-h"></i>Alloggio vicino</span><span><i class="s-t"></i>Biglietti Disney</span><span><i class="s-p"></i>Pacchetto Disney (hotel + biglietti)</span><span><i class="s-r"></i>Trasporti locali</span>
  </div>
@@ -508,6 +508,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
   <p>Tutti i totali sono <span class="bd es">stima</span> per 2 persone. Ogni pezzo ha la sua etichetta nelle sezioni sotto.</p>
   <ul class="clean">
    <li><b>N. 1 Love N Chic:</b> 391 € + 544 € biglietti + 109 € trasporti = 1.044 €.</li>
+   <li><b>N. 2 Ki Space:</b> 465 € (prezzo della vostra app, non rimborsabile) + 544 € + 76 € trasporti (navetta gratis ai parchi) = 1.085 €. Col bus invece della navetta: 1.110 €.</li>
    <li><b>N. 4 Chez Stéphane &amp; Sophie:</b> 492 € + 544 € + 107 € = 1.143 €.</li>
    <li><b>N. 8 Moxy:</b> 524 € + 544 € + 107 € = 1.175 €.</li>
    <li><b>N. 8 Moxy con cancellazione gratuita:</b> circa 577 € + 544 € + 107 € = circa 1.228 €.</li>
@@ -796,10 +797,11 @@ drawGarland();
 
 /* ---------- barre dei costi ---------- */
 const SC=[
- {n:"N. 1 Love N Chic + biglietti",s:[["s-h",391,"alloggio 391 €"],["s-t",544,"biglietti 544 €"],["s-r",109.2,"trasporti 109 €"]],note:"Il più economico. Bus ogni giorno."},
- {n:"N. 4 Chez Stéphane & Sophie + biglietti",s:[["s-h",491.95,"alloggio 492 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"15–20 minuti a piedi dal treno."},
- {n:"N. 8 Moxy + biglietti",ref:1,s:[["s-h",524.2,"alloggio 524 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"Hotel a 8 minuti dal treno: è il riferimento per le differenze."},
- {n:"N. 12 Relais Spa + biglietti (il mio consiglio)",s:[["s-h",908,"alloggio 908 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"Spa inclusa, 5 minuti dal treno. Letto matrimoniale e cancellazione gratuita fino all'8/12."},
+ {id:1,n:"N. 1 Love N Chic + biglietti",s:[["s-h",391,"alloggio 391 €"],["s-t",544,"biglietti 544 €"],["s-r",109.2,"trasporti 109 €"]],note:"Il più economico. Bus ogni giorno."},
+ {id:2,n:"N. 2 Ki Space + biglietti",s:[["s-h",465,"alloggio 465 €"],["s-t",544,"biglietti 544 €"],["s-r",76.4,"trasporti 76 €"]],note:"Spa grande. Navetta gratis ai parchi, ma ogni 50 minuti. Non rimborsabile."},
+ {id:4,n:"N. 4 Chez Stéphane & Sophie + biglietti",s:[["s-h",491.95,"alloggio 492 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"15–20 minuti a piedi dal treno."},
+ {id:8,n:"N. 8 Moxy + biglietti",ref:1,s:[["s-h",524.2,"alloggio 524 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"Hotel a 8 minuti dal treno: è il riferimento per le differenze."},
+ {id:12,n:"N. 12 Relais Spa + biglietti (il mio consiglio)",s:[["s-h",908,"alloggio 908 €"],["s-t",544,"biglietti 544 €"],["s-r",107,"trasporti 107 €"]],note:"Spa inclusa, 5 minuti dal treno. Letto matrimoniale e cancellazione gratuita fino all'8/12."},
  {n:"Misto: 2 notti Cheyenne + 2 notti vicino",s:[["s-p",1102.78,"pacchetto 1.103 €"],["s-h",249,"2 notti Moxy 249 €"],["s-r",86.6,"trasporti 87 €"]],note:"Due cambi di hotel con le valigie."},
  {n:"Tutte e 4 le notti al Cheyenne",s:[["s-p",1970.24,"pacchetto 1.970 €"],["s-r",76.4,"trasporti 76 €"]],note:"Due giorni di biglietti inclusi ma non usati."}
 ];
@@ -807,9 +809,10 @@ const MAX=2100,REF=SC.find(c=>c.ref).s.reduce((a,b)=>a+b[1],0);
 {let h='';SC.forEach(c=>{const tot=c.s.reduce((a,b)=>a+b[1],0),d=tot-REF;
  const dl=c.ref?'<span class="bar-diff eq">riferimento</span>':`<span class="bar-diff ${d>0?'up':'dn'}">${d>0?'+':'−'}${fmt(Math.abs(d))}</span>`;
  const lab=c.s.map(x=>x[2]).join(', ');
- h+=`<div class="bar-row" role="listitem"><div class="bar-top"><span class="bar-name">${esc(c.n)}${c.rec?'<span class="rec">Consigliato</span>':''}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
+ const go=c.id?'#al-'+c.id:'#hoteldisney';
+ h+=`<a class="bar-row" href="${go}"><div class="bar-top"><span class="bar-name">${esc(c.n)}${c.rec?'<span class="rec">Consigliato</span>':''}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
  <div class="track" role="img" aria-label="${esc(c.n)}: circa ${fmt(tot)} (${lab})"><span class="grid-lines">${[500,1000,1500,2000].map(v=>`<i style="left:${v/MAX*100}%"></i>`).join('')}</span><span class="fill" style="width:${tot/MAX*100}%">${c.s.map(x=>`<i class="${x[0]}" style="width:${x[1]/tot*100}%"></i>`).join('')}</span></div>
- <p class="bar-note">${esc(c.note)}</p></div>`});
+ <p class="bar-note">${esc(c.note)} <span class="bar-go">${c.id?'Apri la scheda ›':'Perché non conviene ›'}</span></p></a>`});
  h+=`<div class="axis" aria-hidden="true">${[0,500,1000,1500,2000].map(v=>`<span style="left:${v/MAX*100}%">${v?grp(v)+' €':'0 €'}</span>`).join('')}</div>`;
  $('#bars').innerHTML=h;
  if(!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){$('#bars').classList.add('go');io.disconnect()}})},{threshold:.35});io.observe($('#bars'))}
@@ -875,7 +878,9 @@ const renderAl=()=>{const L=AL.filter(h=>FI==='tutti'||h.g.includes(FI)).sort(SO
 $('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;FI=b.dataset.f;renderAl()});
 $('#sort').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;SO=b.dataset.s;renderAl()});
 renderAl();
-$('#picks').addEventListener('click',e=>{const a=e.target.closest('a');if(a&&!document.querySelector(a.getAttribute('href'))){FI='tutti';renderAl()}});
+const toCard=e=>{const a=e.target.closest('a[href^="#al-"]');if(!a)return;const id=a.getAttribute('href');if(!document.querySelector(id)){FI='tutti';renderAl()}
+ const c=document.querySelector(id);if(c){c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash');setTimeout(()=>c.classList.remove('flash'),2400)}};
+$('#picks').addEventListener('click',toCard);$('#bars').addEventListener('click',toCard);
 
 /* ---------- giorni ---------- */
 const MOXY="Moxy Paris Val d'Europe, 2 Avenue de l'Europe, 77144 Montévrain",ORLY="Aéroport de Paris-Orly",GDL="Gare de Lyon, Paris",VDE="Gare de Val d'Europe, Serris",CH="Gare de Marne-la-Vallée Chessy",HDV="Hôtel de Ville, Paris",ND="Cathédrale Notre-Dame de Paris",SV="Square René-Viviani, Paris",SM="Place Saint-Michel, Paris",SG="Église de Saint-Germain-des-Prés, Paris",LV="Pyramide du Louvre, Paris",GL="Galeries Lafayette Paris Haussmann, 40 Boulevard Haussmann, Paris",PV="Place Vendôme, Paris",TU="Jardin des Tuileries, Paris",CE="Rond-Point des Champs-Élysées, Paris",FDR="Franklin D. Roosevelt, Paris",DP="Parc Disneyland, Chessy",DAW="Disney Adventure World, Chessy";
@@ -1146,7 +1151,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
   $('#chNote').innerHTML=CHO===MIO?`★ È il mio consiglio. Cambiatelo qui, oppure con «Usa questo nella pagina» nelle schede degli alloggi.`:`Avete scelto il n. ${CHO}. Il mio consiglio resta il n. ${MIO} ${esc(byId(MIO).n)}.`;
   $('#backMio').hidden=CHO===MIO;
   const MP=CHO===MIO&&h.pc,hp=MP?h.pc[0]:h.p,tot=hp!=null?hp+544+2*pp:null;
-  $('#myCost').innerHTML=`<span class="rec">${STAR}${CHO===MIO?'Il mio consiglio':'La vostra scelta'}</span><h3 class="mine-t"><span class="nb">${CHO}</span><span>${esc(h.n)}: ${tot!=null?'circa '+fmt(tot)+' in due':'prezzo dell\'alloggio sconosciuto'}</span></h3><p>Alloggio ${hp!=null?fmt(hp):'?'}${MP?' ('+h.pc[1].toLowerCase()+')':''} + biglietti Disney 544 € + trasporti locali ${fmt(2*pp)} ${B.es()}.${MP?' La tariffa più bassa, '+fmt(h.p)+', non è rimborsabile.':h.pc?' '+h.pc[1]+': circa '+fmt(h.pc[0]+544+2*pp)+'.':''}</p><p class="give">Cambiate alloggio in «Giorno per giorno» o nelle schede: questo conto si aggiorna da solo. Sotto, sei modi a confronto.</p>`;
+  $('#myCost').innerHTML=`<span class="rec">${STAR}${CHO===MIO?'Il mio consiglio':'La vostra scelta'}</span><h3 class="mine-t"><span class="nb">${CHO}</span><span>${esc(h.n)}: ${tot!=null?'circa '+fmt(tot)+' in due':'prezzo dell\'alloggio sconosciuto'}</span></h3><p>Alloggio ${hp!=null?fmt(hp):'?'}${MP?' ('+h.pc[1].toLowerCase()+')':''} + biglietti Disney 544 € + trasporti locali ${fmt(2*pp)} ${B.es()}.${MP?' La tariffa più bassa, '+fmt(h.p)+', non è rimborsabile.':h.pc?' '+h.pc[1]+': circa '+fmt(h.pc[0]+544+2*pp)+'.':''}</p><p class="give">Cambiate alloggio in «Giorno per giorno» o nelle schede: questo conto si aggiorna da solo. Sotto, sette modi a confronto: toccate una barra per la scheda.</p>`;
   $('#h-tr').textContent=`Biglietti singoli sul telefono: circa ${Math.round(pp)} € a testa con il n. ${CHO}.`;
   $('#trSun').innerHTML=`1 ticket Métro-Train-RER: RER A Gare de Lyon → ${SN[P.sunSt]} (uscendo per i bagagli il ticket precedente finisce)${bus?', poi 1 ticket bus da 2,05 €':''}`;
   $('#trSunV').textContent=eur(2.55+(bus?2.05:0));
