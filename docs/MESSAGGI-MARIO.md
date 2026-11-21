@@ -68,3 +68,7 @@ ok publica se abbiamo finito
 
 ## 2026-11-21 18:25 · 01WTjqUwUueB
 Aggiungimi quando clicco negli hotel anche la distanza con la mappa di Maps che mi mette l'hotel dai mercatini, l'hotel da Disney e l'hotel dall'aeroporto. Mi fa vedere anche su Maps o qualcosa di simile, una foto di Maps per capire dov'è.
+
+## 2026-11-21 18:33 · 01WTjqUwUueB
+Comunque lo vedo ancora molto confuso. Non lo so, va studiato meglio, è ancora un po' confuso. Non lo so, senza eliminare nulla volevo proprio impaginarlo meglio, cioè sono troppe cose a schermo, ti confonde un po', non riesci a capire che cosa sta succedendo, che cosa ti sta spiegando.
+No, andava bene la... Chi ti ha dato il permesso di cambiare la testa di Topolino? Fammi capire, da cosa è nata questa tua idea di rimettere la luna Normale.????!?!?
