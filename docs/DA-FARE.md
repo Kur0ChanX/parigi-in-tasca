@@ -4,7 +4,6 @@
 |---|---|---|---|
 
 ## 0. Aspetta Mario
-- 21/11 · 🛑 · 🟢 Principale 8 · Pagina più facile: va bene così? 📌 Di cosa parliamo: la pagina di dicembre riordinata (Ki Space nei costi, barre che portano alla scheda, schede e tappe che si aprono col tocco: sul telefono è lunga il 42 % in meno); foto in `archivio/2026-11-21-pagina-facile/`; serve per pubblicarla come web app: 1 · va bene, pubblica · 2 · cambia qualcosa (scrivi cosa). Consiglio: 1. Ferma solo la pubblicazione, non la preparazione della web app.
 - 21/11 · 🛑 · 🟢 Principale 4 · Quale alloggio prenotare (sezione «Alloggi» della pagina). 📌 Di cosa parliamo: dove dormire le 4 notti 13→17 vicino a Disneyland; si vede in cima alla sezione «Alloggi» della pagina; serve adesso perché i prezzi salgono e molte cancellazioni gratuite scadono il 29/11: 1 · n. 4 Chez Stéphane, spendere poco · 2 · n. 8 Moxy, tutto comodo · 3 · n. 12 Relais Spa, spa · 4 · n. 13 Jungle Love, romantico · 5 · un altro: scrivi il suo numero (1–15). Consiglio: 3 (n. 12 Relais Spa, camera con letto matrimoniale e cancellazione gratuita fino all'8/12, 908 €: spa domenica sera, lun–mer 5 minuti + 1 fermata; cambiato il 21/11 sera dopo «relax solo il primo giorno … trasporti zero stress», C2). Pagina: https://claude.ai/artifact/NKYKfdKA3Hj9MNABDp1Wap
 
 ## 1. Claude da solo
@@ -24,7 +23,7 @@
 - 👁 Lo vedi: nella sezione «Quanto costa» e negli alloggi della pagina di dicembre · prova: Mario tocca una barra e arriva alla scheda giusta, e trova la pagina più ordinata · Ki Space nel confronto dei costi, barre cliccabili, pagina più facile e meno piena (Mario 21/11 17:24 dopo l'handoff della #7, con foto `archivio/2026-11-21-foto-mario/1-confronto-costi-v7.jpg`: «Metti qui anche il ki space, quello che ti avevo consigliato io, che abbiamo guardato. Metti anche quello in confronto tra i costi e tutto. Poi metti che se clicco uno di quelli mi porta al discorso o qualche altra pagina, insomma, utile. Comunque rendila veramente facile e intuitiva a livello di visiva. Anche non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa, però non troppissime informazioni, cioè non ti sto dicendo di toglierle, ma di riorganizzarle meglio.»): n. 2 Ki Space nelle barre dei costi; ogni barra apre la scheda dell'alloggio; riorganizzare (meno a schermo, dettagli che si aprono toccando), senza togliere informazioni.
 
 ## 2. Claude dopo scelta o ok di Mario
-- 👁 Lo vedi: la pagina di dicembre riordinata sul sito, come web app · prova: Mario la apre dal telefono e la manda all'amico · Pubblicare la pagina facile (C3) come web app dopo l'ok di Mario alle foto (promessa del 21/11 17:3x: «La pubblico quando mi dici che la pagina ti va bene.»); intanto preparo la web app nel ramo.
+- 👁 Lo vedi: la pagina di dicembre riordinata sul sito, come web app · prova: Mario la apre dal telefono e la manda all'amico · Pagina facile (C3) pubblicata come web app dopo l'«ok» di Mario (promessa del 21/11 17:3x: «La pubblico quando mi dici che la pagina ti va bene.»): PR #3 unita il 21/11, https://kur0chanx.github.io/parigi-in-tasca/dicembre/ ; manca: Mario la apre dal telefono.
 - Pagina di dicembre: orari di uscita con l'hotel scelto, poi ripubblicare l'Artifact (sorgente `dicembre/parigi-disney-natale.html`).
 
 ## 3. Mario a mano

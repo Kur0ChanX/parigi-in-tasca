@@ -18,3 +18,4 @@
 - Ok di Mario alle foto (21/11 17:3x: «ok», dopo «mi serve il tuo ok per metterla online come web app»).
 - Web app (21/11): `dicembre/index.html` fatto da `tools/fai-dicembre.py` (intestazione: viewport, `noindex`, manifest, icone; in fondo il service worker), `dicembre/sw.js` (cassetto `parigi-natale-v1`), `dicembre/manifest.webmanifest`, icone `dicembre/icona-180/192/512.png` (abete con stella su cielo di notte). Difesa in `sw.js` di novembre: lascia stare `/dicembre/` (errore provato, riga in `docs/ERRORI.md`). Prova `node tools/prova-web-app.js`: 11 VERO.
 - Pubblicazione: ramo-copia da `main` con i soli file del sito (dicembre + `sw.js`), non il ramo comune (PR #2 resta in bozza: dentro ci sono anche archivio e appunti).
+- Pubblicata (21/11): PR #3 da `versione-dicembre` (ramo-copia da `main`, 7 file) unita in `main` (e112789); `main` riunito nel ramo di lavoro. L'Artifact su claude.ai resta alla v7: la pagina buona è la web app.
