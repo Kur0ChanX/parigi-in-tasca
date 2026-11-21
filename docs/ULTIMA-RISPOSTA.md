@@ -1,14 +1,3 @@
-# Ultima risposta di Claude (21/11/2026 16:26 ora italiana)
+# Ultima risposta di Claude (21/11/2026 16:35 ora italiana)
 
-Ho capito: va bene così, l'interruttore dei colori resta sotto il titolo.
-
-───
-✅ **FATTO**
-- Ho tolto la domanda dalla lista.
-- Adesso aspetto il secondo aiutante (hotel, B&B, appartamenti, stanze). Poi preparo le schede numerate degli alloggi e pubblico la pagina.
-
-───
-⚠️ Aspettano te: 3
-- 🛑 Principale 3 · Quante notti prenotare, dal 13 o dal 12…
-- Principale 1 · 21/11 · Sito
-- Principale 1 · 21/11 · Unione del ramo in main
+Correzione alla domanda 1: rispondi 1 · n. 4 Chez Stéphane · 2 · n. 8 Moxy · 3 · n. 12 Relais Spa · 4 · n. 13 Jungle Love · 5 · un altro numero da 1 a 15.
