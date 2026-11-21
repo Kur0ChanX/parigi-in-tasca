@@ -2,6 +2,7 @@
 """Rifà la web app di dicembre per il sito: dicembre/index.html = intestazione del sito + la pagina.
 
 La pagina si modifica SOLO in dicembre/parigi-disney-natale.html (la stessa che va su claude.ai).
+Icona e anteprima del link (WhatsApp, Telegram): node tools/fai-icone-dicembre.js (immagini nuove: alza ?v= qui sotto).
 Uso:
   python3 -I tools/fai-dicembre.py              rifà dicembre/index.html
   python3 -I tools/fai-dicembre.py --controlla  esce con 1 se index.html non è allineato (prima di pubblicare)
@@ -25,9 +26,21 @@ TESTA = """<!doctype html>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Natale">
+<meta property="og:title" content="Parigi e Disney a Natale · 13–17 dicembre">
+<meta property="og:description" content="Mercatini di Natale, alloggi a confronto e giorno per giorno, in 2 senza auto.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kur0chanx.github.io/parigi-in-tasca/dicembre/">
+<meta property="og:site_name" content="Parigi in tasca">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://kur0chanx.github.io/parigi-in-tasca/dicembre/anteprima.jpg?v=1">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Parigi di notte coi mercatini di Natale e la Torre Eiffel accesa: «Parigi e Disney a Natale, 13–17 dicembre 2026»">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="192x192" href="icona-192.png">
-<link rel="apple-touch-icon" href="icona-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icona-192.png?v=2">
+<link rel="apple-touch-icon" href="icona-180.png?v=2">
 """
 
 CODA = """
