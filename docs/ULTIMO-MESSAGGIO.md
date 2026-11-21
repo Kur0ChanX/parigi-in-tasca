@@ -1,3 +1,7 @@
-# Ultimo messaggio di Mario (21/11/2026 19:57 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 20:14 ora italiana)
 
-cosa è ?!?
+veloce
+link ora con immagine di condivisione corretta
+veloce
+veloce 
+veloceeeeeeeeeeeeeeeeeeeee
