@@ -49,7 +49,9 @@ Sessione attuale: #5 (dopo la #4 `session_01WTjqUxBAKZzuC3xHWyosiv`, chiusa alla
 - Da verificare: navetta a chiamata del Relais Spa per tutti (non ufficiale), reception 24 ore del Crowne Plaza, linea del bus di Jungle Love, prezzo dell'Elysée sul sito ufficiale.
 
 ## Ultimo messaggio di Mario
-«va bene» (risposta alla domanda «interruttore dei colori sotto il titolo»: scelta 1, va bene così)
+«E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.» (arrivato nella #4 dopo l'handoff → voce in `docs/DA-FARE.md` sezione 1: il mio consiglio unico sull'alloggio, nella pagina e nella domanda)
+
+Prima: «va bene» (risposta alla domanda «interruttore dei colori sotto il titolo»: scelta 1, va bene così)
 
 Prima: «Mettile tutti e due i colori selezionabili, dai. Sia quello vino, sia quello blu.» → interruttore Blu notte · Vin brulé, pubblicato
 
