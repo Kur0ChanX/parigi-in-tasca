@@ -1,12 +1,13 @@
 # Passaggio di consegne
 
-Sessione attuale: #18 (dopo la #17 `session_01WTjqUvCPBbm8KqjbGWDG3h`, chiusa alla soglia 21/11 21:28; la apre la #17 con `create_session` (catena 7 di 8)).
+Sessione attuale: #19 (dopo la #18 `session_01WTjqUvDTBBd1JEeep7v6m6`, chiusa alla soglia 21/11 22:05; la apre Mario (catena a 8 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`).
 
 - **Già deciso da Mario (non richiedere):** viaggio dom 13 → gio 17/12/2026 in 2, senza auto; dom mercatini a Parigi, lun–mer Disneyland; alloggio con voto sopra 8 e pulizia buona, comodo senza auto (niente taxi né Uber); vanno bene hotel, B&B, appartamenti, stanze; kit installato (21/11), icona 🗼, ramo `claude/parigi-ramo-definitivo`; pagina «un po' disneyana, un po' mercatini», sera romantica; DUE colori a scelta (Blu notte · Vin brulé, interruttore sotto il titolo: Mario «va bene» 21/11). Notti: 4, dal 13 al 17 («le notti le conti in base al biglietto del volo», 21/11). Relax SOLO il primo giorno (domenica), lun–mer solo Disney con trasporti zero stress; tutto «a prova di stupido» (21/11, dopo l'handoff della #6). Link per l'amico = **web app** sul sito (21/11 17:25); pagina riordinata approvata («ok», 17:34). **Luna a forma di Topolino** con la trama della luna e le stelline (Mario 18:55 «ti autorizzo io»): niente obiezioni sul marchio. Mappe e distanze dentro la scheda dell'alloggio (C5). **Luna-Topolino come la foto di Mario** (21/11 19:13, `archivio/2026-11-21-lune-topolino-dettagli/mario-esempio-luna-topolino.jpg`): 3 lune piene vere, beige.
 - **Da non rifare:** ricerca alloggi (#4, `alloggi_spa_comodi.md`, `alloggi_ricerca_ampia.md`, prezzi Booking 13→17 del 21/11), confronto delle 28 foto (`hotel_foto_booking_mario.md`), ricerca jacuzzi (`alloggi_jacuzzi.md`), rilettura tariffe del Relais Spa; nella pagina (tutto pubblicato): «Alloggi» 15 numerati, colori Blu notte · Vin brulé, consiglio n. 12 e domenica con la spa (C2), verdetto spa, mega consiglio dei mercatini, pagina che segue l'alloggio scelto (C1), Ki Space nei costi e barre che portano alla scheda (C3), icona e anteprima del link (C4); `add_repo` di RVC (vietato). #11: C5 riquadro «Dov'è» (`tools/fai-mappe-dicembre.py`, `dicembre/mappe/`) e C7 luna-Topolino con la trama (`luna()` di `tools/fai-icone-dicembre.js`): nel ramo, prove 24 VERO, foto mandate. #12: luna «come la foto di Mario» (`lunaFoto()` in `tools/luna-topolino.js`) e 3 versioni di prova (`lunaTopolino()`: argento, oro, con l'ombra; foto in `archivio/2026-11-21-lune-topolino-dettagli/lavoro/`). #14: pulsanti grandi in cima (`nav.go`, tolta la barra `.jump`), barra fissa `#topbar`, riquadro `#mkAl` (`mkAl()`), «🚶 La strada» nelle 7 tappe, n. 7 domenica veloce (`by22`): tutto online (v7 PR #8, v8 PR #9). #15: v10 online (PR #11): casette e Torre Eiffel intere scorrendo (`data-max`), costi in una colonna (classe `cresce` al posto di `go`), barra in alto piena; prove `tools/prova-scritte.js` e casette in `prova-web-app.js`. C10: prezzi 1 notte Parigi 13→14 + 3 notti 14→17 (4 gruppi) in `research_notes/…/alloggi_notte_parigi_3notti.md`: NON rifarli. #16: prezzi 3 notti 14→17 dei 15 + 4 hotel di Parigi (`alloggi_prezzi_3notti_15.md`), ricerca larga notte a Parigi (`alloggi_parigi_1notte_ampia.md`), ricerca larga 3 notti vicino a Disney (`alloggi_3notti_disney_nuovi.md`); sezione `#scegli` e motore della scelta (C11 pezzi 1–6). Già deciso (#16): consiglio ★ = Hotel Locomo + n. 8 Moxy; Zenitude ed East-Blue fuori (cauzione addebitata 7 giorni prima).
 - **Cosa preme a Mario adesso:** C11 «Scegli dove dormire»: impaginazione rifatta dalla #17 (righe che si aprono, 3 numeri in cima, ~5 schermate invece di ~15), nel ramo, NON pubblicata; aspetta la DOMANDA 7 (ok a pubblicare, foto `archivio/2026-11-21-c11-scegli-impaginazione/` mandate 21:27). Poi alloggi nuovi vicino a Disney (pezzo 9). Link attuale: `https://kur0chanx.github.io/parigi-in-tasca/dicembre/?v=10`.
 
-## Stato (21/11 21:28 ora italiana)
+## Stato (21/11 22:05 ora italiana)
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
 - #18 = sessione 8 di 8 della catena: `send_later` e `create_session` bloccati; la #19 la apre Mario da `docs/PROSSIMA-SESSIONE.md`. v11 ONLINE (PR #12, 21/11 21:33). Sveglie del 7/12 doppie (#16 e #17) non cancellabili.
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-principale-20261121-01WTjqUvCPBb/claude/parigi-ramo-definitivo.
 - Kit 43 · 19/11/2026 · Preferenze v38 installato, prove 43/43 verdi (verifica: `docs/kit-progetto/VERSIONE`; tutti i `tools/test-*.py` con `python3 -I`).
@@ -55,13 +56,18 @@ Prima: «mi raccomando studiati un impaginazione geniale non confusa» (21/11 ~2
 Prossimo E libero: E1.
 
 ## Motore e forza di pensiero
-Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Medio** (`medium`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
+Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-21 21:16 · [AVVIO] Sessione #17 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → avvio, scorta della #15 unita, sveglia del 7/12 rifatta, poi C11 impaginazione rifatta (DOMANDA 7)
+- 2026-11-21 21:29 · [AVVIO] Sessione #18 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → 
+- 2026-11-21 21:35 · riesci a impaginare per windows? → 
+- 2026-11-21 21:36 · ottimizza gli spazi per windows o MacBook → 
+- 2026-11-21 21:37 · la foto tagliata → 
+- 2026-11-21 21:43 · publica → 
+- 2026-11-21 21:52 · domande veloci perché dici kinsoace domenica arrivate Spa chiusa? → 
+- 2026-11-21 22:00 · Cerca su air B&B qualcosa di interessante vicino a Disneyland → 
 
 Ultimo, intero:
-> [AVVIO] Sessione #17 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
-> Leggi CLAUDE.md, docs/ERRORI.md e docs/PASSAGGIO-CONSEGNE.md; continua da sola dai «Prossimi passi».
+> Cerca su air B&B  qualcosa di interessante vicino a Disneyland
 
