@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* Disegna l'icona della web app di dicembre e l'immagine dell'anteprima del link (WhatsApp, Telegram).
-   Parigi di notte coi mercatini di Natale: Torre Eiffel accesa, casette con le tende a righe, festoni di lucine, neve.
+   Parigi di notte coi mercatini di Natale: Torre Eiffel accesa, casette con le tende a righe, festoni di lucine, neve,
+   luna a forma di testa di Topolino.
    Tutto disegnato qui (niente immagini prese da internet): si rifà uguale quando serve.
    Uso:  node tools/fai-icone-dicembre.js            scrive dicembre/icona-*.png e dicembre/anteprima.jpg
          node tools/fai-icone-dicembre.js <cartella>  scrive le stesse immagini in un'altra cartella (prove)  */
@@ -65,12 +66,12 @@ function neveCade(x, y, l, a, n, seme) {
   return out;
 }
 
-let lune = 0;
+/* Luna a forma di testa di Topolino (chiesta da Mario il 21/11): tre cerchi pieni color luna, la testa e due
+   orecchie, con l'alone; niente faccia. (cx, cy) = centro della testa, r = raggio della testa. */
 function luna(cx, cy, r) {
-  const id = `falce${++lune}`;
-  return `<mask id="${id}" maskUnits="userSpaceOnUse" x="${cx - r * 2}" y="${cy - r * 2}" width="${r * 4}" height="${r * 4}"><circle cx="${cx}" cy="${cy}" r="${r}" fill="#fff"/><circle cx="${f(cx + r * .42)}" cy="${f(cy - r * .28)}" r="${f(r * .86)}" fill="#000"/></mask>
-  <circle cx="${cx}" cy="${cy}" r="${r * 2.6}" fill="url(#aloneLuna)" opacity=".7"/>
-  <circle cx="${cx}" cy="${cy}" r="${r}" fill="${C.luna}" mask="url(#${id})"/>`;
+  const o = r * 0.6, dx = r * 0.95, dy = r * 0.85;
+  return `<circle cx="${cx}" cy="${f(cy - r * .25)}" r="${f(r * 3.1)}" fill="url(#aloneLuna)" opacity=".75"/>
+  <g fill="${C.luna}"><circle cx="${cx}" cy="${cy}" r="${r}"/><circle cx="${f(cx - dx)}" cy="${f(cy - dy)}" r="${f(o)}"/><circle cx="${f(cx + dx)}" cy="${f(cy - dy)}" r="${f(o)}"/></g>`;
 }
 
 /* Torre Eiffel: base a terra in (cx, base), alta h, larga l alla base. */
@@ -191,7 +192,7 @@ function scenaIcona() {
   return `<rect x="-400" y="-400" width="1312" height="1312" fill="url(#cielo)"/>
   <ellipse cx="256" cy="420" rx="330" ry="190" fill="url(#orizzonte)"/>
   ${stelle(0, 0, 512, 250, 70, 11, (x, y) => Math.abs(x - cx) < 46 && y > 40)}
-  ${luna(100, 100, 24)}
+  ${luna(150, 138, 46)}
   ${torre(cx, 404, 346, 192)}
   ${festone(-14, 226, cx - 13, 190, 60, 9, 0, 6.2)}
   ${festone(cx + 13, 190, 526, 226, 60, 9, 2, 6.2)}
@@ -216,7 +217,7 @@ function svgAnteprima() {
   <rect width="1200" height="630" fill="url(#cielo)"/>
   <ellipse cx="840" cy="560" rx="620" ry="260" fill="url(#orizzonte)"/>
   ${stelle(0, 0, 1200, 360, 150, 5, (x, y) => (x < 640 && y > 90 && y < 470) || (Math.abs(x - cx) < 70 && y > 60))}
-  ${luna(1112, 92, 30)}
+  ${luna(1086, 118, 46)}
   ${torre(cx, 522, 470, 262)}
   ${festone(560, 300, cx - 18, 238, 70, 10, 1, 7.5)}
   ${festone(cx + 18, 238, 1214, 300, 70, 10, 3, 7.5)}
