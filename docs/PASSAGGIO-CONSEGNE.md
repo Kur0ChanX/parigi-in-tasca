@@ -47,7 +47,8 @@ Sessione attuale: #18 (dopo la #17 `session_01WTjqUvCPBbm8KqjbGWDG3h`, chiusa al
 - C10 (letti 21/11 sera, senza Genius): Sleeping Belle 216 € canc. fino al 12/12 (letto «alla francese», circa 140 cm, stima); Moxy 3 notti 530 € canc. fino al 14/12; Relais Junior Suite 3 notti 598,80 € solo NR (Black Friday). Elysée esaurito su Booking per 14→17. Biglietti 544 € = non ufficiale.
 
 ## Ultimo messaggio di Mario
-«mi raccomando studiati un impaginazione geniale non confusa» (21/11 ~21:17, arrivato alla #16 dopo l'handoff) → C11 impaginazione rifatta (#17), DOMANDA 7.
+«quanto ti manca a publicare? / publica» (21/11 ~21:30, alla #17 dopo l'handoff → passato alla #18): risposta alla DOMANDA 7 = 1, pubblicare.
+Prima: «mi raccomando studiati un impaginazione geniale non confusa» (21/11 ~21:17, arrivato alla #16 dopo l'handoff) → C11 impaginazione rifatta (#17), DOMANDA 7.
 
 ## Numeri liberi
 Prossimo E libero: E1.
