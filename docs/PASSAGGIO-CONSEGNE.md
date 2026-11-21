@@ -69,7 +69,8 @@ Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o
 - 2026-11-21 19:42 · [AVVIO] Sessione #14 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → avvio, C8 v7 (PR #8)
 - 2026-11-21 19:51 · ok publica → risposta alla DOMANDA 8, già online
 - 2026-11-21 19:53 · Quando scrollo verso il basso i mercatini si nascondono. Quindi cioè, l'obiettiv… → barra in alto v8 (PR #9), conferma itinerario con prova
+- 2026-11-21 19:57 · cosa è ?!? → anteprima del link: spazi nel link, riga in ERRORI, link in riquadro
 
 Ultimo, intero:
-> Quando scrollo verso il basso i mercatini si nascondono. Quindi cioè, l'obiettivo di quest'app è capire qual è il miglior giro dei mercatini, che l'abbiamo capito, cioè me l'hai fatto vedere, e poi qual è la migliore opzione per dove andare a dormire, per andare a vedere i mercatini e per andare a Disneyland gli altri 3 giorni, per facilitare i trasporti, i costi, non spendere troppi costi in taxi, oppure che non ci mettiamo 1 ora e mezza con i trasporti per arrivare a Disneyland, arriviamo tardi. Insomma, un itinerario. Quindi mi confermi che una volta che scelgo l'hotel mi modifica l'itinerario?
+> cosa è ?!?
 
