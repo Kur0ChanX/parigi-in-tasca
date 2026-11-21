@@ -44,3 +44,6 @@ Beh, le notti le conti in base al biglietto del volo che ti ho mandato. Scusa, c
 
 ## 2026-11-21 17:06 · 01WTjqUuDpVA
 Allora, la spa la vogliamo fare o l'idromassaggio o insomma modalità relax è solo il primo giorno, poi gli altri 3 giorni ce li dedichiamo solo a Disneyland ed vogliamo essere comodi con i trasporti, ecco. Con i trasporti, zero stress, vogliamo proprio rilassarci a Disneyland.
+
+## 2026-11-21 17:25 · 01WTjqUwT3Gs
+web app dopo aver risposto alla domanda della sessione precedente.
