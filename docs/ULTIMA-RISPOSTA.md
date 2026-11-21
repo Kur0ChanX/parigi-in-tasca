@@ -1,29 +1,19 @@
-# Ultima risposta di Claude (21/11/2026 19:18 ora italiana)
+# Ultima risposta di Claude (21/11/2026 19:41 ora italiana)
 
-Ho capito la tua foto: testa e orecchie sono tre lune piene vere, color beige. Ho rifatto la luna così.
-
-───
-✅ **FATTO** (salvato su GitHub, non ancora online)
-- La foto 1 è la luna nuova. Testa e orecchie sono tre lune piene intere, ognuna con le sue macchie scure come la luna vera. Ha il colore beige della tua foto e le stelline vicino.
-- La foto 2 è la stessa luna dentro l'icona, grande e piccola come la vedi sul telefono.
-- L'ho disegnata io. La tua foto viene da Pinterest e copiarla vorrebbe dire usare la foto di un altro.
+Ho capito: la sezione Mercatini è la più importante e prima era fatta male. Mancavano il percorso, dove andare e dove no, e il bottone in alto.
 
 ───
-💡 **PARERE**
-- Nell'icona piccola la luna si riconosce, ma …
+✅ **FATTO**
+Hai ragione: una sezione Mercatini vera non c'era. C'era solo un riquadro nascosto dentro «Giorno per giorno», e un bottone «Mercatini» in alto non c'era. Adesso è online, dalle 19:41, e l'ho controllato sul sito vero:
+- **Bottone «🎄 Il giro dei mercatini»** dorato, sotto il titolo: si vede appena apri la pagina. È anche il primo nella barra delle sezioni.
+- **Il giro in 7 tappe**, da Notre-Dame agli Champs-Élysées, senza tornare …
 
 ## Domande a Mario
 
 ❓ **DOMANDE**
-**DOMANDA 5** · La luna nuova (foto 1 e 2) va bene?
-📌 Di cosa parliamo: la luna nell'icona dell'app e nell'anteprima quando mandi il link. Mi serve la risposta per metterla online.
-1 · Sì, mettila e pubblica.
-2 · Cambiare qualcosa: dimmi cosa (es. più grande).
-3 · Voglio vedere le altre 3 versioni che ho fatto prima (argento, oro, con l'ombra).
-Consiglio: **1**.
-
-⚠️ Aspettano te: 4
-- 🛑 Principale 4 · Quale alloggio prenotare
-- Principale 11 · come impaginare la pagina di dicembre
-- Principale 11 · mappe negli alloggi vanno bene
-- poi altre 1: tutte nella Bacheca delle 8:40
+- 🛑 **DOMANDA 2** (ancora aperta): quale alloggio prenoti? Ti consiglio il n. 12. Molte cancellazioni gratuite scadono il 29/11.
+- **DOMANDA 7**: la sezione Mercatini adesso va bene?
+  1 · va bene così
+  2 · aggiungi la mappa disegnata del giro con le tappe numerate
+  3 · altro: dimmi cosa manca
+  Consiglio: 2.
