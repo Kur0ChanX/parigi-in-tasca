@@ -145,7 +145,7 @@ b,strong{font-weight:700}
 .go a:active{transform:scale(.97)}
 @media (hover:hover){.go a:hover{background:rgb(255 255 255 / .14)}}
 .go a.hot{grid-column:1/-1;min-height:72px;font-size:1.15rem;font-weight:800;background:var(--lamp);color:var(--lamp-ink);border-color:transparent;box-shadow:0 0 0 4px rgb(246 201 100 / .18),0 10px 26px -10px rgb(246 201 100 / .6)}
-.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:6px;justify-content:center;padding:8px max(10px,env(safe-area-inset-left,0px));padding-top:calc(8px + env(safe-area-inset-top,0px));background:rgb(10 18 48 / .94);border-bottom:1px solid rgb(255 255 255 / .14);transform:translateY(-110%);transition:transform .25s ease}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:6px;justify-content:center;padding:8px max(10px,env(safe-area-inset-left,0px));padding-top:calc(8px + env(safe-area-inset-top,0px));background:rgb(10 18 48);border-bottom:1px solid rgb(255 255 255 / .14);transform:translateY(-110%);transition:transform .25s ease}
 .topbar.on{transform:none}
 .topbar a{flex:1 1 0;max-width:11rem;display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 8px;border-radius:12px;color:#F4F1FF;text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid rgb(255 255 255 / .2);white-space:nowrap}
 .topbar a.hot{background:var(--lamp);color:var(--lamp-ink);border-color:transparent;font-weight:800}
@@ -217,8 +217,8 @@ html{scroll-padding-top:72px}
 .fill i{display:block;height:100%}
 .fill i+i{box-shadow:inset 2px 0 0 var(--bg)}
 .s-h{background:var(--seg-hotel)}.s-t{background:var(--seg-ticket)}.s-p{background:var(--seg-pack)}.s-r{background:var(--seg-trans)}
-.bars.go .fill{animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
-.bars.go .bar-row:nth-child(2) .fill{animation-delay:.12s}.bars.go .bar-row:nth-child(3) .fill{animation-delay:.24s}.bars.go .bar-row:nth-child(4) .fill{animation-delay:.36s}.bars.go .bar-row:nth-child(5) .fill{animation-delay:.48s}.bars.go .bar-row:nth-child(6) .fill{animation-delay:.6s}
+.bars.cresce .fill{animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+.bars.cresce .bar-row:nth-child(2) .fill{animation-delay:.12s}.bars.cresce .bar-row:nth-child(3) .fill{animation-delay:.24s}.bars.cresce .bar-row:nth-child(4) .fill{animation-delay:.36s}.bars.cresce .bar-row:nth-child(5) .fill{animation-delay:.48s}.bars.cresce .bar-row:nth-child(6) .fill{animation-delay:.6s}
 @keyframes grow{from{transform:scaleX(.03)}to{transform:scaleX(1)}}
 .axis{position:relative;height:22px;margin-top:2px;font-size:.78rem;color:var(--mute);font-variant-numeric:tabular-nums}
 .axis span{position:absolute;top:4px;transform:translateX(-50%);white-space:nowrap}.axis span:last-child{transform:translateX(-100%)}
@@ -922,7 +922,7 @@ const MAX=2100,REF=SC.find(c=>c.ref).s.reduce((a,b)=>a+b[1],0);
  <p class="bar-note">${esc(c.note)} <span class="bar-go">${c.id?'Apri la scheda ›':'Perché non conviene ›'}</span></p></a>`});
  h+=`<div class="axis" aria-hidden="true">${[0,500,1000,1500,2000].map(v=>`<span style="left:${v/MAX*100}%">${v?grp(v)+' €':'0 €'}</span>`).join('')}</div>`;
  $('#bars').innerHTML=h;
- if(!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){$('#bars').classList.add('go');io.disconnect()}})},{threshold:.35});io.observe($('#bars'))}
+ if(!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){$('#bars').classList.add('cresce');io.disconnect()}})},{threshold:.35});io.observe($('#bars'))}
 }
 
 /* ---------- alloggi: 15 a confronto, numero fisso (ordinati per prezzo), filtri per desiderio ---------- */

@@ -112,3 +112,6 @@ Quando scrollo verso il basso i mercatini si nascondono. Quindi cioè, l'obietti
 
 ## 2026-11-21 19:57 · 01WTjqUtLt7R
 cosa è ?!?
+
+## 2026-11-21 20:06 · 01WTjqUvmMKr
+scritte sovrapposte è un lavoro certosino questo...
