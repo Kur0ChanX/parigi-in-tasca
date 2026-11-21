@@ -7,3 +7,10 @@ Dalle consegne: strade già scartate, col perché. Le più nuove restano in `doc
 - #11: nella prova, immagini con `loading="lazy"` fuori schermo non si caricano mai (prova bloccata): prima `scrollIntoView`, poi attesa con tempo massimo.
 - #12: usare la foto di Mario (presa da Pinterest) dentro l'icona: scartata, è la foto di un altro; la luna è disegnata da noi con le stesse forme e colori.
 - #12: `delete_trigger` della sveglia vecchia: bloccato dal filtro di sicurezza; funziona `update_trigger` con `enabled: false`.
+
+## Dalle consegne della #14 (spostate dalla #15)
+- Negozio ufficiale Disney e motore di prenotazione Disney con browser automatico: 403, bloccati. Prezzi dai siti non ufficiali concordi; il vero si legge alla cassa.
+- Booking dal computer senza accesso: non mostra lo sconto Genius né il prezzo «solo su mobile» di Mario (circa −12 %); il prezzo vero lo legge Mario nell'app.
+- Elenchi di Booking con browser automatico: pagina vuota; cambiare l'«user agent» = aggirare un blocco, vietato. Funziona `web_fetch` di Parallel Search sulle singole schede.
+- Pubblicare con la PR #2 (ramo comune): scartato, metteva sul sito anche archivio, messaggi e appunti; si pubblica con un ramo-copia da `main` coi soli file di `dicembre/` (+ `sw.js`).
+- Prova dei service worker su `127.0.0.1`: la guida di novembre si registra solo su `github.io` o `localhost`; `tools/prova-web-app.js` usa `localhost`.
