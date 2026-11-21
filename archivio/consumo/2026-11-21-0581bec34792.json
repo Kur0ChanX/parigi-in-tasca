@@ -1,0 +1,26 @@
+{
+"account": "108763",
+"sessione": "0581bec34792",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 348288,
+"anomalie": [],
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 5 · Notifica non letta (in coda": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"16:09 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Farà:». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura dei dati veri>», commit e push; poi c"
+],
+"Stop 5 · Notifica non letta (in coda": [
+"16:09 · Notifica non letta (in coda dalle 15:58: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+]
+},
+"remota": "01WTjqUtMTqK",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}

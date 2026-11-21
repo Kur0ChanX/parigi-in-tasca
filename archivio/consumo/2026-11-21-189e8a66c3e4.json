@@ -1,0 +1,46 @@
+{
+"account": "108763",
+"sessione": "189e8a66c3e4",
+"giorno": "2026-11-21",
+"turni": 3,
+"peso": 2024114,
+"uscita": 75410,
+"contesto_max": 271845,
+"anomalie": [
+"3 uscite di strumento enormi (596 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"avvio pesante: 167k token dopo le letture d'avvio (tetto 130k)",
+"34k token scritti in un turno",
+"1 uscite di strumento enormi (519 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"40k token scritti in un turno"
+],
+"remota": "01WTjqUvsd71",
+"aiutanti": 0,
+"strumenti": 74,
+"motori": {
+"opus": 2024114
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+137,
+14874650,
+127570,
+0,
+75410
+]
+},
+"costo": 5.5042,
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 2,
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"17:55 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Poi correggo io, e vi rifaccio la domanda sull'hotel con la pagina già sistemata.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove l",
+"18:05 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Lei metterà Topolino e pubblicherà subito, senza chiederti un altro ok, poi ti manderà le foto e il link.». Nella sua voce (o in una nuova) sc"
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"17:55 · Domanda a Mario poco chiara («❓ **DOMANDE** 🛑 **DOMANDA 1 · Vi piacciono l'icona e l'antep», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+]
+}
+}

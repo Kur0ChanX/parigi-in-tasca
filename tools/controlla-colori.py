@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Controlla che ogni var(--nome) usata in index.html sia definita da qualche parte (--nome:).
+"""Controlla che ogni var(--nome) usata in index.html (o nel file dato: es. dicembre/parigi-disney-natale.html) sia definita (--nome:).
 Nato da un errore del 20/11/2026: rinominati i colori, le fermate della mappa erano diventate nere."""
 import re, sys, pathlib
-s = pathlib.Path(__file__).resolve().parent.parent.joinpath("index.html").read_text(encoding="utf-8")
+radice = pathlib.Path(__file__).resolve().parent.parent
+s = (pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else radice / "index.html").read_text(encoding="utf-8")
 usate = set(re.findall(r"var\(--([a-zA-Z0-9-]+)", s))
 definite = set(re.findall(r"--([a-zA-Z0-9-]+)\s*:", s))
 mancano = sorted(usate - definite)

@@ -18,6 +18,11 @@ Sito: https://kur0chanx.github.io/parigi-in-tasca/ (GitHub Pages, ramo `main`, c
 - La mappa è uno schema SVG disegnato dallo script (coordinate in `S`), non in scala.
 - `<meta name="robots" content="noindex">`: la pagina contiene l'indirizzo dell'appartamento.
 
+## Web app di dicembre (13–17/12/2026)
+- Sito `/dicembre/`. Si cambia solo `dicembre/parigi-disney-natale.html`, poi `python3 -I tools/fai-dicembre.py` rifà `dicembre/index.html` (intestazione del sito, anteprima del link, service worker suo).
+- Icona (Parigi di notte coi mercatini) e anteprima per WhatsApp e Telegram (`dicembre/anteprima.jpg`, 1200×630): disegnate da `node tools/fai-icone-dicembre.js`; immagini cambiate → alzare il `?v=` in `tools/fai-dicembre.py` e nel manifest.
+- Prove prima di pubblicare: `python3 -I tools/fai-dicembre.py --controlla` e `node tools/prova-web-app.js`.
+
 ## Stato al 20/11/2026
 - Orari di apertura, prezzi 2026, lavori e chiusure ricontrollati il 20/11/2026 su fonti ufficiali (elenco in fondo alla pagina; Disney solo da un sito non ufficiale perché il sito Disney blocca i controlli automatici). I tempi di viaggio sono stime con margine.
 - Deciso: mercoledì 25 pomeriggio **Orangerie** alle 15:15 (rientro da Versailles col RER C fino a Musée d’Orsay, poi a piedi a Dior per le 17:00). Il Trianon è stato scartato: con il Trianon la Reggia si accorciava e l’arrivo da Dior era troppo tirato.
