@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (21/11/2026 18:34 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 18:55 ora italiana)
 
-La luna, falla sempre con la forma di topolino, ma con la trama proprio di luna, con la grafica della luna, stelle vicino. Come è fatta adesso quella tonda, però a forma di topolino, di Mickey Mouse, della Disney.
+Cosa stai dicendo che me l'hai disegnata in 3000 progetti? Ma ti autorizzo io. Tanto lo devo utilizzare solo io questo progetto in 2 persone, ma che decisioni prendi che non puoi farlo?
