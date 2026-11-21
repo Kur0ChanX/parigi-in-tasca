@@ -106,6 +106,14 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const id = document.querySelector('#bars a.bar-row').getAttribute('href');
     return !!document.querySelector(id + ' details.more[open] .dove .mappa img');
   }));
+  // Mario 21/11 ~20:00 «sono i mercatini che si nascondono»: scorrendo, le casette del disegno non escono mai dal bordo
+  const tagli = [];
+  for (const y of [0, 150, 300, 450, 600, 900]) {
+    await q.evaluate((y) => scrollTo(0, y), y); await q.waitForTimeout(250);
+    const r = await q.evaluate(() => { const s = document.querySelector('svg.scene').getBoundingClientRect(), c = document.getElementById('chalets').getBoundingClientRect(); return [c.bottom, s.bottom]; });
+    if (r[0] > r[1] + 0.5) tagli.push(y + ': ' + r.map(Math.round).join(' > '));
+  }
+  ok('testata: le casette dei mercatini restano intere scorrendo', tagli.length === 0); if (tagli.length) console.log(tagli);
   await q.reload(); await q.waitForTimeout(800);
   await c2.setOffline(true); await q.reload(); ok('amico senza rete: dicembre si apre', (await q.title()) === 'Parigi e Disney a Natale');
   ok('amico senza rete: mappa già vista si vede', await q.evaluate(async () => {
