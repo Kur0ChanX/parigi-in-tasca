@@ -127,3 +127,17 @@ Fonti: le schede Booking e Airbnb aperte il 21/11/2026 con le date 13→17 e 2 a
 - m² di n. 2, 3, 4; tipo di letto del n. 2 (letto o divano letto?) e del n. 3.
 - Cauzioni ed età minima degli Airbnb (le pagine lette non le mostrano).
 - Le pagine di ricerca Booking (Serris, Chessy, Bailly, Magny, Montévrain) non si aprivano con lo strumento: i candidati Booking vengono dalle liste per città e dai riquadri «Strutture simili» delle schede.
+
+## Prezzi 3 notti 14→17 (letti il 21–22/11/2026 verso mezzanotte, 2 adulti)
+Airbnb con il browser; Booking con lettura della pagina (Booking blocca il browser automatico: «You have been detected as a robot»). Nella pagina: n. 25–28 = Airbnb 1–4, n. 29 = ARIANE 1, n. 30 = Residhome.
+
+| n. | Alloggio | Totale 14→17 | Cancellazione | Note |
+|---|---|---|---|---|
+| 25 | Airbnb Disney/Montévrain/Village Nature | **301 € in totale** | gratuita entro il 30/11; rimborso parziale entro il 7/12 | — |
+| 26 | Airbnb Ottimo monolocale 5 min | **306 € in totale** | gratuita entro il 9/12; rimborso parziale prima del 14/12 | **si dorme su un divano letto** («Dove dormirai»: «Zona soggiorno: 1 divano letto») |
+| 27 | Airbnb Appartamento Confort | **352 € in totale** (prima 429 €) | gratuita entro il 13/12; rimborso parziale prima del 14/12 | camera 1: matrimoniale · camera 2: 2 singoli · salotto: divano letto |
+| 28 | Airbnb Appartamento Disney con parcheggio | **415 € in totale** | gratuita entro il 13/12; rimborso parziale prima del 14/12 | «0 € oggi» |
+| 29 | ARIANE 1 (Booking) | **512 €** (include tasse e costi) | gratuita prima del 9/12; non si paga niente prima del 7/12 | appartamento con 1 camera e balcone |
+| 30 | Residhome (Booking) | **582 €** con cancellazione gratuita fino alle 18:00 del 14/12; **500 €** non rimborsabile | — | Appartamento Familiare 34 m², matrimoniale alla francese + 2 divani letto; colazione 16 € a parte. Con colazione: 678 € (cancellabile) / 644 € (non rimb.). Executive 28 m²: 558 € non rimb., 649 € cancellabile |
+
+Non letto: dettaglio pulizia e tasse degli Airbnb; cosa succede dopo la cancellazione gratuita su Booking (n. 29, 30).
