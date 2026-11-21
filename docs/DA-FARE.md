@@ -7,11 +7,12 @@
 - 🟡 Principale 1 · 21/11 · Hotel 13–17/12: prezzo del Moxy nell'app Booking; poi scelta 1 Moxy · 2 Ki Space · 3 altro (pagina «Parigi e Disney a Natale»).
 - 🟡 Principale 1 · 21/11 · Sito: 1 sostituire la guida di novembre con dicembre · 2 lasciarla · 3 tenere tutti e due i viaggi.
 - 🟡 Principale 1 · 21/11 · Unione del ramo in `main` (pubblica sul sito anche appunti e pagina di dicembre): 1 unisci tutto · 2 aspetta.
+- 🟡 Principale 2 · 21/11 · Pagina di dicembre più calda: foto `archivio/foto-dicembre/2026-11-21-pagina-calda-apertura.jpg` e `…-domenica-e-chiaro.jpg`; 1 va bene · 2 cambia qualcosa (dimmi cosa).
 
 ## 1. Claude da solo
 
 ## 2. Claude dopo scelta o ok di Mario
-- Pagina di dicembre, grafica (Mario 21/11, dopo l'handoff): «nella pagina tanti mercatini luci e atmosfera natalizia avvolgente non triste» → più casette e luci, colori caldi (oro, rosso, verde abete) al posto del blu notte freddo; ripubblicare sullo stesso link.
+- 👁 Lo vedi · Pagina di dicembre più calda (Mario 21/11: «nella pagina tanti mercatini luci e atmosfera natalizia avvolgente non triste»): fatta e pubblicata sullo stesso link (versione 3, 21/11); si chiude quando Mario la guarda e dice che va bene.
 - Pagina di dicembre: orari di uscita con l'hotel scelto, poi ripubblicare l'Artifact (sorgente `dicembre/parigi-disney-natale.html`).
 
 ## 3. Mario a mano
