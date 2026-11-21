@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-- 🚀 Online: v6 · 🟢 Principale 13 · 21/11 20:05 · sezione Mercatini
+- 🚀 Online: v6 · 🟢 Principale 13 · 21/11 19:41 · sezione Mercatini
 - 🧪 In prova: nessuna
 - ⏳ Dopo: nessuna
 
