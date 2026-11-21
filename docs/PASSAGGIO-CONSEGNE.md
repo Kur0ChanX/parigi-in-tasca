@@ -54,6 +54,9 @@ Sessione attuale: #20 (dopo la #19 `session_01WTjqUvuvWhyzPCDSS9NZRG`, chiusa al
 - C10 (letti 21/11 sera, senza Genius): Sleeping Belle 216 € canc. fino al 12/12 (letto «alla francese», circa 140 cm, stima); Moxy 3 notti 530 € canc. fino al 14/12; Relais Junior Suite 3 notti 598,80 € solo NR (Black Friday). Elysée esaurito su Booking per 14→17. Biglietti 544 € = non ufficiale.
 
 ## Ultimo messaggio di Mario
+Link `online-reservations.com/?hotelid=14974972…` (21/11 ~23:30, dopo l'handoff; intermediario, non sito ufficiale) → passato alla #20, da valutare con gli altri.
+«valuta tutto e poi publica» con 3 link Airbnb (rooms 1373321838576210343, 5115238, 1376052056754954936) e 1 di Accor (hotel 5646, 13→17, 4 notti, 2 adulti) (21/11 ~23:25, dopo l'handoff) → passato alla #20 con send_message; vale anche come sì alla DOMANDA 11.
+Prima:
 «[AVVIO] Sessione #19 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e docs/PASSAGGIO-CONSEGNE.md; continua da sola dai «Prossimi passi».» (21/11 23:04) → avvio, pezzo 7, DOMANDA 11.
 Prima (alla #18): «si ma dal 13 al 17 ricordati eh».
 
