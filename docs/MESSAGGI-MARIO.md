@@ -2,27 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 17:25 · 01WTjqUxvERS
-Metti qui anche il ki space, quello che ti avevo consigliato io, che abbiamo guardato. Metti anche quello in confronto tra i costi e tutto. Poi metti che se clicco uno di quelli mi porta al discorso o qualche altra pagina, insomma, utile. Comunque rendila veramente facile e intuitiva a livello di visiva. Anche non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa, però non troppissime informazioni, cioè non ti sto dicendo di toglierle, ma di riorganizzarle meglio.
-
-## 2026-11-21 17:25 · 01WTjqUwT3Gs
-web app dopo aver risposto alla domanda della sessione precedente.
-
-## 2026-11-21 17:34 · 01WTjqUwT3Gs
-ok
-
-## 2026-11-21 17:46 · 01WTjqUwT3Gs
-Sì, questa app conta che ci serve principalmente per i mercatini di Natale e per scegliere il miglior hotel in base agli spostamenti, il prezzo, comodità, eccetera, i servizi.
-Per quello dobbiamo ancora scegliere l'hotel, perché ci stai aiutando tu. Guarda se è tutto perfetto per aiutarci e basta.
-Certo che come icona potevi fare tipo um, Parigi piena di mercatini di Natale, fatto bene, pieno di luci, di decorazioni, potevi farla così l'icona. E metti anche l'immagine se la invio su Telegram e su WhatsApp, allegato al link.
-
-## 2026-11-21 18:03 · 01WTjqUvsd71
-aggiungi anche topolino di Disney a forma di luna nello sfondo nell'icona e immagine 
-e poi publica
-
-## 2026-11-21 18:23 · 01WTjqUwUueB
-ok publica se abbiamo finito
-
 ## 2026-11-21 18:25 · 01WTjqUwUueB
 Aggiungimi quando clicco negli hotel anche la distanza con la mappa di Maps che mi mette l'hotel dai mercatini, l'hotel da Disney e l'hotel dall'aeroporto. Mi fa vedere anche su Maps o qualcosa di simile, una foto di Maps per capire dov'è.
 
@@ -134,3 +113,21 @@ domande veloci  perché dici kinsoace domenica arrivate Spa chiusa?
 
 ## 2026-11-21 22:00 · 01WTjqUvDTBB
 Cerca su air B&B  qualcosa di interessante vicino a Disneyland
+
+## 2026-11-21 22:08 · 01WTjqUvDTBB
+aggiungi sezione air b e  b con i top migliori mettine diversi e pro contro info ecc ecc come hai sempre fatto aggiungi agli altri e publica
+
+## 2026-11-21 22:12 · 01WTjqUvDTBB
+aggiungi aiutanti per fare prima e publica
+
+## 2026-11-21 22:22 · 01WTjqUvDTBB
+quanto manca?
+
+## 2026-11-21 22:23 · 01WTjqUvDTBB
+puoi dirmi gli hotel per iscritto quelli validi trovati su air
+
+## 2026-11-21 22:27 · 01WTjqUvDTBB
+https://www.airbnb.it/rooms/1233363305858745902?unique_share_id=[segreto tolto dalla scorta]&viralityEntryPoint=1&s=76
+
+## 2026-11-21 22:28 · 01WTjqUvDTBB
+scusa non era per te
