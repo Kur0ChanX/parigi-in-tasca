@@ -16,3 +16,4 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C7 | Principale 12 | Luna a forma di Topolino con la trama della luna, in icona e anteprima | `tools/fai-icone-dicembre.js`, `dicembre/`, `docs/lavori-in-corso/C7-luna-topolino.md` | 21/11 |
 | C8 | Principale 14 | Sezione «Mercatini» col giro, dove andare e dove no, bottone in alto | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C8-mercatini.md` | 21/11 |
 | C9 | Principale 15 | Testata: casette intere e Torre Eiffel visibile scorrendo; scritte sovrapposte nei costi e barra in alto (v10), prove automatiche | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js` | 21/11 |
+| C11 | Principale 16 | La pagina fa scegliere dove dormire (domenica a Parigi o no + hotel vicino a Disney) e cambia giorni, costi e tutto | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C11-scelta-alloggio-pagina.md` | 21/11 |
