@@ -42,7 +42,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   await ctx.setOffline(true);
   await p.goto(B); ok('senza rete: novembre apre novembre', (await p.title()) === nov);
   await p.goto(B + 'dicembre/'); ok('senza rete: dicembre apre dicembre', (await p.title()) === 'Parigi e Disney a Natale');
-  ok('senza rete: 7 barre dei costi', (await p.$$('#bars a.bar-row')).length === 7);
+  ok('senza rete: 8 barre dei costi', (await p.$$('#bars a.bar-row')).length === 8);
   await ctx.close();
   // L'amico: apre solo dicembre
   const c2 = await b.newContext({ viewport: { width: 390, height: 844 } }); const q = await c2.newPage();
@@ -104,11 +104,24 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   });
   const male = dove.filter((x) => !(x.img && x.righe === 3 && x.tempi && x.maps && x.segno && x.posizione));
   ok('Dov\'è: 15 schede con mappa, 3 distanze e Maps', male.length === 0); if (male.length) console.log(male);
-  ok('Dov\'è: la barra dei costi apre la scheda già con la mappa', await q.evaluate(async () => {
-    document.querySelector('#bars a.bar-row').click(); await new Promise((r) => setTimeout(r, 300));
-    const id = document.querySelector('#bars a.bar-row').getAttribute('href');
-    return !!document.querySelector(id + ' details.more[open] .dove .mappa img');
+  ok('Dov\'è: «Scheda» nella scelta apre la scheda già con la mappa', await q.evaluate(async () => {
+    const a = document.querySelector('#scD a[href^="#al-"]'); a.click(); await new Promise((r) => setTimeout(r, 300));
+    return !!document.querySelector(a.getAttribute('href') + ' details.more[open] .dove .mappa img');
   }));
+  // C11 (Mario 21/11 20:52 «quando clicco mi cambia la pagina … l'itinerario e tutto»)
+  const sc = await q.evaluate(async () => {
+    const w = () => new Promise((r) => setTimeout(r, 250)), txt = (s) => (document.querySelector(s) || {}).textContent || '';
+    const pick = async (k) => { document.querySelector(`#scegli [data-sc="${k}"]`).click(); await w(); };
+    await pick('4n-8'); await pick('4n-12');
+    const a ={ dom: txt('#p-dom'), url: location.search, tot: txt('#brTot'), mk: txt('#mkAl') };
+    await pick('lo-12'); await pick('lo-8');
+    const b ={ dom: txt('#p-dom'), lun: txt('#p-lun'), url: location.search, tot: txt('#brTot'), mk: txt('#mkAl'), on: document.querySelectorAll('#scegli .sc-o.on').length, ris: txt('#scRis') };
+    return { a, b };
+  });
+  ok('scelta: 4 notti al n. 12 → domenica con la spa e gli armadietti', /Spa dell'hotel/.test(sc.a.dom) && /Ritiro bagagli/.test(sc.a.dom) && /scelta=4n-12/.test(sc.a.url));
+  ok('scelta: Locomo + Moxy → domenica senza armadietti né RER la sera', /Valigie in hotel: Hotel Locomo/.test(sc.b.dom) && !/Ritiro bagagli/.test(sc.b.dom) && !/RER A fino a/.test(sc.b.dom));
+  ok('scelta: Locomo + Moxy → lunedì con check-out e RER A con le valigie', /Check-out e RER A con le valigie/.test(sc.b.lun) && /Valigie al Moxy/.test(sc.b.lun));
+  ok('scelta: totale, mercatini, link e riepilogo cambiano', sc.a.tot !== sc.b.tot && /Hotel Locomo/.test(sc.b.mk) && /scelta=lo-8/.test(sc.b.url) && sc.b.on === 2 && /Soldi, in due/.test(sc.b.ris));
   // Mario 21/11 ~20:00 «sono i mercatini che si nascondono»: scorrendo, le casette del disegno non escono mai dal bordo
   const tagli = [];
   for (const y of [0, 150, 300, 450, 600, 900]) {
