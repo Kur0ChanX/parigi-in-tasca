@@ -1,5 +1,5 @@
-# Ultima risposta di Claude (21/11/2026 19:41 ora italiana)
+# Ultima risposta di Claude (21/11/2026 19:42 ora italiana)
 
-La DOMANDA 2 riguarda dove dormire le 4 notti, dal 13 al 17, vicino a Disneyland. Le scelte sono in cima alla sezione «Alloggi». Conviene decidere presto perché molte cancellazioni gratuite scadono il 29/11.
+I've opened a new session (chain 3 of 8) to keep this chat light. Answers go there: https://claude.ai/code/[segreto tolto dalla scorta]
 
-Aspetto la tua risposta.
+Handoff done, reply here or in the new one.
