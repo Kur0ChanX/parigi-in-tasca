@@ -5,7 +5,7 @@
 
 ## Nastro delle versioni
 - 🚀 Online: v14 · 🟢 Principale 20 · 21/11 23:43 · mappe e 2 alloggi
-- 🧪 In prova: nessuna
+- 🧪 In prova: v15 · 🟢 Principale 20 · ordine e Staycity
 - ⏳ Dopo: nessuna
 
 ## 0. Aspetta Mario
