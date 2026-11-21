@@ -32,3 +32,10 @@ va bene
 
 ## 2026-11-21 16:35 · 01WTjqUxBAKZ
 E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.
+
+## 2026-11-21 17:05 · 01WTjqUuDpVA
+Fai tutto di facile comprensione, a prova di stupido, eh?
+Beh, le notti le conti in base al biglietto del volo che ti ho mandato. Scusa, che domanda è?
+
+## 2026-11-21 17:06 · 01WTjqUuDpVA
+Allora, la spa la vogliamo fare o l'idromassaggio o insomma modalità relax è solo il primo giorno, poi gli altri 3 giorni ce li dedichiamo solo a Disneyland ed vogliamo essere comodi con i trasporti, ecco. Con i trasporti, zero stress, vogliamo proprio rilassarci a Disneyland.
