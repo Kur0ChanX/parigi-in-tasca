@@ -1,4 +1,5 @@
 <title>Parigi e Disney a Natale</title>
+<script>try{if(localStorage.getItem('palette')==='vino')document.documentElement.dataset.palette='vino'}catch(e){}</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7,14 +8,15 @@
 /* Layout: una colonna di lettura (max 48rem) dentro bande a tutta larghezza; hero notturno con un mercatino di casette
    illuminate davanti al castello, festoni di lampadine, giorni come app con barra in basso su telefono.
    Dark-first, sera romantica: cielo blu notte pieno di stelle, oro delle lampadine, abete, rosso dei tendoni, azzurro ghiaccio.
-   Tema chiaro: celeste. Le stelle su tutta la pagina solo nel tema scuro (--stars-op). */
+   Tema chiaro: celeste. Le stelle su tutta la pagina solo nel tema scuro (--stars-op).
+   Seconda tavolozza «Vin brulé» (la prima versione): data-palette="vino" sulla radice, scelta dall'interruttore in alto. */
 :root{
  --bg:#0A1230;--surface:#111C42;--surface-2:#1A2853;--ink:#F1F5FF;--mute:#B3C0E3;--rule:#2B3B6E;
  --brand:#A9CBFF;--brand-ink:#0A1230;--lamp:#F6C964;--lamp-text:#F6C964;--lamp-ink:#241703;
  --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
  --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(169 203 255 / .15);
  --night-1:#16296A;--night-2:#050A1F;--night-ink:#F4F7FF;--night-mute:#C9D4F2;--sil-1:#141D47;--sil-2:#0F173A;--sil-3:#2C3F86;--win:#F6C964;--snow:#FFFFFF;
- --ember:#FFC27A;--tower:#D9A24A;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#0B1233;--moon:#FFF4D6;--stars-op:1;--flight-bg:rgb(8 14 40 / .78);
+ --ember:#FFC27A;--tower:#D9A24A;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#0B1233;--moon:#FFF4D6;--moon-op:1;--stars-op:1;--flight-bg:rgb(8 14 40 / .78);
  --seg-hotel:#F6C964;--seg-ticket:#4FBF86;--seg-pack:#EE5A66;--seg-trans:#8E9CC2;
  --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#3B4A7A;--walkt:#FFFFFF;
  --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
@@ -43,6 +45,37 @@
  --mood-market:rgb(200 140 20 / .08);--mood-magic:rgb(36 71 166 / .08);
  --wire:#9DB0D6;--bk-1:rgb(246 190 80 / .18);--bk-2:rgb(90 140 255 / .14);--bk-3:rgb(150 120 255 / .08);--stars-op:0;color-scheme:light}
 
+/* tavolozza «Vin brulé» (quella di prima): si sceglie con l'interruttore in alto */
+:root[data-palette="vino"]{
+ --bg:#210F14;--surface:#2E171D;--surface-2:#3D2228;--ink:#FFF3E6;--mute:#D6BCB0;--rule:#55303A;
+ --brand:#FFB0C4;--brand-ink:#2A0B16;--lamp:#F6C964;--lamp-text:#F6C964;--lamp-ink:#241703;
+ --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
+ --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(255 176 196 / .15);
+ --night-1:#3A1224;--night-2:#14070C;--night-ink:#FFF3E6;--night-mute:#E6CDBF;--sil-1:#2F0F22;--sil-2:#2A0E1A;--sil-3:#6A2740;--win:#F6C964;--snow:#FFFFFF;
+ --ember:#FF9A52;--tower:#B8743C;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#2A120E;
+ --seg-hotel:#F6C964;--seg-ticket:#4FBF86;--seg-pack:#EE5A66;--seg-trans:#A8918A;
+ --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#5B3A35;--walkt:#FFFFFF;
+ --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
+ --snowground:#F6ECE6;--snowshade:#E0C9C0;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
+ --mood-market:rgb(242 96 106 / .18);--mood-magic:rgb(255 176 196 / .16);
+ --wire:#6A4234;--bk-1:rgb(246 201 100 / .16);--bk-2:rgb(242 96 106 / .17);--bk-3:rgb(63 174 122 / .12);
+ --moon:#FFF4D6;--moon-op:0;--stars-op:0;--flight-bg:rgb(32 10 18 / .78);color-scheme:dark}
+@media (prefers-color-scheme:light){:root[data-palette="vino"]:not([data-theme="dark"]){
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#A08A82;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}}
+:root[data-palette="vino"][data-theme="light"]{
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#1F8A56;--seg-pack:#C2343F;--seg-trans:#A08A82;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{margin:0;position:relative;z-index:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -81,6 +114,10 @@ b,strong{font-weight:700}
 .hero .kicker{color:var(--lamp)}
 .hero h1{font-size:clamp(2.45rem,1.5rem + 5.5vw,4.4rem);font-weight:800;margin-top:var(--s3);letter-spacing:-.025em}
 .hero h1 .gold{color:var(--lamp)}
+.pal{display:inline-flex;gap:4px;padding:4px;margin-top:var(--s3);border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .16)}
+.pal button{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:var(--night-ink);font:700 .95rem var(--text);cursor:pointer;transition:background-color .2s,color .2s,transform .15s}
+.pal button:active{transform:scale(.96)}
+.pal button[aria-pressed="true"]{background:var(--lamp);color:var(--lamp-ink)}
 .hero-meta{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
 .chip{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 12px;border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .14);font-weight:600;font-size:.95rem;color:var(--night-ink)}
 .flights{display:grid;grid-template-columns:1fr 1fr;gap:1px;border-radius:var(--r-md);overflow:hidden;background:rgb(255 255 255 / .14);max-width:36rem}
@@ -315,6 +352,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
   <p class="kicker">dom 13 – gio 17 dicembre 2026</p>
   <h1>Parigi e Disney <span class="gold">a Natale</span></h1>
   <div class="hero-meta"><span class="chip">2 persone · senza auto</span><span class="chip">4 notti</span></div>
+  <div class="pal" role="group" aria-label="Colori della pagina"><button type="button" data-pal="blu" aria-pressed="true">🌙 Blu notte</button><button type="button" data-pal="vino" aria-pressed="false">🍷 Vin brulé</button></div>
  </div>
  <svg class="scene" viewBox="0 0 800 290" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
   <defs>
@@ -332,7 +370,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
   <ellipse cx="400" cy="250" rx="560" ry="150" fill="url(#hglow)"/>
   <!-- strato lontano: tetti di Parigi e la Torre Eiffel accesa -->
   <g class="par" data-depth="0.04">
-   <circle cx="216" cy="80" r="44" fill="url(#mglow)"/><circle cx="216" cy="80" r="13" style="fill:var(--moon)" mask="url(#moonm)"/>
+   <g style="opacity:var(--moon-op)"><circle cx="216" cy="80" r="44" fill="url(#mglow)"/><circle cx="216" cy="80" r="13" style="fill:var(--moon)" mask="url(#moonm)"/></g>
    <g id="roofs" style="fill:var(--sil-3)"></g>
    <ellipse cx="262" cy="170" rx="46" ry="70" fill="url(#kglow)" opacity=".55"/>
    <path d="M242 265 Q256 210 260 150 L262 128 L264 150 Q268 210 282 265 H272 Q262 236 252 265Z" style="fill:var(--tower)"/>
@@ -889,20 +927,29 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
  const L=st.children;L[0].style.backgroundImage=tile(520,42,.35,.95,.22,.6)+','+tile(770,26,.45,1.15,.28,.7);
  L[1].style.backgroundImage=tile(610,12,.8,1.35,.6,1,1);L[2].style.backgroundImage=tile(880,11,.9,1.6,.6,1,1)}}
 
+/* ---------- interruttore dei colori: Blu notte / Vin brulé (scelta ricordata su questo telefono) ---------- */
+const VINO=()=>document.documentElement.dataset.palette==='vino';
+const palBtns=[...document.querySelectorAll('.pal button')];
+const setPal=(v,save)=>{if(v==='vino')document.documentElement.dataset.palette='vino';else delete document.documentElement.dataset.palette;
+ palBtns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.pal===(v==='vino'?'vino':'blu'))));
+ if(save){try{localStorage.setItem('palette',v)}catch(e){}}document.dispatchEvent(new Event('palette'))};
+palBtns.forEach(b=>b.addEventListener('click',()=>setPal(b.dataset.pal,true)));setPal(VINO()?'vino':'blu',false);
+
 /* ---------- cielo dell'intestazione: stelle, stelle cadenti, neve, luci, arco di scintille ---------- */
 const cv=$('#sky'),hero=$('#top');
 if(cv&&cv.getContext){
  const ctx=cv.getContext('2d');let W=0,H=0,dpr=1,flakes=[],glows=[],stars=[],shoot=null,nextShoot=2.2,arc=[],t0=performance.now(),run=false,vis=true,raf=0;
  const size=()=>{dpr=Math.min(devicePixelRatio||1,2);W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
   const ns=Math.round(Math.min(280,W*H/1500));stars=Array.from({length:ns},()=>{const r=.35+Math.pow(Math.random(),3)*1.55;return {x:Math.random()*W,y:H*.88*Math.pow(Math.random(),1.35),r,b:.35+Math.random()*.65,sp:.6+Math.random()*1.8,p:Math.random()*6.28,g:r>1.25}});
-  const n=Math.round(Math.min(48,W*H/16000));flakes=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,v:.15+Math.random()*.45,w:Math.random()*6.28}));
-  const GC=['246,201,100','246,201,100','255,214,150','150,190,255','150,190,255','190,170,255'];glows=Array.from({length:24},()=>({x:Math.random()*W,y:Math.random()*H*.7,r:8+Math.random()*34,p:Math.random()*6.28,c:GC[Math.floor(Math.random()*GC.length)]}))};
+  const n=VINO()?Math.round(Math.min(90,W*H/9000)):Math.round(Math.min(48,W*H/16000));flakes=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,v:.15+Math.random()*.45,w:Math.random()*6.28}));
+  const GC=VINO()?['246,201,100','246,201,100','255,150,96','255,140,120','255,176,196','143,227,184']:['246,201,100','246,201,100','255,214,150','150,190,255','150,190,255','190,170,255'];glows=Array.from({length:24},()=>({x:Math.random()*W,y:Math.random()*H*.7,r:8+Math.random()*34,p:Math.random()*6.28,c:GC[Math.floor(Math.random()*GC.length)]}))};
  const sceneMap=()=>{const s=document.querySelector('.scene');const r=s.getBoundingClientRect(),hr=hero.getBoundingClientRect();const sc=Math.max(r.width/800,r.height/290);const ox=r.left-hr.left+(r.width-800*sc)/2,oy=r.top-hr.top+(r.height-290*sc);return (x,y)=>[ox+x*sc,oy+y*sc]};
  /* fuochi di scintille sopra il castello: tre al caricamento, poi uno ogni tanto */
  const LAUNCH=[[440,200,452,62],[562,205,582,72],[505,150,505,30],[420,210,410,90],[585,215,612,96]];
  const COL=['#FFE7A3','#FFFFFF','#BFD8FF','#FFE7A3'];
  let rockets=[],sparks=[],nextAuto=9;
- const fire=(k,t)=>rockets.push({k,t0:t,dur:1.05,c:COL[k%COL.length]});
+ const COLV=['#FFE7A3','#FFFFFF','#FFB0C4','#9FE8C0'];
+ const fire=(k,t)=>{const C=VINO()?COLV:COL;rockets.push({k,t0:t,dur:1.05,c:C[k%C.length]})};
  [[0,.35],[1,1.05],[2,1.75]].forEach(([k,d])=>fire(k,d));
  const fireworks=(t)=>{const m=sceneMap();
   if(t>nextAuto){fire(Math.floor(Math.random()*LAUNCH.length),t);if(Math.random()<.5)fire(Math.floor(Math.random()*LAUNCH.length),t+.4);nextAuto=t+6+Math.random()*4}
@@ -913,10 +960,10 @@ if(cv&&cv.getContext){
   for(let i=sparks.length-1;i>=0;i--){const s=sparks[i];s.x+=s.vx;s.y+=s.vy;s.vx*=.975;s.vy=s.vy*.975+.025;s.l-=.014;if(s.l<=0){sparks.splice(i,1);continue}ctx.globalAlpha=Math.min(1,s.l*1.2);ctx.fillStyle=s.c;ctx.fillRect(s.x-s.s/2,s.y-s.s/2,s.s,s.s)}
   ctx.globalAlpha=1};
  const draw=(now)=>{const t=(now-t0)/1000;ctx.clearRect(0,0,W,H);
-  for(const s of stars){const a=s.b*(.5+.5*Math.sin(t*s.sp+s.p));ctx.globalAlpha=Math.max(.06,a);ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.28);ctx.fill();
+  if(!VINO())for(const s of stars){const a=s.b*(.5+.5*Math.sin(t*s.sp+s.p));ctx.globalAlpha=Math.max(.06,a);ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.28);ctx.fill();
    if(s.g){ctx.globalAlpha=a*.55;ctx.fillStyle='#DCE6FF';const L=s.r*4.2;ctx.fillRect(s.x-L,s.y-.35,L*2,.7);ctx.fillRect(s.x-.35,s.y-L,.7,L*2)}}
   ctx.globalAlpha=1;
-  if(!RM){if(!shoot&&t>nextShoot){const dir=Math.random()<.5?1:-1;shoot={x:W*(dir>0?.08+Math.random()*.45:.47+Math.random()*.45),y:H*(.04+Math.random()*.22),dx:dir*Math.cos(.42),dy:Math.sin(.42),len:80+Math.random()*70,t0:t,dur:.95};nextShoot=t+4.5+Math.random()*5}
+  if(!RM&&!VINO()){if(!shoot&&t>nextShoot){const dir=Math.random()<.5?1:-1;shoot={x:W*(dir>0?.08+Math.random()*.45:.47+Math.random()*.45),y:H*(.04+Math.random()*.22),dx:dir*Math.cos(.42),dy:Math.sin(.42),len:80+Math.random()*70,t0:t,dur:.95};nextShoot=t+4.5+Math.random()*5}
    if(shoot){const u=(t-shoot.t0)/shoot.dur;if(u>=1)shoot=null;else{const d=u*shoot.len*2.4,hx=shoot.x+shoot.dx*d,hy=shoot.y+shoot.dy*d,tx=hx-shoot.dx*shoot.len,ty=hy-shoot.dy*shoot.len,a=Math.sin(u*Math.PI);
     const gr=ctx.createLinearGradient(tx,ty,hx,hy);gr.addColorStop(0,'rgba(220,232,255,0)');gr.addColorStop(1,`rgba(255,255,255,${(.9*a).toFixed(3)})`);ctx.strokeStyle=gr;ctx.lineWidth=1.6;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(tx,ty);ctx.lineTo(hx,hy);ctx.stroke();
     ctx.globalAlpha=a;ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(hx,hy,1.7,0,6.28);ctx.fill();ctx.globalAlpha=1}}}
@@ -931,6 +978,7 @@ if(cv&&cv.getContext){
  const stop=()=>{run=false;cancelAnimationFrame(raf)};
  size();draw(t0+1600);
  addEventListener('resize',()=>{size();if(!run)draw(performance.now())},{passive:true});
+ document.addEventListener('palette',()=>{size();if(!run)draw(performance.now())});
  if(!RM){if('IntersectionObserver' in window)new IntersectionObserver(e=>{vis=e[0].isIntersecting;vis?start():stop()}).observe(hero);
   document.addEventListener('visibilitychange',()=>document.hidden?stop():start());start();
   /* parallasse leggero della scena */
