@@ -63,7 +63,7 @@ Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal regist
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-21 17:05 · [AVVIO] Sessione #7 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cla… → 
+- 2026-11-21 17:05 · [AVVIO] Sessione #7 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cla… → avvio fatto; scorta della #5 unita; C2 fatto (consiglio n. 12 Relais Spa, domenica con la spa) e versione 7 pubblicata
 
 Ultimo, intero:
 > [AVVIO] Sessione #7 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
