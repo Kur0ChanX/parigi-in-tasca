@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-- 🚀 Online: v12 · 🟢 Principale 18 · 21/11 21:44 · pagina per PC
+- 🚀 Online: v13 · 🟢 Principale 18 · 21/11 22:47 · Airbnb vicino Disney
 - 🧪 In prova: nessuna
 - ⏳ Dopo: nessuna
 
@@ -13,7 +13,7 @@
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
-- 👁 Lo vedi: nella web app di dicembre, filtro «Airbnb» e n. 16–20 nella scelta dell'alloggio, link `?v=13` · prova: Mario apre il link e tocca il filtro «Airbnb» · Sezione Airbnb coi migliori, diversi, pro e contro, aggiunti agli altri, pubblicata (Mario 21/11 22:08: «aggiungi sezione air b e b con i top migliori mettine diversi e pro contro info ecc ecc come hai sempre fatto aggiungi agli altri e publica»; 22:10 «aggiungi aiutanti per fare prima e publica»). In corso: 1 aiutante sulla pagina; poi prove, versione v13, link e notifica sul telefono (stima ~22:45).
+- 👁 Lo vedi: nella web app di dicembre, filtro «Airbnb» e n. 16–20 nella scelta dell'alloggio, link `?v=13` · prova: Mario apre il link e tocca il filtro «Airbnb» · Sezione Airbnb coi migliori, diversi, pro e contro, aggiunti agli altri, pubblicata (Mario 21/11 22:08: «aggiungi sezione air b e b con i top migliori mettine diversi e pro contro info ecc ecc come hai sempre fatto aggiungi agli altri e publica»; 22:10 «aggiungi aiutanti per fare prima e publica»). Fatto (#18): v13 online (PR #14), 6 Airbnb n. 16–21, prove 34/34 e 20/20; manca: Mario la vede sul telefono.
 - 👁 Lo vedi: sul PC (Windows o MacBook) la web app di dicembre col menù a sinistra, contenuto largo e testata intera · prova: Mario la apre sul suo PC (`?v=12`) e scrive «ok» o manda una foto · Pagina per PC (Mario 21/11 21:35–21:37: «riesci a impaginare per windows?», «ottimizza gli spazi per windows o MacBook», «la foto tagliata»). Fatto (#18): v12 online (PR #13), prove 29/29 e 20/20 anche a 1470 e 1920 px; manca: Mario la vede sul PC vero.
 - 👁 Lo vedi: nella scheda di Ki Space e nella domanda «N. 12 o n. 2?» della web app, «arrivate verso le 22:30 (stima, navetta da confermare)» · prova: Mario rilegge la frase · Frase troppo sicura (Mario 21/11 21:52: «perché dici kinsoace domenica arrivate Spa chiusa?»): il 22:30 è un calcolo (RER delle 21:08/21:23 + navetta ogni 50 min, orario non ufficiale). Da correggere nei 3 punti (`spa:`, `con:`, domanda del confronto) alla prossima versione.
 - 👁 Lo vedi: il 7/12 un solo messaggio di ricontrollo prima di partire (treni, scioperi, volo) · prova: Mario legge il messaggio · Sveglia del 7/12 rifatta dalla #17 (`trig_01WLZG77twJrNjVRuvgC85rE`); la vecchia (`trig_01WKYt5jL4JvvWe6oUFnTtSJ`, della #16) non si è potuta spegnere (permesso negato): se arrivano due messaggi, uno si ignora.
