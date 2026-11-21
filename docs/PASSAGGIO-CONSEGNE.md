@@ -51,7 +51,11 @@ Sessione attuale: #6 (dopo la #5 `session_01WTjqUubYgzDaGVKWcJe9n8`, chiusa alla
 - Da verificare: navetta a chiamata del Relais Spa per tutti (non ufficiale), reception 24 ore del Crowne Plaza, linea del bus di Jungle Love, prezzo dell'Elysée sul sito ufficiale.
 
 ## Ultimo messaggio di Mario
-«E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.» (arrivato nella #4 dopo l'handoff → voce in `docs/DA-FARE.md` sezione 1: il mio consiglio unico sull'alloggio, nella pagina e nella domanda; fatto dalla #5: n. 8 Moxy, versione 5; voce 👁 aperta finché Mario lo vede)
+«mandamelo con link web app da inviare ad amico 
+Spa posso intendere anche un hotel con una spa dentro, oppure con una jacuzzi dentro, un idromassaggio, ecco. Se ne vale la pena, abbiamo un po' di relax.
+dobbiamo sceglierlo In base a cosa scegliamo di quelli si trasforma la pagina. E mi raccomando, il mega consiglio sui mercatini, non dimenticartene, che per noi è importante appena arriviamo, vedere i migliori mercatini è il miglior giro da fare.» (arrivato nella #5 dopo l'handoff → 4 voci nuove in `docs/DA-FARE.md` sezione 1: link per l'amico, spa anche jacuzzi/idromassaggio, pagina che cambia secondo l'alloggio scelto, mega consiglio sui mercatini)
+
+Prima: «E comunque metti poi il tuo consiglio poi, che va a togliere, insomma, quello che avresti fatto tu anche.» (arrivato nella #4 dopo l'handoff → voce in `docs/DA-FARE.md` sezione 1: il mio consiglio unico sull'alloggio, nella pagina e nella domanda; fatto dalla #5: n. 8 Moxy, versione 5; voce 👁 aperta finché Mario lo vede)
 
 Prima: «va bene» (risposta alla domanda «interruttore dei colori sotto il titolo»: scelta 1, va bene così)
 
