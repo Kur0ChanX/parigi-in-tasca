@@ -1,21 +1,15 @@
-# Ultima risposta di Claude (21/11/2026 16:51 ora italiana)
+# Ultima risposta di Claude (21/11/2026 17:05 ora italiana)
 
-Ho capito: nel tuo ultimo messaggio ci sono 4 cose. La spa può essere anche una jacuzzi. Vuoi il «mega consiglio» sui mercatini. La pagina deve cambiare secondo l'alloggio scelto. E vuoi un link «web app» da mandare all'amico.
+🧠 Opus · Extra
 
-🧠 Continuo con Opus 5.5 · Extra, come la sessione di prima. Fable non serve: è ricerca più una funzione della pagina, senza dati delicati.
+Ho fatto le tue 4 richieste nella pagina (versione 6). Sul link della pagina però c'è ancora la versione 5. La pubblica la sessione nuova come primo passo: questa era arrivata al limite di memoria.
 
 ───
 ✅ **FATTO**
-- Avvio fatto. Ho unito la copia di riserva della sessione #4: nel registro mancava il tuo messaggio delle 16:35.
-- Le 4 richieste sono scritte in un posto solo e salvate su GitHub.
-- Un aiutante sta cercando …
+- **Mega consiglio dei mercatini:** è in cima alla domenica e nel riassunto «In breve». È un giro solo: Notre-Dame, Saint-Germain, Galeries Lafayette al tramonto, Vendôme, Tuileries la sera, Champs-Élysées. Dice anche cosa saltare (foto 1).
+- **Spa o jacuzzi:** nei giorni dei parchi non vale la pena. Tutte le spa della zona chiudono entro le 22:00, come i parchi. …
 
 ## Domande a Mario
 
 ❓ **DOMANDE**
-🛑 Ancora aperte: le **notti**, dal 13 o dal 12 (consiglio: 1, dal 13). E **quale alloggio** (consiglio: Moxy, finché non arriva la risposta sulla jacuzzi).
-
-🛑 **DOMANDA nuova · Link per l'amico**
-A cosa serve: scegliere come l'amico apre la pagina dal telefono. Questa domanda prende il posto di quelle su «Sito» e «Unione».
-1. **Web app sul sito**, accanto alla guida di novembre, che resta com'è. Il link si apre su ogni telefono senza account, si mette sulla schermata Home come un'app e funziona anche senza rete.
-2. **Link della pagina su claude.ai.** Lo attivi tu dal browser, …
+Quando rispondi, la sessione nuova ti rifà le domande una per volta. Per le notti le scelte sono: 1 · dal 13 al 17 · 2 · dal 12 al 17.

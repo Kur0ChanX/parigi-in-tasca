@@ -8,11 +8,23 @@
 "contesto_max": 203902,
 "anomalie": [],
 "blocchi": {
-"Stop 5 · Notifica non letta (in coda": 1
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 15 · There are untracked files in": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1
 },
 "esempi_blocchi": {
 "Stop 5 · Notifica non letta (in coda": [
 "16:51 · Notifica non letta (in coda dalle 16:45: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"16:51 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Lo metto in evidenza come «»: un giro solo, le 3 tappe da non perdere e cosa saltare.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <do"
+],
+"Stop 15 · There are untracked files in": [
+"16:51 · There are untracked files in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"16:51 · Domanda a Mario poco chiara («❓ **DOMANDE** 🛑 Ancora aperte: le **notti**, dal 13 o dal 12», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso); mancano le sce"
 ]
 },
 "remota": "01WTjqUuDpVA",
