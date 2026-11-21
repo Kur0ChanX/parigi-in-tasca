@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (21/11/2026 20:56 ora italiana)
+# Ultima risposta di Claude (21/11/2026 21:17 ora italiana)
 
-Ho scritto la promessa nella lista delle cose da fare. Riparto appena l'aiutante mi porta i prezzi.
+La promessa sull'impaginazione nuova è segnata nella lista delle cose da fare, così la #17 non la perde.
