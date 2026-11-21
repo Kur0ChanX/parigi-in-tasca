@@ -82,6 +82,13 @@ Cosa stai dicendo che me l'hai disegnata in 3000 progetti? Ma ti autorizzo io. T
 ## 2026-11-21 19:09 · 01WTjqUutmHT
 mandami le lune a forma di topolino creale con dettagli da luna ma a forma di topolino
 
+## 2026-11-21 19:20 · 01WTjqUutmHT
+e le foto delle modifiche che hai fatto 
+Metti questa con un effetto intorno, carino, professionale, per renderla un po' viva. Poi fai gli ultimi aggiornamenti che ti ho detto e pubblica.
+e mettila anche nella home animata, insomma, mettila in qualche modo che ci sta bene, cambiali un po' il colore, insomma, valuta tu la grandezza, insomma.
+Rendila un pochettino più luminosa, ecco.
+E mi sembra un po' troppo grande, come luna, rispetto al contesto.
+
 ## 2026-11-21 19:35 · 01WTjqUwvARs
 publica
 
