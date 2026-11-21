@@ -6,6 +6,7 @@
 ## 0. Aspetta Mario
 - 21/11 · 🛑 · 🟡 Principale 3 · Quante notti prenotare, dal 13 o dal 12 dicembre: 1 dal 13 al 17 (4 notti, come il volo) · 2 dal 12 al 17 (5 notti, come la ricerca nelle foto).
 - 🟡 Principale 1 · 21/11 · Sito: 1 sostituire la guida di novembre con dicembre · 2 lasciarla · 3 tenere tutti e due i viaggi.
+- 🟢 Principale 4 · 21/11 · Pagina di dicembre blu notte (stelle, luna, stelle cadenti; chiaro = celeste): va bene così? 1 sì · 2 più chiara, celeste · 3 cambia altro (scrivi cosa). Foto: `archivio/2026-11-21-pagina-blu/confronto-blu.jpg`. ⏭ vado col 1.
 - 🟡 Principale 1 · 21/11 · Unione del ramo in `main` (pubblica sul sito anche appunti e pagina di dicembre): 1 unisci tutto · 2 aspetta.
 
 ## 1. Claude da solo
