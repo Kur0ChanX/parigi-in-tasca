@@ -47,13 +47,14 @@ ALLOGGI = {
     7: (48.879138, 2.751376, 'IGN'), 8: (48.855342, 2.769222, 'IGN'), 9: (48.854412, 2.770828, 'OSM'),
     10: (48.852326, 2.765107, 'IGN'), 11: (48.855533, 2.808091, 'IGN'), 12: (48.857193, 2.773043, 'IGN'),
     13: (48.843224, 2.792680, 'IGN'), 14: (48.870489, 2.787769, 'IGN'), 15: (48.855587, 2.775849, 'IGN'),
+    22: (48.854226, 2.792897, 'IGN'),  # All Suites, 16 rue de Magellan, Serris (IGN, letto il 21/11/2026)
 }
 VDE = (48.855639, 2.773812)      # Gare de Val d'Europe (IGN)
 CH = (48.869921, 2.782744)       # Gare de Marne-la-Vallée–Chessy, davanti ai parchi (IGN)
 ND = (48.852122, 2.347539)       # Square René-Viviani, mercatino di Notre-Dame (OSM)
 ORLY = (48.730060, 2.367831)     # Aeroporto di Orly (OSM)
 # Stazione che usa ogni alloggio (la stessa dei tempi nella pagina, DV): VDE o CH
-STAZIONE = {1: CH, 2: CH, 3: CH, 7: CH, 11: CH, 14: CH}
+STAZIONE = {1: CH, 2: CH, 3: CH, 7: CH, 11: CH, 14: CH, 22: CH}
 NOMI = {VDE: "Val d'Europe", CH: 'Chessy · Disney'}
 # Airbnb (n. 16–21): l'indirizzo esatto arriva solo dopo la prenotazione. Niente mappa (il segno sarebbe inventato):
 # solo le distanze, contate dalla stazione scritta nell'annuncio («posizione indicativa», z:1 nella pagina).
