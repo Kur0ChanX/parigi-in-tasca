@@ -1,13 +1,13 @@
 # Passaggio di consegne
 
-Sessione attuale: #21 (dopo la #20 `session_01WTjqUxoKhCCtdjrwqshwo8`, chiusa alla soglia 21/11 23:57; la apre la #20 con `create_session` (catena 2 di 8)).
+Sessione attuale: #22 (dopo la #21 `session_01WTjqUufrPoE5XXACBYJB9k`, chiusa alla soglia 22/11 00:23; la apre la #21 con `create_session` (catena 3 di 8)).
 
 - **Già deciso da Mario (non richiedere):** viaggio dom 13 → gio 17/12/2026 in 2, senza auto; dom mercatini a Parigi, lun–mer Disneyland; alloggio con voto sopra 8 e pulizia buona, comodo senza auto (niente taxi né Uber); vanno bene hotel, B&B, appartamenti, stanze; kit installato (21/11), icona 🗼, ramo `claude/parigi-ramo-definitivo`; pagina «un po' disneyana, un po' mercatini», sera romantica; DUE colori a scelta (Blu notte · Vin brulé, interruttore sotto il titolo: Mario «va bene» 21/11). Notti: 4, dal 13 al 17 («le notti le conti in base al biglietto del volo», 21/11). Relax SOLO il primo giorno (domenica), lun–mer solo Disney con trasporti zero stress; tutto «a prova di stupido» (21/11, dopo l'handoff della #6). Link per l'amico = **web app** sul sito (21/11 17:25); pagina riordinata approvata («ok», 17:34). **Luna a forma di Topolino** con la trama della luna e le stelline (Mario 18:55 «ti autorizzo io»): niente obiezioni sul marchio. Mappe e distanze dentro la scheda dell'alloggio (C5). **Luna-Topolino come la foto di Mario** (21/11 19:13, `archivio/2026-11-21-lune-topolino-dettagli/mario-esempio-luna-topolino.jpg`): 3 lune piene vere, beige.
 - **Da non rifare:** ricerca alloggi (#4, `alloggi_spa_comodi.md`, `alloggi_ricerca_ampia.md`, prezzi Booking 13→17 del 21/11), confronto delle 28 foto (`hotel_foto_booking_mario.md`), ricerca jacuzzi (`alloggi_jacuzzi.md`), rilettura tariffe del Relais Spa; nella pagina (tutto pubblicato): «Alloggi» 15 numerati, colori Blu notte · Vin brulé, consiglio n. 12 e domenica con la spa (C2), verdetto spa, mega consiglio dei mercatini, pagina che segue l'alloggio scelto (C1), Ki Space nei costi e barre che portano alla scheda (C3), icona e anteprima del link (C4); `add_repo` di RVC (vietato). #11: C5 riquadro «Dov'è» (`tools/fai-mappe-dicembre.py`, `dicembre/mappe/`) e C7 luna-Topolino con la trama (`luna()` di `tools/fai-icone-dicembre.js`): nel ramo, prove 24 VERO, foto mandate. #12: luna «come la foto di Mario» (`lunaFoto()` in `tools/luna-topolino.js`) e 3 versioni di prova (`lunaTopolino()`: argento, oro, con l'ombra; foto in `archivio/2026-11-21-lune-topolino-dettagli/lavoro/`). #14: pulsanti grandi in cima (`nav.go`, tolta la barra `.jump`), barra fissa `#topbar`, riquadro `#mkAl` (`mkAl()`), «🚶 La strada» nelle 7 tappe, n. 7 domenica veloce (`by22`): tutto online (v7 PR #8, v8 PR #9). #15: v10 online (PR #11): casette e Torre Eiffel intere scorrendo (`data-max`), costi in una colonna (classe `cresce` al posto di `go`), barra in alto piena; prove `tools/prova-scritte.js` e casette in `prova-web-app.js`. C10: prezzi 1 notte Parigi 13→14 + 3 notti 14→17 (4 gruppi) in `research_notes/…/alloggi_notte_parigi_3notti.md`: NON rifarli. #16: prezzi 3 notti 14→17 dei 15 + 4 hotel di Parigi (`alloggi_prezzi_3notti_15.md`), ricerca larga notte a Parigi (`alloggi_parigi_1notte_ampia.md`), ricerca larga 3 notti vicino a Disney (`alloggi_3notti_disney_nuovi.md`); sezione `#scegli` e motore della scelta (C11 pezzi 1–6). Già deciso (#16): consiglio ★ = Hotel Locomo + n. 8 Moxy; Zenitude ed East-Blue fuori (cauzione addebitata 7 giorni prima). #18: v11 (scelta dell'alloggio corta) e v12 (PC: menù a sinistra, testata intera) online; ricerca Airbnb 14→17 (`alloggi_airbnb_disney_14_17.md`, 11 letti, 3 con jacuzzi scartati perché serve l'auto).
 - **Cosa preme a Mario adesso:** inserire i 6 alloggi nuovi trovati dalla #20 (n. 25–30, appunti `research_notes/…/alloggi_nuovi_13_17_ricerca.md`: 4 Airbnb a Montévrain 391/400/452/546 €, ARIANE 1 650 €, Residhome 600 € NR) e pubblicare la v16 (Mario: «guardane altri… spulcia bene», «poi publica»). Adagio Val d'Europe scartato (Booking 7,7, pulizia TrustYou 4,6/10): dirlo a Mario, non aggiungerlo.
 
-## Stato (21/11 23:57 ora italiana)
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-principale-20261121-01WTjqUxoKhC/claude/parigi-ramo-definitivo.
+## Stato (22/11 00:23 ora italiana)
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-principale-20261121-01WTjqUufrPo/claude/parigi-ramo-definitivo.
 - Kit 43 · 19/11/2026 · Preferenze v38 installato, prove 43/43 verdi (verifica: `docs/kit-progetto/VERSIONE`; tutti i `tools/test-*.py` con `python3 -I`).
 - **v15 ONLINE** (#20, PR #16 unita 21/11 23:56; v14 PR #15 23:43): verifica `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c 'Vicino alla RER'` → 2 o più. Prove: `node tools/prova-web-app.js` 37/37, `node tools/prova-scritte.js` 20/20, `python3 -I tools/fai-mappe-dicembre.py --controlla` → «25 immagini», kit 43/43.
 - Catena: #19 = 1 di 8 (aperta da Mario), la #20 la apre la #19 (2 di 8). Sveglia del 7/12: una sola attiva, `trig_01965zaQk5ALkXC9zyXHFwzr` (#20, 08:07 UTC); quella della #19 spenta (cancellarla è stato negato dai permessi; verifica: `list_triggers`, un solo «Parigi · ricontrollo prima di partire» con enabled true).
@@ -62,18 +62,9 @@ Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal regist
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-21 23:23 · [AVVIO] Sessione #20 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → avvio, v14 (PR #15)
-- 2026-11-21 23:29 · https://www.online-reservations.com/?hotelid=14974972&gacc=gmcc&gad_source=1&gad… → All Suites → n. 22 (v14)
-- 2026-11-21 23:44 · aggiungi un agente → 1 aiutante per le foto, 1 per la ricerca
-- 2026-11-21 23:46 · Aparthotel Adagio Val d'Europe https://www.online-reservations.com/?hotelid=5166… → v15 (ordine a 4 pulsanti, n. 24 Staycity, PR #16), Adagio scartato, 6 nuovi da inserire (Prossimi passi 1)
+- 2026-11-21 23:58 · [AVVIO] Sessione #21 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cl… → 
 
 Ultimo, intero:
-> Aparthotel Adagio Val d'Europe
-> https://www.online-reservations.com/?hotelid=51666&gacc=gmcc&gad_source=1&gad_campaignid=20870933251&gbraid=[segreto tolto dalla scorta]&gclid=[segreto tolto dalla scorta]
-> Staycity Aparthotels Paris, Marne-la-Vallée
-> poi publica
-> metti un filtro dai piú vicini a Disneyland i meno cari i piú puliti e vicino alla rer
-> 
-> e guardane altri se ne trovi da inserire spulcia bene 
-> quindi non cari vicini alla rer vicini a disneyland dal 13 al 17 e puliti decentemente come voto
+> [AVVIO] Sessione #21 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo): git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached», prima git checkout claude/parigi-ramo-definitivo).
+> Leggi CLAUDE.md, docs/ERRORI.md e docs/PASSAGGIO-CONSEGNE.md; continua da sola dai «Prossimi passi».
 
