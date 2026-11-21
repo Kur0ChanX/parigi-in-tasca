@@ -16,15 +16,15 @@
 <meta property="og:url" content="https://kur0chanx.github.io/parigi-in-tasca/dicembre/">
 <meta property="og:site_name" content="Parigi in tasca">
 <meta property="og:locale" content="it_IT">
-<meta property="og:image" content="https://kur0chanx.github.io/parigi-in-tasca/dicembre/anteprima.jpg?v=3">
+<meta property="og:image" content="https://kur0chanx.github.io/parigi-in-tasca/dicembre/anteprima.jpg?v=5">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Parigi di notte coi mercatini di Natale, la Torre Eiffel accesa e la luna piena: «Parigi e Disney a Natale, 13–17 dicembre 2026»">
+<meta property="og:image:alt" content="Parigi di notte coi mercatini di Natale, la Torre Eiffel accesa e la luna a forma di Topolino: «Parigi e Disney a Natale, 13–17 dicembre 2026»">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="192x192" href="icona-192.png?v=4">
-<link rel="apple-touch-icon" href="icona-180.png?v=4">
+<link rel="icon" type="image/png" sizes="192x192" href="icona-192.png?v=6">
+<link rel="apple-touch-icon" href="icona-180.png?v=6">
 <title>Parigi e Disney a Natale</title>
 <script>try{if(localStorage.getItem('palette')==='vino')document.documentElement.dataset.palette='vino'}catch(e){}</script>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -43,7 +43,7 @@
  --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
  --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(169 203 255 / .15);
  --night-1:#16296A;--night-2:#050A1F;--night-ink:#F4F7FF;--night-mute:#C9D4F2;--sil-1:#141D47;--sil-2:#0F173A;--sil-3:#2C3F86;--win:#F6C964;--snow:#FFFFFF;
- --ember:#FFC27A;--tower:#D9A24A;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#0B1233;--moon:#FFF4D6;--moon-op:1;--stars-op:1;--flight-bg:rgb(8 14 40 / .78);
+ --ember:#FFC27A;--tower:#D9A24A;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#0B1233;--moon:#FFF4D6;--stars-op:1;--flight-bg:rgb(8 14 40 / .78);
  --seg-hotel:#F6C964;--seg-ticket:#4FBF86;--seg-pack:#EE5A66;--seg-trans:#8E9CC2;
  --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#3B4A7A;--walkt:#FFFFFF;
  --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
@@ -86,7 +86,7 @@
  --snowground:#F6ECE6;--snowshade:#E0C9C0;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
  --mood-market:rgb(242 96 106 / .18);--mood-magic:rgb(255 176 196 / .16);
  --wire:#6A4234;--bk-1:rgb(246 201 100 / .16);--bk-2:rgb(242 96 106 / .17);--bk-3:rgb(63 174 122 / .12);
- --moon:#FFF4D6;--moon-op:0;--stars-op:0;--flight-bg:rgb(32 10 18 / .78);color-scheme:dark}
+ --moon:#FFE9C8;--stars-op:0;--flight-bg:rgb(32 10 18 / .78);color-scheme:dark}
 @media (prefers-color-scheme:light){:root[data-palette="vino"]:not([data-theme="dark"]){
  --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
  --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
@@ -157,6 +157,12 @@ b,strong{font-weight:700}
 .checked b{color:var(--night-ink)}
 .scene{position:relative;z-index:1;display:block;width:100%;height:clamp(270px,16vw + 210px,380px);margin-top:var(--s3);max-width:100%}
 .scene .par{will-change:transform}
+.luna-t .luna-bagliore{opacity:.6;transform-box:fill-box;transform-origin:center}
+.luna-st{fill:#FFF8E2;transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){.luna-t .luna-bagliore{animation:respiro 5.5s ease-in-out infinite}.luna-t .luna-alone{animation:respiro2 5.5s ease-in-out infinite}.luna-st{animation:brilla 3.4s ease-in-out infinite}.luna-st.s2{animation-delay:-1.2s}.luna-st.s3{animation-delay:-2.3s}}
+@keyframes respiro{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.8;transform:scale(1.06)}}
+@keyframes respiro2{0%,100%{opacity:.7}50%{opacity:1}}
+@keyframes brilla{0%,100%{opacity:.2;transform:scale(.5)}50%{opacity:1;transform:scale(1)}}
 .jump{position:relative;z-index:2;background:var(--night-2);border-top:1px solid rgb(255 255 255 / .08)}
 .jump .row{display:flex;gap:var(--s2);overflow-x:auto;padding-block:var(--s3);scrollbar-width:none;max-width:64rem;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .jump a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;color:var(--night-ink);text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid rgb(255 255 255 / .16);transition:transform .15s ease,background-color .15s}
@@ -390,6 +396,29 @@ table.cmp td.r{white-space:nowrap}
 .maps:active{transform:scale(.97)}
 .maps svg{width:16px;height:16px;color:var(--wine)}
 .note{font-size:.92rem;background:var(--surface-2);border-radius:var(--r-sm);padding:var(--s2) var(--s3)}
+/* Dov'è: mappa e distanze nella scheda di ogni alloggio (C5) */
+.dove{display:grid;gap:var(--s2)}
+.dove-t{font:800 1.05rem/1.2 var(--display);margin:0}
+.mappa{position:relative;display:block;aspect-ratio:800/534;border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--rule);background:#EEF0F2;text-decoration:none;color:#0D1838}
+.mappa img{display:block;width:100%;height:100%;object-fit:cover}
+.mk-h{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#C8102E;color:#fff;font:800 .9rem/1 var(--display);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45);font-variant-numeric:tabular-nums}
+.mk-s{position:absolute;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#0D1838;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+.mk-s>span{position:absolute;top:50%;display:inline-flex;align-items:center;gap:5px;padding:3px 7px 3px 3px;border-radius:7px;background:rgba(255,255,255,.95);color:#0D1838;font:700 .78rem/1 var(--text);white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.3);transform:translateY(-50%)}
+.mk-s.r>span{left:12px}.mk-s.l>span{right:12px}
+.mk-s.u>span{transform:translateY(-140%)}.mk-s.d>span{transform:translateY(40%)}
+.mk-s .lb{min-width:20px;height:18px;padding:0 4px;font-size:.7rem}
+.mk-c{position:absolute;right:0;bottom:0;padding:2px 6px;border-top-left-radius:6px;background:rgba(255,255,255,.88);color:#333;font:600 .66rem/1.3 var(--text)}
+.dr{list-style:none;margin:0;padding:0;display:grid}
+.dr li{display:grid;grid-template-columns:1fr auto;gap:var(--s2) var(--s3);align-items:center;padding:var(--s2) 0;border-top:1px solid var(--rule)}
+.dr-k{display:block;font-weight:700}
+.dr-k .nw{white-space:nowrap}
+.dr-t{display:block;font:800 1.08rem/1.35 var(--display);color:var(--lamp-text)}
+.dr-l{display:flex;flex-wrap:wrap;gap:4px 8px;margin-top:3px;font-size:.84rem;color:var(--mute)}
+.dr-l>span{display:inline-flex;align-items:center;gap:4px}
+.dr-l .lb{min-width:22px;height:20px;padding:0 4px;font-size:.72rem}
+.dr-l .lb.round{width:21px;min-width:21px;height:21px}
+.dr-l .lb.walk svg{width:12px;height:12px}
+.dr .maps{margin-top:0}
 
 /* checklist */
 .check{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
@@ -437,7 +466,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
    <radialGradient id="hglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--ember);stop-opacity:.42"/><stop offset=".6" style="stop-color:var(--ember);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--ember);stop-opacity:0"/></radialGradient>
    <radialGradient id="pool" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.6"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
    <radialGradient id="mglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--moon);stop-opacity:.38"/><stop offset=".5" style="stop-color:var(--moon);stop-opacity:.1"/><stop offset="1" style="stop-color:var(--moon);stop-opacity:0"/></radialGradient>
-   <mask id="moonm" maskUnits="userSpaceOnUse" x="190" y="50" width="60" height="60"><circle cx="216" cy="80" r="13" fill="#fff"/><circle cx="222.5" cy="75" r="11.5" fill="#000"/></mask>
+   <filter id="lunaSfuma" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.6"/></filter>
    <pattern id="awnR" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--wine)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
    <pattern id="awnG" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--fir)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
    <pattern id="awnY" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--lamp)"/><rect x="6" width="6" height="14" style="fill:var(--roof-r)"/></pattern>
@@ -446,7 +475,8 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
   <ellipse cx="400" cy="250" rx="560" ry="150" fill="url(#hglow)"/>
   <!-- strato lontano: tetti di Parigi e la Torre Eiffel accesa -->
   <g class="par" data-depth="0.04">
-   <g style="opacity:var(--moon-op)"><circle cx="216" cy="80" r="44" fill="url(#mglow)"/><circle cx="216" cy="80" r="13" style="fill:var(--moon)" mask="url(#moonm)"/></g>
+   <!-- luna a forma di Topolino (Mario 21/11): immagine fatta da tools/fai-icone-dicembre.js; bagliore che respira e stelline qui -->
+   <g class="luna-t"><circle class="luna-alone" cx="240" cy="70" r="50" fill="url(#mglow)"/><g class="luna-bagliore" filter="url(#lunaSfuma)" style="fill:var(--moon)"><circle cx="240" cy="76" r="14.4"/><circle cx="224.74" cy="63.4" r="9.2"/><circle cx="255.26" cy="63.4" r="9.2"/></g><image id="lunaT" x="215.5" y="54.07" width="49" height="36.17" href="data:image/webp;base64,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"/><path class="luna-st" d="M272 51.6 L272.75 54.25 L275.4 55 L272.75 55.75 L272 58.4 L271.25 55.75 L268.6 55 L271.25 54.25Z"/><path class="luna-st s2" d="M209 90.4 L209.57 92.43 L211.6 93 L209.57 93.57 L209 95.6 L208.43 93.57 L206.4 93 L208.43 92.43Z"/><path class="luna-st s3" d="M247 38.8 L247.48 40.52 L249.2 41 L247.48 41.48 L247 43.2 L246.52 41.48 L244.8 41 L246.52 40.52Z"/></g>
    <g id="roofs" style="fill:var(--sil-3)"></g>
    <ellipse cx="262" cy="170" rx="46" ry="70" fill="url(#kglow)" opacity=".55"/>
    <path d="M242 265 Q256 210 260 150 L262 128 L264 150 Q268 210 282 265 H272 Q262 236 252 265Z" style="fill:var(--tower)"/>
@@ -889,7 +919,8 @@ const card=h=>`<article class="card${h.id===MIO?' is-rec':''}" id="al-${h.id}">
  <div class="card-top"><div class="ttl"><span class="nb" aria-label="numero ${h.id}">${h.id}</span><div><h3>${esc(h.n)}</h3><p class="small muted">${esc(h.sub)}</p></div></div>${h.id===MIO?`<span class="rec">${STAR}Il mio consiglio</span>`:''}</div>
  <div class="facts"><div class="fact"><div class="k">Voto Booking</div><div class="v">${h.sc}</div></div><div class="fact"><div class="k">Pulizia</div><div class="v">${h.cl}</div></div><div class="fact"><div class="k">4 notti</div><div class="v">${h.pr}</div></div></div>
  <p class="small"><b>Dal treno:</b> ${h.dist}</p>
- <details class="more"><summary>Dettagli e prenotazione</summary><div class="in">
+ <details class="more"><summary>Dov'è, dettagli e prenotazione</summary><div class="in">
+ <div class="dove" data-dove="${h.id}"></div>
  <div class="tags">${h.g.map(x=>`<span class="tag">${GN[x]}</span>`).join('')}</div>
  <p class="small">${h.pl}</p>
  <dl class="kv"><div><dt>Domenica sera</dt><dd>${h.sun}</dd></div><div><dt>Ai parchi</dt><dd>${h.tr}</dd></div>${h.spa?`<div><dt>Spa</dt><dd>${h.spa}</dd></div>`:''}</dl>
@@ -979,6 +1010,50 @@ const SN={VDE:"Val d'Europe",CH:"Marne-la-Vallée–Chessy"};
 /* euro a testa da lunedì a mercoledì (6 corse) più l'eventuale bus di domenica sera e di giovedì mattina */
 const LOC={rer:15.3,bus:12.3+4.1,busrer:27.6+4.1,nav:0,walk:0};
 const COMMON=38.2; /* a testa: aeroporto andata e ritorno, metro in città, RER di domenica sera */
+/* MAPPE: fatto da tools/fai-mappe-dicembre.py, non modificare a mano */
+const MPV=1,MP={
+ 1:{h:[32.5, 16.7],m:[[67.5, 83.3, "CH", "l", ""]],km:["31 km", "1,8 km", "34 km"]},
+ 2:{h:[56.6, 83.3],m:[[35.6, 45.4, "VDE", "r", ""], [43.4, 16.7, "CH", "r", ""]],km:["33 km", "3,8 km", "34 km"]},
+ 3:{h:[16.7, 61.4],m:[[83.3, 38.6, "CH", "l", ""]],km:["30 km", "1,6 km", "33 km"]},
+ 4:{h:[28.5, 76.9],m:[[53.2, 83.3, "VDE", "r", ""], [71.5, 16.7, "CH", "l", ""]],km:["30 km", "2,1 km", "32 km"]},
+ 5:{h:[36.3, 83.3],m:[[47.1, 77.2, "VDE", "r", ""], [63.7, 16.7, "CH", "l", ""]],km:["31 km", "2,1 km", "32 km"]},
+ 6:{h:[36.2, 65.2],m:[[45.4, 83.3, "VDE", "r", ""], [63.8, 16.7, "CH", "l", ""]],km:["31 km", "1,5 km", "33 km"]},
+ 7:{h:[16.7, 27.7],m:[[83.3, 72.3, "CH", "l", ""]],km:["30 km", "2,5 km", "33 km"]},
+ 8:{h:[36.4, 83.3],m:[[45.6, 82.0, "VDE", "r", ""], [63.6, 16.7, "CH", "l", ""]],km:["31 km", "1,9 km", "33 km"]},
+ 9:{h:[38.8, 83.3],m:[[44.4, 78.1, "VDE", "r", ""], [61.2, 16.7, "CH", "l", ""]],km:["31 km", "1,9 km", "33 km"]},
+ 10:{h:[35.3, 83.3],m:[[49.8, 70.8, "VDE", "r", ""], [64.7, 16.7, "CH", "l", ""]],km:["31 km", "2,3 km", "32 km"]},
+ 11:{h:[75.8, 83.3],m:[[6.0, 82.8, "VDE", "r", ""], [24.2, 16.7, "CH", "r", ""]],km:["34 km", "2,4 km", "35 km"]},
+ 12:{h:[40.1, 76.1],m:[[41.6, 83.3, "VDE", "r", ""], [59.9, 16.7, "CH", "l", ""]],km:["31 km", "1,6 km", "33 km"]},
+ 13:{h:[60.3, 83.3],m:[[39.7, 52.3, "VDE", "r", ""], [49.4, 16.7, "CH", "r", ""]],km:["33 km", "3,1 km", "34 km"]},
+ 14:{h:[65.6, 46.0],m:[[34.5, 54.0, "CH", "r", "d"]],km:["32 km", "0,4 km", "34 km"]},
+ 15:{h:[45.0, 83.3],m:[[40.9, 83.1, "VDE", "l", "u"], [59.1, 16.7, "CH", "l", ""]],km:["31 km", "1,7 km", "33 km"]}
+};
+/* FINE MAPPE */
+/* ---------- Dov'è: mappa e distanze nella scheda di ogni alloggio (C5) ----------
+   Orari ufficiali (research_notes/…/trasporti_bagagli.md): RER A Val d'Europe→Châtelet 39 min, Chessy→Châtelet 42,
+   Val d'Europe→Gare de Lyon 36, Chessy→Gare de Lyon 39, Val d'Europe→Chessy 3; metro 14 Gare de Lyon→Orly 23 (Paris Aéroport);
+   stazione di Chessy→parchi 2 minuti a piedi (Disneyland Paris). Stime: Châtelet→mercatino di Notre-Dame 20 min a piedi
+   (percorso a piedi dell'IGN), cambio a Gare de Lyon 8, metro→Orly 1 8 (7–10, non ufficiale); navette e bus senza orario
+   ufficiale: tempo in auto calcolato dall'IGN. A piedi fino alla stazione: gli stessi minuti di ACC (vde) e delle schede. */
+const RA={VDE:{dz:3,nd:39,gl:36},CH:{dz:0,nd:42,gl:39}};
+const DV={1:["CH",[["w",5],["bus",10,"2233"]]],2:["CH",[["bus",15,"navetta"]],"Navetta circa ogni 50 minuti: aggiungete l'attesa.",1],3:["CH",[["bus",20,"2233"]]],
+ 4:["VDE",[["w",18]]],5:["VDE",[["w",5]]],6:["VDE",[["w",8]]],7:["CH",[["w",2],["bus",15,"bus"]],"Linea e orari del bus: chiedeteli al gestore."],
+ 8:["VDE",[["w",8]]],9:["VDE",[["w",7]]],10:["VDE",[["w",12]]],11:["CH",[["bus",8,"navetta"]],"Navetta ogni 30 minuti: aggiungete l'attesa.",1],
+ 12:["VDE",[["w",5]]],13:["VDE",[["bus",12,"2234"]],"Oppure 30 minuti a piedi fino alla stazione."],14:["CH",[["w",10]]],15:["VDE",[["w",2]]]};
+const legChip=l=>l[0]==="bus"?`<span>${lb('bus')}${esc(/^\d/.test(l[2])?'bus '+l[2]:l[2])} ${l[1]} min</span>`:`<span>${lb(l[0])}${l[1]} min</span>`;
+const durata=m=>{m=Math.max(5,Math.round(m/5)*5);if(m<60)return `circa ${m} minuti`;const h=Math.floor(m/60),r=m%60;return `circa ${h===1?'1 ora':h+' ore'}${r?' e '+r:''}`};
+const dove=n=>{const d=DV[n],mp=MP[n],a=ACC[n].a,s=RA[d[0]],acc=d[1];
+ const rows=[["Mercatini di Natale","Notre-Dame, "+mp.km[0],[...acc,["A",s.nd],["w",20]],SV],
+  ["Parchi Disney",mp.km[1],n===14?[["w",10]]:[...acc,...(s.dz?[["A",s.dz]]:[]),["w",2]],DP],
+  ["Aeroporto di Orly",mp.km[2],[...acc,["A",s.gl],["w",8],["14",23],["w",8]],ORLY]];
+ const st=mp.m.map(([x,y,k,l,u])=>`<span class="mk-s ${l} ${u}" style="left:${x}%;top:${y}%"><span>${lb('A')}${k==='VDE'?"Val d'Europe":'Chessy · Disney'}</span></span>`).join('');
+ return `<p class="dove-t">Dov'è</p>
+ <a class="mappa" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a)}" target="_blank" rel="noopener" aria-label="Apri la posizione del n. ${n} in Google Maps"><img src="mappe/al-${n}.jpg?v=${MPV}" width="800" height="534" loading="lazy" alt="Mappa: dove si trova il n. ${n} rispetto alla stazione e ai parchi Disney">${st}<span class="mk-h" style="left:${mp.h[0]}%;top:${mp.h[1]}%">${n}</span><span class="mk-c">© IGN</span></a>
+ <p class="small muted">Tocca la mappa per aprirla in Google Maps.</p>
+ <ul class="dr">${rows.map(([k,sub,legs,dest])=>`<li><div><span class="dr-k">${k} <span class="muted small nw">${esc(sub)}</span></span><span class="dr-t">${durata(legs.reduce((x,l)=>x+l[1],0))}${d[3]?' <span class="small">+ attesa della navetta</span>':''}</span><span class="dr-l">${legs.map(legChip).join('')}</span></div><a class="maps" href="${gm(dest,{from:a})}" target="_blank" rel="noopener" aria-label="Percorso coi mezzi in Google Maps: ${k}">${PIN}Maps</a></li>`).join('')}</ul>
+ ${d[2]?`<p class="small">${esc(d[2])}</p>`:''}<p class="small muted">Tempi coi mezzi, senza l'attesa di treni e bus ${B.es()}. Distanze in linea d'aria. «Maps» vi dà il percorso all'ora giusta.</p>`};
+/* la scheda si riempie quando si apre (anche dalle barre dei costi): ACC e le mete sono già pronte */
+document.addEventListener('toggle',e=>{const t=e.target;if(!t.matches||!t.matches('details.more')||!t.open)return;const b=t.querySelector('.dove:empty');if(b)b.innerHTML=dove(+b.dataset.dove)},true);
 let P=ACC[CHO];
 const goPark=(dest,name)=>({t:P.out,ti:"Uscite "+P.da,d:`Obiettivo: essere ai cancelli verso le ${P.early?'7:55':'8:30'}. ${name} apre alle 9:00${P.early?', per voi alle 8:00':''}.`,legs:P.go,maps:[["Apri in Google Maps",gm(dest,{from:P.a})]]});
 const amSpa=()=>P.am?[{t:"07:00",ti:"Spa dell'hotel",d:P.am}]:[];
@@ -1171,6 +1246,7 @@ const SRC=[
  ["Hotel",[["Relais Spa Val d'Europe, camere","https://www.relais-spa.com/uk/valdeurope/rooms-and-suites",0],["Relais Spa Val d'Europe, spa NUXE","https://www.relais-spa.com/uk/valdeurope/nuxe-spa",0],["IDFM, orari del bus 2234 (validi 24/8/2026–18/7/2027)","https://ilico.iledefrance-mobilites.fr/uploads/fiches/20260810T152545Z-10849dbf-e6d0-430c-98f2-7d3e5c4fec76.pdf",0],["Recensioni del n. 13 Jungle Love (vasca dopo le 23:00)","https://fr.planetofhotels.com/france/serris/loveroom-jungle-love-proche-disneyland",1],["Booking.com, schede degli hotel (13→17/12/2026)","https://www.booking.com/hotel/fr/moxy-paris-val-d-europe.it.html?checkin=2026-12-13&checkout=2026-12-17&group_adults=2&no_rooms=1",0],["Disneyland Paris, hotel partner","https://www.disneylandparis.com/fr-fr/hotels-partenaires",0],["Résidence du Parc, FAQ","https://www.laresidenceduparc.fr/faq/",0],["Ki Space, sito ufficiale","https://kispace-hotel.com/en",0],["Magical Shuttle, pagina Ki Space","https://magicalshuttle.co.uk/hotel/ki-space-hotel-spa",1],["Planet of Hotels, recensioni Ki Space","https://en.planetofhotels.com/france/serris/ki-space-hotel-spa-near-disneyland-paris",1]]],
  ["Biglietti e parchi Disney",[["Biglietteria ufficiale","https://tickets.disneylandparis.com/it-it/tickets",0],["Orari dei parchi e spettacoli","https://www.disneylandparis.com/it-it/calendari/orari-parco",0],["Natale a Disneyland Paris","https://www.disneylandparis.com/it-it/le-stagioni/natale-a-disneyland-paris",0],["Calendario stima prezzi (pacchetti)","https://www.disneylandparis.com/it-it/calendario-stima-prezzi-disneyland-paris",0],["Condizioni di prenotazione","https://www.disneylandparis.com/it-it/condizioni-prenotazione-disney",0],["dein-dlrp.de, Ticket Finder","https://www.dein-dlrp.de/en/trip-planning/tickets.html",1],["julieears.com, calendario prezzi","https://julieears.com/en/prices/disneyland-paris-tickets",1]]],
  ["Mercatini e Natale a Parigi",[["paris.fr, Tuileries","https://www.paris.fr/evenements/edition-2026-de-la-magie-de-noel-des-tuileries-127134",0],["paris.fr, Notre-Dame","https://www.paris.fr/evenements/marche-de-noel-notre-dame-124520",0],["Mercatino Champs-Élysées, organizzatore","https://xmaschampselysees.com/",0],["Office de tourisme, mercatini","https://parisjetaime.com/article/les-marches-de-noel-paris-a018",0],["Notre-Dame de Paris, orari","https://www.notredamedeparis.fr/",0],["Galeries Lafayette, orari","https://haussmann.galerieslafayette.com/en/our-opening-hours-2/",0],["sortiraparis.com, Saint-Germain","https://www.sortiraparis.com/actualites/noel-et-fetes/articles/46509-le-marche-de-noel-2026-de-saint-germain-des-pres-de-retour-sur-la-rive-gauche-les-dates",1],["christmaswanders.com","https://christmaswanders.com/market/paris-christmas-market",1]]],
+ ["Mappe e distanze",[["IGN, Plan IGN e calcolo dei percorsi (Licence Ouverte 2.0)","https://cartes.gouv.fr/cgu",0],["IGN, posizione degli indirizzi (Base Adresse Nationale)","https://adresse.data.gouv.fr/",0],["OpenStreetMap, posizione di ibis, Ki Space e mete","https://www.openstreetmap.org/copyright",0],["Disneyland Paris: stazione a 2 minuti dai parchi","https://www.disneylandparis.com/en-int/guest-services/getting-to-disneyland-paris-from-paris",0]]],
  ["Trasporti e bagagli",[["Île-de-France Mobilités, tariffe 2026","https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026",0],["IDFM, condizioni ticket aeroporto","https://www.iledefrance-mobilites.fr/cgvu-tickets-aeroport",0],["Paris Aéroport, metro 14 per Orly","https://www.parisaeroport.fr/fr/passagers/transports-parking/transports-publics-paris/metro-ligne-14-orly/ory",0],["RER A, orari (malignea)","https://malignea.fr/horaires/",0],["RATP, lavori RER A","https://www.ratp.fr/travaux/rer-a",0],["SNCF, armadietti Gare de Lyon","https://www.garesetconnexions.sncf/fr/gares-services/paris-gare-lyon/services-commerces/consignes",0],["Volotea, condizioni di trasporto","https://www.volotea.com/it/condizioni-legali",0],["Volotea, bagaglio","https://www.volotea.com/it/bagaglio",0],["Nannybag, Gare de Lyon","https://www.nannybag.com/fr/consigne-bagage/paris/gare-de-lyon",1],["Bounce, Gare de Lyon","https://fr.bounce.com/luggage-storage/paris/gare-de-lyon",1]]]
 ];
 $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li><a href="${s[1]}" target="_blank" rel="noopener">${esc(s[0])}</a>${s[2]?' '+B.nu():''}</li>`).join('')}</ul>`).join('');
