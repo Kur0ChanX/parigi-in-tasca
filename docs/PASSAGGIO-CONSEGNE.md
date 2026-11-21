@@ -23,7 +23,7 @@ Sessione attuale: #9 (dopo la #8 `session_01WTjqUwT3GsbcTs9uTQhbck`, chiusa alla
 
 ## Sessione appena chiusa
 - #8 (Opus 5.5 · Extra): unite le scorte della #6 (messaggi di Mario 17:05 e 17:06 nel registro) e della #7; foto della v7 mandate.
-- C3 (`docs/lavori-in-corso/C3-pagina-facile-21-11.md`, messaggio di Mario del 17:24 alla #7): Ki Space nei costi (1.085 €), barre = link alla scheda, schede compatte con «Dettagli e prenotazione», tappe che si aprono col tocco, tabella/fonti/«Da ricontrollare» chiuse: al telefono 37.576 → 21.860 px. Foto prima/dopo mandate, «ok» di Mario.
+- C3 (`docs/piani-finiti/C3-pagina-facile-21-11.md`, messaggio di Mario del 17:24 alla #7): Ki Space nei costi (1.085 €), barre = link alla scheda, schede compatte con «Dettagli e prenotazione», tappe che si aprono col tocco, tabella/fonti/«Da ricontrollare» chiuse: al telefono 37.576 → 21.860 px. Foto prima/dopo mandate, «ok» di Mario.
 - Web app: `tools/fai-dicembre.py` (fa `dicembre/index.html` dalla sorgente; `--controlla`), `dicembre/sw.js`, manifest, icone (abete con stella). PR #3 da ramo-copia `versione-dicembre` (7 file, non il ramo comune) unita: v2 online, nastro aggiornato, notifica mandata.
 - Errore trovato e provato: `sw.js` di novembre salvava ogni pagina come «./» (dicembre sovrascriveva la copia senza rete di novembre); difesa + `node tools/prova-web-app.js`; riga in `docs/ERRORI.md`.
 - Controllo Da fare: 1 voce aggiunta (promessa della web app, sezione 2); la domanda «Link per l'amico» e quella sulla pagina chiuse.
@@ -57,7 +57,7 @@ Sessione attuale: #9 (dopo la #8 `session_01WTjqUwT3GsbcTs9uTQhbck`, chiusa alla
 
 «ok» (21/11 17:34, risposta a «mi serve il tuo ok per metterla online come web app» → pubblicata, v2).
 
-Prima, in questa sessione: «web app dopo aver risposto alla domanda della sessione precedente.» (17:25 → web app dopo C3). Alla #7 dopo l'handoff (17:24): «Metti qui anche il ki space … rendila veramente facile e intuitiva … non ti sto dicendo di toglierle, ma di riorganizzarle meglio.» (intero in `docs/lavori-in-corso/C3-pagina-facile-21-11.md`).
+Prima, in questa sessione: «web app dopo aver risposto alla domanda della sessione precedente.» (17:25 → web app dopo C3). Alla #7 dopo l'handoff (17:24): «Metti qui anche il ki space … rendila veramente facile e intuitiva … non ti sto dicendo di toglierle, ma di riorganizzarle meglio.» (intero in `docs/piani-finiti/C3-pagina-facile-21-11.md`).
 
 (I messaggi più vecchi: `docs/MESSAGGI-MARIO.md`.)
 

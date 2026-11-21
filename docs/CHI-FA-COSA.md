@@ -5,10 +5,9 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 ## Catene
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
-| Principale | cerchi | 🟢 🟡 🔴 ⚫ | 8 | session_01WTjqUwT3GsbcTs9uTQhbck | — |
+| Principale | cerchi | 🟢 🟡 🔴 ⚫ | 9 | session_01WTjqUvsd71kLUH9Y77mC59 | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
 |---|---|---|---|---|
-| C2 | Principale 8 (dalla 7) | Consiglio rivisto (relax domenica, Disney senza stress) + pubblicazione pagina | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C2-consiglio-relax-21-11.md` | 21/11 |
-| C3 | Principale 8 | Pagina facile: Ki Space nei costi, barre cliccabili, meno cose a schermo; poi web app | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C3-pagina-facile-21-11.md` | 21/11 |
+| C4 | Principale 9 | Icona coi mercatini, anteprima del link (WhatsApp, Telegram), controllo della web app | `tools/fai-dicembre.py`, `dicembre/`, `docs/lavori-in-corso/C4-icona-anteprima-21-11.md` | 21/11 |
