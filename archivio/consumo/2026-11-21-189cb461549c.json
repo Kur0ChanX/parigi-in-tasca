@@ -2,15 +2,17 @@
 "account": "108763",
 "sessione": "189cb461549c",
 "giorno": "2026-11-21",
-"turni": 1,
-"peso": 0,
-"uscita": 0,
-"contesto_max": 177762,
+"turni": 2,
+"peso": 65711,
+"uscita": 888,
+"contesto_max": 200029,
 "anomalie": [],
 "blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": 1,
 "Stop 10 · Promessa a Mario senza voce": 1,
-"Stop 5 · Notifica non letta (in coda": 1
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 8 · Il turno finisce con una": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1
 },
 "esempi_blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": [
@@ -21,10 +23,29 @@
 ],
 "Stop 5 · Notifica non letta (in coda": [
 "21:28 · Notifica non letta (in coda dalle 21:17: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 8 · Il turno finisce con una": [
+"21:28 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"21:28 · Ti fermi ad aspettare Mario con il contesto a 183k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
 ]
 },
 "remota": "01WTjqUvCPBb",
 "aiutanti": 0,
-"strumenti": 0,
-"bilancia": 2
+"strumenti": 2,
+"bilancia": 2,
+"motori": {
+"opus": 65711
+},
+"grezzi": {
+"opus": [
+6,
+597586,
+1205,
+0,
+888
+]
+},
+"costo": 0.1469
 }

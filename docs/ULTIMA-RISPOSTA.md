@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (21/11/2026 21:28 ora italiana)
+# Ultima risposta di Claude (21/11/2026 21:29 ora italiana)
 
-Mi fermo e aspetto la tua risposta alla DOMANDA 7: la scelta dell'alloggio rifatta si può pubblicare?
+Ho passato il tuo «pubblica» alla sessione nuova, la #18: https://claude.ai/code/[segreto tolto dalla scorta]. Pubblica lei e là ti dice anche quanto manca.
