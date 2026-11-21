@@ -32,6 +32,7 @@ Sessione attuale: #3 (dopo la #2 `session_01WTjqUtoS2VAb6mUQypVwHC`, chiusa alla
 - Unire la scorta automatica `scorta-principale-20261121-01WTjqUtYZaK/…`: più vecchia del ramo, avrebbe rimesso `docs/ERRORI.md.prima-del-kit` già tolto. Non unita.
 
 ## Prossimi passi
+0. Nuovo messaggio di Mario (vedi «Ultimo messaggio»): la pagina va rifatta come sera romantica blu con tante stelle e lucine (non colori caldi), e l'hotel va presentato come tante opzioni spiegate, con almeno una spa. Voci in `docs/DA-FARE.md` sezione 1.
 1. All'avvio: `subscribe_pr_activity` sulla PR #2 (nessun controllo automatico sul ramo: solo `pulisci-scorte.yml` di notte).
 2. Hotel (voce in `docs/DA-FARE.md` sezione 1): Mario ha scritto «aspetta le altre foto prima di pensare». Se scrive che ha finito (o non manda altro), guarda le 28 foto e fai per ogni candidato valido (voto sopra 8, pulizia buona): prezzo, minuti a piedi dalla RER A Val d'Europe o Chessy (o bus), costo e tempo mattina ai parchi, ultimo ritorno dopo le 22:00. Criterio di Mario: niente taxi né Uber, mattina economica e veloce, sera senza ore di viaggio né costi alti. Appartamenti privati: segnala check-in di sera e cauzioni.
 3. Prima del confronto, domanda a Mario sulle date: la ricerca nelle foto è sab 12 → gio 17 (5 notti), il volo d'andata è dom 13 (4 notti). Arrivate un giorno prima? Riga in «## 0. Aspetta Mario».
@@ -46,7 +47,9 @@ Sessione attuale: #3 (dopo la #2 `session_01WTjqUtoS2VAb6mUQypVwHC`, chiusa alla
 - Pacchetti Disney prenotati a meno di 30 giorni: forse pagamento intero subito (due pagine ufficiali discordano); non serve finché non si sceglie Disney.
 
 ## Ultimo messaggio di Mario
-«conta che dobbiamo non oagare una fucilata nei trasporti ubber o taxi per andare a Disneyland no spostarci per i mercatini vorremmo se è possibile la mattina per andare a Disneyland un opzione non troppo costosa e non troppo lenta per andare a Dianeyland e se non essere un problema ritornare a dormire con mille mila ore di viaggio o troppi costi» (con altre 8 foto di Booking: 21–28 nella stessa cartella)
+«Calda intendo di atmosfera, non di colori, cioè nel senso che sia con tante lucine illuminate, va bene anche romantica al buio, va bene, non per forza illuminata a giorno, anzi di sera è anche più bello. Va bene, anche tendente al blu, al celeste, il cielo, metti molte stelle, insomma, un po' romantico. Metti anche diverse opzioni per l'hotel, ad esempio per avere tutto comodo, per avere una vacanza rilassata e non camminare troppo, per avere i servizi vicino, e sempre deve costare il meglio. Insomma, fammi scegliere tra vari hotel. E poi magari un posto dove possiamo andare, magari un hotel dove possiamo andare che c'è là una spa, qualcosa per rilassarci, qualcosa per tipo tipo una spa. Dammi diverse opzioni, non vincolarmi solo in un hotel. Fammi capire perché questo è meglio di questo, perché questo è meglio di quest'altro. Dammi diverse opzioni. Tante opzioni.» (arrivato nella #2 dopo l'handoff: risposta «cambia» alla domanda sulla pagina calda; voci in `docs/DA-FARE.md` sezione 1)
+
+Prima: «conta che dobbiamo non oagare una fucilata nei trasporti ubber o taxi per andare a Disneyland no spostarci per i mercatini vorremmo se è possibile la mattina per andare a Disneyland un opzione non troppo costosa e non troppo lenta per andare a Dianeyland e se non essere un problema ritornare a dormire con mille mila ore di viaggio o troppi costi» (con altre 8 foto di Booking: 21–28 nella stessa cartella)
 
 Prima: «aspetta le altre foto prima di pensare» (con 20 foto di Booking, ricerca «Moxy Paris Val d'Europe · 12 dic - 17 dic», prezzi per 5 notti: `archivio/2026-11-21-booking-12-17-dic-mario/`; nota: il volo è dom 13, la ricerca parte dal 12)
 
