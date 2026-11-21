@@ -47,3 +47,9 @@ Allora, la spa la vogliamo fare o l'idromassaggio o insomma modalità relax è s
 
 ## 2026-11-21 17:25 · 01WTjqUxvERS
 Metti qui anche il ki space, quello che ti avevo consigliato io, che abbiamo guardato. Metti anche quello in confronto tra i costi e tutto. Poi metti che se clicco uno di quelli mi porta al discorso o qualche altra pagina, insomma, utile. Comunque rendila veramente facile e intuitiva a livello di visiva. Anche non troppe cose a schermo, se clicco poi magari mi apre un'altra cosa, però non troppissime informazioni, cioè non ti sto dicendo di toglierle, ma di riorganizzarle meglio.
+
+## 2026-11-21 17:25 · 01WTjqUwT3Gs
+web app dopo aver risposto alla domanda della sessione precedente.
+
+## 2026-11-21 17:34 · 01WTjqUwT3Gs
+ok
