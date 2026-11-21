@@ -81,11 +81,11 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   // Dov'è (C5): ogni scheda degli alloggi, aperta, ha mappa, 3 distanze e 3 bottoni Maps col percorso coi mezzi
   const mappeOk = require('child_process').spawnSync('python3', ['-I', path.join(__dirname, 'fai-mappe-dicembre.py'), '--controlla'], { encoding: 'utf8' });
   ok('mappe: immagini e blocco MAPPE allineati', mappeOk.status === 0); if (mappeOk.status) console.log(mappeOk.stdout);
-  const pesi = [...Array(15)].map((_, i) => path.join(__dirname, '..', 'dicembre', 'mappe', `al-${i + 1}.jpg`)).map((f) => (fs.existsSync(f) ? fs.statSync(f).size : 1e9));
-  ok('mappe: 15 immagini sotto 100 KB', pesi.every((x) => x < 100 * 1024));
+  const cMappe = path.join(__dirname, '..', 'dicembre', 'mappe'), pesi = fs.readdirSync(cMappe).filter((f) => f.endsWith('.jpg')).map((f) => fs.statSync(path.join(cMappe, f)).size);
+  ok('mappe: tutte le immagini (27) sotto 100 KB', pesi.length === 27 && pesi.every((x) => x < 100 * 1024));
   const dove = await q.evaluate(async () => {
     const out = [];
-    for (const n of [...Array(15).keys()].map((i) => i + 1).concat([22, 24])) {
+    for (const n of [...Array(15).keys()].map((i) => i + 1).concat([22, 24, 29, 30])) {
       const d = document.querySelector(`#al-${n} details.more`); d.open = true;
       await new Promise((r) => setTimeout(r, 60));
       const b = d.querySelector('.dove'), img = b && b.querySelector('.mappa img');
@@ -103,11 +103,11 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     return out;
   });
   const male = dove.filter((x) => !(x.img && x.righe === 3 && x.tempi && x.maps && x.segno && x.posizione));
-  ok('Dov\'è: 17 schede con mappa (n. 1–15, 22 e 24), 3 distanze e Maps', male.length === 0); if (male.length) console.log(male);
-  // Airbnb (n. 16–21, Mario 21/11 ~22:15 «aggiungi sezione air b e b»): niente indirizzo → niente mappa inventata, ma posizione indicativa, 3 distanze e Maps
+  ok('Dov\'è: 19 schede con mappa (n. 1–15, 22, 24, 29 e 30), 3 distanze e Maps', male.length === 0); if (male.length) console.log(male);
+  // Airbnb (n. 16–21, 23 e 25–28; Mario 21/11 ~22:15 «aggiungi sezione air b e b»): niente indirizzo → niente mappa inventata, ma posizione indicativa, 3 distanze e Maps
   const airbnb = await q.evaluate(async () => {
     const out = [];
-    for (const n of [16, 17, 18, 19, 20, 21, 23]) {
+    for (const n of [16, 17, 18, 19, 20, 21, 23, 25, 26, 27, 28]) {
       const d = document.querySelector(`#al-${n} details.more`); if (!d) { out.push({ n, manca: true }); continue; }
       d.open = true; await new Promise((r) => setTimeout(r, 60));
       const b = d.querySelector('.dove'), links = b ? [...b.querySelectorAll('.dr a.maps')].map((a) => new URL(a.href)) : [];
@@ -129,7 +129,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const src = require('fs').readFileSync(require('path').join(__dirname, '..', 'dicembre', 'parigi-disney-natale.html'), 'utf8');
     const ids = await q.evaluate(() => [...document.querySelectorAll('a[href*="airbnb.it/rooms/"]')].map((a) => new URL(a.href).pathname.split('/')[2]));
     const sbagliati = [...new Set(ids)].filter((id) => !new RegExp(`\\b${id}\\b`).test(src));
-    ok('Airbnb: ogni link porta al numero d\'annuncio scritto nella pagina (niente arrotondati)', ids.length >= 7 && sbagliati.length === 0); if (sbagliati.length) console.log(sbagliati);
+    ok('Airbnb: ogni link porta al numero d\'annuncio scritto nella pagina (niente arrotondati)', ids.length >= 11 && sbagliati.length === 0); if (sbagliati.length) console.log(sbagliati);
   }
   // ordine a 4 pulsanti (Mario 21/11 23:5x): meno cari, vicino a Disney, vicino alla RER, più puliti, nelle due liste
   {
@@ -146,19 +146,19 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       document.querySelector('#sort [data-s="prezzo"]').click(); document.querySelector('#scSort [data-s="prezzo"]').click(); await w();
       return out;
     });
-    const tutti = Object.values(ord).every((o) => o.ids.length === 24 && o.sc.length === 24 && o.pre === 'true' && o.preSc === 'true');
+    const tutti = Object.values(ord).every((o) => o.ids.length === 30 && o.sc.length === 30 && o.pre === 'true' && o.preSc === 'true');
     const diversi = new Set(Object.values(ord).map((o) => o.ids.join(','))).size === 4;
-    ok('Ordine: 4 pulsanti nelle due liste, tutti e 24 sempre, 4 ordini diversi', tutti && diversi); if (!tutti || !diversi) console.log(JSON.stringify(ord).slice(0, 600));
+    ok('Ordine: 4 pulsanti nelle due liste, tutti e 30 sempre, 4 ordini diversi', tutti && diversi); if (!tutti || !diversi) console.log(JSON.stringify(ord).slice(0, 600));
     // «Vicino a Disney» = minuti fino ai parchi coi mezzi, senza le attese (gli stessi 🚆 della scelta): attaccati a Val d'Europe o il New York
-    const vicini = [14, 15, 16, 17, 19], primi = ord.disney.ids.slice(0, 3).every((n) => vicini.includes(n)) && ord.disney.sc.slice(0, 3).every((n) => vicini.includes(n)) && [19, 21, 23].includes(ord.pulizia.ids[0]) && [16, 17].includes(ord.rer.ids[0]);
+    const vicini = [14, 15, 16, 17, 19, 29, 30], primi = ord.disney.ids.slice(0, 3).every((n) => vicini.includes(n)) && ord.disney.sc.slice(0, 3).every((n) => vicini.includes(n)) && [19, 21, 23, 25, 26, 27].includes(ord.pulizia.ids[0]) && [16, 17].includes(ord.rer.ids[0]);
     ok('Ordine: «Vicino a Disney» mette in cima i più vicini ai parchi, «Vicino alla RER» quelli a 1 minuto a piedi, «Più puliti» un 5,0', primi); if (!primi) console.log(Object.fromEntries(Object.entries(ord).map(([k, o]) => [k, o.ids.slice(0, 4).join(',') + ' | ' + o.sc.slice(0, 4).join(',')])));
   }
   // 21/11 sera: la pagina era larga 735 px su un telefono da 412 (classe .pc del contenitore uguale a quella dei pro/contro)
   ok('telefono 390 px: la pagina non scorre di lato', await q.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   const maleA = airbnb.out.filter((x) => !x.ok);
-  ok('Airbnb: 7 schede senza mappa inventata, con posizione indicativa, 3 distanze, Maps e link Airbnb', maleA.length === 0); if (maleA.length) console.log(maleA);
-  ok('Airbnb: il filtro mostra solo i n. 16–21 e 23, «Tutti» li mostra tutti e 24', airbnb.solo === '16,17,18,19,20,21,23' && airbnb.tutti === 24); if (airbnb.solo !== '16,17,18,19,20,21,23') console.log(airbnb.solo, airbnb.tutti);
-  ok('Airbnb e n. 22, 24: nella scelta (domenica a Parigi) tutti e 9 col prezzo', airbnb.prezzi.length === 9 && airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))); if (!airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))) console.log(airbnb.prezzi);
+  ok('Airbnb: 11 schede senza mappa inventata, con posizione indicativa, 3 distanze, Maps e link Airbnb', maleA.length === 0); if (maleA.length) console.log(maleA);
+  ok('Airbnb: il filtro mostra solo i n. 16–21, 23 e 25–28, «Tutti» li mostra tutti e 30', airbnb.solo === '16,17,18,19,20,21,23,25,26,27,28' && airbnb.tutti === 30); if (airbnb.solo !== '16,17,18,19,20,21,23,25,26,27,28') console.log(airbnb.solo, airbnb.tutti);
+  ok('Airbnb e n. 22, 24, 29, 30: nella scelta (domenica a Parigi) tutti e 15 col prezzo', airbnb.prezzi.length === 15 && airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))); if (!airbnb.prezzi.every((x) => /^(≈ )?\d/.test(x))) console.log(airbnb.prezzi);
   ok('Dov\'è: «Scheda» nella scelta apre la scheda già con la mappa', await q.evaluate(async () => {
     // il primo con la mappa: in cima (per prezzo) ora può esserci un Airbnb, che la mappa non ce l'ha apposta
     const a = [...document.querySelectorAll('#scD a[href^="#al-"]')].find((x) => +x.getAttribute('href').slice(4) <= 15); a.click(); await new Promise((r) => setTimeout(r, 300));
