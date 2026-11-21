@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (21/11/2026 19:57 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 20:00 ora italiana)
 
-cosa è ?!?
+anche questa immagine sbagliata veloce

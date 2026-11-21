@@ -112,3 +112,13 @@ Quando scrollo verso il basso i mercatini si nascondono. Quindi cioè, l'obietti
 
 ## 2026-11-21 19:57 · 01WTjqUtLt7R
 cosa è ?!?
+
+## 2026-11-21 19:58 · 01WTjqUtLt7R
+Non sono i pulsanti che spariscono quando scorro, sono i marcatini che si nascondono, ecco. Poi per l'altra domanda, hai già guardato?
+l'immagine dv è?
+
+## 2026-11-21 19:58 · 01WTjqUtLt7R
+Correggi qui velocemente l'immagine.
+
+## 2026-11-21 20:00 · 01WTjqUtLt7R
+anche questa immagine sbagliata veloce
