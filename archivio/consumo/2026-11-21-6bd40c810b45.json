@@ -1,0 +1,30 @@
+{
+"account": "108763",
+"sessione": "6bd40c810b45",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 263276,
+"anomalie": [],
+"blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": 1,
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 10 · Promessa a Mario senza voce": 1
+},
+"esempi_blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": [
+"18:53 · Consegne non su GitHub (C226, blocco 1/3): docs/ERRORI.md fuori dal commit. Fai commit e push adesso (`git push -u origin claude/parigi-ramo-definitivo`), controlla `git rev-parse HEAD origin/claude/p"
+],
+"Stop 5 · Notifica non letta (in coda": [
+"18:53 · Notifica non letta (in coda dalle 18:34: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"18:53 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Appena sono tutte giuste ti mando 3 foto del telefono, prima di pubblicare.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede"
+]
+},
+"remota": "01WTjqUuR7dg",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
