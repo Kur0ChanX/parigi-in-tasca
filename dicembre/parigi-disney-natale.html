@@ -375,7 +375,8 @@ tr.hl td{background:var(--badge-warn-bg)}
 .filters button:active{transform:scale(.96)}
 .filters button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
 .sortbar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s3);margin-top:var(--s2)}
-.switch.sort3{grid-template-columns:repeat(3,auto);margin:0}
+.switch.sort4{grid-template-columns:repeat(2,auto);margin:0}
+@media (min-width:600px){.switch.sort4{grid-template-columns:repeat(4,auto)}}
 #fdesc{margin:var(--s2) 0 var(--s3);max-width:44rem}
 table.cmp{min-width:0;font-size:.93rem}
 table.cmp th,table.cmp td{padding:8px 10px;vertical-align:middle}
@@ -616,7 +617,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
  <div id="scN"></div>
  <h3 class="sc-step" id="sc2"><span class="nb sm">2</span>L'hotel vicino a Disney</h3>
  <p class="sc-now" id="scNowD"></p>
- <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort3" role="group" aria-label="Ordina per" id="scSort"><button type="button" data-s="prezzo" aria-pressed="true">Prezzo</button><button type="button" data-s="vicino" aria-pressed="false">Vicino ai parchi</button><button type="button" data-s="voto" aria-pressed="false">Pulizia</button></div></div>
+ <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort4" role="group" aria-label="Ordina per" id="scSort"><button type="button" data-s="prezzo" aria-pressed="true">Meno cari</button><button type="button" data-s="disney" aria-pressed="false">Vicino a Disney</button><button type="button" data-s="rer" aria-pressed="false">Vicino alla RER</button><button type="button" data-s="pulizia" aria-pressed="false">Più puliti</button></div></div>
  <div class="sc-list" id="scD"></div>
  <p class="sc-leg">Accanto a ogni alloggio la differenza col mio consiglio: <b class="sc-up">rosso</b> = peggio, <b class="sc-dn">verde</b> = meglio.</p>
 </div></section>
@@ -719,7 +720,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 
  <h3 class="sub-h" style="margin-top:var(--s6)">Tutti, uno contro l'altro</h3>
  <div class="filters" role="group" aria-label="Mostra solo" id="filters"></div>
- <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort3" role="group" aria-label="Ordina per" id="sort"><button type="button" data-s="prezzo" aria-pressed="true">Prezzo</button><button type="button" data-s="vicino" aria-pressed="false">Vicino al treno</button><button type="button" data-s="voto" aria-pressed="false">Voto</button></div></div>
+ <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort4" role="group" aria-label="Ordina per" id="sort"><button type="button" data-s="prezzo" aria-pressed="true">Meno cari</button><button type="button" data-s="disney" aria-pressed="false">Vicino a Disney</button><button type="button" data-s="rer" aria-pressed="false">Vicino alla RER</button><button type="button" data-s="pulizia" aria-pressed="false">Più puliti</button></div></div>
  <p class="small muted" id="fdesc"></p>
  <details><summary>Tutti in una tabella</summary><div class="in"><div class="tbl"><table class="cmp"><thead><tr><th>N.</th><th>Alloggio</th><th class="r">4 notti</th><th>Dal treno</th><th class="r">Voto</th><th class="r">Pulizia</th></tr></thead><tbody id="cmpBody"></tbody></table></div></div></details>
 
@@ -1100,7 +1101,8 @@ const card=h=>`<article class="card${h.id===MIO?' is-rec':''}" id="al-${h.id}">
 </article>`;
 let FI='tutti',SO='prezzo';
 const num=s=>parseFloat(String(s).replace(',','.'))||0,v10=(h,k)=>num(h[k])*(h.ab?2:1);
-const SORT={prezzo:(a,b)=>(a.p??1e9)-(b.p??1e9),vicino:(a,b)=>a.min-b.min||(a.p??1e9)-(b.p??1e9),voto:(a,b)=>v10(b,'sc')-v10(a,'sc')||(a.p??1e9)-(b.p??1e9)};
+/* ordine (Mario 21/11 23:5x: «dai più vicini a Disneyland, i meno cari, i più puliti e vicino alla RER»); parkMin è più sotto: si usa solo al tocco */
+const pz=(a,b)=>(a.p??1e9)-(b.p??1e9),SORT={prezzo:pz,disney:(a,b)=>parkMin(a.id)-parkMin(b.id)||pz(a,b),rer:(a,b)=>a.min-b.min||pz(a,b),pulizia:(a,b)=>v10(b,'cl')-v10(a,'cl')||pz(a,b)};
 $('#filters').innerHTML=[['tutti','Tutti'],...Object.entries(GN)].map(([k,t])=>`<button type="button" data-f="${k}" aria-pressed="${k===FI}">${esc(t)}</button>`).join('');
 const renderAl=()=>{const L=AL.filter(h=>FI==='tutti'||h.g.includes(FI)).sort(SORT[SO]);
  $('#fdesc').textContent=GD[FI]+` Sono ${L.length}.`;
@@ -1589,7 +1591,7 @@ ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class
 <div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>`:''}</div>`)};
   $('#scN').innerHTML=`<p class="sc-g">Vicino alla Gare de Lyon: i più comodi per i treni</p><div class="sc-list">${PAR.filter(p=>p.z==='gl').map(nOpt).join('')}</div><p class="sc-g">In centro, più belli (Opéra, Châtelet)</p><div class="sc-list">${PAR.filter(p=>p.z==='ce').map(nOpt).join('')}</div><p class="sc-g">Oppure</p><div class="sc-list">${nOpt(null)}</div>`;
   const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
-  const SRT={prezzo:(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),vicino:(a,b)=>(a.c?a.c.park:1e9)-(b.c?b.c.park:1e9)||(a.c?a.c.tot:0)-(b.c?b.c.tot:0),voto:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')};
+  const tt=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:tt,disney:(a,b)=>(a.c?a.c.park:1e9)-(b.c?b.c.park:1e9)||tt(a,b),rer:(a,b)=>!a.c-!b.c||a.h.min-b.h.min||tt(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||tt(a,b)};
   $('#scD').innerHTML=L.sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
    const m=c?(rc?'<span class="sc-rc">★ Il mio consiglio</span>':`<span>Totale${dX(dEur(c.tot,cm.tot))||' uguale'}</span>`)+`<span>🚆 ${c.park} min${dX(dMin(c.park,cm.park))}</span><span>🚶 ${c.walk} min${dX(dMin(c.walk,cm.walk))}</span><span>🧼 ${h.cl}</span>`:h.ab?'<span>Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span>Esaurito per queste notti</span>';
    return row('d-'+h.id,on,!c,`<span class="nb sm">${h.id}</span>`,esc(h.n),esc(h.sub),c?fmt(c.q[0]):h.ab?'dal 14':'?',SCE.n?'3 notti':'4 notti',m,
