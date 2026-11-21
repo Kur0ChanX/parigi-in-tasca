@@ -21,7 +21,7 @@ const file = path.resolve(process.argv[2] || path.join(__dirname, '..', 'dicembr
       for (let n; (n = tw.nextNode());) {
         if (!n.textContent.trim()) continue; const el = n.parentElement;
         if (!el || el.closest('#topbar,script,style,[aria-hidden="true"]:not(.axis)')) continue;
-        const d = el.closest('details'); if (d && !d.open && !el.closest('summary')) continue;
+        { let chiusa = false; for (let d = el.closest('details'); d; d = d.parentElement && d.parentElement.closest('details')) { const sm = el.closest('summary'); if (!d.open && !(sm && sm.parentElement === d)) { chiusa = true; break; } } if (chiusa) continue; } // anche dentro una scheda chiusa più fuori (schede una dentro l'altra)
         if (!vis(el)) continue;
         { let f = false; for (let e = el; e; e = e.parentElement) if (getComputedStyle(e).position === 'fixed') { f = true; break; } if (f) continue; } // barre fisse: il testo ci scorre sotto apposta
         const r = document.createRange(); r.selectNodeContents(n);
