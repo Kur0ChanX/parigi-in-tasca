@@ -1,3 +1,9 @@
-# Ultima risposta di Claude (21/11/2026 23:46 ora italiana)
+# Ultima risposta di Claude (22/11/2026 00:07 ora italiana)
 
-La v14 è unita su GitHub. Sto aspettando 2 cose: che il sito vero si aggiorni e le foto dell'aiutante. Poi ti mando il resoconto con le foto.
+Ho salvato su GitHub anche il lavoro a metà: la versione salvata è identica a quella su cui lavoro. Il sito non cambia, perché si pubblica solo da un altro ramo.
+
+Aspetto i prezzi delle 3 notti 14→17 che sta leggendo l'aiutante. Quando arrivano li inserisco, rifaccio le prove e pubblico la v16 con le foto di 2 schede.
+
+⚠️ Aspettano te: 2
+- Principale 11 · come impaginare la pagina di dicembre
+- Principale 13 · la luna nuova
