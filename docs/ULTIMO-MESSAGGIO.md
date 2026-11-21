@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (21/11/2026 21:17 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 21:35 ora italiana)
 
-mi raccomando studiati un impaginazione geniale non confusa
+riesci a impaginare per windows?
