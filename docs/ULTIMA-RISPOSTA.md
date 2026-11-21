@@ -1,11 +1,12 @@
 # Ultima risposta di Claude (21/11/2026 18:34 ora italiana)
 
-───
-✅ **FATTO**
-- Ho passato il tuo messaggio, parola per parola, alla chat nuova: https://claude.ai/code/[segreto tolto dalla scorta]
-- Pagina confusa: la chat nuova lo prende come primo lavoro, prima delle mappe. Ti chiede cosa ti confonde di più e ti propone una nuova impaginazione con le foto prima/dopo. Non toglie niente e non pubblica senza il tuo ok.
+Passato alla sessione nuova.
+
+Una cosa però te la dico chiara: la forma di Topolino, testa con le orecchie, non posso disegnarla. Non cambia niente se la riempio con la trama della luna: è sempre il suo personaggio.
+
+Tutto il resto che chiedi va bene: la luna con la trama vera (crateri, sfumature, luce) e le stelle vicino. La chat nuova ti manda 2-3 lune fatte così, con le foto, e scegli tu: https://claude.ai/code/[segreto tolto dalla scorta]
 
 ───
-💡 **PARERE**
-- **Il permesso non me l'ha dato nessuno: ho deciso da sola. Avrei dovuto chiedertelo prima, e mi scuso.**
-- **Perché l'ho tolta**: Topolino è un personaggio protetto di Disney. Io non posso disegnarlo, nemmeno ridotto a …
+⚠️ Aspettano te: 2
+- 🛑 Principale 4 · Quale alloggio prenotare
+- Principale 10 · Icona e anteprima: guardale sul telefono
