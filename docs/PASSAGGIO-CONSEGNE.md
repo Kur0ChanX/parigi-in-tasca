@@ -1,13 +1,13 @@
 # Passaggio di consegne
 
-Sessione attuale: #10 (`session_01WTjqUwUueBoLvRkqLpLRmU`, aperta da Mario il 21/11 18:06 con Fable · Extra; catena 0 di 8, la prossima la apro io; dopo la #9 `session_01WTjqUvsd71kLUH9Y77mC59`, chiusa il 21/11 ~18:05).
+Sessione attuale: #11 (dopo la #10 `session_01WTjqUwUueBoLvRkqLpLRmU`, chiusa alla soglia 21/11 18:21; la apre la #10 con `create_session` (catena 1 di 8)).
 
 - **Già deciso da Mario (non richiedere):** viaggio dom 13 → gio 17/12/2026 in 2, senza auto; dom mercatini a Parigi, lun–mer Disneyland; alloggio con voto sopra 8 e pulizia buona, comodo senza auto (niente taxi né Uber); vanno bene hotel, B&B, appartamenti, stanze; kit installato (21/11), icona 🗼, ramo `claude/parigi-ramo-definitivo`; pagina «un po' disneyana, un po' mercatini», sera romantica; DUE colori a scelta (Blu notte · Vin brulé, interruttore sotto il titolo: Mario «va bene» 21/11). Notti: 4, dal 13 al 17 («le notti le conti in base al biglietto del volo», 21/11). Relax SOLO il primo giorno (domenica), lun–mer solo Disney con trasporti zero stress; tutto «a prova di stupido» (21/11, dopo l'handoff della #6). Link per l'amico = **web app** sul sito (21/11 17:25); pagina riordinata approvata («ok», 17:34).
 - **Da non rifare:** la ricerca alloggi (fatta dalla #4 con 2 aiutanti: `alloggi_spa_comodi.md` 10 schede, `alloggi_ricerca_ampia.md` 16 schede, prezzi Booking 13→17 del 21/11); la sezione «Alloggi» della pagina (15 numerati, pubblicata); la pagina blu e l'interruttore dei colori (pubblicati); il mio consiglio unico n. 8 Moxy con cancellazione gratuita (versione 5, pubblicata dalla #5); il confronto delle 28 foto (`hotel_foto_booking_mario.md`); la ricerca jacuzzi/idromassaggio privato (#6, `alloggi_jacuzzi.md`); il verdetto spa nella pagina; il mega consiglio dei mercatini; la pagina che segue l'alloggio scelto (C1, nel ramo); `add_repo` di RVC (vietato). Il consiglio nuovo n. 12 Relais Spa e la domenica con la spa (C2, versione 7 pubblicata dalla #7); la rilettura delle tariffe del Relais Spa (21/11 sera, `alloggi_spa_comodi.md`). C3 (#8): Ki Space nei costi, barre che portano alla scheda, pagina con schede e tappe che si aprono col tocco, web app pubblicata (v2, PR #3). C4 (#9 e #10): icona coi mercatini con la luna a forma di Topolino, anteprima del link, controllo della web app e correzioni: **pubblicati dalla #10** (PR #4, 21/11 18:15).
 - **Cosa preme a Mario adesso:** scegliere l'alloggio (🛑, rifatta dalla #10 alle 18:20 con le foto; cancellazioni gratuite dal 29/11) per mandare il link all'amico su WhatsApp/Telegram. Consiglio alloggio: **n. 12 Relais Spa** (831 € non rimborsabile, 908 € con cancellazione gratuita fino all'8/12). Il n. 2 Ki Space: domenica arrivo 22:30, spa già chiusa. Poi biglietti Disney. Icona e anteprima con la luna di Topolino sono online: aspetto solo che le veda sul telefono (riga ⏭ in «Aspetta Mario»).
 
-## Stato (21/11 18:20 ora italiana)
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte della #8 e della #9 unite dalla #10 all'avvio.
+## Stato (21/11 18:21 ora italiana)
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-principale-20261121-01WTjqUwUueB/claude/parigi-ramo-definitivo.
 - Kit 43 · 19/11/2026 · Preferenze v38 installato, prove 43/43 verdi (verifica: `docs/kit-progetto/VERSIONE`; tutti i `tools/test-*.py` con `python3 -I`).
 - **C4 online** (#10): PR #4 unita il 21/11 18:15 (ramo-copia `versione-dicembre-topolino`, solo `dicembre/`: pagina, manifest, 4 icone, `anteprima.jpg`). Luna = testa di Topolino in `luna()` di `tools/fai-icone-dicembre.js`; `?v=`: icone 3, anteprima 2. Verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -o 'anteprima.jpg?v=2'`; file online uguali al ramo (`cmp`, fatto il 21/11 18:17); `node tools/prova-web-app.js` 19 VERO (nuova: stesso `?v=` delle icone nella pagina e nel manifest).
 - **Web app di dicembre online** (C3, #8): https://kur0chanx.github.io/parigi-in-tasca/dicembre/ (PR #3 e #4 unite il 21/11). Pagina facile: Ki Space nei costi, barre che portano alla scheda, schede e tappe che si aprono col tocco. Si cambia `dicembre/parigi-disney-natale.html`, poi `python3 -I tools/fai-dicembre.py`; prove `node tools/prova-web-app.js` (19) e prove del kit (43). L'Artifact qui sotto è rimasto alla v7.
@@ -23,30 +23,32 @@ Sessione attuale: #10 (`session_01WTjqUwUueBoLvRkqLpLRmU`, aperta da Mario il 21
 - 28 foto di Booking di Mario (12–17 dic, 5 notti): `archivio/2026-11-21-booking-12-17-dic-mario/01…28-booking.jpg`.
 
 ## Sessione appena chiusa
-- #9 (Opus 5.5 · Extra): unite le scorte della #8 e della #9; messaggio di Mario del 17:5x passato dalla #8 (C4, parole intere in `docs/lavori-in-corso/C4-icona-anteprima-21-11.md`).
-- C4: `tools/fai-icone-dicembre.js` disegna icona e anteprima 1200×630 (106 KB); tag `og:`/`twitter:card` in `tools/fai-dicembre.py` (regole WhatsApp dalla pagina ufficiale Meta, 21/11/2026); manifest con `?v=2` e icona `maskable`; README; 9 prove nuove in `tools/prova-web-app.js` (provate anche rotte).
-- Controllo della web app con 1 aiutante; ogni punto verificato sugli appunti prima di correggere (elenco e scartati nel file C4). Foto mandate: `archivio/2026-11-21-icona-anteprima/` (DOMANDA 1) e `archivio/2026-11-21-domanda-alloggio/` (DOMANDA 2).
-- Controllo Da fare: 1 voce aggiunta (promessa «correggo e rifaccio la domanda sull'hotel», sezione 1).
+- #10 (Fable 5.2 · Extra, aperta a mano da Mario): avvio fatto a mano (nata senza kit), scorte della #8 e della #9 unite.
+- Luna = testa di Topolino (`luna()` di `tools/fai-icone-dicembre.js`), `?v=` icone 3 e anteprima 2, prova nuova sul `?v=` (provata anche rotta). Prove: web app 19 VERO, colori, `--controlla`, kit 43/43.
+- Pubblicato: ramo-copia `versione-dicembre-topolino` da `main` (solo `dicembre/`, prove rifatte sulla copia), PR #4 unita alle 18:15, `main` unito nel ramo, sito vero riletto (`curl`, `cmp`).
+- A Mario (18:20): 4 foto, link, passi per vedere icona e anteprima sul telefono, domanda sull'alloggio rifatta, parere sul marchio Disney, «basta Opus»; notifica mandata.
+- Sveglia `trig_01N9WtrZWmXKsSgoN9J13wpx` del 7/12 09:07 (ricontrollo della settimana prima), legata alla #10.
+- Controllo Da fare: 0 voci dai messaggi (solo l'[AVVIO]); 1 voce dai «Prossimi passi» (ricontrollo della settimana prima).
 
 ## Strade provate e scartate (perché; così la prossima non le rifà)
-- Pubblicare le correzioni della pagina prima dell'ok all'icona: scartato, i tag dell'anteprima puntano a `anteprima.jpg` (nuova) e un giro solo costa meno; si pubblica tutto insieme.
-- Dati dell'aiutante presi così come sono: «n. 13 circa 100 € in meno» era sbagliato (vero circa 60 € a parità di tariffa), «Queen Room» senza prezzo negli appunti, meteo e code delle Tuileries non negli appunti: scartati.
 - Negozio ufficiale Disney e motore di prenotazione Disney con browser automatico: 403, bloccati. Prezzi dai siti non ufficiali concordi; il vero si legge alla cassa.
 - Booking dal computer senza accesso: non mostra lo sconto Genius né il prezzo «solo su mobile» di Mario (circa −12 %); il prezzo vero lo legge Mario nell'app.
 - Elenchi di Booking con browser automatico: pagina vuota; cambiare l'«user agent» = aggirare un blocco, vietato. Funziona `web_fetch` di Parallel Search sulle singole schede.
-- Bussy e Torcy: corse più lunghe, quasi tutto esaurito. B&B con colazione: arrivo massimo 20–22.
 - Ripubblicare l'Artifact: serve `Artifact read` senza `path` e il Read di tutte le righe (~50k token); con `path: "index.html"` salva solo la copia per il `diff`. Screenshot con Playwright: `reducedMotion: 'reduce'`.
 - CSS inserito dopo una regola che sta dentro `@media` sulla stessa riga finisce nella media query: controllare la riga intera.
 - Pubblicare con la PR #2 (ramo comune): scartato, metteva sul sito anche archivio, messaggi e appunti; si pubblica con un ramo-copia da `main` coi soli file di `dicembre/` (+ `sw.js`).
 - Prova dei service worker su `127.0.0.1`: la guida di novembre si registra solo su `github.io` o `localhost`; `tools/prova-web-app.js` usa `localhost`.
 - Pagina locale con `isMobile` in Playwright: senza `<meta viewport>` (la sorgente non ce l'ha) la pagina esce rimpicciolita; per le foto della sorgente niente `isMobile`.
+- #10: sessione aperta a mano = nasce sul ramo della piattaforma senza `.claude/`, hook spenti e [AVVIO] fuori dal registro. Dopo il merge: `echo '{}' | python3 .claude/hooks/avvio-check.py` (passa al ramo giusto, elenca scorte e righe).
+- #10: luna piccola nell'angolo (raggio 24): a 60 px Topolino non si legge e l'orecchio esce dal ritaglio a cerchio di Android. Tenuta: raggio 46, centro (150,138).
+- #10: `list_triggers` senza filtri = ~20k token di sveglie di altri progetti: usare `enabled: true` e `limit` basso. `merge_pull_request`: `expectedHeadSha` di 40 caratteri.
 
 ## Prossimi passi
-1. Fatto dalla #10 (luna di Topolino, pubblicazione, foto e link a Mario). Se Mario scrive che l'anteprima non esce su WhatsApp: il link con `?v=2` in fondo (WhatsApp tiene in memoria l'anteprima vecchia); icona vecchia sulla Home: toglierla e rimetterla.
+1. PRIMA DI TUTTO, nel primo messaggio a Mario: la riga 🧠 (la #10 era Fable · Extra perché l'ha aperta così Mario; Fable NON serve per quello che resta: dirgli «basta Opus») e le 2 righe di «Aspetta Mario» con le loro foto: alloggio (🛑, `archivio/2026-11-21-domanda-alloggio/`) e icona sul telefono (⏭, `archivio/2026-11-21-icona-topolino/`); la #10 le ha già mandate alle 18:20, quindi a turno e senza ripetere tutto. Luna di Topolino, pubblicazione, foto e link: fatti dalla #10. Se Mario scrive che l'anteprima non esce su WhatsApp: il link con `?v=2` in fondo (WhatsApp tiene in memoria l'anteprima vecchia); icona vecchia sulla Home: toglierla e rimetterla.
 2. DOMANDA 2 (alloggio, 🛑): col numero di Mario, se non è il 12, aggiorno il consiglio in cima (sorgente `dicembre/parigi-disney-natale.html`) e rifaccio le prove; poi pubblico (ramo-copia da `main`, solo `dicembre/`, come la PR #4). Col 12: ricordare la navetta della reception (non confermata) e di prenotare la camera «con 1 letto matrimoniale large» (non la suite).
 3. Voci 👁 di `docs/DA-FARE.md`: si chiudono quando Mario vede icona, anteprima e pagina corretta nell'app.
 4. «A prova di stupido»: dopo la scelta, una passata sui testi (es. la riga dei trasporti a persona in «Come sono calcolati» ha ~15 numeri: farne una tabellina).
-5. Da ricontrollare la settimana prima (voce 👁 in `docs/DA-FARE.md`, sveglia del 7/12 09:07 nella #10: chi la sostituisce la rifà sua): orari RER A 13–17/12, scioperi, terminal Volotea; vendita dei ticket della metro sul telefono (piano B Navigo Easy già nella pagina).
+5. Da ricontrollare la settimana prima (voce 👁 in `docs/DA-FARE.md`, sveglia `trig_01N9WtrZWmXKsSgoN9J13wpx` del 7/12 09:07 legata alla #10: la #11 la rifà sua con `send_later` e poi cancella quella): orari RER A 13–17/12, scioperi, terminal Volotea; vendita dei ticket della metro sul telefono (piano B Navigo Easy già nella pagina).
 
 ## Blocchi e rischi
 - Prezzi visti il 21/11: possono salire. Cancellazioni gratuite che scadono presto: 29/11 (n. 1, 4, 7, 10, 13), 6/12 (n. 11, 14), 8/12 (n. 12, camera con letto matrimoniale, 908 €), 10/12 (n. 2, 730 €, stima), 13/12 (n. 8, 577 €, si paga in hotel), 12/12 (n. 5).
@@ -56,7 +58,7 @@ Sessione attuale: #10 (`session_01WTjqUwUueBoLvRkqLpLRmU`, aperta da Mario il 21
 ## Ultimo messaggio di Mario
 «aggiungi anche topolino di Disney a forma di luna nello sfondo nell'icona e immagine 
 e poi publica»
-(21/11 18:03 alla #9 già chiusa, mentre la #10 non era ancora aperta → Prossimi passi 1.)
+(21/11 18:03 alla #9 già chiusa → fatto dalla #10: online dalle 18:15, foto e link mandati alle 18:20. Dopo, Mario ha scritto solo l'[AVVIO] della #10.)
 
 Prima (17:5x alla #8, → C4): scopo della web app (mercatini e scelta dell'hotel), icona coi mercatini, anteprima per WhatsApp e Telegram (intero in `docs/lavori-in-corso/C4-icona-anteprima-21-11.md`).
 
@@ -66,13 +68,12 @@ Prima (17:5x alla #8, → C4): scopo della web app (mercatini e scelta dell'hote
 Prossimo E libero: E1.
 
 ## Motore e forza di pensiero
-Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
+Motore: **claude-fable-5-2** (Fable 5.2) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-21 17:46 · [AVVIO] Sessione #9 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cla… → avvio fatto, scorte #8 e #9 unite; messaggio di Mario del 17:5x (dalla #8) → C4, domande 1 e 2
-- 2026-11-21 18:03 · aggiungi anche topolino di Disney a forma di luna nello sfondo nell'icona e imma… → risposta alla DOMANDA 1 (2, con ok a pubblicare): Prossimi passi 1 per la #10
+- 2026-11-21 18:06 · [AVVIO] Sessione #10 di Parigi in tasca (repo Kur0ChanX/parigi-in-tasca, ramo cla… → avvio fatto a mano (sessione nata senza hook: scritto qui a mano), scorte #8 e #9 unite; Prossimi passi 1 fatto: luna di Topolino online (PR #4)
 
-Ultimo, intero:
+Ultimo, intero (l'[AVVIO] della #10 non conta; l'ultimo vero è del 18:03 alla #9):
 > aggiungi anche topolino di Disney a forma di luna nello sfondo nell'icona e immagine 
 > e poi publica
