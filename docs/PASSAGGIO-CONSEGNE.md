@@ -55,6 +55,7 @@ Sessione attuale: #15 (dopo la #14 `session_01WTjqUtLt7RunYqWQTuBGHX`, chiusa al
 
 ## Ultimo messaggio di Mario
 «Quando scrollo verso il basso i mercatini si nascondono. Quindi cioè, l'obiettivo di quest'app è capire qual è il miglior giro dei mercatini, che l'abbiamo capito, cioè me l'hai fatto vedere, e poi qual è la migliore opzione per dove andare a dormire, per andare a vedere i mercatini e per andare a Disneyland gli altri 3 giorni, per facilitare i trasporti, i costi, non spendere troppi costi in taxi, oppure che non ci mettiamo 1 ora e mezza con i trasporti per arrivare a Disneyland, arriviamo tardi. Insomma, un itinerario. Quindi mi confermi che una volta che scelgo l'hotel mi modifica l'itinerario?»
+«cosa è ?!?» (21/11 19:57, foto `archivio/2026-11-21-mercatini-alloggio/mario-anteprima-link-novembre.jpg`: link di dicembre mandato all'amico con l'anteprima di novembre → causa: spazi nel link «…/parigi-in-tasca / dicembre/», l'app ha preso solo la guida di novembre; anteprima di dicembre controllata sul sito, giusta; riga in `docs/ERRORI.md`; a Mario il link in un riquadro.) Prima:
 (21/11 19:52 → barra fissa in alto, v8 online 19:56; confermato con prova e tabella dei 3 hotel.) Prima: «ok publica» (19:51, risposta alla DOMANDA 8, v7 già online).
 
 ## Numeri liberi
