@@ -5,9 +5,9 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 ## Catene
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
-| Principale | cerchi | 🟢 🟡 🔴 ⚫ | 7 | session_01WTjqUxvERSiPgYyfyxxMEr | — |
+| Principale | cerchi | 🟢 🟡 🔴 ⚫ | 8 | session_01WTjqUwT3GsbcTs9uTQhbck | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
 |---|---|---|---|---|
-| C2 | Principale 7 | Consiglio rivisto (relax domenica, Disney senza stress) + pubblicazione pagina | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C2-consiglio-relax-21-11.md` | 21/11 |
+| C2 | Principale 8 (dalla 7) | Consiglio rivisto (relax domenica, Disney senza stress) + pubblicazione pagina | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C2-consiglio-relax-21-11.md` | 21/11 |
