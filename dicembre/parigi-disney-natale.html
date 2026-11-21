@@ -260,6 +260,12 @@ tr.hl td{background:var(--badge-warn-bg)}
 .pick .d{font-size:.92rem;color:var(--mute)}
 .pick:active{transform:scale(.98)}
 @media (hover:hover){.pick:hover{border-color:var(--brand)}}
+.mine{display:grid;gap:var(--s3);padding:var(--s4) var(--s4) var(--s5);margin-bottom:var(--s6);background:var(--surface);border-radius:var(--r-lg)}
+.mine-t{display:flex;align-items:center;gap:var(--s3);font-size:1.3rem;line-height:1.25;text-wrap:balance;min-width:0}
+.mine-why{display:grid;gap:8px}
+.mine-why li,.mine p{max-width:65ch}
+.mine .give{color:var(--mute);font-size:.96rem}
+.mine .btn,.mine .rec{justify-self:start}
 .filters{display:flex;gap:var(--s2);overflow-x:auto;scrollbar-width:none;padding-block:2px var(--s2)}
 .filters button{flex:none;min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);font:700 .93rem var(--text);cursor:pointer;transition:background-color .15s,border-color .15s,transform .15s}
 .filters button:active{transform:scale(.96)}
@@ -464,13 +470,13 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 <section id="breve" aria-labelledby="h-breve"><div class="wrap">
  <div class="sec-head"><p class="kicker">La risposta in breve</p><h2 id="h-breve">Scegliete l'alloggio fra 15 e prenotate il biglietto Disney da 3 giorni. Il resto si paga sul posto.</h2></div>
  <div class="answer">
-  <div class="verdict"><span class="k">Dove dormire</span><span class="v">Scegliete voi: 15 alloggi a confronto</span><p>Il mio consiglio: n. 4 per spendere poco, n. 8 per la comodità, n. 12 per la spa. Stesso posto per tutte e 4 le notti. <a href="#hotel">Vai agli alloggi</a></p></div>
+  <div class="verdict"><span class="k">Dove dormire</span><span class="v">Il mio consiglio: n. 8 Moxy, con cancellazione gratuita</span><p>Reception 24 ore e 8 minuti dal treno: domenica con le valigie e ogni sera dopo i parchi camminate poco. Stesso posto per tutte e 4 le notti; gli altri 14 sono lì per confronto. <a href="#hotel">Vai agli alloggi</a></p></div>
   <div class="verdict"><span class="k">Biglietti Disney</span><span class="v">3 giorni / 2 parchi, dal 14 al 16: 544 € in due</span><p>Costa come 1 parco lunedì + 2 giorni, ma vi dà tutti e due i parchi anche lunedì. <span class="bd nu">non ufficiale</span></p></div>
   <div class="verdict"><span class="k">Hotel Disney</span><span class="v">No</span><p>Il più economico con voto 8,0 costa circa 900 € in più. Unico vantaggio: entrate un'ora prima.</p></div>
   <div class="verdict"><span class="k">Trasporti</span><span class="v">Biglietti singoli sul telefono, niente abbonamento</span><p>Metro 14 dall'aeroporto e RER A, il treno regionale veloce che collega Parigi ai parchi.</p></div>
  </div>
  <div class="total">
-  <p class="t">Totale stimato per due: alloggio, biglietti Disney e trasporti locali<small>Dal n. 1, il più economico, al n. 12 con la spa. Voli, cibo e armadietto bagagli esclusi. <span class="bd es" style="background:rgb(0 0 0 / .1);color:var(--lamp-ink)">stima</span></small></p>
+  <p class="t">Totale stimato per due: alloggio, biglietti Disney e trasporti locali<small>Dal n. 1, il più economico, al n. 12 con la spa. Con il mio consiglio, n. 8 con cancellazione gratuita: circa 1.230 €. Voli, cibo e armadietto bagagli esclusi. <span class="bd es" style="background:rgb(0 0 0 / .1);color:var(--lamp-ink)">stima</span></small></p>
   <p class="n">≈ 1.040–1.415 €</p>
  </div>
 </div></section>
@@ -489,6 +495,7 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
    <li><b>N. 1 Love N Chic:</b> 391 € + 544 € biglietti + 105 € trasporti = 1.040 €.</li>
    <li><b>N. 4 Chez Stéphane &amp; Sophie:</b> 492 € + 544 € + 107 € = 1.143 €.</li>
    <li><b>N. 8 Moxy:</b> 524 € + 544 € + 107 € = 1.175 €.</li>
+   <li><b>N. 8 Moxy con cancellazione gratuita (il mio consiglio):</b> circa 577 € + 544 € + 107 € = circa 1.228 €.</li>
    <li><b>N. 12 Relais Spa:</b> 763 € + 544 € + 107 € = 1.414 €.</li>
    <li><b>Misto:</b> pacchetto Disney Cheyenne 2 notti 14→16 con biglietti 1.103 € (stima ufficiale) + Moxy 13→14 e 16→17 circa 249 € (stima) + 87 € trasporti = 1.438 €.</li>
    <li><b>Tutto al Cheyenne:</b> pacchetto 4 notti 13→17 con biglietti 1.970 € (stima ufficiale) + 76 € trasporti = 2.047 €.</li>
@@ -500,10 +507,26 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 <div class="lights" data-n="22" aria-hidden="true"></div>
 
 <section id="hotel" aria-labelledby="h-hotel"><div class="wrap wide">
- <div class="sec-head"><p class="kicker">Dove dormire · 4 notti, 13→17 dic, 2 adulti, 1 camera</p><h2 id="h-hotel">15 alloggi a confronto. Scegliete voi e scrivetemi il numero.</h2>
+ <div class="sec-head"><p class="kicker">Dove dormire · 4 notti, 13→17 dic, 2 adulti, 1 camera</p><h2 id="h-hotel">Io prenderei il n. 8. Qui sotto tutti i 15: scrivetemi il numero che scegliete.</h2>
  <p class="lead">Prezzi per 4 notti, tasse incluse, letti su Booking da computer il 21/11/2026. Nella vostra app, con Genius, spesso costano circa il 12 % in meno.</p></div>
 
- <h3 class="sub-h">Il mio consiglio per ogni desiderio</h3>
+ <div class="mine is-rec" id="mio">
+  <span class="rec"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>Il mio consiglio</span>
+  <h3 class="mine-t"><span class="nb">8</span><span>Io prenderei il Moxy Paris Val d'Europe</span></h3>
+  <p>Con cancellazione gratuita: circa 577 € per 4 notti <span class="bd es">stima</span>. Il prezzo vero lo leggete nell'app.</p>
+  <ul class="clean mine-why">
+   <li><b>Domenica sera</b> arrivate con le valigie verso le 22:00: la reception è sempre aperta e il treno è a 8 minuti.</li>
+   <li><b>Ogni sera</b> i parchi chiudono alle 22:00: una fermata di treno, 8 minuti a piedi e siete in camera.</li>
+   <li><b>Giovedì</b> uscite alle 8:30 per il volo: in 8 minuti siete al treno.</li>
+   <li><b>Pulito</b> (9,0) e hotel vero: niente codici da aspettare, cauzioni o penali per le pulizie.</li>
+   <li><b>Cancellazione gratuita:</b> circa 50 € in più, ma restate liberi se cambiano le notti o c'è uno sciopero.</li>
+  </ul>
+  <p class="give"><b>Cosa lasciate:</b> camera piccola (17 m²) e niente spa. La spa del n. 12 chiude alle 22:00, come i parchi: la usereste solo la mattina presto. Per me non vale la differenza di prezzo.</p>
+  <p class="give"><b>Se il Moxy è pieno:</b> il n. 9 ibis, stessa comodità, un po' meno pulito. Se il n. 15 Elysée si libera sul sito ufficiale a un prezzo simile, prendete quello.</p>
+  <a class="btn gold" href="#al-8">Vedi la scheda del n. 8</a>
+ </div>
+
+ <h3 class="sub-h">Se cercate altro: il migliore per ogni desiderio</h3>
  <div class="picks" id="picks"></div>
 
  <div class="callout" style="margin-top:var(--s5)"><p><b>Se partite dal 12 (5 notti):</b> una notte in più costa 114 € con il n. 5 e 176 € con il n. 4. I n. 1 e 6 sabato 12 sono già pieni.</p></div>
@@ -779,7 +802,7 @@ const MAX=2100,REF=SC.find(c=>c.ref).s.reduce((a,b)=>a+b[1],0);
 const BK=s=>`https://www.booking.com/hotel/fr/${s}.it.html?checkin=2026-12-13&checkout=2026-12-17&group_adults=2&group_children=0&no_rooms=1`;
 const VIS=B.ok('visto il 21/11/2026');
 const GN={meno:"Spendere meno",vicino:"Vicino al treno",comodo:"Tutto comodo",spa:"Spa e piscina",romantico:"Romantico",spazio:"Più spazio",parchi:"A piedi dai parchi"};
-const GD={tutti:"Tutti i 15, con il numero fisso: ordinateli come volete.",meno:"Il prezzo più basso con pulizia buona.",vicino:"Al massimo 10 minuti a piedi dalla stazione Val d'Europe, poi 3 minuti di treno fino ai parchi.",comodo:"Reception 24 ore, poco cammino, bar e negozi vicino: la vacanza più rilassata.",spa:"Piscina, sauna o idromassaggio per rilassarvi dopo i parchi. Vicino al treno ce n'è una sola: il n. 12.",romantico:"Vasca privata, una casa curata con colazione o una spa con massaggi di coppia.",spazio:"Appartamenti da 47 a 53 m² con cucina.",parchi:"Dormire dentro Disney: a piedi ai parchi, ma costa molto di più."};
+const GD={tutti:"Tutti i 15, con il numero fisso: ordinateli come volete.",meno:"Il prezzo più basso con pulizia buona.",vicino:"Al massimo 10 minuti a piedi dalla stazione Val d'Europe, poi 3 minuti di treno fino ai parchi.",comodo:"Reception 24 ore, poco cammino, bar e negozi vicino: la vacanza più rilassata.",spa:"Piscina, sauna o idromassaggio. Quasi tutte chiudono alle 22:00, come i parchi: si usano la mattina presto o uscendo prima. Vicino al treno ce n'è una sola: il n. 12.",romantico:"Vasca privata, una casa curata con colazione o una spa con massaggi di coppia.",spazio:"Appartamenti da 47 a 53 m² con cucina.",parchi:"Dormire dentro Disney: a piedi ai parchi, ma costa molto di più."};
 const AL=[
  {id:1,n:"Love N Chic",sub:"Monolocale · Chessy, il paese",g:["meno"],sc:"8,9",cl:"9,0",p:391,pr:"391 €",pl:`${VIS} Cancellazione gratuita fino al 29/11.`,min:30,ne:"bus",dist:"Lontano (4 km): bus 2233, circa 10 minuti fino alla stazione dei parchi.",sun:"Arrivo fino alle 23:30. Domenica il bus da Val d'Europe parte alle 22:00 e arriva alle 22:16.",tr:"Bus: 24,60 € in due da lunedì a mercoledì.",pro:"Il prezzo più basso tra gli alloggi buoni, con tante recensioni (548). 27 m², letto matrimoniale, cucina.",con:"Dipendete dal bus: la sera, dopo le 22:00, potete aspettare fino a 40 minuti.",u:BK('studio-1-chessy')},
  {id:2,n:"Ki Space Hotel & Spa",sub:"Hotel 4 stelle con spa · Serris",g:["spa","meno"],sc:"8,4",cl:"8,9",p:465,pr:"465 €",pl:`Prezzo che avete visto nella vostra app. Da computer ${VIS} 559 €. Non rimborsabile.`,min:30,ne:"navetta",dist:"3,1 km: navetta gratuita circa ogni 50 minuti.",sun:"Reception 24 ore, ma dalla stazione serve la navetta: anche 50 minuti di attesa.",tr:"Navetta gratis, oppure bus 24,60 € in due.",spa:"Piscina di 23 m con idromassaggio, inclusa (7–22). Sauna e hammam 20 € a persona all'ora se prenotate su Booking, dai 16 anni.",pro:"La spa più grande della zona al prezzo più basso. Camera di 27 m² con cucina.",con:"Senza auto è scomodo: la navetta è rara e la sera è piena. Hotel per famiglie, niente negozi vicino.",u:BK('ki-space-amp-spa')},
@@ -792,7 +815,7 @@ const AL=[
  {id:9,n:"ibis Val d'Europe",sub:"Hotel · Montévrain",g:["vicino","comodo"],sc:"8,2",cl:"8,4",p:529,pr:"529 €",pl:`${VIS} Non rimborsabile.`,min:7,ne:"7 min",dist:"550 m, all'uscita della stazione.",sun:"Reception 24 ore.",tr:"Treno: 30,60 € in due.",pro:"Il più attaccato alla stazione tra gli hotel semplici.",con:"Pulizia 8,4: più lamentele del Moxy.",u:BK('ibis-marne-la-vallee-val-d-europe')},
  {id:10,n:"Stylish Apartment",sub:"Appartamento · Montévrain",g:["spazio"],sc:"9,3",cl:"9,3",p:586,pr:"586 €",pl:`${VIS} Non rimborsabile. 636 € con cancellazione gratuita fino al 29/11.`,min:12,ne:"12 min",dist:"1 km: circa 12 minuti a piedi.",sun:"Arrivo fino a mezzanotte; i codici arrivano il giorno stesso.",tr:"Treno: 30,60 € in due.",pro:"53 m² con letto queen, bello e pulito.",con:"Penale di 300 € se lo lasciate sporco, età minima 25 anni. Costa circa 95 € più del n. 4.",u:BK('stylish-apartment-disneyland-paris-montevrain')},
  {id:11,n:"Crowne Plaza Marne-la-Vallée",sub:"Hotel 4 stelle con spa · Magny-le-Hongre (era il Radisson Blu)",g:["spa"],sc:"8,3",cl:"8,7",p:628,pr:"628 €",pl:`${VIS} Parzialmente rimborsabile. 688 € con cancellazione gratuita fino al 6/12.`,min:25,ne:"navetta",dist:"4,2 km: navetta gratuita ogni 30 minuti fino ai parchi (7–9 minuti).",sun:`Navetta dalla stazione dei parchi, l'ultima verso le 23:15 ${B.es()}. Reception 24 ore da chiedere.`,tr:"Navetta gratis.",spa:"Piscina coperta, sauna e hammam 6–21, sembrano inclusi (da confermare). Trattamenti a pagamento.",pro:"Appena rinnovato, nel verde, con navetta frequente. Tre ristoranti e un bar.",con:"Dipendete dalla navetta. La spa chiude alle 21: dopo i parchi non c'è tempo. Col nome nuovo ha solo 237 recensioni.",u:"https://www.ihg.com/crowneplaza/hotels/gb/en/magny-le-hongre/parpm/hoteldetail/amenities",ul:"Apri il sito ufficiale"},
- {id:12,n:"Relais Spa Val d'Europe",sub:"Aparthotel 4 stelle con spa · Chessy",g:["spa","comodo","vicino","romantico"],sc:"8,6",cl:"8,9",p:763,pr:"763 €",pl:`${VIS} Non rimborsabile; 898 € con colazione. Con cancellazione gratuita fino all'8/12 da 908 €, ma con 2 letti singoli.`,min:5,ne:"5 min",dist:`400 m: circa 5 minuti a piedi. C'è anche una navetta gratis a chiamata ${B.nu()}.`,sun:"Reception 24 ore, a 5 minuti dal treno.",tr:"Navetta gratis, oppure treno 30,60 € in due.",spa:"Spa NUXE inclusa: piscina di 13 m, idromassaggio, sauna e hammam, 7–22, dai 16 anni. Massaggi di coppia a pagamento.",pro:"L'unica spa vera vicino al treno. Junior suite con angolo cottura, ristorante, centro Val d'Europe accanto.",con:"Costa circa 240 € più del Moxy. Attenzione ai finti taxi davanti all'ingresso: la navetta vera è dell'hotel.",u:BK('relais-spa-chessy')},
+ {id:12,n:"Relais Spa Val d'Europe",sub:"Aparthotel 4 stelle con spa · Chessy",g:["spa","comodo","vicino","romantico"],sc:"8,6",cl:"8,9",p:763,pr:"763 €",pl:`${VIS} Non rimborsabile; 898 € con colazione. Con cancellazione gratuita fino all'8/12 da 908 €, ma con 2 letti singoli.`,min:5,ne:"5 min",dist:`400 m: circa 5 minuti a piedi. C'è anche una navetta gratis a chiamata ${B.nu()}.`,sun:"Reception 24 ore, a 5 minuti dal treno.",tr:"Navetta gratis, oppure treno 30,60 € in due.",spa:"Spa NUXE inclusa: piscina di 13 m, idromassaggio, sauna e hammam, 7–22, dai 16 anni. Massaggi di coppia a pagamento.",pro:"L'unica spa vera vicino al treno. Junior suite con angolo cottura, ristorante, centro Val d'Europe accanto.",con:"Costa circa 240 € più del Moxy. La spa chiude alle 22:00, come i parchi: la usate la mattina presto o uscendo prima. Attenzione ai finti taxi davanti all'ingresso: la navetta vera è dell'hotel.",u:BK('relais-spa-chessy')},
  {id:13,n:"Jungle Love",sub:"Love room con vasca idromassaggio · Serris",g:["romantico","spa"],sc:"9,1",cl:"9,3",p:773,pr:"773 €",pl:`${VIS} Non rimborsabile. 850 € con cancellazione gratuita fino al 29/11.`,min:25,ne:"bus",dist:"2,5 km: bus (linea da confermare) o 30 minuti a piedi.",sun:"Arrivo dalle 17:00, ingresso autonomo: avvisate dell'orario.",tr:`Bus: circa 24,60 € in due ${B.es()}.`,spa:"Vasca idromassaggio doppia e privata in bagno, sempre vostra.",pro:"La più romantica: solo adulti, vasca privata, pulizia 9,3.",con:"30 m² per 773 €. Niente reception, lontano dal treno, la sera dipendete dal bus.",u:BK('jungle-love')},
  {id:14,n:"Disney Hotel New York",sub:"Hotel Disney 4 stelle · a piedi dai parchi",g:["parchi","spa"],sc:"8,4",cl:"9,0",p:2623,pr:"2.623 €",pl:`${VIS} Solo la camera, biglietti esclusi. Cancellazione gratuita fino al 6/12.`,min:0,ne:"a piedi ai parchi",dist:"10 minuti a piedi dai parchi, oppure navetta gratis.",sun:"Dalla stazione dei parchi, 10 minuti a piedi.",tr:"0 €.",spa:"Piscine coperta ed esterna riscaldate, idromassaggio, sauna e hammam (solo adulti, 7–22), inclusi.",pro:"Ai parchi a piedi, entrate un'ora prima (alle 8:00), piscina inclusa.",con:"Costa circa 2.100 € più del Moxy, solo per dormire.",u:BK('disney-39-s-new-york-r')},
  {id:15,n:"Hôtel l'Elysée Val d'Europe",sub:"Hotel 4 stelle · Serris",g:["comodo","vicino"],sc:"9,1",cl:"9,2",p:null,pr:"?",pl:`Su Booking ${B.nc('esaurito')} il 21/11: provate sul sito ufficiale.`,min:2,ne:"2 min",dist:"150 m: 2 minuti a piedi. Navetta gratis per i parchi.",sun:"Reception 24 ore.",tr:"Navetta gratis, oppure treno 30,60 € in due.",pro:"Il più comodo di tutti, col voto più alto tra gli hotel (9,1). Bar fino a mezzanotte, ristorante, negozi davanti.",con:"Niente spa. Su Booking non c'è posto: prezzo sconosciuto. Cauzione di 150 € in contanti.",u:"https://www.hotelelysee.com/",ul:"Apri il sito ufficiale"}
@@ -809,8 +832,9 @@ const DUELS=[
  ["Un alloggio vicino o il n. 14, hotel Disney?","Il 14 costa circa 2.100 € più del Moxy, solo per la camera. In cambio andate ai parchi a piedi, entrate un'ora prima e avete la piscina. Per me non vale la differenza."]
 ];
 $('#duels').innerHTML=DUELS.map(([q,a])=>`<details><summary>${esc(q)}</summary><div class="in"><p>${esc(a)}</p></div></details>`).join('');
-const card=h=>`<article class="card" id="al-${h.id}">
- <div class="card-top"><div class="ttl"><span class="nb" aria-label="numero ${h.id}">${h.id}</span><div><h3>${esc(h.n)}</h3><p class="small muted">${esc(h.sub)}</p></div></div></div>
+const MIO=8,STAR='<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>';
+const card=h=>`<article class="card${h.id===MIO?' is-rec':''}" id="al-${h.id}">
+ <div class="card-top"><div class="ttl"><span class="nb" aria-label="numero ${h.id}">${h.id}</span><div><h3>${esc(h.n)}</h3><p class="small muted">${esc(h.sub)}</p></div></div>${h.id===MIO?`<span class="rec">${STAR}Il mio consiglio</span>`:''}</div>
  <div class="tags">${h.g.map(x=>`<span class="tag">${GN[x]}</span>`).join('')}</div>
  <div class="facts"><div class="fact"><div class="k">Voto Booking</div><div class="v">${h.sc}</div></div><div class="fact"><div class="k">Pulizia</div><div class="v">${h.cl}</div></div><div class="fact"><div class="k">4 notti</div><div class="v">${h.pr}</div></div></div>
  <p class="small">${h.pl}</p>
@@ -824,7 +848,7 @@ const SORT={prezzo:(a,b)=>(a.p??1e9)-(b.p??1e9),vicino:(a,b)=>a.min-b.min||(a.p?
 $('#filters').innerHTML=[['tutti','Tutti'],...Object.entries(GN)].map(([k,t])=>`<button type="button" data-f="${k}" aria-pressed="${k===FI}">${esc(t)}</button>`).join('');
 const renderAl=()=>{const L=AL.filter(h=>FI==='tutti'||h.g.includes(FI)).sort(SORT[SO]);
  $('#fdesc').textContent=GD[FI]+(FI==='tutti'?'':` Sono ${L.length}.`);
- $('#cmpBody').innerHTML=L.map(h=>`<tr><td class="num"><span class="nb sm">${h.id}</span></td><td><a href="#al-${h.id}">${esc(h.n)}</a></td><td class="r num">${h.pr}</td><td>${esc(h.ne)}</td><td class="r num">${h.sc}</td></tr>`).join('');
+ $('#cmpBody').innerHTML=L.map(h=>`<tr><td class="num"><span class="nb sm">${h.id}</span></td><td><a href="#al-${h.id}">${esc(h.n)}</a>${h.id===MIO?' <span class="small muted">★ il mio consiglio</span>':''}</td><td class="r num">${h.pr}</td><td>${esc(h.ne)}</td><td class="r num">${h.sc}</td></tr>`).join('');
  $('#hotelCards').innerHTML=L.map(card).join('');
  document.querySelectorAll('#filters button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.f===FI)));
  document.querySelectorAll('#sort button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===SO)))};

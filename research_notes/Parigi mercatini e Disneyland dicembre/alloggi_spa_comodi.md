@@ -161,7 +161,7 @@ Costi trasporto comuni: RER Val d'Europe ↔ Chessy 2,55 € a corsa; bus 2,05 �
 ## Classifica per gruppi
 | Gruppo | Scelta | Perché (una riga) |
 |---|---|---|
-| La migliore spa senza auto | **Relais Spa Val d'Europe** (763–898 €) | Spa vera **inclusa**, aperta fino alle 22 (si usa anche dopo i parchi), a 5 minuti dalla RER, con navetta gratis a chiamata. |
+| La migliore spa senza auto | **Relais Spa Val d'Europe** (763–898 €) | Spa vera **inclusa**, aperta fino alle 22 (i parchi il 13–17/12 chiudono anche loro alle 22: si usa la mattina presto o uscendo prima), a 5 minuti dalla RER, con navetta gratis a chiamata. |
 | La più romantica | **Jungle Love** (773 € / 850 €) | Vasca idromassaggio doppia privata, solo adulti, pulizia 9,3. Alternativa con reception: Relais Spa con massaggio in cabina di coppia. |
 | La più comoda per non camminare | **L'Elysée** se si libera; sennò **Relais Spa** | L'Elysée è a 150 m dalla RER con reception 24/7. Il Relais ha navetta a chiamata davanti alla porta (5 minuti di attesa). |
 | A piedi dai parchi | **Disney Hotel New York** (2.623 € solo camera) | 10 minuti a piedi, piscina e sauna incluse, ingresso alle 8. Molto caro. |
