@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-- 🚀 Online: v7 · 🟢 Principale 14 · 21/11 19:49 · mercatini secondo hotel
+- 🚀 Online: v8 · 🟢 Principale 14 · 21/11 19:58 · barra in alto
 - 🧪 In prova: nessuna
 - ⏳ Dopo: nessuna
 

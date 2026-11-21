@@ -21,3 +21,4 @@
 - Ogni tappa: «🚶 La strada» (dagli stessi tratti del giorno per giorno) e cosa guardare.
 - N. 7: domenica veloce come il n. 12 (`spaSun` generalizzata).
 - Prossimo, se Mario dice 2: mappa disegnata del giro (come `tools/fai-mappe-dicembre.py`).
+- 21/11 19:52 Mario: «Quando scrollo verso il basso i mercatini si nascondono … mi confermi che una volta che scelgo l'hotel mi modifica l'itinerario?» → barra fissa in alto `#topbar` (v8, PR #9); confermato con prova (n. 12, 1, 14: uscite, domenica, costi e trasporti diversi). Foto `archivio/2026-11-21-mercatini-alloggio/5-barra.jpg`, `6-barra-tocco.jpg`, `mario-pulsanti-telefono.jpg`.
