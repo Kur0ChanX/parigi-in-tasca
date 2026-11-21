@@ -10,3 +10,4 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
 |---|---|---|---|---|
+| Consiglio-alloggio | Principale 5 | Il mio consiglio unico sull'alloggio nella pagina di dicembre (n. 8 Moxy) | `dicembre/parigi-disney-natale.html` | 21/11 |
