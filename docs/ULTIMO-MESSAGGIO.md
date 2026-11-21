@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (21/11/2026 20:59 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 21:17 ora italiana)
 
-Ovviamente non mettere solo la lista degli hotel che abbiamo già, magari ci sono ancora hotel, appartamenti, stanze, B&B molto validi e non le stai valutando.
+mi raccomando studiati un impaginazione geniale non confusa
