@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (21/11/2026 19:36 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 19:53 ora italiana)
 
-Scusa, la sezione più importante a mercatini con il percorso, dove andare, dove non andare, e il pulsante mercatini sopra, che era molto importante, non, lei l'ha fatto in modo superficiale.
+Quando scrollo verso il basso i mercatini si nascondono. Quindi cioè, l'obiettivo di quest'app è capire qual è il miglior giro dei mercatini, che l'abbiamo capito, cioè me l'hai fatto vedere, e poi qual è la migliore opzione per dove andare a dormire, per andare a vedere i mercatini e per andare a Disneyland gli altri 3 giorni, per facilitare i trasporti, i costi, non spendere troppi costi in taxi, oppure che non ci mettiamo 1 ora e mezza con i trasporti per arrivare a Disneyland, arriviamo tardi. Insomma, un itinerario. Quindi mi confermi che una volta che scelgo l'hotel mi modifica l'itinerario?
