@@ -4,12 +4,11 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-- 🚀 Online: v11 · 🟢 Principale 18 · 21/11 21:33 · scelta alloggio corta
+- 🚀 Online: v12 · 🟢 Principale 18 · 21/11 21:44 · pagina per PC
 - 🧪 In prova: nessuna
 - ⏳ Dopo: nessuna
 
 ## 0. Aspetta Mario
-- 21/11 · 🛑 · 🟡 Principale 18 · DOMANDA 9: la pagina nuova per PC (Windows e MacBook) si può pubblicare? 📌 Di cosa parliamo: Mario «ottimizza gli spazi per windows o MacBook» e «la foto tagliata»; fatto menù fisso a sinistra, contenuto largo, alloggi su 3 colonne, testata intera; sul telefono non cambia niente (foto `archivio/2026-11-21-pagina-windows/3…5`): 1 · va bene, pubblica · 2 · cambia (cosa). Consiglio: 1.
 - 21/11 · ❓ · 🟢 Principale 11 · DOMANDA 3: come impaginare la pagina di dicembre (C6). 📌 Di cosa parliamo: Mario la trova confusa, troppe cose a schermo, senza togliere niente; serve prima di rifarla: 1 · app a 4 schede in basso (Alloggio · Domenica mercatini · Disney lun–mer · Info utili), ogni tocco mostra solo la sua parte · 2 · pagina unica come ora, ma ogni sezione chiusa (si vede il titolo, si apre toccando) · 3 · altro: cosa ti confonde di più. Consiglio: 1. Chiesta il 21/11 ~18:58 dalla Principale 11.
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
