@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-- 🚀 Online: v9 · 🔴 Principale 14 · 21/11 20:08 · casette ferme
+- 🚀 Online: v9 · 🔴 Principale 14 · 21/11 20:01 · casette ferme
 - 🧪 In prova: nessuna
 - ⏳ Dopo: nessuna
 
