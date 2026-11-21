@@ -1,0 +1,29 @@
+{
+"account": "108763",
+"sessione": "02a2fe64574e",
+"giorno": "2026-11-21",
+"turni": 1,
+"peso": 405241,
+"uscita": 10791,
+"contesto_max": 163216,
+"anomalie": [
+"1 uscite di strumento enormi (267 KB la più grande): leggere a pezzi (grep -n, sed -n)"
+],
+"remota": "01WTjqUtLt7R",
+"aiutanti": 0,
+"strumenti": 22,
+"motori": {
+"opus": 405241
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+46,
+3249371,
+21042,
+0,
+10791
+]
+},
+"costo": 1.0342
+}
