@@ -4,6 +4,10 @@
 Prima: «ma se ti scrivo dal 13 al 17 perché mi metti dal 14 che problemi hai?»
 Poi: «metti alloggi dal 14 al 17 e in priorità dal 13 al 17 rifai la ricerca accurata profonda i piú validi dal web con i criteri che ti ho detto e sistema tutto il nostro sito c'è un disordine allucinante rendi tutto ordinato chiaro e di facile lettura non listoni chilometrici risistema in modo intelligente e von Logica e bello da vedere professionale non amatoriale»
 
+## Messaggio di Mario 22/11 00:4x (chat «Controllo 2»)
+«qui» + foto `archivio/2026-11-22-mario-qui-vicino-a-disney.jpg` (scelta 4 notti Moxy, scheda Hotel, ordine «Vicino a Disney»: primi n. 30 Residhome, 11 Crowne Plaza con navetta ogni 30 min, 12; il n. 14 Hotel Disney solo 4°).
+Letto come (ipotesi, da confermare con Mario): l'ordine «Vicino a Disney» è sbagliato. Causa vera: ordinava per minuti coi mezzi SENZA le attese (Residhome 8 min col treno batte l'Hotel Disney a 10 min a piedi; la navetta ogni 30 min contava 10 min). Scelta: «Vicino a Disney» = distanza dai parchi in linea d'aria (km del blocco MAPPE, IGN), a pari km i minuti; nella riga il segno «📍 km dai parchi».
+
 ## Scelte
 - Date: 13→17 (4 notti tutte vicino a Disney) in primo piano; 14→17 (con la domenica a Parigi) come seconda strada. Supera «non rifare la ricerca» del 21/11 20:25: ora Mario la chiede.
 - Criteri (da `alloggi_nuovi_13_17_ricerca.md`): sotto ~650 € le 4 notti · ≤ ~12 min a piedi dalla RER A (Chessy o Val d'Europe) o navetta gratuita · Booking ≥ 8,0 e pulizia ≥ 8,5 · Airbnb ≥ 4,8 con ≥ 20 recensioni · libero tutte le notti · senza auto né taxi.
