@@ -1,60 +1,62 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
-## Stato (Controllo 15 `session_01QTFEqR4smB9LCwjXG1Qzwj`, 22/11 18:18 ora italiana, chiusa alla soglia; la apre la Controllo 15 con `create_session` (catena 2 di 8))
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01QTFEqR4smB/claude/parigi-ramo-definitivo.
-- **v37 PRONTA, NON ONLINE** (commit 9da22ae sul ramo comune; verifica: `grep -o "{v:37" dicembre/index.html` e `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 36}`). Aspetta la DOMANDA 1 🛑 della Controllo 15 (foto 1–4 mandate 18:2x): «1 · sì, pubblica» → ramo-copia `versione-v37`, PR, giro completo, unione (skill `pr`).
-- **Già deciso da Mario (non richiedere):** la rosa si sceglie dal tasto nella schermata principale (17:56); senza scelta salvata la rosa è n. 16 (Airbnb 5115238) e n. 23 (Airbnb 1376052056754954936); il n. 23 su Booking costa 461 €; v34–v36 pubblicate.
-- **Da non rifare:** C20 (Nascondi, «Tutto sul n.»: online); C21 codice e prove (fatto, `docs/lavori-in-corso/C21-rosa-alloggi.md`); la ricerca del n. 23 su Booking (chiedere il link a Mario).
-- **Cosa preme a Mario adesso:** la rosa degli alloggi comoda da scegliere e guida affidabile (prezzi Airbnb/Booking).
-- **Kit RVC:** `RVC_KIT_TOKEN` manca anche in questo contenitore (`python3 -I tools/scarica-kit.py --versione` → «Manca RVC_KIT_TOKEN»).
+## Stato (Controllo 16 `session_01QTFEqRCHFhdKvoJDeCbedf`, 22/11 19:08 ora italiana, chiusa alla soglia; la apre la Controllo 16 con `create_session` (catena 3 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01QTFEqRCHFh/claude/parigi-ramo-definitivo.
+- **v39 online** (verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 39}`): v37 (rosa, PR #38, 18:26), v38 (tasto senza doppione, PR #39, 18:36), v39 (numerino sulla ⭐ e pastiglie «n. 16» «n. 23», PR #40, 18:52).
+- **v40 PRONTA, NON ONLINE** (verifica: `grep -o "{v:40" dicembre/index.html`; commit «v40 pronta (C23)»): lucine della testata a gruppi (814 → 306 animazioni, `lucGrp`, classi `lucgrp`/`lucgrp-el`), niente parallasse (Torre ferma), luci in pausa mentre si scorre (`#top.anim-pausa`), albero col tratto sottile (`archivio/2026-11-22-c18-albero/lavoro/albero.py` con `SOTTILE=9`, messo con `metti-albero.py`; serve `pip install scipy`). Prove verdi: web app 66/66, scritte, `--controlla`. Video `archivio/2026-11-22-c23-testata/prima-dopo.mp4` mandato. Mario ha risposto «publica» (22/11 ~19:1x, dopo l’handoff) → SUBITO `versione-v40`, PR, unione (giro in locale), sito letto, nastro.
+- **Già deciso da Mario (non richiedere):** prima la rosa poi C22 (rosa online); tasto rosa col numerino e i numeri (v39); Torre ferma quando si scorre; albero col tratto più sottile.
+- **Da non rifare:** v37–v39; la ricerca del peso: è la testata (814 animazioni SVG). Le misure di fluidità in questo contenitore ballano molto: contano solo differenze grandi.
+- **Cosa preme a Mario adesso:** testata fluida senza sfarfallio (v40), poi C22 (itinerari e schede Moxy n. 8, n. 16, n. 23), poi il ponte del kit RVC (foto di Mario 18:45: è nello «Script di configurazione» dell'ambiente, non nelle variabili; «guardalo dopo»).
 
-## Cosa è stato fatto (Controllo 15) · verifica: `git show --stat 9da22ae`; dettagli in `docs/lavori-in-corso/C21-rosa-alloggi.md`
-- v37 (C21): tasto «⭐ Rosa alloggi · N» accanto a «Guida Disneyland» (`.apps2`, `#roApp`); apre il passo 2 di «Scegli» con solo la rosa (`#scRosa`, `ROF`), «✏️ Cambia la rosa» con le spunte (`#scRosaP`), «⭐ Metti / ☆ Togli» in righe e schede, avviso con «Annulla» (`avvisa`, in comune con «Nascondi»). Rosa in `localStorage` `pdn-rosa`; vince su «Nascondi»; `&rosa=` nel link.
-- Prove locali verdi: `node tools/prova-web-app.js` 66/66 (nuova «Rosa alloggi: …»), `node tools/prova-scritte.js` 20/20, `fai-dicembre.py --controlla` VERO, sintassi dei 4 script ok.
-- Foto `archivio/2026-11-22-c21-rosa-alloggi/1-home-confronto.jpg` … `4-rosa-riga.jpg`, mandate a Mario. Errore trovato e difeso: riga del 22/11 in `docs/ERRORI.md` (albero spinto sotto la barra); due righe doppione spostate in `ERRORI-STORIA.md` (tetto 10 KB).
+## Cosa è stato fatto (Controllo 16)
+- Pubblicate v37, v38, v39 (sopra). Errore del tasto doppione in `docs/ERRORI.md` (22/11); due righe vecchie spostate in `ERRORI-STORIA.md` (tetto 10 KB).
+- C23 (voce in `docs/DA-FARE.md`): v40 pronta (sopra). C22: piano in `docs/lavori-in-corso/C22-controllo-itinerari.md`, non iniziato.
+- Video di Mario 18:31 in `archivio/2026-11-22-video-flicker-mario/`.
 
 ## Strade provate e scartate
-- Tasto della rosa in una riga sua sotto «Guida Disneyland»: testata +80 px, albero sotto la barra in basso (prova rossa) → due tasti affiancati (+4 px), testo Disneyland accorciato.
-- Pannello delle spunte sopra le righe della rosa: 35 spunte spingevano giù la rosa → pannello sotto l’elenco, aperto dal tasto della schermata principale.
-- Filtro dei tipi insieme alla rosa: poteva nascondere righe della rosa → con la rosa il filtro dei tipi è spento (`#scD:not([data-solo-rosa])`) e nascosto.
+- Fermare le animazioni mentre si scorre (pausa): da sola non basta; `animation:none` sì, ma alla ripartenza scatterebbero → lucine raggruppate per fase.
+- `will-change`/`contain` sulla testata, via `backdrop-filter`, via maschere e filtri: nessun guadagno misurabile.
+- Prova del service worker instabile 🐞: iniziata come C22 e lasciata (C22 = controllo itinerari); resta in Da fare.
 
 ## Prossimi passi
-1. **Pubblicare SUBITO la v37 (rosa)**: Mario ha risposto alla DOMANDA 1 della Controllo 15 («prima publica la rosa»). Skill `pr`: ramo-copia `versione-v37`, PR pronta, giro completo, unione, sito letto.
-2. **C22 (dopo la v37)**: controllare tutti gli itinerari e le informazioni degli alloggi, soprattutto n. 8 Moxy e i n. 16 e 23 (parole intere sotto, «Ultimo messaggio»), correggere con le fonti ufficiali, poi pubblicare. Scrivere `docs/lavori-in-corso/C22-controllo-itinerari.md`.
-2b. DOMANDA 1 🛑 della Controllo 14 (alloggi spenti n. 18, 20, 21): alla risposta, foto prima di pubblicare.
-3. Promesse 👁 della v34, v35, v36 (e v37 quando online) in `docs/DA-FARE.md`: si chiudono solo con la foto di Mario dal sito vero.
-4. Se Mario mette altri alloggi nella rosa: proporre la scheda «📋 Tutto sul n.» anche per loro (ricerca dagli annunci, come C20).
-5. Poi: pagina intera più natalizia (PRIMA una foto di prova a Mario), C17 resto, orario RER A (~26/11), prova del service worker instabile 🐞, fuochi. Kit RVC: chiave mancante.
+1. **Pubblicare SUBITO la v40** (Mario «publica», dopo l’handoff): skill `pr`, ramo-copia `versione-v40`, PR, unione, sito letto, nastro. Se sfarfalla ancora: cercare la luce che parte accesa (la prova «nessuna luce parte in ritardo» è verde); se pesa ancora: parti ferme della testata in un’immagine sola.
+1b. **C24** (dopo la v40, voce in `docs/DA-FARE.md`, parole intere sotto): tasto «Scegli dove dormire» in evidenza; la rosa per scremare e confrontare; scelto l’hotel, cambia tutto l’itinerario (strade, orari, consigli). Lavoro grande: prima l’occhio critico (skill `nuova-funzione`), piano in `docs/lavori-in-corso/C24-scegli-dove-dormire.md`, foto prima di pubblicare. Va fatto insieme a C22 (itinerari giusti).
+2. C22: controllo di itinerari e schede (n. 8 Moxy, n. 16, n. 23) con le pagine ufficiali, correzioni, v41.
+3. Ponte del kit RVC: leggere lo «Script di configurazione» dell'ambiente (foto di Mario 18:45); `RVC_KIT_TOKEN` non è fra le variabili di questo contenitore.
+4. DOMANDA 1 🛑 Controllo 14 (alloggi spenti n. 18, 20, 21). Promesse 👁 v34–v39 in `docs/DA-FARE.md`.
+5. Poi: pagina più natalizia (foto prima), C17 resto, orario RER A (~26/11), service worker instabile 🐞, fuochi.
 
 ## Blocchi e rischi
-- Nomi nuovi nella pagina: prima `grep -o "\bnome\b" | wc -l` = 0. Pagina ~520 KB (immagini base64).
-- Animazioni nuove: mai ritardo positivo (lo ferma la prova). Testi della pagina con l’apostrofo tipografico; novità ≤ 130 caratteri.
-- `ERRORI.md` al tetto dei 10 KB: per ogni riga nuova spostarne una doppione in `ERRORI-STORIA.md`.
-- Schermata principale: mai una riga in più nella testata (l’albero scende sotto la barra); tasti nuovi affiancati, la prova dell’albero lo ferma.
-- Diritti del disegno dell’albero (annuncio Etsy): DOMANDA 1 della Controllo 13 aperta, consiglio 1.
+- Nomi nuovi nella pagina: prima `grep -o "\bnome\b" | wc -l` = 0 (`grp` esisteva già: usato `lucGrp`).
+- Ogni luce animata nella testata ridisegna tutto il disegno: `lucGrp` raggruppa da solo `.lampC .lampM .hb .ond`; animazioni nuove con ritardi negativi.
+- Schermata principale: mai una riga in più nella testata; tasti affiancati, testi corti senza doppioni.
+- `ERRORI.md` al tetto dei 10 KB.
 
 ## Ultimo messaggio di Mario
-22/11 ~18:2x (alla Controllo 15, dopo l’handoff): «Controlla che tutti gli itinerari e info per hotel sono giusti sopratutto moxi e gli ultimi 2 mandati mella sessione precedente
-poi publica
-prima publica la rosa poi controllo itinerari e info» → risposta alla DOMANDA 1 (pubblica la v37) + C22. Controllo Da fare: 1 voce aggiunta (C22).
+22/11 ~19:1x (dopo l’handoff, passato alla Controllo 17): «poi metti piú chiaro ed in evidenza della scelta hotel che cambia tutto l'itinerario se non seleziono gli hotel che voglio nel app vedo solo gli hotel selezionati / quindi devo poter scremare quello da vedere per confrontare come abbiamo fatto con la rosa poi per sceglierli devo avere un tasto Scegli dove dormire e mi cambia l'itinerario in base a l'hotel scelto info le strade da fare i consigli orari ecc ecc ecc con cura mi raccomando che c'è un viaggio di mezzo / publica» → risposta alla DOMANDA 1 (pubblica la v40) + C24. Controllo Da fare: 1 voce aggiunta (C24).
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 16
-la apre la Controllo 15 con `create_session` (catena 2 di 8). Scritto da Controllo 15 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 17
+la apre la Controllo 16 con `create_session` (catena 3 di 8). Scritto da Controllo 16 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 16 · rosa: aspetta ok`
+Titolo: `🟩 🗼 Controllo 17 · v40: aspetta ok`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 16 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 17 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 17:58 · [AVVIO] Sei la chat parallela Controllo 15 di Parigi in tasca, linea «Controllo»… → testo d’avvio (non di Mario): C21 fatto, v37 pronta, DOMANDA 1 della Controllo 15
+- 2026-11-22 18:19 · [AVVIO] Sei la chat parallela Controllo 16 di Parigi in tasca, linea «Controllo»… → testo d’avvio: v37 pubblicata, C22 pianificato
+- 2026-11-22 18:27 · mi devi spiegare perché hai scritto 2n 16 e 23.... assurdo... come tovinare una … → v38 (tasto senza doppione), riga in ERRORI
+- 2026-11-22 18:32 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/5a064185-VID_20261122_18311… → C23, v40 pronta (DOMANDA 1)
+- 2026-11-22 18:37 · publica rosa adesso ho capito le scritte ma falle meglio nel tasto non cosí... → v39 online (numerino e pastiglie)
+- 2026-11-22 18:47 · è qui il ponte lo vedi vabbè guardalo dopo prima sistema la foto animata e alleg… → C23 (v40); ponte: voce in Da fare
+- 2026-11-22 18:58 · l'albero fai un tratto meno spesso → v40 (albero sottile), DOMANDA 1
 
 Ultimo, intero:
-> [AVVIO] Sei la chat parallela Controllo 15 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
-- 2026-11-22 18:2x · Controlla che tutti gli itinerari e info per hotel sono giusti sopratutto moxi e… → risposta alla DOMANDA 1 (pubblica v37) + C22, passato alla Controllo 16
+> l'albero fai un tratto meno spesso
+- 2026-11-22 19:1x · poi metti piú chiaro ed in evidenza della scelta hotel… → risposta alla DOMANDA 1 (pubblica v40) + C24, passato alla Controllo 17
