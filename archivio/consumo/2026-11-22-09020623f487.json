@@ -1,0 +1,34 @@
+{
+"account": "377be6",
+"sessione": "09020623f487",
+"giorno": "2026-11-22",
+"turni": 2,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 271785,
+"anomalie": [],
+"blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": 2,
+"Stop 5 · Notifica non letta (in coda": 2,
+"Stop 10 · Promessa a Mario senza voce": 3
+},
+"esempi_blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": [
+"20:02 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1** (foto sopra): il faro della Torre se», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere",
+"20:02 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1** (foto sopra): il faro della Torre se», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+],
+"Stop 5 · Notifica non letta (in coda": [
+"20:02 · Notifica non letta (in coda dalle 19:38: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"20:02 · Notifica non letta (in coda dalle 19:38: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"20:02 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Adesso le sistemo (stima: meno di un'ora)». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura d",
+"20:02 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Adesso le sistemo (stima: meno di un'ora)». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura d",
+"20:06 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «La v41 è pronta: le prove finali girano ora, e se finiscono verdi (verso le 20:16) la pubblico subito.». Nella sua voce (o in una nuova) scriv"
+]
+},
+"remota": "01QTFEqQQmp8",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
