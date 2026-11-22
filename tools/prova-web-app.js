@@ -523,11 +523,11 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       await u8.goto(B + 'dicembre/'); await u8.waitForTimeout(1200); await u8.evaluate(vede);
       const r1 = await u8.evaluate(async () => { const w = window.__w, vis = window.__vis, q = (x) => document.querySelector(x);
         const a = q('#roApp'); a.scrollIntoView({ block: 'center' }); await w(200); const ra = a.getBoundingClientRect();
-        const o = { home: /Rosa alloggi · 2/.test(a.textContent) && /n\. 16 e 23/.test(a.textContent), tocca: ra.height > 30 && (document.elementsFromPoint(ra.left + ra.width / 2, ra.top + ra.height / 2)[0] || document.body).closest('#roApp') === a };
+        const o = { home: /Rosa alloggi/.test(a.textContent) && /[^0-9]2 scelti/.test(a.textContent) && !/n\. 16/.test(a.textContent), tocca: ra.height > 30 && (document.elementsFromPoint(ra.left + ra.width / 2, ra.top + ra.height / 2)[0] || document.body).closest('#roApp') === a };
         a.click(); await w(500); const sw = q('#scRosa .ro-sw'), rs = sw ? sw.getBoundingClientRect() : { top: -1, height: 0 };
         o.dormire = document.body.dataset.tab === 'dormire' && rs.height > 30 && rs.top >= 0 && rs.top < innerHeight; o.solo = vis(); o.spunte = !!q('#scRosaP details[open]');
         o.tipi = getComputedStyle(q('.tyswitch')).display === 'none';
-        q('#scRosaP input[data-ro-k="5"]').click(); await w(150); o.piu = vis() === 'd-16,d-23,d-5' && /Rosa alloggi · 3/.test(q('#roApp').textContent) && !!q('#scRosaP details[open]');
+        q('#scRosaP input[data-ro-k="5"]').click(); await w(150); o.piu = vis() === 'd-16,d-23,d-5' && /[^0-9]3 scelti/.test(q('#roApp').textContent) && !!q('#scRosaP details[open]');
         q('#nasToast button').click(); await w(150); o.annulla = vis() === 'd-16,d-23' && localStorage.getItem('pdn-rosa') === '[16,23]';
         q('[data-ro-f="0"]').click(); await w(150); o.tutti = vis().split(',').length > 20 && !q('#scRosaP details');
         q('#scD [data-nas="d-7"]').click(); await w(150); o.nascosto = !q('#scD details[data-k="d-7"]');
@@ -537,7 +537,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         return o; });
       await u8.reload(); await u8.waitForTimeout(1200); await u8.evaluate(vede);
       const r2 = await u8.evaluate(async () => { const w = window.__w, vis = window.__vis, q = (x) => document.querySelector(x), o = {};
-        o.resta = localStorage.getItem('pdn-rosa') === '[7,16,23]' && /Rosa alloggi · 3/.test(q('#roApp').textContent) && /n\. 7, 16 e 23/.test(q('#roApp').textContent);
+        o.resta = localStorage.getItem('pdn-rosa') === '[7,16,23]' && /[^0-9]3 scelti/.test(q('#roApp').textContent);
         q('#roApp').click(); await w(400); o.solo = vis(); o.scheda = !!q('#al-7 .ro-s') && !q('#al-8 .ro-s');
         const p7 = q('#scNas input[data-nas-k="d-7"]'); o.pulisci = !!p7 && p7.disabled && p7.checked && /nella rosa/.test(p7.closest('label').textContent);
         Object.defineProperty(navigator, 'share', { value: undefined, configurable: true }); let u = '';
@@ -551,10 +551,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         const si = q('[data-ro-link="1"]'); o.chiede = !!si && si.getBoundingClientRect().height > 20 && localStorage.getItem('pdn-rosa') === '[7,16,23]';
         if (si) { si.click(); await w(150); } o.messa = localStorage.getItem('pdn-rosa') === '[5,12]' && vis() === 'd-12,d-5' && !q('[data-ro-link]') && !/📩/.test(q('#roApp').textContent);
         q('#scRosaP input[data-ro-k="5"]').click(); await w(100); q('#scRosaP input[data-ro-k="12"]').click(); await w(150);
-        o.vuota = localStorage.getItem('pdn-rosa') === '[]' && /Ancora vuota/.test(q('#roApp').textContent) && vis() === '' && !!q('#scRosa .ro-vuota');
+        o.vuota = localStorage.getItem('pdn-rosa') === '[]' && /Da scegliere/.test(q('#roApp').textContent) && vis() === '' && !!q('#scRosa .ro-vuota');
         return o; });
       await u9.goto(B + 'dicembre/'); await u9.waitForTimeout(1200);
-      const r4 = await u9.evaluate(() => /Rosa alloggi · 0/.test(document.querySelector('#roApp').textContent));
+      const r4 = await u9.evaluate(() => /Da scegliere/.test(document.querySelector('#roApp').textContent));
       ok('Rosa alloggi: tasto nella schermata principale (si vede e si tocca), solo la rosa nel passo 2, spunte con Annulla, resta dopo la ricarica, vince su «Nascondi», link con la rosa che chiede, vuota resta vuota ' + JSON.stringify({ r1, r2, r3, r4 }),
         r1.home && r1.tocca && r1.dormire && r1.solo === 'd-16,d-23' && r1.spunte && r1.tipi && r1.piu && r1.annulla && r1.tutti && r1.nascosto && r1.segnato && r1.vince
         && r2.resta && r2.solo === 'd-16,d-23,d-7' && r2.scheda && r2.pulisci && r2.link && r3.avviso && r3.chiede && r3.messa && r3.vuota && r4);
