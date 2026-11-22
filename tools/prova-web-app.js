@@ -449,7 +449,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const ferma = await r5.evaluate(() => document.getElementById('slitta').style.visibility === 'hidden' && !document.querySelector('#pacchi g'));
     const vista = await r4.evaluate(async () => {
       /* v33 · il castello è un’immagine (il disegno di Mario): conta come «davanti» solo dove il disegno non è trasparente; le proiezioni (g con maschera) si vedono solo sul castello */
-      const ci = document.getElementById('castImg'), cu = document.querySelector('.scene use[href="#castImg"]'), im = new Image(); im.src = ci.getAttribute('href'); await im.decode();
+      const ci = document.getElementById('castImg'), cu = document.getElementById('castUso'), im = new Image(); im.src = ci.getAttribute('href'); await im.decode();
       const cv = document.createElement('canvas'); cv.width = im.width; cv.height = im.height; const cx = cv.getContext('2d'); cx.drawImage(im, 0, 0);
       const alfa = (X, Y) => { const p = new DOMPoint(X, Y).matrixTransform(cu.getScreenCTM().inverse()), px = Math.floor((p.x - +ci.getAttribute('x')) / +ci.getAttribute('width') * im.width), py = Math.floor((p.y - +ci.getAttribute('y')) / +ci.getAttribute('height') * im.height);
         return px < 0 || py < 0 || px >= im.width || py >= im.height ? 0 : cx.getImageData(px, py, 1, 1).data[3]; };
