@@ -5,6 +5,8 @@
 - **v22 online** (22/11 10:49, PR #23): verifica `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c wellness-spa` > 0. v21 online 10:44 (PR #22): «↩ Annulla», Case ciano.
 - **v23 nel ramo, NON online** (commit «v23 (non ancora online)…»): «Quanto costa» di nuovo coi colori dei tipi; legenda senza doppioni (alloggio = colore del tipo, pacchetto = rosa Disney, biglietti bianco/nero, trasporti grigio); riga Disney senza km (`comeD`: minuti con le attese + «a piedi + RER»), attesa RER 3 min; km tolti dai testi distanza, consigli e «Dov'è» (riga Disney). Prove VERDI su quel commit: web app 48/48, scritte, `--controlla`, colori. Verifica: `grep -c comeD dicembre/index.html` > 0 nel ramo, 0 sul sito.
 - **Già deciso da Mario (non richiedere):** «Fai tutta la grafica e pubblica» (niente ok per foto, si pubblica a prove verdi); Disney per tempo, MAI km; RER = minuti a piedi; colori anche in «Quanto costa» ma nessun doppione fra tipi, legenda e segni (oro scelto, verde meglio, rosso peggio). Parole intere e misure in `docs/lavori-in-corso/C13-aspetto-pagina.md` (in fondo).
+- **Da non rifare:** v21 e v22 (online); le 3 verifiche della Principale (fatte); ricerca dell'attesa del RER (fatta: 3 min la mattina).
+- **Cosa preme a Mario adesso:** colori senza doppioni e Disney senza km, cioè la v23 online.
 - Controllo Da fare: 0 voci aggiunte (la richiesta 10:51 è in C13 e nella voce 👁 «grafica a pezzi»; promessa 👁 «↩ Annulla» in sezione 1).
 
 ## Cosa è stato fatto (Controllo 5)
