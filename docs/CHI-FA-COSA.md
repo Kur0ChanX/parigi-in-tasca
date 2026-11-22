@@ -6,7 +6,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
 | Principale | cerchi | 🟢 🟡 🔴 ⚫ | 22 | session_01WTjqUtegBCzTHdbgdaXDm1 | — |
-| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 14 | session_01Rwcxc7EAGCUGyWhBTz3aWr | — |
+| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 16 | session_01QTFEqRCHFhdKvoJDeCbedf | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
@@ -25,5 +25,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C17 | Controllo 10 (da Controllo 9) | Numero di versione in alto con novità e «Aggiorna», indice coi tasti in alto, ultimo giorno con orari per Orly | `dicembre/parigi-disney-natale.html`, `tools/fai-dicembre.py`, `dicembre/sw.js`, `docs/lavori-in-corso/C17-indice-versione-giorni.md` | 22/11 |
 | C18 | Controllo 14 (da Controllo 13) | Testata: ora ALBERO dal disegno di Mario (colorato e addobbato) e Torre Eiffel più bella, poi v34; dopo pagina più natalizia | `dicembre/parigi-disney-natale.html` (testata), `docs/lavori-in-corso/C18-slitta-e-luci.md` | 22/11 |
 | C19 | Controllo 12 | Guida Disneyland di Mario nella schermata principale e nei giorni Disney (link coi giorni del viaggio) | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C19-guida-disneyland.md` | 22/11 |
-| C20 | Controllo 14 (altro account, session_01QTFEqRq6KHUZyj1XNVa82p) | v34 e v35 online (Nascondi, schede ricche dei n. 16 e 23); resta: link Booking del n. 23 se Mario lo manda | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md` | 22/11 |
-| PR 36 | Controllo 14 (altro account) | v35 da `versione-v35` (commit 06a1c6e), unita 22/11 | — | 22/11 |
+| C20 | Controllo 14 (altro account, session_01QTFEqRq6KHUZyj1XNVa82p) | v34, v35, v36 online (Nascondi, schede ricche dei n. 16 e 23, Booking del n. 23); resta: DOMANDA sugli alloggi spenti | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md` | 22/11 |
+| C21 | Controllo 16 (da Controllo 15) | Tasto «⭐ Rosa alloggi» nella schermata principale: v37 pronta e provata, aspetta l’ok di Mario (DOMANDA 1 della Controllo 15) | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C21-rosa-alloggi.md` | 22/11 |
+| C22 | Controllo 16 | Prova «dicembre: service worker suo» instabile 🐞: causa vera e se sul telefono la pagina di dicembre senza rete ne soffre | `tools/prova-web-app.js`, `dicembre/sw.js`, `sw.js`, `docs/lavori-in-corso/C22-service-worker-instabile.md` | 22/11 |
+| PR 37 | Controllo 14 (altro account) | v36 da `versione-v36` (commit df327f9), unita 22/11 | — | 22/11 |
