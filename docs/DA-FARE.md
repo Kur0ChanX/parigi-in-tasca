@@ -4,12 +4,11 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v33 · 🟩 Controllo 12 · 22/11 · castello dal disegno di Mario con ombre e stelline, slitta a pezzi (renne, braccia di Jack, Zero), mercatini con neve, lucine e merce vera, guida Disneyland nella schermata principale e nei giorni Disney (PR 34)
-🧪 In prova: v34 · 🟩 Controllo 13 · albero dal disegno di Mario colorato e addobbato, Torre Eiffel nuova (piani, traliccio, scintillio), niente sfarfallio all’apertura, Jack passa una volta
-⏳ Dopo: v35 · 🟩 Controllo 13 · pagina intera più natalizia (foto a Mario prima)
+🚀 Online: v34 · 🟩 Controllo 14 · 22/11 17:20 · albero dal disegno colorato e addobbato, Torre Eiffel nuova (piani, traliccio, scintillio), niente sfarfallio all’apertura
+🧪 In prova: v35 · 🟩 Controllo 14 · «Nascondi» sugli alloggi che non interessano (C20)
+⏳ Dopo: v36 · 🟩 Controllo 14 · schede ricche dei n. 23 e 16 (C20); poi pagina più natalizia (foto a Mario prima)
 
 ## 0. Aspetta Mario
-- 22/11 · 🛑 · 🟩 Controllo 13 · DOMANDA 2: metto online la v34 (albero dal tuo disegno colorato e addobbato, Torre Eiffel nuova coi piani e lo scintillio, niente luci che sfarfallano all’apertura, Jack passa una volta)? Scelte: 1 · sì, pubblica · 2 · prima ritocca (dimmi cosa). Consiglio: 1. 📌 Di cosa parliamo: la testata della pagina di dicembre sul sito; foto `archivio/2026-11-22-c18-albero/v34-c1-telefono.jpg`, `v34-c2-pc.jpg`, video `v34-video-albero-torre.mp4`. Serve perché il tuo «pubblica» valeva per la v33: la v34 è pronta e provata, aspetta solo il tuo sì.
 - 22/11 · ❓ · 🟩 Controllo 13 · DOMANDA 1: l’albero della testata lo faccio dal tuo disegno (preso da un annuncio Etsy: sul sito pubblico potrebbe non essere permesso) o ne disegno uno nostro nello stesso stile? Scelte: 1 · il tuo disegno · 2 · uno nostro uguale nello stile. Consiglio: 1, come hai chiesto. 📌 Di cosa parliamo: l’albero di Natale nella testata della pagina di dicembre (Mario 22/11 16:29 «Ti mando un albero…»).
 - 22/11 · 🟨 Controllo 12 · guarda la v33 sul telefono (se c’è ancora «v32»: numerino → «Aggiorna versione») e tocca «Guida Disneyland»: parte dal 14 dicembre? Scrivi cosa vedi, anche «ok». 📌 Serve a chiudere le voci «👁» della v33 e a sapere se il link della guida è giusto sul telefono vero.
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
