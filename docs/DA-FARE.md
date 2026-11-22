@@ -9,6 +9,7 @@
 ⏳ Dopo: v20 · 🟩 Controllo 4 · stesso stile sugli altri pezzi e alloggi dei siti diretti (se validi)
 
 ## 0. Aspetta Mario
+- 22/11 · ❓ · 🟩 Controllo 4 · DOMANDA 1: 📌 Di cosa parliamo: pezzo 2 della grafica, il passo 1 della scheda Dormire («Domenica 13: dove dormite?») con lo stesso stile del passo 2, non ancora pubblico. 1 · va bene (consiglio) · 2 · ritocca (dimmi cosa). Foto `archivio/2026-11-22-c13-dormire-pezzo2/1-quattro-notti.png`, `2-hotel-parigi.png` · `docs/lavori-in-corso/C13-aspetto-pagina.md` · intanto vado avanti coi pezzi dopo, si pubblica tutto insieme nella v20
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
