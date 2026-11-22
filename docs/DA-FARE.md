@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v23 · 🟩 Controllo 6 · 22/11 11:07 · colori, minuti e km
-🧪 In prova: v24 · 🟩 Controllo 6 · mappa del viaggio
+🚀 Online: v24 · 🟩 Controllo 6 · 22/11 11:32 · mappa del viaggio
+🧪 In prova: —
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
