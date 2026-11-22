@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v26 · 🟩 Controllo 7 · 22/11 · fila dei giorni sottile, numero della versione con «Aggiorna»
-🧪 In prova: v27 · 🟩 Controllo 7 · fila dei giorni in alto, ferma scorrendo
+🚀 Online: v27 · 🟩 Controllo 7 · 22/11 · fila dei giorni in alto
+🧪 In prova: —
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
