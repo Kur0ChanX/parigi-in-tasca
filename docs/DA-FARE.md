@@ -9,6 +9,7 @@
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
+- 22/11 · 🛑 · 🟩 Controllo 10 · Posso pubblicare la v33 sul sito? Il controllo dei permessi ha fermato la copia per la pubblicazione (ramo `versione-v33`): serve il tuo ok scritto in chat («ok pubblica»). Prove verdi in locale. 📌 Senza ok la v33 resta pronta sul ramo e nell'app vedi ancora la v32
 - 22/11 · 👁 · 🟩 Controllo 10 · v33: guarda le 3 foto PRIMA/DOPO e il video della testata (slitta a colori che lancia i regali, castello colorato con neve, ghirlande e lucine, casette in rilievo): ti piace o cambio qualcosa? 📌 File in `archivio/2026-11-22-c18-v33/`
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
