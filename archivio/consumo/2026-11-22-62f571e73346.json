@@ -2,31 +2,32 @@
 "account": "108763",
 "sessione": "62f571e73346",
 "giorno": "2026-11-22",
-"turni": 2,
-"peso": 2791792,
-"uscita": 74184,
-"contesto_max": 262043,
+"turni": 3,
+"peso": 4286209,
+"uscita": 117307,
+"contesto_max": 343065,
 "anomalie": [
 "7 uscite di strumento enormi (308 KB la più grande): leggere a pezzi (grep -n, sed -n)",
-"57k token scritti in un turno"
+"57k token scritti in un turno",
+"43k token scritti in un turno"
 ],
 "remota": "01WTjqUwtG4z",
 "aiutanti": 0,
-"strumenti": 130,
+"strumenti": 168,
 "motori": {
-"opus": 2791792
+"opus": 4286209
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-245,
-22191205,
-161205,
+318,
+33965718,
+242227,
 0,
-74184
+117307
 ]
 },
-"costo": 7.2126,
+"costo": 11.0784,
 "blocchi": {
 "Stop 10 · Promessa a Mario senza voce": 1,
 "Stop 5 · Notifica non letta (in coda": 1
