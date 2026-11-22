@@ -184,6 +184,18 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     ok('C14: seconda camera a Bussy (Airbnb 15868262) nel riquadro B&B, conteggio «B&B» = righe + 2 camere', v.bb2 && v.bbN === v.bbR + 2); if (!(v.bb2 && v.bbN === v.bbR + 2)) console.log(v.bb2, v.bbN, v.bbR);
     ok('v18: il mio consiglio è 4 notti al n. 8 Moxy (13→17)', /4 notti al n\. 8 Moxy/.test(v.mio));
   }
+  // C13 pezzo 2 (22/11): il passo 1 (domenica) ha lo stesso stile del passo 2: colore, 3 riquadri, totale sotto il prezzo
+  {
+    const v = await q.evaluate(() => {
+      const kpi = (d) => [...d.querySelectorAll('.sc-k')].map((x) => [...x.children].map((c) => c.textContent).join('|')).join(' / ');
+      const n4 = document.querySelector('#scN details[data-k="n-4n"]');
+      const par = [...document.querySelectorAll('#scN details.sc-o')].filter((d) => d !== n4);
+      const bad = par.filter((d) => !(d.dataset.ty === 'hotel' && /^🚶 A piedi\|\d+ min\|da /.test(kpi(d)) && /🧳 Lunedì\|\d{1,2}:\d{2}\|/.test(kpi(d)) && /🧼 Pulizia\|\d/.test(kpi(d)) && d.querySelector('.sc-p .sc-dt'))).map((d) => d.dataset.k + ' ' + kpi(d));
+      return { par: par.length, bad, ty4: n4 ? n4.dataset.ty : '', k4: n4 ? kpi(n4) : '', dt4: !!(n4 && n4.querySelector('.sc-p .sc-dt')), vec: !!document.querySelector('#scN .sc-m span:not(.sc-k)') };
+    });
+    const ok4 = v.ty4 === 'dis' && /^🧳 Domenica\|\d{1,2}:\d{2}\|.* \/ 🛏️ In camera\|\d{1,2}:\d{2}\|.* \/ 🎢 Lunedì\|\d{1,2}:\d{2}\|/.test(v.k4) && v.dt4;
+    ok('C13 pezzo 2: passo 1 con 3 riquadri (4 notti: domenica, in camera, lunedì; Parigi: a piedi, lunedì, pulizia) e totale sotto il prezzo', ok4 && v.par >= 8 && !v.bad.length && !v.vec); if (!(ok4 && v.par >= 8 && !v.bad.length && !v.vec)) console.log(v);
+  }
   // 21/11 sera: la pagina era larga 735 px su un telefono da 412 (classe .pc del contenitore uguale a quella dei pro/contro)
   ok('telefono 390 px: la pagina non scorre di lato', await q.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   const maleA = airbnb.out.filter((x) => !x.ok);

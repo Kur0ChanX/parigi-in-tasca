@@ -574,29 +574,35 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 #sc2{border-top:1px solid var(--rule);padding-top:var(--s4)}
 #scegli .sc-leg{margin:var(--s2) 0 var(--s3);line-height:1.45}
 #scD{gap:12px}
-#scD details.sc-o[data-ty]{box-shadow:inset 6px 0 0 var(--ty)}
-#scD details.sc-o.on[data-ty]{box-shadow:inset 6px 0 0 var(--ty),0 0 0 3px rgb(246 201 100 / .25)}
-#scD details.sc-o>summary{grid-template-columns:30px minmax(0,1fr) auto 12px;gap:4px 10px;padding:12px 14px 14px 18px}
-#scD details.sc-o[data-ty]>summary::before{grid-column:2;grid-row:1;font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
+:is(#scD,#scN) details.sc-o[data-ty]{box-shadow:inset 6px 0 0 var(--ty)}
+:is(#scD,#scN) details.sc-o.on[data-ty]{box-shadow:inset 6px 0 0 var(--ty),0 0 0 3px rgb(246 201 100 / .25)}
+:is(#scD,#scN) details.sc-o>summary{grid-template-columns:30px minmax(0,1fr) auto 12px;gap:4px 10px;padding:12px 14px 14px 18px}
+:is(#scD,#scN) details.sc-o[data-ty]>summary::before{grid-column:2;grid-row:1;font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
 #scD details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel"}
 #scD details.sc-o[data-ty="bb"]>summary::before{content:"🛏️ B&B · camera"}
 #scD details.sc-o[data-ty="casa"]>summary::before{content:"🏠 Casa"}
-#scD details.sc-o>summary::after{grid-column:4;grid-row:1}
+:is(#scD,#scN) details.sc-o>summary::after{grid-column:4;grid-row:1}
 #scD .sc-o>summary>.nb{grid-column:1;grid-row:1/3;width:30px;height:30px;margin-top:2px}
 #scD details.sc-o[data-ty]>summary>.nb{background:var(--ty);color:var(--ty-ink)}
-#scD .sc-o .sc-n{grid-column:2;grid-row:2;font:800 1.08rem/1.25 var(--display)}
-#scD .sc-o .sc-n small{font-family:var(--text);font-size:.82rem}
-#scD .sc-o .sc-p{grid-column:3;grid-row:1/3;font:800 1.3rem/1.1 var(--display);font-variant-numeric:tabular-nums}
-#scD .sc-o .sc-p small{font-family:var(--text)}
+:is(#scD,#scN) .sc-o .sc-n{grid-column:2;grid-row:2;font:800 1.08rem/1.25 var(--display)}
+:is(#scD,#scN) .sc-o .sc-n small{font-family:var(--text);font-size:.82rem}
+:is(#scD,#scN) .sc-o .sc-p{grid-column:3;grid-row:1/3;font:800 1.3rem/1.1 var(--display);font-variant-numeric:tabular-nums}
+:is(#scD,#scN) .sc-o .sc-p small{font-family:var(--text)}
 .sc-p .sc-dt{margin-top:4px;font-weight:600}
 .sc-p .sc-dt.sc-rc{display:inline-block;padding:2px 7px;border-radius:6px;background:var(--lamp);color:var(--lamp-ink);font-weight:800}
-#scD .sc-o .sc-m{grid-column:1/5;grid-row:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:8px}
-#scD .sc-m .sc-k{display:grid;align-content:start;gap:1px;min-width:0;padding:7px 9px 8px;border-radius:12px;background:var(--surface-2)}
+:is(#scD,#scN) .sc-o .sc-m{grid-column:1/5;grid-row:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:8px}
+:is(#scD,#scN) .sc-m .sc-k{display:grid;align-content:start;gap:1px;min-width:0;padding:7px 9px 8px;border-radius:12px;background:var(--surface-2)}
 .sc-k>i{font:700 .66rem/1.2 var(--text);font-style:normal;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
 .sc-k>b{font:800 1.12rem/1.2 var(--display);font-variant-numeric:tabular-nums;color:var(--ink)}
 .sc-k>small{font-size:.74rem;line-height:1.3;color:var(--mute)}
-#scD .sc-m .sc-na{grid-column:1/-1}
-#scD .sc-b{padding:0 14px 14px 18px}
+:is(#scD,#scN) .sc-m .sc-na{grid-column:1/-1}
+:is(#scD,#scN) .sc-b{padding:0 14px 14px 18px}
+/* C13 pezzo 2 · passo 1 (domenica) con lo stesso stile: hotel di Parigi azzurri, «4 notti» neutro; il cerchio di scelta al posto del numero */
+#scN .sc-list{gap:12px}
+#scN [data-ty="dis"]{--ty:var(--mute)}
+#scN details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel a Parigi"}
+#scN details.sc-o[data-ty="dis"]>summary::before{content:"🏰 Domenica già a Disney"}
+#scN .sc-o>summary>.sc-dot{grid-column:1;grid-row:1/3;margin-top:4px}
 #scBB .sc-xb{border-left:6px solid var(--ty-bb)}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -1766,14 +1772,17 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
   const row=(k,on,off,mk,n,sub,p,ps,m,body,px='')=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${op.includes(k)?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small>${px}</span><span class="sc-m">${m}</span></summary><div class="sc-b">${body}</div></details>`;
   const dot=on=>`<span class="sc-dot" aria-hidden="true">${on?'✓':''}</span>`;
   const nOpt=(o)=>{const s={n:o?o.id:'',d:SCE.d},k=conto(s),on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S);
-   const m=(rc?'<span class="sc-rc">★ Il mio consiglio</span>':k&&cm?`<span>Totale${dX(dEur(k.tot,cm.tot))||' uguale'}</span>`:'')+(o?`<span>🚶 ${o.w} min da ${RS[o.st].n}</span><span>🧼 pulizia ${o.cl}</span>`:'<span>🧳 valigie sul treno domenica sera</span>');
+   const px=rc?'<small class="sc-dt sc-rc">★ consiglio</small>':k&&cm?`<small class="sc-dt">totale ${dEur(k.tot,cm.tot)}</small>`:'';
+   const m=o?`<span class="sc-k"><i>🚶 A piedi</i><b>${o.w} min</b><small>da ${RS[o.st].n}</small></span><span class="sc-k"><i>🧳 Lunedì</i><b>${T(monB(o,SCE.d).out)}</b><small>uscita con le valigie</small></span><span class="sc-k"><i>🧼 Pulizia</i><b>${esc(o.cl)}</b><small>su 10</small></span>`
+    :`<span class="sc-k"><i>🧳 Domenica</i><b>${k?k.sunOut:'—'}</b><small>treno con le valigie</small></span><span class="sc-k"><i>🛏️ In camera</i><b>${k&&k.sunIn?k.sunIn:'—'}</b><small>domenica sera</small></span><span class="sc-k"><i>🎢 Lunedì</i><b>${k?T(k.mon):'—'}</b><small>uscita senza valigie</small></span>`;
    return row('n-'+(o?o.id:'4n'),on,0,dot(on),o?esc(o.n):'4 notti vicino a Disney',o?esc(o.sub):'13→17 nello stesso posto: niente cambio di hotel',o?fmt(o.p):'—',o?'1 notte':'niente Parigi',m,
 `<ul class="sc-l">${o?`<li>Domenica sera: restate a Parigi quanto volete, niente treni.</li><li>${o.dep} ${o.ci}</li><li>Lunedì: uscita alle ${T(monB(o,SCE.d).out)}, RER A da ${RS[o.st].n} con le valigie.</li>`:`<li>Domenica sera: valigie dagli armadietti e RER A${k?', in camera verso le '+k.sunIn:''}.</li><li>Lunedì: al parco senza valigie${k?', uscita alle '+T(k.mon):''}.</li>`}</ul>
 ${k?`<p class="small">Con il n. ${SCE.d}: totale del viaggio ≈ ${fmt(k.tot)}${rc?'':' ('+dEur(k.tot,cm.tot)+' rispetto al consiglio)'}.</p>`:''}
 <div class="pc"><p class="p">${o?o.pro:"Un solo alloggio: valigie disfatte una volta. Col n. 12 la spa domenica sera."}</p><p class="c">${o?o.con:"Domenica sera valigie e treno: via da Parigi alle 20:40 (alle 18:50 col n. 12)."}</p></div>
 ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class="in"><div class="dove" data-par="${o.id}"></div></div></details>`:''}
-<div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>`:''}</div>`)};
+<div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>`:''}</div>`,px)};
   $('#scN').innerHTML=`<p class="sc-g">Prima scelta: tutte e 4 le notti vicino a Disney, 13→17</p><div class="sc-list">${nOpt(null)}</div><details class="sc-par"${PO?' open':''}><summary>Oppure domenica a Parigi, poi 3 notti vicino a Disney (14→17) · ${PAR.length} hotel</summary><p class="sc-g">Vicino alla Gare de Lyon: i più comodi per i treni</p><div class="sc-list">${PAR.filter(p=>p.z==='gl').map(nOpt).join('')}</div><p class="sc-g">In centro, più belli (Opéra, Châtelet)</p><div class="sc-list">${PAR.filter(p=>p.z==='ce').map(nOpt).join('')}</div></details>`;
+  $('#scN').querySelectorAll('details.sc-o').forEach(d=>{d.dataset.ty=d.dataset.k==='n-4n'?'dis':'hotel'}); /* C13 pezzo 2: colore e etichetta come nel passo 2 */
   const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
   const byTot=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:byTot,disney:(a,b)=>(a.c?kmD(a.h.id):1e9)-(b.c?kmD(b.h.id):1e9)||(a.c?a.c.park:1e9)-(b.c?b.c.park:1e9)||byTot(a,b),rer:(a,b)=>!a.c-!b.c||rerMin(a.h)-rerMin(b.h)||byTot(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||byTot(a,b)};
   $('#scD').innerHTML=L.sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
