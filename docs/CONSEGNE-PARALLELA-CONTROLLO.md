@@ -3,9 +3,10 @@
 ## Stato (Controllo 11 `session_01Rwcxc4aWHi8tyDfAiE3Y2J`, 22/11 15:12 ora italiana, chiusa alla soglia; la apre la Controllo 11 con `create_session` (catena 2 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01Rwcxc4aWHi/claude/parigi-ramo-definitivo.
 - **v33 ancora NON online** (sito = v32: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 32}`). DOMANDA 1 🛑 aperta: Mario 15:02 «Ok, però…» = va bene la strada ma vuole prima vedere il risultato → NON è «ok pubblica»; dopo le foto nuove richiedere «ok pubblica» (permessi: ramo-copia `versione-v33` solo con ok scritto).
+- **DOMANDA 1 RISPOSTA (Mario dopo l'handoff, parola per parola): «Sì, appena finito le cose che ti ho detto, pubblica.»** = ok scritto a pubblicare la v33 appena finiti braccia di Jack, brillii e bancarelle, a prove verdi (ramo-copia `versione-v33`, PR verso `main`, skill `unione-pr`); foto e video a Mario comunque. Riga tolta da «## 0. Aspetta Mario».
 - **Già deciso da Mario (non richiedere):** personaggi e figure SOLO dalle sue foto ritagliate (slitta, Zero `archivio/2026-11-22-c18-castello/mario-zero-cane.webp`, castello = suo disegno); verde della slitta in ombra, rosso di Jack in vista; Zero piccolo (più piccolo di una renna), naso acceso; si pubblica a prove verdi.
 - **Da non rifare:** castello vettoriale o solo ricolorato; pacchi grandi e accesi; slitta tutta in un pezzo.
-- **Cosa preme a Mario adesso:** vedere il risultato (foto e VIDEO: renne e Zero si muovono, serve il video) di castello con ombre, slitta/Zero, poi **bancarelle abbellite** (neve sopra, lucine colorate, merce appesa) e brillii sul castello; poi «ok pubblica».
+- **Cosa preme a Mario adesso:** vedere il risultato (foto e VIDEO: renne e Zero si muovono, serve il video) di castello con ombre, slitta/Zero, poi **bancarelle abbellite** (neve sopra, lucine colorate, merce appesa) e brillii sul castello; poi PUBBLICARE (ok già dato).
 
 ## Cosa è stato fatto (Controllo 11) · verifica: `git log --oneline -8`, pagina `dicembre/parigi-disney-natale.html`
 - Pacchi lanciati: 5 formati, più piccoli, colori spenti (`FORME`, `COL` nel blocco slitta); prova con misure diverse e colori spenti.
@@ -21,8 +22,9 @@
 ## Prossimi passi
 1. Rifare il giro: `python3 -I tools/fai-dicembre.py`, `node tools/prova-web-app.js`, `node tools/prova-scritte.js`, `--controlla`, `controlla-colori.py`; correggere i rossi.
 2. Brillii sul castello: glint animati sui puntali d'oro (`ori` di `castello-geo.json`, da portare in `addobbi.py` → JS `castDeco`), finestre più luccicanti (stellina che brilla su alcune).
+2b. **Braccia di Jack** (Mario dopo l'handoff, parole in `docs/lavori-in-corso/C18-slitta-e-luci.md` in fondo): pezzo a parte della foto della slitta che ogni tanto sale e scende, come se frustasse le renne.
 3. **Bancarelle** (Mario 15:02): nel JS delle casette (cerca «una casetta vista di fronte») neve più spessa sul tetto con gocce e ghiaccioli, lucine colorate lungo il tetto, merce appesa (palline, cuori di pan di zenzero, stelle, calze); occhio a `prova-scritte.js` e alle prove della testata.
-4. Foto PRIMA (`git show 94809b5:dicembre/parigi-disney-natale.html`) / DOPO al telefono e PC con `tools/confronta-foto.py` + VIDEO della slitta con renne e Zero (`archivio/2026-11-22-c18-v33/lavoro/video.js` + ffmpeg, ritaglio della scena, ingrandito ×2); mandarli e chiedere «ok pubblica».
+4. Foto PRIMA (`git show 94809b5:dicembre/parigi-disney-natale.html`) / DOPO al telefono e PC con `tools/confronta-foto.py` + VIDEO della slitta con renne e Zero (`archivio/2026-11-22-c18-v33/lavoro/video.js` + ffmpeg, ritaglio della scena, ingrandito ×2); mandarli; poi pubblicare (ok già dato).
 5. Con «ok pubblica»: ramo-copia `versione-v33`, PR verso `main`, unione (skill `unione-pr`), `git merge origin/main`.
 6. Poi C17 resto, orario RER A (~26/11), prova del service worker instabile, fuochi.
 
