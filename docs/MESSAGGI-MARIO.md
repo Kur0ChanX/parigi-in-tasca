@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 19:35 · 01WTjqUwvARs
-publica
-
 ## 2026-11-21 19:36 · 01WTjqUwvARs
 Scusa, la sezione più importante a mercatini con il percorso, dove andare, dove non andare, e il pulsante mercatini sopra, che era molto importante, non, lei l'ha fatto in modo superficiale.
 
@@ -137,3 +134,6 @@ metti un filtro dai piú vicini a Disneyland i meno cari i piú puliti e vicino 
 
 e guardane altri se ne trovi da inserire spulcia bene 
 quindi non cari vicini alla rer vicini a disneyland dal 13 al 17 e puliti decentemente come voto
+
+## 2026-11-22 17:11 · 01QTFEqRq6KH
+Cerca di non creare conflitti con l'altro account. Mi sto spostando qui provvisoriamente, sto continuando un po' di lavoro qui. Mi raccomando, cerca di non calpestarvi lavoro l'uno con l'altro. Puoi fermarti, mi dici che cosa devi continuare a fare, ti dico io cosa fare. Poi quando andrò nell'altro account lui vedrà il lavoro che hai fatto e si adatta.
