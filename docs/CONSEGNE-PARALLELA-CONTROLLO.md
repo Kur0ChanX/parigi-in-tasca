@@ -2,53 +2,46 @@
 
 ## Stato (Controllo 2 `session_01WTjqUxihdodXx5rgGV3q9Q`, 22/11 01:06 ora italiana, chiusa alla soglia; la apre la Controllo 2 con `create_session` (catena 2 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01WTjqUxihdo/claude/parigi-ramo-definitivo.
-- (qui le righe di giudizio della Controllo 2: fatto, provato, dove si verifica)
 
-## Stato (Controllo 1 `session_01WTjqUxeDzvNf7FCCkrmhkz`, 22/11 00:43 ora italiana, chiusa alla soglia; la apre la Controllo 1 con `create_session` (catena 1 di 8))
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
+- **Già deciso da Mario (non richiedere):** alloggi **in priorità 13→17** (14→17 seconda strada); criteri: non cari, ≤ ~12 min a piedi dalla RER, vicino a Disney, voto ≥ 8 e pulizia buona, senza auto; schede divise per tipo, niente listoni; «vai da solo e pubblica»; tasto «Tutti» e distanze in vista (Disney minuti e km, RER a piedi): FATTI; ricerca anche sui siti diretti con 3 aiutanti: FATTA; grafica «rifai tutto da zero, solo migliorie»: COME farla aspetta la DOMANDA 1 🛑.
+- **Da non rifare:** ricerca C12 e siti diretti (`research_notes/…/alloggi_ricerca_profonda_*.md`, `alloggi_siti_diretti_*.md`: nessun alloggio nuovo valido); v18 online (PR #19); plugin `frontend-design` già letto (`docs/lavori-in-corso/C13-aspetto-pagina.md`).
+- **Cosa preme a Mario adesso:** risposta alla DOMANDA 1 (grafica a pezzi con foto, consiglio, o tutta insieme) e DOMANDA 2 (plugin: consiglio non installarlo); 4 foto della v18 mandate (`archivio/2026-11-22-v18-*.jpg`).
 
-- **Già deciso da Mario (non richiedere):** alloggi 14→17 e **in priorità 13→17** (22/11 ~00:15); ricerca profonda nuova con i suoi criteri (non cari, ≤ ~12 min a piedi dalla RER, vicino a Disney, voto ≥ 8 e pulizia buona, senza auto), anche B&B, affittacamere, hotel, appartamenti; pagina riordinata «ordinata, chiara, professionale, niente listoni mischiati» con schede divise per tipo; «vai da solo e pubblica» (22/11 ~00:20: pubblicare senza aspettare le foto); 2 aiutanti per la ricerca. La DOMANDA 3 della Principale 11 (impaginazione) è chiusa: schede in basso.
-- **Da non rifare:** ricerca C12 (2 aiutanti, 120+ posti controllati: `research_notes/Parigi mercatini e Disneyland dicembre/alloggi_ricerca_profonda_hotel.md` e `alloggi_ricerca_profonda_appartamenti.md`); v17 online (pagina a 4 schede, PR #18); controllo doppioni dei 5 Airbnb migliori (non sono in pagina).
-- **Cosa preme a Mario adesso:** la **v18**: consiglio ★ sul 13→17, n. 31–35 (5 Airbnb), camera di Bussy nel gruppo B&B. Piano preciso, passo per passo: `docs/lavori-in-corso/C12-ricerca-profonda-alloggi.md` «Piano v18».
+- v18 ONLINE (22/11 ~01:04, PR #19 unita, squash `e9a2599`): verifica `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c scBB` → 2. Prove sull'ultimo commit di codice: web app 41/41, scritte VERO, `fai-dicembre.py --controlla` VERO, colori VERO, mappe allineate.
+- La pagina di dicembre è di questa catena (la Principale non la tocca). Principale attiva: «Principale 22» (`session_01WTjqUtegBCzTHdbgdaXDm1`).
+- Controllo Da fare: 1 voce aggiunta (👁 C13 grafica a pezzi con foto prima/dopo); la voce 👁 della Controllo 1 (tasto Tutti, distanze, siti diretti, aspetto) resta finché Mario vede.
 
-- v17 ONLINE (22/11 00:34, PR #18 unita): verifica `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c tyswitch` → 1 o più. Prove sull'ultimo commit: web app 37/37, scritte 20/20, `fai-dicembre.py --controlla` VERO, colori VERO, kit 43/43.
-- La pagina di dicembre è di questa catena (la Principale non la tocca: `docs/PASSAGGIO-CONSEGNE.md`). Principale attiva: «Principale 22» (`session_01WTjqUtegBCzTHdbgdaXDm1`).
-
-## Cosa è stato fatto (Controllo 1)
-- C6 riordino: script delle schede in fondo a `dicembre/parigi-disney-natale.html` (blocco `<script>` a parte dopo quello principale; sezioni assegnate per id in `T`; `body[data-tab]`; `openCard`/`closeCard` con `history`; interruttore `.tyswitch` su `#scD` con `tyOf()` dal sottotitolo; `scrollIntoView` avvolto per aprire la scheda giusta), CSS «C6 …» prima di `@media (prefers-reduced-motion`. Titoli corti con `.sec-ans` (id `a-…`; i ticket scrivono in `#a-tr`). Passo 1: prima le 4 notti, Parigi dentro `details.sc-par` (`PO`).
-- Dettagli e stato: `docs/lavori-in-corso/C6-pagina-ordinata.md`, `C12-ricerca-profonda-alloggi.md`.
-- Foto mandate: `archivio/2026-11-22-bozza-schede.jpg`, `archivio/2026-11-22-v17-schede.jpg`.
+## Cosa è stato fatto (Controllo 2)
+- v18 in `dicembre/parigi-disney-natale.html`: `MIO_S={n:"",d:8}` (4 notti Moxy), `#mio`, `CK[0]`, `BARS` (7 + 2 pacchetti = 9 barre); n. 31–35 in `AL`, `Q`, `ACC`, `DV`; n. 30 a 647 €; riquadro `#scBB` (Jolie chambre, CSS `.sc-x`, visibile con «B&B» e «Tutti»); `TY` con 'tutti' (predefinito, conteggi in `tag()`); riga della scelta con `rerT(h)` e «🏰 Disney min · km» (`kmD`, `kmDT` dal blocco MAPPE); «Vicino a Disney» per km in `SORT` e `SRT`; legenda `.sc-leg`. `tools/fai-mappe-dicembre.py` `ZONA` 31–35. `tools/prova-web-app.js`: conteggi 35, blocco «v18».
+- Errore mio (diario `docs/ERRORI.md` 22/11): nome `kmT` già usato → km sbagliati, rinominato `kmDT`. Spostate 2 righe vecchie in `docs/ERRORI-STORIA.md` (tetto 10 KB).
+- C13 aperto: `docs/lavori-in-corso/C13-aspetto-pagina.md` (parole di Mario, plugin letto, piano proposto).
 
 ## Strade provate e scartate
-- Scrivere il riordino nella pagina mentre la Principale 21 faceva la v16: scartato, salvato come patch e applicato dopo la v16.
-- Jolie chambre (Bussy) dentro il motore: scartato, il motore conosce solo le stazioni VDE e CH: va in un riquadro fisso nel gruppo B&B.
-- Aggiornare tutti i prezzi dell'aiutante: no, molti sono di camere diverse (es. Relais 763 € senza letto garantito contro 908 € matrimoniale); solo il n. 30 è da cambiare.
+- «Vicino a Disney» coi minuti senza attese (v17): in cima Residhome e la navetta del Crowne Plaza (ogni 30 min), Hotel Disney 4°: scartata, ora km in linea d'aria (IGN), a pari km i minuti.
+- Minuti con le attese: scartato, servirebbero le frequenze ufficiali di RER e navette.
+- Zenitude Val d'Europe (Chessy): pulizia 8,4 < 8,5 e reception 9–19.
+- Installare il plugin: consiglio no (solo istruzioni, le applico leggendole; toccherebbe `.claude/settings.json` di tutte le chat).
 
 ## Prossimi passi
-1. v18 dal «Piano v18» di C12 (punti 1–7), poi foto a Mario del consiglio nuovo e di 2 schede nuove.
-2. Chiudere le voci 👁 di `docs/DA-FARE.md` sezione 1 (pagina riordinata, alloggi della ricerca, consiglio 13→17, camera di Bussy) solo quando Mario le vede.
+1. Alla risposta della DOMANDA 1: C13 «Piano proposto» (piano grafico corto con le regole del plugin, primo pezzo la scheda Dormire, foto prima/dopo con `tools/confronta-foto.py`, prove, pubblicare il pezzo approvato).
+2. Voci 👁 di `docs/DA-FARE.md` sezione 1: chiuderle solo quando Mario le vede.
+3. Solo se Mario lo chiede: prezzi sui siti ufficiali a mano (elenco nei file `alloggi_siti_diretti_*.md`).
 
 ## Blocchi e rischi
-- Prezzi letti il 21/11: possono salire. Airbnb n. 34: cancellazione gratuita solo 24 ore.
-- La prova «dicembre: service worker suo» è caduta 2 volte su 4 con altre prove insieme sul computer: lanciarla da sola.
+- Prezzi letti il 21/11: possono salire. Airbnb n. 34: cancellazione gratuita solo 24 ore; n. 31–33: cancellazione delle 3 notti non letta.
+- Prova «dicembre: service worker suo» instabile: cade anche sulla v17 (provato), il servizio vero funziona (script a parte: la pagina è comandata dal suo service worker). Rilanciarla da sola; ora stampa chi comanda la pagina.
+- Nomi nuovi nella pagina: prima `grep -c '\bnome\b'` = 0.
 
 ## Ultimo messaggio di Mario
-«vai da solo e pubblica
-prendi 2 agenti
-dividi bene le cose non listoni mischiati tutto attaccato
-tutto anche b&b affittacamere hotel  appartamenti ecc ecc»
-
-## Messaggio di Mario arrivato dopo l'handoff (22/11 ~00:45, con foto `archivio/2026-11-22-mario-dormire-tasto-tutti.jpg`: scheda Dormire, elenco Hotel)
+«qui» con la foto, seguito dal messaggio arrivato alla Controllo 1 dopo il suo handoff (`archivio/2026-11-22-mario-dormire-tasto-tutti.jpg`):
 > qui metti un tasto tutti non solo hotel b&b ecc e metti anche in bista distanza Disney con tempi e km a piedi rer a piedi
 >
-> Cerca meglio anche su siti privati Non per forza Booking, Airbnb ecc ecc, anche siti privati che si va a risparmiare sulla commissione dei portali. Metti altri hotel in base ai miei requisiti, solo quelli validi che possono soddisfare le nostre esigenze. Cerca bene ovunque 
+> Cerca meglio anche su siti privati Non per forza Booking, Airbnb ecc ecc, anche siti privati che si va a risparmiare sulla commissione dei portali. Metti altri hotel in base ai miei requisiti, solo quelli validi che possono soddisfare le nostre esigenze. Cerca bene ovunque
 >
 > Se vuoi differenziare bene con magari evidenziando, con colori, con font diversi, spaziature, fai pure, almeno si capisce bene tutto.  usa  /plugin install frontend-design@claude-plugins-official
 > su questo nostro sito rifai tutto con frontend da 0 solo migliorie
-→ per la Controllo 2: tasto «Tutti» nell'interruttore; in vista nella riga di ogni alloggio distanza da Disney (tempo e km a piedi) e minuti a piedi dalla RER; ricerca anche sui siti diretti (senza portali); plugin `frontend-design`: prima leggerlo e dire a Mario costo e rischio (REGOLE «Divieti»), poi rifare l'aspetto da zero «solo migliorie».
 
-Poi Mario (22/11 ~00:47): «e
-usa 3 agenti» → per quel lavoro, 3 aiutanti.
+Poi: «e usa 3 agenti».
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
@@ -65,8 +58,8 @@ Testo da incollare:
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 00:44 · [AVVIO] Sei la chat parallela Controllo 2 di Parigi in tasca, linea «Controllo» … → 
-- 2026-11-22 00:49 · qui → 
+- 2026-11-22 00:44 · [AVVIO] Sei la chat parallela Controllo 2 … → avvio fatto
+- 2026-11-22 00:49 · qui (+ messaggio passato dalla Controllo 1: tasto Tutti, distanze, siti diretti, grafica, 3 agenti) → v18 online (PR #19), ricerca siti diretti (3 file), C13 + DOMANDA 1 e 2
 
 Ultimo, intero:
 > qui
