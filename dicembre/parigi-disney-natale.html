@@ -138,6 +138,27 @@ b,strong{font-weight:700}
 @keyframes respiro{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.8;transform:scale(1.06)}}
 @keyframes respiro2{0%,100%{opacity:.7}50%{opacity:1}}
 @keyframes brilla{0%,100%{opacity:.2;transform:scale(.5)}50%{opacity:1;transform:scale(1)}}
+/* v32 · luci della testata (Mario 22/11 12:27 «L’albero fallo meglio… nel cielo più romantico, più viva. Il castello… con le finestre fatte meglio che si illuminano, magari con delle proiezioni»): solo luce, niente figure disegnate. Con «riduci movimento» tutto fermo e niente proiezioni */
+#castLuci{fill:var(--lamp-hot)}
+.fin-c{animation-name:accendi,spegni;animation-timing-function:ease-out,ease-in-out;animation-fill-mode:both,none;animation-iteration-count:1,infinite}
+.fin-c.fin-f{animation-name:accendi}
+@keyframes accendi{from{opacity:0}to{opacity:1}}
+@keyframes spegni{0%,62%,100%{opacity:1}66%,86%{opacity:.2}90%{opacity:1}}
+.pj{opacity:0;animation:pj 30s ease-in-out 4s infinite}
+@keyframes pj{0%,100%{opacity:0}7%,52%{opacity:.62}60%{opacity:0}}
+.pj-onda{animation:pjOnda 10s linear infinite}
+@keyframes pjOnda{to{transform:translateX(-220px)}}
+#pjNeve{stroke:#FFFFFF;stroke-width:.7;stroke-linecap:round;fill:none;opacity:.85}
+.pj-f{animation:pjNeve 12s linear infinite}
+@keyframes pjNeve{from{transform:translateY(-50px)}to{transform:translateY(110px)}}
+.pj-lama{animation:pjLama 6s ease-in-out infinite}
+@keyframes pjLama{0%,100%{transform:translateX(0)}50%{transform:translateX(220px)}}
+.faro{transform-box:fill-box;transform-origin:center;animation:faroGira 12s linear infinite}
+@keyframes faroGira{0%,100%{transform:scaleX(1)}12.5%{transform:scaleX(.7)}25%{transform:scaleX(0)}37.5%{transform:scaleX(-.7)}50%{transform:scaleX(-1)}62.5%{transform:scaleX(-.7)}75%{transform:scaleX(0)}87.5%{transform:scaleX(.7)}}
+.faro-lampo{opacity:.2;animation:faroLampo 12s linear infinite}
+@keyframes faroLampo{0%,20%,30%,70%,80%,100%{opacity:.2}25%,75%{opacity:1}}
+.raggi-st{transform-box:fill-box;transform-origin:center;animation:raggi 16s linear infinite}
+@keyframes raggi{0%{transform:rotate(0);opacity:.4}50%{opacity:.8}100%{transform:rotate(90deg);opacity:.4}}
 
 /* ---------- mercatini ---------- */
 .go{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:var(--s4);max-width:46rem}
@@ -551,10 +572,11 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 .tabbar{display:none}
 body[data-tab]{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
 body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px max(8px,env(safe-area-inset-left,0px)) calc(4px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--rule);box-shadow:0 -8px 24px -16px rgb(0 0 0 / .5)}
-/* C17 · numero della versione in alto (Mario 22/11 «un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato… clicca aggiorna versione») */
-.vnum{transition:opacity .2s;position:fixed;top:calc(8px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));z-index:55;min-height:28px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--mute);font:700 .74rem/1 var(--text);font-variant-numeric:tabular-nums;cursor:pointer}
+/* C17 · numero della versione in alto (Mario 22/11 «un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato… clicca aggiorna versione»); v32: non scende scorrendo, solo in cima alla schermata principale (Mario 12:27 «Il numerino non farlo che scende… lascialo fisso in alto alla schermata principale») */
+.vnum{position:absolute;top:calc(8px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));z-index:55;min-height:28px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--mute);font:700 .74rem/1 var(--text);font-variant-numeric:tabular-nums;cursor:pointer}
 .vnum.nuovo::after{content:"";position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--lamp);box-shadow:0 0 0 2px var(--bg)}
 .vnum.agg{background:var(--lamp);color:var(--lamp-ink);border-color:transparent}
+body[data-tab]:not([data-tab="piano"]) .vnum{display:none}
 .vbox{width:min(30rem,calc(100vw - 32px));max-height:min(80vh,40rem);border:0;border-radius:18px;padding:0;background:var(--surface);color:var(--ink);box-shadow:0 20px 60px -20px rgb(0 0 0 / .6)}
 .vbox::backdrop{background:rgb(0 0 0 / .55)}
 .vbox .vt{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 16px 8px}
@@ -572,8 +594,13 @@ body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display
  /* DOMANDA 1 = 2 (Mario 22/11 ~12:00 «foto 2»): la fila sta IN ALTO, al suo posto prima del giorno, e resta ferma in cima quando scorri; in basso solo la barra delle schede. overflow:clip (non hidden) perché la fila possa restare ferma */
  #giorni{overflow:clip}
  body[data-tab] .daybar{position:sticky;top:0;bottom:auto;margin:0 calc(-1*max(16px,env(safe-area-inset-left,0px))) var(--s5);border-radius:0 0 18px 18px;border-width:0 0 1px;padding-top:calc(6px + env(safe-area-inset-top,0px));padding-bottom:6px;box-shadow:0 10px 24px -14px rgb(0 0 0 / .45)}
- body[data-tab] .daybar .pill{top:calc(6px + env(safe-area-inset-top,0px));bottom:6px}
- body.fila-su .vnum{opacity:0;pointer-events:none}
+ body[data-tab] .daybar .pill{top:calc(4px + env(safe-area-inset-top,0px));bottom:4px}
+ /* v32 (Mario 12:27 «farla più stretta, se no mi mangia troppa pagina»): una riga sola «DOM 13», alta la metà */
+ body[data-tab] .daybar{padding-top:calc(4px + env(safe-area-inset-top,0px));padding-bottom:4px}
+ body[data-tab] .daybar button{min-height:36px;display:flex;align-items:baseline;justify-content:center;gap:4px;padding:2px}
+ body[data-tab] .daybar button .dn{font-size:.66rem}
+ body[data-tab] .daybar button .dd{font-size:1.02rem}
+ body[data-tab] .daybar .today-dot{top:3px;right:4px;width:6px;height:6px}
 }
 .tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:44px;padding:2px;border:0;border-radius:14px;background:none;color:var(--mute);font:700 .7rem/1.1 var(--text);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .tabbar button .i{font-size:1.15rem;line-height:1}
@@ -801,9 +828,17 @@ const VERSIONI=[
    <pattern id="awnR" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--wine)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
    <pattern id="awnG" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--fir)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
    <pattern id="awnY" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--lamp)"/><rect x="6" width="6" height="14" style="fill:var(--roof-r)"/></pattern>
+   <!-- v32 · luci della testata (Mario 22/11 12:27): ritaglio del castello per le proiezioni, luce dal basso, lama di luce, rosa all’orizzonte, faro della Torre Eiffel -->
+   <clipPath id="castClip"><rect x="415" y="188" width="170" height="77"/><rect x="405" y="170" width="30" height="95"/><polygon points="400,172 420,120 440,172"/><rect x="440" y="135" width="34" height="130"/><polygon points="435,137 457,80 479,137"/><rect x="480" y="110" width="44" height="155"/><polygon points="474,112 502,46 530,112"/><rect x="530" y="145" width="32" height="120"/><polygon points="525,147 546,94 567,147"/><rect x="568" y="175" width="28" height="90"/><polygon points="563,177 582,133 601,177"/><rect x="462" y="112" width="10" height="26"/><polygon points="459,114 467,96 475,114"/></clipPath>
+   <linearGradient id="proiezG" gradientUnits="userSpaceOnUse" x1="170" y1="0" x2="390" y2="0" spreadMethod="repeat"><stop offset="0" stop-color="#5B86FF" stop-opacity=".5"/><stop offset=".25" stop-color="#9D6BFF" stop-opacity=".46"/><stop offset=".5" stop-color="#FFB547" stop-opacity=".4"/><stop offset=".75" stop-color="#FF6FAE" stop-opacity=".46"/><stop offset="1" stop-color="#5B86FF" stop-opacity=".5"/></linearGradient>
+   <linearGradient id="suLuce" x1="0" y1="1" x2="0" y2="0"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.5"/><stop offset=".55" style="stop-color:var(--lamp);stop-opacity:0"/></linearGradient>
+   <linearGradient id="lamaG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".5"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+   <radialGradient id="rosaG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FF9EC2" stop-opacity=".2"/><stop offset=".6" stop-color="#FF9EC2" stop-opacity=".06"/><stop offset="1" stop-color="#FF9EC2" stop-opacity="0"/></radialGradient>
+   <linearGradient id="faroG" gradientUnits="userSpaceOnUse" x1="262" y1="0" x2="410" y2="0"><stop offset="0" style="stop-color:var(--lamp-hot);stop-opacity:.5"/><stop offset="1" style="stop-color:var(--lamp-hot);stop-opacity:0"/></linearGradient>
   </defs>
   <!-- bagliore caldo della città sull'orizzonte -->
   <ellipse cx="400" cy="250" rx="560" ry="150" fill="url(#hglow)"/>
+  <ellipse cx="330" cy="205" rx="420" ry="80" fill="url(#rosaG)"/>
   <!-- strato lontano: tetti di Parigi e la Torre Eiffel accesa -->
   <g class="par" data-depth="-0.06" data-max="26">
    <!-- luna a forma di Topolino (Mario 21/11): immagine fatta da tools/fai-icone-dicembre.js; bagliore che respira e stelline qui -->
@@ -815,6 +850,8 @@ const VERSIONI=[
    <rect x="254" y="196" width="16" height="3" style="fill:var(--tower)"/><rect x="258" y="160" width="8" height="2" style="fill:var(--tower)"/>
    <line x1="262" y1="128" x2="262" y2="116" style="stroke:var(--tower);stroke-width:1.5"/>
    <g id="towerlights"></g>
+   <g class="faro" fill="url(#faroG)"><polygon points="262,116.5 410,111 410,123"/><polygon points="262,116.5 410,111 410,123" transform="matrix(-1 0 0 1 524 0)"/></g>
+   <circle class="faro-lampo" cx="262" cy="116.5" r="3.4" fill="url(#kglow)"/>
   </g>
   <!-- C18 · nebbia leggera di lontananza -->
   <rect x="-60" y="140" width="920" height="150" fill="url(#nebbia)"/>
@@ -833,16 +870,13 @@ const VERSIONI=[
    </g>
    <!-- C18 · luce della luna sul castello (lato sinistro chiaro, destro in ombra) e bagliore delle finestre -->
    <g id="castLuce"><rect class="ombraC" x="422.4" y="170" width="12.6" height="95"/><rect x="405" y="170" width="2.2" height="95" fill="url(#bordoLuna)"/><rect class="ombraC" x="459.7" y="135" width="14.3" height="130"/><rect x="440" y="135" width="2.2" height="130" fill="url(#bordoLuna)"/><rect class="ombraC" x="505.5" y="110" width="18.5" height="155"/><rect x="480" y="110" width="2.2" height="155" fill="url(#bordoLuna)"/><rect class="ombraC" x="548.6" y="145" width="13.4" height="120"/><rect x="530" y="145" width="2.2" height="120" fill="url(#bordoLuna)"/><rect class="ombraC" x="584.2" y="175" width="11.8" height="90"/><rect x="568" y="175" width="2.2" height="90" fill="url(#bordoLuna)"/><rect class="ombraC" x="467.8" y="112" width="4.2" height="26"/><rect x="462" y="112" width="2.2" height="26" fill="url(#bordoLuna)"/><polygon class="luceC" points="400,172 420,120 420,172"/><polygon class="ombraC" points="420,120 440,172 420,172"/><polygon class="luceC" points="435,137 457,80 457,137"/><polygon class="ombraC" points="457,80 479,137 457,137"/><polygon class="luceC" points="474,112 502,46 502,112"/><polygon class="ombraC" points="502,46 530,112 502,112"/><polygon class="luceC" points="525,147 546,94 546,147"/><polygon class="ombraC" points="546,94 567,147 546,147"/><polygon class="luceC" points="563,177 582,133 582,177"/><polygon class="ombraC" points="582,133 601,177 582,177"/><polygon class="luceC" points="459,114 467,96 467,114"/><polygon class="ombraC" points="467,96 475,114 467,114"/><rect class="ombraC" x="415" y="195" width="170" height="70" opacity=".5"/></g>
-   <g><circle cx="420" cy="193" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="452" cy="157" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="463" cy="157" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="492" cy="129.5" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="502" cy="129.5" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="512" cy="129.5" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="497" cy="157.5" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="507" cy="157.5" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="546" cy="167" r="9" fill="url(#kglow)" opacity=".55"/><circle cx="582" cy="197" r="9" fill="url(#kglow)" opacity=".55"/></g>
+   <!-- v32 · luce calda dal basso e, ogni tanto, lo spettacolo di proiezioni: colori che scorrono, fiocchi di neve, una lama di luce (Mario 12:27 «magari con delle proiezioni») -->
+   <g clip-path="url(#castClip)"><rect x="395" y="60" width="215" height="150" fill="url(#suLuce)" opacity=".7"/>
+    <g class="pj"><rect class="pj-onda" x="170" y="40" width="660" height="230" fill="url(#proiezG)"/><g id="pjNeve"></g><rect class="pj-lama" x="372" y="40" width="22" height="230" fill="url(#lamaG)"/></g></g>
    <line x1="502" y1="46" x2="502" y2="22" style="stroke:var(--sil-1);stroke-width:2"/>
    <path d="M503 22 l20 6 -20 6z" style="fill:var(--wine)"/>
-   <g style="fill:var(--win)">
-    <rect x="417" y="188" width="6" height="10" rx="3"/>
-    <rect x="449" y="152" width="6" height="10" rx="3"/><rect x="460" y="152" width="6" height="10" rx="3"/>
-    <rect x="489" y="124" width="6" height="11" rx="3"/><rect x="499" y="124" width="6" height="11" rx="3"/><rect x="509" y="124" width="6" height="11" rx="3"/>
-    <rect x="494" y="152" width="6" height="11" rx="3"/><rect x="504" y="152" width="6" height="11" rx="3"/>
-    <rect x="543" y="162" width="6" height="10" rx="3"/><rect x="579" y="192" width="6" height="10" rx="3"/>
-   </g>
+   <g id="castLuci"></g>
+   <g id="castFin"></g>
   </g>
   <rect x="-60" y="200" width="920" height="90" fill="url(#nebbia)" opacity=".7"/>
   <!-- primo piano: la fila di casette del mercatino, l'abete, i festoni, la neve -->
@@ -851,14 +885,16 @@ const VERSIONI=[
    <path d="M0 290 V262 Q100 252 200 262 T400 260 T600 263 T800 258 V290Z" style="fill:var(--snowground)"/>
    <g id="pools"></g>
    <g>
-    <ellipse cx="378" cy="268" rx="40" ry="4.2" fill="url(#ombraMorbida)"/><circle cx="345" cy="131" r="15" fill="url(#kglow)" opacity=".75"/>
+    <ellipse cx="378" cy="268" rx="40" ry="4.2" fill="url(#ombraMorbida)"/><ellipse cx="345" cy="205" rx="44" ry="66" fill="url(#kglow)" opacity=".28"/><ellipse cx="345" cy="263" rx="34" ry="5" fill="url(#pool)" opacity=".6"/><circle cx="345" cy="131" r="15" fill="url(#kglow)" opacity=".75"/>
     <polygon points="345,132 325,184 365,184" style="fill:var(--fir)"/>
     <polygon points="345,158 320,216 370,216" style="fill:var(--fir)"/>
     <polygon points="345,190 314,256 376,256" style="fill:var(--fir)"/>
     <polygon class="ombraC" points="345,132 365,184 345,184"/><polygon class="ombraC" points="345,158 370,216 345,216"/><polygon class="ombraC" points="345,190 376,256 345,256"/>
     <rect x="341" y="254" width="8" height="12" style="fill:var(--wood-dk)"/>
+    <g class="raggi-st" style="stroke:var(--lamp-hot)" stroke-width=".6" stroke-linecap="round" opacity=".6"><path d="M345 120.5V114M345 143.5V150M333.5 132H327M356.5 132H363M337.6 124.6L334.7 121.7M352.4 124.6L355.3 121.7M337.6 139.4L334.7 142.3M352.4 139.4L355.3 142.3"/></g>
     <path d="M345 121 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" style="fill:var(--lamp)"/>
     <g id="firlights"></g>
+    <g id="filoAlbero"></g>
    </g>
    <g id="festoons"></g>
    <path d="M0 290 V272 Q120 266 260 272 T540 270 T800 268 V290Z" style="fill:var(--snowshade)"/>
@@ -1260,7 +1296,22 @@ const MK={};
  set('pools',pools(CL.concat(CR),266));
  set('festoons',festoon([[-20,176],...tips(CL)],0)+festoon([...tips(CR),[820,172]],3));
  const fl=[[337,174],[351,166],[343,196],[331,206],[357,200],[341,228],[325,240],[353,236],[365,248],[345,156],[333,188],[359,216],[319,252],[371,254],[345,214]];
- set('firlights',fl.map((q,i)=>`<circle class="hb" style="animation-delay:${(i*.21).toFixed(2)}s;fill:${BU[(i+1)%BU.length]}" cx="${q[0]}" cy="${q[1]}" r="2.8"/>`).join(''));
+ set('firlights',fl.map((q,i)=>`<circle class="hb" style="animation-delay:${(i*.21).toFixed(2)}s;fill:${BU[(i+1)%BU.length]}" cx="${q[0]}" cy="${q[1]}" r="2.8"/><circle cx="${f1(q[0]-.9)}" cy="${f1(q[1]-.9)}" r=".8" style="fill:#FFFFFF" opacity=".7"/>`).join(''));
+ /* v32 · albero: filo dorato a spirale con le lucine calde che si rincorrono (Mario 12:27 «L’albero fallo meglio») */
+ const FILI=[[[333.8,161],[346,175],[359.6,170]],[[362.2,198],[347,203],[332.1,188]],[[334,213.5],[347,229],[361.4,225]],[[371.3,246],[346,252],[323.4,236]]];
+ set('filoAlbero',FILI.map((F,k)=>{const [a,c,b]=F,m=Math.round(Math.hypot(b[0]-a[0],b[1]-a[1])/4.2);let g=`<path d="M${a[0]} ${a[1]}Q${c[0]} ${c[1]} ${b[0]} ${b[1]}" fill="none" style="stroke:var(--lamp)" stroke-width=".6" opacity=".4"/>`;
+  for(let j=1;j<m;j++){const q=qpt(a,c,b,j/m);g+=`<g class="hb" style="animation-delay:${((j*.12+k*.5)%2.6).toFixed(2)}s"><circle cx="${f1(q[0])}" cy="${f1(q[1]+.6)}" r="2.6" style="fill:var(--lamp-hot)" opacity=".22"/><circle cx="${f1(q[0])}" cy="${f1(q[1]+.6)}" r="1.15" style="fill:var(--lamp-hot)"/></g>`}return g}).join(''));
+ /* v32 · castello: finestre ad arco che si accendono una a una e ogni tanto si spengono, rosone, lucine sugli spigoli dei tetti, fiocchi delle proiezioni (Mario 12:27 «finestre fatte meglio che si illuminano») */
+ const FIN=[[417,176,6,10],[449,150,6,11],[460,150,6,11],[449,172,6,10],[460,172,6,10],[489,122,6,12],[499,122,6,12],[509,122,6,12],[493,160,6,13],[505,160,6,13],[538,158,5,9],[549,158,5,9],[538,176,5,9],[549,176,5,9],[579,186,6,10],[465,119,4,7]];
+ const arco=(x,y,w,h)=>`M${f1(x)} ${f1(y+h)}V${f1(y+w/2)}A${f1(w/2)} ${f1(w/2)} 0 0 1 ${f1(x+w)} ${f1(y+w/2)}V${f1(y+h)}Z`;
+ set('castFin',FIN.map(([x,y,w,h],i)=>{const cx=x+w/2;
+  return `<g class="fin-c${i%3===2?' fin-f':''}" style="animation-delay:${(.4+i*.17).toFixed(2)}s,${4+(i*5)%9}s;animation-duration:.7s,${13+(i*7)%17}s"><circle cx="${f1(cx)}" cy="${f1(y+h/2)}" r="${f1(w*1.6)}" fill="url(#kglow)" opacity=".6"/><path d="${arco(x,y,w,h)}" style="fill:var(--win)"/><path d="${arco(x+w*.22,y+h*.18,w*.56,h*.7)}" style="fill:var(--lamp-hot)" opacity=".55"/><path d="M${f1(cx)} ${f1(y+1)}V${f1(y+h)}M${f1(x)} ${f1(y+h*.58)}H${f1(x+w)}" fill="none" style="stroke:var(--sil-1)" stroke-width=".6"/></g>`}).join('')+
+  `<g class="fin-c fin-f" style="animation-delay:1.3s;animation-duration:.9s"><circle cx="502" cy="142" r="5.4" fill="url(#kglow)" opacity=".7"/><circle cx="502" cy="142" r="3.4" style="fill:var(--win)"/><path d="M502 138.6V145.4M498.6 142H505.4M499.6 139.6L504.4 144.4M504.4 139.6L499.6 144.4" fill="none" style="stroke:var(--sil-1)" stroke-width=".5"/></g>`);
+ const CONI=[[400,172,420,120,440,172],[435,137,457,80,479,137],[474,112,502,46,530,112],[525,147,546,94,567,147],[563,177,582,133,601,177],[459,114,467,96,475,114]];
+ let cl='';CONI.forEach(([ax,ay,tx,ty,bx,by],k)=>{[[ax,ay],[bx,by]].forEach(([ex,ey],j)=>{const m=Math.max(3,Math.round(Math.hypot(ex-tx,ey-ty)/6));for(let i=1;i<=m;i++){const u=i/m;cl+=`<circle${(i+j+k)%3?'':` class="tw" style="animation-delay:${(rnd()*1.8).toFixed(2)}s"`} cx="${f1(tx+(ex-tx)*u)}" cy="${f1(ty+(ey-ty)*u)}" r=".85"/>`}})});
+ set('castLuci',cl);
+ const fiocco=(x,y,r)=>{let d='';for(let a=0;a<3;a++){const c=Math.cos(a*Math.PI/3)*r,z=Math.sin(a*Math.PI/3)*r;d+=`M${f1(x-c)} ${f1(y-z)}L${f1(x+c)} ${f1(y+z)}`}return d};
+ set('pjNeve',[[430,60,3.2],[470,95,2.6],[505,70,3.6],[545,105,2.8],[585,140,3],[450,140,2.4],[520,150,3]].map(([x,y,r],i)=>`<path class="pj-f" style="animation-delay:-${(i*1.7).toFixed(1)}s" d="${fiocco(x,y,r)}"/>`).join(''));
  let tw='';for(let i=0;i<18;i++){const y=124+i*4.2,half=1.5+(y-124)/137*15;tw+=`<circle class="tw" style="animation-delay:${(rnd()*1.8).toFixed(2)}s;fill:var(--lamp-hot)" cx="${f1(262+(rnd()*2-1)*half)}" cy="${f1(y)}" r="1.1"/>`}
  set('towerlights',tw);
  const fm=document.getElementById('footMarket');if(fm)fm.innerHTML=MK.mini(800,120,2);
@@ -1872,8 +1923,6 @@ $('#panels').innerHTML=html;
  const rF=$('#rFull'),rS=$('#rShort');rF.addEventListener('click',()=>route(false));rS.addEventListener('click',()=>route(true));if(SHORT)route(true,1)};
 renderDays();
 const bar=$('#daybar');
-/* fila ferma in alto (telefono): il numero della versione si toglie di mezzo per non coprire «Gio 17» */
-{const su=()=>{const r=bar.getBoundingClientRect();document.body.classList.toggle('fila-su',document.body.dataset.tab==='giorni'&&getComputedStyle(bar).position==='sticky'&&r.top<48&&r.bottom>0)};addEventListener('scroll',su,{passive:true});addEventListener('resize',su)}
 bar.insertAdjacentHTML('beforeend',DAYS.map((d,i)=>`<button type="button" role="tab" id="t-${d.id}" aria-controls="p-${d.id}" aria-selected="${i?'false':'true'}" tabindex="${i?'-1':'0'}"><span class="dn">${d.dn}</span><span class="dd">${d.dd}</span></button>`).join(''));
 const tabs=[...bar.querySelectorAll('[role=tab]')],pill=bar.querySelector('.pill'),spark=$('#spark');
 let cur=0;
@@ -2067,9 +2116,10 @@ palBtns.forEach(b=>b.addEventListener('click',()=>setPal(b.dataset.pal,true)));s
 /* ---------- cielo dell'intestazione: stelle, stelle cadenti, neve, luci, arco di scintille ---------- */
 const cv=$('#sky'),hero=$('#top');
 if(cv&&cv.getContext){
- const ctx=cv.getContext('2d');let W=0,H=0,dpr=1,flakes=[],glows=[],stars=[],shoot=null,nextShoot=2.2,arc=[],t0=performance.now(),run=false,vis=true,raf=0;
+ const ctx=cv.getContext('2d');let W=0,H=0,dpr=1,flakes=[],glows=[],stars=[],clouds=[],shoot=null,nextShoot=2.2,arc=[],t0=performance.now(),run=false,vis=true,raf=0;
  const size=()=>{dpr=Math.min(devicePixelRatio||1,2);W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
-  const ns=Math.round(Math.min(280,W*H/1500));stars=Array.from({length:ns},()=>{const r=.35+Math.pow(Math.random(),3)*1.55;return {x:Math.random()*W,y:H*.88*Math.pow(Math.random(),1.35),r,b:.35+Math.random()*.65,sp:.6+Math.random()*1.8,p:Math.random()*6.28,g:r>1.25}});
+  const ns=Math.round(Math.min(280,W*H/1500));stars=Array.from({length:ns},()=>{const r=.35+Math.pow(Math.random(),3)*1.55;return {x:Math.random()*W,y:H*.88*Math.pow(Math.random(),1.35),r,b:.35+Math.random()*.65,sp:.6+Math.random()*1.8,p:Math.random()*6.28,g:r>1.25,c:['#FFFFFF','#FFFFFF','#FFF1C9','#DCE6FF'][Math.floor(Math.random()*4)]}});
+  clouds=Array.from({length:4},(_,i)=>({x:Math.random()*W,y:H*(.06+i*.09+Math.random()*.05),w:W*(.45+Math.random()*.35),h:14+Math.random()*16,v:3+Math.random()*5,a:.05+Math.random()*.04}));
   const n=VINO()?Math.round(Math.min(90,W*H/9000)):Math.round(Math.min(48,W*H/16000));flakes=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,v:.15+Math.random()*.45,w:Math.random()*6.28}));
   const GC=VINO()?['246,201,100','246,201,100','255,150,96','255,140,120','255,176,196','143,227,184']:['246,201,100','246,201,100','255,214,150','150,190,255','150,190,255','190,170,255'];glows=Array.from({length:24},()=>({x:Math.random()*W,y:Math.random()*H*.7,r:8+Math.random()*34,p:Math.random()*6.28,c:GC[Math.floor(Math.random()*GC.length)]}))};
  const sceneMap=()=>{const s=document.querySelector('.scene');const r=s.getBoundingClientRect(),hr=hero.getBoundingClientRect();const sc=Math.max(r.width/800,r.height/290);const ox=r.left-hr.left+(r.width-800*sc)/2,oy=r.top-hr.top+(r.height-290*sc);return (x,y)=>[ox+x*sc,oy+y*sc]};
@@ -2089,13 +2139,15 @@ if(cv&&cv.getContext){
   for(let i=sparks.length-1;i>=0;i--){const s=sparks[i];s.x+=s.vx;s.y+=s.vy;s.vx*=.975;s.vy=s.vy*.975+.025;s.l-=.014;if(s.l<=0){sparks.splice(i,1);continue}ctx.globalAlpha=Math.min(1,s.l*1.2);ctx.fillStyle=s.c;ctx.fillRect(s.x-s.s/2,s.y-s.s/2,s.s,s.s)}
   ctx.globalAlpha=1};
  const draw=(now)=>{const t=(now-t0)/1000;ctx.clearRect(0,0,W,H);
-  if(!VINO())for(const s of stars){const a=s.b*(.5+.5*Math.sin(t*s.sp+s.p));ctx.globalAlpha=Math.max(.06,a);ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.28);ctx.fill();
+  if(!VINO())for(const s of stars){const a=s.b*(.5+.5*Math.sin(t*s.sp+s.p));ctx.globalAlpha=Math.max(.06,a);ctx.fillStyle=s.c;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.28);ctx.fill();
    if(s.g){ctx.globalAlpha=a*.55;ctx.fillStyle='#DCE6FF';const L=s.r*4.2;ctx.fillRect(s.x-L,s.y-.35,L*2,.7);ctx.fillRect(s.x-.35,s.y-L,.7,L*2)}}
   ctx.globalAlpha=1;
   if(!RM&&!VINO()){if(!shoot&&t>nextShoot){const dir=Math.random()<.5?1:-1;shoot={x:W*(dir>0?.08+Math.random()*.45:.47+Math.random()*.45),y:H*(.04+Math.random()*.22),dx:dir*Math.cos(.42),dy:Math.sin(.42),len:80+Math.random()*70,t0:t,dur:.95};nextShoot=t+4.5+Math.random()*5}
    if(shoot){const u=(t-shoot.t0)/shoot.dur;if(u>=1)shoot=null;else{const d=u*shoot.len*2.4,hx=shoot.x+shoot.dx*d,hy=shoot.y+shoot.dy*d,tx=hx-shoot.dx*shoot.len,ty=hy-shoot.dy*shoot.len,a=Math.sin(u*Math.PI);
     const gr=ctx.createLinearGradient(tx,ty,hx,hy);gr.addColorStop(0,'rgba(220,232,255,0)');gr.addColorStop(1,`rgba(255,255,255,${(.9*a).toFixed(3)})`);ctx.strokeStyle=gr;ctx.lineWidth=1.6;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(tx,ty);ctx.lineTo(hx,hy);ctx.stroke();
     ctx.globalAlpha=a;ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(hx,hy,1.7,0,6.28);ctx.fill();ctx.globalAlpha=1}}}
+  /* v32 · nuvole leggere illuminate dalla luna che passano piano (cielo più vivo, Mario 12:27) */
+  {const cc=VINO()?'255,214,196':'206,220,255';for(const c of clouds){const L=W+c.w,x=((c.x+t*c.v)%L+L)%L-c.w/2;ctx.save();ctx.translate(x,c.y);ctx.scale(1,c.h*2/c.w);const g=ctx.createRadialGradient(0,0,0,0,0,c.w/2);g.addColorStop(0,`rgba(${cc},${c.a})`);g.addColorStop(1,`rgba(${cc},0)`);ctx.fillStyle=g;ctx.fillRect(-c.w/2,-c.w/2,c.w,c.w);ctx.restore()}}
   for(const g of glows){const a=.10+.08*Math.sin(t*.6+g.p);const gr=ctx.createRadialGradient(g.x,g.y,0,g.x,g.y,g.r);gr.addColorStop(0,`rgba(${g.c},${a})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(g.x,g.y,g.r,0,6.28);ctx.fill()}
   ctx.fillStyle='rgba(255,255,255,.85)';
   for(const f of flakes){f.y+=f.v;f.x+=Math.sin(t*.5+f.w)*.25;if(f.y>H+4){f.y=-4;f.x=Math.random()*W}ctx.globalAlpha=.35+f.r*.25;ctx.beginPath();ctx.arc(f.x,f.y,f.r,0,6.28);ctx.fill()}
