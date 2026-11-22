@@ -508,6 +508,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const n3 = await u7.evaluate(async () => { const b = document.querySelector('[data-nas-link="1"]'); if (!b) return { banner: false }; b.click(); await new Promise((r) => setTimeout(r, 150)); return { banner: true, via: !document.querySelector('#scD details[data-k="d-1"]') && !document.querySelector('#scD details[data-k="d-2"]') }; });
       ok('Alloggi: «Nascondi» toglie dagli elenchi, «Annulla» rimette, spunte di «Pulisci l’elenco» (anche Parigi), resta dopo la ricarica, la scelta non si nasconde, il link chiede e nasconde ' + JSON.stringify({ n1, n2, n3 }),
         n1.via && n1.toast && n1.annulla && n1.spunta && n1.scelta && n1.parigi && n2.resta && n3.banner && n3.via);
+      const n4 = await u7.evaluate(() => { const q = (x) => document.querySelector(x), m = q('#scD details[data-k="d-23"] .xx-msg'), f = [...document.querySelectorAll('#filters button')].find((x) => /rosa/.test(x.textContent));
+        if (f) f.click(); const ids = [...document.querySelectorAll('#hotelCards article')].map((x) => x.id).sort().join();
+        return { box16: !!q('#scD details[data-k="d-16"] details.xx'), box23: !!m, altri: document.querySelectorAll('#scD details.xx').length, ora: !!m && /dimanche 13 décembre vers \d{1,2}h\d{2}/.test(m.textContent), copia: !!q('#scD details[data-k="d-23"] [data-copia]'), rosa: ids }; });
+      ok('Alloggi n. 16 e 23: «📋 Tutto sul n.» solo lì, messaggio pronto con l’ora del piano, tasto Copia, filtro «La vostra rosa» = n. 16 e 23 ' + JSON.stringify(n4), n4.box16 && n4.box23 && n4.altri === 2 && n4.ora && n4.copia && n4.rosa === 'al-16,al-23');
       await c6.close();
     }
   }

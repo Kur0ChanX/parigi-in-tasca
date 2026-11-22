@@ -2,15 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-21 19:35 · 01WTjqUwvARs
-publica
-
-## 2026-11-21 19:36 · 01WTjqUwvARs
-Scusa, la sezione più importante a mercatini con il percorso, dove andare, dove non andare, e il pulsante mercatini sopra, che era molto importante, non, lei l'ha fatto in modo superficiale.
-
-## 2026-11-21 19:42 · 01WTjqUwvARs
-Nel senso, non dove non andare, però c'è un aiuto per i mercatini migliori, che strada prendere, che cosa guardare. E poi nella pagina la sezione mercatini di Natale, tipo un pulsante sopra, c'è per andare direttamente tutti i pulsanti nella schermata in alto, per andare direttamente nelle cose interessate, tipo scelta hotel, confronto, mercatini, preparazioni, non lo so, sto inventando, però una cosa così.
-
 ## 2026-11-21 19:43 · 01WTjqUwvARs
 Dove non andare ormai che l'hai messo, lascialo. Però si può fare in modo che in base all'hotel che scegliamo mi dai il consiglio sui mercatini.
 
@@ -137,3 +128,21 @@ metti un filtro dai piú vicini a Disneyland i meno cari i piú puliti e vicino 
 
 e guardane altri se ne trovi da inserire spulcia bene 
 quindi non cari vicini alla rer vicini a disneyland dal 13 al 17 e puliti decentemente come voto
+
+## 2026-11-22 17:11 · 01QTFEqRq6KH
+Cerca di non creare conflitti con l'altro account. Mi sto spostando qui provvisoriamente, sto continuando un po' di lavoro qui. Mi raccomando, cerca di non calpestarvi lavoro l'uno con l'altro. Puoi fermarti, mi dici che cosa devi continuare a fare, ti dico io cosa fare. Poi quando andrò nell'altro account lui vedrà il lavoro che hai fatto e si adatta.
+
+## 2026-11-22 17:15 · 01QTFEqRq6KH
+Sì, se tutte le prove sono verdi, pubblica. Dopo che è pubblicato dovresti fare un aggiornamento che possa andare a eliminare nell'app o archiviare o nascondere gli hotel. Gli hotel che non mi interessano perché ce n'è troppi e ne ho scelto solo alcuni. Così senza andare in conflitto con la pagina che si trasforma, insomma, mi hai capito come funziona. Dammi la possibilità di modificare, di togliere gli hotel per pulire un po'.
+
+
+Poi quelli che andiamo a potenziare sono questi due, quindi li andiamo a trovare un sacco di informazioni e a migliorare la pagina su questi due.
+
+https://www.airbnb.it/rooms/5115238?unique_share_id=[segreto tolto dalla scorta]&viralityEntryPoint=1&s=76&check_in=2026-12-13&check_out=2026-12-17&guests=2&adults=2
+
+
+Uno è in foto, uno è nel link. Ti ho messo nell'ambiente, ti ho messo il codice per il ponte per prenderti il kit RVC aggiornato.
+
+## 2026-11-22 17:34 · 01QTFEqRq6KH
+Attenzione perché molti, tipo questi due, uno di questi due su Booking costa meno addirittura. Ti dico esattamente quale, così non fai ricerche invano. Quello nella foto su Booking è 461 euro. Strano questi prezzi di differita. Speriamo sia affidabile la guida che mi stai facendo. Comunque potenziali per questi due che ti ho messo. Hotel, potenzia la guida.
+metti la funzione potenzia in2 alloggi da me citati e publica
