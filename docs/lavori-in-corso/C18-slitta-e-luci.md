@@ -24,3 +24,9 @@
 - I pacchi che cadono restano rettangolini colorati (non sono personaggi); se Mario li vuole da foto, si cambia.
 - Albero, cielo e castello (richiesta delle 12:27): sono il paesaggio a disegno piatto di tutta la testata; si migliorano con LUCI (finestre che si accendono, proiezioni, lucine), senza figure nuove disegnate da noi. Detto a Mario nel PARERE.
 - Slitta vettoriale dell'aiutante della Controllo 7 (`archivio/2026-11-22-c18-slitta/aiutante/`): scartata, superata dalla foto di Mario (12:49).
+
+## Mario 22/11 ~12:53 (dopo la foto della v30 in prova), intero
+> e mettilo in penombra, come se fosse tipo un'ombra, non è molto visibile, se no si vede che è photoshoppato.
+> Se no sembra uno sticker che si muove.
+> Fallo passare dietro il castello, ma davanti alla luna, e fallo un po' più piccolo. E niente, il cappellino là so già sceglierlo rosso, però
+- Fatto: foto resa un'ombra (buio della notte, un filo di dettaglio, bordo di luna sottile, rosso di cappello e vestito spento ma visibile, opacità .93) → `v30-slitta-ombra.webp`; larga 110 invece di 150; strada che esce da dietro il castello (y ~100 a x 520) e sale davanti alla luna (240,70); regali più piccoli e spenti. «il cappellino … rosso, però» letto come «il cappello lascialo rosso».

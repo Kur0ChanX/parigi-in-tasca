@@ -5,7 +5,7 @@
 
 ## Nastro delle versioni
 🚀 Online: v29 · 🟩 Controllo 7 · 22/11 · mappa a schermo intero, zoom libero
-🧪 In prova: —
+🧪 In prova: v30 · 🟩 Controllo 8 · 22/11 · slitta come un’ombra, luce sulla testata, giovedì 17 «Partite prima»
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario

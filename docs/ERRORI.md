@@ -20,6 +20,7 @@
 | 22/11/2026 | Il `sw.js` di novembre, a ogni aggiornamento, cancellava anche i cassetti di dicembre (trovato dalla Controllo 6). | Scritto quando il sito aveva una guida sola: «cancella tutto ciò che non è mio». | Ogni service worker tocca solo i suoi cassetti (storia in ERRORI-STORIA). |
 | 22/11/2026 | Fila dei giorni sparita sul telefono dalla v17 alla v24. | Barra delle schede fissa (z 60) sopra la fila (z 30); le prove guardavano che i tasti ci fossero, non che si potessero toccare. | Prove con `elementFromPoint` sui tasti fissi (storia in ERRORI-STORIA). |
 | 22/11/2026 | Slitta del film disegnata da noi in vettoriale invece della foto di Mario («ritaglia questa immagine… non disegnare»). | Ho eseguito una «Scelta» ereditata (C18: «sagoma disegnata da noi») senza confrontarla con le parole intere di Mario. | Personaggi e figure: sempre la foto di Mario ritagliata. Una scelta ereditata si confronta prima con le parole di Mario. |
+| 22/11/2026 | Novità v30 con «un'ombra» fra apici semplici: la scritta si chiudeva e tutto lo script della pagina si fermava (trovato da me prima delle prove). | Testo scritto da Python dentro un heredoc di bash: `\\'` diventa `'`. | Nei testi della pagina l'apostrofo tipografico «’»; dopo ogni modifica via script, controllo della sintassi dei 4 `<script>` (e la prova «nessun errore nella pagina»). |
 
 ## Lezioni ereditate da RVC (numeri «RVC E..»)
 - **RVC E1** Si lavora solo in Claude Code. Ogni file ricevuto va subito in `archivio/` con commit.
