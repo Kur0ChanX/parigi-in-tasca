@@ -743,7 +743,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
  <p class="sc-leg">🏰 minuti fino ai parchi (a piedi e treno, senza attese) e km in linea d'aria · 🚉 minuti fino alla RER · 🧼 pulizia. Sotto il prezzo e accanto ai km, la differenza col mio consiglio: <b class="sc-dn">verde</b> = meglio, <b class="sc-up">rosso</b> = peggio.</p>
  <div class="sc-list" id="scD"></div>
  <div class="sc-x" id="scBB" data-ty="bb">
-  <p class="sc-g">Fuori elenco: una camera a Bussy-Saint-Georges</p>
+  <p class="sc-g">Fuori elenco: 2 camere a Bussy-Saint-Georges</p>
   <div class="sc-xb">
    <p><b>Jolie chambre</b> · camera privata, Bussy-Saint-Georges · voto Booking 9,1 su 86 recensioni, pulizia 9,2 <span class="bd ok">visto il 21/11/2026</span></p>
    <ul class="sc-l">
@@ -752,9 +752,19 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
     <li>Letto matrimoniale alla francese, 15 m². Arrivo dalle 19:00 alle 23:00, da comunicare prima. Check-out alle 11:00.</li>
    </ul>
    <p class="small"><b>Contro:</b> è una richiesta di prenotazione (l'host risponde entro 24 ore). Bagno: Booking scrive sia «in camera» sia «in comune», chiedetelo all'host. Niente reception. Domenica sera da Parigi: i treni che finiscono a Torcy non fermano a Bussy.</p>
-   <p class="small muted">Non è nell'elenco perché la pagina calcola tempi e costi solo da Val d'Europe e Chessy.</p>
    <div class="sc-act"><a class="btn ghost" href="https://www.booking.com/hotel/fr/jolie-appartement-pres-de-rer-a.it.html?checkin=2026-12-13&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Booking 13→17</a><a class="btn ghost" href="https://www.booking.com/hotel/fr/jolie-appartement-pres-de-rer-a.it.html?checkin=2026-12-14&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Booking 14→17</a></div>
   </div>
+  <div class="sc-xb">
+   <p><b>Camera con bagno privato, vicino a Disney</b> · camera in casa dell'host, Bussy-Saint-Georges · voto Airbnb 4,95 su 722 recensioni, pulizia 5,0, host Superhost <span class="bd ok">visto il 22/11/2026</span></p>
+   <ul class="sc-l">
+    <li><b>4 notti 13→17: 201 € in totale</b>, cancellazione gratuita fino al 29/11. <b>3 notti 14→17:</b> 151 € in totale, cancellazione gratuita fino al 30/11.</li>
+    <li>«A pochi passi dalla stazione della RER A» (descrizione dell'host), circa 5 minuti a piedi <span class="bd es">stima</span>, poi 2 fermate fino a Chessy, 6–8 minuti <span class="bd nu">non ufficiale</span>. Treno: 30,60 € in due, come da Val d'Europe.</li>
+    <li>Letto matrimoniale, doccia solo per voi, lenzuola e asciugamani. Arrivo dalle 18:00 alle 22:00, check-out entro le 10:00. Cucina dalle 7:30 alle 21:30.</li>
+   </ul>
+   <p class="small"><b>Contro:</b> è una camera dentro l'appartamento dell'host: il WC è in comune con chi ci abita. Arrivo entro le 22:00: domenica sera da Parigi partite presto o avvisate l'host. Riscaldamento al massimo 20 °C. Domenica sera: i treni che finiscono a Torcy non fermano a Bussy.</p>
+   <div class="sc-act"><a class="btn ghost" href="https://www.airbnb.it/rooms/15868262?check_in=2026-12-13&amp;check_out=2026-12-17&amp;adults=2" target="_blank" rel="noopener">Airbnb 13→17</a><a class="btn ghost" href="https://www.airbnb.it/rooms/15868262?check_in=2026-12-14&amp;check_out=2026-12-17&amp;adults=2" target="_blank" rel="noopener">Airbnb 14→17</a></div>
+  </div>
+  <p class="small muted">Non sono nell'elenco perché la pagina calcola tempi e costi solo da Val d'Europe e Chessy.</p>
  </div>
 </div></section>
 
@@ -1937,7 +1947,7 @@ if(scD){
  const sb=document.querySelector('#scegli .sortbar');(sb||scD).before(sw);
  const tag=()=>{const n={tutti:0,hotel:0,bb:0,casa:0};
   scD.querySelectorAll(':scope>details[data-k^="d-"]').forEach(d=>{const sm=d.querySelector('.sc-n small');const t=tyOf(sm?sm.textContent:'');d.dataset.ty=t;n[t]++;n.tutti++});
-  if(document.getElementById('scBB')){n.bb++;n.tutti++}
+  {const x=document.querySelectorAll('#scBB .sc-xb').length;n.bb+=x;n.tutti+=x}
   if(!ty||!n[ty])ty='tutti';scD.dataset.ty=ty;
   sw.innerHTML=TY.map(([k,a,b])=>`<button type="button" data-ty="${k}" aria-pressed="${k===ty}">${a} · ${n[k]}<small>${b}</small></button>`).join('')};
  sw.addEventListener('click',e=>{const b=e.target.closest('button[data-ty]');if(!b)return;ty=b.dataset.ty;try{localStorage.setItem('pdn-tipo',ty)}catch(e){}tag()});
