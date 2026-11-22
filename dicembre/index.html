@@ -170,6 +170,7 @@ b,strong{font-weight:700}
 @media (min-width:720px){.go{grid-template-columns:repeat(4,1fr)}}
 .go a{display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:64px;padding:10px 12px;border-radius:14px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .18);color:var(--night-ink);text-decoration:none;font-weight:700;font-size:1rem;line-height:1.2;transition:transform .15s ease,background-color .15s}
 .go a small{font-weight:500;font-size:.8rem;opacity:.82}
+.go a i{font-style:normal;font-size:1.25rem;line-height:1}
 .go a:active{transform:scale(.97)}
 @media (hover:hover){.go a:hover{background:rgb(255 255 255 / .14)}}
 .go a.hot{grid-column:1/-1;min-height:72px;font-size:1.15rem;font-weight:800;background:var(--lamp);color:var(--lamp-ink);border-color:transparent;box-shadow:0 0 0 4px rgb(246 201 100 / .18),0 10px 26px -10px rgb(246 201 100 / .6)}
@@ -564,8 +565,8 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 
 /* C6 · app a 4 schede (Mario 22/11 «disordine allucinante… non listoni chilometrici… ordinato, chiaro, professionale»): barra in basso, una parte alla volta. Attiva solo se lo script delle schede parte (body[data-tab]). */
 .tabbar{display:none}
-body[data-tab]{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px max(8px,env(safe-area-inset-left,0px)) calc(6px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--rule);box-shadow:0 -8px 24px -16px rgb(0 0 0 / .5)}
+body[data-tab]{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
+body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px max(8px,env(safe-area-inset-left,0px)) calc(4px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--rule);box-shadow:0 -8px 24px -16px rgb(0 0 0 / .5)}
 /* C17 · numero della versione in alto (Mario 22/11 «un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato… clicca aggiorna versione») */
 .vnum{transition:opacity .2s;position:fixed;top:calc(8px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));z-index:55;min-height:28px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--mute);font:700 .74rem/1 var(--text);font-variant-numeric:tabular-nums;cursor:pointer}
 .vnum.nuovo::after{content:"";position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--lamp);box-shadow:0 0 0 2px var(--bg)}
@@ -590,8 +591,8 @@ body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display
  body[data-tab] .daybar .pill{top:calc(6px + env(safe-area-inset-top,0px));bottom:6px}
  body.fila-su .vnum{opacity:0;pointer-events:none}
 }
-.tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:56px;padding:4px 2px;border:0;border-radius:14px;background:none;color:var(--mute);font:700 .8rem/1.1 var(--text);cursor:pointer;-webkit-tap-highlight-color:transparent}
-.tabbar button .i{font-size:1.4rem;line-height:1}
+.tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:44px;padding:2px;border:0;border-radius:14px;background:none;color:var(--mute);font:700 .7rem/1.1 var(--text);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.tabbar button .i{font-size:1.15rem;line-height:1}
 .tabbar button[aria-selected="true"]{background:var(--lamp);color:var(--lamp-ink)}
 .tabbar button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 body[data-tab] main>section:not(.tab-on){display:none}
@@ -599,9 +600,21 @@ body[data-tab] main>.lights{display:none}
 body[data-tab]:not([data-tab="piano"]) header.hero{display:none}
 body[data-tab]:not([data-tab="piano"]) main{padding-top:env(safe-area-inset-top,0px)}
 body[data-tab] .topbar{display:none!important}
-body[data-tab] .go{grid-template-columns:1fr}
-body[data-tab] .go a:not(.hot),body[data-tab] .go-more{display:none}
+/* C17 · indice coi tasti delle cose più importanti, subito in vista (Mario 22/11 12:02 «mettimi l'indice… giro di mercatini più piccolo, notte, vin brulé più piccole… tutti gli spazi ottimizzati»): niente tolto, in ordine di importanza, i dettagli dentro */
+body[data-tab] .hero-top{padding-top:calc(var(--s4) + 22px)}
+body[data-tab] .hero h1{font-size:clamp(2rem,1.3rem + 3.6vw,3.6rem);margin-top:var(--s2)}
+body[data-tab] .hero-meta{margin-top:var(--s2);gap:6px}
+body[data-tab] .hero-meta .chip{min-height:28px;padding:3px 10px;font-size:.8rem}
+body[data-tab] .pal{margin-top:var(--s2);padding:3px}
+body[data-tab] .pal button{min-height:30px;padding:0 11px;font-size:.78rem}
+body[data-tab] .go{grid-template-columns:repeat(4,1fr);gap:6px;margin-top:var(--s3)}
+body[data-tab] .go a,body[data-tab] .go a.hot{grid-column:auto;min-height:58px;padding:6px 3px;align-items:center;text-align:center;gap:3px;font-size:.74rem;font-weight:700;line-height:1.1;border-radius:12px;box-shadow:none}
+body[data-tab] .go a small{display:none}
+body[data-tab] .go-more{margin-top:var(--s1);font-size:.82rem}
+body[data-tab] .go-more a{padding:8px 4px}
+@media (min-width:720px){body[data-tab] .go{grid-template-columns:repeat(6,1fr)}body[data-tab] .go a,body[data-tab] .go a.hot{font-size:.88rem}body[data-tab] .go a small{display:block;font-size:.7rem;font-weight:500}}
 html:has(body[data-tab]){scroll-padding-top:16px}
+@media (max-width:719px){html:has(body[data-tab="giorni"]){scroll-padding-top:80px}}
 /* C6 pezzo 2 · Dormire (Mario 22/11 «dividi bene le cose non listoni mischiati… anche b&b affittacamere hotel appartamenti»): un elenco solo, diviso per tipo; la scheda di un alloggio si apre da sola, con «← Tutti gli alloggi» */
 /* C6 pezzo 3 · Piano corto: riquadri «in breve» che portano alla scheda giusta; dei costi solo le prime 3 barre (più la vostra), le altre a richiesta */
 body[data-tab] #breve .verdict p{display:none}
@@ -692,7 +705,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 .bar-ty{font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
 /* La scelta dell'alloggio cambia tutta la pagina e si vede (Mario 22/11 «va mostrato e fatto capire»): riquadro prima di scegliere, avviso in basso dopo, pallino giallo sulle schede aggiornate */
 .sc-tutto{margin:var(--s3) 0 0;padding:10px 12px 11px 14px;border-radius:var(--r-md);background:var(--surface-2);box-shadow:inset 4px 0 0 var(--lamp);font-size:.93rem;line-height:1.45}
-.sc-avviso{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:61;display:grid;gap:4px;max-width:520px;margin:0 auto;padding:12px 14px;border:2px solid var(--lamp);border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:0 10px 30px rgb(0 0 0 / .45);font-size:.9rem;line-height:1.4}
+.sc-avviso{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(66px + env(safe-area-inset-bottom,0px));z-index:61;display:grid;gap:4px;max-width:520px;margin:0 auto;padding:12px 14px;border:2px solid var(--lamp);border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:0 10px 30px rgb(0 0 0 / .45);font-size:.9rem;line-height:1.4}
 .sc-avviso[hidden]{display:none}
 .sc-avviso b{font:800 1rem/1.3 var(--display)}
 .sc-avviso div{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
@@ -773,18 +786,20 @@ const VERSIONI=[
   <div class="hero-meta"><span class="chip">2 persone · senza auto</span><span class="chip">4 notti</span></div>
   <div class="pal" role="group" aria-label="Colori della pagina"><button type="button" data-pal="blu" aria-pressed="true">🌙 Blu notte</button><button type="button" data-pal="vino" aria-pressed="false">🍷 Vin brulé</button></div>
   <nav class="go" aria-label="Vai subito a">
-   <a class="hot" href="#mercatini">🎄 Il giro dei mercatini<small>Domenica 13: dove andare, la strada, cosa guardare</small></a>
-   <a href="#mappa">🗺️ Mappa del viaggio<small>Orly, Parigi e Disney: dove sono le cose</small></a>
-   <a href="#scegli">🛏️ Scegli dove dormire<small>Domenica a Parigi o no, poi l'hotel</small></a>
-   <a href="#costi">💶 Costi<small>Quanto spendete</small></a>
-   <a href="#giorni">📅 Giorno per giorno<small>Orari e strade</small></a>
-   <a href="#biglietti">🎟️ Biglietti Disney<small>Quale e quando</small></a>
-   <a href="#trasporti">🚆 Trasporti<small>Treni e ticket</small></a>
-   <a href="#dafare">✅ Preparativi<small>Da fare prima</small></a>
-   <a href="#breve">⚡ In breve<small>Tutte le risposte</small></a>
-   <a href="#ricontrollare">🔎 Da ricontrollare<small>Prima di partire</small></a>
+   <a class="hot" href="#mercatini"><i>🎄</i>Mercatini<small>Domenica 13: il giro, dove andare, cosa guardare</small></a>
+   <a href="#giorni"><i>📅</i>Giorni<small>Giorno per giorno: orari e strade</small></a>
+   <a href="#mappa"><i>🗺️</i>Mappa<small>Orly, Parigi e Disney: dove sono le cose</small></a>
+   <a href="#scegli"><i>🛏️</i>Dormire<small>Domenica a Parigi o no, poi l'hotel</small></a>
+   <a href="#biglietti"><i>🎟️</i>Biglietti<small>Disney: quale e quando</small></a>
+   <a href="#trasporti"><i>🚆</i>Trasporti<small>Treni e ticket</small></a>
+   <a href="#p-gio" data-day="4"><i>✈️</i>Volo 17<small>Giovedì: quando partire per Orly</small></a>
+   <a href="#costi"><i>💶</i>Costi<small>Quanto spendete</small></a>
+   <a href="#dafare"><i>✅</i>Preparativi<small>Da fare prima</small></a>
+   <a href="#breve"><i>⚡</i>In breve<small>Tutte le risposte</small></a>
+   <a href="#ricontrollare"><i>🔎</i>Controlli<small>Da ricontrollare prima di partire</small></a>
+   <a href="#hoteldisney"><i>🏰</i>Hotel Disney<small>Dentro e vicino ai parchi</small></a>
   </nav>
-  <p class="go-more"><a href="#hoteldisney">Hotel Disney</a> · <a href="#fonti">Fonti</a></p>
+  <p class="go-more"><a href="#fonti">Fonti</a></p>
  </div>
  <svg class="scene" viewBox="0 0 800 290" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
   <defs>
