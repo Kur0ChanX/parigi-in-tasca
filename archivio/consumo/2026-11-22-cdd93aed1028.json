@@ -2,31 +2,31 @@
 "account": "108763",
 "sessione": "cdd93aed1028",
 "giorno": "2026-11-22",
-"turni": 8,
-"peso": 1320949,
-"uscita": 36269,
-"contesto_max": 318846,
+"turni": 9,
+"peso": 1837562,
+"uscita": 45432,
+"contesto_max": 349456,
 "anomalie": [
 "1 uscite di strumento enormi (60 KB la più grande): leggere a pezzi (grep -n, sed -n)",
 "1 uscite di strumento enormi (40 KB la più grande): leggere a pezzi (grep -n, sed -n)"
 ],
 "remota": "01WTjqUuicbA",
 "aiutanti": 0,
-"strumenti": 53,
+"strumenti": 66,
 "motori": {
-"opus": 1320949
+"opus": 1837562
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-98,
-10265296,
-90382,
+125,
+14691872,
+112873,
 0,
-36269
+45432
 ]
 },
-"costo": 3.5019,
+"costo": 4.7505,
 "blocchi": {
 "Stop 10 · Promessa a Mario senza voce": 3,
 "Stop 9 · Versione unita in questo turno:": 1,
