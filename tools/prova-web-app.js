@@ -108,6 +108,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   });
   const male = dove.filter((x) => !(x.img && x.righe === 3 && x.tempi && x.maps && x.segno && x.posizione));
   ok('Dov\'è: 19 schede con mappa (n. 1–15, 22, 24, 29 e 30), 3 distanze e Maps', male.length === 0); if (male.length) console.log(male);
+  // C24 (Mario 22/11 19:28, DOMANDA 2 → 1): il passo 2 parte dalla rosa (n. 16 e 23); le prove che seguono contano tutti e 35 → prima «Tutti»
+  await q.evaluate(() => { const t = document.querySelector('#scegli [data-ro-f="0"]'); if (t) t.click(); });
   // Airbnb (n. 16–21, 23 e 25–28; Mario 21/11 ~22:15 «aggiungi sezione air b e b»): niente indirizzo → niente mappa inventata, ma posizione indicativa, 3 distanze e Maps
   const airbnb = await q.evaluate(async () => {
     const out = [];
@@ -321,12 +323,13 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       return r;
     });
     const okA = av.riq && av.vis && av.pall === 'biglietti,giorni,piano' && av.dopo === 'giorni biglietti,piano true';
-    ok('Scelta dell\'alloggio: riquadro «cambia tutta la pagina», avviso dopo «Scegli questo», pallino su Piano, Giorni, Biglietti; «Vedi Giorni» apre Giorni e toglie il suo pallino', okA); if (!okA) console.log(av);
+    ok('Scelta dell\'alloggio: riquadro «cambia tutta la pagina», avviso dopo «Dormiamo qui», pallino su Piano, Giorni, Biglietti; «Vedi Giorni» apre Giorni e toglie il suo pallino', okA); if (!okA) console.log(av);
   }
   // Mario 22/11 «se uno sceglie perché per sbaglio ci clicca, che lo può annullare»: «↩ Annulla» nell'avviso riporta tutto com'era
   { const u = await c2.newPage(); u.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
     const ls = await q.evaluate(() => localStorage.getItem('pdn-scelta'));
     await u.goto(B + 'dicembre/'); await u.evaluate(() => localStorage.removeItem('pdn-scelta')); await u.reload(); await u.waitForTimeout(800);
+    await u.evaluate(() => { const t = document.querySelector('#scegli [data-ro-f="0"]'); if (t) t.click(); }); // C24: «Tutti» (si parte dalla rosa)
     const an = await u.evaluate(async () => {
       const w = () => new Promise((r) => setTimeout(r, 250)), txt = (s) => (document.querySelector(s) || {}).textContent || '';
       const foto = () => ({ url: new URL(location.href).searchParams.get('scelta'), ls: localStorage.getItem('pdn-scelta'), d: txt('#scNowD'), n: txt('#scNowN'), mio: /Non avete ancora scelto/.test(txt('#scRis')), pal: [...document.querySelectorAll('.tabbar button.nuovo')].map((b) => b.dataset.t).join(',') });
@@ -559,6 +562,21 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         r1.home && r1.tocca && r1.dormire && r1.solo === 'd-16,d-23' && r1.spunte && r1.tipi && r1.piu && r1.annulla && r1.tutti && r1.nascosto && r1.segnato && r1.vince
         && r2.resta && r2.solo === 'd-16,d-23,d-7' && r2.scheda && r2.pulisci && r2.link && r3.avviso && r3.chiede && r3.messa && r3.vuota && r4);
       await c8.close();
+    }
+    // C25 (Mario 22/11 ~19:4x «la pagina si deve aprire quando clicco nellapp sempre nella schermata principale Piano in cima»): riaperta dopo «Dormire» e scorsa giù → Piano, in cima
+    {
+      const c9 = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const u10 = await c9.newPage();
+      u10.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+      await u10.goto(B + 'dicembre/'); await u10.waitForTimeout(1000);
+      await u10.evaluate(async () => { document.querySelector('.tabbar button[data-t="dormire"]').click(); await new Promise((r) => setTimeout(r, 300)); scrollTo(0, 1500); await new Promise((r) => setTimeout(r, 300)); });
+      const prima = await u10.evaluate(() => document.body.dataset.tab + ' ' + Math.round(scrollY));
+      await u10.reload(); await u10.waitForTimeout(1200);
+      const dopo = await u10.evaluate(() => ({ tab: document.body.dataset.tab, y: Math.round(scrollY) }));
+      await u10.goto(B + 'dicembre/#scegli'); await u10.waitForTimeout(1200);
+      const link = await u10.evaluate(() => document.body.dataset.tab);
+      const okP = /^dormire [1-9]/.test(prima) && dopo.tab === 'piano' && dopo.y === 0 && link === 'dormire';
+      ok('C25: l’app si apre sempre sul Piano in cima (anche se prima eri su «Dormire» più giù); un link con #scegli porta ancora a Dormire', okP); if (!okP) console.log({ prima, dopo, link });
+      await c9.close();
     }
   }
   await b.close(); server.kill(); fs.unlinkSync(path.join(DIR, 'parigi-in-tasca')); fs.rmdirSync(DIR);

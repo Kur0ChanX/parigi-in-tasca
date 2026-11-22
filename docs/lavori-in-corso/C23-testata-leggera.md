@@ -4,6 +4,9 @@
 - 22/11 18:31 (video v39, `archivio/2026-11-22-video-flicker-mario/`): «guarda come flickera poi pesa nello scroll e la torre eifell se scrolli vola da serra tienila fissa» → v40 (online 19:18).
 - 22/11 19:35 (video v40, `archivio/2026-11-22-video-v40-mario/VID_20261122_192059-v40.mp4`, 16 s): «Non benissimo ancora come puoi vedere».
 
+- 22/11 ~20:1x (Controllo 18, dopo la DOMANDA 1 sul faro), intero: «Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata / anche nella 39 la vedevo non caticata a volte la luna»
+  → la testata aspetta: prima la guida (C24). La luna «non caricata» c’era a volte anche nella v39: l’ipotesi «luna sfocata per i gruppi della v40» si indebolisce; nuova ipotesi da provare dopo: l’immagine della luna (webp dentro l’SVG) a volte non viene disegnata e resta solo il bagliore sfocato.
+
 ## Cosa si vede nel video della v40 (Controllo 18, fotogrammi)
 - Riga dritta nel cielo all’altezza della cima della Torre: sono i due fasci del faro (triangoli lunghi e sottili), anche senza zoom.
 - Pagina allargata con due dita (secondi 5–7): rettangoli a scatti, casette e Torre che spariscono a pezzi = pezzi di disegno (tasselli) che il telefono non fa in tempo a ridisegnare.

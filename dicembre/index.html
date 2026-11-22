@@ -882,7 +882,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
- {v:40,d:'22/11',n:['Disegno in alto più leggero: scorre liscio, la Torre Eiffel resta ferma e l’albero ha il tratto più sottile.']},{v:39,d:'22/11',n:['Tasto «⭐ Rosa alloggi»: sulla stella quanti ne avete scelti, sotto i numeri degli alloggi.']},{v:38,d:'22/11',n:['Tasto «⭐ Rosa alloggi» più pulito: una riga sola con quanti alloggi avete scelto.']},{v:37,d:'22/11',n:['Tasto «⭐ Rosa alloggi» nella schermata principale: lì scegliete voi gli alloggi della rosa, con le spunte o con la ⭐.']},
+ {v:41,d:'22/11',n:['L’app si apre sempre sul Piano, in cima.','Schermata principale a tre riquadri: «Scegli dove dormire» apre la vostra rosa con le schede affiancate da confrontare; «🛏️ Dormiamo qui» cambia giorni, strade e orari.','Disegno in alto più nitido: niente riga nel cielo, e sta fermo quando allargate la pagina con due dita.']},{v:40,d:'22/11',n:['Disegno in alto più leggero: scorre liscio, la Torre Eiffel resta ferma e l’albero ha il tratto più sottile.']},{v:39,d:'22/11',n:['Tasto «⭐ Rosa alloggi»: sulla stella quanti ne avete scelti, sotto i numeri degli alloggi.']},{v:38,d:'22/11',n:['Tasto «⭐ Rosa alloggi» più pulito: una riga sola con quanti alloggi avete scelto.']},{v:37,d:'22/11',n:['Tasto «⭐ Rosa alloggi» nella schermata principale: lì scegliete voi gli alloggi della rosa, con le spunte o con la ⭐.']},
  {v:36,d:'22/11',n:['Alloggio n. 23: prezzo Booking 461 € con cancellazione gratuita, indirizzo, orari d’arrivo 14–23, asciugamani inclusi.']},
  {v:35,d:'22/11',n:['Alloggi n. 16 e 23: scheda «📋 Tutto sul n.» con soldi, arrivo, casa, spesa la domenica e messaggio pronto per il gestore.','Filtro «⭐ La vostra rosa» fra gli alloggi; n. 23: prezzo su Booking, regole della casa lette (niente cauzione).','Alloggi: tasto «Nascondi» su ogni alloggio, con «Annulla». Gli elenchi mostrano solo quelli che vi interessano.','Alloggi: «Pulisci l’elenco» con una spunta per alloggio; «Rimetti tutti» li fa tornare. L’alloggio scelto resta sempre.','«Manda questa scelta» porta anche gli alloggi nascosti: chi apre il link sceglie se nasconderli anche sul suo telefono.']},
  {v:34,d:'22/11',n:['Testata, albero: ora è il disegno fornito, colorato (palline colorate, stella dorata, luna da sinistra) con lucine sul festone.','Testata, Torre Eiffel ridisegnata in proporzioni reali: gambe aperte, tre piani, traliccio, luce dorata e scintillio bianco.','Correzione: alcune luci della testata lampeggiavano all’apertura (animazioni avviate in ritardo). Ora partono già a metà ciclo.','Slitta: un solo passaggio a ogni apertura della pagina.']},
@@ -2631,10 +2631,15 @@ document.querySelectorAll('#mercatini h3.mk-h3').forEach(h=>{const l=h.nextEleme
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a||a.classList.contains('st'))return;const id=decodeURIComponent(a.getAttribute('href').slice(1));if(!id)return;if(go(id,true))e.preventDefault()},true);
 /* se il motore porta lo schermo su una parte nascosta (es. una scheda d'alloggio dai costi), prima apre la sua scheda */
 {const siv=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(o){const c=this.closest&&this.closest('#hotelCards>.card');if(c&&c.id&&document.body.dataset.card!==c.id)openCard(c.id,1);const k=tabOf(this);if(k&&k!==cur)show(k,{keep:true});return siv.call(this,o)}}
-let first=null;try{first=localStorage.getItem('pdn-scheda')}catch(e){}
+/* C25 (Mario 22/11 ~19:4x «la pagina si deve aprire quando clicco nellapp sempre nella schermata principale Piano in cima»): si apre SEMPRE sul Piano, in cima
+   (prima riapriva l’ultima scheda). Un link con # (mandato da qualcuno) porta ancora lì. Tornando all’app dopo più di 30 minuti: Piano in cima;
+   dopo pochi minuti (es. un salto su Maps o WhatsApp) resta dov’era. */
+try{history.scrollRestoration='manual'}catch(e){}
 const h=decodeURIComponent(location.hash.slice(1));
 if(h&&document.getElementById(h)){show(tabOf(document.getElementById(h))||'piano',{keep:true});requestAnimationFrame(()=>document.getElementById(h).scrollIntoView({block:'start'}))}
-else show(first||'piano',{keep:true});
+else{show('piano',{keep:true});scrollTo(0,0)}
+{let nascostaDa=0;document.addEventListener('visibilitychange',()=>{if(document.hidden){nascostaDa=Date.now();return}
+ if(nascostaDa&&Date.now()-nascostaDa>30*60*1000&&!document.body.dataset.card){show('piano',{keep:true});scrollTo(0,0)}nascostaDa=0})}
 })();
 </script>
 

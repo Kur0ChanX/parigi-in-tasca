@@ -5,8 +5,8 @@
 
 ## Nastro delle versioni
 🚀 Online: v40 · 🟩 Controllo 17 · 22/11 19:18 · testata più leggera
-🧪 In prova: —
-⏳ Dopo: v41 · 🟩 Controllo 17 · C24 Scegli dove dormire, C22 itinerari
+🧪 In prova: v41 · 🟩 Controllo 18 · Piano, Scegli, testata
+⏳ Dopo: v42 · 🟩 Controllo 18 · C24 guida dei giorni, C26 confronto, C22 itinerari
 
 ## 0. Aspetta Mario
 - 22/11 · 🛑 · 🟩 Controllo 14 · DOMANDA 1: gli alloggi «spenti» (n. 18, 20, 21: su Airbnb liberi solo dal 14) come li mostro? 📌 Di cosa parliamo: passo 2 di «Scegli», righe grigie quando avete scelto 4 notti dal 13. Scelte: 1 · in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché · 2 · nascosti da soli finché scegliete 4 notti · 3 · come ora, con la scritta «non libero il 13» più chiara. Consiglio 1.
@@ -17,7 +17,7 @@
 - 22/11 · 🟩 Controllo 17 · ponte del kit RVC: Mario 19:26 «non ho ora il token, se mi dai la guida dove prenderlo» → guida `docs/GUIDA-CHIAVE-KIT-RVC.md` (link già compilato); poi variabile RVC_KIT_TOKEN nell’ambiente, via dallo «Script di configurazione», chat nuova.
 
 ## 1. Claude da solo
-- 🟩 Controllo · C25 · l’app si apre SEMPRE sulla schermata principale «Piano», in cima (Mario 22/11 ~19:4x «la pagina si deve aprire quando clicco nellapp sempre nella schermata principale Piano  in cima / nella sezione Questo o quello devo poter scegliere io gli hotel per un confronto non le abbinate prefatte / il video guardalo frame ler frame se no non capisci») · 👁 Lo vedi: chiudi e riapri l’app (anche dopo aver toccato «Dormire» o un link con #): parte dal Piano in cima · prova: video di Mario dal telefono.
+- 🟩 Controllo · C25 · l’app si apre SEMPRE sulla schermata principale «Piano», in cima (Mario 22/11 ~19:4x «la pagina si deve aprire quando clicco nellapp sempre nella schermata principale Piano  in cima / nella sezione Questo o quello devo poter scegliere io gli hotel per un confronto non le abbinate prefatte / il video guardalo frame ler frame se no non capisci») · Controllo 18: fatto nel ramo, in v41 (`docs/lavori-in-corso/C25-apri-sul-piano.md`) · 👁 Lo vedi: chiudi e riapri l’app (anche dopo aver toccato «Dormire» o un link con #): parte dal Piano in cima · prova: video di Mario dal telefono.
 - 🟩 Controllo · C26 · «Questo o quello?»: confronto fra hotel scelti da Mario, non le coppie già fatte (stesso messaggio) · 👁 Lo vedi: in «Questo o quello?» scegli due (o più) hotel e vedi il confronto · prova: foto di Mario dal sito vero.
 - 🟩 Controllo · C21 · tasto «⭐ Rosa alloggi» nella schermata principale, rosa scelta da Mario (piano in `docs/lavori-in-corso/C21-rosa-alloggi.md`) · v37 online 22/11 18:26 (PR #38), aspetta che Mario la veda · 👁 Lo vedi: nella schermata principale il tasto «⭐ Rosa alloggi», dentro le spunte per scegliere la rosa · prova: foto di Mario dal sito vero.
 - 🟩 Controllo 14 · C20 · 👁 Lo vedi: nella pagina di dicembre («Scegli» passo 2 e «Dormire») il tasto «🙈 Nascondi» su ogni alloggio, dopo il tocco «Annulla» per 7 secondi in basso, e «🧹 Pulisci l’elenco» con le spunte; i nascosti restano dopo l’aggiornamento · prova: foto di Mario dal sito vero dopo la v35.
