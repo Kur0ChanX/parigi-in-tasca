@@ -1,6 +1,3 @@
-# Ultimo messaggio di Mario (22/11/2026 12:26 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 15:09 ora italiana)
 
-In coda, quando hai finito tutto non sai cosa fare, metti più fuochi d'artificio nella schermata iniziale, aggiungi abbellimenti natalizi nell'app, solo in coda quando non sai più cosa fare. Ogni tanto ti dico qualcosa di questo tipo, quando non sai cosa fare tu te le lasci in coda, senza dargli priorità, almeno non rimani fermo.
-Anche adesso che li stai spostando sopra, domenica, lunedì, martedì, ecco, farla più stretta, se no mi mangia troppa pagina da guardare. Poi per desktop studiatela a tuo modo, che occupa bene la pagina, ecco, che è bella piena la pagina, in generale parlo.
-Il numerino non farlo che scende, scende come scrolli, se no ci sono, te l'ho detto, voglio l'immagine un po' pulita, lascialo fisso in alto alla schermata principale. Mi raccomando con gli indici, con gli shortcut, con insomma deve essere molto ordinata e organizzata.
-Mi raccomando, fai più, abbellisci la schermata dietro, quella animata della schermata principale. Come ti ho già detto, rendila più natalizia, più bella, più piena di dettagli. L'albero fallo meglio, insomma, aggiungi dettagli natalizi, nel cielo più romantico, più viva. Il castello dietro fallo meglio, con le finestre fatte meglio che si illuminano, magari con delle proiezioni, non lo so, inventati qualsiasi cosa.
+Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.

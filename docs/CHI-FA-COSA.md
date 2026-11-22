@@ -6,7 +6,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
 | Principale | cerchi | 🟢 🟡 🔴 ⚫ | 22 | session_01WTjqUtegBCzTHdbgdaXDm1 | — |
-| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 9 | session_01WTjqUupr9MVG6nPkyrLatA | — |
+| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 12 | session_01Rwcxc4Xr465ou7svUAgw8r | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
@@ -22,5 +22,6 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C13 | Controllo 6 (da Controllo 5) | Grafica della pagina di dicembre rifatta a pezzi (DOMANDA 1 = «a pezzi»), primo la scheda Dormire, foto prima/dopo | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C13-aspetto-pagina.md` | 22/11 |
 | C14 | Controllo 4 (da Controllo 3) | Alloggi su siti diretti e privati, giro 2 (3 aiutanti con browser) | `research_notes/…/alloggi_siti_diretti_2_*.md`, `docs/lavori-in-corso/C14-siti-diretti-giro-2.md` | 22/11 |
 | C15 | Controllo 6 | Mappa di Parigi coi mercatini e il giro (fase 1); poi itinerario secondo l'alloggio | `dicembre/parigi-disney-natale.html`, `tools/fai-mappe-dicembre.py` o script nuovo, `dicembre/mappe/`, `docs/lavori-in-corso/C15-mappa-mercatini.md` | 22/11 |
-| C17 | Controllo 9 (da Controllo 8) | Numero di versione in alto con novità e «Aggiorna», indice coi tasti in alto, ultimo giorno con orari per Orly | `dicembre/parigi-disney-natale.html`, `tools/fai-dicembre.py`, `dicembre/sw.js`, `docs/lavori-in-corso/C17-indice-versione-giorni.md` | 22/11 |
-| C18 | Controllo 9 (da Controllo 8) | Slitta nel cielo coi regali, luce e ombre sul disegno della testata, più Natale | `dicembre/parigi-disney-natale.html` (testata), `docs/lavori-in-corso/C18-slitta-e-luci.md` | 22/11 |
+| C17 | Controllo 10 (da Controllo 9) | Numero di versione in alto con novità e «Aggiorna», indice coi tasti in alto, ultimo giorno con orari per Orly | `dicembre/parigi-disney-natale.html`, `tools/fai-dicembre.py`, `dicembre/sw.js`, `docs/lavori-in-corso/C17-indice-versione-giorni.md` | 22/11 |
+| C18 | Controllo 12 (da Controllo 11) | Slitta nel cielo coi regali, luce e ombre sul disegno della testata, più Natale; ora bancarelle, brillii, braccia di Jack, poi pubblicare la v33 | `dicembre/parigi-disney-natale.html` (testata), `docs/lavori-in-corso/C18-slitta-e-luci.md` | 22/11 |
+| C19 | Controllo 12 | Guida Disneyland di Mario nella schermata principale e nei giorni Disney (link coi giorni del viaggio) | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C19-guida-disneyland.md` | 22/11 |

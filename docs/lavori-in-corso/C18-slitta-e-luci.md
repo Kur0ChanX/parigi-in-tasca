@@ -40,3 +40,63 @@
 - «Riduci movimento»: tutto fermo, niente proiezioni.
 - Fila dei giorni su una riga («DOM 13»), alta 45 px invece di ~70. Numero della versione: scorre via con la testata e non c’è nelle altre schede.
 - PC (≥1100 px): testata in due colonne (titolo a sinistra, indice a destra); schermi ≥1600 px contenuto largo 96rem; «in breve» su 3 colonne (la regola c’era ma quella dei 2 veniva dopo e vinceva).
+
+## Mario 22/11 ~13:37 (dopo la v32), intero
+> Allora, nelle note delle versioni scrivilo in modo professionale, non che passa, lancia i regali così, non vuole cioè è brutto, devo dire. Scrivilo in descrizione tecnica e poi la slitta passa ma non lancia nessun regalo. Non so perché. E poi le ombre curale meglio, l'effetto un po' 3D delle decorazioni iniziali delle immagini, fagli abbellimenti più effetto wow. Mandami delle foto prima e dopo.
+> La slitta falla un pochettino colorata, cioè sembra ancora uno sticker così grigio, non lo so, rendila, non te lo so dire, graficamente falla, colorala meglio, ecco, così è proprio, è piattissima, sembra uno sticker che si muove.
+> Finisci quello che devi finire. E ogni tanto salva perché sta facendo un passaggio di consegna all'altro account. Tu comunque ogni tanto salvi e vai a finire fino a esaurimento token.
+> I colori del castello sono troppo slavati, non capisco. Aggiungi delle più animate, lucine che si accendono, che si spengono, un po' più aggiungi dettagli, addobbi, insomma, aggiungere di dettagli, di addobbi e di cose natalizie, ecco.
+> Attento, stanno per finire il token, fai il passaggio di consegna, comunque ti do l'ok, qualsiasi ok va bene. Attento che sennò perdiamo file quando facciamo passaggio di consegne, massima priorità.
+- v33 (Controllo 10, 22/11) PRONTA, prove verdi, aspetta l'ok di Mario a pubblicare (permessi): causa vera dei regali invisibili = pacchi di 6 px scuri e lanciati sopra il castello (disegnato davanti); ora 9 px colorati con alone, solo sul cielo libero, prova con `elementsFromPoint`. Slitta: la foto di Mario coi suoi colori in luce di notte (`lavoro/v33-slitta-colori.webp`, stesso contorno della v30), scia di polvere di stelle. Castello: torri viola e tetti blu a cilindro (oro e vino nella tavolozza «Vin brulé»), neve sui tetti, puntali d’oro, bandiere che sventolano, ghirlande con fiocchi e lucine colorate che si accendono e si spengono, lucine dei tetti a onda, brillio sulla guglia; addobbi solo sopra y 186 (sotto ci sono le casette). Casette: lato destro in ombra, ombra del tetto, ombra a terra; palline in rilievo. Note v30–v33 in stile tecnico. Foto e video: `archivio/2026-11-22-c18-v33/`.
+- «qualsiasi ok va bene»: Mario autorizza tutto il passaggio di consegne all'altro account.
+
+## Mario 22/11 ~14:3x (dopo foto e video della v33), intero
+> i pacchi falli più piccolini quelli che lancia. Mi raccomando, rendi viva la foto principale con tante decorazioni, lucine che si accendono nei mercatini, rendili vivi. L'albero decoralo bene e fai tanti pacchi sotto.
+> Conta che il castello è il castello di Disneyland, quello dietro.
+- Scelte: pacchi lanciati più piccoli (scala .72, sempre colorati con alone); casette con lampadine che si accendono e spengono, stella sul colmo, luce dei banchi che pulsa; albero con più palline in rilievo e una pila di pacchi alla base; castello coi colori del castello di Disneyland (pareti rosa, tetti blu), uguale nelle due tavolozze. Sagoma del castello NON ridisegnata (niente figure nostre).
+
+## Mario 22/11 ~14:4x, intero (con il disegno `archivio/2026-11-22-c18-v33/mario-castello-riferimento.jpg`)
+> il castello é fatto cosí per prendere spunto tu coloralo e decoralo come vuoi
+> Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma neanche minimamente.
+- Fatto (Controllo 10, provato): colori del disegno (pareti rosa, tetti blu ardesia, bandiere d’oro, fasce rosa) sulla sagoma vecchia → per Mario NON basta: vuole la FORMA del disegno.
+- Piano (Controllo 11): castello = il SUO disegno ritagliato (bianco tolto, anche le nuvolette in basso), messo come `<image>` al posto della sagoma (stessa zona x ~395–605, base nascosta dalle casette), in luce di notte come la slitta (colori veri, luce di luna dall’alto, ombre fredde); poi addobbi NOSTRI sopra, allineati al disegno: finestre che si accendono (dove il disegno ha le finestre), lucine sui bordi dei tetti, neve sui tetti, ghirlande, brillio sulla guglia, bandiere già nel disegno. Togliere o spegnere: sagoma `fill:var(--sil-1)`, `#castColori`, `#castLuce`, `#cren`, `#castFin`, `#castLuci`, `#castDeco` (rifarli sulle coordinate nuove), `#castClip` delle proiezioni (rifarlo con la maschera del disegno). Mai ridisegnare il castello in vettoriale (regola: figure solo dalle foto di Mario).
+> Basta che risulti con lo stesso stile della foto.
+- Letto come: non serve identico, conta lo stile del disegno (castello rosa a tante torri, tetti blu, bandiere d’oro): il disegno stesso ritagliato lo garantisce.
+
+## Mario 22/11 ~14:5x (durante il castello, Controllo 11), intero
+> Non vedo più i pacchi sotto l'albero, poi i pacchi che lancia la renna devono essere uno piccolo, un po' più piccolo, uno un pochettino più grande. In genere sono tutti un po' grandetti della stessa misura, non mi piacciono così. Falli un pochettino più scuri perché sono in lontananza. Colorali sì, ma non troppo, devono essere un po' in penombra perché in lontananza. Quindi i pacchi sono uno magari un po' rettangolare, piccolo, uno quadrato, uno un pochettino più grande, ma comunque la dimensione di adesso sono tutti troppo grandi e tutti troppo colori accesi.
+- Da fare (Controllo 11): pacchi lanciati di misure e forme diverse (piccolo rettangolare, quadrato, uno un po' più grande), tutti più piccoli di adesso, colori più spenti e scuri (lontananza, penombra); capire perché non vede i pacchi sotto l'albero e renderli visibili.
+- Fatto (Controllo 11): castello = disegno di Mario ritagliato (`archivio/2026-11-22-c18-castello/lavoro/castello.py`: fondo bianco tolto dai bordi, taglio sopra nuvolette e ponte, luce di notte, neve sui coni, finestre accese piano), posto x 402–599, y 2–252 (scala .16: guglie e coni grandi sopra le casette, portone coperto); addobbi animati dalle sue coordinate (`addobbi.py`: 12 finestre, ~86 lucine sui bordi dei coni, 7 ghirlande, brillio); proiezioni con maschera `#castM`; via sagoma, `#castColori`, `#castLuce`, `#cren`, gradienti e variabili vecchie. Prove: castello e pacchi «coperti» guardano la trasparenza vera dell'immagine. Pacchi: 5 formati, più piccoli, colori spenti; pila sotto l'albero c'è (sul sito ancora v32).
+
+## Mario 22/11 15:02 (dopo le foto del castello dal disegno), intero
+> Ok, però nel castello mettili, aggiungili un po' di ombre, sennò sembra piatta, che poi ha i colori diversi dalla nostra foto, sono pastello e molto piatti. Da lì un senso a quei colori, fargli degli abbellimenti, le finestre che magari, cosa ne so, boh, più luccicose, ma non solo le finestre, dico in generale. E fargli aggiungi nell'arena che sale, aggiungi un po' di colore, un pochino, soprattutto il rosso del cappellino, che così almeno si capisce che Babbo, è Jack Skeleton di Nightmare Before Christmas, Babbo Natale. E niente, fammi vedere cosa è il risultato. E aggiungi anche abbellimenti nelle bancarelle, anche nella neve, aggiungi della neve sopra le bancarelle, le lucine colorate, roba appesa nelle bancarelle, di roba della vendita, non lo so, fai tu, abbelliscilo.
+- Letto come: «Ok» = va bene la strada, ma prima vuole vedere il risultato (DOMANDA 1 resta aperta fino al suo «ok pubblica» dopo le foto). Da fare: castello con ombre e volume, colori meno pastello e in armonia con la testata, abbellimenti (finestre più luccicanti, brillii in generale); slitta («renna che sale») un po' più colorata, soprattutto il rosso del cappello (si capisce che è Jack Skeletron vestito da Babbo Natale); bancarelle più belle: neve sopra, lucine colorate, merce appesa.
+
+## Mario 22/11 ~15:1x, intero
+> Le renne, siccome sono tre, farle un po' indipendenti di movimento l'una con l'altra e che si muovono magari un po' le zampe. Così non sembra uno sticker che si muove tutto insieme, ecco. E dargli un senso di movimento reale.
+- Piano (Controllo 11): la foto della slitta resta UNA immagine (sua), ma mostrata a pezzi con ritagli: ogni renna ha corpo, zampe davanti e zampe dietro; ogni renna ondeggia col suo ritmo, le zampe galoppano (davanti e dietro in controfase); le redini fra le renne tolte dalla foto e disegnate come linee che seguono le renne.
+
+## Mario 22/11 ~15:2x, intero (foto `archivio/2026-11-22-c18-castello/mario-zero-cane.webp`: Zero, il cane fantasma col naso a zucca)
+> Dietro lo deve inseguire questo cane, animalo e fallo piccolino, piccolo piccolo. Il naso lasciaglielo luminoso, però ripeto, il cane è piccolo, non farlo grande quanto la renna, ovviamente. Cioè non grande, scusami, non grande quanto tutta il, non farlo grande quanto tutta la renne è slitta, fallo più piccolo in proporzione.
+> Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocca a poco si apre e si chiude, insomma come se avesse un po' di vento.
+- Piano: la SUA foto ritagliata (mai disegnato da noi), dietro la slitta che la insegue, più piccolo di una renna; naso a zucca acceso (bagliore che pulsa); a pezzi come le renne: orecchie che sventolano, mantello in basso che ondeggia, bocca (mascella) che si apre e si chiude piano.
+
+## Mario 22/11 ~15:3x, intero
+> Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.
+- Fatto: in `slitta-rosso.py` il verde della slitta più spento e scuro (in ombra), resta acceso solo il rosso di Jack.
+
+## Mario 22/11 ~15:2x (dopo l'handoff, passato alla Controllo 12), intero
+> Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
+- Da fare (Controllo 12): braccia di Jack come pezzo a parte della foto della slitta (come le zampe delle renne, `renne-pezzi.py`/`metti-renne.py`), che ogni tanto salgono e scendono, come se frustasse le renne.
+
+## Mario 22/11 dopo l'handoff (risposta alla DOMANDA 1), intero
+> Sì, appena finito le cose che ti ho detto, pubblica.
+
+## Mario 22/11 ~15:5x (Controllo 12), intero
+> Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa c'entrano i birilli, cioè? E tu me lo confermi pure, i birilli sono al posto giusto. Ma i birilli, che cavolo ce ne facciamo? Devono esserci cose attinenti, cioè. Puoi andare tu in una bancarella e vedere dei birilli in vendita. Ti sembra normale? Ma come ragioni? Boh.
+- Equivoco: avevo scritto «brillii» (stelline che luccicano sul castello), letto «birilli». Nelle bancarelle non ci sono birilli: merce appesa = cuori di pan di zenzero, stelle, calze, palline, bastoncini di zucchero. Spiegato a Mario con 2 foto (`archivio/2026-11-22-c18-v33/v33-d1-bancarella.jpg`, `v33-d2-castello-stelline.jpg`); riga in `docs/ERRORI.md`.
+
+## Mario 22/11 ~16:0x (Controllo 12), intero
+> No, però scusami, anche io ho sbagliato. Tipo quelle sfere che ci sono nelle bancarelle, mi spieghi che cavolo ci fanno? Che cosa significa? Cioè, metti qualcosa di inerente. Per le lucine sono sempre d'accordo, cioè più ce n'è meglio è, più da atmosfera meglio è, da tutte le parti. Anche la pagina del web farà più stile natalizia. Parigi, Disney, Natale, ecco.
+- Fatto (Controllo 12): sul banco merce vera, una casetta per tipo (vin brulé con tazze fumanti e pentolone, omini di pan di zenzero, candele accese, alberelli e pacchi); lucine anche sul bordo del banco; festoni fra le casette più fitti. Foto `archivio/2026-11-22-c18-v33/v33-d3-banchi-merce.jpg`.
+- Scelta: la pagina intera più natalizia viene DOPO la v33 (v34): prima una prova con foto a Mario (lucine sopra i titoli, agrifoglio, fiocchi leggeri sullo sfondo, schede con un filo dorato), online solo dopo che la vede. Motivo: tocca tutta la pagina e la leggibilità; la v33 (testata) non resta ferma.

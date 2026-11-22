@@ -89,3 +89,43 @@ In coda, quando hai finito tutto non sai cosa fare, metti più fuochi d'artifici
 Anche adesso che li stai spostando sopra, domenica, lunedì, martedì, ecco, farla più stretta, se no mi mangia troppa pagina da guardare. Poi per desktop studiatela a tuo modo, che occupa bene la pagina, ecco, che è bella piena la pagina, in generale parlo.
 Il numerino non farlo che scende, scende come scrolli, se no ci sono, te l'ho detto, voglio l'immagine un po' pulita, lascialo fisso in alto alla schermata principale. Mi raccomando con gli indici, con gli shortcut, con insomma deve essere molto ordinata e organizzata.
 Mi raccomando, fai più, abbellisci la schermata dietro, quella animata della schermata principale. Come ti ho già detto, rendila più natalizia, più bella, più piena di dettagli. L'albero fallo meglio, insomma, aggiungi dettagli natalizi, nel cielo più romantico, più viva. Il castello dietro fallo meglio, con le finestre fatte meglio che si illuminano, magari con delle proiezioni, non lo so, inventati qualsiasi cosa.
+
+## 2026-11-22 13:35 · 01WTjqUupr9M
+Allora, nelle note delle versioni scrivilo in modo professionale, non che passa, lancia i regali così, non vuole cioè è brutto, devo dire. Scrivilo in descrizione tecnica e poi la slitta passa ma non lancia nessun regalo. Non so perché. E poi le ombre curale meglio, l'effetto un po' 3D delle decorazioni iniziali delle immagini, fagli abbellimenti più effetto wow. Mandami delle foto prima e dopo.
+La slitta falla un pochettino colorata, cioè sembra ancora uno sticker così grigio, non lo so, rendila, non te lo so dire, graficamente falla, colorala meglio, ecco, così è proprio, è piattissima, sembra uno sticker che si muove.
+Finisci quello che devi finire. E ogni tanto salva perché sta facendo un passaggio di consegna all'altro account. Tu comunque ogni tanto salvi e vai a finire fino a esaurimento token.
+I colori del castello sono troppo slavati, non capisco. Aggiungi delle più animate, lucine che si accendono, che si spengono, un po' più aggiungi dettagli, addobbi, insomma, aggiungere di dettagli, di addobbi e di cose natalizie, ecco.
+Attento, stanno per finire il token, fai il passaggio di consegna, comunque ti do l'ok, qualsiasi ok va bene. Attento che sennò perdiamo file quando facciamo passaggio di consegne, massima priorità.
+
+## 2026-11-22 14:21 · 01Rwcxc4fE4C
+i pacchi falli più piccolini quelli che lancia. Mi raccomando, rendi viva la foto principale con tante decorazioni, lucine che si accendono nei mercatini, rendili vivi. L'albero decoralo bene e fai tanti pacchi sotto.
+
+## 2026-11-22 14:21 · 01Rwcxc4fE4C
+Conta che il castello è il castello di Disneyland, quello dietro.
+
+## 2026-11-22 14:23 · 01Rwcxc4fE4C
+il castello è fatto cosí per prendere spunto tu coloralo e decoralo  come vuoi
+
+## 2026-11-22 14:26 · 01Rwcxc4fE4C
+Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma neanche minimamente.
+
+## 2026-11-22 14:27 · 01Rwcxc4fE4C
+Basta che risulti con lo stesso stile della foto.
+
+## 2026-11-22 14:33 · 01Rwcxc4aWHi
+Non vedo più i pacchi sotto l'albero, poi i pacchi che lancia la renna devono essere uno piccolo, un po' più piccolo, uno un pochettino più grande. In genere sono tutti un po' grandetti della stessa misura, non mi piacciono così. Falli un pochettino più scuri perché sono in lontananza. Colorali sì, ma non troppo, devono essere un po' in penombra perché in lontananza. Quindi i pacchi sono uno magari un po' rettangolare, piccolo, uno quadrato, uno un pochettino più grande, ma comunque la dimensione di adesso sono tutti troppo grandi e tutti troppo colori accesi.
+
+## 2026-11-22 15:02 · 01Rwcxc4aWHi
+Ok, però nel castello mettili, aggiungili un po' di ombre, sennò sembra piatta, che poi ha i colori diversi dalla nostra foto, sono pastello e molto piatti. Da lì un senso a quei colori, fargli degli abbellimenti, le finestre che magari, cosa ne so, boh, più luccicose, ma non solo le finestre, dico in generale. E fargli aggiungi nell'arena che sale, aggiungi un po' di colore, un pochino, soprattutto il rosso del cappellino, che così almeno si capisce che Babbo, è Jack Skeleton di Nightmare Before Christmas, Babbo Natale. E niente, fammi vedere cosa è il risultato. E aggiungi anche abbellimenti nelle bancarelle, anche nella neve, aggiungi della neve sopra le bancarelle, le lucine colorate, roba appesa nelle bancarelle, di roba della vendita, non lo so, fai tu, abbelliscilo.
+
+## 2026-11-22 15:03 · 01Rwcxc4aWHi
+Le renne, siccome sono tre, farle un po' indipendenti di movimento l'una con l'altra e che si muovono magari un po' le zampe. Così non sembra uno sticker che si muove tutto insieme, ecco. E dargli un senso di movimento reale.
+
+## 2026-11-22 15:06 · 01Rwcxc4aWHi
+Dietro lo deve inseguire questo cane, animalo e fallo piccolino, piccolo piccolo. Il naso lasciaglielo luminoso, però ripeto, il cane è piccolo, non farlo grande quanto la renna, ovviamente. Cioè non grande, scusami, non grande quanto tutta il, non farlo grande quanto tutta la renne è slitta, fallo più piccolo in proporzione.
+
+## 2026-11-22 15:06 · 01Rwcxc4aWHi
+Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocca a poco si apre e si chiude, insomma come se avesse un po' di vento.
+
+## 2026-11-22 15:09 · 01Rwcxc4aWHi
+Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.

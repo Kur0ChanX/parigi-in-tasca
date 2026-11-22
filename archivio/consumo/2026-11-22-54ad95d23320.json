@@ -1,0 +1,37 @@
+{
+"account": "108763",
+"sessione": "54ad95d23320",
+"giorno": "2026-11-22",
+"turni": 2,
+"peso": 790817,
+"uscita": 13875,
+"contesto_max": 324257,
+"anomalie": [
+"avvio pesante: 289k token dopo le letture d'avvio (tetto 130k)"
+],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 1
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"13:35 · Notifica non letta (in coda dalle 13:34: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+]
+},
+"remota": "01WTjqUupr9M",
+"aiutanti": 0,
+"strumenti": 22,
+"bilancia": 2,
+"motori": {
+"opus": 790817
+},
+"grezzi": {
+"opus": [
+44,
+6828290,
+30855,
+0,
+13875
+]
+},
+"costo": 1.8902
+}
