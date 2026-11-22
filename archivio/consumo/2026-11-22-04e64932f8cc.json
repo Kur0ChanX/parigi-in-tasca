@@ -1,0 +1,45 @@
+{
+"account": "108763",
+"sessione": "04e64932f8cc",
+"giorno": "2026-11-22",
+"turni": 6,
+"peso": 853148,
+"uscita": 24777,
+"contesto_max": 347406,
+"anomalie": [],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 2,
+"Stop 9 · Versione unita in questo turno:": 1,
+"Stop 15 · There are uncommitted changes in": 2
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"11:08 · Notifica non letta (in coda dalle 11:08: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"11:33 · Notifica non letta (in coda dalle 11:32: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 9 · Versione unita in questo turno:": [
+"11:08 · Versione unita in questo turno: manda la notifica sul telefono (PushNotification): «🚀 v<N> online · <segno e catena> · <3 parole>». NON riscrivere il messaggio: Mario l'ha già letto (E255); chiudi con"
+],
+"Stop 15 · There are uncommitted changes in": [
+"11:20 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"11:27 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+]
+},
+"remota": "01WTjqUwFBdt",
+"aiutanti": 0,
+"strumenti": 31,
+"bilancia": 2,
+"motori": {
+"opus": 853148
+},
+"grezzi": {
+"opus": [
+67,
+6652964,
+51120,
+0,
+24777
+]
+},
+"costo": 2.2354
+}
