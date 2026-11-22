@@ -1,5 +1,9 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
+## Stato (Controllo 21 `session_01Rwcxc3NLHA1sxizikDmKnM`, 22/11 23:47 ora italiana, chiusa alla soglia; la apre la Controllo 21 con `create_session` (catena 6 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01Rwcxc3NLHA/claude/parigi-ramo-definitivo.
+- (qui le righe di giudizio della Controllo 21: fatto, provato, dove si verifica)
+
 ## Stato (Controllo 20 `session_01Rwcxc7EAGCUGyWhBTz3aWr`, 22/11 23:15 ora italiana, chiusa alla soglia; la apre la Controllo 20 con `create_session` (catena 5 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43. Questa sessione è stata prima la vecchia Controllo 14 (fermata alle ~17:05), poi Mario l'ha ripresa come Controllo 20 (22/11 ~22:40 «Adesso voglio continuare qua»).
 - **v42 ONLINE** (verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 42}`, letto alle 23:14; PR #43 squash su main, main riunito nel ramo, diff vuoto). Prove locali su 9192b19: web app 72/72, scritte 20/20, `--controlla` VERO, colori ok. Dentro: C24 pezzo 2 (riquadro «Il vostro alloggio», domenica secondo l’alloggio, n. 1 Chessy 8:44) + novità v42 in `VERSIONI`. Ok di Mario: «Se è tutto verde, pubblica».
@@ -37,24 +41,20 @@
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 21
-la apre la Controllo 20 con `create_session` (catena 5 di 8). Scritto da Controllo 20 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 22
+la apre la Controllo 21 con `create_session` (catena 6 di 8). Scritto da Controllo 21 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 21 · dati della guida`
+Titolo: `🟩 🗼 Controllo 22 · v43 e confronto`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 21 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 22 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 17:00 · [AVVIO] Sei la chat parallela Controllo 14 di Parigi in tasca, linea «Controllo»… → avvio come Controllo 14; messaggi delle scorte nel registro (e334c66); prova del service worker 12/12 verde (nota in DA-FARE)
-- 2026-11-22 23:08 · No, cos'hai capito? Ti ho mandato la chat dell'altra. Ti ho mandato la chat dell… → questa sessione = Controllo 20 (f690abc)
-- 2026-11-22 23:09 · Se è tutto verde, pubblica. → v42 online (PR #43, 9192b19, versione.json = 42 alle 23:14)
-- 2026-11-22 23:14 · Dopo sai che cosa devi fare? Sei già informato? → risposto col piano e la DOMANDA 1 della Controllo 14
-
-- 2026-11-22 23:15 · Ok, va bene. Ehm, Non solo Moxie, cioè non so se noi dobbiamo prendere quello di… → C22: scelte solo n. 8, 16, 23; guida curata su 16 e 23 (Già deciso, prossimo passo 1)
+- 2026-11-22 23:17 · [AVVIO] Sei la chat parallela Controllo 21 di Parigi in tasca, linea «Controllo»… → 
 
 Ultimo, intero:
-> Ok, va bene. Ehm, Non solo Moxie, cioè non so se noi dobbiamo prendere quello di Hotel Moxie, più che altro gli altri due che ti avevo detto. Ehm, Te l'avevo segnati. Gli altri due appartamenti, probabilmente andremo lì. Comunque le scelte sono tre, o Moxie o quei due appartamenti che ti ho detto. Quelli con molta cura, l'itinerario e la guida che si basano molto su quelli, che probabilmente sceglieremo quelli.
+> [AVVIO] Sei la chat parallela Controllo 21 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+
