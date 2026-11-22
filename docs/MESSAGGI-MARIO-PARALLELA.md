@@ -28,3 +28,7 @@ Attenzione che se ti va a vedere anche nel posto dove dormire, che lo scegli e t
 ## 2026-11-22 10:30 · 01WTjqUuicbA
 Il colore casa e quant'altro non va in conflitto con la leggenda tipo biglietti Disney e quant'altro? I colori non hanno un conflitto. Ti disorienta un po'?
 della possibilità, se uno sceglie perché per sbaglio ci clicca, che lo può annullare.
+
+## 2026-11-22 10:51 · 01WTjqUwtG4z
+Sì, non so, te l'avevo già detto. No. Vicino alla RAR metti quanto ci vuole a piedi per arrivare alla RAR. E Disney non mettere i chilometri, ma effettivamente quanto ci vuole poi ad arrivare con il tempo a Disney.
+Guarda che non per forza devi togliere i colori, puoi decidere dei colori per la leggenda di biglietti e quant'altro e colori tipo per Disney, per gli hotel Disney, per gli B&B, eccetera eccetera eccetera. Basta che non si mischiano, che non ci siano doppioni.
