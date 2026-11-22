@@ -788,8 +788,8 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 @media (min-width:1600px){main .wrap{max-width:96rem}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 /* v33 · castello di Natale e decorazioni in rilievo (Mario 22/11 13:37 «colori del castello troppo slavati… lucine che si accendono, che si spengono… addobbi… ombre… 3D»). Colori del castello nelle due tavolozze. */
-:root{--c-tet1:#5A86F0;--c-tet2:#2A49B0;--c-tet3:#101C5A;--c-mur1:#8170C8;--c-mur2:#4A3E9C;--c-mur3:#1E1A56}
-:root[data-palette="vino"]{--c-tet1:#F0B85A;--c-tet2:#B47426;--c-tet3:#4E2A0E;--c-mur1:#B0607E;--c-mur2:#712C52;--c-mur3:#30102A}
+/* il castello dietro è quello di Disneyland (Mario ~14:3x, disegno di riferimento in archivio/2026-11-22-c18-v33/mario-castello-riferimento.jpg): pareti rosa, tetti blu ardesia, fasce rosa sotto i tetti, bandiere d’oro, in luce di notte, uguale nelle due tavolozze */
+:root{--c-tet1:#7FA3DE;--c-tet2:#3D5FA6;--c-tet3:#15275A;--c-mur1:#F2BCD6;--c-mur2:#C3809F;--c-mur3:#5C2C5C}
 #cren{fill:var(--c-mur2)}
 @media (prefers-reduced-motion:no-preference){
  .ond{animation:ond 2.4s ease-in-out infinite}
@@ -797,6 +797,13 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
  .bandiera{transform-box:fill-box;transform-origin:0 50%;animation:bandiera 2.2s ease-in-out infinite}
  .glint{transform-box:fill-box;transform-origin:center;animation:brilla 3s ease-in-out infinite}
 }
+@media (prefers-reduced-motion:no-preference){
+ .lampM{animation:lampC 1.8s steps(1,end) infinite}
+ .lucBanco{animation:lucBanco 3.4s ease-in-out infinite}
+ .stellaC{animation:stellaC 2.8s ease-in-out infinite}
+}
+@keyframes lucBanco{0%,100%{opacity:.75}50%{opacity:.4}}
+@keyframes stellaC{0%,100%{opacity:.7}50%{opacity:1}}
 @keyframes ond{0%,100%{opacity:.22}50%{opacity:1}}
 @keyframes lampC{0%{opacity:1}50%{opacity:.14}}
 @keyframes bandiera{0%,100%{transform:skewY(0) scaleX(1)}50%{transform:skewY(7deg) scaleX(.9)}}
@@ -809,7 +816,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
- {v:33,d:'22/11',n:['Testata, slitta: immagine ricolorata dalla foto originale (colori reali in luce notturna, luce di luna dall’alto, alone soffuso) e scia di particelle luminose.','Correzione: i pacchi regalo non erano visibili (6 px, colori scuri, rilascio sopra il castello che li copriva). Ora 9 px, colori pieni con alone, rilascio solo su cielo libero; prova automatica di visibilità.','Castello: colori saturi nelle due tavolozze, ombreggiatura cilindrica di torri e coperture, neve sui tetti, puntali dorati, bandiere animate, ghirlande con luci multicolori intermittenti, luci perimetrali a onda.','Decorazioni in rilievo: riflesso e ombra propria su palline e lampadine, lato in ombra e ombra di gronda sulle casette, ombre di contatto sulla neve.']},
+ {v:33,d:'22/11',n:['Testata, slitta: immagine ricolorata dalla foto originale (colori reali in luce notturna, luce di luna dall’alto, alone soffuso) e scia di particelle luminose.','Correzione: i pacchi regalo non erano visibili (colori scuri, rilascio sopra il castello che li copriva). Ora colori pieni con alone dorato, rilascio solo su cielo libero; prova automatica di visibilità.','Castello di Disneyland nei suoi colori (pareti rosa, coperture blu), ombreggiatura cilindrica di torri e coperture, neve sui tetti, puntali dorati, bandiere animate, ghirlande con luci multicolori intermittenti, luci perimetrali a onda.','Decorazioni in rilievo: riflesso e ombra propria su palline e lampadine, lato in ombra e ombra di gronda sulle casette, ombre di contatto sulla neve.','Mercatini: lampadine delle casette ad accensione intermittente, stella luminosa sul colmo, luce dei banchi pulsante.','Albero: palline in rilievo di colori diversi e pacchi regalo alla base.']},
  {v:32,d:'22/11',n:['Testata, castello: finestre ad arco ad accensione progressiva con spegnimenti casuali, rosone, luci perimetrali sulle coperture, proiezioni periodiche mascherate sulla sagoma.','Testata, cielo: nuvole animate, stelle multicolori, bagliore rosato sull’orizzonte, fasci rotanti del faro della Torre Eiffel.','Navigazione: fila dei giorni su una riga (45 px); numero di versione solo nella schermata principale.','Desktop: testata su due colonne da 1100 px, contenuto fino a 96 rem da 1600 px, «In breve» su tre colonne (correzione dell’ordine delle regole CSS).']},
  {v:31,d:'22/11',n:['Correzione: avvio della slitta non garantito all’apertura; la visibilità della testata ora si verifica al momento della partenza.']},
  {v:30,d:'22/11',n:['Testata: animazione periodica della slitta (foto originale scontornata) con traiettoria dietro il castello e davanti alla luna, e rilascio di pacchi regalo.','Resa della scena: luce lunare direzionale sul castello, ombre proprie, foschia atmosferica, scintillii sulla neve.','Giovedì 17: uscita anticipata di 15 minuti, avviso «Partite prima», orari dei treni e ultimo treno utile ricontrollati.']},
@@ -921,7 +928,7 @@ const VERSIONI=[
     <rect x="568" y="175" width="28" height="90"/><polygon points="563,177 582,133 601,177"/>
     <rect x="462" y="112" width="10" height="26"/><polygon points="459,114 467,96 475,114"/>
    </g>
-   <!-- v33 · colori pieni e volume (Mario 13:37 «colori del castello troppo slavati»): torri come cilindri, chiare dal lato della luna -->
+   <!-- v33 · colori pieni e volume (Mario 13:37 «colori del castello troppo slavati»): castello di Disneyland (pareti rosa, tetti blu), torri come cilindri, chiare dal lato della luna -->
    <g id="castColori"><rect x="415" y="195" width="170" height="70" fill="url(#torreG)"/><rect x="405" y="170" width="30" height="95" fill="url(#torreG)"/><rect x="440" y="135" width="34" height="130" fill="url(#torreG)"/><rect x="480" y="110" width="44" height="155" fill="url(#torreG)"/><rect x="530" y="145" width="32" height="120" fill="url(#torreG)"/><rect x="568" y="175" width="28" height="90" fill="url(#torreG)"/><rect x="462" y="112" width="10" height="26" fill="url(#torreG)"/><polygon points="400,172 420,120 440,172" fill="url(#tettoG)"/><polygon points="435,137 457,80 479,137" fill="url(#tettoG)"/><polygon points="474,112 502,46 530,112" fill="url(#tettoG)"/><polygon points="525,147 546,94 567,147" fill="url(#tettoG)"/><polygon points="563,177 582,133 601,177" fill="url(#tettoG)"/><polygon points="459,114 467,96 475,114" fill="url(#tettoG)"/></g>
    <!-- C18 · luce della luna sul castello (lato sinistro chiaro, destro in ombra) e bagliore delle finestre -->
    <g id="castLuce"><rect class="ombraC" x="422.4" y="170" width="12.6" height="95"/><rect x="405" y="170" width="2.2" height="95" fill="url(#bordoLuna)"/><rect class="ombraC" x="459.7" y="135" width="14.3" height="130"/><rect x="440" y="135" width="2.2" height="130" fill="url(#bordoLuna)"/><rect class="ombraC" x="505.5" y="110" width="18.5" height="155"/><rect x="480" y="110" width="2.2" height="155" fill="url(#bordoLuna)"/><rect class="ombraC" x="548.6" y="145" width="13.4" height="120"/><rect x="530" y="145" width="2.2" height="120" fill="url(#bordoLuna)"/><rect class="ombraC" x="584.2" y="175" width="11.8" height="90"/><rect x="568" y="175" width="2.2" height="90" fill="url(#bordoLuna)"/><rect class="ombraC" x="467.8" y="112" width="4.2" height="26"/><rect x="462" y="112" width="2.2" height="26" fill="url(#bordoLuna)"/><polygon class="luceC" points="400,172 420,120 420,172"/><polygon class="ombraC" points="420,120 440,172 420,172"/><polygon class="luceC" points="435,137 457,80 457,137"/><polygon class="ombraC" points="457,80 479,137 457,137"/><polygon class="luceC" points="474,112 502,46 502,112"/><polygon class="ombraC" points="502,46 530,112 502,112"/><polygon class="luceC" points="525,147 546,94 546,147"/><polygon class="ombraC" points="546,94 567,147 546,147"/><polygon class="luceC" points="563,177 582,133 582,177"/><polygon class="ombraC" points="582,133 601,177 582,177"/><polygon class="luceC" points="459,114 467,96 467,114"/><polygon class="ombraC" points="467,96 475,114 467,114"/><rect class="ombraC" x="415" y="195" width="170" height="70" opacity=".5"/></g>
@@ -929,7 +936,7 @@ const VERSIONI=[
    <g clip-path="url(#castClip)"><rect x="395" y="60" width="215" height="150" fill="url(#suLuce)" opacity=".42"/>
     <g class="pj"><rect class="pj-onda" x="170" y="40" width="660" height="230" fill="url(#proiezG)"/><g id="pjNeve"></g><rect class="pj-lama" x="372" y="40" width="22" height="230" fill="url(#lamaG)"/></g></g>
    <line x1="502" y1="46" x2="502" y2="22" style="stroke:var(--sil-1);stroke-width:2"/>
-   <path d="M503 22 l20 6 -20 6z" style="fill:var(--wine)"/>
+   <path d="M503 22 l20 6 -20 6z" fill="#F2C76A"/>
    <g id="castLuci"></g>
    <g id="castFin"></g>
    <g id="castDeco"></g>
@@ -951,6 +958,7 @@ const VERSIONI=[
     <path d="M345 121 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" style="fill:var(--lamp)"/>
     <g id="firlights"></g>
     <g id="filoAlbero"></g>
+    <g id="regaliAlbero"></g>
    </g>
    <g id="festoons"></g>
    <path d="M0 290 V272 Q120 266 260 272 T540 270 T800 268 V290Z" style="fill:var(--snowshade)"/>
@@ -1324,7 +1332,7 @@ const MK={};
  const G=['var(--wine)','var(--fir)','var(--lamp)','var(--roof-r)','var(--fir-light)'];
  const chalet=(x,w,tip,awn,roof,b,k)=>{const eave=tip+w*.38,cx=x+w/2,H=b-eave,oh=w*.12,aw=eave+H*.08,ah=H*.2,oy=aw+ah,oh2=H*.5,cy=oy+oh2;
   let s=`<rect x="${f1(x)}" y="${f1(eave)}" width="${f1(w)}" height="${f1(H)}" style="fill:var(--wood)"/><polygon points="${f1(x)},${f1(eave+.5)} ${f1(cx)},${f1(tip+3)} ${f1(x+w)},${f1(eave+.5)}" style="fill:var(--wood)"/>`;
-  s+=`<rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2)}" style="fill:var(--lamp)"/><rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2*.45)}" style="fill:var(--lamp-hot)" opacity=".75"/>`;
+  s+=`<rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2)}" style="fill:var(--lamp)"/><rect class="lucBanco" style="animation-delay:-${(k*.7).toFixed(1)}s;fill:var(--lamp-hot)" x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2*.45)}" opacity=".75"/>`;
   const n=Math.max(3,Math.round(w/11));for(let i=0;i<n;i++)s+=`<circle cx="${f1(x+w*.17+i*w*.66/(n-1))}" cy="${f1(cy-H*.07)}" r="${f1(Math.max(1.4,H*.06))}" style="fill:${G[(i+k)%G.length]}"/><circle cx="${f1(x+w*.17+i*w*.66/(n-1))}" cy="${f1(cy-H*.07)}" r="${f1(Math.max(1.4,H*.06))}" fill="url(#pallaO)"/>`;
   for(let i=0;i<3;i++){const hx=x+w*(.28+i*.22),hl=H*(.09+((i+k)%2)*.06);s+=`<line x1="${f1(hx)}" y1="${f1(oy)}" x2="${f1(hx)}" y2="${f1(oy+hl)}" style="stroke:var(--wood-dk)" stroke-width=".8"/><circle cx="${f1(hx)}" cy="${f1(oy+hl+1.4)}" r="${f1(Math.max(1.2,H*.035))}" style="fill:${G[(i+k+2)%G.length]}"/><circle cx="${f1(hx)}" cy="${f1(oy+hl+1.4)}" r="${f1(Math.max(1.2,H*.035))}" fill="url(#pallaO)"/>`}
   s+=`<rect x="${f1(x+w*.04)}" y="${f1(cy)}" width="${f1(w*.92)}" height="${f1(H*.09)}" style="fill:var(--wood-dk)"/><rect x="${f1(x+1)}" y="${f1(aw)}" width="${f1(w-2)}" height="${f1(ah)}" fill="url(#${awn})"/><rect x="${f1(x+1)}" y="${f1(aw+ah-1.2)}" width="${f1(w-2)}" height="1.2" style="fill:var(--wood-dk)" opacity=".6"/>`;
@@ -1332,7 +1340,9 @@ const MK={};
   s+=`<polygon points="${f1(cx)},${f1(tip+3)} ${f1(x+w)},${f1(eave+.5)} ${f1(x+w)},${f1(b)} ${f1(cx)},${f1(b)}" fill="url(#latoO)"/><polyline points="${f1(x-oh+1)},${f1(eave+5+w*.07)} ${f1(cx)},${f1(tip+w*.07)} ${f1(x+w+oh-1)},${f1(eave+5+w*.07)}" fill="none" stroke="#000000" stroke-opacity=".2" stroke-width="${f1(w*.07)}" stroke-linejoin="round"/>`;
   s+=`<polyline points="${f1(x-oh)},${f1(eave+5)} ${f1(cx)},${f1(tip)} ${f1(x+w+oh)},${f1(eave+5)}" fill="none" style="stroke:var(${roof})" stroke-width="${f1(w*.1)}" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${f1(x-oh+2)},${f1(eave+1.5)} ${f1(cx)},${f1(tip-3.2)} ${f1(x+w+oh-2)},${f1(eave+1.5)}" fill="none" style="stroke:var(--snowground)" stroke-width="${f1(w*.05)}" stroke-linejoin="round" stroke-linecap="round"/>`;
   const gy=tip+(eave-tip)*.6,gr=Math.max(2.2,w*.06);s+=`<circle cx="${f1(cx)}" cy="${f1(gy)}" r="${f1(gr)}" fill="none" style="stroke:var(--fir-light)" stroke-width="${f1(gr*.55)}"/><circle cx="${f1(cx)}" cy="${f1(gy+gr)}" r="${f1(gr*.42)}" style="fill:var(--wine)"/>`;
-  for(let i=1;i<=4;i++){const t=i/5;[[x-oh*.4,eave+7],[x+w+oh*.4,eave+7]].forEach((e,j)=>{s+=`<circle cx="${f1(e[0]+(cx-e[0])*t)}" cy="${f1(e[1]+(tip+6-e[1])*t)}" r="${f1(Math.max(1.1,w*.022))}" style="fill:${BU[(i+j+k)%BU.length]}"/>`})}
+  for(let i=1;i<=4;i++){const t=i/5;[[x-oh*.4,eave+7],[x+w+oh*.4,eave+7]].forEach((e,j)=>{const lx=f1(e[0]+(cx-e[0])*t),ly=f1(e[1]+(tip+6-e[1])*t),lr=Math.max(1.1,w*.022),lc=BU[(i+j+k)%BU.length];s+=`<g class="lampM" style="animation-delay:-${(((i+j+k)%4)*.45).toFixed(2)}s"><circle cx="${lx}" cy="${ly}" r="${f1(lr*2.4)}" style="fill:${lc}" opacity=".3"/><circle cx="${lx}" cy="${ly}" r="${f1(lr)}" style="fill:${lc}"/></g>`})}
+  /* v33 · stella che brilla in cima a ogni casetta (Mario ~14:3x «rendili vivi») */
+  {const sy=tip-5.5,r1=3.1,r2=1.3;let p='';for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,r=i%2?r2:r1;p+=(i?'L':'M')+f1(cx+Math.cos(a)*r)+' '+f1(sy+Math.sin(a)*r)}s+=`<g class="stellaC" style="animation-delay:-${(k*.5).toFixed(1)}s"><circle cx="${f1(cx)}" cy="${f1(sy)}" r="6" fill="url(#kglow)"/><path d="${p}Z" style="fill:var(--lamp)"/></g>`}
   return s};
  const row=(L,b,k)=>L.map((c,i)=>chalet(c[0],c[1],c[2],c[3],c[4],b,i+k)).join('');
  const tips=L=>L.map(c=>[c[0]+c[1]/2,c[2]+1]);
@@ -1355,6 +1365,16 @@ const MK={};
  set('festoons',festoon([[-20,176],...tips(CL)],0)+festoon([...tips(CR),[820,172]],3));
  const fl=[[337,174],[351,166],[343,196],[331,206],[357,200],[341,228],[325,240],[353,236],[365,248],[345,156],[333,188],[359,216],[319,252],[371,254],[345,214]];
  set('firlights',fl.map((q,i)=>`<circle cx="${q[0]}" cy="${f1(q[1]+1.2)}" r="2.6" style="fill:#000000" opacity=".22"/><circle class="hb" style="animation-delay:${(i*.21).toFixed(2)}s;fill:${BU[(i+1)%BU.length]}" cx="${q[0]}" cy="${q[1]}" r="2.8"/><circle cx="${q[0]}" cy="${q[1]}" r="2.8" fill="url(#pallaO)"/>`).join(''));
+ /* v33 · albero più decorato (Mario ~14:3x «L'albero decoralo bene e fai tanti pacchi sotto»): palline in rilievo di colori diversi fra le lucine, e una pila di pacchi alla base */
+ {const PC=['#D8323F','#F6C964','#3C74D6','#E8EEF8','#8E46C2','#23955E'],TIER=[[345,132,184,20],[345,158,216,25],[345,190,256,31]],RY=[[166,178],[190,202,212],[224,237,249]];let b='',z=0;
+  TIER.forEach(([ax,ay,by,hw],t)=>RY[t].forEach((y,r)=>{const half=hw*(y-ay)/(by-ay)*.82;[-.62,-.21,.21,.62].forEach((u,j)=>{const x=ax+(u+(r%2?.1:-.1))*half*2/1.24;if(fl.some(q=>Math.hypot(q[0]-x,q[1]-y)<4.6))return;const rr=1.7+((j+r+t)%3)*.35,c=PC[z++%PC.length];
+   b+=`<circle cx="${f1(x)}" cy="${f1(y+1)}" r="${f1(rr)}" style="fill:#000000" opacity=".2"/><circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(rr)}" fill="${c}"/><circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(rr)}" fill="url(#pallaO)"/>`})}));
+  set('firlights',b+document.getElementById('firlights').innerHTML);
+  const PK2=[['#D8323F','#F6C964','#F0606A'],['#23955E','#F2606A','#4CC487'],['#3C74D6','#EEF3FF','#77A3F0'],['#E3A92F','#C8202E','#F5CC6A'],['#8E46C2','#F6C964','#B57EE0'],['#E8EEF8','#D8323F','#FFFFFF']];
+  const pacco=(x,yb,w,h,n)=>{const [c0,c1,c2]=PK2[n%PK2.length],x0=x-w/2,yt=yb-h;
+   return `<ellipse cx="${f1(x+1)}" cy="${f1(yb)}" rx="${f1(w*.75)}" ry="1.6" fill="url(#ombraMorbida)"/><rect x="${f1(x0)}" y="${f1(yt)}" width="${w}" height="${h}" rx=".6" fill="${c0}"/><rect x="${f1(x0)}" y="${f1(yt)}" width="${w}" height="${h}" rx=".6" fill="url(#latoO)"/><rect x="${f1(x-.6)}" y="${f1(yt)}" width="1.2" height="${h}" fill="${c1}"/><rect x="${f1(x0-.6)}" y="${f1(yt-1.8)}" width="${w+1.2}" height="2" rx=".4" fill="${c2}"/><rect x="${f1(x-.6)}" y="${f1(yt-1.8)}" width="1.2" height="2" fill="${c1}"/><path d="M${f1(x)} ${f1(yt-1.8)}q-2.4 -2.6 -3.1 -.3M${f1(x)} ${f1(yt-1.8)}q2.4 -2.6 3.1 -.3" fill="none" stroke="${c1}" stroke-width=".9" stroke-linecap="round"/><circle cx="${f1(x0+1.4)}" cy="${f1(yt+1.4)}" r=".7" fill="#FFFFFF" opacity=".3"/>`};
+  const PILA=[[322,267,8,7],[333,267,9,10],[357,267,10,8],[368,267,8,11],[378,267,6,6],[315,271,5,4],[327,271,7,6],[341,271,10,7],[352,271,7,9],[363,271,8,5],[373,271,6,7]];
+  set('regaliAlbero',PILA.map(([x,yb,w,h],i)=>pacco(x,yb,w,h,i)).join(''))}
  /* v32 · albero: filo dorato a spirale con le lucine calde che si rincorrono (Mario 12:27 «L’albero fallo meglio») */
  const FILI=[[[333.8,161],[346,175],[359.6,170]],[[362.2,198],[347,203],[332.1,188]],[[334,213.5],[347,229],[361.4,225]],[[371.3,246],[346,252],[323.4,236]]];
  set('filoAlbero',FILI.map((F,k)=>{const [a,c,b]=F,m=Math.round(Math.hypot(b[0]-a[0],b[1]-a[1])/4.2);let g=`<path d="M${a[0]} ${a[1]}Q${c[0]} ${c[1]} ${b[0]} ${b[1]}" fill="none" style="stroke:var(--lamp)" stroke-width=".6" opacity=".4"/>`;
@@ -1377,13 +1397,14 @@ const MK={};
    /* puntale d’oro */
    d+=`<circle cx="${tx}" cy="${f1(ty-.6)}" r="${k===5?1.2:1.7}" fill="url(#oroG)"/>`;
    /* ghirlanda sotto il tetto, da spigolo a spigolo, con due fiocchi e lampadine */
+   {const e=k===5?3:5;d+=`<rect x="${ax+e}" y="${f1(ay-.4)}" width="${bx-ax-2*e}" height="2.6" fill="#D97AA6"/><rect x="${ax+e}" y="${f1(ay-.4)}" width="${bx-ax-2*e}" height="2.6" fill="url(#latoO)"/><rect x="${ax+e}" y="${f1(ay-.4)}" width="${bx-ax-2*e}" height=".6" fill="#F7C9DD"/>`}
    if(k===5)return;const gy=ay+3.2,c=[(ax+bx)/2,gy+Math.min(6,(bx-ax)*.16)],A=[ax+2.5,gy],B=[bx-2.5,gy];
    d+=`<path d="M${f1(A[0])} ${f1(A[1])}Q${f1(c[0])} ${f1(c[1]+3)} ${f1(B[0])} ${f1(B[1])}" fill="none" stroke="#17633A" stroke-width="2.6" stroke-linecap="round"/><path d="M${f1(A[0])} ${f1(A[1])}Q${f1(c[0])} ${f1(c[1]+3)} ${f1(B[0])} ${f1(B[1])}" fill="none" stroke="#3FAE7A" stroke-width="1" stroke-dasharray=".7 1.3" stroke-linecap="round"/>`;
    [A,B].forEach(([x,y])=>{d+=`<path d="M${f1(x)} ${f1(y)}q-2.6 -2.2 -3 .5q1.5 .8 3 -.5q2.6 -2.2 3 .5q-1.5 .8 -3 -.5z" fill="#D8323F"/><path d="M${f1(x)} ${f1(y)}l-1.3 3.2M${f1(x)} ${f1(y)}l1.3 3.2" stroke="#A81E2A" stroke-width=".8" stroke-linecap="round"/><circle cx="${f1(x)}" cy="${f1(y)}" r=".7" fill="#F0606A"/>`});
    const n=Math.max(3,Math.round((B[0]-A[0])/7));for(let j=1;j<n;j++){const q=qpt(A,[c[0],c[1]+3],B,j/n),col=LC[(j+k)%4];
     lb+=`<g class="lampC" style="animation-delay:-${(((j+k)%4)*.4).toFixed(1)}s"><circle cx="${f1(q[0])}" cy="${f1(q[1]+1.4)}" r="2.6" fill="${col}" opacity=".32"/><circle cx="${f1(q[0])}" cy="${f1(q[1]+1.4)}" r="1.15" fill="${col}"/><circle cx="${f1(q[0]-.35)}" cy="${f1(q[1]+1.05)}" r=".38" fill="#FFFFFF" opacity=".85"/></g>`}});
   /* bandierine che sventolano sulle torri 2 e 4, pomo d’oro in cima all’asta grande */
-  [[457,80,'#D8323F'],[546,94,'#F6C964']].forEach(([x,y,c])=>{d+=`<line x1="${x}" y1="${y-1.5}" x2="${x}" y2="${y-11}" style="stroke:var(--sil-1)" stroke-width=".9"/><path class="bandiera" d="M${x+.4} ${y-11}l8.5 2.2 -8.5 2.4z" fill="${c}"/>`});
+  [[457,80,'#F2C76A'],[546,94,'#F2C76A']].forEach(([x,y,c])=>{d+=`<line x1="${x}" y1="${y-1.5}" x2="${x}" y2="${y-11}" style="stroke:var(--sil-1)" stroke-width=".9"/><path class="bandiera" d="M${x+.4} ${y-11}l8.5 2.2 -8.5 2.4z" fill="${c}"/>`});
   d+=`<circle cx="502" cy="21" r="1.6" fill="url(#oroG)"/><path class="glint" d="M502 13.5L503 20 509.5 21 503 22 502 28.5 501 22 494.5 21 501 20Z" style="fill:var(--lamp-hot)" opacity=".9"/>`;
   set('castDeco',d+lb)}
  const fiocco=(x,y,r)=>{let d='';for(let a=0;a<3;a++){const c=Math.cos(a*Math.PI/3)*r,z=Math.sin(a*Math.PI/3)*r;d+=`M${f1(x-c)} ${f1(y-z)}L${f1(x+c)} ${f1(y+z)}`}return d};
@@ -2242,7 +2263,7 @@ if(cv&&cv.getContext){
   const pars=[...document.querySelectorAll('.scene .par')];let tick=false;
   addEventListener('scroll',()=>{if(tick)return;tick=true;requestAnimationFrame(()=>{const y=Math.min(scrollY,600);pars.forEach(p=>{const m=+p.dataset.max||999,t=Math.max(-m,Math.min(m,y*+p.dataset.depth));p.style.transform=`translateY(${t.toFixed(1)}px)`});tick=false})},{passive:true});}
 }
-/* ---------- C18 · la slitta nel cielo (Mario 22/11): la sua foto ritagliata, coi suoi colori in luce di notte (v33: archivio/2026-11-22-c18-slitta/v33-slitta-colori.webp; prima un'ombra grigia, «piattissima»), mai disegnata da noi; ogni tanto passa davanti alla luna, lascia una scia di polvere di stelle e lancia i pacchi dove sotto c'è cielo libero (sopra il castello cadrebbero dietro le torri, e nella v32 erano di 6 px e scuri: non si vedevano). Ferma con «riduci movimento». ---------- */
+/* ---------- C18 · la slitta nel cielo (Mario 22/11): la sua foto ritagliata, coi suoi colori in luce di notte (v33: archivio/2026-11-22-c18-slitta/lavoro/v33-slitta-colori.webp; prima un'ombra grigia, «piattissima»), mai disegnata da noi; ogni tanto passa davanti alla luna, lascia una scia di polvere di stelle e lancia i pacchi dove sotto c'è cielo libero (sopra il castello cadrebbero dietro le torri, e nella v32 erano di 6 px e scuri: non si vedevano). Ferma con «riduci movimento». ---------- */
 {const SL=document.getElementById('slitta'),PK=document.getElementById('pacchi'),POL=document.getElementById('polvere'),SC=document.querySelector('.scene'),NS='http://www.w3.org/2000/svg';
 const VG=document.getElementById('vigna');const vigna=()=>{if(!VG||!SC)return;const r=SC.getBoundingClientRect();if(!r.width)return;const k=Math.max(r.width/800,r.height/290),w=r.width/k,h=r.height/k;VG.setAttribute('x',(400-w/2).toFixed(1));VG.setAttribute('width',w.toFixed(1));VG.setAttribute('y',(290-h).toFixed(1));VG.setAttribute('height',h.toFixed(1))};vigna();addEventListener('resize',vigna,{passive:true});
 if(SL&&PK&&POL&&SC){
@@ -2252,7 +2273,7 @@ if(SL&&PK&&POL&&SC){
  const inVista=()=>{const r=SC.getBoundingClientRect();return r.width>0&&r.bottom>0&&r.top<innerHeight};
  const view=()=>{const r=SC.getBoundingClientRect(),s=Math.max(r.width/800,r.height/290),w=r.width/s;return [400-w/2,400+w/2]};
  const COL=[['#D8323F','#F6C964','#F0606A'],['#23955E','#F2606A','#4CC487'],['#3C74D6','#EEF3FF','#77A3F0'],['#E3A92F','#C8202E','#F5CC6A'],['#8E46C2','#F6C964','#B57EE0']];
- /* un pacco grande 9 unità (~9 px sul telefono), lato destro in ombra, coperchio più chiaro, fiocco e alone dorato: si vede sul cielo scuro */
+ /* un pacco di 9 unità rimpicciolito a .72 (~6 px sul telefono, Mario «più piccolini»), lato destro in ombra, coperchio più chiaro, fiocco e alone dorato: si vede sul cielo scuro */
  const nuovoPacco=(x,y,vx,vy)=>{const c=COL[(n*3+pk.length)%COL.length],g=document.createElementNS(NS,'g');
   g.innerHTML=`<circle r="8" fill="url(#kglow)" opacity=".6"/><rect x="-4.2" y="-2.4" width="8.4" height="6.8" rx=".7" style="fill:${c[0]}"/><rect x="1" y="-2.4" width="3.2" height="6.8" rx=".5" style="fill:#000000" opacity=".24"/><rect x="-.8" y="-2.4" width="1.6" height="6.8" style="fill:${c[1]}"/><rect x="-4.8" y="-4.4" width="9.6" height="2.3" rx=".5" style="fill:${c[2]}"/><rect x="-.8" y="-4.4" width="1.6" height="2.3" style="fill:${c[1]}"/><path d="M0 -4.4q-2.8 -3.2 -3.6 -.4M0 -4.4q2.8 -3.2 3.6 -.4" fill="none" style="stroke:${c[1]}" stroke-width="1.1" stroke-linecap="round"/><circle cx="-2.7" cy="-.6" r=".8" style="fill:#FFFFFF" opacity=".35"/>`;
   PK.appendChild(g);pk.push({g,x,y,vx,vy,a:(Math.random()-.5)*30,va:(Math.random()-.5)*120})};
@@ -2269,7 +2290,7 @@ if(SL&&PK&&POL&&SC){
   if(P.te==null)P.te=t;while(P.te<t){P.te+=.05;const [x,y]=pt(62+Math.random()*44,36+Math.random()*6);polvere(x,y,vx*.15)}};
  const pacchi=dt=>{for(let i=pk.length-1;i>=0;i--){const q=pk[i];q.vy+=30*dt;q.vx*=1-.55*dt;q.x+=q.vx*dt;q.y+=q.vy*dt;q.a+=q.va*dt;
   if(q.y>285){q.g.remove();pk.splice(i,1);continue}
-  q.g.setAttribute('transform',`translate(${q.x.toFixed(2)} ${q.y.toFixed(2)}) rotate(${q.a.toFixed(1)})`)}
+  q.g.setAttribute('transform',`translate(${q.x.toFixed(2)} ${q.y.toFixed(2)}) rotate(${q.a.toFixed(1)}) scale(.72)`)}
   for(let i=pol.length-1;i>=0;i--){const q=pol[i];q.v+=dt;if(q.v>=q.l){q.e.remove();pol.splice(i,1);continue}
    q.x+=q.vx*dt;q.y+=q.vy*dt;q.e.setAttribute('cx',q.x.toFixed(1));q.e.setAttribute('cy',q.y.toFixed(1));q.e.setAttribute('opacity',(.9*(1-q.v/q.l)).toFixed(2))}};
  /* castello da x 400 a 601 del disegno: lì sotto i pacchi cadrebbero dietro le torri (v32: non si vedevano) */

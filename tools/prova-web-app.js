@@ -448,14 +448,14 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const parte = await r4.evaluate(() => { const s = document.getElementById('slitta'); return s.style.visibility === 'visible' && /translate/.test(s.getAttribute('transform') || ''); });
     const ferma = await r5.evaluate(() => document.getElementById('slitta').style.visibility === 'hidden' && !document.querySelector('#pacchi g'));
     const vista = await r4.evaluate(() => { const n = window.slittaProva(.8, -1, 66), s = document.getElementById('slitta').getBoundingClientRect(), c = document.querySelector('.scene').getBoundingClientRect(), x = s.left + s.width / 2, y = s.top + s.height / 2;
-      /* v33 (Mario 13:37 «non lancia nessun regalo»): i pacchi c’erano ma di 6 px, scuri, e cadevano dietro il castello. Qui: grandi almeno 7 px e niente disegno davanti (solo nebbia e vignetta) */
+      /* v33 (Mario 13:37 «non lancia nessun regalo»): i pacchi c’erano ma di 6 px, scuri, e cadevano dietro il castello. Qui (Mario ~14:3x «più piccolini»): grandi almeno 5 px e niente disegno davanti (solo nebbia, vignetta e la slitta che li sta lanciando) */
       document.head.insertAdjacentHTML('beforeend', '<style id="provaPE">.scene,.scene *{pointer-events:auto!important}</style>');
       const pk = [...document.querySelectorAll('#pacchi > g')].map((g) => { const b = g.children[1].getBoundingClientRect(), px = b.left + b.width / 2, py = b.top + b.height / 2, sopra = [];
         for (const e of document.elementsFromPoint(px, py)) { if (g.contains(e)) break; sopra.push(e); }
-        return { largo: b.width, coperto: sopra.some((e) => e.id !== 'vigna' && !/nebbia/.test(e.getAttribute('fill') || '')) }; });
+        return { largo: b.width, coperto: sopra.some((e) => e.id !== 'vigna' && !e.closest('#slitta') && !/nebbia/.test(e.getAttribute('fill') || '')) }; });
       document.getElementById('provaPE').remove();
-      return { n, visti: pk.filter((q) => q.largo >= 7 && !q.coperto).length, dentro: x > c.left && x < c.right && y > c.top && y < c.top + c.height * .6, largo: Math.round(s.width) }; });
-    ok('Slitta: parte da sola, passa nel cielo della testata (' + vista.largo + ' px) coi pacchi che cadono (' + vista.n + ', visibili ' + vista.visti + ': grandi almeno 7 px e non dietro il castello); con «riduci movimento» resta ferma', parte && ferma && vista.n >= 2 && vista.visti === vista.n && vista.dentro && vista.largo > 60 && vista.largo < 260);
+      return { n, visti: pk.filter((q) => q.largo >= 5 && !q.coperto).length, dentro: x > c.left && x < c.right && y > c.top && y < c.top + c.height * .6, largo: Math.round(s.width) }; });
+    ok('Slitta: parte da sola, passa nel cielo della testata (' + vista.largo + ' px) coi pacchi che cadono (' + vista.n + ', visibili ' + vista.visti + ': grandi almeno 5 px e non dietro il castello); con «riduci movimento» resta ferma', parte && ferma && vista.n >= 2 && vista.visti === vista.n && vista.dentro && vista.largo > 60 && vista.largo < 260);
     const gio = await r4.evaluate(() => { const p = document.getElementById('p-gio'), c = p && p.querySelector('.callout-presto'); return { c: !!c && /Partite prima/.test(c.textContent) && /2 ore e mezza/.test(c.textContent), t: !!p && /Ultimo treno sicuro:<\/b> (8:47 da Val d'Europe|8:44 da Chessy)/.test(p.innerHTML) }; });
     ok('Giovedì 17: riquadro «Partite prima» in cima e ultimo treno sicuro 8:47 (8:44 da Chessy)', gio.c && gio.t);
     await c4.close(); await c5.close();
