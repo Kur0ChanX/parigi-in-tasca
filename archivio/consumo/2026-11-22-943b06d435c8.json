@@ -2,15 +2,15 @@
 "account": "cba507",
 "sessione": "943b06d435c8",
 "giorno": "2026-11-22",
-"turni": 3,
-"peso": 56371,
-"uscita": 583,
-"contesto_max": 262985,
+"turni": 4,
+"peso": 491322,
+"uscita": 8252,
+"contesto_max": 345524,
 "anomalie": [],
 "blocchi": {
 "Stop 5 · Notifica non letta (in coda": 1,
-"Stop 15 · There are uncommitted changes in": 2,
-"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 15 · There are uncommitted changes in": 3,
+"Stop 10 · Promessa a Mario senza voce": 2,
 "Stop 11 · 📸 Foto o video di": 1
 },
 "esempi_blocchi": {
@@ -19,10 +19,12 @@
 ],
 "Stop 15 · There are uncommitted changes in": [
 "14:50 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
-"14:53 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+"14:53 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"15:13 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
 ],
 "Stop 10 · Promessa a Mario senza voce": [
-"14:53 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Le foto prima/dopo sono pronte: te le mando appena le prove sono verdi.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mar"
+"14:53 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Le foto prima/dopo sono pronte: te le mando appena le prove sono verdi.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mar",
+"15:13 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Renne e Zero si capiscono solo in movimento: per questo la Controllo 12 ti manderà anche un video, oltre alle foto.». Nella sua voce (o in una"
 ],
 "Stop 11 · 📸 Foto o video di": [
 "14:53 · 📸 Foto o video di questa sessione in archivio/, non mandati a Mario e senza riga in «## 0. Aspetta Mario» (C516, E498): archivio/2026-11-22-c18-castello/ (4 file). Per Mario → mandali ORA con la doman"
@@ -30,19 +32,19 @@
 },
 "remota": "01Rwcxc4aWHi",
 "aiutanti": 0,
-"strumenti": 1,
+"strumenti": 11,
 "bilancia": 2,
 "motori": {
-"opus": 56371
+"opus": 491322
 },
 "grezzi": {
 "opus": [
-6,
-524779,
-778,
+29,
+4241901,
+20675,
 0,
-583
+8252
 ]
 },
-"costo": 0.1229
+"costo": 1.179
 }

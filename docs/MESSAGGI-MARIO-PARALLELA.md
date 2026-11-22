@@ -129,3 +129,6 @@ Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocc
 
 ## 2026-11-22 15:09 · 01Rwcxc4aWHi
 Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.
+
+## 2026-11-22 15:13 · 01Rwcxc4aWHi
+Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
