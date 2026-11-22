@@ -226,6 +226,23 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     await q.evaluate(() => document.querySelector('.tabbar button[data-t="dormire"]').click());
     const fgOk = fg.tasti.length === 5 && fg.tasti.every(Boolean) && fg.inAlto && fg.mer && fg.titolo;
     ok('Fila dei giorni (Dom 13 … Gio 17) in alto e ferma scorrendo, tutti i tasti toccabili, il giorno nuovo parte dal titolo (telefono)', fgOk); if (!fgOk) console.log(fg);
+    // C17 (Mario 22/11 12:02 «mettimi l'indice delle cose più importanti… non farmi coprire troppo la pagina»): l'indice si vede tutto aprendo l'app e ogni tasto porta al suo posto
+    const ind = await q.evaluate(async () => {
+      const w = (ms) => new Promise((r) => setTimeout(r, ms || 450)), out = { tasti: 0, visibili: true, sbagliati: [] };
+      document.querySelector('.tabbar button[data-t="piano"]').click(); await w(); scrollTo(0, 0); await w(200);
+      const tb = document.querySelector('.tabbar').getBoundingClientRect(), tiles = [...document.querySelectorAll('nav.go a')];
+      out.tasti = tiles.length; out.visibili = tiles.every((a) => { const r = a.getBoundingClientRect(); return r.top >= 0 && r.bottom <= tb.top; }); out.barra = Math.round(tb.height);
+      for (const h of tiles.map((a) => a.getAttribute('href') + '|' + (a.dataset.day || ''))) {
+        document.querySelector('.tabbar button[data-t="piano"]').click(); await w(); scrollTo(0, 0); await w(200);
+        const [href, day] = h.split('|'); document.querySelector('nav.go a[href="' + href + '"]' + (day ? '[data-day="' + day + '"]' : '')).click(); await w(900);
+        const el = document.getElementById(href.slice(1)), r = el.getBoundingClientRect();
+        if (r.top < -2 || r.top > innerHeight * 0.5 || el.closest('[hidden]')) out.sbagliati.push(href + ' top ' + Math.round(r.top));
+      }
+      document.querySelector('.tabbar button[data-t="dormire"]').click(); await w();
+      return out;
+    });
+    const indOk = ind.tasti === 12 && ind.visibili && ind.sbagliati.length === 0 && ind.barra <= 56;
+    ok('Indice della schermata principale: 12 tasti visibili senza scorrere sopra la barra delle schede (alta al massimo 56), ognuno porta al suo posto', indOk); if (!indOk) console.log(ind);
     // difesa larga (E del 22/11, fila dei giorni coperta dalla v17 alla v24): in ogni scheda, ogni tasto delle barre fisse si può toccare (non c'è sopra un'altra barra)
     const coperti = await q.evaluate(async () => {
       const w = (ms) => new Promise((r) => setTimeout(r, ms || 300)), out = [];
