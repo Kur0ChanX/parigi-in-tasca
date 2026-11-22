@@ -566,6 +566,36 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         && r2.resta && r2.solo === 'd-16,d-23,d-7' && r2.scheda && r2.pulisci && r2.link && r3.avviso && r3.chiede && r3.messa && r3.vuota && r4);
       await c8.close();
     }
+    // C24 pezzo 2 (Mario 22/11 19:28 «una guida… in base a che hotel scelgo cosa fare nella giornata specialmente domenica… molto accurato»):
+    // «Dormite al n. X» in cima a ogni giorno, riquadro «Il vostro alloggio» per tutti i 35, domenica secondo l'alloggio, promemoria della cancellazione
+    {
+      const cg = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const g = await cg.newPage();
+      g.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+      const leggi = () => g.evaluate(() => { const t = (s) => (document.querySelector(s) || {}).textContent || ''; return { box: t('#vaBox'), avv: t('#p-dom .va-dom'), dorme: [...document.querySelectorAll('#panels .dorme-day')].map((x) => x.textContent), gio: t('#p-gio'), msg: [...document.querySelectorAll('#vaBox .xx-msg')].map((x) => x.textContent), ics: (document.querySelector('#vaBox a[download]') || {}).href || '', gc: (document.querySelector('#vaBox a[href*="calendar.google.com"]') || {}).href || '' }; });
+      const vai = async (k) => { await g.goto(B + 'dicembre/' + (k ? '?scelta=' + k : '')); await g.waitForTimeout(700); return leggi(); };
+      const r0 = await vai(''), r8 = await vai('4n-8'), r23 = await vai('4n-23'), r16 = await vai('4n-16'), rP = await vai('lo-16'), r1 = await vai('4n-1'), r29 = await vai('4n-29');
+      const okD = r0.dorme.length === 5 && r0.dorme.every((x) => /n\. 8/.test(x)) && /mio consiglio/.test(r0.dorme[0]) && r8.dorme.every((x) => /n\. 8/.test(x) && !/mio consiglio/.test(x)) && /Hotel Locomo/.test(rP.dorme[0]) && rP.dorme.slice(1).every((x) => /n\. 16/.test(x));
+      ok('C24: «Dormite al n. X» in cima a tutti e 5 i giorni (consiglio, scelta, notte a Parigi)', okD); if (!okD) console.log(r0.dorme, r8.dorme, rP.dorme);
+      const primaDel12 = Date.now() < Date.UTC(2026, 11, 12, 8); // il promemoria c'è solo se il giorno non è passato
+      const okB = /il mio consiglio/.test(r0.box) && /Il vostro alloggio/.test(r8.box) && /Reception 24 ore/.test(r8.box) && /Gratis fino a domenica 13\/12/.test(r8.box) && r8.msg.length === 0 && !r8.avv
+        && (!primaDel12 || (/dates=20261212T080000Z\//.test(r8.gc) && /^data:text\/calendar/.test(r8.ics) && /BEGIN%3AVEVENT/.test(r8.ics) && /DTSTART%3A20261212T080000Z/.test(r8.ics)));
+      ok('C24: riquadro «Il vostro alloggio» col n. 8: reception, cancellazione gratis fino al 13/12, promemoria il 12/12 (Google e .ics), niente messaggio', okB); if (!okB) console.log(r8);
+      const ok23 = /gestore, di persona/.test(r23.avv) && /21:50/.test(r23.avv) && r23.msg.length === 2 && /Philippe et Patricia/.test(r23.msg[0]) && /dimanche 13 décembre vers 21h50/.test(r23.msg[0]) && /du 13 au 17/.test(r23.msg[0]) && /dans le RER/.test(r23.msg[1]) && /32 Rue de la Charbonnière/.test(r23.box);
+      const ok16 = /48 ore prima/.test(r16.avv) && r16.msg.length === 1 && /Vincent/.test(r16.msg[0]) && /prime 24 ore/.test(r16.box) && !r16.gc;
+      const okP = /Domenica notte a Parigi/.test(rP.box) && /Lunedì mattina/.test(rP.box) && !rP.avv && /du 14 au 17/.test(rP.msg[0] || '') && /lundi 14 décembre/.test(rP.msg[0] || '') && /Hotel Locomo: gratis fino a sabato 12\/12/.test(rP.box);
+      ok('C24: domenica secondo l’alloggio: n. 23 gestore di persona (avviso, 2 messaggi, indirizzo), n. 16 ora 48 ore prima, notte a Parigi (date 14→17)', ok23 && ok16 && okP); if (!(ok23 && ok16 && okP)) console.log({ ok23, ok16, okP, r23, r16, rP });
+      const ok1 = /8:44 da Chessy/.test(r1.gio) && /8:44 da Chessy/.test(r1.box) && /8:47 da Val d'Europe/.test(r8.gio) && /Gratis fino a lunedì 7\/12/.test(r29.box);
+      ok('C24: giovedì del n. 1 da Chessy (8:44, non Val d’Europe); n. 29 «prima dell’8/12» = gratis fino al 7/12', ok1); if (!ok1) console.log(r1.gio.slice(-400), r29.box);
+      // tutti e 35, con 4 notti e con la notte a Parigi: riquadro pieno, niente «undefined», «NaN» o «null» nel riquadro e nei giorni
+      const tutti = await g.evaluate(async () => { const w = () => new Promise((r) => setTimeout(r, 60)), sel = document.querySelector('#selAl'), sp = document.querySelector('#selPar'), out = [];
+        for (const par of ['', 'lo']) { sp.value = par; sp.dispatchEvent(new Event('change')); await w();
+          for (const o of [...sel.options]) { sel.value = o.value; sel.dispatchEvent(new Event('change')); await w();
+            const box = document.querySelector('#vaBox'), t = (box || {}).textContent || '', days = document.querySelector('#panels').textContent, n = box ? box.querySelectorAll('.va-l>li').length : 0;
+            if (n < 5 || /undefined|NaN|\bnull\b/.test(t + days) || !new RegExp('n\\. ' + o.value + '\\b').test(t)) out.push(par + '-' + o.value + ': ' + n + ' righe ' + ((t + days).match(/.{0,40}(undefined|NaN|\bnull\b).{0,40}/) || [''])[0]); } }
+        return { n: sel.options.length, out }; });
+      ok('C24: riquadro pieno e senza «undefined» per tutti e ' + tutti.n + ' gli alloggi, con e senza la notte a Parigi', tutti.n === 35 && tutti.out.length === 0); if (tutti.out.length) console.log(tutti.out);
+      await cg.close();
+    }
     // C25 (Mario 22/11 ~19:4x «la pagina si deve aprire quando clicco nellapp sempre nella schermata principale Piano in cima»): riaperta dopo «Dormire» e scorsa giù → Piano, in cima
     {
       const c9 = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const u10 = await c9.newPage();

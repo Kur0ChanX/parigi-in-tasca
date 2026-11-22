@@ -478,6 +478,18 @@ table.cmp td.r{white-space:nowrap}
 }
 .day-head{display:grid;gap:var(--s2);margin-bottom:var(--s4)}
 .dorme-day{font-size:.95rem;font-weight:600;padding:var(--s2) var(--s3);border-radius:12px;background:color-mix(in srgb,var(--lamp) 14%,transparent);border:1px solid color-mix(in srgb,var(--lamp) 35%,transparent)}.dorme-day a{white-space:nowrap}
+.va-box{margin:var(--s4) 0 var(--s3);border-color:color-mix(in srgb,var(--lamp) 45%,var(--rule))}
+.va-box>summary>span{display:grid;gap:2px;min-width:0}
+.va-n{font-weight:600;font-size:.9rem;color:var(--mute)}
+.va-l{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.va-l li{font-size:.93rem;line-height:1.45;min-width:0}
+.va-k{display:block;font-size:.8rem;font-weight:800;color:var(--mute)}
+.va-s,.va-c{display:block}
+.va-s{margin-top:4px;font-size:.88rem}
+.va-c+.va-c{margin-top:8px}
+.va-cal{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px;font-size:.88rem}
+.va-mm{display:grid;gap:6px}
+.va-dom{margin-bottom:var(--s4)}
 .day-head h3{font-size:clamp(1.45rem,1.2rem + 1.2vw,1.9rem);font-weight:800}
 .panel.enter{animation:pin .45s cubic-bezier(.2,.8,.2,1)}
 .panel.enter.back{animation-name:pinb}
@@ -1257,6 +1269,7 @@ const VERSIONI=[
   <div class="sec-head"><p class="kicker">dom 13 – gio 17</p><h2 id="h-giorni">Giorno per giorno</h2><p class="sec-ans" id="a-giorni">Un giorno di mercatini a Parigi, tre giorni ai parchi, giovedì in volo.</p>
   <p class="muted small">Toccate una tappa per vedere strade, treni e mappe. Durante il viaggio la pagina si apre da sola sul giorno di oggi. Gli orari dei treni sono quelli di inizio dicembre: controllateli la sera prima. </p>
   <div class="chooser" id="chooser"><label for="selPar">Domenica notte:</label><select id="selPar"></select><label for="selAl">Lunedì–mercoledì:</label><select id="selAl"></select><p class="small muted" id="chNote" aria-live="polite"></p><button type="button" class="btn ghost" id="backMio" hidden>Torna al mio consiglio</button></div></div>
+  <div id="vaBox"></div>
   <div class="daybar" role="tablist" aria-label="Scegli il giorno" id="daybar">
    <span class="pill" aria-hidden="true"></span>
    <svg class="spark" id="spark" viewBox="0 0 46 46" aria-hidden="true"><g fill="var(--lamp)"><path d="M23 4l2.4 15.6L41 23l-15.6 2.4L23 42l-2.4-16.6L5 23l15.6-3.4z"/></g></svg>
@@ -1654,7 +1667,7 @@ const scHome=()=>{const a=document.getElementById('scApp');if(!a)return;const h=
 scHome();
 /* C20 (Mario 22/11 «potenziali per questi due… potenzia la guida»): i due alloggi della rosa, tutto quello che sappiamo. Letto il 22/11/2026: annunci Airbnb, Monoprix; ricerca in research_notes/…/alloggio_n16_* e alloggio_n23_* */
 const XX={
- 16:{host:'Vincent',k:[
+ 16:{host:'Vincent',ora:'Scrivetelo a Vincent almeno 48 ore prima, entro venerdì 11/12.',k:[
   ['💶 Prezzo e cancellazione',[`4 notti 13→17: <b>502,80 €</b> (4 × 120,50 € + 20,80 € di tassa di soggiorno), niente pulizia a parte. 3 notti 14→17: 384,60 €.`,
    `Cancellazione gratuita <b>solo nelle prime 24 ore</b>. Poi, fino al 6/12 (7/12 con 3 notti), torna metà delle notti più le tasse: circa 262 € su 502,80 € ${B.es('calcolo nostro')}. Dopo, solo le tasse.`,
    `È una <b>richiesta di prenotazione</b>: Vincent deve accettarla. Si può pagare in due volte (seconda rata a fine novembre).`]],
@@ -1669,7 +1682,7 @@ const XX={
    `Farmacia del centro commerciale (ingresso «Porte de la Gare») domenica 10–20. Ristoranti del centro commerciale fino a mezzanotte ${B.nu()}.`]],
   ['⚠️ Cosa può andare storto',[`Vincent non accetta la richiesta: tenete pronta una seconda scelta (il n. 23) finché non arriva la conferma.`,
    `Cancellazione rigida: prenotate solo quando le date sono sicure.`]]]},
- 23:{host:'Philippe et Patricia',k:[
+ 23:{host:'Philippe et Patricia',ora:'Scrivetelo appena prenotato e di nuovo domenica dal treno.',ad:'32 Rue de la Charbonnière, 77144 Montévrain',adF:'da Booking',k:[
   ['💶 Prezzo e cancellazione',[`<b>Booking, 4 notti 13→17: 461 €</b>, tasse e costi inclusi, <b>cancellazione gratuita</b>; la data limite si legge prima di pagare. Voto Booking 8,9 su 66 (pulizia 9,2). <a href="https://www.booking.com/hotel/fr/appartement-a-2km-de-disneyland-paris.html?checkin=2026-12-13&checkout=2026-12-17&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">Apri su Booking: 13→17, 2 adulti</a>`,
    `Airbnb, lo stesso appartamento: 489 € (13→17) e 370 € (14→17). La differenza: Airbnb fa pagare la sua commissione a voi, Booking al proprietario.`,
    `Airbnb: tutto rimborsato prima delle <b>15:00 del 29/11</b> (30/11 con 3 notti); metà delle notti fino alle 15:00 del 6/12 (7/12); dopo, niente.`]],
@@ -1685,13 +1698,14 @@ const XX={
    `Farmacia del centro commerciale domenica 10–20.`]],
   ['⚠️ Cosa può andare storto',[`Domenica sera i gestori non vi aspettano all’ora giusta: mandate il messaggio qui sotto appena prenotato e riscrivete domenica dal treno.`,
    `Booking: «ne abbiamo ancora 1 a questo prezzo» (22/11): se vi piace, non aspettate troppo.`]]]}};
+const xxDal=()=>SCE.n?'du 14 au 17':'du 13 au 17'; /* con la notte a Parigi l'alloggio è dal 14 */
 const XXM={ /* messaggio per il gestore, in francese; l'ora di arrivo la mette la pagina dal piano scelto */
- 16:a=>`Bonjour Vincent,\nNous sommes deux adultes, du 13 au 17 décembre. Nous pensons arriver ${a}.\nEst-ce que ce serait possible de déposer nos valises avant 15h ?\nMerci beaucoup et à bientôt !`,
- 23:a=>`Bonjour Philippe et Patricia,\nNous sommes deux adultes, du 13 au 17 décembre. Nous pensons arriver ${a}, après les marchés de Noël à Paris : est-ce que cette heure vous convient pour l’accueil ?\nPourriez-vous aussi nous confirmer s’il y a un four ?\nLe jeudi 17, nous partons vers 8h15 : comment vous rendre les clés ?\nMerci beaucoup et à bientôt !`};
+ 16:(a,dal='du 13 au 17')=>`Bonjour Vincent,\nNous sommes deux adultes, ${dal} décembre. Nous pensons arriver ${a}.\nEst-ce que ce serait possible de déposer nos valises avant 15h ?\nMerci beaucoup et à bientôt !`,
+ 23:(a,dal='du 13 au 17')=>`Bonjour Philippe et Patricia,\nNous sommes deux adultes, ${dal} décembre. Nous pensons arriver ${a}, après les marchés de Noël à Paris : est-ce que cette heure vous convient pour l’accueil ?\nPourriez-vous aussi nous confirmer s’il y a un four ?\nLe jeudi 17, nous partons vers 8h15 : comment vous rendre les clés ?\nMerci beaucoup et à bientôt !`};
 const XXI={16:'Vi chiede di lasciare le valigie prima delle 15:00 e dice a che ora arrivate.',23:'Dice a che ora arrivate e chiede: va bene per l’accoglienza? c’è il forno? giovedì alle 8:15 come lasciamo le chiavi?'};
 const xxArr=id=>{let c=null;try{c=conto({n:SCE.n,d:id})}catch(e){}
  if(SCE.n)return 'le lundi 14 décembre dans la matinée';return c&&c.sunIn?`le dimanche 13 décembre vers ${c.sunIn.replace(':','h')}`:'le dimanche 13 décembre en soirée'};
-const xxBox=h=>{const x=XX[h.id];if(!x)return '';const m=XXM[h.id](xxArr(h.id));
+const xxBox=h=>{const x=XX[h.id];if(!x)return '';const m=XXM[h.id](xxArr(h.id),xxDal());
  return `<details class="more xx"><summary>📋 Tutto sul n. ${h.id}: soldi, arrivo, casa, spesa</summary><div class="in">${x.k.map(([t,L])=>`<p class="xx-t">${t}</p><ul class="xx-l">${L.map(v=>`<li>${v}</li>`).join('')}</ul>`).join('')}
 <p class="xx-t">✉️ Messaggio pronto per ${esc(x.host.replace(' et ',' e '))}</p><p class="small muted">In francese, da mandare dall’app Airbnb. ${XXI[h.id]} L’ora la prende dal vostro piano.</p><pre class="xx-msg">${esc(m)}</pre><div class="sc-act"><button type="button" class="btn ghost" data-copia="1">Copia il messaggio</button></div></div></details>`};
 const card=h=>`<article class="card${h.id===MIO?' is-rec':''}${hidN('d-'+h.id)?' nas-on':''}" id="al-${h.id}">${hidN('d-'+h.id)?'<p class="nas-tag">🙈 Nascosto dai vostri elenchi</p>':''}
@@ -1742,6 +1756,7 @@ const T=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,
 const RER_GO=["A","Direzione Marne-la-Vallée–Chessy, 1 fermata, 3 minuti. Treni ogni 5–8 minuti al mattino. Ticket 2,55 €."];
 const RER_BACK=["A","Da Chessy verso Val d'Europe, 3 minuti: dopo le 22:00 un treno circa ogni 15 minuti, l'ultimo alle 0:22 (orario di inizio dicembre)."];
 const RER_THU_VDE=["A","Direzione Parigi, treno delle <b>8:24 o 8:30</b>, fino a Gare de Lyon (8:59–9:06). Alcuni treni del mattino non fermano a Val d'Europe: guardate il tabellone."];
+const thuCH=()=>P.thu.includes(RER_THU_CH); /* giovedì da Chessy? Lo dice la strada del giovedì (il n. 1 domenica arriva a Val d'Europe, giovedì parte da Chessy) */
 const RER_THU_CH=["A",`Da Chessy direzione Parigi, treno delle <b>8:21 o 8:27</b> ${B.es()}, fino a Gare de Lyon in circa 40 minuti.`];
 const vde=(min,o)=>{const mt=o.mt||min;return Object.assign({sunSt:"VDE",mode:"rer",out:T(r5(492-min)),
  go:[["w",`Fino alla stazione Val d'Europe, circa ${mt} minuti a piedi ${B.es()}`],RER_GO],
@@ -2021,7 +2036,7 @@ const mkDays=()=>[
   {t:"09:50",ti:"In terminal",d:"Quasi 3 ore prima del volo (Volotea chiede almeno 2 ore e mezza). Banco Volotea chiude alle 12:10, imbarco dalle 12:05, gate chiuso alle 12:25."},
   {t:"12:45",ti:"Volo Orly → Olbia",d:"Arrivo alle 14:45."}
  ],
- foot:`<p class="note"><b>Ultimo treno sicuro:</b> ${P.sunSt==='CH'?"8:44 da Chessy":"8:47 da Val d'Europe"}: a Orly 1 verso le 10:10. Con quello delle ${P.sunSt==='CH'?"9:23":"9:26"} arrivate solo 2 ore prima: niente margine. <b>Se la RER A è ferma:</b> taxi o auto con autista fino a Orly, circa 50–110 € ${B.nu()}. Decidete entro le 8:15.</p>`}
+ foot:`<p class="note"><b>Ultimo treno sicuro:</b> ${thuCH()?"8:44 da Chessy":"8:47 da Val d'Europe"}: a Orly 1 verso le 10:10. Con quello delle ${thuCH()?"9:23":"9:26"} arrivate solo 2 ore prima: niente margine. <b>Se la RER A è ferma:</b> taxi o auto con autista fino a Orly, circa 50–110 € ${B.nu()}. Decidete entro le 8:15.</p>`}
 ];
 const MEGA=()=>{const F=P.spa||P.by22;return `<div class="mine is-rec mega" id="mega">
  <span class="rec">${STAR}Il mio mega consiglio</span>
@@ -2144,11 +2159,62 @@ const dormeDi=d=>{const h=AL.find(x=>x.id===CHO),nm=h?`n. ${h.id} · ${esc(h.n)}
  const chi=par?`${esc(PN.n)} <span class="muted">(Parigi)</span>`:nm;
  const tx=ul?`🧳 Si parte da${SCELTO?'l':'l mio consiglio,'} ${nm}`:SCELTO?`🛏️ Stanotte dormite qui: ${chi}`:`🛏️ Stanotte: ${chi} <span class="muted">· è il mio consiglio, non l’avete ancora scelto</span>`;
  return `<p class="dorme-day">${tx} · <a href="#scegli">${SCELTO?'cambia':'scegliete voi'} ›</a></p>`};
+/* C24 pezzo 2 · riquadro «Il vostro alloggio» in cima ai Giorni (Mario 22/11 19:28, DOMANDA 3 → 1: come si entra, domenica sera, giovedì, cancellazione con promemoria, messaggio per il gestore).
+   Solo dati che la pagina ha già, con le loro fonti: AL[].sun (come si entra), Q (prezzo e cancellazione del piano), ACC e DAYS (strade e orari), XX/XXM (n. 16 e 23). */
+const vaTx=x=>String(x||'').replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
+const vaEntra=h=>{const s=h.sun||'';if(REC.includes(h.id))return['🛎️','Reception'];if(/gestore di persona|vi accoglie/.test(s))return['🤝','Vi accoglie il gestore, di persona'];if(/cassetta/.test(s))return['🔑','Cassetta delle chiavi'];if(/codic|smart lock|serratura|autonomo/.test(s))return['🔢','Ingresso autonomo, col codice'];return['🕘','Come si entra ve lo scrive il gestore dopo la prenotazione']};
+const vaOra=h=>!REC.includes(h.id)||/comunicat|scrivete|avvisate|concordat/.test(h.sun||''); /* l'ora d'arrivo va scritta prima: senza reception, o quando l'alloggio lo chiede */
+const vaSun=(h,en)=>String(h.sun||'').replace(/^Libero[^.]*\.\s*/,'')+(en[0]==='🕘'?' '+en[1]+'.':''); /* «Libero dal 13» non serve più quando l'avete scelto */
+const VA_GG=['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+/* cancellazione dalla nota del prezzo del piano (Q) o dell'hotel di Parigi: data → promemoria il giorno prima alle 9:00 */
+const vaCanc=t=>{t=vaTx(t);let m,g=0,me=0,h='';
+ if(/24 ore/.test(t))return{tx:'Gratis solo nelle prime 24 ore dopo la prenotazione'+((m=/poi (rimborso parziale fino al \d{1,2}\/\d{1,2})/.exec(t))?', poi '+m[1]:'')+'.'};
+ if((m=/fino alle (\d{1,2}:\d\d) del (\d{1,2})\/(\d{1,2})/.exec(t))){h=m[1];g=+m[2];me=+m[3]}
+ else if((m=/gratuita fino (?:al |all[’'])(\d{1,2})\/(\d{1,2})(?: alle (\d{1,2}:\d\d))?/i.exec(t))){g=+m[1];me=+m[2];h=m[3]||''}
+ else if((m=/gratuita prima (?:del |dell[’'])(\d{1,2})\/(\d{1,2})/i.exec(t))){const d=new Date(2026,+m[2]-1,+m[1]-1);g=d.getDate();me=d.getMonth()+1}
+ else if(/non rimborsabile/i.test(t))return{tx:'Non rimborsabile: prenotate solo quando le date sono sicure.'};
+ else if(/gratuita/i.test(t))return{tx:'Gratuita: la data limite si legge prima di pagare.'};
+ else return{tx:'Da leggere prima di prenotare.'};
+ const d=new Date(2026,me-1,g),r=new Date(2026,me-1,g-1,9),now=new Date();
+ if(new Date(2026,me-1,g,23,59)<now)return{tx:`Gratis fino al ${g}/${me}: data già passata.`};
+ return{tx:`Gratis fino a ${VA_GG[d.getDay()]} ${g}/${me}${h?' alle '+h:''}.`,g,me,rg:r.getDate(),rm:r.getMonth()+1,cal:r>now?`2026${String(r.getMonth()+1).padStart(2,'0')}${String(r.getDate()).padStart(2,'0')}`:''}};
+const vaIcs=s=>String(s).replace(/([\\,;])/g,'\\$1').replace(/\n/g,'\\n');
+/* promemoria: Google Calendar (sui telefoni Android) e file .ics per gli altri calendari (iPhone, Outlook); 9:00 di Parigi = 8:00 UTC in dicembre */
+const vaCal=(k,chi)=>{if(!k.cal)return'';const ti=`Cancellazione gratuita in scadenza (${k.g}/${k.me}): ${chi}`,de=`La cancellazione gratuita di ${chi} scade il ${k.g}/${k.me}: l’ora esatta è nell’app dove avete prenotato. Se cambiate idea, cancellate oggi. Da Parigi in tasca.`,a=k.cal+'T080000Z',b=k.cal+'T081500Z';
+ const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Parigi in tasca//IT','BEGIN:VEVENT',`UID:pdn-canc-${k.cal}-${chi.replace(/\W+/g,'')}@parigi-in-tasca`,`DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').slice(0,15)}Z`,`DTSTART:${a}`,`DTEND:${b}`,`SUMMARY:${vaIcs(ti)}`,`DESCRIPTION:${vaIcs(de)}`,'BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${vaIcs(ti)}`,'TRIGGER:-PT0M','END:VALARM','END:VEVENT','END:VCALENDAR'].map(l=>l.replace(/(.{70})(?=.)/g,'$1\r\n ')).join('\r\n')+'\r\n';
+ return `<span class="va-cal"><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=${encodeURIComponent(ti)}&amp;dates=${a}/${b}&amp;details=${encodeURIComponent(de)}" target="_blank" rel="noopener">📅 Promemoria ${[1,8,11].includes(k.rg)?'l’':'il '}${k.rg}/${k.rm} alle 9:00 (Google Calendar)</a><a href="data:text/calendar;charset=utf-8,${encodeURIComponent(ics)}" download="promemoria-cancellazione.ics">file .ics per gli altri calendari</a></span>`};
+/* messaggio in francese per il gestore: n. 16 e 23 col testo loro (XXM), gli altri con questo; l'ora e le date dal piano */
+const vaMsg=h=>{const a=xxArr(h.id);if(XXM[h.id])return XXM[h.id](a,xxDal());const tq=P.thuT.replace(/^0/,'').replace(':','h');
+ return `Bonjour,\nNous sommes deux adultes, ${xxDal()} décembre. Nous pensons arriver ${a}${SCE.n?'':', après les marchés de Noël à Paris'} : est-ce que cette heure vous convient ?${REC.includes(h.id)?'':`\nLe jeudi 17, nous partons vers ${tq} : comment vous rendre les clés ?`}\nMerci beaucoup et à bientôt !`};
+const vaTreno=()=>{const c=conto(SCE),o=((c&&c.sunIn)||P.sunT).replace(':','h');return `Bonjour, nous sommes dans le RER : nous serons à l’appartement vers ${o}. À tout à l’heure !`};
+const vaCopia=t=>`<div class="in va-mm"><pre class="xx-msg">${esc(t)}</pre><div class="sc-act"><button type="button" class="btn ghost" data-copia="1">Copia il messaggio</button></div></div>`;
+const vaHtml=()=>{const h=AL.find(x=>x.id===CHO);if(!h)return'';const c=conto(SCE),en=vaEntra(h),rec=REC.includes(CHO),d0=DAYS[0],x=XX[CHO]||{},nav=P.mode==='nav',bus=/bus/.test(P.mode),nm=`n. ${h.id} · ${esc(h.n)}`,rows=[];
+ let op=true;try{op=localStorage.getItem('pdn-va')!=='0'}catch(e){}
+ const R=(k,v)=>rows.push(`<li><span class="va-k">${k}</span>${v}</li>`),mp=q=>`<a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Maps</a>`;
+ if(PN){const m=monB(PN,CHO);
+  R('🌙 Domenica notte a Parigi',`<b>${esc(PN.n)}</b>. ${esc(PN.ci)} ${esc(PN.dep)} Le valigie le lasciate lì alle 9:00 e la sera niente treni: agli Champs-Élysées quanto volete.`);
+  R(`${en[0]} Da lunedì: ${nm}`,vaSun(h,en));
+  R('🧳 Lunedì mattina',`Uscite alle ${T(m.out).replace(/^0/,'')} con le valigie, RER A fino a ${SN[DV[CHO][0]]}. Valigie ${esc(P.al)}: ${rec?'alla reception':`chiedete prima al gestore se potete lasciarle ${B.nc('da chiedere')}`}.`)}
+ else{const rer=d0.post.find(y=>/^RER A/.test(y.ti)),ck=d0.post.find(y=>/^Check-in/.test(y.ti)),ora=ck?ck.t:P.sunT,rt=rer?rer.t:'';
+  R(`${en[0]} Come si entra`,vaSun(h,en));
+  R('🌙 Domenica sera',P.spa?`Giro dei mercatini più svelto: metro 1 alle 18:50 e RER A delle ${rt}, in hotel verso le ${ora}, spa dalle 20:20.`:P.by22?`Giro dei mercatini più svelto: metro 1 alle 18:50 e RER A delle ${rt}, ${esc(P.al)} verso le ${ora} ${B.es()}. Arrivi solo fino alle 22:00.`:`Champs-Élysées fino alle ${d0.full[d0.full.length-1].t}, valigie dagli armadietti della Gare de Lyon (chiudono alle 22:00), RER A delle ${rt}${bus?' e poi il bus':nav?' e poi la navetta':''}: ${esc(P.al)} verso le ${ora} ${B.es()}.${bus||nav?`<span class="va-s">${P.sunLeg.map(l=>l[1]).join(' ')}</span>`:''}`)}
+ R('✈️ Giovedì 17',`Uscite ${esc(P.da)} alle ${P.thuT.replace(/^0/,'')} con le valigie${rec?'':': chiedete al gestore dove lasciare le chiavi'}. Ultimo treno sicuro: ${thuCH()?'8:44 da Chessy':"8:47 da Val d'Europe"}.`);
+ const cs=[];if(PN)cs.push([PN.n,PN.pl]);if(c)cs.push([`n. ${h.id} ${h.n}`,c.q[1]]);
+ R('💶 Cancellazione',cs.length?cs.map(([chi,t])=>{const k=vaCanc(t);return `<span class="va-c">${PN?`<b>${esc(chi)}</b>: ${k.tx[0].toLowerCase()+k.tx.slice(1)}`:k.tx} <span class="muted small">(${esc(vaTx(t))})</span>${vaCal(k,chi)}</span>`}).join(''):`Nella <a href="#al-${h.id}">scheda del n. ${h.id}</a>.`);
+ const ad=x.ad||(P.a===VDE?'':P.a);
+ R('📍 Indirizzo',(PN?`${esc(PN.n)} · ${mp(PN.a)}<br>`:'')+(ad?`${esc(ad)}${x.adF?` <span class="muted small">(${x.adF})</span>`:''} · ${mp(ad)}`:`L’indirizzo esatto arriva dopo la prenotazione. Zona: stazione Val d’Europe · ${mp(VDE)}`));
+ const host=en[0]==='🤝',msg=vaOra(h)?`<details class="va-m"><summary>✉️ Messaggio pronto per ${esc(x.host?x.host.replace(' et ',' e '):'il gestore')}</summary><div class="in"><p class="small muted">In francese, da mandare dall’app dove avete prenotato. ${XXI[CHO]||`Dice quando arrivate e chiede se va bene${rec?'':', e come lasciare le chiavi giovedì mattina'}.`} L’ora la prende dal vostro piano.</p>${vaCopia(vaMsg(h))}${host&&!PN?`<p class="small"><b>Domenica dal treno</b>, con l’ora giusta:</p>${vaCopia(vaTreno())}`:''}</div></details>`:'';
+ return `<details class="va-box" id="vaDet"${op?' open':''}><summary><span>🏨 ${SCELTO?'Il vostro alloggio':'Dove dormite: il mio consiglio'}<small class="va-n">${PN?esc(PN.n)+' (Parigi) + ':''}${nm}</small></span></summary><div class="in"><ul class="va-l">${rows.join('')}</ul>${msg}<p class="small"><a href="#scegli">${SCELTO?'Cambia dove dormire':'Scegliete voi dove dormire'} ›</a></p></div></details>`};
+const vaRender=()=>{const el=document.getElementById('vaBox');if(el)el.innerHTML=vaHtml()};
+document.addEventListener('toggle',e=>{if(e.target.id==='vaDet')try{localStorage.setItem('pdn-va',e.target.open?'1':'0')}catch(x){}},true);
+/* domenica secondo l'alloggio (piano della guida, punto 3): se l'ora d'arrivo va scritta prima, avviso in cima con l'ora del piano */
+const domAvv=()=>{if(PN)return'';const h=AL.find(x=>x.id===CHO);if(!h||!vaOra(h))return'';const x=XX[CHO]||{},c=conto(SCE),ora=(c&&c.sunIn)||P.sunT,host=vaEntra(h)[0]==='🤝';
+ return `<div class="callout va-dom" role="note"><p><b>${host?'🤝 Stasera vi aspetta il gestore, di persona':'🔑 L’ora d’arrivo va scritta prima al gestore'}</b>: arrivo verso le ${ora} ${B.es()}. ${x.ora||'Scrivetelo appena prenotato.'} Il messaggio in francese è pronto in <a href="#vaBox">«Il vostro alloggio»</a>.</p>${host?`<p class="small">Se vi vuole prima: col percorso «Stanchi o pioggia» siete all’alloggio verso le 19:30–20:00 ${B.es()}.</p>`:''}</div>`};
 const renderDays=()=>{DAYS=mkDays();if(PN)parSun(DAYS[0]);else if(P.spa||P.by22)spaSun(DAYS[0]);let html='';
 DAYS.forEach((d,i)=>{
  let body;
  if(d.id==="dom"){
-  body=`${MEGA()}<ol class="tl">${d.pre.map(item).join('')}</ol>
+  body=`${domAvv()}${MEGA()}<ol class="tl">${d.pre.map(item).join('')}</ol>
   <p class="t" style="font-weight:700;margin-top:var(--s2)">Che percorso fate?</p>
   <div class="switch" role="group" aria-label="Percorso della domenica"><button type="button" id="rFull" aria-pressed="true">Percorso completo</button><button type="button" id="rShort" aria-pressed="false">Stanchi o pioggia</button></div>
   <div id="routeFull"><p class="small muted" style="margin-bottom:var(--s3)">Circa 8–9 km a piedi. ${d.cutNote}</p><ol class="tl">${d.full.map(item).join('')}${d.post.map(item).join('')}</ol></div>
@@ -2157,7 +2223,7 @@ DAYS.forEach((d,i)=>{
  html+=`<div class="panel" role="tabpanel" id="p-${d.id}" aria-labelledby="t-${d.id}" ${i?'hidden':''}><div class="day-head"><p class="kicker">${d.mood==="market"?"Mercatini e città":"Parchi"}</p><h3>${esc(d.h)}</h3><p class="muted">${esc(d.sub)}</p>${dormeDi(d)}${d.id==="dom"?`<svg class="market" viewBox="0 0 400 112" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${MK.mini(400,112,1)}</svg>`:""}</div>${body}</div>`;
 });
 $('#panels').innerHTML=html;
- const rF=$('#rFull'),rS=$('#rShort');rF.addEventListener('click',()=>route(false));rS.addEventListener('click',()=>route(true));if(SHORT)route(true,1)};
+ const rF=$('#rFull'),rS=$('#rShort');rF.addEventListener('click',()=>route(false));rS.addEventListener('click',()=>route(true));if(SHORT)route(true,1);vaRender()};
 /* C19 · nei giorni Disney il riquadro della guida Disneyland di Mario (stesso link del tasto della schermata principale) */
 function dlBox(){const a=document.getElementById('dlApp');return a?`<div class="callout dlGiorno"><p><b>🏰 Guida Disneyland</b> · giochi, show, personaggi, cibo e orari di oggi, nella vostra app dei parchi.</p><a href="${a.getAttribute('href')}" target="_blank" rel="noopener">Apri la guida Disneyland ›</a></div>`:''}
 renderDays();
