@@ -48,10 +48,10 @@ Testo da incollare:
 
 ## Messaggi di Mario di questa sessione
 Controllo Da fare: 0 voci aggiunte (ogni richiesta ha già la sua voce 👁 o 🐞).
-- 22/11 11:4x · foto della mappa col buco grigio → v29 (pezzi richiesti di nuovo)
-- 22/11 11:5x · «Vedi qua la foto è coperta, l'immagine.» (foto) → DOMANDA 1 con 2 proposte
-- 22/11 ~11:55 · «Conta che vabbè, la giornata di priorità…» (priorità dei giorni, vai da solo, indice, numero di versione, aggiorna, «quella a sinistra, quella sotto») → v26; giovedì = Prossimi passi 2
-- 22/11 ~12:00 · «No, facciamo quella che consigli tu, scusa, foto 2…» → v27
-- 22/11 12:02 · «Vedi qua che l'indice, mettimi gli shortcut…» (foto) → v28
-- 22/11 12:08 · «Quando parlo di schermata principale intendo questa…» (foto) → v28
-- 22/11 ~12:12 · slitta nel cielo (foto di riferimento) → C18, Prossimi passi 1
+- 2026-11-22 11:40 · foto della mappa col buco grigio → v29 (pezzi richiesti di nuovo)
+- 2026-11-22 11:49 · «Vedi qua la foto è coperta, l'immagine.» (foto) → DOMANDA 1 con 2 proposte
+- 2026-11-22 11:52 · «Conta che vabbè, la giornata di priorità…» (priorità dei giorni, vai da solo, indice, numero di versione, aggiorna, «quella a sinistra, quella sotto») → v26; giovedì = Prossimi passi 2
+- 2026-11-22 12:00 · «No, facciamo quella che consigli tu, scusa, foto 2…» → v27
+- 2026-11-22 12:04 · «Vedi qua che l'indice, mettimi gli shortcut…» (foto) → v28
+- 2026-11-22 12:08 · «Quando parlo di schermata principale intendo questa…» (foto) → v28
+- 2026-11-22 12:12 · slitta nel cielo (foto di riferimento) → C18, Prossimi passi 1
