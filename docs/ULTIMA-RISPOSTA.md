@@ -1,9 +1,7 @@
-# Ultima risposta di Claude (22/11/2026 10:50 ora italiana)
+# Ultima risposta di Claude (22/11/2026 17:12 ora italiana)
 
-Ho capito: «Controllo 5» ha finito le 3 verifiche sugli hotel. Da fare per me non c'è niente.
+Ti dico solo cosa manca alla DOMANDA 1. 📌 È l'aggiornamento della pagina di dicembre sul sito, quella che apri sul telefono: dentro c'è l'albero nuovo e la Torre Eiffel nuova. Scelte: 1 · pubblica · 2 · prima dei ritocchi.
 
-───
-✅ **FATTO** (lavoro di «Controllo 5», versione 22 online)
-- **Astra**: tiene le valigie gratis solo il giorno in cui arrivi o riparti. Per la notte no.
-- **Saint-Pétersbourg**: tiene le valigie gratis per qualche ora. La spa (centro benessere) apre dalle 9 alle 19, solo su prenotazione, e costa 60 € l'ora. La pagina diceva 9–23 (da un sito turistico): ora è corretta. L'errore è segnato nel registro degli errori (docs/ERRORI.md).
-- **Airbnb di David (n. 21)**: si cancella gratis solo fino a 24 …
+Ho messo il titolo giallo (aspetto te). Non ho corretto la riga in `docs/DA-FARE.md`, così non mi scontro con l'altro account. La correggo appena mi dici di andare avanti.
+
+Aspetto le tue risposte.
