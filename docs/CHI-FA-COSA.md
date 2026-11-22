@@ -6,7 +6,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
 | Principale | cerchi | 🟢 🟡 🔴 ⚫ | 22 | session_01WTjqUtegBCzTHdbgdaXDm1 | — |
-| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 3 | session_01WTjqUwRSHUqXvqRfjgFGFA | — |
+| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 4 | session_01WTjqUuicbA1iGVJV2srBYv | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
@@ -19,5 +19,5 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C9 | Principale 15 | Testata: casette intere e Torre Eiffel visibile scorrendo; scritte sovrapposte nei costi e barra in alto (v10), prove automatiche | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js` | 21/11 |
 | C11 | Principale 16 | La pagina fa scegliere dove dormire (domenica a Parigi o no + hotel vicino a Disney) e cambia giorni, costi e tutto | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C11-scelta-alloggio-pagina.md` | 21/11 |
 | C12 | Controllo 3 (da Controllo 1) | Ricerca profonda alloggi 13→17 e 14→17, poi v18 (consiglio 13→17, n. 31–35, camera di Bussy) | `research_notes/…/alloggi_ricerca_profonda_*.md`, `docs/lavori-in-corso/C12-ricerca-profonda-alloggi.md` | 22/11 |
-| C13 | Controllo 3 | Grafica della pagina di dicembre rifatta a pezzi (DOMANDA 1 = «a pezzi»), primo la scheda Dormire, foto prima/dopo | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C13-aspetto-pagina.md` | 22/11 |
-| C14 | Controllo 3 | Alloggi su siti diretti e privati, giro 2 (3 aiutanti con browser) | `research_notes/…/alloggi_siti_diretti_2_*.md`, `docs/lavori-in-corso/C14-siti-diretti-giro-2.md` | 22/11 |
+| C13 | Controllo 4 (da Controllo 3) | Grafica della pagina di dicembre rifatta a pezzi (DOMANDA 1 = «a pezzi»), primo la scheda Dormire, foto prima/dopo | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C13-aspetto-pagina.md` | 22/11 |
+| C14 | Controllo 4 (da Controllo 3) | Alloggi su siti diretti e privati, giro 2 (3 aiutanti con browser) | `research_notes/…/alloggi_siti_diretti_2_*.md`, `docs/lavori-in-corso/C14-siti-diretti-giro-2.md` | 22/11 |
