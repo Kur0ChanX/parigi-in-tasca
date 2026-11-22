@@ -836,6 +836,18 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 .apps2 .dlApp{margin-top:0;padding:10px;gap:8px;min-width:0}
 .apps2 .dlApp i{font-size:1.4rem}.apps2 .dlApp b{font-size:.98rem;line-height:1.15}.apps2 .dlApp em{display:none}
 .apps2 .dlApp small{font-size:.76rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* C24 · tre riquadri affiancati: icona e titolo in alto, sotto una riga corta; stessa altezza di prima */
+.apps2.tre{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.apps2.tre .dlApp{display:grid;grid-template-columns:auto 1fr;align-content:start;column-gap:5px;row-gap:3px;padding:8px 7px}
+.apps2.tre .dlApp i{font-size:1.1rem;align-self:start}
+.apps2.tre .dlApp span{display:contents}
+.apps2.tre .dlApp b{font-size:.84rem;line-height:1.12;align-self:center}
+.apps2.tre .dlApp small{grid-column:1/-1;font-size:.7rem;line-height:1.2}
+.apps2.tre .dlApp small.ro-cs{gap:4px;margin-top:1px}
+.apps2.tre .dlApp .ro-c{padding:0 5px;font-size:.68rem}
+.apps2.tre .dlApp.roApp{gap:0;column-gap:5px}
+.apps2 .scApp{background:linear-gradient(135deg,rgb(246 201 100 / .5),rgb(246 201 100 / .22))}
+.apps2 .scApp small b{font-size:inherit;font-weight:800}
 </style>
 
 <div class="bokeh" aria-hidden="true"></div>
@@ -907,10 +919,12 @@ const VERSIONI=[
    <a href="#hoteldisney"><i>🏰</i>Hotel Disney<small>Dentro e vicino ai parchi</small></a>
   </nav>
   <!-- C19 · la guida Disneyland di Mario (Mario 22/11 ~16:2x «sono due app abbinate, questa e quella di Disneyland»): il link porta i giorni del viaggio (14–16/12, 3 giorni, 2 persone, tutti e due i parchi); ogni telefono tiene il suo profilo e i suoi preferiti. Unico posto del link: lo legge anche il JS dei giorni Disney. -->
-  <div class="apps2">
+  <div class="apps2 tre">
   <a class="dlApp" id="dlApp" href="https://guida-disneyland-ynoy.pages.dev/?d=2026-12-14&amp;n=3&amp;a=2&amp;p=t.t.t&amp;prova=idee" target="_blank" rel="noopener"><i>🏰</i><span><b>Guida Disneyland</b><small>La vostra app dei parchi</small></span><em aria-hidden="true">›</em></a>
   <!-- C21 · rosa degli alloggi (Mario 22/11 17:56 «metti il tasto Rosa alloggi nella home e lì mi fai mettere la rosa»): porta al passo 2 di «Scegli» con la sola rosa e le spunte per cambiarla; scritte dal JS (rosaHome) -->
   <a class="dlApp roApp" id="roApp" href="#sc2"><i>⭐</i><span><b>Rosa alloggi</b><small>Gli alloggi da guardare da vicino</small></span><em aria-hidden="true">›</em></a>
+  <!-- C24 · «Scegli dove dormire» (Mario 22/11 ~19:5x, DOMANDA 1 → tre riquadri affiancati): apre il passo 2 con la rosa e le schede aperte per confrontare; sotto, l’alloggio di adesso (scritte dal JS: scHome) -->
+  <a class="dlApp scApp" id="scApp" href="#sc2"><i>🛏️</i><span><b>Scegli dove dormire</b><small>Cambia tutto l’itinerario</small></span><em aria-hidden="true">›</em></a>
   </div>
   <p class="go-more"><a href="#fonti">Fonti</a></p>
  </div>
