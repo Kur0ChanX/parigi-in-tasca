@@ -2604,9 +2604,14 @@ document.querySelectorAll('#mercatini h3.mk-h3').forEach(h=>{const l=h.nextEleme
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a||a.classList.contains('st'))return;const id=decodeURIComponent(a.getAttribute('href').slice(1));if(!id)return;if(go(id,true))e.preventDefault()},true);
 /* se il motore porta lo schermo su una parte nascosta (es. una scheda d'alloggio dai costi), prima apre la sua scheda */
 {const siv=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(o){const c=this.closest&&this.closest('#hotelCards>.card');if(c&&c.id&&document.body.dataset.card!==c.id)openCard(c.id,1);const k=tabOf(this);if(k&&k!==cur)show(k,{keep:true});return siv.call(this,o)}}
-let first=null;try{first=localStorage.getItem('pdn-scheda')}catch(e){}
+/* C25 (Mario 22/11 ~19:4x «la pagina si deve aprire quando clicco nellapp sempre nella schermata principale Piano in cima»): si apre SEMPRE sul Piano, in cima
+   (prima riapriva l’ultima scheda). Un link con # (mandato da qualcuno) porta ancora lì. Tornando all’app dopo più di 30 minuti: Piano in cima;
+   dopo pochi minuti (es. un salto su Maps o WhatsApp) resta dov’era. */
+try{history.scrollRestoration='manual'}catch(e){}
 const h=decodeURIComponent(location.hash.slice(1));
 if(h&&document.getElementById(h)){show(tabOf(document.getElementById(h))||'piano',{keep:true});requestAnimationFrame(()=>document.getElementById(h).scrollIntoView({block:'start'}))}
-else show(first||'piano',{keep:true});
+else{show('piano',{keep:true});scrollTo(0,0)}
+{let nascostaDa=0;document.addEventListener('visibilitychange',()=>{if(document.hidden){nascostaDa=Date.now();return}
+ if(nascostaDa&&Date.now()-nascostaDa>30*60*1000&&!document.body.dataset.card){show('piano',{keep:true});scrollTo(0,0)}nascostaDa=0})}
 })();
 </script>

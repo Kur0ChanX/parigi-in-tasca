@@ -59,3 +59,4 @@
 
 ## Scelte in corsa
 - Fable non serve: la logica c'è già (profili `ACC`), si tratta di renderla chiara; nessun dato vero o soldi in gioco.
+- Mario 22/11 ~20:1x: «Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata» → C24 prima di tutto; la v41 porta anche le correzioni della testata già fatte (C23).

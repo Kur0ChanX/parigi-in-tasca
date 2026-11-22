@@ -138,6 +138,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const sbagliati = [...new Set(ids)].filter((id) => !new RegExp(`\\b${id}\\b`).test(src));
     ok('Airbnb: ogni link porta al numero d\'annuncio scritto nella pagina (niente arrotondati)', ids.length >= 11 && sbagliati.length === 0); if (sbagliati.length) console.log(sbagliati);
   }
+  // C24 (Mario 22/11 19:28, DOMANDA 2 → 1): il passo 2 parte dalla rosa (n. 16 e 23); le prove che seguono contano tutti e 35 → prima «Tutti»
+  await q.evaluate(() => { const t = document.querySelector('#scegli [data-ro-f="0"]'); if (t) t.click(); });
   // ordine a 4 pulsanti (Mario 21/11 23:5x): meno cari, vicino a Disney, vicino alla RER, più puliti, nelle due liste
   {
     const ord = await q.evaluate(async () => {
@@ -321,12 +323,13 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       return r;
     });
     const okA = av.riq && av.vis && av.pall === 'biglietti,giorni,piano' && av.dopo === 'giorni biglietti,piano true';
-    ok('Scelta dell\'alloggio: riquadro «cambia tutta la pagina», avviso dopo «Scegli questo», pallino su Piano, Giorni, Biglietti; «Vedi Giorni» apre Giorni e toglie il suo pallino', okA); if (!okA) console.log(av);
+    ok('Scelta dell\'alloggio: riquadro «cambia tutta la pagina», avviso dopo «Dormiamo qui», pallino su Piano, Giorni, Biglietti; «Vedi Giorni» apre Giorni e toglie il suo pallino', okA); if (!okA) console.log(av);
   }
   // Mario 22/11 «se uno sceglie perché per sbaglio ci clicca, che lo può annullare»: «↩ Annulla» nell'avviso riporta tutto com'era
   { const u = await c2.newPage(); u.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
     const ls = await q.evaluate(() => localStorage.getItem('pdn-scelta'));
     await u.goto(B + 'dicembre/'); await u.evaluate(() => localStorage.removeItem('pdn-scelta')); await u.reload(); await u.waitForTimeout(800);
+    await u.evaluate(() => { const t = document.querySelector('#scegli [data-ro-f="0"]'); if (t) t.click(); }); // C24: «Tutti» (si parte dalla rosa)
     const an = await u.evaluate(async () => {
       const w = () => new Promise((r) => setTimeout(r, 250)), txt = (s) => (document.querySelector(s) || {}).textContent || '';
       const foto = () => ({ url: new URL(location.href).searchParams.get('scelta'), ls: localStorage.getItem('pdn-scelta'), d: txt('#scNowD'), n: txt('#scNowN'), mio: /Non avete ancora scelto/.test(txt('#scRis')), pal: [...document.querySelectorAll('.tabbar button.nuovo')].map((b) => b.dataset.t).join(',') });

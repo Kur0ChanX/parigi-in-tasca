@@ -1,3 +1,4 @@
-# Ultimo messaggio di Mario (22/11/2026 19:35 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 20:03 ora italiana)
 
-@"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta].mp4" Non  benissimo ancora come puoi vedere
+Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata
+anche nella 39 la vedevo non caticata a volte la luna
