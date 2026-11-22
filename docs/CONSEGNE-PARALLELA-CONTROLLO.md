@@ -18,12 +18,15 @@
 - Un 4° colore con tinta propria per i biglietti: non c'è (solo verde oliva, vicino al verde «meglio») → bianco/nero e grigio.
 
 ## Prossimi passi
+- **PRIORITÀ (Mario 22/11, dopo l'handoff, parole intere in `docs/MESSAGGI-MARIO-PARALLELA.md`):** mappa di Parigi coi mercatini nell'app, per capire dove sono e il percorso; studiata bene per il viaggio. Più avanti: secondo l'hotel scelto, il tragitto e l'itinerario della giornata dalla mattina, senza giri dispersivi. Lavoro grande: occhio critico e, se serve, poche domande prima del codice; la sezione «Mercatini» c'è già (C8). Viene dopo il passo 0 (km) se è corto, sennò prima.
+- **Controllo 6, 22/11 11:07:** passi 0, 1 e 2 FATTI (km visibili, ordini solo per minuti, foto, v23 online con PR #24, sito vero controllato). `kmDT` serve di nuovo (riga 🏰): resta. Aperte solo le voci 👁 (passo 3).
 0. **Mario 22/11 ~11:05 (dopo l'handoff, parole intere in C13):** i km tornano VISIBILI (testi «distanza» delle schede come prima della v23, riga Disney di «Dov'è», e nella riga 🏰 come dato piccolo accanto al «come»), ma ordini e filtri solo per tempo: togliere `kmD` dallo spareggio di «Vicino a Disney» (`SORT` e `SRT`). Prova da aggiornare (n. 8: «16 min» e anche «1,9 km»). Poi foto e v23.
 1. Foto della v23 (Playwright, `dicembre/index.html` servito con `python3 -m http.server`, tema scuro, 412×915, 2x; PRIMA = `git show origin/main:dicembre/index.html` servito con `page.route`, `serviceWorkers: 'block'`): confronto «Quanto costa» (colori nuovi e legenda) e riga Disney in Dormire (senza km); `tools/confronta-foto.py`; foto alte → solo etichetta + parte che conta (hook `foto-check.py`).
 2. v23 online: ramo-copia `versione-v23`, PR non in bozza (giro in locale già verde), unione squash, `git merge origin/main`, nastro, notifica, `send_message` alla Principale, controllo del sito vero.
 3. Voci 👁 di `docs/DA-FARE.md` sezione 1: chiuderle solo quando Mario dice di averle viste. `kmDT` non serve più: toglierlo se `grep` non trova altri usi.
 
 ## Blocchi e rischi
+- **Alla Principale niente `send_message` per le versioni pubblicate** (Principale 22, 22/11 11:08: ogni messaggio le costa un turno; le vede dal nastro e dal ramo). Scriverle solo per un'azione sua o un rischio sui suoi file.
 - Nomi nuovi: prima `grep -c`; funzioni fra i due `<script>` passano da `window`. Prova «service worker suo» a volte instabile: rilanciarla da sola.
 - Le ricerche web portano pagine intere (spreco di token): obiettivi stretti, niente `full_content`.
 

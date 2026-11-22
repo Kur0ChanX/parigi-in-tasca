@@ -12,7 +12,8 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys()
-      .then((k) => Promise.all(k.filter((n) => n !== CASSETTO).map((n) => caches.delete(n))))
+      // solo i propri cassetti vecchi: quelli di dicembre (pagina e mappa) sono della guida di dicembre (C15, 22/11)
+      .then((k) => Promise.all(k.filter((n) => n.startsWith('parigi-in-tasca-') && n !== CASSETTO).map((n) => caches.delete(n))))
       .then(() => self.clients.claim()),
   );
 });
