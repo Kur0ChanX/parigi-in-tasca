@@ -25,6 +25,7 @@
 3. Voci 👁 di `docs/DA-FARE.md` sezione 1: chiuderle solo quando Mario dice di averle viste. `kmDT` non serve più: toglierlo se `grep` non trova altri usi.
 
 ## Blocchi e rischi
+- **Alla Principale niente `send_message` per le versioni pubblicate** (Principale 22, 22/11 11:08: ogni messaggio le costa un turno; le vede dal nastro e dal ramo). Scriverle solo per un'azione sua o un rischio sui suoi file.
 - Nomi nuovi: prima `grep -c`; funzioni fra i due `<script>` passano da `window`. Prova «service worker suo» a volte instabile: rilanciarla da sola.
 - Le ricerche web portano pagine intere (spreco di token): obiettivi stretti, niente `full_content`.
 
