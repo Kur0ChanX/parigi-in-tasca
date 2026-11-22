@@ -861,6 +861,18 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 .apps2.tre .dlApp.roApp{gap:0;column-gap:5px}
 .apps2 .scApp{background:linear-gradient(135deg,rgb(246 201 100 / .5),rgb(246 201 100 / .22))}
 .apps2 .scApp small b{font-size:inherit;font-weight:800}
+/* C26 · «Questo o quello?» scelto da Mario: tasti che vanno a capo, righe una sotto l’altra */
+.qoq-ch{flex-wrap:wrap;overflow:visible}
+.qoq-ch button{min-height:40px;padding:0 12px;font-size:.88rem}
+.qoq-add{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-top:var(--s2)}
+.qoq-add select{min-height:40px;width:100%;min-width:0;max-width:100%;padding:0 10px;border-radius:var(--r-md);border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);font:600 .9rem var(--text)}
+.qoq-in{margin-top:var(--s3)}
+.qoq-r{margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid var(--rule)}
+.qoq-r>b{display:block;margin-bottom:4px}
+.qoq-r li{margin-top:4px;line-height:1.4}
+.qoq-r ul{list-style:none;padding-left:0}
+.qoq-n{display:inline-block;margin-right:6px;padding:1px 8px;border-radius:999px;background:var(--lamp);color:var(--lamp-ink);font-weight:800;font-size:.8rem;white-space:nowrap}
+#duels{overflow-wrap:anywhere}
 </style>
 
 <div class="bokeh" aria-hidden="true"></div>
@@ -870,6 +882,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
+ {v:44,d:'23/11',n:['«Questo o quello?»: scegliete voi gli alloggi da confrontare (si parte da n. 8, 16 e 23), con le differenze riga per riga: prezzo, minuti fino ai parchi, voto, domenica sera, pro e contro.']},
  {v:43,d:'22/11',n:['Treni di domenica sera e di giovedì controllati con gli orari ufficiali della RER A, coi treni di riserva se perdete quello giusto.','N. 23: giovedì si esce alle 8:10 (la stazione è a 700 m); su Booking l’arrivo è entro le 23:00.','Messaggi per i gestori dei n. 16 e 23 più giusti: chiedono come lasciare le chiavi giovedì; le valigie solo se arrivate lunedì mattina.','Moxy: nella scheda anche il prezzo della camera col letto matrimoniale (circa 677 €).','Nel riquadro «Il vostro alloggio» la colazione: in hotel o al Monop’ davanti alla stazione (domenica fino alle 22:00, da lunedì dalle 7:00).','Galeries Lafayette: dal 24/11 sul tetto c’è la pista di pattinaggio, forse la terrazza è solo per chi pattina.','Orly: se giovedì il ticket aeroporto non si carica, all’uscita della metro si paga con la carta (14,80 €).']},{v:42,d:'22/11',n:['In «Giorni», in cima, il riquadro «Il vostro alloggio»: come si entra, treni di domenica e giovedì, cancellazione gratis.','Promemoria della cancellazione nel calendario e messaggio in francese per il gestore, da copiare.','La domenica si adatta all’alloggio scelto: avviso in cima se l’ora d’arrivo va scritta prima.']},{v:41,d:'22/11',n:['L’app si apre sempre sul Piano, in cima.','Schermata principale a tre riquadri: «Scegli dove dormire» apre la vostra rosa con le schede affiancate da confrontare; «🛏️ Dormiamo qui» cambia giorni, strade e orari.','Disegno in alto più nitido, e sta fermo quando allargate la pagina con due dita.']},{v:40,d:'22/11',n:['Disegno in alto più leggero: scorre liscio, la Torre Eiffel resta ferma e l’albero ha il tratto più sottile.']},{v:39,d:'22/11',n:['Tasto «⭐ Rosa alloggi»: sulla stella quanti ne avete scelti, sotto i numeri degli alloggi.']},{v:38,d:'22/11',n:['Tasto «⭐ Rosa alloggi» più pulito: una riga sola con quanti alloggi avete scelto.']},{v:37,d:'22/11',n:['Tasto «⭐ Rosa alloggi» nella schermata principale: lì scegliete voi gli alloggi della rosa, con le spunte o con la ⭐.']},
  {v:36,d:'22/11',n:['Alloggio n. 23: prezzo Booking 461 € con cancellazione gratuita, indirizzo, orari d’arrivo 14–23, asciugamani inclusi.']},
  {v:35,d:'22/11',n:['Alloggi n. 16 e 23: scheda «📋 Tutto sul n.» con soldi, arrivo, casa, spesa la domenica e messaggio pronto per il gestore.','Filtro «⭐ La vostra rosa» fra gli alloggi; n. 23: prezzo su Booking, regole della casa lette (niente cauzione).','Alloggi: tasto «Nascondi» su ogni alloggio, con «Annulla». Gli elenchi mostrano solo quelli che vi interessano.','Alloggi: «Pulisci l’elenco» con una spunta per alloggio; «Rimetti tutti» li fa tornare. L’alloggio scelto resta sempre.','«Manda questa scelta» porta anche gli alloggi nascosti: chi apre il link sceglie se nasconderli anche sul suo telefono.']},
@@ -1599,7 +1612,7 @@ const DUELS=[
  ["N. 16 Nice studio (Airbnb) o n. 8 Moxy?","Con la domenica a Parigi il 16 costa circa 145 € in meno (385 € contro 530 €), è a 1 minuto dal treno invece di 8 e ha il voto più alto (4,95 su 5, 571 recensioni). L'8 ha la reception 24 ore: lunedì mattina le valigie le lasciate lì. Col 16 si entra solo dalle 15: valigie al deposito della stazione di Chessy o accordo col gestore. L'8 si cancella gratis fino al 14/12, il 16 solo nelle prime 24 ore, poi rimborso parziale fino al 7/12. Con 4 notti: 503 € contro 677 €. Volete spendere meno: 16. Volete zero pensieri: 8."],
  ["Un alloggio vicino o il n. 14, hotel Disney?","Il 14 costa circa 2.100 € più del Moxy, solo per la camera. In cambio andate ai parchi a piedi, entrate un'ora prima e avete la piscina. Per me non vale la differenza."]
 ];
-$('#duels').innerHTML=DUELS.map(([q,a])=>`<details><summary>${esc(q)}</summary><div class="in"><p>${esc(a)}</p></div></details>`).join('');
+/* «Questo o quello?»: lo disegna C26 (qoqR, più sotto), quando le funzioni dei minuti ai parchi sono pronte */
 const MIO=8,STAR='<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>';
 /* SCELTA (C11, Mario 21/11 20:52 «quando clicco mi cambia la pagina … l'itinerario e tutto»): domenica notte a Parigi (n) + alloggio vicino a Disney (d) */
 const BKP=s=>`https://www.booking.com/hotel/fr/${s}.it.html?checkin=2026-12-13&checkout=2026-12-14&group_adults=2&group_children=0&no_rooms=1`;
@@ -1944,6 +1957,47 @@ const parkMin=d=>d===14?10:accMin(d)+RA[DV[d][0]].dz+2;
 const arrMin=d=>parkMin(d)+waitMin(d),comeD=d=>{const L=DV[d][1],m=[...new Set(L.map(l=>l[0]==='w'?'a piedi':l[2]==='navetta'?'navetta':'bus'))];if(d!==14&&RA[DV[d][0]].dz)m.push('RER');return m.join(' + ')+(waitMin(d)?' · attese comprese':'')}; /* come si arriva, al posto dei km (Mario 22/11 «Disney non mettere i chilometri, ma quanto ci vuole») */ /* tempo per arrivare ai parchi con l'attesa media di navetta e bus: ordina «Vicino a Disney» (Mario 22/11 10:18 «in ordine di tempo per arrivare, non di chilometri») */
 const walkDay=d=>d===14?20:2*(DV[d][1].filter(l=>l[0]==='w').reduce((x,l)=>x+l[1],0)+2);
 const ppOf=d=>COMMON+LOC[ACC[d].mode];
+/* C26 (Mario 22/11 ~19:4x «nella sezione Questo o quello devo poter scegliere io gli hotel per un confronto non le abbinate prefatte»): confronto fra gli alloggi
+   accesi da Mario, riga per riga; si parte da rosa + mio consiglio + scelta di adesso; salvato su questo telefono ('pdn-qoq'). Le coppie già scritte (DUELS)
+   restano solo come «Il mio parere» quando i loro numeri sono tutti fra quelli accesi. Nessun numero massimo: oltre 4 solo un avviso. */
+const QOQ=new Set();
+{let L=null;try{const v=localStorage.getItem('pdn-qoq');if(v!==null)L=JSON.parse(v)}catch(e){}(Array.isArray(L)?L:[...ROSA,MIO,CHO]).forEach(n=>{if(rosaOk(+n))QOQ.add(+n)})}
+const qoqSalva=()=>{try{localStorage.setItem('pdn-qoq',JSON.stringify([...QOQ].sort((a,b)=>a-b)))}catch(e){}};
+const scN10=s=>{const m=String(s||'').match(/\d+(?:,\d+)?/);if(!m)return null;const v=parseFloat(m[0].replace(',','.'));return /\/5/.test(s)?v*2:v}; /* Airbnb su 5 → su 10, solo per dire chi ha il voto più alto */
+const qoqH=()=>{
+ const cand=[...new Set([...ROSA,MIO,CHO,...QOQ])].filter(rosaOk).sort((a,b)=>a-b),sel=[...QOQ].filter(rosaOk).sort((a,b)=>a-b).map(byId);
+ const chips=cand.map(id=>`<button type="button" data-qoq="${id}" aria-pressed="${QOQ.has(id)}">n. ${id}${ROSA.has(id)?' ⭐':''}${id===MIO?' · consiglio':''}${id===CHO&&SCELTO?' · scelto':''}</button>`).join('');
+ const altri=AL.filter(h=>!cand.includes(h.id)).sort((a,b)=>a.id-b.id).map(h=>`<option value="${h.id}">n. ${h.id} · ${esc(h.n)}</option>`).join('');
+ let o=`<p class="small">Toccate gli alloggi da mettere a confronto: acceso = nel confronto. ⭐ = nella rosa.</p><div class="filters qoq-ch">${chips}</div>`
+  +(altri?`<label class="qoq-add small">＋ Aggiungi un altro <select data-qoq-add aria-label="Aggiungi un alloggio al confronto"><option value="">scegli…</option>${altri}</select></label>`:'');
+ if(sel.length<2)return o+`<p class="note">Accendetene almeno 2 per vedere il confronto.</p>`;
+ if(sel.length>4)o+=`<p class="small muted">Con più di 4 alloggi si legge peggio: potete spegnerne qualcuno.</p>`;
+ const am=h=>{try{const v=arrMin(h.id);return Number.isFinite(v)?v:null}catch(e){return null}};
+ const best=(f,lo)=>{const v=sel.map(f).filter(x=>x!=null);if(!v.length)return [];const b=lo?Math.min(...v):Math.max(...v);return sel.filter(h=>f(h)===b).map(h=>h.id)};
+ const bP=best(h=>h.p,1),bA=best(am,1),bV=best(h=>scN10(h.sc),0);
+ const nn=L=>L.length?L.map(i=>'n. '+i).join(' e '):'—',tg=(id,L,t)=>L.length&&L.length<sel.length&&L.includes(id)?` <span class="bd ok">${t}</span>`:'';
+ const R=(t,f)=>`<div class="qoq-r"><b>${t}</b><ul class="clean">${sel.map(h=>`<li><span class="qoq-n">n. ${h.id}</span>${f(h)}</li>`).join('')}</ul></div>`;
+ o+=`<p class="qoq-in"><b>In breve:</b> spende meno ${nn(bP)} · più vicino ai parchi ${nn(bA)} · voto più alto ${nn(bV)}.</p>`;
+ o+=R('🏷️ Quale',h=>`<b>${esc(h.n)}</b> · ${esc(h.sub)}`);
+ o+=R('💶 4 notti (13→17)',h=>(h.p!=null?esc(h.pr):'libero solo dal 14'+(Q[h.id]&&Q[h.id][1]?` · 3 notti ${Q[h.id][1][0]} €`:''))+tg(h.id,bP,'il meno caro'));
+ o+=R('🏰 Fino ai parchi',h=>{const v=am(h);let c='';try{c=comeD(h.id)}catch(e){}return (v!=null?`circa ${v} minuti`:'—')+(c?` · ${esc(c)}`:'')+tg(h.id,bA,'il più vicino')});
+ o+=R('🚆 Dal treno',h=>h.dist);
+ o+=R('⭐ Voto e pulizia',h=>`${esc(h.sc)} · pulizia ${esc(h.cl)}`+tg(h.id,bV,'voto più alto'));
+ o+=R('🌙 Domenica sera',h=>h.sun);
+ o+=R('↩️ Prezzo e cancellazione',h=>h.pl);
+ o+=R('✅ Pro',h=>h.pro);
+ o+=R('⚠️ Contro',h=>h.con);
+ o+=R('📄 Scheda',h=>`<a href="#al-${h.id}">Apri la scheda del n. ${h.id}</a>`);
+ const ids=new Set(sel.map(h=>h.id)),par=DUELS.filter(([q])=>{const m=[...q.matchAll(/n\. (\d+)/gi)].map(x=>+x[1]);return m.length&&m.every(n=>ids.has(n))});
+ if(par.length)o+=`<div class="qoq-r"><b>💡 Il mio parere su queste coppie</b>${par.map(([q,a])=>`<details><summary>${esc(q)}</summary><div class="in"><p>${esc(a)}</p></div></details>`).join('')}</div>`;
+ return o};
+const qoqR=()=>{const el=document.getElementById('duels');if(!el)return;try{el.innerHTML=qoqH()}catch(e){el.innerHTML=DUELS.map(([q,a])=>`<details><summary>${esc(q)}</summary><div class="in"><p>${esc(a)}</p></div></details>`).join('')}};
+qoqR();window.pdnQoqR=qoqR;
+{const el=document.getElementById('duels');if(el){
+ el.addEventListener('click',e=>{const b=e.target.closest('button[data-qoq]');if(!b)return;const id=+b.dataset.qoq;if(QOQ.has(id))QOQ.delete(id);else QOQ.add(id);qoqSalva();qoqR()});
+ el.addEventListener('change',e=>{const s=e.target.closest('select[data-qoq-add]');if(!s||!s.value)return;const id=+s.value;if(rosaOk(id)){QOQ.add(id);qoqSalva()}qoqR()});
+ document.addEventListener('toggle',e=>{const t=e.target;if(t&&t.open&&t.contains&&t.contains(el)&&!el.contains(t))qoqR()},true); /* rosa o scelta cambiate altrove: i tasti si rifanno quando si apre */
+}}
 const monB=(pn,d)=>{const st=DV[d][0],acc=accMin(d),wt=waitMin(d),dz=RA[st].dz,to=pn.w+5+RS[pn.st][st]+acc+wt,bk=acc+wt+(dz?5+dz:0)+2,out=f5(510-(to+10+bk));return {out,arr:out+to,go:out+to+10}};
 const conto=s=>{const pn=PAR.find(p=>p.id===s.n)||null,q=(Q[s.d]||[])[pn?1:0];if(!q)return null;const a=ACC[s.d],st=DV[s.d][0],al=(pn?pn.p:0)+q[0],tr=2*ppOf(s.d);
  return {pn,q,al,tr,tot:al+544+tr,park:parkMin(s.d),walk:walkDay(s.d),nav:waitMin(s.d),
@@ -2664,7 +2718,7 @@ if(scD){
 {const hw=document.querySelector('#hotel .wrap');if(hw){
  const wrap=(h3,el,t)=>{if(!el)return;const d=document.createElement('details');d.className='more-al';d.innerHTML=`<summary>${t}</summary><div class="in"></div>`;el.before(d);d.querySelector('.in').appendChild(el)};
  wrap(null,document.getElementById('picks'),'Il migliore per ogni desiderio');
- wrap(null,document.getElementById('duels'),'Questo o quello? I confronti a due');
+ wrap(null,document.getElementById('duels'),'Questo o quello? Confrontate voi');
  const h=document.createElement('h3');h.className='al-h';h.textContent='Per decidere meglio';hw.prepend(h);
  const bk=document.createElement('button');bk.type='button';bk.className='cardback';bk.textContent='← Tutti gli alloggi';hw.prepend(bk);
  bk.addEventListener('click',()=>{if(history.state&&history.state.card)history.back();else closeCard()});

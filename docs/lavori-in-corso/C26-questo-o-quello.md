@@ -21,4 +21,6 @@ E (22/11 ~23:16): le scelte sono solo tre, n. 8 Moxy, n. 16 e n. 23 (C22).
 - Fable non serve: dati e funzioni ci sono già, è un pezzo di pagina.
 
 ## Stato
-- [ ] codice + prova «C26» in `tools/prova-web-app.js` + foto a Mario (cambia l’aspetto) → poi versione nuova.
+- [x] codice (C26 in `dicembre/parigi-disney-natale.html`: `QOQ`, `qoqH`, `qoqR`, CSS `.qoq-*`) e prova «C26» in `tools/prova-web-app.js`; v44 nelle novità.
+- [x] foto a Mario: `archivio/2026-11-23-c26-questo-o-quello/c26-dopo-1.png` e `-2.png` (DOMANDA 2 in «Aspetta Mario»).
+- [ ] risposta di Mario → giro completo → v44 sul sito (dopo la v43).
