@@ -1,12 +1,14 @@
-# Ultima risposta di Claude (22/11/2026 01:37 ora italiana)
+# Ultima risposta di Claude (22/11/2026 10:27 ora italiana)
 
-Ho capito: avvio della Controllo 4. Il lavoro aspetta la tua risposta alla DOMANDA 1.
-
-🛑 **DOMANDA 1** (fatta dalla Controllo 3): ti piace il nuovo aspetto della scheda Dormire? Rispondi col numero: 1 · pubblica e usa lo stesso stile negli altri pezzi · 2 · più corta · 3 · ritocca · 4 · com'era. Le foto sono nella chat della Controllo 3. Quando scrivi, te le rimando qui.
-
-🧠 Continuo con Opus 5.5 · Extra, come la sessione precedente. Fable non serve: c'è solo da seguire un piano già fatto, un pezzo alla volta.
+Ho capito: tutta la grafica fatta e pubblicata, con le tue tre correzioni.
 
 ───
 ✅ **FATTO**
-- Avvio finito. Il ramo è uguale a quello su GitHub.
-- Ho …
+- **La v20 è online.** L'ho controllata sul sito vero. Dentro ci sono queste novità:
+
+| Dove | Cosa cambia |
+|---|---|
+| Dormire | «Vicino a Disney» mette in fila per **minuti per arrivare** ai parchi. Il tempo conta anche l'attesa media di navetta e bus |
+| Dormire | **Hotel Disney rosa**: gli hotel normali restano azzurri |
+| Dormire | In fondo a ogni scheda c'è **«Vedi i dettagli ⌄»**. Quando la scheda è aperta diventa «Chiudi i dettagli» |
+| Dormire | Il passo «Domenica 13» ha lo stesso stile del …
