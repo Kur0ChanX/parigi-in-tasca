@@ -497,6 +497,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const c6 = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const u6 = await c6.newPage();
       u6.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
       await u6.goto(B + 'dicembre/'); await u6.waitForTimeout(1200);
+      await u6.evaluate(() => { const t = document.querySelector('#scegli [data-ro-f="0"]'); if (t) t.click(); }); // C24: «Tutti» (si parte dalla rosa)
       const n1 = await u6.evaluate(async () => { const w = (ms) => new Promise((r) => setTimeout(r, ms)), q = (x) => document.querySelector(x);
         const nD = () => document.querySelectorAll('#scD details.sc-o').length, nC = () => document.querySelectorAll('#hotelCards article').length, o = { d0: nD(), c0: nC() };
         q('#scD [data-nas="d-5"]').click(); await w(150); o.via = nD() === o.d0 - 1 && nC() === o.c0 - 1 && !q('#al-5'); o.toast = q('#nasToast').classList.contains('on');
@@ -506,8 +507,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         const ip = q('#scNas input[data-nas-k^="n-"]'), kp = ip && ip.dataset.nasK; o.parigi0 = !!kp && !!q('#scN details[data-k="' + kp + '"]'); if (kp) { ip.click(); await w(150); } o.parigi = o.parigi0 && !q('#scN details[data-k="' + kp + '"]');
         return o; });
       await u6.reload(); await u6.waitForTimeout(1200);
+      await u6.evaluate(() => { const t = document.querySelector('#scegli [data-ro-f="0"]'); if (t) t.click(); }); // C24: «Tutti» (si parte dalla rosa)
       const n2 = await u6.evaluate(() => { const ls = localStorage.getItem('pdn-nascosti') || '', kp = (/"(n-[a-z]{2})"/.exec(ls) || [])[1]; return { resta: !document.querySelector('#scD details[data-k="d-7"]') && !!kp && !document.querySelector('#scN details[data-k="' + kp + '"]') && /2 nascosti/.test(document.querySelector('#nasConta').textContent), ls }; });
       const u7 = await c6.newPage(); await u7.goto(B + 'dicembre/?scelta=4n-8&nascosti=d-1,d-2'); await u7.waitForTimeout(1200);
+      await u7.evaluate(() => { const t = document.querySelector('#scegli [data-ro-f="0"]'); if (t) t.click(); }); // C24: «Tutti» (si parte dalla rosa)
       const n3 = await u7.evaluate(async () => { const b = document.querySelector('[data-nas-link="1"]'); if (!b) return { banner: false }; b.click(); await new Promise((r) => setTimeout(r, 150)); return { banner: true, via: !document.querySelector('#scD details[data-k="d-1"]') && !document.querySelector('#scD details[data-k="d-2"]') }; });
       ok('Alloggi: «Nascondi» toglie dagli elenchi, «Annulla» rimette, spunte di «Pulisci l’elenco» (anche Parigi), resta dopo la ricarica, la scelta non si nasconde, il link chiede e nasconde ' + JSON.stringify({ n1, n2, n3 }),
         n1.via && n1.toast && n1.annulla && n1.spunta && n1.scelta && n1.parigi && n2.resta && n3.banner && n3.via);

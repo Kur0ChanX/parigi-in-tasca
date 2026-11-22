@@ -25,7 +25,7 @@
 ## Scelte (Controllo 18)
 1. Via i gruppi di lucine della v40 (`lucGrp`): si torna alle lucine una per una (come v39, più leggere), con i ritardi negativi (niente lampi all’apertura, v34).
 2. Via `will-change:transform` dai tre livelli `.par`: serviva alla parallasse, che non c’è più.
-3. Via i due fasci del faro (la «riga»); resta il lampo in cima alla Torre.
+3. ~~Via i due fasci del faro~~ → risposta di Mario alla DOMANDA 1 (22/11 ~20:1x, intero): «mi piaceva il fascio di luce / ora prosegui con la guida con molta cura» → fasci rimessi identici alla v40 (la «riga» era una lettura nostra del video, non sua).
 4. Pagina ingrandita con due dita (`visualViewport.scale` > 1,05): la testata sta ferma (come mentre si scorre), così il telefono la disegna una volta, intera e nitida; riparte quando la pagina torna normale. `start()` non riparte mentre la testata è in pausa.
 
 ## Prove (Controllo 18)
