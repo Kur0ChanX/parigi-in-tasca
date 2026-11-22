@@ -11,7 +11,7 @@ Sessione attuale: #22 (dopo la #21 `session_01WTjqUufrPoE5XXACBYJB9k`, chiusa al
 - Kit 43 · 19/11/2026 · Preferenze v38 installato, prove 43/43 verdi (verifica: `docs/kit-progetto/VERSIONE`; tutti i `tools/test-*.py` con `python3 -I`).
 - **v16 ONLINE** (#21, PR #17 unita 22/11 ~00:20): verifica `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c 'ARIANE 1'` → 1 o più. Prove: `node tools/prova-web-app.js` 37/37, `node tools/prova-scritte.js` 20/20, `python3 -I tools/fai-mappe-dicembre.py --controlla` → «27 immagini», kit 43/43.
 - Catena: #19 = 1 di 8 (aperta da Mario), #20 = 2, #21 = 3; la #22 la apre la #21 (4 di 8). Sveglia del 7/12: una sola attiva, `trig_01MVnzUS5s6cSXHKmD4GT3eJ` (#21, 08:07 UTC); quelle di #19 e #20 spente (cancellarle negato dai permessi). #22: spegnere o cancellare quella della #21 negato; la mia copia tolta per non averne due (la #21 la passa alla Principale aperta). Verifica: `list_triggers`, un solo «Parigi · ricontrollo prima di partire» con enabled true.
-- Altra chat attiva sullo stesso ramo: «Controllo 1» (C6, C12; tabella in `docs/CHI-FA-COSA.md`). Le sue scorte NON si uniscono (E97); suoi file: `docs/lavori-in-corso/C6-*`, `C12-*`, `research_notes/…/alloggi_ricerca_profonda_*.md`.
+- Altra chat attiva sullo stesso ramo: «Controllo» (al 22/11 10:00 è la 4, `session_01WTjqUuicbA1iGVJV2srBYv`, v19 online) (C6, C12; tabella in `docs/CHI-FA-COSA.md`). Le sue scorte NON si uniscono (E97); suoi file: `docs/lavori-in-corso/C6-*`, `C12-*`, `research_notes/…/alloggi_ricerca_profonda_*.md`.
 - Pagina: si cambia `dicembre/parigi-disney-natale.html`, poi `python3 -I tools/fai-dicembre.py` (web app `dicembre/index.html`). Artifact su claude.ai fermo alla versione 7: vale la web app.
 
 - Sito `main`: guida di novembre `index.html` non toccata (verifica: `git diff origin/main~1 origin/main -- index.html` vuoto); `sw.js` con una riga che lascia stare `/dicembre/`; web app in `dicembre/` (verifica: il link risponde con «<title>Parigi e Disney a Natale»).
@@ -43,7 +43,7 @@ Sessione attuale: #22 (dopo la #21 `session_01WTjqUufrPoE5XXACBYJB9k`, chiusa al
 1. Quando Mario scrive: conferma che vede la v16 (voce 👁 «i 6 alloggi nuovi» in `docs/DA-FARE.md`: si chiude solo quando li vede) e la DOMANDA 6 (luna), una per messaggio.
 2. Non toccare `dicembre/parigi-disney-natale.html`: ci lavora «Controllo 1» (C6, patch `docs/lavori-in-corso/C6-pezzo1-schede.patch`). Richieste di Mario sulla pagina alla Principale → coordinarsi con Controllo 1 (`send_message`), mai lavori accavallati.
 3. Da passare a Controllo 1 per C12, se non l'ha già: Airbnb «Disneyland Paris – Val d'Europe – Parking – Wifi» 898344935961342834 (prezzo e distanza non letti, «Da verificare» in `alloggi_nuovi_13_17_ricerca.md`).
-4. Ancora da verificare (non urgenti): deposito valigie di Astra e Saint-Pétersbourg, piscina del Novotel, cancellazione dell'Airbnb di David (n. 21).
+4. Verifiche hotel (Astra, Saint-Pétersbourg, Airbnb di David): passate a Controllo 4 il 22/11 ~10:10 (padrone di pagina e alloggi); la Principale non le rifà.
 
 ## Blocchi e rischi
 - Prezzi visti il 21/11: possono salire. Cancellazioni gratuite che scadono presto: 29/11 (n. 1, 4, 7, 10, 13), 6/12 (n. 11, 14), 8/12 (n. 12, camera con letto matrimoniale, 908 €), 10/12 (n. 2, 730 €, stima), 13/12 (n. 8, 577 €, si paga in hotel), 12/12 (n. 5).
