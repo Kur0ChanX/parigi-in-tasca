@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v20 · 🟩 Controllo 4 · 22/11 10:26 · grafica, Disney, dettagli
-🧪 In prova: v21 · 🟩 Controllo 5 · scelta, colori, Annulla
+🚀 Online: v21 · 🟩 Controllo 5 · 22/11 10:44 · scelta, colori, Annulla
+🧪 In prova: —
 ⏳ Dopo: v22 · 🟩 Controllo 5 · verifiche passate dalla Principale
 
 ## 0. Aspetta Mario
