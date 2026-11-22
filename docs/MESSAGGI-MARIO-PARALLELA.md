@@ -58,3 +58,34 @@ Mappe, la mappa fammela, vedo che fammela mettere a schermo intero la mappa che 
 
 ## 2026-11-22 11:41 · 01WTjqUwFBdt
 E nella schermata principale mettimi tutte gli shortcut, ecco, delle cose principali, dei tasti, così non vado a cercare direttamente nelle pagine. Tipo la mappa deve avere un tasto shortcut nella schermata principale e anche tante altre cose fondamentali.
+
+## 2026-11-22 11:49 · 01WTjqUxPidP
+Vedi qua la foto è coperta, l'immagine.
+
+## 2026-11-22 11:52 · 01WTjqUxPidP
+Conta che vabbè, la giornata di priorità di curare i dettagli è quella a Parigi, poi vabbè, quella di Disneyland, sì, andare tornare nell'alloggio, quella di Disneyland, niente di che, e poi ritornare alla fine ritornare in aeroporto con... rispettare gli orari per arrivare in anticipo, lì calcolare i trasporti con un po' di orario extra, non troppo preciso, cioè se segnalamelo di andare prima, quanto ci vuole ad arrivare lì per non perdere il volo, ecco, se ci sono da prendere i bagagli e quant'altro, eccetera eccetera.
+Ok, vai avanti da solo e mi fido di te, non c'è bisogno che ti autorizzo.
+Mi raccomando, con l'indice in alto, con i tasti, eccetera. E gli shortcut. Non eliminare cose, visto che ti sto facendo andare da solo. Cerca solo di gestire le priorità delle cose da guardare. Vabbè, che ci sia tutto, però a colpo d'occhio, ecco. Poi se entri lì dentro, entri in quello che ti serve, hai più dettagli.
+Non riesco a capire mai che versione ho nell'app. Mettiamo un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato, come abbiamo sempre fatto noi nei progetti.
+Se una persona ha un numero indietro e sta guardando un numero indietro, scelta una versione nuova, clicca aggiorna versione, clicca e gliela aggiorna.
+Mettiamo quella a sinistra, quella sotto.
+
+## 2026-11-22 12:00 · 01WTjqUxPidP
+No, facciamo quella che consigli tu, scusa, foto 2, scusa.
+Per quello ti dico, vai avanti da solo, tanto ascolta sempre i tuoi consigli, vai avanti da solo.
+Vai avanti da solo e stai attento solo alle domande molto vecchie che mi avevi fatto. Magari le domande vecchie dovrò risponderti, ma quelle nuove so che mi farai, so già che sei al passo con l'app e ti faccio scegliere, ecco. Se sono domande molto importanti ti fermi.
+
+## 2026-11-22 12:04 · 01WTjqUxPidP
+Vedi qua che l'indice, mettimi gli shortcut, anche giro di mercatini più piccoli, notte, vin brûlée più piccole, insomma regola bene gli spazi, mettimi l'indice delle cose più importanti. I tasti sotto devono occupare meno spazio, insomma tutti gli spazi ottimizzati bene, non farmi coprire troppo la pagina, ecco, la pagina da vedere.
+
+## 2026-11-22 12:09 · 01WTjqUxPidP
+Quando parlo di schermata principale intendo questa, che la facciamo diventare un indice per andare direttamente subito nei posti.
+
+## 2026-11-22 12:15 · 01WTjqUxPidP
+Metti che ogni tanto passa questo nel cielo, stai attento bene a non renderlo troppo, cioè a rendere i colori veritieri in base alla scena, a studiarti bene le ombre, la visibilità eccetera, che lui passa e lancia dei regali, dei pacchi regali, come nel film Nightmare Before Christmas. Rendilo un po' in penombra, eccolo, e poi dagli una botta all'immagine generale di tipo un effetto tipo ray tracing, qualcosa del genere, per renderla un pochettino più bella e non piatta, visto che non sai disegnare bene. Aggiungi comunque dettagli, come ti ho già detto, alla schermata principale e in generale poi a tutto il web più natalizio.
+
+## 2026-11-22 12:26 · 01WTjqUxPidP
+In coda, quando hai finito tutto non sai cosa fare, metti più fuochi d'artificio nella schermata iniziale, aggiungi abbellimenti natalizi nell'app, solo in coda quando non sai più cosa fare. Ogni tanto ti dico qualcosa di questo tipo, quando non sai cosa fare tu te le lasci in coda, senza dargli priorità, almeno non rimani fermo.
+Anche adesso che li stai spostando sopra, domenica, lunedì, martedì, ecco, farla più stretta, se no mi mangia troppa pagina da guardare. Poi per desktop studiatela a tuo modo, che occupa bene la pagina, ecco, che è bella piena la pagina, in generale parlo.
+Il numerino non farlo che scende, scende come scrolli, se no ci sono, te l'ho detto, voglio l'immagine un po' pulita, lascialo fisso in alto alla schermata principale. Mi raccomando con gli indici, con gli shortcut, con insomma deve essere molto ordinata e organizzata.
+Mi raccomando, fai più, abbellisci la schermata dietro, quella animata della schermata principale. Come ti ho già detto, rendila più natalizia, più bella, più piena di dettagli. L'albero fallo meglio, insomma, aggiungi dettagli natalizi, nel cielo più romantico, più viva. Il castello dietro fallo meglio, con le finestre fatte meglio che si illuminano, magari con delle proiezioni, non lo so, inventati qualsiasi cosa.
