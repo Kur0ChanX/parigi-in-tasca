@@ -6,7 +6,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
 | Principale | cerchi | 🟢 🟡 🔴 ⚫ | 22 | session_01WTjqUtegBCzTHdbgdaXDm1 | — |
-| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 18 | session_01QTFEqQQmp8CBZ7C3hCtNKP | — |
+| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 19 | session_01QTFEqSjyGg65BtFyBPPGGk | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
