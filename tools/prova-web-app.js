@@ -17,7 +17,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   const b = await chromium.launch({ executablePath: fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined });
   // Mario: ha già la guida di novembre, poi apre dicembre
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 } }); const p = await ctx.newPage();
-  const errs = []; p.on('pageerror', (e) => errs.push(e.message));
+  const errs = []; p.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
   await p.goto(B); await sw(p); await p.reload(); await p.waitForTimeout(800);
   const nov = await p.title();
   await p.goto(B + 'dicembre/'); await sw(p);
@@ -46,7 +46,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   await ctx.close();
   // L'amico: apre solo dicembre
   const c2 = await b.newContext({ viewport: { width: 390, height: 844 } }); const q = await c2.newPage();
-  q.on('pageerror', (e) => errs.push(e.message));
+  q.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
   await q.goto(B + 'dicembre/'); await sw(q);
   ok('amico: manifest letto', await q.evaluate(async () => (await (await fetch('manifest.webmanifest')).json()).name === 'Parigi e Disney a Natale'));
   ok('amico: noindex', await q.evaluate(() => document.querySelector('meta[name=robots]').content.includes('noindex')));
@@ -144,7 +144,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         const pre = document.querySelector(`#sort [data-s="${k}"]`).getAttribute('aria-pressed');
         document.querySelector(`#scSort [data-s="${k}"]`).click(); await w();
         const sc = [...document.querySelectorAll('#scD details[data-k^="d-"]')].map((x) => +x.dataset.k.slice(2));
-        out[k] = { ids, pre, sc, preSc: document.querySelector(`#scSort [data-s="${k}"]`).getAttribute('aria-pressed') };
+        const min = [...document.querySelectorAll('#scD details[data-k^="d-"]')].map((x) => parseInt((x.querySelector('.sc-k b') || {}).textContent, 10)).filter((n) => n > 0);
+        out[k] = { ids, pre, sc, min, preSc: document.querySelector(`#scSort [data-s="${k}"]`).getAttribute('aria-pressed') };
       }
       document.querySelector('#sort [data-s="prezzo"]').click(); document.querySelector('#scSort [data-s="prezzo"]').click(); await w();
       return out;
@@ -152,9 +153,11 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const tutti = Object.values(ord).every((o) => o.ids.length === 35 && o.sc.length === 35 && o.pre === 'true' && o.preSc === 'true');
     const diversi = new Set(Object.values(ord).map((o) => o.ids.join(','))).size === 4;
     ok('Ordine: 4 pulsanti nelle due liste, tutti e 35 sempre, 4 ordini diversi', tutti && diversi); if (!tutti || !diversi) console.log(JSON.stringify(ord).slice(0, 600));
-    // «Vicino a Disney» = km dai parchi in linea d'aria (Mario 22/11 ~00:45, foto: prima in cima c'erano il n. 30 e il n. 11 con la navetta): primo il n. 14 Hotel Disney
-    const primi = ord.disney.ids[0] === 14 && ord.disney.sc[0] === 14 && [19, 21, 23, 25, 26, 27].includes(ord.pulizia.ids[0]) && [16, 17].includes(ord.rer.ids[0]);
-    ok('Ordine: «Vicino a Disney» mette in cima l\'Hotel Disney (il più vicino ai parchi), «Vicino alla RER» quelli a 1 minuto a piedi, «Più puliti» un 5,0', primi); if (!primi) console.log(Object.fromEntries(Object.entries(ord).map(([k, o]) => [k, o.ids.slice(0, 4).join(',') + ' | ' + o.sc.slice(0, 4).join(',')])));
+    // «Vicino a Disney» = tempo per arrivare ai parchi con l'attesa media di navetta e bus (Mario 22/11 10:18 «in ordine di tempo per arrivare, non di chilometri»;
+    // con l'attesa la navetta del n. 11 non va più in cima come il 22/11 ~00:45): primi i n. 16/17 a 1 minuto dalla RER, minuti in fila crescente, n. 11 non fra i primi 10
+    const crescente = ord.disney.min.length > 30 && ord.disney.min.every((m, i, a) => !i || a[i - 1] <= m);
+    const primi = [16, 17].includes(ord.disney.ids[0]) && [16, 17].includes(ord.disney.sc[0]) && crescente && !ord.disney.sc.slice(0, 10).includes(11) && [19, 21, 23, 25, 26, 27].includes(ord.pulizia.ids[0]) && [16, 17].includes(ord.rer.ids[0]);
+    ok('Ordine: «Vicino a Disney» per minuti per arrivare (attese comprese, in fila crescente), «Vicino alla RER» quelli a 1 minuto a piedi, «Più puliti» un 5,0', primi); if (!primi) console.log(Object.fromEntries(Object.entries(ord).map(([k, o]) => [k, o.ids.slice(0, 4).join(',') + ' | ' + o.sc.slice(0, 4).join(',')])));
   }
   // v18 (Mario 22/11 ~00:45 «metti un tasto tutti … in vista distanza Disney con tempi e km … rer a piedi»; «in priorità dal 13 al 17»)
   {
@@ -195,6 +198,25 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     });
     const ok4 = v.ty4 === 'dis' && /^🧳 Domenica\|\d{1,2}:\d{2}\|.* \/ 🛏️ In camera\|\d{1,2}:\d{2}\|.* \/ 🎢 Lunedì\|\d{1,2}:\d{2}\|/.test(v.k4) && v.dt4;
     ok('C13 pezzo 2: passo 1 con 3 riquadri (4 notti: domenica, in camera, lunedì; Parigi: a piedi, lunedì, pulizia) e totale sotto il prezzo', ok4 && v.par >= 8 && !v.bad.length && !v.vec); if (!(ok4 && v.par >= 8 && !v.bad.length && !v.vec)) console.log(v);
+    // C13 pezzo 3 (22/11): in «Quanto costa» ogni strada ha il tipo del suo alloggio (colore ed etichetta), come in Dormire; n. 8 hotel, n. 31 casa
+    const b3 = await q.evaluate(() => [...document.querySelectorAll('#bars>a.bar-row')].map((a) => [a.dataset.sc || '', a.dataset.ty, (a.querySelector('.bar-ty') || {}).textContent || '']));
+    const ok3 = b3.length === 9 && b3.every(([, t, l]) => /^(hotel|bb|casa|disney)$/.test(t) && l.length > 3) && b3.some(([k, t]) => /-8$/.test(k) && t === 'hotel') && b3.some(([k, t]) => /-31$/.test(k) && t === 'casa');
+    ok('C13 pezzo 3: «Quanto costa» con tipo di alloggio su ogni strada (9 strade, n. 8 hotel, n. 31 casa)', ok3); if (!ok3) console.log(b3);
+    // Mario 22/11 10:18: hotel Disney con un colore suo (rosa), diverso dagli hotel; col tasto «Hotel» resta visibile e conta fra gli hotel
+    const dz = await q.evaluate(async () => {
+      const w = () => new Promise((r) => setTimeout(r, 150)), d14 = document.querySelector('#scD details[data-k="d-14"]');
+      const col = (el) => getComputedStyle(el).getPropertyValue('--ty').trim();
+      const r = { ty: d14 && d14.dataset.ty, lab: d14 ? getComputedStyle(d14.querySelector('summary'), '::before').content : '', diverso: !!d14 && col(d14) !== col(document.querySelector('#scD details[data-ty="hotel"]')) };
+      document.querySelector('.tyswitch [data-ty="hotel"]').click(); await w();
+      r.conHotel = !!d14 && getComputedStyle(d14).display !== 'none';
+      r.nHotel = +((document.querySelector('.tyswitch [data-ty="hotel"]').textContent.match(/· (\d+)/) || [])[1]);
+      r.visHotel = [...document.querySelectorAll('#scD>details[data-k^="d-"]')].filter((x) => getComputedStyle(x).display !== 'none').length;
+      document.querySelector('.tyswitch [data-ty="tutti"]').click(); await w();
+      r.pkg = [...document.querySelectorAll('#bars>a.bar-row:not([data-sc])')].every((a) => a.dataset.ty === 'disney');
+      return r;
+    });
+    const okD = dz.ty === 'disney' && /Hotel Disney/.test(dz.lab) && dz.diverso && dz.conHotel && dz.nHotel === dz.visHotel && dz.pkg;
+    ok('Hotel Disney (n. 14) rosa con etichetta sua, visibile col tasto «Hotel» e contato lì; pacchetti Disney rosa nei costi', okD); if (!okD) console.log(dz);
   }
   // 21/11 sera: la pagina era larga 735 px su un telefono da 412 (classe .pc del contenitore uguale a quella dei pro/contro)
   ok('telefono 390 px: la pagina non scorre di lato', await q.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

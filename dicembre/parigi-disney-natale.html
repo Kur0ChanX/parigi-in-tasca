@@ -540,7 +540,7 @@ details.sc-par{margin-top:var(--s3);border:2px solid var(--rule);border-radius:v
 .sc-xb p{margin:0}
 .tyswitch button[aria-pressed="true"]{border-color:var(--lamp);background:var(--lamp);color:var(--lamp-ink)}
 .tyswitch button[aria-pressed="true"] small{color:var(--lamp-ink)}
-#scD[data-ty="hotel"]>[data-ty]:not([data-ty="hotel"]),#scD[data-ty="bb"]>[data-ty]:not([data-ty="bb"]),#scD[data-ty="casa"]>[data-ty]:not([data-ty="casa"]){display:none}
+#scD[data-ty="hotel"]>[data-ty]:not([data-ty="hotel"]):not([data-ty="disney"]),#scD[data-ty="bb"]>[data-ty]:not([data-ty="bb"]),#scD[data-ty="casa"]>[data-ty]:not([data-ty="casa"]){display:none}
 body[data-tab] #hotel .sec-head,body[data-tab] #mio,body[data-tab] #filters,body[data-tab] #hotel .sortbar,body[data-tab] #fdesc,body[data-tab] #hotel h3.sub-h{display:none}
 body[data-tab] #hotel .more-al,#mercatini .more-al{margin-top:var(--s3)}
 .al-h{font-size:1.25rem;margin:0 0 var(--s2)}
@@ -560,10 +560,10 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 /* C13 pezzo 1 · Dormire più chiaro (Mario 22/11 «differenziare bene … con colori, con font diversi, spaziature»): un colore per tipo
    (Hotel azzurro, B&B lilla, Case verde acqua) su interruttore e schede; in ogni scheda 3 riquadri coi numeri grandi (Disney, RER, pulizia);
    sotto il prezzo la differenza sul totale del viaggio. Oro solo per scelto e consiglio, verde/rosso solo per le differenze. */
-:root{--ty-hotel:#8DB6FF;--ty-bb:#D1A6FF;--ty-casa:#55D3C0;--ty-ink:#0A1230}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#0B7568;--ty-ink:#FFFFFF}}
-:root[data-theme="light"]{--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#0B7568;--ty-ink:#FFFFFF}
-[data-ty="hotel"]{--ty:var(--ty-hotel)}[data-ty="bb"]{--ty:var(--ty-bb)}[data-ty="casa"]{--ty:var(--ty-casa)}
+:root{--ty-disney:#FF8AD0;--ty-hotel:#8DB6FF;--ty-bb:#D1A6FF;--ty-casa:#55D3C0;--ty-ink:#0A1230}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ty-disney:#A8236F;--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#0B7568;--ty-ink:#FFFFFF}}
+:root[data-theme="light"]{--ty-disney:#A8236F;--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#0B7568;--ty-ink:#FFFFFF}
+[data-ty="hotel"]{--ty:var(--ty-hotel)}[data-ty="disney"]{--ty:var(--ty-disney)}[data-ty="bb"]{--ty:var(--ty-bb)}[data-ty="casa"]{--ty:var(--ty-casa)}
 .tyswitch button[data-ty]:not([data-ty="tutti"]){border-color:var(--ty);color:var(--ty)}
 .tyswitch button[aria-pressed="true"]:not([data-ty="tutti"]){background:var(--ty);border-color:var(--ty);color:var(--ty-ink)}
 .tyswitch button[aria-pressed="true"]:not([data-ty="tutti"]) small{color:var(--ty-ink)}
@@ -579,6 +579,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 :is(#scD,#scN) details.sc-o>summary{grid-template-columns:30px minmax(0,1fr) auto 12px;gap:4px 10px;padding:12px 14px 14px 18px}
 :is(#scD,#scN) details.sc-o[data-ty]>summary::before{grid-column:2;grid-row:1;font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
 #scD details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel"}
+#scD details.sc-o[data-ty="disney"]>summary::before{content:"🏰 Hotel Disney"}
 #scD details.sc-o[data-ty="bb"]>summary::before{content:"🛏️ B&B · camera"}
 #scD details.sc-o[data-ty="casa"]>summary::before{content:"🏠 Casa"}
 :is(#scD,#scN) details.sc-o>summary::after{grid-column:4;grid-row:1}
@@ -603,6 +604,19 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 #scN details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel a Parigi"}
 #scN details.sc-o[data-ty="dis"]>summary::before{content:"🏰 Domenica già a Disney"}
 #scN .sc-o>summary>.sc-dot{grid-column:1;grid-row:1/3;margin-top:4px}
+/* C13 pezzo 3 · Piano, «Quanto costa»: ogni strada è una scheda col colore del suo alloggio, come in Dormire; hotel e pacchetti Disney rosa (Mario 22/11 10:18 «differenzia con un altro colore gli hotel Disney») */
+#bars{gap:12px}
+#bars>a.bar-row{margin:0;padding:12px 14px 12px 18px;border:2px solid var(--rule);border-radius:var(--r-lg);box-shadow:inset 6px 0 0 var(--ty)}
+#bars>a.bar-row.is-me{outline:0;border-color:var(--lamp);box-shadow:inset 6px 0 0 var(--ty),0 0 0 3px rgb(246 201 100 / .25)}
+.bar-ty{font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
+/* Dormire: «Vedi i dettagli» in fondo a ogni scheda al posto della freccina nell'angolo (Mario 22/11 10:18 «non si capisce … che apre tutto con i dettagli … in fondo è difficile da vederlo») */
+:is(#scD,#scN) details.sc-o>summary::after{display:none}
+.sc-more{display:none}
+:is(#scD,#scN) .sc-o .sc-more{grid-column:1/-1;grid-row:4;display:flex;justify-content:center;align-items:center;gap:8px;margin-top:8px;padding:8px 10px;border:1.5px solid var(--rule);border-radius:10px;font:700 .86rem/1.2 var(--text);color:var(--ty,var(--ink))}
+:is(#scD,#scN) .sc-o .sc-more::before{content:"Vedi i dettagli"}
+:is(#scD,#scN) .sc-o .sc-more::after{content:"";width:8px;height:8px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+:is(#scD,#scN) .sc-o[open] .sc-more::before{content:"Chiudi i dettagli"}
+:is(#scD,#scN) .sc-o[open] .sc-more::after{transform:rotate(-135deg) translateY(-1px)}
 #scBB .sc-xb{border-left:6px solid var(--ty-bb)}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -719,7 +733,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
  <h3 class="sc-step" id="sc2"><span class="nb sm">2</span>L'hotel vicino a Disney</h3>
  <p class="sc-now" id="scNowD"></p>
  <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort4" role="group" aria-label="Ordina per" id="scSort"><button type="button" data-s="prezzo" aria-pressed="true">Meno cari</button><button type="button" data-s="disney" aria-pressed="false">Vicino a Disney</button><button type="button" data-s="rer" aria-pressed="false">Vicino alla RER</button><button type="button" data-s="pulizia" aria-pressed="false">Più puliti</button></div></div>
- <p class="sc-leg">🏰 minuti fino ai parchi (a piedi e treno, senza attese) e km in linea d'aria · 🚉 minuti fino alla RER · 🧼 pulizia. Sotto il prezzo e accanto ai km, la differenza col mio consiglio: <b class="sc-dn">verde</b> = meglio, <b class="sc-up">rosso</b> = peggio.</p>
+ <p class="sc-leg">🏰 minuti per arrivare ai parchi (a piedi e mezzi, con l'attesa media di navetta e bus; «Vicino a Disney» ordina così) e km in linea d'aria · 🚉 minuti fino alla RER · 🧼 pulizia. Sotto il prezzo e accanto ai km, la differenza col mio consiglio: <b class="sc-dn">verde</b> = meglio, <b class="sc-up">rosso</b> = peggio.</p>
  <div class="sc-list" id="scD"></div>
  <div class="sc-x" id="scBB" data-ty="bb">
   <p class="sc-g">Fuori elenco: 2 camere a Bussy-Saint-Georges</p>
@@ -1106,8 +1120,8 @@ const drawBars=()=>{const cm=conto(MIO_S),me=scStr(SCE);let h='',cl='';
  const L=BARS.map(b=>{const c=conto(b);return c&&{sc:b,n:scName(b),s:[["s-h",c.al,(b.n?"alloggi ":"alloggio ")+fmt(c.al)],["s-t",544,"biglietti 544 €"],["s-r",c.tr,"trasporti "+fmt(c.tr)]],note:b.t}}).filter(Boolean).concat(PKG);
  L.forEach(c=>{const tot=c.s.reduce((a,b)=>a+b[1],0),d=tot-cm.tot,k=c.sc?scStr(c.sc):'',ref=k===scStr(MIO_S);
   const dl=ref?'<span class="bar-diff eq">il mio consiglio</span>':`<span class="bar-diff ${d>0?'up':'dn'}">${d>0?'+':'−'}${fmt(Math.abs(d))}</span>`;
-  const lab=c.s.map(x=>x[2]).join(', ');
-  h+=`<a class="bar-row${k===me?' is-me':''}" href="${k?'#scegli':'#hoteldisney'}"${k?` data-sc="${k}"`:''}><div class="bar-top"><span class="bar-name">${esc(c.n)}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
+  const lab=c.s.map(x=>x[2]).join(', '),ty=c.sc?tyOf(byId(c.sc.d).sub):'disney',tl={hotel:'🏨 Hotel',bb:'🛏️ B&B · camera',casa:'🏠 Casa',disney:c.sc?'🏰 Hotel Disney':'🏰 Hotel Disney · pacchetto'}[ty];
+  h+=`<a class="bar-row${k===me?' is-me':''}" data-ty="${ty}" href="${k?'#scegli':'#hoteldisney'}"${k?` data-sc="${k}"`:''}><span class="bar-ty">${c.sc&&c.sc.n?'Parigi + ':''}${tl}</span><div class="bar-top"><span class="bar-name">${esc(c.n)}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
  <div class="track" role="img" aria-label="${esc(c.n)}: circa ${fmt(tot)} (${lab})"><span class="grid-lines">${[500,1000,1500,2000].map(v=>`<i style="left:${v/MAX*100}%"></i>`).join('')}</span><span class="fill" style="width:${tot/MAX*100}%">${c.s.map(x=>`<i class="${x[0]}" style="width:${x[1]/tot*100}%"></i>`).join('')}</span></div>
  <p class="bar-note">${esc(c.note)} <span class="bar-go">${k?(k===me?'✓ La vostra scelta':'Scegli questo ›'):'Perché non conviene ›'}</span></p></a>`;
   if(c.sc)cl+=`<li><b>${esc(c.n)}${ref?' (il mio consiglio)':''}:</b> ${c.s.map(x=>x[2]).join(' + ')} = ${fmt(tot)}.</li>`});
@@ -1164,6 +1178,7 @@ const AL=[
 ];
 const PICKS=[["Spendere poco",4,"492 €, pulizia 9,5, 47 m². A 15–20 minuti a piedi dal treno."],["Tutto comodo",8,"524 €, reception 24 ore, 8 minuti dal treno. Se si libera, il n. 15 è ancora meglio."],["Con la spa",12,"Il migliore per 4 notti nello stesso posto. Spa inclusa per la domenica sera, 5 minuti dal treno. 908 € con letto matrimoniale e cancellazione gratuita fino all'8/12."],["Romantico",13,"773 €, vasca idromassaggio privata, solo adulti."],["Il prezzo più basso",1,"391 €, pulizia 9,0. Serve il bus."],["Più spazio, vicino al treno",6,"509 €, 50 m² con terrazza, 8 minuti dal treno."]];
 const byId=id=>AL.find(h=>h.id===id);
+const tyOf=t=>/^hotel disney/i.test(t.trim())?'disney':/B&B|B&amp;B|chambres? d'h|affittacamer|love room|stanza|camera privata|guest ?house/i.test(t)?'bb':/^(hotel|aparthotel|residence|residhome)/i.test(t.trim())?'hotel':'casa';window.pdnTyOf=tyOf; /* tipo di alloggio dal sottotitolo: qui perché serve anche alle barre dei costi (pezzo 3); la scheda Dormire (secondo script) la prende da window */
 $('#picks').innerHTML=PICKS.map(([k,id,d])=>`<a class="pick" href="#al-${id}"><span class="nb">${id}</span><span class="k">${esc(k)}</span><span class="t">${esc(byId(id).n)}</span><span class="d">${esc(d)}</span></a>`).join('');
 const DUELS=[
  ["N. 12 Relais Spa o n. 8 Moxy?","Per i parchi sono uguali: 5–8 minuti a piedi e 1 fermata di treno, reception sempre aperta. Il 12 ha la spa inclusa per la domenica sera. Il Moxy costa circa 330 € in meno, ma niente spa. Volete il relax della domenica: 12. Volete spendere meno: 8."],
@@ -1259,7 +1274,7 @@ const num=s=>parseFloat(String(s).replace(',','.'))||0,v10=(h,k)=>num(h[k])*(h.a
 /* vicino alla RER: minuti a piedi fino alla stazione (DV); chi va con la navetta o il bus dopo tutti quelli a piedi */
 const rerMin=h=>{const L=DV[h.id][1];return L.every(l=>l[0]==='w')?L.reduce((x,l)=>x+l[1],0):100+h.min};
 const kmD=d=>{const m=MP[d];return m?parseFloat(m.km[1].replace(',','.')):99},kmDT=d=>{const m=MP[d];return m?(m.z?'≈ ':'')+m.km[1]:''};
-const byP=(a,b)=>(a.p??1e9)-(b.p??1e9),SORT={prezzo:byP,disney:(a,b)=>kmD(a.id)-kmD(b.id)||parkMin(a.id)-parkMin(b.id)||byP(a,b),rer:(a,b)=>rerMin(a)-rerMin(b)||byP(a,b),pulizia:(a,b)=>v10(b,'cl')-v10(a,'cl')||byP(a,b)};
+const byP=(a,b)=>(a.p??1e9)-(b.p??1e9),SORT={prezzo:byP,disney:(a,b)=>arrMin(a.id)-arrMin(b.id)||kmD(a.id)-kmD(b.id)||byP(a,b),rer:(a,b)=>rerMin(a)-rerMin(b)||byP(a,b),pulizia:(a,b)=>v10(b,'cl')-v10(a,'cl')||byP(a,b)};
 $('#filters').innerHTML=[['tutti','Tutti'],...Object.entries(GN)].map(([k,t])=>`<button type="button" data-f="${k}" aria-pressed="${k===FI}">${esc(t)}</button>`).join('');
 const renderAl=()=>{const L=AL.filter(h=>FI==='tutti'||h.g.includes(FI)).sort(SORT[SO]);
  $('#fdesc').textContent=GD[FI]+` Sono ${L.length}.`;
@@ -1461,6 +1476,7 @@ const hm=s=>{const [a,b]=String(s).split(':');return a*60+ +b};
 const accMin=d=>DV[d][1].reduce((x,l)=>x+l[1],0);
 const waitMin=d=>ACC[d].mode==='nav'?25:/bus/.test(ACC[d].mode)?10:0;
 const parkMin=d=>d===14?10:accMin(d)+RA[DV[d][0]].dz+2;
+const arrMin=d=>parkMin(d)+waitMin(d); /* tempo per arrivare ai parchi con l'attesa media di navetta e bus: ordina «Vicino a Disney» (Mario 22/11 10:18 «in ordine di tempo per arrivare, non di chilometri») */
 const walkDay=d=>d===14?20:2*(DV[d][1].filter(l=>l[0]==='w').reduce((x,l)=>x+l[1],0)+2);
 const ppOf=d=>COMMON+LOC[ACC[d].mode];
 const monB=(pn,d)=>{const st=DV[d][0],acc=accMin(d),wt=waitMin(d),dz=RA[st].dz,to=pn.w+5+RS[pn.st][st]+acc+wt,bk=acc+wt+(dz?5+dz:0)+2,out=f5(510-(to+10+bk));return {out,arr:out+to,go:out+to+10}};
@@ -1769,7 +1785,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
 <div class="sc-act"><button type="button" class="btn gold" id="scShare">Manda questa scelta</button>${mio?'':'<button type="button" class="btn ghost" id="scMio">Torna al mio consiglio</button>'}</div><p class="small" id="scShareOk" role="status"></p></div>`;
   $('#scNowN').innerHTML=`Adesso: <b>${pn?esc(pn.n)+', a Parigi':'già vicino a Disney'}</b>${pn?' · '+fmt(pn.p)+' per 1 notte':''}`;
   $('#scNowD').innerHTML=`Adesso: <b>n. ${SCE.d} ${esc(h0.n)}</b>${c?' · '+fmt(c.q[0])+' per '+(SCE.n?'3 notti, 14→17':'4 notti, 13→17'):''}`;
-  const row=(k,on,off,mk,n,sub,p,ps,m,body,px='')=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${op.includes(k)?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small>${px}</span><span class="sc-m">${m}</span></summary><div class="sc-b">${body}</div></details>`;
+  const row=(k,on,off,mk,n,sub,p,ps,m,body,px='')=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${op.includes(k)?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small>${px}</span><span class="sc-m">${m}</span><span class="sc-more" aria-hidden="true"></span></summary><div class="sc-b">${body}</div></details>`;
   const dot=on=>`<span class="sc-dot" aria-hidden="true">${on?'✓':''}</span>`;
   const nOpt=(o)=>{const s={n:o?o.id:'',d:SCE.d},k=conto(s),on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S);
    const px=rc?'<small class="sc-dt sc-rc">★ consiglio</small>':k&&cm?`<small class="sc-dt">totale ${dEur(k.tot,cm.tot)}</small>`:'';
@@ -1784,10 +1800,10 @@ ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class
   $('#scN').innerHTML=`<p class="sc-g">Prima scelta: tutte e 4 le notti vicino a Disney, 13→17</p><div class="sc-list">${nOpt(null)}</div><details class="sc-par"${PO?' open':''}><summary>Oppure domenica a Parigi, poi 3 notti vicino a Disney (14→17) · ${PAR.length} hotel</summary><p class="sc-g">Vicino alla Gare de Lyon: i più comodi per i treni</p><div class="sc-list">${PAR.filter(p=>p.z==='gl').map(nOpt).join('')}</div><p class="sc-g">In centro, più belli (Opéra, Châtelet)</p><div class="sc-list">${PAR.filter(p=>p.z==='ce').map(nOpt).join('')}</div></details>`;
   $('#scN').querySelectorAll('details.sc-o').forEach(d=>{d.dataset.ty=d.dataset.k==='n-4n'?'dis':'hotel'}); /* C13 pezzo 2: colore e etichetta come nel passo 2 */
   const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
-  const byTot=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:byTot,disney:(a,b)=>(a.c?kmD(a.h.id):1e9)-(b.c?kmD(b.h.id):1e9)||(a.c?a.c.park:1e9)-(b.c?b.c.park:1e9)||byTot(a,b),rer:(a,b)=>!a.c-!b.c||rerMin(a.h)-rerMin(b.h)||byTot(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||byTot(a,b)};
+  const byTot=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:byTot,disney:(a,b)=>(a.c?arrMin(a.h.id):1e9)-(b.c?arrMin(b.h.id):1e9)||(a.c?kmD(a.h.id):1e9)-(b.c?kmD(b.h.id):1e9)||byTot(a,b),rer:(a,b)=>!a.c-!b.c||rerMin(a.h)-rerMin(b.h)||byTot(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||byTot(a,b)};
   $('#scD').innerHTML=L.sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
    const rk=c?rerK(h):null,c5=/\/5/.test(h.cl);
-   const m=c?`<span class="sc-k"><i>🏰 Disney</i><b>${c.park} min</b><small>${kmDT(h.id)}${dX(dMin(c.park,cm.park))}</small></span><span class="sc-k"><i>🚉 RER</i><b>${rk.v}</b><small>${rk.s}</small></span><span class="sc-k"><i>🧼 Pulizia</i><b>${esc(h.cl.replace('/5',''))}</b><small>${/\d/.test(h.cl)?(c5?'su 5 · Airbnb':'su 10'):'non letta'}</small></span>`:h.ab?'<span class="sc-na">Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span class="sc-na">Esaurito per queste notti</span>';
+   const m=c?`<span class="sc-k"><i>🏰 Disney</i><b>${arrMin(h.id)} min</b><small>${kmDT(h.id)}${waitMin(h.id)?' · con attesa':''}${dX(dMin(arrMin(h.id),arrMin(MIO_S.d)))}</small></span><span class="sc-k"><i>🚉 RER</i><b>${rk.v}</b><small>${rk.s}</small></span><span class="sc-k"><i>🧼 Pulizia</i><b>${esc(h.cl.replace('/5',''))}</b><small>${/\d/.test(h.cl)?(c5?'su 5 · Airbnb':'su 10'):'non letta'}</small></span>`:h.ab?'<span class="sc-na">Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span class="sc-na">Esaurito per queste notti</span>';
    const px=c?(rc?'<small class="sc-dt sc-rc">★ consiglio</small>':`<small class="sc-dt">totale ${dEur(c.tot,cm.tot)}</small>`):'';
    return row('d-'+h.id,on,!c,`<span class="nb sm">${h.id}</span>`,esc(h.n),esc(h.sub),c?fmt(c.q[0]):h.ab?'dal 14':'?',SCE.n?'3 notti':'4 notti',m,
 `<p class="small muted">${c?esc(c.q[1]):h.ab?'Su Airbnb 13→17 non è disponibile (21/11/2026): libero solo dal 14, va bene se domenica dormite a Parigi.':'Prezzo per queste notti non disponibile (esaurito su Booking).'}</p>
@@ -1920,15 +1936,15 @@ bar.addEventListener('keydown',e=>{const bs=[...bar.querySelectorAll('button')],
 if(side)side.addEventListener('click',e=>{const a=e.target.closest('a.st');if(a){e.preventDefault();show(a.dataset.t)}});
 
 /* ── pezzo 2 · Dormire ── */
+const tyOf=window.pdnTyOf;
 const TY=[['tutti','Tutti','ogni tipo'],['hotel','🏨 Hotel','e aparthotel'],['bb','🛏️ B&B','e camere'],['casa','🏠 Case','appartamenti e Airbnb']];
-const tyOf=t=>/B&B|B&amp;B|chambres? d'h|affittacamer|love room|stanza|camera privata|guest ?house/i.test(t)?'bb':/^(hotel|aparthotel|residence|residhome)/i.test(t.trim())?'hotel':'casa';
 const scD=document.getElementById('scD');
 if(scD){
  let ty=null;try{ty=localStorage.getItem('pdn-tipo')}catch(e){}
  const sw=document.createElement('div');sw.className='tyswitch';sw.setAttribute('role','group');sw.setAttribute('aria-label','Tipo di alloggio');
  const sb=document.querySelector('#scegli .sortbar');(sb||scD).before(sw);
  const tag=()=>{const n={tutti:0,hotel:0,bb:0,casa:0};
-  scD.querySelectorAll(':scope>details[data-k^="d-"]').forEach(d=>{const sm=d.querySelector('.sc-n small');const t=tyOf(sm?sm.textContent:'');d.dataset.ty=t;n[t]++;n.tutti++});
+  scD.querySelectorAll(':scope>details[data-k^="d-"]').forEach(d=>{const sm=d.querySelector('.sc-n small');const t=tyOf(sm?sm.textContent:'');d.dataset.ty=t;n[t==='disney'?'hotel':t]++;n.tutti++});
   {const x=document.querySelectorAll('#scBB .sc-xb').length;n.bb+=x;n.tutti+=x}
   if(!ty||!n[ty])ty='tutti';scD.dataset.ty=ty;
   sw.innerHTML=TY.map(([k,a,b])=>`<button type="button" data-ty="${k}" aria-pressed="${k===ty}">${a} · ${n[k]}<small>${b}</small></button>`).join('')};
