@@ -26,4 +26,4 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C18 | Controllo 14 (da Controllo 13) | Testata: ora ALBERO dal disegno di Mario (colorato e addobbato) e Torre Eiffel più bella, poi v34; dopo pagina più natalizia | `dicembre/parigi-disney-natale.html` (testata), `docs/lavori-in-corso/C18-slitta-e-luci.md` | 22/11 |
 | C19 | Controllo 12 | Guida Disneyland di Mario nella schermata principale e nei giorni Disney (link coi giorni del viaggio) | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C19-guida-disneyland.md` | 22/11 |
 | C20 | Controllo 14 (altro account, session_01QTFEqRq6KHUZyj1XNVa82p) | Pubblica v34; poi «Nascondi» sugli alloggi (v35) e schede ricche dei n. 23 e 16 | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md` | 22/11 |
-| PR 34 | Controllo 12 | v33 da `versione-v33` (commit aa32664), unita 22/11 | — | 22/11 |
+| PR 35 | Controllo 14 (altro account) | v34 da `versione-v34` (commit e334c66), unita 22/11 | — | 22/11 |
