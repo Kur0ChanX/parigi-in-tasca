@@ -5,8 +5,8 @@
 
 ## Nastro delle versioni
 🚀 Online: v20 · 🟩 Controllo 4 · 22/11 10:26 · grafica, Disney, dettagli
-🧪 In prova: v21 · 🟩 Controllo 4 · scelta che cambia pagina
-⏳ Dopo: v22 · 🟩 Controllo 4 · verifiche passate dalla Principale
+🧪 In prova: v21 · 🟩 Controllo 5 · scelta, colori, Annulla
+⏳ Dopo: v22 · 🟩 Controllo 5 · verifiche passate dalla Principale
 
 ## 0. Aspetta Mario
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
