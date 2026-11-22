@@ -4,9 +4,9 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v36 · 🟩 Controllo 14 · 22/11 17:55 · n. 23 col prezzo Booking 461 €, link, indirizzo, asciugamani
-🧪 In prova: v37 · 🟩 Controllo 15 · tasto «⭐ Rosa alloggi» nella schermata principale (aspetta le foto approvate da Mario)
-⏳ Dopo: v36 · 🟩 Controllo 14 · pagina più natalizia (foto a Mario prima)
+🚀 Online: v37 · 🟩 Controllo 16 · 22/11 18:26 · tasto «⭐ Rosa alloggi»
+🧪 In prova: — (v38 · 🟩 Controllo 16 · C22 controllo itinerari e alloggi, in lavoro)
+⏳ Dopo: v39 · 🟩 Controllo 16 · pagina più natalizia (foto a Mario prima)
 
 ## 0. Aspetta Mario
 - 22/11 · 🛑 · 🟩 Controllo 14 · DOMANDA 1: gli alloggi «spenti» (n. 18, 20, 21: su Airbnb liberi solo dal 14) come li mostro? 📌 Di cosa parliamo: passo 2 di «Scegli», righe grigie quando avete scelto 4 notti dal 13. Scelte: 1 · in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché · 2 · nascosti da soli finché scegliete 4 notti · 3 · come ora, con la scritta «non libero il 13» più chiara. Consiglio 1.
@@ -15,7 +15,7 @@
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
-- 🟩 Controllo · C21 · tasto «⭐ Rosa alloggi» nella schermata principale, rosa scelta da Mario (piano in `docs/lavori-in-corso/C21-rosa-alloggi.md`) · v37 pronta e provata; Mario 22/11 ~18:2x «prima publica la rosa»: da pubblicare subito · 👁 Lo vedi: nella schermata principale il tasto «⭐ Rosa alloggi», dentro le spunte per scegliere la rosa · prova: foto di Mario dal sito vero.
+- 🟩 Controllo · C21 · tasto «⭐ Rosa alloggi» nella schermata principale, rosa scelta da Mario (piano in `docs/lavori-in-corso/C21-rosa-alloggi.md`) · v37 online 22/11 18:26 (PR #38), aspetta che Mario la veda · 👁 Lo vedi: nella schermata principale il tasto «⭐ Rosa alloggi», dentro le spunte per scegliere la rosa · prova: foto di Mario dal sito vero.
 - 🟩 Controllo 14 · C20 · 👁 Lo vedi: nella pagina di dicembre («Scegli» passo 2 e «Dormire») il tasto «🙈 Nascondi» su ogni alloggio, dopo il tocco «Annulla» per 7 secondi in basso, e «🧹 Pulisci l’elenco» con le spunte; i nascosti restano dopo l’aggiornamento · prova: foto di Mario dal sito vero dopo la v35.
 - 🟩 Controllo 14 · C20 · 👁 Lo vedi: nei n. 16 e 23 (passo 2 di «Scegli» e «Dormire») la tendina «📋 Tutto sul n.» con soldi, arrivo, casa, spesa e il messaggio pronto per il gestore col tasto «Copia»; in «Dormire» il filtro «⭐ La vostra rosa» · prova: foto di Mario dal sito vero.
 - 🐞 · 🟩 Controllo 7 · Prova «dicembre: service worker suo» instabile: rossa ~1 volta su 5 anche sulla v27 (provato 22/11 12:10, 5 giri da sola); a volte la pagina di dicembre resta comandata dal service worker di novembre. Capire la causa vera (installazione di quello di dicembre? tempi?) e se sul telefono la pagina di dicembre senza rete ne soffre.
