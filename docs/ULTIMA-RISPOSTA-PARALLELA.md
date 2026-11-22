@@ -1,7 +1,15 @@
-# Ultima risposta di Claude (22/11/2026 14:54 ora italiana)
+# Ultima risposta di Claude (22/11/2026 15:44 ora italiana)
 
-Tutte le prove sono verdi: 60 su 60 per l'app e 20 su 20 per le scritte sovrapposte. Passano anche i controlli di pagina e colori. Il lavoro è salvato su GitHub (commit `94809b5`): manca solo la tua risposta alla DOMANDA 1 per pubblicare.
+✅ FATTO
+- Video mandati:
+  - **video 1**: la slitta ingrandita, con le renne che vanno ognuna col suo passo, Zero dietro e le braccia di Jack che si muovono;
+  - **video 2**: la testata come la vedi sul telefono.
+- Nelle note della versione 33 ho aggiunto le novità di oggi: braccia di Jack, bancarelle, merce sul banco, stelline sul castello, guida Disneyland.
 
-⚠️ Aspettano te: 2
-- 🛑 Controllo 10 · posso pubblicare la v33 sul sito, appena il…
-- Principale 13 · la luna nuova
+───
+💡 PARERE
+- Le prove finali girano adesso (stima: circa 5 minuti). Se sono verdi, metto subito la versione 33 sul sito: il tuo ok l'ho già.
+- La pagina intera più natalizia resta per la versione 34. Prima ti mando la foto.
+
+───
+⚠️ …
