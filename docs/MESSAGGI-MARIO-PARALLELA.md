@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 00:49 · 01WTjqUxihdo
-qui
-
 ## 2026-11-22 01:08 · 01WTjqUxihdo
 qui metti un tasto tutti non solo hotel b&b ecc e metti anche in bista distanza Disney con tempi e km a piedi rer a piedi
 
@@ -112,6 +109,9 @@ Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma nea
 ## 2026-11-22 14:27 · 01Rwcxc4fE4C
 Basta che risulti con lo stesso stile della foto.
 
+## 2026-11-22 14:29 · 01Rwcxc4fE4C
+ok
+
 ## 2026-11-22 14:33 · 01Rwcxc4aWHi
 Non vedo più i pacchi sotto l'albero, poi i pacchi che lancia la renna devono essere uno piccolo, un po' più piccolo, uno un pochettino più grande. In genere sono tutti un po' grandetti della stessa misura, non mi piacciono così. Falli un pochettino più scuri perché sono in lontananza. Colorali sì, ma non troppo, devono essere un po' in penombra perché in lontananza. Quindi i pacchi sono uno magari un po' rettangolare, piccolo, uno quadrato, uno un pochettino più grande, ma comunque la dimensione di adesso sono tutti troppo grandi e tutti troppo colori accesi.
 
@@ -129,3 +129,23 @@ Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocc
 
 ## 2026-11-22 15:09 · 01Rwcxc4aWHi
 Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.
+
+## 2026-11-22 15:13 · 01Rwcxc4aWHi
+Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
+
+## 2026-11-22 15:15 · 01Rwcxc4aWHi
+Sì, appena finito le cose che ti ho detto, pubblica.
+
+## 2026-11-22 15:22 · 01Rwcxc4Xr46
+Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa c'entrano i birilli, cioè? E tu me lo confermi pure, i birilli sono al posto giusto. Ma i birilli, che cavolo ce ne facciamo? Devono esserci cose attinenti, cioè. Puoi andare tu in una bancarella e vedere dei birilli in vendita. Ti sembra normale? Ma come ragioni? Boh.
+
+## 2026-11-22 15:24 · 01Rwcxc4Xr46
+No, però scusami, anche io ho sbagliato. Tipo quelle sfere che ci sono nelle bancarelle, mi spieghi che cavolo ci fanno? Che cosa significa? Cioè, metti qualcosa di inerente. Per le lucine sono sempre d'accordo, cioè più ce n'è meglio è, più da atmosfera meglio è, da tutte le parti. Anche la pagina del web farà più stile natalizia. Parigi, Disney, Natale, ecco.
+
+## 2026-11-22 15:30 · 01Rwcxc4Xr46
+Quando siamo nel giorno di Disneyland, oppure anche nella schermata principale, app Disneyland mi deve aprire il mio Disneyland, la mia app di Disneyland, che adesso te la mando, però devi controllare, mi sembra che ogni persona ha il proprio link o ha la propria memoria, perché ognuno ha i propri giorni, non lo so, valuta un po', se li apre a ognuno la propria sezione. Ecco, adesso ti invio l'app guida Disneyland da mettere sempre nella schermata principale e da mettere nelle giornate dove andiamo a Disneyland, così la possiamo consultare. Sono praticamente, questo è un viaggio, sono due app abbinate, questa e quella di Disneyland.
+
+https://guida-disneyland-ynoy.pages.dev/?prova=idee
+
+## 2026-11-22 16:29 · 01Rwcxc4Xr46
+All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio dietro, l'albero che dovresti farlo meglio, cioè l'albero non flickera, molte luci però flickerano all'inizio. Ti mando un albero che puoi mettere al posto di quello se vuoi. Ovviamente lo devi colorare e addobbare. La Torre Eiffel è fatta male dietro e poi flickera all'inizio appena nel video. E Jack Scheletro non farlo passare più volte. Passa una volta, poi non lo vedo più.
