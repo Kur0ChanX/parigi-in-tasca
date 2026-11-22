@@ -5,8 +5,8 @@
 
 ## Nastro delle versioni
 - 🚀 Online: v17 · 🟩 Controllo 1 · 22/11 00:34 · pagina a 4 schede
-- 🧪 In prova: nessuna
-- ⏳ Dopo: v18 · 🟩 Controllo 1 · alloggi nuovi
+- 🧪 In prova: v18 · 🟩 Controllo 2 · 22/11 · alloggi nuovi, tasto Tutti, distanze
+- ⏳ Dopo: v19 · 🟩 Controllo 2 · aspetto più chiaro
 
 ## 0. Aspetta Mario
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
