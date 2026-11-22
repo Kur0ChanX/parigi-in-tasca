@@ -1,12 +1,12 @@
-# Ultima risposta di Claude (22/11/2026 01:37 ora italiana)
+# Ultima risposta di Claude (22/11/2026 10:17 ora italiana)
 
-Ho capito: avvio della Controllo 4. Il lavoro aspetta la tua risposta alla DOMANDA 1.
-
-🛑 **DOMANDA 1** (fatta dalla Controllo 3): ti piace il nuovo aspetto della scheda Dormire? Rispondi col numero: 1 · pubblica e usa lo stesso stile negli altri pezzi · 2 · più corta · 3 · ritocca · 4 · com'era. Le foto sono nella chat della Controllo 3. Quando scrivi, te le rimando qui.
-
-🧠 Continuo con Opus 5.5 · Extra, come la sessione precedente. Fable non serve: c'è solo da seguire un piano già fatto, un pezzo alla volta.
+Il pezzo 3 è fatto in locale: nella scheda Piano, in «Quanto costa», ogni strada ha ora il colore del suo alloggio, come in Dormire. Le prove stanno girando. Quando finiscono ti mando il confronto prima/dopo.
 
 ───
-✅ **FATTO**
-- Avvio finito. Il ramo è uguale a quello su GitHub.
-- Ho …
+⚠️ ATTENZIONE
+Uno strumento mi ha restituito 60 KB di testo in una volta sola. Non so ancora quale, forse un'immagine di controllo. Da ora leggo a pezzi e uso immagini più piccole.
+
+───
+⚠️ Aspettano te: 2
+- Controllo 4 · DOMANDA 1 (pezzo 2)
+- Principale 13 · la luna nuova
