@@ -1,0 +1,27 @@
+{
+"account": "377be6",
+"sessione": "ea8fc8e18a7f",
+"giorno": "2026-11-22",
+"turni": 1,
+"peso": 120614,
+"uscita": 1612,
+"contesto_max": 77960,
+"anomalie": [],
+"remota": "01QTFEqRq6KH",
+"aiutanti": 0,
+"strumenti": 2,
+"motori": {
+"opus": 120614
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+6,
+151007,
+77958,
+0,
+1612
+]
+},
+"costo": 0.6861
+}
