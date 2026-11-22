@@ -590,6 +590,9 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         && /21:43/.test(r8.dom) && /22:08 \(22:43\)/.test(r8.dom) && !/non fermano a Val d'Europe/.test(r8.gio) && /8:18, 8:24/.test(r8.gio)
         && /🥐 Colazione/.test(r16.box) && /7:00–22:00/.test(r23.box) && /25 €/.test(r8.box) && !/🥐/.test(r1.box) && !/Domenica sera, appena/.test(rP.box); // colazione: Monop’ della stazione (sito Monoprix);
       ok('C22: n. 23 giovedì alle 8:10 e arrivo entro le 23:00, colazione per i n. 8, 16, 23, messaggio del n. 16 senza valigie (con la notte a Parigi sì), RER 21:43 e treni di riserva', okC22); if (!okC22) console.log({ b23: r23.box.slice(0, 600), m16: r16.msg, mP: rP.msg, d8: r8.dom.slice(-1500) });
+      // C22 parte 2 (Controllo 22): Galeries con la pista sul tetto dal 24/11 (sito Galeries), carta bancaria solo all'uscita della metro a Orly (IDFM)
+      const okC22b = await g.evaluate(() => { const t = document.body.textContent; return /pista di pattinaggio \(16 €/.test(t) && /forse chi non pattina non sale/.test(t) && /uscita<\/b> della metro a Orly|uscita della metro a Orly/.test(document.body.innerHTML) && /14,80 € a testa/.test(t); });
+      ok('C22: Galeries con la pista sul tetto (terrazza forse solo per chi pattina); Orly: carta bancaria all’uscita della metro, 14,80 €', okC22b);
       const ok1 = /8:44 da Chessy/.test(r1.gio) && /8:44 da Chessy/.test(r1.box) && /8:47 da Val d'Europe/.test(r8.gio) && /Gratis fino a lunedì 7\/12/.test(r29.box);
       ok('C24: giovedì del n. 1 da Chessy (8:44, non Val d’Europe); n. 29 «prima dell’8/12» = gratis fino al 7/12', ok1); if (!ok1) console.log(r1.gio.slice(-400), r29.box);
       // tutti e 35, con 4 notti e con la notte a Parigi: riquadro pieno, niente «undefined», «NaN» o «null» nel riquadro e nei giorni
