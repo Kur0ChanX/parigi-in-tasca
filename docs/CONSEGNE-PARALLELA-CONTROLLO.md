@@ -58,8 +58,8 @@ Testo da incollare:
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 00:44 · [AVVIO] Sei la chat parallela Controllo 2 … → avvio fatto
-- 2026-11-22 00:49 · qui (+ messaggio passato dalla Controllo 1: tasto Tutti, distanze, siti diretti, grafica, 3 agenti) → v18 online (PR #19), ricerca siti diretti (3 file), C13 + DOMANDA 1 e 2
+- 2026-11-22 00:44 · [AVVIO] Sei la chat parallela Controllo 2 di Parigi in tasca, linea «Controllo» … → avvio fatto, consegne lette
+- 2026-11-22 00:49 · qui → con il messaggio passato dalla Controllo 1 (tasto Tutti, distanze, siti diretti, grafica, 3 agenti): v18 online (PR #19), ricerca siti diretti (3 file), C13 + DOMANDA 1 e 2
 
 Ultimo, intero:
 > qui
