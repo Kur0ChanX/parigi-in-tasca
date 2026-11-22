@@ -1,0 +1,40 @@
+{
+"account": "108763",
+"sessione": "c5ba349d7035",
+"giorno": "2026-11-22",
+"turni": 3,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 361741,
+"anomalie": [],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 3,
+"Stop 8 · Il turno finisce con una": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 9 · Versione unita in questo turno:": 1
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"11:52 · Notifica non letta (in coda dalle 11:49: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"12:00 · Notifica non letta (in coda dalle 11:58: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"12:26 · Notifica non letta (in coda dalle 12:22: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 8 · Il turno finisce con una": [
+"11:52 · Il turno finisce con una domanda o un passo a mano per Mario: il messaggio ha una domanda decisiva (🛑): metti «🛑» nella sua riga di oggi in «## 0. Aspetta Mario» («- gg/mm · 🛑 · <segno giallo> <Nome> "
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"11:52 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Poi metto nella schermata principale i tasti per le cose che servono di più.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la ved"
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"11:52 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1** 🛑 (ferma solo la fila dei giorni», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso); mancano le sce"
+],
+"Stop 9 · Versione unita in questo turno:": [
+"12:00 · Versione unita in questo turno: manda la notifica sul telefono (PushNotification): «🚀 v<N> online · <segno e catena> · <3 parole>». NON riscrivere il messaggio: Mario l'ha già letto (E255); chiudi con"
+]
+},
+"remota": "01WTjqUxPidP",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
