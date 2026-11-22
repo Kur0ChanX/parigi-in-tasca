@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v31 · 🟩 Controllo 8 · 22/11 · slitta come un’ombra (parte sempre), luce sulla testata, giovedì 17 «Partite prima»
+🚀 Online: v32 · 🟩 Controllo 9 · 22/11 · luci della testata (finestre, proiezioni, lucine, faro, nuvole), fila dei giorni su una riga, PC in due colonne
 🧪 In prova: —
 ⏳ Dopo: —
 
