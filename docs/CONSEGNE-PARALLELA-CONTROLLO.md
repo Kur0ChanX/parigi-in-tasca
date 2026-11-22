@@ -57,6 +57,7 @@ Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o
 - 2026-11-22 14:26 · Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma nea… → Prossimi passi 1 (castello dal suo disegno), C18
 
 - 2026-11-22 14:27 · Basta che risulti con lo stesso stile della foto. → Prossimi passi 1
+- 2026-11-22 14:3x (dopo l'handoff) · ok → passato alla Controllo 11 con send_message; conferma di lettura, NON «ok pubblica» (DOMANDA 1 aperta)
 
 Ultimo, intero:
 > Basta che risulti con lo stesso stile della foto.
