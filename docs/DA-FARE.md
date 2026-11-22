@@ -4,11 +4,12 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v34 · 🟩 Controllo 14 · 22/11 17:20 · albero dal disegno colorato e addobbato, Torre Eiffel nuova (piani, traliccio, scintillio), niente sfarfallio all’apertura
+🚀 Online: v35 · 🟩 Controllo 14 · 22/11 17:41 · «Nascondi» sugli alloggi, n. 16 e 23 con «Tutto sul n.» e messaggio per il gestore, filtro «La vostra rosa»
 🧪 In prova: —
 ⏳ Dopo: v36 · 🟩 Controllo 14 · pagina più natalizia (foto a Mario prima)
 
 ## 0. Aspetta Mario
+- 22/11 · 🛑 · 🟩 Controllo 14 · DOMANDA 1: gli alloggi «spenti» (n. 18, 20, 21: su Airbnb liberi solo dal 14) come li mostro? 📌 Di cosa parliamo: passo 2 di «Scegli», righe grigie quando avete scelto 4 notti dal 13. Scelte: 1 · in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché · 2 · nascosti da soli finché scegliete 4 notti · 3 · come ora, con la scritta «non libero il 13» più chiara. Consiglio 1.
 - 22/11 · ❓ · 🟩 Controllo 13 · DOMANDA 1: l’albero della testata lo faccio dal tuo disegno (preso da un annuncio Etsy: sul sito pubblico potrebbe non essere permesso) o ne disegno uno nostro nello stesso stile? Scelte: 1 · il tuo disegno · 2 · uno nostro uguale nello stile. Consiglio: 1, come hai chiesto. 📌 Di cosa parliamo: l’albero di Natale nella testata della pagina di dicembre (Mario 22/11 16:29 «Ti mando un albero…»).
 - 22/11 · 🟨 Controllo 12 · guarda la v33 sul telefono (se c’è ancora «v32»: numerino → «Aggiorna versione») e tocca «Guida Disneyland»: parte dal 14 dicembre? Scrivi cosa vedi, anche «ok». 📌 Serve a chiudere le voci «👁» della v33 e a sapere se il link della guida è giusto sul telefono vero.
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).

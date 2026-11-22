@@ -34,3 +34,13 @@ Prima di questo: «Cerca di non creare conflitti con l'altro account… cerca di
 
 - Letto come «sì» anche per la DOMANDA 1 (Nascondi): pubblicare tutto.
 - Fatto (v35): `XX`/`XXM`/`xxBox` nella pagina: tendina «📋 Tutto sul n.» nei n. 16 e 23 (righe del passo 2 e schede di «Dormire»), messaggio in francese per il gestore con l'ora d'arrivo presa dal piano (`conto().sunIn`; lunedì se c'è la notte a Parigi), tasto «Copia»; filtro e gruppo `rosa` («⭐ La vostra rosa»); correzioni dalle ricerche (n. 16: richiesta di prenotazione, «host da 12 anni», tolto «letto e cucina nella stessa stanza»; n. 23: niente cauzione né età minima, scala interna, asciugamani da chiedere, Booking 461 € letto da Mario). Link Booking del n. 23: non trovato in una ricerca, da chiedere a Mario se serve. Foto 5–6 in archivio.
+
+## Mario 22/11 ~17:50, intero (8 foto in `archivio/2026-11-22-c20-booking-n23/`)
+> Perché questi 3 sono spenti/ non colorati bene e non ho messo nessuna opzione per alterarli non capisco il motivo
+>
+> https://www.booking.com/Share-DK5sTu
+>
+> guarda anche le foto
+
+- I 3 «spenti» (n. 18, 20, 21) sono le righe `off` del passo 2: su Airbnb liberi solo dal 14, quindi con «4 notti 13→17» non si possono scegliere. DOMANDA a Mario (in «Aspetta Mario») su come mostrarli.
+- v36: n. 23 col prezzo Booking 461 € (anche in `Q[23]` 4 notti: i totali ora usano Booking), link Booking, indirizzo, arrivo 14–23, asciugamani inclusi (Booking), 32 m², letto queen + 2 divani letto; data limite della cancellazione Booking non letta (si vede prima di pagare).
