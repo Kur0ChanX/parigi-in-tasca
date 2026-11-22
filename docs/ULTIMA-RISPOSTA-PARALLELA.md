@@ -1,7 +1,12 @@
-# Ultima risposta di Claude (22/11/2026 14:54 ora italiana)
+# Ultima risposta di Claude (22/11/2026 15:23 ora italiana)
 
-Tutte le prove sono verdi: 60 su 60 per l'app e 20 su 20 per le scritte sovrapposte. Passano anche i controlli di pagina e colori. Il lavoro è salvato su GitHub (commit `94809b5`): manca solo la tua risposta alla DOMANDA 1 per pubblicare.
+Ho capito: hai letto «birilli», ma avevo scritto «brillii», cioè stelline che luccicano sul castello. Nelle bancarelle non ci sono birilli. Colpa mia: ho usato una parola poco chiara, e senza foto.
 
-⚠️ Aspettano te: 2
-- 🛑 Controllo 10 · posso pubblicare la v33 sul sito, appena il…
-- Principale 13 · la luna nuova
+🧠 Continuo con Opus · Extra, come la sessione precedente · Fable: non serve, sono ritocchi già decisi.
+
+───
+✅ FATTO
+- **Bancarelle** (foto 1):
+  - neve spessa sul tetto, che scende ai lati, e ghiaccioli sotto il bordo;
+  - lucine colorate sotto la tenda, che si accendono a turno;
+  - merce di Natale appesa, che dondola piano: cuori di pan di zenzero, stelle, calze rosse, palline, bastoncini di …
