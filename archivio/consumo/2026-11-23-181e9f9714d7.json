@@ -1,0 +1,26 @@
+{
+"account": "cba507",
+"sessione": "181e9f9714d7",
+"giorno": "2026-11-23",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 328029,
+"anomalie": [],
+"blocchi": {
+"Stop 15 · There are uncommitted changes in": 1,
+"Stop 11 · 📸 Foto o video di": 1
+},
+"esempi_blocchi": {
+"Stop 15 · There are uncommitted changes in": [
+"00:07 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 11 · 📸 Foto o video di": [
+"00:07 · 📸 Foto o video di questa sessione in archivio/, non mandati a Mario e senza riga in «## 0. Aspetta Mario» (C516, E498): archivio/2026-11-23-c26-questo-o-quello/ (1 file). Per Mario → mandali ORA con l"
+]
+},
+"remota": "01Rwcxc6ffPi",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
