@@ -43,6 +43,17 @@
 
 Poi: «e usa 3 agenti».
 
+## Messaggio di Mario arrivato dopo l'handoff (22/11 ~01:10, nella chat Controllo 2)
+> qui metti un tasto tutti non solo hotel b&b ecc e metti anche in bista distanza Disney con tempi e km a piedi rer a piedi
+>
+> Cerca meglio anche su siti privati Non per forza Booking, Airbnb ecc ecc, anche siti privati che si va a risparmiare sulla commissione dei portali. Metti altri hotel in base ai miei requisiti, solo quelli validi che possono soddisfare le nostre esigenze. Cerca bene ovunque
+>
+> Se vuoi differenziare bene con magari evidenziando, con colori, con font diversi, spaziature, fai pure, almeno si capisce bene tutto.  usa  /plugin install frontend-design@claude-plugins-official
+> su questo nostro sito rifai tutto con frontend da 0 solo migliorie  Come ti ho già detto nella scorsa sessione, usa tre agenti.
+> E allora continuo a cercare se non hai trovato nessun alloggio diretto.
+> a pezzi
+→ DOMANDA 1 = **a pezzi** (riga tolta da «Aspetta Mario»); DOMANDA 2 senza risposta → consiglio: plugin non installato, regole applicate leggendole. Tasto «Tutti» e distanze: già online nella v18. Da fare: (a) C13 a pezzi, primo la scheda Dormire, foto prima/dopo; (b) **continuare la ricerca di alloggi su siti diretti/privati con 3 aiutanti**, cercando meglio (la prima non ha trovato niente di valido: vedi `alloggi_siti_diretti_*.md`, piste CEK Holidays, 123home.fr, Zenitude; prezzi dei siti delle catene solo con un browser vero: provare Playwright).
+
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 

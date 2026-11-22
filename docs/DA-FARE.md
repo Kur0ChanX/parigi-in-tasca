@@ -9,7 +9,6 @@
 - ⏳ Dopo: v19 · 🟩 Controllo 2 · aspetto più chiaro
 
 ## 0. Aspetta Mario
-- 22/11 · 🛑 · 🟨 Controllo 2 · DOMANDA 1: 📌 Di cosa parliamo: come rifaccio la grafica della pagina di dicembre. 1 · a pezzi, prima la scheda Dormire con foto prima/dopo (consiglio) · 2 · tutta la pagina in una volta · 3 · va bene così, solo ritocchi. DOMANDA 2 (vado col consiglio): plugin `frontend-design` 1 · non installarlo, le regole le seguo io (consiglio) · 2 · installarlo. Più 4 foto della v18 (`archivio/2026-11-22-v18-*.jpg`) · `docs/lavori-in-corso/C13-aspetto-pagina.md`
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
