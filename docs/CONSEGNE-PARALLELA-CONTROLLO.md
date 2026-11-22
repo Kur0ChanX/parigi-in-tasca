@@ -5,6 +5,8 @@
 - **v19 pronta ma NON online**: aspetta la DOMANDA 1 della Controllo 3 🛑 (riga in «## 0. Aspetta Mario» di `docs/DA-FARE.md`: 1 pubblica e stesso stile sugli altri pezzi · 2 più corta · 3 ritocca · 4 com'era). Dentro: scheda Dormire più chiara (C13 pezzo 1) + camera Airbnb a Bussy + nota del prezzo diretto della Résidence du Parc (C14). Verifica: `grep -c 'sc-k' dicembre/index.html` > 0 nel ramo, `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c 15868262` = 0 finché non è pubblicata.
 - Prove sull'ultimo commit di codice (`1dc0839`): web app 42/42, scritte VERO (esito 0), `fai-dicembre.py --controlla` VERO, colori VERO.
 - **Già deciso da Mario (non richiedere):** grafica «a pezzi» con foto prima/dopo (22/11 ~01:10); alloggi 13→17 in priorità; criteri (C12); «metti solo quelli validi»; plugin `frontend-design` non installato (consiglio, DOMANDA 2 senza risposta).
+- **Da non rifare:** ricerca su siti diretti giro 1 e 2 (file `alloggi_siti_diretti_*.md` e `_2_*.md`: le catene bloccano i browser automatici, nessun altro alloggio valido); verifica della camera di Bussy; foto prima/dopo del pezzo 1 (già mandate).
+- **Cosa preme a Mario adesso:** risposta alla DOMANDA 1 (aspetto della scheda Dormire, con dentro la camera di Bussy a 201 €), poi la pubblicazione.
 - La pagina di dicembre è di questa catena (la Principale non la tocca). Principale attiva: «Principale 22».
 - Controllo Da fare: 0 voci aggiunte (le richieste di Mario hanno già le loro voci 👁 in sezione 1).
 
