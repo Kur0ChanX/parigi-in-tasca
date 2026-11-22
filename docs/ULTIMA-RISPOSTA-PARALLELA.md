@@ -1,21 +1,25 @@
-# Ultima risposta di Claude (22/11/2026 11:36 ora italiana)
+# Ultima risposta di Claude (22/11/2026 11:52 ora italiana)
 
-Ho capito: nella scheda Giorni non vedi più i giorni separati e vuoi sapere perché li ho tolti.
+Ho capito: la fila dei giorni ora copre il disegno del giorno, e sulla mappa c'è un buco grigio.
+🧠 Continuo con Opus · Extra, come la sessione precedente · Fable: non serve (sono correzioni piccole e chiare).
 
 ───
 ✅ **FATTO**
-- **Non l'ho tolta io.** La v24 ha solo **aggiunto** la mappa in fondo alla scheda Giorni. Prima della mappa non ho cambiato niente.
-- L'ho controllato sulla pagina nuova: nella scheda Giorni ci sono ancora i tasti **Dom 13 · Lun 14 · Mar 15 · Mer 16 · Gio 17**. Ci sono prima che la mappa si apra e anche dopo. Ho fatto la stessa prova sulla versione di prima: è identica.
-- Non l'ho provato sul tuo telefono. Lì può esserci una differenza che io da qui non vedo.
-
-───
-💡 **PARERE**
-- …
+- **v25 online**: la fila dei giorni (Dom 13 … Gio 17) si vede di nuovo. Controllato sul sito vero: tutti e 5 i tasti si toccano.
+- **Perché era sparita**: niente era stato tolto. Dalla v17 la barra in basso con le 4 schede (Piano, Dormire, Giorni, Biglietti) si metteva **sopra** la fila dei giorni e la nascondeva tutta.
+- **Prove nuove**: due prove automatiche …
 
 ## Domande a Mario
 
 ❓ **DOMANDE**
-**DOMANDA 1:** mi mandi una foto della parte dove manca la divisione dei giorni?
-📌 Di cosa parliamo: la scheda Giorni della pagina di dicembre. Nelle mie prove i giorni separati ci sono, quindi mi serve vedere cosa vedi tu sul telefono. Con la foto trovo subito il punto e lo sistemo.
-1 · Mandi la foto dopo aver chiuso e riaperto la pagina (consiglio).
-2 · Mi scrivi a parole in quale punto della pagina era.
+**DOMANDA 1** 🛑 (ferma solo la fila dei giorni; intanto lavoro sulla mappa)
+A cosa serve: decidere dove mettere la fila dei giorni, così non copre il disegno.
+1. Fila più sottile, sempre in basso (foto 1)
+2. Fila in alto, ferma quando scorri (foto 2) ← **consiglio**
+3. Lasciarla come adesso
+
+Rispondi col numero.
+
+⚠️ Aspettano te: 2
+- Controllo 7 · la fila dei giorni copre il disegno del…
+- Principale 13 · la luna nuova
