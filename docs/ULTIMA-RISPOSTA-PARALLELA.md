@@ -1,20 +1,11 @@
-# Ultima risposta di Claude (22/11/2026 18:17 ora italiana)
+# Ultima risposta di Claude (22/11/2026 18:36 ora italiana)
 
-Ho capito: dovevo mettere il tasto «Rosa alloggi» nella schermata principale e farti scegliere lì quali alloggi stanno nella rosa.
-🧠 Opus · Extra · Fable non serve: il piano era già pronto, si trattava di eseguirlo.
+Ho capito: il tasto ripeteva le stesse cose («· 2» e «n. 16 e 23») e rovinava la grafica. Poi il video: luci che sfarfallano, scorrimento pesante, Torre Eiffel da tenere ferma.
+🧠 Opus · Medio
 
-🛑 Ti aspetta ancora la DOMANDA 1 della Controllo 14: come mostro gli alloggi «spenti» n. 18, 20 e 21. Te la scrivo intera quando vuoi.
+Hai ragione sul tasto. Il «2» e «n. 16 e 23» dicevano la stessa cosa. In più «toccate per cambiarla» lo allungava su due righe. Errore mio: la foto l'avevo guardata per la posizione del tasto, non per le parole.
 
 ───
-✅ FATTO (v37 pronta, **non ancora online**)
-- Tasto «⭐ Rosa alloggi · 2» accanto a «Guida Disneyland» (foto 1).
-- Lo tocchi e si apre Dormire con solo gli alloggi della rosa (foto 2). Sotto c'è «✏️ Cambia la rosa», con una spunta per ogni …
-
-## Domande a Mario
-
-❓ DOMANDE
-**DOMANDA 1 🛑** (serve a pubblicare la v37 sul sito vero: si pubblica solo con le foto approvate)
-La v37 con la rosa (foto 1–4) va bene?
-1 · sì, pubblica
-2 · cambia qualcosa (scrivimi cosa)
-Consiglio: **1**. Rispondi col numero.
+✅ FATTO
+- **v37 online** (letta sul sito vero alle 18:26): il tasto «⭐ Rosa alloggi», come avevi chiesto («prima publica la rosa»).
+- **v38 online** (18:36): sotto «Rosa alloggi» adesso …
