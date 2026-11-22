@@ -1,0 +1,70 @@
+/* ---------- slitta volante della testata (snippet #slitta nella scena) ----------
+   Sagoma in penombra: quasi tutto scuro, colori spenti dove batte la luna (in alto a sinistra).
+   Colori solo dalle variabili della tavolozza: vale per Blu notte e Vin brulé. */
+#slitta{display:none;pointer-events:none;
+ --sl-ombra:color-mix(in srgb,var(--night-2) 82%,var(--sil-1));
+ --sl-ferro2:color-mix(in srgb,var(--night-2) 62%,var(--sil-2));
+ --sl-mont:color-mix(in srgb,var(--sil-3) 26%,var(--night-2));
+ --sl-pent:color-mix(in srgb,var(--sil-3) 42%,var(--night-2));
+ --sl-legno:color-mix(in srgb,var(--fir) 36%,var(--night-2));
+ --sl-legno2:color-mix(in srgb,var(--fir) 13%,var(--night-2));
+ --sl-legno3:color-mix(in srgb,var(--fir) 26%,var(--night-2));
+ --sl-osso:color-mix(in srgb,var(--moon) 50%,var(--sil-3));
+ --sl-osso2:color-mix(in srgb,var(--moon) 18%,var(--sil-2));
+ --sl-rosso:color-mix(in srgb,var(--roof-r) 66%,var(--night-2));
+ --sl-rosso2:color-mix(in srgb,var(--roof-r) 32%,var(--night-2));
+ --sl-pelo:color-mix(in srgb,var(--moon) 42%,var(--sil-2));
+ --sl-volto:color-mix(in srgb,var(--moon) 50%,var(--sil-3));
+ --sl-coll:color-mix(in srgb,var(--fir) 52%,var(--night-2));
+ --sl-briglia:color-mix(in srgb,var(--moon) 34%,var(--sil-2))}
+@supports not (color:color-mix(in srgb,red,blue)){#slitta{--sl-ombra:#081029;--sl-ferro2:#0A1131;--sl-mont:#131E4E;--sl-pent:#162350;--sl-legno:#1A4544;--sl-legno2:#0B1A26;--sl-legno3:#13302F;
+ --sl-osso:#A7A9B0;--sl-osso2:#3B4157;--sl-rosso:#6F1F31;--sl-rosso2:#3A1427;--sl-pelo:#76788A;--sl-volto:#AFAFB2;--sl-coll:#22593E;--sl-briglia:#5E6276}}
+#slitta.sl-on{display:inline}
+#slitta .sl-dono{will-change:transform,opacity}
+/* Ogni colore passa da var(--sl-sag, …): la copia in controluce (.sl-volo2, solo sul disco della luna) mette tutto in sagoma scura.
+   --sl-sag2 = parti lontane, un filo più chiare. Le luci di bordo (.sl-rim) restano accese anche lì. */
+.sl-volo2{--sl-sag:color-mix(in srgb,var(--night-2) 80%,var(--sil-1));--sl-sag2:color-mix(in srgb,var(--night-2) 58%,var(--sil-3))}
+/* ossa: gradiente dall'alto (luce) al basso (ombra) */
+.sl-o{fill:none;stroke:var(--sl-sag,url(#slOssoG));stroke-linecap:round;stroke-linejoin:round}
+.sl-of{fill:var(--sl-sag,url(#slOssoG))}
+.sl-o2{fill:none;stroke:var(--sl-sag2,var(--sl-osso2));stroke-linecap:round;stroke-linejoin:round}
+.sl-o2f{fill:var(--sl-sag2,var(--sl-osso2))}
+.sl-zoc,.sl-buco,.sl-cint,.sl-guanto{fill:var(--sl-ombra)}
+.sl-buco-l{fill:none;stroke:var(--sl-ombra);stroke-width:.32;stroke-linecap:round}
+.sl-coll{fill:none;stroke:var(--sl-sag,var(--sl-coll));stroke-width:1.25}
+.sl-camp{fill:var(--sl-sag,color-mix(in srgb,var(--lamp) 46%,var(--night-2)))}
+/* luce di luna sui bordi in alto: più forte quando la slitta passa davanti alla luna (--sl-rim lo cambia lo script) */
+.sl-rim{fill:none;stroke:var(--moon);stroke-linecap:round;stroke-linejoin:round;opacity:var(--sl-rim,.6)}
+.sl-rim-b{opacity:calc(var(--sl-rim,.6)*.42)}
+.sl-fer{stroke:var(--sl-ombra)}
+.sl-fer2{stroke:var(--sl-sag2,var(--sl-ferro2))}
+.sl-mont{stroke:var(--sl-sag,var(--sl-mont))}
+.sl-legno{fill:var(--sl-sag,url(#slLegnoG))}
+.sl-legno2{stroke:var(--sl-sag,var(--sl-legno2))}
+.sl-legno3{fill:var(--sl-sag,var(--sl-legno3))}
+.sl-fodera{fill:var(--sl-sag2,var(--sl-rosso2))}
+.sl-pent{fill:var(--sl-sag,url(#slPentolaG))}
+.sl-bordo{fill:var(--sl-sag,color-mix(in srgb,var(--sil-3) 30%,var(--night-2)))}
+.sl-spir{stroke:var(--sl-sag,color-mix(in srgb,var(--sil-3) 50%,var(--night-2)))}
+.sl-rosso{stroke:var(--sl-sag,var(--sl-rosso))}
+.sl-rosso2{stroke:var(--sl-sag2,var(--sl-rosso2))}
+.sl-rossof{fill:var(--sl-sag,url(#slRossoG))}
+.sl-pellof{fill:var(--sl-sag,var(--sl-pelo))}
+.sl-volto{fill:var(--sl-sag,var(--sl-volto))}
+.sl-mani{stroke:var(--sl-sag,color-mix(in srgb,var(--roof-r) 34%,var(--night-2)))}
+.sl-redini{stroke:var(--sl-sag,var(--sl-briglia));stroke-linecap:round;opacity:.9}
+/* regali: colori spenti, nastro più chiaro */
+.sl-dA .sl-dc{fill:var(--sl-sag,color-mix(in srgb,var(--wine) 50%,var(--night-2)))}.sl-dA .sl-dn{fill:var(--sl-sag,color-mix(in srgb,var(--lamp) 58%,var(--night-2)))}
+.sl-dB .sl-dc{fill:var(--sl-sag,color-mix(in srgb,var(--fir) 50%,var(--night-2)))}.sl-dB .sl-dn{fill:var(--sl-sag,color-mix(in srgb,var(--wine) 58%,var(--night-2)))}
+.sl-dC .sl-dc{fill:var(--sl-sag,color-mix(in srgb,var(--lamp) 46%,var(--night-2)))}.sl-dC .sl-dn{fill:var(--sl-sag,color-mix(in srgb,var(--wine) 52%,var(--night-2)))}
+.sl-dD .sl-dc{fill:var(--sl-sag,color-mix(in srgb,var(--sil-3) 72%,var(--moon)))}.sl-dD .sl-dn{fill:var(--sl-sag,color-mix(in srgb,var(--lamp) 58%,var(--night-2)))}
+/* zampe: galoppo in volo (allunga e raccoglie), ogni renna sfasata (--sl-d), le zampe lontane un poco dopo (--sl-dl) */
+.sl-gz{transform-box:view-box}
+.sl-za{transform-origin:-4.6px .6px}.sl-zb{transform-origin:-8.6px 3.8px}.sl-zc{transform-origin:8.4px -.8px}.sl-zd{transform-origin:11.2px 3.4px}
+#slitta.sl-on .sl-gz{animation-duration:.42s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate;animation-delay:calc(var(--sl-d,0s) + var(--sl-dl,0s))}
+#slitta.sl-on .sl-za{animation-name:slZa}#slitta.sl-on .sl-zb{animation-name:slZb}#slitta.sl-on .sl-zc{animation-name:slZc}#slitta.sl-on .sl-zd{animation-name:slZd}
+@keyframes slZa{from{transform:rotate(-22deg)}to{transform:rotate(12deg)}}
+@keyframes slZb{from{transform:rotate(-38deg)}to{transform:rotate(4deg)}}
+@keyframes slZc{from{transform:rotate(22deg)}to{transform:rotate(-12deg)}}
+@keyframes slZd{from{transform:rotate(30deg)}to{transform:rotate(-6deg)}}
+@media (prefers-reduced-motion:reduce){#slitta{display:none!important}}

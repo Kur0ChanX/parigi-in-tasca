@@ -1,0 +1,1220 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prova slitta</title>
+<script>if(/[?&]vino\b/.test(location.search))document.documentElement.dataset.palette='vino';</script>
+<style>
+/* Layout: una colonna di lettura (max 48rem) dentro bande a tutta larghezza; hero notturno con un mercatino di casette
+   illuminate davanti al castello, festoni di lampadine, giorni come app con barra in basso su telefono.
+   Dark-first, sera romantica: cielo blu notte pieno di stelle, oro delle lampadine, abete, rosso dei tendoni, azzurro ghiaccio.
+   Tema chiaro: celeste. Le stelle su tutta la pagina solo nel tema scuro (--stars-op).
+   Seconda tavolozza «Vin brulé» (la prima versione): data-palette="vino" sulla radice, scelta dall'interruttore in alto. */
+:root{
+ --bg:#0A1230;--surface:#111C42;--surface-2:#1A2853;--ink:#F1F5FF;--mute:#B3C0E3;--rule:#2B3B6E;
+ --brand:#A9CBFF;--brand-ink:#0A1230;--lamp:#F6C964;--lamp-text:#F6C964;--lamp-ink:#241703;
+ --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
+ --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(169 203 255 / .15);
+ --night-1:#16296A;--night-2:#050A1F;--night-ink:#F4F7FF;--night-mute:#C9D4F2;--sil-1:#141D47;--sil-2:#0F173A;--sil-3:#2C3F86;--win:#F6C964;--snow:#FFFFFF;
+ --ember:#FFC27A;--tower:#D9A24A;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#0B1233;--moon:#FFF4D6;--stars-op:1;--flight-bg:rgb(8 14 40 / .78);
+ --seg-ticket:#EEF0F5;--seg-trans:#8A90A0;
+ --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#3B4A7A;--walkt:#FFFFFF;
+ --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
+ --snowground:#EEF3FF;--snowshade:#C9D6F2;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
+ --mood-market:rgb(246 201 100 / .12);--mood-magic:rgb(169 203 255 / .14);
+ --wire:#4A5A8C;--bk-1:rgb(246 201 100 / .10);--bk-2:rgb(110 150 255 / .16);--bk-3:rgb(170 140 255 / .10);
+ --display:"Bricolage Grotesque",Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
+ --text:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
+ --r-lg:20px;--r-md:14px;--r-sm:9px;
+ color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+ --bg:#EAF1FD;--surface:#FFFFFF;--surface-2:#DCE6FA;--ink:#0D1838;--mute:#475577;--rule:#C8D5EF;
+ --brand:#2447A6;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(36 71 166 / .09);
+ --seg-ticket:#1F2430;--seg-trans:#6E7485;--walk:#475577;--focus:#2447A6;
+ --shadow:0 1px 2px rgb(13 24 56 / .07),0 14px 30px -16px rgb(13 24 56 / .26);
+ --mood-market:rgb(200 140 20 / .08);--mood-magic:rgb(36 71 166 / .08);
+ --wire:#9DB0D6;--bk-1:rgb(246 190 80 / .18);--bk-2:rgb(90 140 255 / .14);--bk-3:rgb(150 120 255 / .08);--stars-op:0;color-scheme:light}}
+:root[data-theme="light"]{
+ --bg:#EAF1FD;--surface:#FFFFFF;--surface-2:#DCE6FA;--ink:#0D1838;--mute:#475577;--rule:#C8D5EF;
+ --brand:#2447A6;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(36 71 166 / .09);
+ --seg-ticket:#1F2430;--seg-trans:#6E7485;--walk:#475577;--focus:#2447A6;
+ --shadow:0 1px 2px rgb(13 24 56 / .07),0 14px 30px -16px rgb(13 24 56 / .26);
+ --mood-market:rgb(200 140 20 / .08);--mood-magic:rgb(36 71 166 / .08);
+ --wire:#9DB0D6;--bk-1:rgb(246 190 80 / .18);--bk-2:rgb(90 140 255 / .14);--bk-3:rgb(150 120 255 / .08);--stars-op:0;color-scheme:light}
+
+/* tavolozza «Vin brulé» (quella di prima): si sceglie con l'interruttore in alto */
+:root[data-palette="vino"]{
+ --bg:#210F14;--surface:#2E171D;--surface-2:#3D2228;--ink:#FFF3E6;--mute:#D6BCB0;--rule:#55303A;
+ --brand:#FFB0C4;--brand-ink:#2A0B16;--lamp:#F6C964;--lamp-text:#F6C964;--lamp-ink:#241703;
+ --fir:#3FAE7A;--wine:#F2606A;--good:#6FD9A6;--warn:#F4C45E;--bad:#FF7F6E;
+ --badge-good-bg:rgb(111 217 166 / .14);--badge-warn-bg:rgb(244 196 94 / .15);--badge-bad-bg:rgb(255 127 110 / .15);--badge-est-bg:rgb(255 176 196 / .15);
+ --night-1:#3A1224;--night-2:#14070C;--night-ink:#FFF3E6;--night-mute:#E6CDBF;--sil-1:#2F0F22;--sil-2:#2A0E1A;--sil-3:#6A2740;--win:#F6C964;--snow:#FFFFFF;
+ --ember:#FF9A52;--tower:#B8743C;--wood:#7A4127;--wood-dk:#4A230F;--roof-r:#A62C36;--roof-g:#1F6442;--night-wire:#2A120E;
+ --seg-ticket:#F3EEE8;--seg-trans:#A8918A;
+ --l1:#FFCD00;--l1t:#111111;--l7:#FA9ABA;--l7t:#111111;--l8:#E19BDF;--l8t:#111111;--l14:#62259D;--l14t:#FFFFFF;--rera:#E2231A;--rerat:#FFFFFF;--walk:#5B3A35;--walkt:#FFFFFF;
+ --focus:#FFD36B;--shadow:0 1px 2px rgb(0 0 0 / .4),0 16px 36px -18px rgb(0 0 0 / .85);
+ --snowground:#F6ECE6;--snowshade:#E0C9C0;--lamp-hot:#FFF1C9;--fir-light:#8EE3B8;
+ --mood-market:rgb(242 96 106 / .18);--mood-magic:rgb(255 176 196 / .16);
+ --wire:#6A4234;--bk-1:rgb(246 201 100 / .16);--bk-2:rgb(242 96 106 / .17);--bk-3:rgb(63 174 122 / .12);
+ --moon:#FFE9C8;--stars-op:0;--flight-bg:rgb(32 10 18 / .78);color-scheme:dark}
+@media (prefers-color-scheme:light){:root[data-palette="vino"]:not([data-theme="dark"]){
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#2A1A1C;--seg-trans:#86706A;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}}
+:root[data-palette="vino"][data-theme="light"]{
+ --bg:#FBF2E4;--surface:#FFFBF4;--surface-2:#F3E4CF;--ink:#2A1114;--mute:#6B4C47;--rule:#E6D0B6;
+ --brand:#A61E4D;--brand-ink:#FFFFFF;--lamp-text:#8A5800;--fir:#1B6E46;--wine:#B3262E;--good:#17784A;--warn:#8F5A00;--bad:#B4232C;
+ --badge-good-bg:rgb(23 120 74 / .1);--badge-warn-bg:rgb(143 90 0 / .1);--badge-bad-bg:rgb(180 35 44 / .09);--badge-est-bg:rgb(166 30 77 / .09);
+ --seg-ticket:#2A1A1C;--seg-trans:#86706A;--walk:#6B4C47;--focus:#A61E4D;
+ --shadow:0 1px 2px rgb(42 17 20 / .07),0 14px 30px -16px rgb(42 17 20 / .28);
+ --mood-market:rgb(179 38 46 / .08);--mood-magic:rgb(166 30 77 / .08);
+ --wire:#C8A98C;--bk-1:rgb(246 190 80 / .22);--bk-2:rgb(214 60 70 / .09);--bk-3:rgb(40 140 90 / .08);color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;position:relative;z-index:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.65rem,1.2rem + 2vw,2.3rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+a{color:var(--brand);text-underline-offset:3px}
+.num,time,td,.price{font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:48rem;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:var(--s7)}
+.wide{max-width:64rem}
+.kicker{font:700 .78rem/1 var(--text);letter-spacing:.12em;text-transform:uppercase;color:var(--lamp-text)}
+.sec-ans{font-size:1.12rem;font-weight:650;line-height:1.4;margin:0;max-width:42rem;color:var(--ink);text-wrap:pretty}
+.lead{font-size:1.18rem;font-weight:600;line-height:1.45;margin-top:var(--s3);max-width:40rem}
+.sec-head{display:grid;gap:var(--s2);margin-bottom:var(--s5)}
+.muted{color:var(--mute)}
+.small{font-size:.92rem}
+b,strong{font-weight:700}
+
+/* bagliore caldo fisso dietro tutta la pagina */
+.bokeh{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(30rem 22rem at 6% 14%,var(--bk-1),transparent 70%),radial-gradient(26rem 20rem at 98% 46%,var(--bk-2),transparent 70%),radial-gradient(32rem 24rem at 24% 92%,var(--bk-3),transparent 70%)}
+
+/* cielo stellato fisso dietro tutta la pagina (le immagini le crea lo script) */
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:var(--stars-op)}
+.stars i{position:absolute;inset:0;background-repeat:repeat}
+@media (prefers-reduced-motion:no-preference){.stars i.tw2{animation:stw 4.6s ease-in-out infinite}.stars i.tw3{animation:stw 6.2s ease-in-out -2.3s infinite}}
+@keyframes stw{0%,100%{opacity:.25}50%{opacity:1}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 75% 0%,var(--sil-3) 0%,var(--night-1) 38%,var(--night-2) 100%);color:var(--night-ink);isolation:isolate}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero .wrap{position:relative;z-index:2}.hero-top{padding-block:calc(var(--s6) + 26px) 0}
+.garland{position:absolute;top:0;left:0;width:100%;height:64px;z-index:1;pointer-events:none;display:block}.hero-bottom{padding-block:var(--s4) var(--s5)}
+.hb{animation:chase 2.6s ease-in-out infinite}@keyframes chase{0%,100%{opacity:1}45%{opacity:.3}}
+.tw{animation:twk 1.8s ease-in-out infinite}@keyframes twk{0%,100%{opacity:.15}50%{opacity:1}}
+.hero .kicker{color:var(--lamp)}
+.hero h1{font-size:clamp(2.45rem,1.5rem + 5.5vw,4.4rem);font-weight:800;margin-top:var(--s3);letter-spacing:-.025em}
+.hero h1 .gold{color:var(--lamp)}
+.pal{display:inline-flex;gap:4px;padding:4px;margin-top:var(--s3);border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .16)}
+.pal button{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:var(--night-ink);font:700 .95rem var(--text);cursor:pointer;transition:background-color .2s,color .2s,transform .15s}
+.pal button:active{transform:scale(.96)}
+.pal button[aria-pressed="true"]{background:var(--lamp);color:var(--lamp-ink)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 12px;border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .14);font-weight:600;font-size:.95rem;color:var(--night-ink)}
+.flights{display:grid;grid-template-columns:1fr 1fr;gap:1px;border-radius:var(--r-md);overflow:hidden;background:rgb(255 255 255 / .14);max-width:36rem}
+.flight{background:var(--flight-bg);padding:var(--s3) var(--s4);display:grid;gap:2px;min-width:0}
+.flight .d{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lamp);font-weight:700}
+.flight .r{font-family:var(--display);font-weight:700;font-size:1.12rem;line-height:1.2}
+.flight .r span{color:var(--night-mute);font-weight:600}
+.flight .x{font-size:.86rem;color:var(--night-mute)}
+.checked{margin-top:var(--s4);font-size:.92rem;color:var(--night-mute)}
+.checked b{color:var(--night-ink)}
+.scene{position:relative;z-index:1;display:block;width:100%;height:clamp(270px,16vw + 210px,380px);margin-top:var(--s3);max-width:100%}
+.scene .par{will-change:transform}
+.luna-t .luna-bagliore{opacity:.6;transform-box:fill-box;transform-origin:center}
+.luna-st{fill:#FFF8E2;transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){.luna-t .luna-bagliore{animation:respiro 5.5s ease-in-out infinite}.luna-t .luna-alone{animation:respiro2 5.5s ease-in-out infinite}.luna-st{animation:brilla 3.4s ease-in-out infinite}.luna-st.s2{animation-delay:-1.2s}.luna-st.s3{animation-delay:-2.3s}}
+@keyframes respiro{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.8;transform:scale(1.06)}}
+@keyframes respiro2{0%,100%{opacity:.7}50%{opacity:1}}
+@keyframes brilla{0%,100%{opacity:.2;transform:scale(.5)}50%{opacity:1;transform:scale(1)}}
+
+/* ---------- mercatini ---------- */
+.go{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:var(--s4);max-width:46rem}
+@media (min-width:720px){.go{grid-template-columns:repeat(4,1fr)}}
+.go a{display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:64px;padding:10px 12px;border-radius:14px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .18);color:var(--night-ink);text-decoration:none;font-weight:700;font-size:1rem;line-height:1.2;transition:transform .15s ease,background-color .15s}
+.go a small{font-weight:500;font-size:.8rem;opacity:.82}
+.go a i{font-style:normal;font-size:1.25rem;line-height:1}
+.go a:active{transform:scale(.97)}
+@media (hover:hover){.go a:hover{background:rgb(255 255 255 / .14)}}
+.go a.hot{grid-column:1/-1;min-height:72px;font-size:1.15rem;font-weight:800;background:var(--lamp);color:var(--lamp-ink);border-color:transparent;box-shadow:0 0 0 4px rgb(246 201 100 / .18),0 10px 26px -10px rgb(246 201 100 / .6)}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:6px;justify-content:center;padding:8px max(10px,env(safe-area-inset-left,0px));padding-top:calc(8px + env(safe-area-inset-top,0px));background:rgb(10 18 48);border-bottom:1px solid rgb(255 255 255 / .14);transform:translateY(-110%);transition:transform .25s ease}
+.topbar.on{transform:none}
+.topbar a{flex:1 1 0;max-width:11rem;display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 8px;border-radius:12px;color:#F4F1FF;text-decoration:none;font-weight:700;font-size:.92rem;border:1px solid rgb(255 255 255 / .2);white-space:nowrap}
+.topbar a.hot{background:var(--lamp);color:var(--lamp-ink);border-color:transparent;font-weight:800}
+/* PC (Windows, MacBook): menù fisso a sinistra e contenuto largo (Mario 21/11 «ottimizza gli spazi per windows o MacBook») */
+.side{display:none}
+/* il contenitore della pagina ha la stessa classe dei pro/contro (.pc, display:grid): senza questo, sul telefono main si allarga quanto la fila dei filtri e la pagina scorre di lato */
+.pc>main{min-width:0}
+@media (min-width:1100px){
+ .pc{display:grid;grid-template-columns:232px minmax(0,1fr)}
+ .side{display:flex;flex-direction:column;gap:4px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;padding:var(--s5) 12px var(--s5) 16px;border-right:1px solid var(--rule)}
+ .side p{font:700 .74rem/1 var(--text);letter-spacing:.12em;text-transform:uppercase;color:var(--lamp-text);margin:0 0 8px 10px}
+ .side a{display:flex;align-items:center;gap:8px;min-height:40px;padding:6px 10px;border-radius:10px;color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;line-height:1.2}
+ .side a:hover{background:var(--surface-2)}
+ .side a[aria-current="true"]{background:var(--lamp);color:var(--lamp-ink);font-weight:800}
+ .topbar{display:none}
+ .scene{height:min(36.25vw,74vh)} /* disegno intero sul PC: niente luna né cielo tagliati (foto di Mario 21/11 21:37) */
+ main .wrap{max-width:80rem;padding-left:40px;padding-right:40px}
+ .sc-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .answer{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .cards.two{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+}
+html{scroll-padding-top:72px}
+#scegli .sc-step{display:flex;align-items:center;gap:10px;font:800 1.2rem/1.25 var(--display);margin:var(--s6) 0 var(--s1)}
+.sc-now{margin:0 0 var(--s2);font-size:.95rem}
+.sc-leg{font-size:.88rem;color:var(--mute);margin-top:var(--s2)}
+.sc-list{display:grid;gap:8px;align-items:start}
+@media (min-width:720px){.sc-list{grid-template-columns:1fr 1fr}}
+.sc-g{font-weight:800;color:var(--mute);font-size:.9rem;margin:var(--s4) 0 var(--s2)}
+details.sc-o{border:2px solid var(--rule);border-radius:var(--r-lg);min-width:0}
+details.sc-o.on{border-color:var(--lamp);box-shadow:0 0 0 3px rgb(246 201 100 / .25)}
+details.sc-o.off{opacity:.62}
+details.sc-o>summary{display:grid;grid-template-columns:28px minmax(0,1fr) auto 12px;align-items:start;gap:6px 10px;min-height:0;padding:10px 12px;font-weight:400}
+details.sc-o>summary::after{grid-column:4;grid-row:1;margin-top:9px}
+.sc-o .sc-n{grid-column:2;min-width:0;font-weight:800;font-size:1.02rem;line-height:1.25}
+.sc-o .sc-n small{display:block;font-weight:500;color:var(--mute);font-size:.82rem;margin-top:2px}
+.sc-o .sc-p{grid-column:3;font-weight:800;font-size:1.02rem;white-space:nowrap;text-align:right}
+.sc-o .sc-p small{display:block;font-weight:500;color:var(--mute);font-size:.74rem}
+.sc-o .sc-m{grid-column:2/5}
+.sc-dot{width:24px;height:24px;margin-top:1px;border-radius:50%;border:2px solid var(--rule);display:grid;place-items:center;font:800 .8rem/1 var(--text)}
+.sc-o.on .sc-dot{background:var(--lamp);border-color:var(--lamp);color:var(--lamp-ink)}
+.sc-ok{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:6px;background:var(--lamp);color:var(--lamp-ink);font:800 .7rem/1.3 var(--text);letter-spacing:.05em;text-transform:uppercase;vertical-align:2px}
+.sc-m{display:flex;flex-wrap:wrap;gap:5px;font-size:.8rem;line-height:1.3}
+.sc-m span{background:var(--surface-2);border-radius:8px;padding:3px 7px}
+.sc-m .sc-rc{background:var(--lamp);color:var(--lamp-ink);font-weight:800}
+.sc-b{padding:0 12px 12px 50px;display:grid;gap:8px}
+.sc-l{display:grid;gap:4px;font-size:.92rem;padding-left:1.1em;margin:0}
+.sc-up{color:var(--bad);font-weight:800}.sc-dn{color:var(--good);font-weight:800}.sc-eq{color:var(--mute);font-weight:700}
+.sc-o .pc{font-size:.9rem}
+.sc-act{display:flex;flex-wrap:wrap;gap:8px}
+.sc-act .btn{min-height:44px}
+.sc-kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sc-kpi>div{background:var(--surface-2);border-radius:var(--r-md);padding:8px 9px;display:grid;gap:2px;align-content:start;min-width:0}
+.sc-kpi .k{font:700 .7rem/1.2 var(--text);color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+.sc-kpi .v{font:800 1.08rem/1.2 var(--display)}
+.sc-kpi .d{font-size:.82rem}
+.sc-t{width:100%;border-collapse:collapse;font-size:.93rem}
+.sc-t th,.sc-t td{padding:7px 4px;border-top:1px solid var(--rule);text-align:left;vertical-align:top}
+.sc-t th{font-weight:700;width:34%}
+.sc-t td:last-child{text-align:right;white-space:nowrap}
+.bar-row.is-me{outline:3px solid var(--lamp);outline-offset:3px;border-radius:12px}
+.go-more{margin-top:var(--s2);font-size:.92rem}.go-more a{color:var(--night-ink);display:inline-block;padding:10px 4px}
+.mk-btns{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s3) 0 var(--s4)}
+.mk-giro{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2);counter-reset:none}
+.mk-tappa details>summary{justify-content:flex-start;gap:var(--s3)}
+.mk-n{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--surface-2);font-weight:800}
+.mk-top .mk-n{background:var(--lamp);color:#1A1205}
+.mk-top details{border-color:var(--lamp)}
+.mk-t{display:grid;gap:2px;min-width:0}.mk-t small{font-weight:600;color:var(--mute);font-size:.86rem}
+.mk-body{padding:0 var(--s4) var(--s4);display:grid;gap:var(--s2)}.mk-body p{margin:0}
+.mk-act{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.mk-via{padding:var(--s2) var(--s3);border-radius:var(--r-md);background:var(--surface-2)}
+.mk-al{display:grid;gap:var(--s2);margin:var(--s3) 0 0;padding:var(--s4);border:2px solid var(--lamp);border-radius:var(--r-md);background:var(--surface)}
+.mk-al p{margin:0}.mk-al .k{font:700 .74rem/1.3 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.mk-al .v{font-weight:800;font-size:1.08rem}.mk-al ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.mk-h3{margin:var(--s5) 0 var(--s3);font-size:1.15rem}
+.mk-salta,.mk-info{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.mk-salta li{display:grid;gap:2px;padding:var(--s3) var(--s4);border:1px solid var(--rule);border-left:4px solid var(--bad);border-radius:var(--r-md);background:var(--surface)}
+.mk-salta li b::before{content:"✕ ";color:var(--bad)}
+.mk-salta span{color:var(--mute);font-size:.95rem}
+.mk-info li{padding:var(--s3) var(--s4);border-radius:var(--r-md);background:var(--surface)}
+/* ---------- divisore a lampadine ---------- */
+.lights{display:block;height:40px;width:100%;overflow:hidden;color:var(--wire)}
+.lights svg{display:block;width:100%;height:40px}
+.lights .wire{fill:none;stroke:currentColor;stroke-width:1.5}
+.lights .b{transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){
+ .lights .b{animation:tw 3.2s ease-in-out infinite}
+ .lights .b:nth-child(3n){animation-delay:-1.1s}.lights .b:nth-child(3n+1){animation-delay:-2.2s}
+}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ---------- risposta in breve ---------- */
+.answer{display:grid;gap:var(--s3);grid-template-columns:1fr}
+@media (min-width:640px){.answer{grid-template-columns:1fr 1fr}}
+.verdict{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md);padding:var(--s4);display:grid;gap:6px;align-content:start;min-width:0}
+.verdict .k{font:700 .76rem/1 var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.verdict .v{font-family:var(--display);font-weight:700;font-size:1.22rem;line-height:1.2}
+.verdict p{color:var(--mute);font-size:.96rem}
+.total{margin-top:var(--s4);display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--s3);padding:var(--s4) var(--s5);border-radius:var(--r-lg);background:var(--lamp);color:var(--lamp-ink)}
+.total .t{font-weight:700;font-size:1rem;max-width:26rem}
+.total .n{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;font-variant-numeric:tabular-nums}
+.total small{display:block;font-weight:500;font-size:.88rem;margin-top:4px}
+
+/* badge */
+.bd{display:inline-flex;align-items:center;gap:5px;font:700 .72rem/1 var(--text);letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:6px;white-space:nowrap;vertical-align:middle}
+.bd::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.bd.ok{color:var(--good);background:var(--badge-good-bg)}
+.bd.nu{color:var(--warn);background:var(--badge-warn-bg)}
+.bd.nc{color:var(--bad);background:var(--badge-bad-bg)}
+.bd.es{color:var(--brand);background:var(--badge-est-bg)}
+.rec{display:inline-flex;align-items:center;gap:6px;font:800 .8rem/1 var(--text);letter-spacing:.08em;text-transform:uppercase;background:var(--lamp);color:var(--lamp-ink);padding:7px 11px;border-radius:999px}
+.rec svg{width:13px;height:13px}
+
+/* ---------- barre costi ---------- */
+.bars{display:grid;gap:var(--s4);margin-top:var(--s2)}
+.bar-row{display:grid;gap:6px;color:inherit;text-decoration:none;border-radius:var(--r-md);padding:8px;margin:-8px;-webkit-tap-highlight-color:transparent}a.bar-row:hover,a.bar-row:focus-visible{background:var(--surface)}.bar-go{font-weight:700;color:var(--brand);white-space:nowrap}.card details.more,.mine details.more{background:transparent}.card details.more>summary{min-height:44px;font-size:.95rem}.card.flash{box-shadow:0 0 0 3px var(--focus)}
+.bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);flex-wrap:wrap}
+.bar-name{font-weight:700}
+.bar-name .rec{margin-left:6px;padding:5px 8px;font-size:.68rem}
+.bar-val{font-family:var(--display);font-weight:800;font-size:1.25rem;font-variant-numeric:tabular-nums}
+.bar-diff{font-size:.88rem;font-weight:700;margin-left:6px}
+.bar-diff.up{color:var(--bad)}.bar-diff.dn{color:var(--good)}.bar-diff.eq{color:var(--mute)}
+.track{position:relative;height:26px;border-radius:7px;background:var(--surface-2)}
+.fill{position:absolute;inset:0 auto 0 0;display:flex;border-radius:7px;overflow:hidden;transform-origin:left center}
+.fill i{display:block;height:100%}
+.fill i+i{box-shadow:inset 2px 0 0 var(--bg)}
+/* legenda dei costi senza doppioni (Mario 22/11 «basta che non si mischiano, che non ci siano doppioni»): l'alloggio ha il colore del suo tipo (il pacchetto Disney il rosa Disney), biglietti bianco (nero nei temi chiari), trasporti grigio; oro, verde e rosso restano a scelto, meglio e peggio */
+.s-h{background:var(--ty,var(--ty-hotel))}.s-t{background:var(--seg-ticket)}.s-p{background:var(--ty-disney)}.s-r{background:var(--seg-trans)}
+.legend i.s-h{background:linear-gradient(90deg,var(--ty-hotel) 0 25%,var(--ty-bb) 0 50%,var(--ty-casa) 0 75%,var(--ty-disney) 0)}
+.bars.cresce .fill{animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+.bars.cresce .bar-row:nth-child(2) .fill{animation-delay:.12s}.bars.cresce .bar-row:nth-child(3) .fill{animation-delay:.24s}.bars.cresce .bar-row:nth-child(4) .fill{animation-delay:.36s}.bars.cresce .bar-row:nth-child(5) .fill{animation-delay:.48s}.bars.cresce .bar-row:nth-child(6) .fill{animation-delay:.6s}
+@keyframes grow{from{transform:scaleX(.03)}to{transform:scaleX(1)}}
+.axis{position:relative;height:22px;margin-top:2px;font-size:.78rem;color:var(--mute);font-variant-numeric:tabular-nums}
+.axis span{position:absolute;top:4px;transform:translateX(-50%);white-space:nowrap}.axis span:last-child{transform:translateX(-100%)}
+.axis span:first-child{transform:none}
+.grid-lines{position:absolute;inset:0;pointer-events:none}
+.grid-lines i{position:absolute;top:0;bottom:0;width:1px;background:var(--rule)}
+.legend{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);font-size:.9rem;color:var(--mute);margin-top:var(--s3)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px}
+.bar-note{font-size:.88rem;color:var(--mute)}
+
+/* ---------- card hotel ---------- */
+.cards{display:grid;gap:var(--s4)}
+@media (min-width:760px){.cards.two{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-lg);padding:var(--s5);display:grid;gap:var(--s3);align-content:start;min-width:0;transition:transform .18s ease,box-shadow .18s ease}
+.card.is-rec{border:2px solid var(--lamp);box-shadow:var(--shadow);position:relative}
+.card:active{transform:translateY(-2px) scale(.995)}
+@media (hover:hover){.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s3);flex-wrap:wrap}
+.card h3{font-size:1.3rem}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2)}
+.fact{background:var(--surface-2);border-radius:var(--r-sm);padding:var(--s2) var(--s3);min-width:0}
+.fact .k{font-size:.74rem;color:var(--mute);font-weight:600;letter-spacing:.02em}
+.fact .v{font-family:var(--display);font-weight:800;font-size:1.3rem;font-variant-numeric:tabular-nums;line-height:1.15}
+.fact .v small{font-family:var(--text);font-size:.78rem;font-weight:600;color:var(--mute)}
+.kv{display:grid;gap:6px;font-size:.97rem}
+.kv div{display:grid;grid-template-columns:7.2rem 1fr;gap:var(--s2)}
+.kv dt{color:var(--mute);font-weight:600}
+.kv dd{margin:0;min-width:0}
+.pc{display:grid;gap:6px;font-size:.97rem}
+.pc p{position:relative;padding-left:28px}
+.pc p::before{position:absolute;left:0;top:0}
+.pc .p::before{content:"+";color:var(--good);font-weight:800}
+.pc .c::before{content:"–";color:var(--bad);font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--brand);color:var(--brand-ink);border:0;cursor:pointer;transition:transform .15s ease,filter .15s;font-size:1rem;font-family:var(--text)}
+.btn:hover{filter:brightness(1.08)}
+.btn:active{transform:scale(.97)}
+.btn.gold{background:var(--lamp);color:var(--lamp-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--rule)}
+.btn svg{width:18px;height:18px;flex:none}
+.mini{display:grid;gap:var(--s3)}
+.mini .card{padding:var(--s4)}
+details{border:1px solid var(--rule);border-radius:var(--r-md);background:var(--surface)}
+details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:var(--s3);min-height:52px;padding:var(--s3) var(--s4);font-weight:700}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"";width:10px;height:10px;border-right:2.5px solid var(--mute);border-bottom:2.5px solid var(--mute);transform:rotate(45deg) translateY(-3px);transition:transform .2s;flex:none}
+details[open]>summary::after{transform:rotate(-135deg) translateY(-2px)}
+details>.in{padding:0 var(--s4) var(--s4);display:grid;gap:var(--s3)}
+.stack{display:grid;gap:var(--s4)}
+.callout{border-left:4px solid var(--lamp);background:var(--surface);padding:var(--s4);border-radius:0 var(--r-md) var(--r-md) 0}
+.callout b{color:var(--lamp-text)}
+ul.clean{margin:0;padding-left:1.1rem;display:grid;gap:6px}
+
+/* tabelle */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:var(--r-md);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;min-width:34rem}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);font-weight:700;background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right}
+tr.hl td{background:var(--badge-warn-bg)}
+
+/* alloggi: consigli, filtri, tabella */
+.sub-h{font-size:1.25rem;margin-bottom:var(--s3)}
+.nb{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--lamp);color:var(--lamp-ink);font:800 1.05rem/1 var(--display);flex:none;font-variant-numeric:tabular-nums}
+.nb.sm{width:28px;height:28px;font-size:.9rem}
+.picks{display:grid;gap:var(--s3);grid-template-columns:1fr}
+@media (min-width:560px){.picks{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.picks{grid-template-columns:repeat(3,1fr)}}
+.pick{display:grid;grid-template-columns:auto 1fr;gap:2px var(--s3);align-content:start;padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md);color:var(--ink);text-decoration:none;min-width:0;transition:transform .15s,border-color .15s}
+.pick .nb{grid-row:span 3}
+.pick .k{font:700 .74rem/1.3 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--lamp-text)}
+.pick .t{font-weight:700;font-size:1.05rem}
+.pick .d{font-size:.92rem;color:var(--mute)}
+.pick:active{transform:scale(.98)}
+@media (hover:hover){.pick:hover{border-color:var(--brand)}}
+.mine{display:grid;gap:var(--s3);padding:var(--s4) var(--s4) var(--s5);margin-bottom:var(--s6);background:var(--surface);border-radius:var(--r-lg)}
+.mine-t{display:flex;align-items:center;gap:var(--s3);font-size:1.3rem;line-height:1.25;text-wrap:balance;min-width:0}
+.mine-why{display:grid;gap:8px}
+.mine-why li,.mine p{max-width:65ch}
+.mine .give{color:var(--mute);font-size:.96rem}
+.mine .btn,.mine .rec{justify-self:start}
+.mega{margin:var(--s4) 0 var(--s5)}
+.chooser{display:grid;grid-template-columns:minmax(0,1fr);min-width:0;gap:10px;margin-top:var(--s4);padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md)}
+.chooser label{font-weight:700}
+.chooser select{font:inherit;font-size:1rem;min-height:48px;padding:0 12px;border-radius:12px;border:1.5px solid var(--rule);background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.chooser .btn{justify-self:start}
+.use-al{margin-top:8px}
+.use-al[aria-pressed=true]{border-color:var(--lamp);background:var(--surface-2)}
+.mycost{margin-bottom:var(--s5)}
+.mega-route{display:grid;gap:10px}
+.mega-route li{display:grid;grid-template-columns:3.4em 1fr;gap:var(--s3);align-items:baseline}
+.mega-route time{font-family:var(--display);font-weight:800;text-align:right}
+.mega-route b{display:block}
+.mega-route span{color:var(--mute);font-size:.94rem}
+.filters{display:flex;gap:var(--s2);overflow-x:auto;scrollbar-width:none;padding-block:2px var(--s2)}
+.filters button{flex:none;min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);font:700 .93rem var(--text);cursor:pointer;transition:background-color .15s,border-color .15s,transform .15s}
+.filters button:active{transform:scale(.96)}
+.filters button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.sortbar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s3);margin-top:var(--s2)}
+.switch.sort4{grid-template-columns:repeat(2,auto);margin:0}
+@media (min-width:600px){.switch.sort4{grid-template-columns:repeat(4,auto)}}
+#fdesc{margin:var(--s2) 0 var(--s3);max-width:44rem}
+table.cmp{min-width:0;font-size:.93rem}
+table.cmp th,table.cmp td{padding:8px 10px;vertical-align:middle}
+table.cmp a{color:var(--ink);font-weight:700;text-decoration:none}
+table.cmp td.r{white-space:nowrap}
+.card{scroll-margin-top:16px}
+.ttl{display:flex;gap:var(--s3);align-items:flex-start;min-width:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font:700 .76rem/1 var(--text);padding:6px 9px;border-radius:999px;background:var(--surface-2);color:var(--mute)}
+
+/* biglietti */
+.opts{display:grid;gap:var(--s3)}
+@media (min-width:720px){.opts{grid-template-columns:repeat(3,1fr)}}
+.opt{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-lg);padding:var(--s4);display:grid;gap:var(--s2);align-content:start;transition:transform .18s ease}
+.opt.is-rec{border:2px solid var(--lamp);box-shadow:var(--shadow)}
+.opt .price{font-family:var(--display);font-weight:800;font-size:2rem;line-height:1}
+.opt .price small{font-size:.9rem;font-family:var(--text);font-weight:600;color:var(--mute)}
+.opt:active{transform:scale(.99)}
+
+/* cartolina del mercatino: domenica e piede della pagina */
+.market{display:block;width:100%;max-width:100%;height:112px;border-radius:var(--r-md);background:linear-gradient(var(--night-1),var(--night-2));margin-top:var(--s2)}
+.foot-market{display:block;width:100%;height:120px;background:linear-gradient(var(--night-1),var(--night-2))}
+
+/* ---------- giorni ---------- */
+#giorni{position:relative;overflow:hidden}
+.mood{position:absolute;inset:0;pointer-events:none;transition:opacity .8s ease;opacity:0}
+.mood.market{background:radial-gradient(90% 60% at 10% 0%,var(--mood-market),transparent 70%)}
+.mood.magic{background:radial-gradient(90% 60% at 90% 0%,var(--mood-magic),transparent 70%)}
+#giorni[data-mood="market"] .mood.market,#giorni[data-mood="magic"] .mood.magic{opacity:1}
+#giorni .wrap{position:relative}
+.daybar{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:6px;position:relative;margin-bottom:var(--s5)}
+.daybar button{position:relative;z-index:1;min-height:56px;border:0;background:transparent;border-radius:11px;color:var(--mute);font-family:var(--text);cursor:pointer;display:grid;place-content:center;gap:1px;padding:4px 2px;transition:color .2s,transform .15s}
+.daybar button:active{transform:scale(.95)}
+.daybar button .dn{font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.daybar button .dd{font-family:var(--display);font-weight:800;font-size:1.35rem;line-height:1;font-variant-numeric:tabular-nums}
+.daybar button[aria-selected="true"]{color:var(--lamp-ink)}
+.daybar .pill{position:absolute;z-index:0;top:6px;bottom:6px;left:6px;border-radius:11px;background:var(--lamp);transition:transform .38s cubic-bezier(.3,.9,.3,1);width:calc((100% - 12px - 24px)/5)}
+.daybar .today-dot{position:absolute;top:6px;right:8px;width:7px;height:7px;border-radius:50%;background:var(--wine)}
+.spark{position:absolute;z-index:2;pointer-events:none;width:46px;height:46px;margin:-23px 0 0 -23px;opacity:0}
+.spark.on{animation:spk .7s ease-out}
+@keyframes spk{0%{opacity:1;transform:scale(.3) rotate(0)}100%{opacity:0;transform:scale(1.25) rotate(40deg)}}
+@media (max-width:719px){
+ .daybar{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;border-radius:18px 18px 0 0;border-width:1px 0 0;
+  padding:6px max(10px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));box-shadow:0 -10px 30px -12px rgb(0 0 0 / .5)}
+ .daybar .pill{top:6px;bottom:calc(6px + env(safe-area-inset-bottom,0px));left:max(10px,env(safe-area-inset-left,0px));width:calc((100% - max(10px,env(safe-area-inset-left,0px)) - max(10px,env(safe-area-inset-right,0px)) - 24px)/5)}
+ body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
+.day-head{display:grid;gap:var(--s2);margin-bottom:var(--s4)}
+.day-head h3{font-size:clamp(1.45rem,1.2rem + 1.2vw,1.9rem);font-weight:800}
+.panel.enter{animation:pin .45s cubic-bezier(.2,.8,.2,1)}
+.panel.enter.back{animation-name:pinb}
+@keyframes pin{from{opacity:.25;transform:translateX(28px)}to{opacity:1;transform:none}}
+@keyframes pinb{from{opacity:.25;transform:translateX(-28px)}to{opacity:1;transform:none}}
+.switch{display:inline-grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:14px;background:var(--surface-2);margin:var(--s2) 0 var(--s3);max-width:100%}
+.switch button{min-height:46px;border:0;border-radius:10px;background:transparent;color:var(--mute);font:700 .95rem var(--text);padding:0 14px;cursor:pointer;transition:background-color .2s,color .2s}
+.switch button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tl>li{display:grid;grid-template-columns:4.1rem 1fr;gap:var(--s3);position:relative;padding-bottom:var(--s4)}
+.tl>li::before{content:"";position:absolute;left:calc(4.1rem + 18px);top:14px;bottom:0;width:2px;background:var(--rule)}
+.tl>li:last-child::before{display:none}
+.tl time{font-family:var(--display);font-weight:800;font-size:1.06rem;padding-top:2px;text-align:right}
+.tl .body{position:relative;padding-left:var(--s5);display:grid;gap:6px;min-width:0}
+.tl .body::before{content:"";position:absolute;left:-1px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--lamp)}
+#giorni[data-mood="magic"] .tl .body::before{border-color:var(--brand)}
+.tl .t{font-weight:700;font-size:1.08rem;line-height:1.3}.tl details.st{border:0;border-radius:0;background:none}.tl details.st>summary{min-height:0;padding:0 0 2px;font-weight:inherit;align-items:flex-start}.tl details.st>summary .t{flex:1;min-width:0}.tl details.st>summary::after{margin-top:6px}.tl details.st[open]>summary .t{color:var(--brand)}.st-in{display:grid;gap:6px;margin-top:6px}
+.tl .d{color:var(--mute);font-size:.98rem}
+.tl .d b{color:var(--ink)}
+.legs{display:grid;gap:6px;margin-top:2px}
+.leg{display:flex;gap:8px;align-items:flex-start;font-size:.96rem}
+.lb{flex:none;display:inline-grid;place-items:center;min-width:28px;height:24px;padding:0 6px;border-radius:6px;font:800 .82rem/1 var(--text);background:var(--c);color:var(--tc)}
+.lb.round{border-radius:50%;width:26px;min-width:26px;height:26px}
+.lb.walk{background:var(--walk);color:var(--walkt)}
+.lb.walk svg{width:14px;height:14px}
+.maps{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:11px;border:1.5px solid var(--rule);color:var(--ink);text-decoration:none;font-weight:700;font-size:.93rem;margin-top:4px;justify-self:start;transition:transform .15s,border-color .15s}
+.maps:hover{border-color:var(--brand)}
+.maps:active{transform:scale(.97)}
+.maps svg{width:16px;height:16px;color:var(--wine)}
+.note{font-size:.92rem;background:var(--surface-2);border-radius:var(--r-sm);padding:var(--s2) var(--s3)}
+/* Dov'è: mappa e distanze nella scheda di ogni alloggio (C5) */
+.dove{display:grid;gap:var(--s2)}
+.dove-t{font:800 1.05rem/1.2 var(--display);margin:0}
+.mappa{position:relative;display:block;aspect-ratio:800/534;border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--rule);background:#EEF0F2;text-decoration:none;color:#0D1838}
+.mappa img{display:block;width:100%;height:100%;object-fit:cover}
+/* C15 · Mappa del viaggio (Mario 22/11 «zoomabile … Aeroporto, Parigi e Disneyland»): Leaflet sui pezzi Plan IGN */
+.tm{position:relative;z-index:0;height:min(64vh,560px);min-height:320px;margin-top:var(--s3);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--rule);background:#E8ECEF;color:#0D1838}
+.tm-no{margin:0;padding:var(--s5) var(--s4);color:#3A4256;font-size:.95rem}
+.tm-vai{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--s3)}
+.tm-vai button{min-height:40px;padding:6px 12px;border:2px solid var(--rule);border-radius:999px;background:var(--surface);color:var(--ink);font:700 .9rem/1.1 var(--text);cursor:pointer}
+.tm-vai button[aria-pressed="true"]{border-color:#F6C964}
+/* C15 (Mario 22/11 ~11:42 «fammela mettere a schermo intero… il pinch to zoom… sbloccalo, e anche pinch out»): mappa a tutto schermo, ✕ o «indietro» per uscire */
+.tm-vai .tm-fs{background:var(--lamp);color:var(--lamp-ink);border-color:transparent}
+.tm-box.pieno{position:fixed;inset:0;z-index:300;display:flex;flex-direction:column;background:var(--bg);padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.tm-box.pieno .tm-vai{margin:0;padding:8px;flex-wrap:nowrap;overflow-x:auto}
+.tm-box.pieno .tm-vai button{flex:0 0 auto}
+.tm-box.pieno .tm{flex:1;height:auto;min-height:0;margin:0;border-radius:0;border:0}
+body.tm-aperta{overflow:hidden}
+body.tm-aperta #mappa>.wrap{z-index:300}
+body.tm-aperta .tabbar,body.tm-aperta .vnum,body.tm-aperta .sc-avviso,body.tm-aperta .daybar{visibility:hidden}
+.tm .leaflet-container{font:600 .85rem/1.3 var(--text)}
+.tm .leaflet-popup-content{margin:10px 12px;color:#0D1838;font:500 .9rem/1.35 var(--text)}
+.tm .leaflet-popup-content a{color:#1F4FB4;font-weight:800}
+.tm-i{display:grid;place-items:center}
+.tm-n b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#C8102E;color:#fff;font:800 .85rem/1 var(--display);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45)}
+.tm-n.top b{border-color:#F6C964}
+.tm-c span{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:999px;background:#fff;color:#0D1838;font:800 .78rem/1.2 var(--text);white-space:nowrap;border:2px solid #0D1838;box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.tm-c.me span{background:#C8102E;color:#fff;border-color:#fff}
+.tm-c.st span{padding:2px 6px;font-size:.72rem;border-width:1.5px}
+.tm-g{position:relative}
+.tm-g i{display:block;width:10px;height:10px;border-radius:50%;background:#8A90A0;border:2px solid #fff;box-shadow:0 0 0 1px #8A90A0}
+.tm-g span{position:absolute;left:12px;top:50%;transform:translateY(-50%);padding:1px 5px;border-radius:5px;background:rgba(255,255,255,.92);color:#4A5060;font:700 .7rem/1.2 var(--text);white-space:nowrap}
+.tm-a i{display:block;width:12px;height:12px;border-radius:50%;border:2px solid #0D1838;background:var(--ty-hotel)}
+.tm-a.ty-bb i{background:var(--ty-bb)}.tm-a.ty-casa i{background:var(--ty-casa)}.tm-a.ty-disney i{background:var(--ty-disney)}
+.tm-lg{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:var(--s3) 0 var(--s2);color:var(--mute);font-size:.88rem}
+.tm-sw{display:inline-grid;place-items:center;width:30px;height:18px;margin-right:6px;border-radius:5px;background:#fff;vertical-align:middle}
+.tm-sw i{display:block;width:22px;border-top:3.5px solid #C8102E}
+.tm-sw i.m{border-top:3.5px dashed #1F4FB4}
+.tm-dot{display:inline-grid;place-items:center;width:18px;height:18px;margin-right:6px;border-radius:50%;vertical-align:middle;font:800 .7rem/1 var(--display)}
+.tm-dot.r{background:#C8102E;color:#fff;border:2px solid #F6C964}
+.tm-dot.g{width:12px;height:12px;background:#8A90A0;border:2px solid #fff}
+.tm-dot.a{width:12px;height:12px;background:var(--ty-hotel);border:2px solid #0D1838}
+.mk-h{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#C8102E;color:#fff;font:800 .9rem/1 var(--display);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45);font-variant-numeric:tabular-nums}
+.mk-s{position:absolute;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#0D1838;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+.mk-s>span{position:absolute;top:50%;display:inline-flex;align-items:center;gap:5px;padding:3px 7px 3px 3px;border-radius:7px;background:rgba(255,255,255,.95);color:#0D1838;font:700 .78rem/1 var(--text);white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.3);transform:translateY(-50%)}
+.mk-s.r>span{left:12px}.mk-s.l>span{right:12px}
+.mk-s.u>span{transform:translateY(-140%)}.mk-s.d>span{transform:translateY(40%)}
+.mk-s .lb{min-width:20px;height:18px;padding:0 4px;font-size:.7rem}
+.mk-c{position:absolute;right:0;bottom:0;padding:2px 6px;border-top-left-radius:6px;background:rgba(255,255,255,.88);color:#333;font:600 .66rem/1.3 var(--text)}
+.dr{list-style:none;margin:0;padding:0;display:grid}
+.dr li{display:grid;grid-template-columns:1fr auto;gap:var(--s2) var(--s3);align-items:center;padding:var(--s2) 0;border-top:1px solid var(--rule)}
+.dr-k{display:block;font-weight:700}
+.dr-k .nw{white-space:nowrap}
+.dr-t{display:block;font:800 1.08rem/1.35 var(--display);color:var(--lamp-text)}
+.dr-l{display:flex;flex-wrap:wrap;gap:4px 8px;margin-top:3px;font-size:.84rem;color:var(--mute)}
+.dr-l>span{display:inline-flex;align-items:center;gap:4px}
+.dr-l .lb{min-width:22px;height:20px;padding:0 4px;font-size:.72rem}
+.dr-l .lb.round{width:21px;min-width:21px;height:21px}
+.dr-l .lb.walk svg{width:12px;height:12px}
+.dr .maps{margin-top:0}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.check label{display:grid;grid-template-columns:30px 1fr;gap:var(--s3);align-items:start;padding:var(--s3) var(--s4);background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md);cursor:pointer;min-height:56px;transition:transform .15s,opacity .2s}
+.check label:active{transform:scale(.99)}
+.check input{appearance:none;-webkit-appearance:none;width:28px;height:28px;margin:0;border-radius:8px;border:2px solid var(--mute);display:grid;place-items:center;cursor:pointer;transition:background-color .15s,border-color .15s}
+.check input:checked{background:var(--good);border-color:var(--good)}
+.check input:checked::after{content:"";width:8px;height:14px;border:solid var(--bg);border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-2px)}
+.check .w{display:block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--lamp-text)}
+.check .tx{font-weight:600}
+.check .tx small{display:block;font-weight:400;color:var(--mute);font-size:.92rem;margin-top:2px}
+.check input:checked~span .tx{text-decoration:line-through;text-decoration-color:var(--mute)}
+.check li.done label{opacity:.72}
+.progress{font-weight:700;margin-bottom:var(--s3)}
+
+.recheck{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.recheck li{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-md);padding:var(--s3) var(--s4);display:grid;gap:4px}
+.recheck a{font-weight:700;display:inline-flex;align-items:center;min-height:40px}
+
+.src h3{font-size:1rem;margin-bottom:var(--s2);color:var(--lamp-text);text-transform:uppercase;letter-spacing:.08em;font-family:var(--text)}
+.src ul{margin:0 0 var(--s5);padding-left:1.1rem;display:grid;gap:4px;font-size:.95rem}
+.src li a{word-break:break-word}
+
+footer{margin-top:var(--s4)}
+footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
+
+/* C6 · app a 4 schede (Mario 22/11 «disordine allucinante… non listoni chilometrici… ordinato, chiaro, professionale»): barra in basso, una parte alla volta. Attiva solo se lo script delle schede parte (body[data-tab]). */
+.tabbar{display:none}
+body[data-tab]{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
+body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px max(8px,env(safe-area-inset-left,0px)) calc(4px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--rule);box-shadow:0 -8px 24px -16px rgb(0 0 0 / .5)}
+/* C17 · numero della versione in alto (Mario 22/11 «un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato… clicca aggiorna versione») */
+.vnum{transition:opacity .2s;position:fixed;top:calc(8px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));z-index:55;min-height:28px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--mute);font:700 .74rem/1 var(--text);font-variant-numeric:tabular-nums;cursor:pointer}
+.vnum.nuovo::after{content:"";position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--lamp);box-shadow:0 0 0 2px var(--bg)}
+.vnum.agg{background:var(--lamp);color:var(--lamp-ink);border-color:transparent}
+.vbox{width:min(30rem,calc(100vw - 32px));max-height:min(80vh,40rem);border:0;border-radius:18px;padding:0;background:var(--surface);color:var(--ink);box-shadow:0 20px 60px -20px rgb(0 0 0 / .6)}
+.vbox::backdrop{background:rgb(0 0 0 / .55)}
+.vbox .vt{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 16px 8px}
+.vbox .vt h2{font-size:1.15rem;margin:0}
+.vbox .vx{min-width:44px;min-height:44px;border:0;border-radius:12px;background:none;color:var(--ink);font-size:1.3rem;cursor:pointer}
+.vbox .vagg{margin:0 16px 12px;padding:12px;border-radius:14px;background:color-mix(in srgb,var(--lamp) 22%,var(--surface));display:grid;gap:8px}
+.vbox .vagg button{min-height:48px;border:0;border-radius:999px;background:var(--lamp);color:var(--lamp-ink);font:800 1rem/1 var(--text);cursor:pointer}
+.vbox ol{list-style:none;margin:0;padding:0 16px 16px;overflow:auto;max-height:calc(min(80vh,40rem) - 72px)}
+.vbox li{padding:10px 0;border-top:1px solid var(--rule)}
+.vbox li b{display:block;margin-bottom:4px}
+.vbox li ul{margin:0;padding-left:1.1em;color:var(--ink)}
+.vbox li li{border:0;padding:2px 0}
+/* C16 (Mario 22/11 11:37 «sotto mi mettevi le date … Che fine hanno fatto?»): dalla v17 la barra delle schede copriva la fila dei giorni (v25: sopra la barra; v27: in alto) */
+@media (max-width:719px){
+ /* DOMANDA 1 = 2 (Mario 22/11 ~12:00 «foto 2»): la fila sta IN ALTO, al suo posto prima del giorno, e resta ferma in cima quando scorri; in basso solo la barra delle schede. overflow:clip (non hidden) perché la fila possa restare ferma */
+ #giorni{overflow:clip}
+ body[data-tab] .daybar{position:sticky;top:0;bottom:auto;margin:0 calc(-1*max(16px,env(safe-area-inset-left,0px))) var(--s5);border-radius:0 0 18px 18px;border-width:0 0 1px;padding-top:calc(6px + env(safe-area-inset-top,0px));padding-bottom:6px;box-shadow:0 10px 24px -14px rgb(0 0 0 / .45)}
+ body[data-tab] .daybar .pill{top:calc(6px + env(safe-area-inset-top,0px));bottom:6px}
+ body.fila-su .vnum{opacity:0;pointer-events:none}
+}
+.tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:44px;padding:2px;border:0;border-radius:14px;background:none;color:var(--mute);font:700 .7rem/1.1 var(--text);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.tabbar button .i{font-size:1.15rem;line-height:1}
+.tabbar button[aria-selected="true"]{background:var(--lamp);color:var(--lamp-ink)}
+.tabbar button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+body[data-tab] main>section:not(.tab-on){display:none}
+body[data-tab] main>.lights{display:none}
+body[data-tab]:not([data-tab="piano"]) header.hero{display:none}
+body[data-tab]:not([data-tab="piano"]) main{padding-top:env(safe-area-inset-top,0px)}
+body[data-tab] .topbar{display:none!important}
+/* C17 · indice coi tasti delle cose più importanti, subito in vista (Mario 22/11 12:02 «mettimi l'indice… giro di mercatini più piccolo, notte, vin brulé più piccole… tutti gli spazi ottimizzati»): niente tolto, in ordine di importanza, i dettagli dentro */
+body[data-tab] .hero-top{padding-top:calc(var(--s4) + 22px)}
+body[data-tab] .hero h1{font-size:clamp(2rem,1.3rem + 3.6vw,3.6rem);margin-top:var(--s2)}
+body[data-tab] .hero-meta{margin-top:var(--s2);gap:6px}
+body[data-tab] .hero-meta .chip{min-height:28px;padding:3px 10px;font-size:.8rem}
+body[data-tab] .pal{margin-top:var(--s2);padding:3px}
+body[data-tab] .pal button{min-height:30px;padding:0 11px;font-size:.78rem}
+body[data-tab] .go{grid-template-columns:repeat(4,1fr);gap:6px;margin-top:var(--s3)}
+body[data-tab] .go a,body[data-tab] .go a.hot{grid-column:auto;min-height:58px;padding:6px 3px;align-items:center;text-align:center;gap:3px;font-size:.74rem;font-weight:700;line-height:1.1;border-radius:12px;box-shadow:none}
+body[data-tab] .go a small{display:none}
+body[data-tab] .go-more{margin-top:var(--s1);font-size:.82rem}
+body[data-tab] .go-more a{padding:8px 4px}
+@media (min-width:720px){body[data-tab] .go{grid-template-columns:repeat(6,1fr)}body[data-tab] .go a,body[data-tab] .go a.hot{font-size:.88rem}body[data-tab] .go a small{display:block;font-size:.7rem;font-weight:500}}
+html:has(body[data-tab]){scroll-padding-top:16px}
+@media (max-width:719px){html:has(body[data-tab="giorni"]){scroll-padding-top:80px}}
+/* C6 pezzo 2 · Dormire (Mario 22/11 «dividi bene le cose non listoni mischiati… anche b&b affittacamere hotel appartamenti»): un elenco solo, diviso per tipo; la scheda di un alloggio si apre da sola, con «← Tutti gli alloggi» */
+/* C6 pezzo 3 · Piano corto: riquadri «in breve» che portano alla scheda giusta; dei costi solo le prime 3 barre (più la vostra), le altre a richiesta */
+body[data-tab] #breve .verdict p{display:none}
+body[data-tab] #breve .verdict.vgo{cursor:pointer;position:relative;padding-right:40px}
+body[data-tab] #breve .verdict.vgo::after{content:"›";position:absolute;right:16px;top:50%;transform:translateY(-50%);font:800 1.6rem/1 var(--text);color:var(--mute)}
+body[data-tab] #bars:not(.all)>a.bar-row:nth-child(n+4):not(.is-me){display:none}
+body[data-tab] #check:not(.all)>li:not(.nx){display:none}
+.bars-more{margin-top:var(--s4)}
+details.sc-par{margin-top:var(--s3);border:2px solid var(--rule);border-radius:var(--r-lg)}details.sc-par>summary{padding:14px 16px;font-weight:700}details.sc-par>.sc-g,details.sc-par>.sc-list{margin-inline:10px}details.sc-par>.sc-list:last-child{margin-bottom:10px}
+.tyswitch{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:var(--s3) 0 var(--s2)}
+.tyswitch button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:58px;padding:6px 4px;border:2px solid var(--rule);border-radius:14px;background:var(--surface);color:var(--ink);font:700 .9rem/1.15 var(--text);cursor:pointer;text-align:center}
+.tyswitch button small{font-weight:500;color:var(--mute);font-size:.78rem}
+.tyswitch button[data-ty="tutti"]{grid-column:1/-1;min-height:46px;flex-direction:row;gap:8px}
+.sc-x{display:none;margin-top:var(--s3)}
+#scD:is([data-ty="bb"],[data-ty="tutti"])~.sc-x{display:block}
+.sc-xb{border:2px dashed var(--rule);border-radius:var(--r-lg);padding:12px 14px;display:grid;gap:8px}
+.sc-xb p{margin:0}
+.tyswitch button[aria-pressed="true"]{border-color:var(--lamp);background:var(--lamp);color:var(--lamp-ink)}
+.tyswitch button[aria-pressed="true"] small{color:var(--lamp-ink)}
+#scD[data-ty="hotel"]>[data-ty]:not([data-ty="hotel"]):not([data-ty="disney"]),#scD[data-ty="bb"]>[data-ty]:not([data-ty="bb"]),#scD[data-ty="casa"]>[data-ty]:not([data-ty="casa"]){display:none}
+body[data-tab] #hotel .sec-head,body[data-tab] #mio,body[data-tab] #filters,body[data-tab] #hotel .sortbar,body[data-tab] #fdesc,body[data-tab] #hotel h3.sub-h{display:none}
+body[data-tab] #hotel .more-al,#mercatini .more-al{margin-top:var(--s3)}
+.al-h{font-size:1.25rem;margin:0 0 var(--s2)}
+body[data-tab]:not([data-card]) #hotelCards{display:none}
+body[data-tab][data-card] #scegli,body[data-tab][data-card] #hoteldisney,body[data-tab][data-card] #hotel .wrap>:not(#hotelCards):not(.cardback){display:none}
+body[data-tab][data-card] #hotelCards{grid-template-columns:1fr;margin-top:var(--s3)!important}
+.cardback{display:none}
+body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6px;min-height:48px;padding:0 18px;border-radius:999px;border:2px solid var(--rule);background:var(--surface);color:var(--ink);font:700 1rem/1 var(--text);cursor:pointer}
+@media (min-width:1100px){
+ body[data-tab]{padding-bottom:0}
+ body[data-tab] .tabbar{display:none}
+ .side a.st{font-weight:800;font-size:1rem;min-height:44px}
+ .side a.ss{min-height:34px;padding-left:38px;font-size:.9rem;font-weight:500;color:var(--mute)}
+ .side a.ss:hover{color:var(--ink)}
+}
+
+/* C13 pezzo 1 · Dormire più chiaro (Mario 22/11 «differenziare bene … con colori, con font diversi, spaziature»): un colore per tipo
+   (Hotel azzurro, B&B lilla, Case ciano: prima verde acqua, troppo vicino al verde di «meglio» e dei biglietti, Mario 22/11 «i colori non hanno un conflitto?») su interruttore e schede; in ogni scheda 3 riquadri coi numeri grandi (Disney, RER, pulizia);
+   sotto il prezzo la differenza sul totale del viaggio. Oro solo per scelto e consiglio, verde/rosso solo per le differenze. */
+:root{--ty-disney:#FF8AD0;--ty-hotel:#8DB6FF;--ty-bb:#D1A6FF;--ty-casa:#92EEFE;--ty-ink:#0A1230}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ty-disney:#A8236F;--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#005A70;--ty-ink:#FFFFFF}}
+:root[data-theme="light"]{--ty-disney:#A8236F;--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#005A70;--ty-ink:#FFFFFF}
+[data-ty="hotel"]{--ty:var(--ty-hotel)}[data-ty="disney"]{--ty:var(--ty-disney)}[data-ty="bb"]{--ty:var(--ty-bb)}[data-ty="casa"]{--ty:var(--ty-casa)}
+.tyswitch button[data-ty]:not([data-ty="tutti"]){border-color:var(--ty);color:var(--ty)}
+.tyswitch button[aria-pressed="true"]:not([data-ty="tutti"]){background:var(--ty);border-color:var(--ty);color:var(--ty-ink)}
+.tyswitch button[aria-pressed="true"]:not([data-ty="tutti"]) small{color:var(--ty-ink)}
+#scegli .sortbar{display:grid;gap:6px;margin:var(--s3) 0 var(--s2)}
+#scegli .sortbar>.small{font-weight:700}
+#scSort.switch.sort4{display:grid;grid-template-columns:1fr 1fr;width:100%;margin:0}
+@media (min-width:600px){#scSort.switch.sort4{grid-template-columns:repeat(4,1fr)}}
+#sc2{border-top:1px solid var(--rule);padding-top:var(--s4)}
+#scegli .sc-leg{margin:var(--s2) 0 var(--s3);line-height:1.45}
+#scD{gap:12px}
+:is(#scD,#scN) details.sc-o[data-ty]{box-shadow:inset 6px 0 0 var(--ty)}
+:is(#scD,#scN) details.sc-o.on[data-ty]{box-shadow:inset 6px 0 0 var(--ty),0 0 0 3px rgb(246 201 100 / .25)}
+:is(#scD,#scN) details.sc-o>summary{grid-template-columns:30px minmax(0,1fr) auto 12px;gap:4px 10px;padding:12px 14px 14px 18px}
+:is(#scD,#scN) details.sc-o[data-ty]>summary::before{grid-column:2;grid-row:1;font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
+#scD details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel"}
+#scD details.sc-o[data-ty="disney"]>summary::before{content:"🏰 Hotel Disney"}
+#scD details.sc-o[data-ty="bb"]>summary::before{content:"🛏️ B&B · camera"}
+#scD details.sc-o[data-ty="casa"]>summary::before{content:"🏠 Casa"}
+:is(#scD,#scN) details.sc-o>summary::after{grid-column:4;grid-row:1}
+#scD .sc-o>summary>.nb{grid-column:1;grid-row:1/3;width:30px;height:30px;margin-top:2px}
+#scD details.sc-o[data-ty]>summary>.nb{background:var(--ty);color:var(--ty-ink)}
+:is(#scD,#scN) .sc-o .sc-n{grid-column:2;grid-row:2;font:800 1.08rem/1.25 var(--display)}
+:is(#scD,#scN) .sc-o .sc-n small{font-family:var(--text);font-size:.82rem}
+:is(#scD,#scN) .sc-o .sc-p{grid-column:3;grid-row:1/3;font:800 1.3rem/1.1 var(--display);font-variant-numeric:tabular-nums}
+:is(#scD,#scN) .sc-o .sc-p small{font-family:var(--text)}
+.sc-p .sc-dt{margin-top:4px;font-weight:600}
+.sc-p .sc-dt.sc-rc{display:inline-block;padding:2px 7px;border-radius:6px;background:var(--lamp);color:var(--lamp-ink);font-weight:800}
+:is(#scD,#scN) .sc-o .sc-m{grid-column:1/5;grid-row:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:8px}
+:is(#scD,#scN) .sc-m .sc-k{display:grid;align-content:start;gap:1px;min-width:0;padding:7px 9px 8px;border-radius:12px;background:var(--surface-2)}
+.sc-k>i{font:700 .66rem/1.2 var(--text);font-style:normal;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.sc-k>b{font:800 1.12rem/1.2 var(--display);font-variant-numeric:tabular-nums;color:var(--ink)}
+.sc-k>small{font-size:.74rem;line-height:1.3;color:var(--mute)}
+:is(#scD,#scN) .sc-m .sc-na{grid-column:1/-1}
+:is(#scD,#scN) .sc-b{padding:0 14px 14px 18px}
+/* C13 pezzo 2 · passo 1 (domenica) con lo stesso stile: hotel di Parigi azzurri, «4 notti» neutro; il cerchio di scelta al posto del numero */
+#scN .sc-list{gap:12px}
+#scN [data-ty="dis"]{--ty:var(--mute)}
+#scN details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel a Parigi"}
+#scN details.sc-o[data-ty="dis"]>summary::before{content:"🏰 Domenica già a Disney"}
+#scN .sc-o>summary>.sc-dot{grid-column:1;grid-row:1/3;margin-top:4px}
+/* C13 pezzo 3 · Piano, «Quanto costa»: ogni strada è una scheda col colore del suo alloggio, come in Dormire; i colori della legenda non ripetono quelli dei tipi né oro, verde e rosso (Mario 22/11 «non per forza devi togliere i colori … basta che non ci siano doppioni») */
+#bars{gap:12px}
+#bars>a.bar-row{margin:0;padding:12px 14px 12px 18px;border:2px solid var(--rule);border-radius:var(--r-lg);box-shadow:inset 6px 0 0 var(--ty)}
+#bars>a.bar-row.is-me{outline:0;border-color:var(--lamp);box-shadow:inset 6px 0 0 var(--ty),0 0 0 3px rgb(246 201 100 / .25)}
+.bar-ty{font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
+/* La scelta dell'alloggio cambia tutta la pagina e si vede (Mario 22/11 «va mostrato e fatto capire»): riquadro prima di scegliere, avviso in basso dopo, pallino giallo sulle schede aggiornate */
+.sc-tutto{margin:var(--s3) 0 0;padding:10px 12px 11px 14px;border-radius:var(--r-md);background:var(--surface-2);box-shadow:inset 4px 0 0 var(--lamp);font-size:.93rem;line-height:1.45}
+.sc-avviso{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(66px + env(safe-area-inset-bottom,0px));z-index:61;display:grid;gap:4px;max-width:520px;margin:0 auto;padding:12px 14px;border:2px solid var(--lamp);border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:0 10px 30px rgb(0 0 0 / .45);font-size:.9rem;line-height:1.4}
+.sc-avviso[hidden]{display:none}
+.sc-avviso b{font:800 1rem/1.3 var(--display)}
+.sc-avviso div{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.sc-avviso button[hidden]{display:none}
+.sc-avviso button{min-height:42px;padding:6px 14px;border-radius:10px;border:2px solid var(--lamp);background:none;color:var(--ink);font:800 .9rem/1 var(--text)}
+.sc-avviso button.vai{background:var(--lamp);color:var(--lamp-ink)}
+.tabbar button.nuovo{position:relative}
+.tabbar button.nuovo::after{content:"";position:absolute;top:5px;left:calc(50% + 10px);width:11px;height:11px;border-radius:50%;background:var(--lamp);box-shadow:0 0 0 2px var(--bg)}
+.side a.st.nuovo::after{content:" ●";color:var(--lamp)}
+/* C13 pezzo 4 · Biglietti, «Treni e ticket»: sul telefono la tabella usciva dallo schermo (larga 34rem): ogni riga diventa una scheda, quando in alto, prezzo grande a destra */
+@media (max-width:599px){
+#trasporti .tbl{overflow:visible;border:0;background:none}
+#trasporti table{display:block;min-width:0}
+#trasporti thead{display:none}
+#trasporti tbody{display:grid;gap:10px}
+#trasporti tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 12px;padding:10px 12px 11px 14px;border:2px solid var(--rule);border-radius:var(--r-lg);background:var(--surface)}
+#trasporti td{display:block;padding:0;border:0}
+#trasporti td:first-child{grid-column:1;grid-row:1;font:800 .7rem/1.25 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+#trasporti td:nth-child(2){grid-column:1;grid-row:2;min-width:0}
+#trasporti td.r{grid-column:2;grid-row:1/3;align-self:center;font:800 1.15rem/1.1 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+#trasporti tr:last-child td[colspan]{grid-row:1/3;align-self:center;font:inherit;letter-spacing:0;text-transform:none;color:var(--ink)}
+}
+/* Dormire: «Vedi i dettagli» in fondo a ogni scheda al posto della freccina nell'angolo (Mario 22/11 10:18 «non si capisce … che apre tutto con i dettagli … in fondo è difficile da vederlo») */
+:is(#scD,#scN) details.sc-o>summary::after{display:none}
+.sc-more{display:none}
+:is(#scD,#scN) .sc-o .sc-more{grid-column:1/-1;grid-row:4;display:flex;justify-content:center;align-items:center;gap:8px;margin-top:8px;padding:8px 10px;border:1.5px solid var(--rule);border-radius:10px;font:700 .86rem/1.2 var(--text);color:var(--ty,var(--ink))}
+:is(#scD,#scN) .sc-o .sc-more::before{content:"Vedi i dettagli"}
+:is(#scD,#scN) .sc-o .sc-more::after{content:"";width:8px;height:8px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+:is(#scD,#scN) .sc-o[open] .sc-more::before{content:"Chiudi i dettagli"}
+:is(#scD,#scN) .sc-o[open] .sc-more::after{transform:rotate(-135deg) translateY(-1px)}
+#scBB .sc-xb{border-left:6px solid var(--ty-bb)}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+<style>
+/* solo per la prova: niente schede né barra */
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text)}
+.prova-sotto{padding:24px 16px 1200px;max-width:40rem}
+/* ---------- slitta volante della testata (snippet #slitta nella scena) ----------
+   Sagoma in penombra: quasi tutto scuro, colori spenti dove batte la luna (in alto a sinistra).
+   Colori solo dalle variabili della tavolozza: vale per Blu notte e Vin brulé. */
+#slitta{display:none;pointer-events:none;
+ --sl-ombra:color-mix(in srgb,var(--night-2) 82%,var(--sil-1));
+ --sl-ferro2:color-mix(in srgb,var(--night-2) 62%,var(--sil-2));
+ --sl-mont:color-mix(in srgb,var(--sil-3) 26%,var(--night-2));
+ --sl-pent:color-mix(in srgb,var(--sil-3) 42%,var(--night-2));
+ --sl-legno:color-mix(in srgb,var(--fir) 36%,var(--night-2));
+ --sl-legno2:color-mix(in srgb,var(--fir) 13%,var(--night-2));
+ --sl-legno3:color-mix(in srgb,var(--fir) 26%,var(--night-2));
+ --sl-osso:color-mix(in srgb,var(--moon) 50%,var(--sil-3));
+ --sl-osso2:color-mix(in srgb,var(--moon) 18%,var(--sil-2));
+ --sl-rosso:color-mix(in srgb,var(--roof-r) 66%,var(--night-2));
+ --sl-rosso2:color-mix(in srgb,var(--roof-r) 32%,var(--night-2));
+ --sl-pelo:color-mix(in srgb,var(--moon) 42%,var(--sil-2));
+ --sl-volto:color-mix(in srgb,var(--moon) 50%,var(--sil-3));
+ --sl-coll:color-mix(in srgb,var(--fir) 52%,var(--night-2));
+ --sl-briglia:color-mix(in srgb,var(--moon) 34%,var(--sil-2))}
+@supports not (color:color-mix(in srgb,red,blue)){#slitta{--sl-ombra:#081029;--sl-ferro2:#0A1131;--sl-mont:#131E4E;--sl-pent:#162350;--sl-legno:#1A4544;--sl-legno2:#0B1A26;--sl-legno3:#13302F;
+ --sl-osso:#A7A9B0;--sl-osso2:#3B4157;--sl-rosso:#6F1F31;--sl-rosso2:#3A1427;--sl-pelo:#76788A;--sl-volto:#AFAFB2;--sl-coll:#22593E;--sl-briglia:#5E6276}}
+#slitta.sl-on{display:inline}
+#slitta .sl-dono{will-change:transform,opacity}
+/* Ogni colore passa da var(--sl-sag, …): la copia in controluce (.sl-volo2, solo sul disco della luna) mette tutto in sagoma scura.
+   --sl-sag2 = parti lontane, un filo più chiare. Le luci di bordo (.sl-rim) restano accese anche lì. */
+.sl-volo2{--sl-sag:color-mix(in srgb,var(--night-2) 80%,var(--sil-1));--sl-sag2:color-mix(in srgb,var(--night-2) 58%,var(--sil-3))}
+/* ossa: gradiente dall'alto (luce) al basso (ombra) */
+.sl-o{fill:none;stroke:var(--sl-sag,url(#slOssoG));stroke-linecap:round;stroke-linejoin:round}
+.sl-of{fill:var(--sl-sag,url(#slOssoG))}
+.sl-o2{fill:none;stroke:var(--sl-sag2,var(--sl-osso2));stroke-linecap:round;stroke-linejoin:round}
+.sl-o2f{fill:var(--sl-sag2,var(--sl-osso2))}
+.sl-zoc,.sl-buco,.sl-cint,.sl-guanto{fill:var(--sl-ombra)}
+.sl-buco-l{fill:none;stroke:var(--sl-ombra);stroke-width:.32;stroke-linecap:round}
+.sl-coll{fill:none;stroke:var(--sl-sag,var(--sl-coll));stroke-width:1.25}
+.sl-camp{fill:var(--sl-sag,color-mix(in srgb,var(--lamp) 46%,var(--night-2)))}
+/* luce di luna sui bordi in alto: più forte quando la slitta passa davanti alla luna (--sl-rim lo cambia lo script) */
+.sl-rim{fill:none;stroke:var(--moon);stroke-linecap:round;stroke-linejoin:round;opacity:var(--sl-rim,.6)}
+.sl-rim-b{opacity:calc(var(--sl-rim,.6)*.42)}
+.sl-fer{stroke:var(--sl-ombra)}
+.sl-fer2{stroke:var(--sl-sag2,var(--sl-ferro2))}
+.sl-mont{stroke:var(--sl-sag,var(--sl-mont))}
+.sl-legno{fill:var(--sl-sag,url(#slLegnoG))}
+.sl-legno2{stroke:var(--sl-sag,var(--sl-legno2))}
+.sl-legno3{fill:var(--sl-sag,var(--sl-legno3))}
+.sl-fodera{fill:var(--sl-sag2,var(--sl-rosso2))}
+.sl-pent{fill:var(--sl-sag,url(#slPentolaG))}
+.sl-bordo{fill:var(--sl-sag,color-mix(in srgb,var(--sil-3) 30%,var(--night-2)))}
+.sl-spir{stroke:var(--sl-sag,color-mix(in srgb,var(--sil-3) 50%,var(--night-2)))}
+.sl-rosso{stroke:var(--sl-sag,var(--sl-rosso))}
+.sl-rosso2{stroke:var(--sl-sag2,var(--sl-rosso2))}
+.sl-rossof{fill:var(--sl-sag,url(#slRossoG))}
+.sl-pellof{fill:var(--sl-sag,var(--sl-pelo))}
+.sl-volto{fill:var(--sl-sag,var(--sl-volto))}
+.sl-mani{stroke:var(--sl-sag,color-mix(in srgb,var(--roof-r) 34%,var(--night-2)))}
+.sl-redini{stroke:var(--sl-sag,var(--sl-briglia));stroke-linecap:round;opacity:.9}
+/* regali: colori spenti, nastro più chiaro */
+.sl-dA .sl-dc{fill:var(--sl-sag,color-mix(in srgb,var(--wine) 50%,var(--night-2)))}.sl-dA .sl-dn{fill:var(--sl-sag,color-mix(in srgb,var(--lamp) 58%,var(--night-2)))}
+.sl-dB .sl-dc{fill:var(--sl-sag,color-mix(in srgb,var(--fir) 50%,var(--night-2)))}.sl-dB .sl-dn{fill:var(--sl-sag,color-mix(in srgb,var(--wine) 58%,var(--night-2)))}
+.sl-dC .sl-dc{fill:var(--sl-sag,color-mix(in srgb,var(--lamp) 46%,var(--night-2)))}.sl-dC .sl-dn{fill:var(--sl-sag,color-mix(in srgb,var(--wine) 52%,var(--night-2)))}
+.sl-dD .sl-dc{fill:var(--sl-sag,color-mix(in srgb,var(--sil-3) 72%,var(--moon)))}.sl-dD .sl-dn{fill:var(--sl-sag,color-mix(in srgb,var(--lamp) 58%,var(--night-2)))}
+/* zampe: galoppo in volo (allunga e raccoglie), ogni renna sfasata (--sl-d), le zampe lontane un poco dopo (--sl-dl) */
+.sl-gz{transform-box:view-box}
+.sl-za{transform-origin:-4.6px .6px}.sl-zb{transform-origin:-8.6px 3.8px}.sl-zc{transform-origin:8.4px -.8px}.sl-zd{transform-origin:11.2px 3.4px}
+#slitta.sl-on .sl-gz{animation-duration:.42s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate;animation-delay:calc(var(--sl-d,0s) + var(--sl-dl,0s))}
+#slitta.sl-on .sl-za{animation-name:slZa}#slitta.sl-on .sl-zb{animation-name:slZb}#slitta.sl-on .sl-zc{animation-name:slZc}#slitta.sl-on .sl-zd{animation-name:slZd}
+@keyframes slZa{from{transform:rotate(-22deg)}to{transform:rotate(12deg)}}
+@keyframes slZb{from{transform:rotate(-38deg)}to{transform:rotate(4deg)}}
+@keyframes slZc{from{transform:rotate(22deg)}to{transform:rotate(-12deg)}}
+@keyframes slZd{from{transform:rotate(30deg)}to{transform:rotate(-6deg)}}
+@media (prefers-reduced-motion:reduce){#slitta{display:none!important}}
+
+</style></head><body>
+<header class="hero" id="top">
+ <canvas id="sky" aria-hidden="true"></canvas>
+ <svg class="garland" id="garland" aria-hidden="true"></svg>
+ <div class="wrap wide hero-top">
+  <p class="kicker">dom 13 – gio 17 dicembre 2026</p>
+  <h1>Parigi e Disney <span class="gold">a Natale</span></h1>
+  <div class="hero-meta"><span class="chip">2 persone · senza auto</span><span class="chip">4 notti</span></div>
+  <div class="pal" role="group" aria-label="Colori della pagina"><button type="button" data-pal="blu" aria-pressed="true">🌙 Blu notte</button><button type="button" data-pal="vino" aria-pressed="false">🍷 Vin brulé</button></div>
+  <nav class="go" aria-label="Vai subito a">
+   <a class="hot" href="#mercatini"><i>🎄</i>Mercatini<small>Domenica 13: il giro, dove andare, cosa guardare</small></a>
+   <a href="#giorni"><i>📅</i>Giorni<small>Giorno per giorno: orari e strade</small></a>
+   <a href="#mappa"><i>🗺️</i>Mappa<small>Orly, Parigi e Disney: dove sono le cose</small></a>
+   <a href="#scegli"><i>🛏️</i>Dormire<small>Domenica a Parigi o no, poi l'hotel</small></a>
+   <a href="#biglietti"><i>🎟️</i>Biglietti<small>Disney: quale e quando</small></a>
+   <a href="#trasporti"><i>🚆</i>Trasporti<small>Treni e ticket</small></a>
+   <a href="#p-gio" data-day="4"><i>✈️</i>Volo 17<small>Giovedì: quando partire per Orly</small></a>
+   <a href="#costi"><i>💶</i>Costi<small>Quanto spendete</small></a>
+   <a href="#dafare"><i>✅</i>Preparativi<small>Da fare prima</small></a>
+   <a href="#breve"><i>⚡</i>In breve<small>Tutte le risposte</small></a>
+   <a href="#ricontrollare"><i>🔎</i>Controlli<small>Da ricontrollare prima di partire</small></a>
+   <a href="#hoteldisney"><i>🏰</i>Hotel Disney<small>Dentro e vicino ai parchi</small></a>
+  </nav>
+  <p class="go-more"><a href="#fonti">Fonti</a></p>
+ </div>
+ <svg class="scene" viewBox="0 0 800 290" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <defs>
+   <radialGradient id="cglow" cx="50%" cy="55%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.42"/><stop offset=".55" style="stop-color:var(--lamp);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="kglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.5"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="hglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--ember);stop-opacity:.42"/><stop offset=".6" style="stop-color:var(--ember);stop-opacity:.12"/><stop offset="1" style="stop-color:var(--ember);stop-opacity:0"/></radialGradient>
+   <radialGradient id="pool" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--lamp);stop-opacity:.6"/><stop offset="1" style="stop-color:var(--lamp);stop-opacity:0"/></radialGradient>
+   <radialGradient id="mglow" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--moon);stop-opacity:.38"/><stop offset=".5" style="stop-color:var(--moon);stop-opacity:.1"/><stop offset="1" style="stop-color:var(--moon);stop-opacity:0"/></radialGradient>
+   <filter id="lunaSfuma" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.6"/></filter>
+   <pattern id="awnR" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--wine)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
+   <pattern id="awnG" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--fir)"/><rect x="6" width="6" height="14" style="fill:var(--snowground)"/></pattern>
+   <pattern id="awnY" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="6" height="14" style="fill:var(--lamp)"/><rect x="6" width="6" height="14" style="fill:var(--roof-r)"/></pattern>
+  </defs>
+  <!-- bagliore caldo della città sull'orizzonte -->
+  <ellipse cx="400" cy="250" rx="560" ry="150" fill="url(#hglow)"/>
+  <!-- strato lontano: tetti di Parigi e la Torre Eiffel accesa -->
+  <g class="par" data-depth="-0.06" data-max="26">
+   <!-- luna a forma di Topolino (Mario 21/11): immagine fatta da tools/fai-icone-dicembre.js; bagliore che respira e stelline qui -->
+   <g class="luna-t"><circle class="luna-alone" cx="240" cy="70" r="50" fill="url(#mglow)"/><g class="luna-bagliore" filter="url(#lunaSfuma)" style="fill:var(--moon)"><circle cx="240" cy="76" r="14.4"/><circle cx="224.74" cy="63.4" r="9.2"/><circle cx="255.26" cy="63.4" r="9.2"/></g><image id="lunaT" x="215.5" y="54.07" width="49" height="36.17" href="data:image/webp;base64,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"/><path class="luna-st" d="M272 51.6 L272.75 54.25 L275.4 55 L272.75 55.75 L272 58.4 L271.25 55.75 L268.6 55 L271.25 54.25Z"/><path class="luna-st s2" d="M209 90.4 L209.57 92.43 L211.6 93 L209.57 93.57 L209 95.6 L208.43 93.57 L206.4 93 L208.43 92.43Z"/><path class="luna-st s3" d="M247 38.8 L247.48 40.52 L249.2 41 L247.48 41.48 L247 43.2 L246.52 41.48 L244.8 41 L246.52 40.52Z"/></g>
+   <g id="roofs" style="fill:var(--sil-3)"></g>
+   <ellipse cx="262" cy="170" rx="46" ry="70" fill="url(#kglow)" opacity=".55"/>
+   <path d="M242 265 Q256 210 260 150 L262 128 L264 150 Q268 210 282 265 H272 Q262 236 252 265Z" style="fill:var(--tower)"/>
+   <rect x="254" y="196" width="16" height="3" style="fill:var(--tower)"/><rect x="258" y="160" width="8" height="2" style="fill:var(--tower)"/>
+   <line x1="262" y1="128" x2="262" y2="116" style="stroke:var(--tower);stroke-width:1.5"/>
+   <g id="towerlights"></g>
+  </g>
+  <!-- strato medio: castello -->
+  <g class="par" data-depth="-0.025" data-max="11">
+   <ellipse cx="502" cy="170" rx="175" ry="125" fill="url(#cglow)"/>
+   <g style="fill:var(--sil-1)">
+    <rect x="415" y="195" width="170" height="70"/>
+    <g id="cren"></g>
+    <rect x="405" y="170" width="30" height="95"/><polygon points="400,172 420,120 440,172"/>
+    <rect x="440" y="135" width="34" height="130"/><polygon points="435,137 457,80 479,137"/>
+    <rect x="480" y="110" width="44" height="155"/><polygon points="474,112 502,46 530,112"/>
+    <rect x="530" y="145" width="32" height="120"/><polygon points="525,147 546,94 567,147"/>
+    <rect x="568" y="175" width="28" height="90"/><polygon points="563,177 582,133 601,177"/>
+    <rect x="462" y="112" width="10" height="26"/><polygon points="459,114 467,96 475,114"/>
+   </g>
+   <line x1="502" y1="46" x2="502" y2="22" style="stroke:var(--sil-1);stroke-width:2"/>
+   <path d="M503 22 l20 6 -20 6z" style="fill:var(--wine)"/>
+   <g style="fill:var(--win)">
+    <rect x="417" y="188" width="6" height="10" rx="3"/>
+    <rect x="449" y="152" width="6" height="10" rx="3"/><rect x="460" y="152" width="6" height="10" rx="3"/>
+    <rect x="489" y="124" width="6" height="11" rx="3"/><rect x="499" y="124" width="6" height="11" rx="3"/><rect x="509" y="124" width="6" height="11" rx="3"/>
+    <rect x="494" y="152" width="6" height="11" rx="3"/><rect x="504" y="152" width="6" height="11" rx="3"/>
+    <rect x="543" y="162" width="6" height="10" rx="3"/><rect x="579" y="192" width="6" height="10" rx="3"/>
+   </g>
+  </g>
+<!-- slitta volante (passa ogni 40–70 s davanti alla luna): incollare dopo lo strato del castello, prima del primo piano -->
+<g id="slitta" class="par" data-depth="-0.05" data-max="22" aria-hidden="true">
+<defs>
+ <linearGradient id="slOssoG" gradientUnits="userSpaceOnUse" x1="0" y1="-12" x2="0" y2="7"><stop offset="0" style="stop-color:var(--sl-osso)"/><stop offset="1" style="stop-color:var(--sl-osso2)"/></linearGradient>
+ <linearGradient id="slLegnoG" gradientUnits="userSpaceOnUse" x1="0" y1="-8" x2="0" y2="6"><stop offset="0" style="stop-color:var(--sl-legno)"/><stop offset="1" style="stop-color:var(--sl-legno2)"/></linearGradient>
+ <radialGradient id="slPentolaG" gradientUnits="userSpaceOnUse" cx="66" cy="-15" r="17"><stop offset="0" style="stop-color:var(--sl-pent)"/><stop offset="1" style="stop-color:var(--sl-ombra)"/></radialGradient>
+ <linearGradient id="slRossoG" gradientUnits="userSpaceOnUse" x1="47" y1="-30" x2="56" y2="-6"><stop offset="0" style="stop-color:var(--sl-rosso)"/><stop offset="1" style="stop-color:var(--sl-rosso2)"/></linearGradient>
+ <radialGradient id="slLunaR"><stop offset=".62" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+ <mask id="slLunaM" maskUnits="userSpaceOnUse" x="190" y="34" width="100" height="72"><g fill="url(#slLunaR)"><circle cx="240" cy="76" r="18"/><circle cx="224.74" cy="63.4" r="11.8"/><circle cx="255.26" cy="63.4" r="11.8"/></g></mask>
+</defs>
+<g class="sl-volo"><g id="slDisegno">
+<g class="sl-redini" fill="none">
+<path d="M12 -2.4 Q-1 -1.2 -20.02 -5.32 Q-38.019999999999996 -8.72 -53.89 -15.79 Q-71.89 -19.189999999999998 -87.76 -26.26" stroke-width=".5"/>
+<path d="M42 -14 C22 -11.6 2 -8.4 -19.62 -6.220000000000001 C-34.019999999999996 -9.92 -41.89 -18.59 -53.49 -16.689999999999998 C-67.89 -20.189999999999998 -75.76 -29.060000000000002 -87.36 -27.16" stroke-width=".42"/>
+</g>
+<g class="sl-renna" transform="translate(-82 -25) scale(0.9)" style="--sl-d:0s">
+<g transform="translate(1.7 -.8)" style="--sl-dl:-.11s"><g class="sl-gz sl-za"><path class="sl-o2" d="M-4.6 .6 L-8.6 3.8" stroke-width="1.3"/><g class="sl-gz sl-zb"><path class="sl-o2" d="M-8.6 3.8 L-12.9 4.6 L-15.6 6" stroke-width=".9"/><circle class="sl-o2f" cx="-8.6" cy="3.8" r=".7"/><path class="sl-zoc" d="M-15 5.3 l-1.9 .3 l.2 1.5 l1.7 -.4z"/></g></g><g class="sl-gz sl-zc"><path class="sl-o2" d="M8.4 -.8 L11.2 3.4" stroke-width="1.4"/><g class="sl-gz sl-zd"><path class="sl-o2" d="M11.2 3.4 L14.6 3.7 L18.4 5.6" stroke-width=".9"/><circle class="sl-o2f" cx="11.2" cy="3.4" r=".75"/><circle class="sl-o2f" cx="14.6" cy="3.7" r=".5"/><path class="sl-zoc" d="M17.9 4.8 l1.8 .7 l-.5 1.5 l-1.7 -.6z"/></g></g></g>
+<g transform="translate(1.9 .5) rotate(6 -13 -11)"><g class="sl-o2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-12.9 -11.1 C-12.5 -14.4 -10.9 -17.5 -8 -19.7 C-6.6 -20.7 -5.3 -20.8 -4.2 -20.2" stroke-width=".85"/><path d="M-12.3 -13.9 C-13.6 -14.9 -14.6 -16.3 -15 -18" stroke-width=".65"/><path d="M-11.1 -16.4 C-12 -17.9 -12.2 -19.6 -11.9 -21.2" stroke-width=".6"/><path d="M-9.2 -18.7 C-9.7 -20.3 -9.5 -21.8 -8.9 -23" stroke-width=".55"/><path d="M-6.6 -20.4 C-6.2 -21.7 -5.6 -22.6 -4.6 -23.2" stroke-width=".5"/></g></g>
+<path class="sl-o" d="M10.6 -2.6 l2.3 -1.8 l1.9 -.6" stroke-width=".8" stroke-dasharray=".9 .45"/>
+<path class="sl-o" d="M-6.2 -2.8 C-1.5 -5.2 4.5 -5 10.8 -2.6" stroke-width="1.35"/>
+<g class="sl-o sl-cost" stroke-width=".85"><path d="M-4.4 -4.17 C-6.00 -1.57 -5.10 1.23 -3.50 2.43"/><path d="M-2.5 -4.22 C-4.10 -1.62 -3.20 1.98 -1.60 3.18"/><path d="M-0.6 -4.28 C-2.20 -1.68 -1.30 2.12 0.30 3.32"/><path d="M1.3 -4.26 C-0.30 -1.66 0.60 1.74 2.20 2.94"/><path d="M3.2 -3.90 C1.60 -1.30 2.50 1.10 4.10 2.30"/><path d="M5 -3.85 C3.40 -1.25 4.30 -0.25 5.90 0.95"/></g>
+<path class="sl-o2" d="M-5 3.4 C-2 5.2 2.4 5 6 2.4" stroke-width=".55"/>
+<path class="sl-of" d="M6.5 -3 C7.9 -4.5 10.6 -4.1 11.1 -2.2 C11.5 -.5 9.7 .5 8.5 .1 C7.1 -.3 6 -1.7 6.5 -3Z"/><circle class="sl-buco" cx="8.9" cy="-1.9" r=".75"/>
+<path class="sl-of" d="M-7 -2.4 L-3.4 -3.7 L-4.1 .9Z"/>
+<path class="sl-o" d="M-6 -2.6 C-8.3 -4.6 -10.3 -6.6 -11.8 -8.3" stroke-width="1.8" stroke-dasharray="1.05 .42"/>
+<ellipse class="sl-coll" cx="-6.4" cy="-1.6" rx="1.5" ry="3.3" transform="rotate(-24 -6.4 -1.6)"/><circle class="sl-camp" cx="-7.6" cy="1.9" r=".75"/>
+<path class="sl-of" d="M-11.1 -9.3 C-11.3 -10.9 -12.7 -11.8 -14.3 -11.5 C-15.5 -11.3 -16.5 -10.4 -17.9 -9.6 L-20.3 -8.4 C-21.1 -8 -20.9 -7 -20.1 -6.9 L-16.3 -6.5 C-14.3 -6.2 -12.5 -6.6 -11.7 -7.6Z"/>
+<ellipse class="sl-buco" cx="-14.5" cy="-9.3" rx="1.2" ry="1"/><circle class="sl-buco" cx="-19.6" cy="-7.8" r=".38"/>
+<path class="sl-buco-l" d="M-19.6 -6.95 L-15.6 -6.7"/>
+<g class="sl-o" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-12.9 -11.1 C-12.5 -14.4 -10.9 -17.5 -8 -19.7 C-6.6 -20.7 -5.3 -20.8 -4.2 -20.2" stroke-width=".85"/><path d="M-12.3 -13.9 C-13.6 -14.9 -14.6 -16.3 -15 -18" stroke-width=".65"/><path d="M-11.1 -16.4 C-12 -17.9 -12.2 -19.6 -11.9 -21.2" stroke-width=".6"/><path d="M-9.2 -18.7 C-9.7 -20.3 -9.5 -21.8 -8.9 -23" stroke-width=".55"/><path d="M-6.6 -20.4 C-6.2 -21.7 -5.6 -22.6 -4.6 -23.2" stroke-width=".5"/></g>
+<path class="sl-rim" d="M-11.6 -10.6 C-12.6 -11.6 -14.4 -11.7 -15.9 -10.7 L-18.6 -9.2 M-5.6 -3.4 C-1.2 -5.6 4.4 -5.4 10.2 -3.2 M-12.6 -12 C-12 -15 -10.6 -17.6 -8.2 -19.4" stroke-width=".42"/>
+<g><g class="sl-gz sl-za"><path class="sl-o" d="M-4.6 .6 L-8.6 3.8" stroke-width="1.3"/><g class="sl-gz sl-zb"><path class="sl-o" d="M-8.6 3.8 L-12.9 4.6 L-15.6 6" stroke-width=".9"/><circle class="sl-of" cx="-8.6" cy="3.8" r=".7"/><path class="sl-zoc" d="M-15 5.3 l-1.9 .3 l.2 1.5 l1.7 -.4z"/></g></g><g class="sl-gz sl-zc"><path class="sl-o" d="M8.4 -.8 L11.2 3.4" stroke-width="1.4"/><g class="sl-gz sl-zd"><path class="sl-o" d="M11.2 3.4 L14.6 3.7 L18.4 5.6" stroke-width=".9"/><circle class="sl-of" cx="11.2" cy="3.4" r=".75"/><circle class="sl-of" cx="14.6" cy="3.7" r=".5"/><path class="sl-zoc" d="M17.9 4.8 l1.8 .7 l-.5 1.5 l-1.7 -.6z"/></g></g></g>
+</g>
+<g class="sl-renna" transform="translate(-48 -14.5) scale(0.92)" style="--sl-d:-0.27s">
+<g transform="translate(1.7 -.8)" style="--sl-dl:-.11s"><g class="sl-gz sl-za"><path class="sl-o2" d="M-4.6 .6 L-8.6 3.8" stroke-width="1.3"/><g class="sl-gz sl-zb"><path class="sl-o2" d="M-8.6 3.8 L-12.9 4.6 L-15.6 6" stroke-width=".9"/><circle class="sl-o2f" cx="-8.6" cy="3.8" r=".7"/><path class="sl-zoc" d="M-15 5.3 l-1.9 .3 l.2 1.5 l1.7 -.4z"/></g></g><g class="sl-gz sl-zc"><path class="sl-o2" d="M8.4 -.8 L11.2 3.4" stroke-width="1.4"/><g class="sl-gz sl-zd"><path class="sl-o2" d="M11.2 3.4 L14.6 3.7 L18.4 5.6" stroke-width=".9"/><circle class="sl-o2f" cx="11.2" cy="3.4" r=".75"/><circle class="sl-o2f" cx="14.6" cy="3.7" r=".5"/><path class="sl-zoc" d="M17.9 4.8 l1.8 .7 l-.5 1.5 l-1.7 -.6z"/></g></g></g>
+<g transform="translate(1.9 .5) rotate(6 -13 -11)"><g class="sl-o2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-12.9 -11.1 C-12.5 -14.4 -10.9 -17.5 -8 -19.7 C-6.6 -20.7 -5.3 -20.8 -4.2 -20.2" stroke-width=".85"/><path d="M-12.3 -13.9 C-13.6 -14.9 -14.6 -16.3 -15 -18" stroke-width=".65"/><path d="M-11.1 -16.4 C-12 -17.9 -12.2 -19.6 -11.9 -21.2" stroke-width=".6"/><path d="M-9.2 -18.7 C-9.7 -20.3 -9.5 -21.8 -8.9 -23" stroke-width=".55"/><path d="M-6.6 -20.4 C-6.2 -21.7 -5.6 -22.6 -4.6 -23.2" stroke-width=".5"/></g></g>
+<path class="sl-o" d="M10.6 -2.6 l2.3 -1.8 l1.9 -.6" stroke-width=".8" stroke-dasharray=".9 .45"/>
+<path class="sl-o" d="M-6.2 -2.8 C-1.5 -5.2 4.5 -5 10.8 -2.6" stroke-width="1.35"/>
+<g class="sl-o sl-cost" stroke-width=".85"><path d="M-4.4 -4.17 C-6.00 -1.57 -5.10 1.23 -3.50 2.43"/><path d="M-2.5 -4.22 C-4.10 -1.62 -3.20 1.98 -1.60 3.18"/><path d="M-0.6 -4.28 C-2.20 -1.68 -1.30 2.12 0.30 3.32"/><path d="M1.3 -4.26 C-0.30 -1.66 0.60 1.74 2.20 2.94"/><path d="M3.2 -3.90 C1.60 -1.30 2.50 1.10 4.10 2.30"/><path d="M5 -3.85 C3.40 -1.25 4.30 -0.25 5.90 0.95"/></g>
+<path class="sl-o2" d="M-5 3.4 C-2 5.2 2.4 5 6 2.4" stroke-width=".55"/>
+<path class="sl-of" d="M6.5 -3 C7.9 -4.5 10.6 -4.1 11.1 -2.2 C11.5 -.5 9.7 .5 8.5 .1 C7.1 -.3 6 -1.7 6.5 -3Z"/><circle class="sl-buco" cx="8.9" cy="-1.9" r=".75"/>
+<path class="sl-of" d="M-7 -2.4 L-3.4 -3.7 L-4.1 .9Z"/>
+<path class="sl-o" d="M-6 -2.6 C-8.3 -4.6 -10.3 -6.6 -11.8 -8.3" stroke-width="1.8" stroke-dasharray="1.05 .42"/>
+<ellipse class="sl-coll" cx="-6.4" cy="-1.6" rx="1.5" ry="3.3" transform="rotate(-24 -6.4 -1.6)"/><circle class="sl-camp" cx="-7.6" cy="1.9" r=".75"/>
+<path class="sl-of" d="M-11.1 -9.3 C-11.3 -10.9 -12.7 -11.8 -14.3 -11.5 C-15.5 -11.3 -16.5 -10.4 -17.9 -9.6 L-20.3 -8.4 C-21.1 -8 -20.9 -7 -20.1 -6.9 L-16.3 -6.5 C-14.3 -6.2 -12.5 -6.6 -11.7 -7.6Z"/>
+<ellipse class="sl-buco" cx="-14.5" cy="-9.3" rx="1.2" ry="1"/><circle class="sl-buco" cx="-19.6" cy="-7.8" r=".38"/>
+<path class="sl-buco-l" d="M-19.6 -6.95 L-15.6 -6.7"/>
+<g class="sl-o" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-12.9 -11.1 C-12.5 -14.4 -10.9 -17.5 -8 -19.7 C-6.6 -20.7 -5.3 -20.8 -4.2 -20.2" stroke-width=".85"/><path d="M-12.3 -13.9 C-13.6 -14.9 -14.6 -16.3 -15 -18" stroke-width=".65"/><path d="M-11.1 -16.4 C-12 -17.9 -12.2 -19.6 -11.9 -21.2" stroke-width=".6"/><path d="M-9.2 -18.7 C-9.7 -20.3 -9.5 -21.8 -8.9 -23" stroke-width=".55"/><path d="M-6.6 -20.4 C-6.2 -21.7 -5.6 -22.6 -4.6 -23.2" stroke-width=".5"/></g>
+<path class="sl-rim" d="M-11.6 -10.6 C-12.6 -11.6 -14.4 -11.7 -15.9 -10.7 L-18.6 -9.2 M-5.6 -3.4 C-1.2 -5.6 4.4 -5.4 10.2 -3.2 M-12.6 -12 C-12 -15 -10.6 -17.6 -8.2 -19.4" stroke-width=".42"/>
+<g><g class="sl-gz sl-za"><path class="sl-o" d="M-4.6 .6 L-8.6 3.8" stroke-width="1.3"/><g class="sl-gz sl-zb"><path class="sl-o" d="M-8.6 3.8 L-12.9 4.6 L-15.6 6" stroke-width=".9"/><circle class="sl-of" cx="-8.6" cy="3.8" r=".7"/><path class="sl-zoc" d="M-15 5.3 l-1.9 .3 l.2 1.5 l1.7 -.4z"/></g></g><g class="sl-gz sl-zc"><path class="sl-o" d="M8.4 -.8 L11.2 3.4" stroke-width="1.4"/><g class="sl-gz sl-zd"><path class="sl-o" d="M11.2 3.4 L14.6 3.7 L18.4 5.6" stroke-width=".9"/><circle class="sl-of" cx="11.2" cy="3.4" r=".75"/><circle class="sl-of" cx="14.6" cy="3.7" r=".5"/><path class="sl-zoc" d="M17.9 4.8 l1.8 .7 l-.5 1.5 l-1.7 -.6z"/></g></g></g>
+</g>
+<g class="sl-renna" transform="translate(-14 -4) scale(0.94)" style="--sl-d:-0.53s">
+<g transform="translate(1.7 -.8)" style="--sl-dl:-.11s"><g class="sl-gz sl-za"><path class="sl-o2" d="M-4.6 .6 L-8.6 3.8" stroke-width="1.3"/><g class="sl-gz sl-zb"><path class="sl-o2" d="M-8.6 3.8 L-12.9 4.6 L-15.6 6" stroke-width=".9"/><circle class="sl-o2f" cx="-8.6" cy="3.8" r=".7"/><path class="sl-zoc" d="M-15 5.3 l-1.9 .3 l.2 1.5 l1.7 -.4z"/></g></g><g class="sl-gz sl-zc"><path class="sl-o2" d="M8.4 -.8 L11.2 3.4" stroke-width="1.4"/><g class="sl-gz sl-zd"><path class="sl-o2" d="M11.2 3.4 L14.6 3.7 L18.4 5.6" stroke-width=".9"/><circle class="sl-o2f" cx="11.2" cy="3.4" r=".75"/><circle class="sl-o2f" cx="14.6" cy="3.7" r=".5"/><path class="sl-zoc" d="M17.9 4.8 l1.8 .7 l-.5 1.5 l-1.7 -.6z"/></g></g></g>
+<g transform="translate(1.9 .5) rotate(6 -13 -11)"><g class="sl-o2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-12.9 -11.1 C-12.5 -14.4 -10.9 -17.5 -8 -19.7 C-6.6 -20.7 -5.3 -20.8 -4.2 -20.2" stroke-width=".85"/><path d="M-12.3 -13.9 C-13.6 -14.9 -14.6 -16.3 -15 -18" stroke-width=".65"/><path d="M-11.1 -16.4 C-12 -17.9 -12.2 -19.6 -11.9 -21.2" stroke-width=".6"/><path d="M-9.2 -18.7 C-9.7 -20.3 -9.5 -21.8 -8.9 -23" stroke-width=".55"/><path d="M-6.6 -20.4 C-6.2 -21.7 -5.6 -22.6 -4.6 -23.2" stroke-width=".5"/></g></g>
+<path class="sl-o" d="M10.6 -2.6 l2.3 -1.8 l1.9 -.6" stroke-width=".8" stroke-dasharray=".9 .45"/>
+<path class="sl-o" d="M-6.2 -2.8 C-1.5 -5.2 4.5 -5 10.8 -2.6" stroke-width="1.35"/>
+<g class="sl-o sl-cost" stroke-width=".85"><path d="M-4.4 -4.17 C-6.00 -1.57 -5.10 1.23 -3.50 2.43"/><path d="M-2.5 -4.22 C-4.10 -1.62 -3.20 1.98 -1.60 3.18"/><path d="M-0.6 -4.28 C-2.20 -1.68 -1.30 2.12 0.30 3.32"/><path d="M1.3 -4.26 C-0.30 -1.66 0.60 1.74 2.20 2.94"/><path d="M3.2 -3.90 C1.60 -1.30 2.50 1.10 4.10 2.30"/><path d="M5 -3.85 C3.40 -1.25 4.30 -0.25 5.90 0.95"/></g>
+<path class="sl-o2" d="M-5 3.4 C-2 5.2 2.4 5 6 2.4" stroke-width=".55"/>
+<path class="sl-of" d="M6.5 -3 C7.9 -4.5 10.6 -4.1 11.1 -2.2 C11.5 -.5 9.7 .5 8.5 .1 C7.1 -.3 6 -1.7 6.5 -3Z"/><circle class="sl-buco" cx="8.9" cy="-1.9" r=".75"/>
+<path class="sl-of" d="M-7 -2.4 L-3.4 -3.7 L-4.1 .9Z"/>
+<path class="sl-o" d="M-6 -2.6 C-8.3 -4.6 -10.3 -6.6 -11.8 -8.3" stroke-width="1.8" stroke-dasharray="1.05 .42"/>
+<ellipse class="sl-coll" cx="-6.4" cy="-1.6" rx="1.5" ry="3.3" transform="rotate(-24 -6.4 -1.6)"/><circle class="sl-camp" cx="-7.6" cy="1.9" r=".75"/>
+<path class="sl-of" d="M-11.1 -9.3 C-11.3 -10.9 -12.7 -11.8 -14.3 -11.5 C-15.5 -11.3 -16.5 -10.4 -17.9 -9.6 L-20.3 -8.4 C-21.1 -8 -20.9 -7 -20.1 -6.9 L-16.3 -6.5 C-14.3 -6.2 -12.5 -6.6 -11.7 -7.6Z"/>
+<ellipse class="sl-buco" cx="-14.5" cy="-9.3" rx="1.2" ry="1"/><circle class="sl-buco" cx="-19.6" cy="-7.8" r=".38"/>
+<path class="sl-buco-l" d="M-19.6 -6.95 L-15.6 -6.7"/>
+<g class="sl-o" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-12.9 -11.1 C-12.5 -14.4 -10.9 -17.5 -8 -19.7 C-6.6 -20.7 -5.3 -20.8 -4.2 -20.2" stroke-width=".85"/><path d="M-12.3 -13.9 C-13.6 -14.9 -14.6 -16.3 -15 -18" stroke-width=".65"/><path d="M-11.1 -16.4 C-12 -17.9 -12.2 -19.6 -11.9 -21.2" stroke-width=".6"/><path d="M-9.2 -18.7 C-9.7 -20.3 -9.5 -21.8 -8.9 -23" stroke-width=".55"/><path d="M-6.6 -20.4 C-6.2 -21.7 -5.6 -22.6 -4.6 -23.2" stroke-width=".5"/></g>
+<path class="sl-rim" d="M-11.6 -10.6 C-12.6 -11.6 -14.4 -11.7 -15.9 -10.7 L-18.6 -9.2 M-5.6 -3.4 C-1.2 -5.6 4.4 -5.4 10.2 -3.2 M-12.6 -12 C-12 -15 -10.6 -17.6 -8.2 -19.4" stroke-width=".42"/>
+<g><g class="sl-gz sl-za"><path class="sl-o" d="M-4.6 .6 L-8.6 3.8" stroke-width="1.3"/><g class="sl-gz sl-zb"><path class="sl-o" d="M-8.6 3.8 L-12.9 4.6 L-15.6 6" stroke-width=".9"/><circle class="sl-of" cx="-8.6" cy="3.8" r=".7"/><path class="sl-zoc" d="M-15 5.3 l-1.9 .3 l.2 1.5 l1.7 -.4z"/></g></g><g class="sl-gz sl-zc"><path class="sl-o" d="M8.4 -.8 L11.2 3.4" stroke-width="1.4"/><g class="sl-gz sl-zd"><path class="sl-o" d="M11.2 3.4 L14.6 3.7 L18.4 5.6" stroke-width=".9"/><circle class="sl-of" cx="11.2" cy="3.4" r=".75"/><circle class="sl-of" cx="14.6" cy="3.7" r=".5"/><path class="sl-zoc" d="M17.9 4.8 l1.8 .7 l-.5 1.5 l-1.7 -.6z"/></g></g></g>
+</g>
+<g class="sl-pattini" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path class="sl-fer2" d="M81 3.5 C83.8 5.6 83.4 10 79.4 10 L11 10 C4.6 10 .6 6.8 1.2 2.6 C1.8 -1.6 7.2 -2 8 1.4" stroke-width="1"/>
+<path class="sl-mont" d="M17 5.2 C13.8 7.800000000000001 19.6 9.600000000000001 16.6 12.6 M15.9 8.3 l-1.6 -.9 M29 5.2 C25.8 7.800000000000001 31.6 9.600000000000001 28.6 12.6 M27.9 8.3 l-1.6 -.9 M41 5.2 C37.8 7.800000000000001 43.6 9.600000000000001 40.6 12.6 M39.9 8.3 l-1.6 -.9 M53 5.2 C49.8 7.800000000000001 55.6 9.600000000000001 52.6 12.6 M51.9 8.3 l-1.6 -.9 M68 1.6 C64.8 4.2 70.6 6.0 67.6 12.6 M66.9 4.7 l-1.6 -.9 M78 1.6 C74.8 4.2 80.6 6.0 77.6 12.6 M76.9 4.7 l-1.6 -.9" stroke-width=".75"/>
+<path class="sl-fer" d="M84.6 5.8 C87.4 8 87 12.8 82.6 12.8 L12.6 12.8 C5.6 12.8 1.4 9.4 2 5 C2.6 .8 8.2 .4 9 3.9 C9.5 6.4 6.9 7.6 5.7 6.2" stroke-width="1.35"/>
+<path class="sl-fer" d="M84.6 5.8 C83 4.6 81.6 4.8 81.2 6" stroke-width="1"/>
+</g>
+<path class="sl-rim sl-rim-b" d="M84.8 5.2 C87.6 7.6 87.2 12.2 82.6 12.2 L12.6 12.2 C5.4 12.2 1 8.8 1.5 4.8 C2 .6 7.8 -.2 8.9 3.4" stroke-width=".4"/>
+<g transform="translate(59.6 -5.4) rotate(14)">
+ <path class="sl-legno" d="M-3.4 -27.5 L3.4 -27.5 L5.7 -20.4 L3.1 0 L-3.1 0 L-5.7 -20.4Z"/>
+ <path class="sl-fodera" d="M-2.3 -25.5 L2.3 -25.5 L4 -20.2 L2.1 -1.8 L-2.1 -1.8 L-4 -20.2Z"/>
+ <path class="sl-rim" d="M-5.4 -20.2 L-3.2 -27.3 L3.2 -27.3" stroke-width=".5"/>
+</g>
+<g class="sl-pentola" transform="translate(4 0)">
+ <path class="sl-pent" d="M61.8 -18.6 C60.6 -12 61.4 -4 65 -.4 C67.6 2.2 74.4 2.2 77 -.4 C80.6 -4 81.4 -12 80.2 -18.6Z"/>
+ <g class="sl-dA" transform="translate(66 -21.4) rotate(-14)"><rect class="sl-dc" x="-2.3" y="-2.1" width="4.6" height="4.2" rx=".35"/><path class="sl-dn" d="M-2.3 -.42h4.6v.84h-4.6z M-.42 -2.1h.84v4.2h-.84z"/><path class="sl-dn" d="M0 -2.1 c-.5 -1.3 -2 -1.2 -1.6 -.2z M0 -2.1 c.5 -1.3 2 -1.2 1.6 -.2z"/><path class="sl-rim" d="M-2.0999999999999996 -2h4.199999999999999" stroke-width=".4"/></g><g class="sl-dC" transform="translate(72.6 -22.2) rotate(9)"><rect class="sl-dc" x="-2.1" y="-2.2" width="4.2" height="4.4" rx=".35"/><path class="sl-dn" d="M-2.1 -.42h4.2v.84h-4.2z M-.42 -2.2h.84v4.4h-.84z"/><path class="sl-dn" d="M0 -2.2 c-.5 -1.3 -2 -1.2 -1.6 -.2z M0 -2.2 c.5 -1.3 2 -1.2 1.6 -.2z"/><path class="sl-rim" d="M-1.9000000000000001 -2.1h3.8000000000000003" stroke-width=".4"/></g><g class="sl-dB" transform="translate(76.2 -20.4) rotate(22)"><rect class="sl-dc" x="-1.7" y="-1.6" width="3.4" height="3.2" rx=".35"/><path class="sl-dn" d="M-1.7 -.42h3.4v.84h-3.4z M-.42 -1.6h.84v3.2h-.84z"/><path class="sl-dn" d="M0 -1.6 c-.5 -1.3 -2 -1.2 -1.6 -.2z M0 -1.6 c.5 -1.3 2 -1.2 1.6 -.2z"/><path class="sl-rim" d="M-1.5 -1.5h3" stroke-width=".4"/></g>
+ <rect class="sl-bordo" x="60.4" y="-20.2" width="21.2" height="2.6" rx="1.1"/>
+ <path class="sl-spir" d="M71 -8.6 m-3.2 0 a3.2 3.2 0 1 1 3.2 3.2 a1.9 1.9 0 1 1 -1.9 -1.9 a.8 .8 0 1 1 .8 .8" fill="none" stroke-width=".6"/>
+ <path class="sl-rim" d="M61 -19.8 L78 -19.8 M62.2 -16 C61.6 -11.6 62 -6.6 63.6 -3.4" stroke-width=".45"/>
+</g>
+<g class="sl-figura">
+ <path class="sl-rosso2" d="M50.6 -20.4 L46.4 -16.6 L41.9 -14.4" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+ <path class="sl-rossof" d="M47.6 -5 C47.3 -11 48.1 -17 49.5 -21.6 L53.5 -21.8 C54.1 -17 53.9 -11 53.3 -5Z"/>
+ <path class="sl-pellof" d="M47.9 -5.2 C47.7 -10.8 48.4 -16.6 49.6 -21 L50.6 -21 C49.6 -16.4 49 -10.8 49.1 -5.2Z"/>
+ <rect class="sl-cint" x="47.4" y="-10.2" width="6.4" height="1.2"/>
+ <path class="sl-rosso" d="M50.2 -6.6 L43.2 -9.6 L41.2 -6" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ <ellipse class="sl-pellof" cx="51.4" cy="-21.9" rx="2.6" ry="1.1"/>
+ <circle class="sl-volto" cx="51.1" cy="-25.2" r="2.55"/>
+ <ellipse class="sl-buco" cx="49.6" cy="-25.6" rx=".55" ry=".7"/><ellipse class="sl-buco" cx="51.4" cy="-25.7" rx=".5" ry=".68"/>
+ <path class="sl-buco-l" d="M49 -23.9 q1.3 .8 2.9 0"/>
+ <path class="sl-rossof" d="M49 -27.3 C49.7 -31 52.1 -33.6 55.2 -34.4 C57.1 -34.8 58.6 -33.7 59 -31.7 C57.7 -32.8 56.1 -32.6 55.3 -31.3 L53.7 -27.5Z"/>
+ <circle class="sl-pellof" cx="59.1" cy="-30.9" r="1.05"/>
+ <path class="sl-pellof" d="M48.6 -26.8 C49.5 -28.1 52.6 -28.3 54 -27.2 L53.8 -26.1 C52.5 -27 49.8 -27 48.7 -25.9Z"/>
+ <path class="sl-rosso" d="M51.9 -20.1 L47.5 -15.6 L42.7 -13.1" fill="none" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle class="sl-guanto" cx="42.2" cy="-13.4" r=".95"/><circle class="sl-guanto" cx="41.6" cy="-14.5" r=".8"/>
+ <path class="sl-rim" d="M49.2 -27.6 C50 -31 52.2 -33.4 55.2 -34.3 M49.7 -21.3 C48.6 -17 48 -11 48 -6" stroke-width=".42"/>
+</g>
+<path class="sl-legno" d="M11.6 -6.4 L64 -6.4 L62.4 5.2 L14 5.2Z"/>
+<path class="sl-legno2" d="M12.8 -1.9 L63.2 -1.9 M13.6 1.9 L62.6 1.9" fill="none" stroke-width=".45"/>
+<rect class="sl-legno3" x="10.9" y="-7.7" width="53.2" height="1.8" rx=".5"/>
+<path class="sl-mani" d="M24 -.2 h6.2 M24.6 -1.4 v2.4 M29.6 -1.4 v2.4 M43 -.2 h6.2 M43.6 -1.4 v2.4 M48.6 -1.4 v2.4" fill="none" stroke-width=".7" stroke-linecap="round"/>
+<path class="sl-rim" d="M11.4 -7.5 L63.8 -7.5 M12 -6 L13.7 4.4" stroke-width=".5"/>
+</g></g>
+<!-- controluce: davanti alla luna la stessa slitta diventa sagoma scura (copia con maschera morbida sul disco) -->
+<g class="sl-controluce" mask="url(#slLunaM)"><use class="sl-volo2" href="#slDisegno"/></g>
+<g class="sl-doni"><g class="sl-dono" opacity="0"><g class="sl-dA" transform="translate(0 0) rotate(0)"><rect class="sl-dc" x="-2.7" y="-2.45" width="5.4" height="4.9" rx=".35"/><path class="sl-dn" d="M-2.7 -.42h5.4v.84h-5.4z M-.42 -2.45h.84v4.9h-.84z"/><path class="sl-dn" d="M0 -2.45 c-.5 -1.3 -2 -1.2 -1.6 -.2z M0 -2.45 c.5 -1.3 2 -1.2 1.6 -.2z"/><path class="sl-rim" d="M-2.5 -2.35h5" stroke-width=".4"/></g></g><g class="sl-dono" opacity="0"><g class="sl-dB" transform="translate(0 0) rotate(0)"><rect class="sl-dc" x="-2.7" y="-2.45" width="5.4" height="4.9" rx=".35"/><path class="sl-dn" d="M-2.7 -.42h5.4v.84h-5.4z M-.42 -2.45h.84v4.9h-.84z"/><path class="sl-dn" d="M0 -2.45 c-.5 -1.3 -2 -1.2 -1.6 -.2z M0 -2.45 c.5 -1.3 2 -1.2 1.6 -.2z"/><path class="sl-rim" d="M-2.5 -2.35h5" stroke-width=".4"/></g></g><g class="sl-dono" opacity="0"><g class="sl-dC" transform="translate(0 0) rotate(0)"><rect class="sl-dc" x="-2.7" y="-2.45" width="5.4" height="4.9" rx=".35"/><path class="sl-dn" d="M-2.7 -.42h5.4v.84h-5.4z M-.42 -2.45h.84v4.9h-.84z"/><path class="sl-dn" d="M0 -2.45 c-.5 -1.3 -2 -1.2 -1.6 -.2z M0 -2.45 c.5 -1.3 2 -1.2 1.6 -.2z"/><path class="sl-rim" d="M-2.5 -2.35h5" stroke-width=".4"/></g></g><g class="sl-dono" opacity="0"><g class="sl-dD" transform="translate(0 0) rotate(0)"><rect class="sl-dc" x="-2.7" y="-2.45" width="5.4" height="4.9" rx=".35"/><path class="sl-dn" d="M-2.7 -.42h5.4v.84h-5.4z M-.42 -2.45h.84v4.9h-.84z"/><path class="sl-dn" d="M0 -2.45 c-.5 -1.3 -2 -1.2 -1.6 -.2z M0 -2.45 c.5 -1.3 2 -1.2 1.6 -.2z"/><path class="sl-rim" d="M-2.5 -2.35h5" stroke-width=".4"/></g></g><g class="sl-dono" opacity="0"><g class="sl-dA" transform="translate(0 0) rotate(0)"><rect class="sl-dc" x="-2.7" y="-2.45" width="5.4" height="4.9" rx=".35"/><path class="sl-dn" d="M-2.7 -.42h5.4v.84h-5.4z M-.42 -2.45h.84v4.9h-.84z"/><path class="sl-dn" d="M0 -2.45 c-.5 -1.3 -2 -1.2 -1.6 -.2z M0 -2.45 c.5 -1.3 2 -1.2 1.6 -.2z"/><path class="sl-rim" d="M-2.5 -2.35h5" stroke-width=".4"/></g></g></g>
+</g>
+  <!-- primo piano: la fila di casette del mercatino, l'abete, i festoni, la neve -->
+  <g class="par" data-depth="0.16" data-max="18">
+   <g id="chalets"></g>
+   <path d="M0 290 V262 Q100 252 200 262 T400 260 T600 263 T800 258 V290Z" style="fill:var(--snowground)"/>
+   <g id="pools"></g>
+   <g>
+    <polygon points="345,132 325,184 365,184" style="fill:var(--fir)"/>
+    <polygon points="345,158 320,216 370,216" style="fill:var(--fir)"/>
+    <polygon points="345,190 314,256 376,256" style="fill:var(--fir)"/>
+    <rect x="341" y="254" width="8" height="12" style="fill:var(--wood-dk)"/>
+    <path d="M345 121 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z" style="fill:var(--lamp)"/>
+    <g id="firlights"></g>
+   </g>
+   <g id="festoons"></g>
+   <path d="M0 290 V272 Q120 266 260 272 T540 270 T800 268 V290Z" style="fill:var(--snowshade)"/>
+  </g>
+ </svg>
+ <div class="wrap wide hero-bottom">
+  <div class="flights" role="list" aria-label="I due voli Volotea">
+   <div class="flight" role="listitem"><span class="d">Andata · dom 13</span><span class="r num">06:05 Olbia <span>→</span> 08:05 Orly</span><span class="x">Volotea · Orly 1, hall A</span></div>
+   <div class="flight" role="listitem"><span class="d">Ritorno · gio 17</span><span class="r num">12:45 Orly <span>→</span> 14:45 Olbia</span><span class="x">Uscite dall'hotel alle <span id="thuOut">8:30</span></span></div>
+  </div>
+  <p class="checked"><b>Dati controllati il 21/11/2026.</b> Prezzi e orari cambiano: dove serve, la pagina vi dice cosa ricontrollare.</p>
+ </div>
+</header>
+<div class="prova-sotto"><p>Sotto la testata: pagina di prova della slitta. <code>?vino</code> = tavolozza Vin brulé, <code>?foto</code> = cielo fermo (niente fuochi), slitta solo a comando (<code>slVai({dir:-1,ferma:.5})</code>).</p></div>
+<script>
+(()=>{
+const $=s=>document.querySelector(s);
+const FOTO=/[?&]foto\b/.test(location.search);
+const RM=FOTO||matchMedia('(prefers-reduced-motion: reduce)').matches;
+const VINO=()=>document.documentElement.dataset.palette==='vino';
+const BU=['var(--lamp)','var(--wine)','var(--lamp)','var(--fir-light)','var(--lamp)','var(--brand)'];
+const qpt=(a,c,b,t)=>[(1-t)*(1-t)*a[0]+2*(1-t)*t*c[0]+t*t*b[0],(1-t)*(1-t)*a[1]+2*(1-t)*t*c[1]+t*t*b[1]];
+const f1=n=>n.toFixed(1);
+/* divisori fra le sezioni: disegnati alla larghezza vera, così le lampadine restano tonde */
+const BULB=['var(--lamp)','var(--wine)','var(--fir)','var(--lamp)','var(--brand)'];
+const drawLights=()=>document.querySelectorAll('.lights').forEach((el,k)=>{
+ const W=Math.max(320,el.clientWidth||400),n=Math.round(W/22),P0=[0,7],C1=[W/4,24],M=[W/2,9],C2=[3*W/4,-6],P1=[W,7];
+ let s=`<svg viewBox="0 0 ${W} 40" preserveAspectRatio="none"><path class="wire" d="M0 7 Q ${W/4} 24 ${W/2} 9 T ${W} 7"/>`;
+ for(let i=0;i<n;i++){const x=(i+.5)*W/n,t=x/W,y=(t<.5?qpt(P0,C1,M,t*2):qpt(M,C2,P1,(t-.5)*2))[1],c=BULB[(i+k)%BULB.length];
+  s+=`<g class="b"><ellipse cx="${f1(x)}" cy="${f1(y+11)}" rx="9" ry="10" style="fill:${c}" opacity=".2"/><rect x="${f1(x-1.6)}" y="${f1(y)}" width="3.2" height="4" style="fill:var(--mute)"/><ellipse cx="${f1(x)}" cy="${f1(y+11)}" rx="4.2" ry="6" style="fill:${c}"/></g>`}
+ el.innerHTML=s+'</svg>'});
+drawLights();
+const MK={};
+{let seed=7;const rnd=()=>(seed=(seed*9301+49297)%233280)/233280;
+ /* tetti di Parigi e merli del castello */
+ let r='';let x=0;
+ while(x<800){const w=40+rnd()*36,h=34+rnd()*34,top=265-h;r+=`<polygon points="${x},265 ${x},${top+10} ${x+8},${top} ${x+w-8},${top} ${x+w},${top+10} ${x+w},265"/>`;
+  if(rnd()<.8){const cx=x+10+rnd()*(w-26);r+=`<rect x="${cx.toFixed(0)}" y="${top-9}" width="6" height="10"/>`}x+=w+2}
+ const ro=document.getElementById('roofs');if(ro)ro.innerHTML=r;
+ let c='';for(let i=0;i<10;i++)c+=`<rect x="${417+i*17}" y="188" width="9" height="8"/>`;const cr=document.getElementById('cren');if(cr)cr.innerHTML=c;
+ /* una casetta vista di fronte: legno, tetto con la neve, tenda a righe, banco acceso con la merce, ghirlanda, lampadine */
+ const G=['var(--wine)','var(--fir)','var(--lamp)','var(--roof-r)','var(--fir-light)'];
+ const chalet=(x,w,tip,awn,roof,b,k)=>{const eave=tip+w*.38,cx=x+w/2,H=b-eave,oh=w*.12,aw=eave+H*.08,ah=H*.2,oy=aw+ah,oh2=H*.5,cy=oy+oh2;
+  let s=`<rect x="${f1(x)}" y="${f1(eave)}" width="${f1(w)}" height="${f1(H)}" style="fill:var(--wood)"/><polygon points="${f1(x)},${f1(eave+.5)} ${f1(cx)},${f1(tip+3)} ${f1(x+w)},${f1(eave+.5)}" style="fill:var(--wood)"/>`;
+  s+=`<rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2)}" style="fill:var(--lamp)"/><rect x="${f1(x+w*.1)}" y="${f1(oy)}" width="${f1(w*.8)}" height="${f1(oh2*.45)}" style="fill:var(--lamp-hot)" opacity=".75"/>`;
+  const n=Math.max(3,Math.round(w/11));for(let i=0;i<n;i++)s+=`<circle cx="${f1(x+w*.17+i*w*.66/(n-1))}" cy="${f1(cy-H*.07)}" r="${f1(Math.max(1.4,H*.06))}" style="fill:${G[(i+k)%G.length]}"/>`;
+  for(let i=0;i<3;i++){const hx=x+w*(.28+i*.22),hl=H*(.09+((i+k)%2)*.06);s+=`<line x1="${f1(hx)}" y1="${f1(oy)}" x2="${f1(hx)}" y2="${f1(oy+hl)}" style="stroke:var(--wood-dk)" stroke-width=".8"/><circle cx="${f1(hx)}" cy="${f1(oy+hl+1.4)}" r="${f1(Math.max(1.2,H*.035))}" style="fill:${G[(i+k+2)%G.length]}"/>`}
+  s+=`<rect x="${f1(x+w*.04)}" y="${f1(cy)}" width="${f1(w*.92)}" height="${f1(H*.09)}" style="fill:var(--wood-dk)"/><rect x="${f1(x+1)}" y="${f1(aw)}" width="${f1(w-2)}" height="${f1(ah)}" fill="url(#${awn})"/><rect x="${f1(x+1)}" y="${f1(aw+ah-1.2)}" width="${f1(w-2)}" height="1.2" style="fill:var(--wood-dk)" opacity=".6"/>`;
+  s+=`<polyline points="${f1(x-oh)},${f1(eave+5)} ${f1(cx)},${f1(tip)} ${f1(x+w+oh)},${f1(eave+5)}" fill="none" style="stroke:var(${roof})" stroke-width="${f1(w*.1)}" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${f1(x-oh+2)},${f1(eave+1.5)} ${f1(cx)},${f1(tip-3.2)} ${f1(x+w+oh-2)},${f1(eave+1.5)}" fill="none" style="stroke:var(--snowground)" stroke-width="${f1(w*.05)}" stroke-linejoin="round" stroke-linecap="round"/>`;
+  const gy=tip+(eave-tip)*.6,gr=Math.max(2.2,w*.06);s+=`<circle cx="${f1(cx)}" cy="${f1(gy)}" r="${f1(gr)}" fill="none" style="stroke:var(--fir-light)" stroke-width="${f1(gr*.55)}"/><circle cx="${f1(cx)}" cy="${f1(gy+gr)}" r="${f1(gr*.42)}" style="fill:var(--wine)"/>`;
+  for(let i=1;i<=4;i++){const t=i/5;[[x-oh*.4,eave+7],[x+w+oh*.4,eave+7]].forEach((e,j)=>{s+=`<circle cx="${f1(e[0]+(cx-e[0])*t)}" cy="${f1(e[1]+(tip+6-e[1])*t)}" r="${f1(Math.max(1.1,w*.022))}" style="fill:${BU[(i+j+k)%BU.length]}"/>`})}
+  return s};
+ const row=(L,b,k)=>L.map((c,i)=>chalet(c[0],c[1],c[2],c[3],c[4],b,i+k)).join('');
+ const tips=L=>L.map(c=>[c[0]+c[1]/2,c[2]+1]);
+ const pools=(L,b)=>L.map(c=>`<ellipse cx="${f1(c[0]+c[1]/2)}" cy="${b-3}" rx="${f1(c[1]*.62)}" ry="6" fill="url(#pool)"/>`).join('');
+ /* festone: filo che pende da una casetta all'altra, lampadine con alone */
+ const festoon=(P,k)=>{let w='',bl='';for(let i=0;i<P.length-1;i++){const a=P[i],b=P[i+1],c=[(a[0]+b[0])/2,Math.max(a[1],b[1])+(b[0]-a[0])*.26];
+   w+=`M${f1(a[0])} ${f1(a[1])} Q${f1(c[0])} ${f1(c[1])} ${f1(b[0])} ${f1(b[1])} `;const n=Math.max(3,Math.round((b[0]-a[0])/12));
+   for(let j=1;j<n;j++){const q=qpt(a,c,b,j/n),col=BU[(i*n+j+k)%BU.length];bl+=`<g class="hb" style="animation-delay:${(((i*n+j)*.13)%2.6).toFixed(2)}s"><circle cx="${f1(q[0])}" cy="${f1(q[1]+3)}" r="5.5" style="fill:${col}" opacity=".24"/><circle cx="${f1(q[0])}" cy="${f1(q[1]+3)}" r="2.3" style="fill:${col}"/></g>`}}
+  return `<path d="${w}" fill="none" style="stroke:var(--night-wire)" stroke-width="1.1"/>`+bl};
+ const genRow=(W,minT,maxT)=>{const out=[],A=['awnR','awnY','awnG'],R=['--roof-g','--roof-r','--roof-r'];let x=-12,i=0;while(x<W){const w=50+rnd()*14;out.push([x,w,minT+rnd()*(maxT-minT),A[i%3],R[i%3]]);x+=w+7;i++}return out};
+ /* cartolina: cielo, stelle, bagliore, casette, neve, festone */
+ MK.mini=(W,H,k)=>{const b=H-6,L=genRow(W,b-64,b-52);let st='';for(let i=0;i<Math.round(W/34);i++)st+=`<circle cx="${(rnd()*W).toFixed(0)}" cy="${(4+rnd()*(b-80)).toFixed(0)}" r="${(.6+rnd()*.9).toFixed(1)}" style="fill:var(--snow)" opacity=".7"/>`;
+  return `<ellipse cx="${W/2}" cy="${b}" rx="${W*.7}" ry="${H*.7}" fill="url(#hglow)"/>`+st+row(L,b,k)+`<path d="M0 ${H+2} V${b-3} Q${W*.25} ${b-8} ${W*.5} ${b-3} T${W} ${b-4} V${H+2}Z" style="fill:var(--snowground)"/>`+pools(L,b)+festoon([[-10,b-74],...tips(L),[W+10,b-74]],k)};
+ /* la scena grande: casette a sinistra e a destra dell'abete */
+ const CL=[[-12,64,186,'awnR','--roof-g'],[56,60,192,'awnY','--roof-r'],[120,68,182,'awnG','--roof-r'],[194,62,188,'awnR','--roof-g'],[262,54,194,'awnY','--roof-r']];
+ const CR=[[388,62,190,'awnG','--roof-r'],[454,68,182,'awnR','--roof-g'],[526,58,190,'awnY','--roof-r'],[588,66,184,'awnG','--roof-r'],[658,62,190,'awnR','--roof-g'],[724,82,180,'awnY','--roof-r']];
+ const set=(id,h)=>{const e=document.getElementById(id);if(e)e.innerHTML=h};
+ set('chalets',row(CL,266,0)+row(CR,266,5));
+ set('pools',pools(CL.concat(CR),266));
+ set('festoons',festoon([[-20,176],...tips(CL)],0)+festoon([...tips(CR),[820,172]],3));
+ const fl=[[337,174],[351,166],[343,196],[331,206],[357,200],[341,228],[325,240],[353,236],[365,248],[345,156],[333,188],[359,216],[319,252],[371,254],[345,214]];
+ set('firlights',fl.map((q,i)=>`<circle class="hb" style="animation-delay:${(i*.21).toFixed(2)}s;fill:${BU[(i+1)%BU.length]}" cx="${q[0]}" cy="${q[1]}" r="2.8"/>`).join(''));
+ let tw='';for(let i=0;i<18;i++){const y=124+i*4.2,half=1.5+(y-124)/137*15;tw+=`<circle class="tw" style="animation-delay:${(rnd()*1.8).toFixed(2)}s;fill:var(--lamp-hot)" cx="${f1(262+(rnd()*2-1)*half)}" cy="${f1(y)}" r="1.1"/>`}
+ set('towerlights',tw);
+ const fm=document.getElementById('footMarket');if(fm)fm.innerHTML=MK.mini(800,120,2);
+}
+/* festone in cima alla pagina, disegnato alla larghezza vera */
+const gar=$('#garland'),HERO=$('#top');
+const drawGarland=()=>{if(!gar||!HERO)return;const W=HERO.clientWidth||400,n=Math.max(2,Math.round(W/170)),sp=W/n;let w='',bl='';
+ gar.setAttribute('viewBox',`0 0 ${W} 64`);
+ for(let i=0;i<n;i++){const a=[i*sp,3],b=[(i+1)*sp,3],c=[a[0]+sp/2,3+Math.min(70,sp*.5)];w+=`M${f1(a[0])} 3 Q${f1(c[0])} ${f1(c[1])} ${f1(b[0])} 3 `;const m=Math.max(4,Math.round(sp/24));
+  for(let j=1;j<m;j++){const q=qpt(a,c,b,j/m),col=BU[(i*m+j)%BU.length];bl+=`<g class="hb" style="animation-delay:${(((i*m+j)*.17)%2.6).toFixed(2)}s"><circle cx="${f1(q[0])}" cy="${f1(q[1]+6)}" r="8" style="fill:${col}" opacity=".2"/><rect x="${f1(q[0]-1.4)}" y="${f1(q[1])}" width="2.8" height="3" style="fill:var(--night-mute)" opacity=".6"/><ellipse cx="${f1(q[0])}" cy="${f1(q[1]+6)}" rx="2.8" ry="3.9" style="fill:${col}"/></g>`}}
+ gar.innerHTML=`<path d="${w}" fill="none" style="stroke:var(--night-mute)" stroke-opacity=".35" stroke-width="1.2"/>`+bl};
+drawGarland();
+const cv=$('#sky'),hero=$('#top');
+if(cv&&cv.getContext){
+ const ctx=cv.getContext('2d');let W=0,H=0,dpr=1,flakes=[],glows=[],stars=[],shoot=null,nextShoot=2.2,arc=[],t0=performance.now(),run=false,vis=true,raf=0;
+ const size=()=>{dpr=Math.min(devicePixelRatio||1,2);W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  const ns=Math.round(Math.min(280,W*H/1500));stars=Array.from({length:ns},()=>{const r=.35+Math.pow(Math.random(),3)*1.55;return {x:Math.random()*W,y:H*.88*Math.pow(Math.random(),1.35),r,b:.35+Math.random()*.65,sp:.6+Math.random()*1.8,p:Math.random()*6.28,g:r>1.25}});
+  const n=VINO()?Math.round(Math.min(90,W*H/9000)):Math.round(Math.min(48,W*H/16000));flakes=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,v:.15+Math.random()*.45,w:Math.random()*6.28}));
+  const GC=VINO()?['246,201,100','246,201,100','255,150,96','255,140,120','255,176,196','143,227,184']:['246,201,100','246,201,100','255,214,150','150,190,255','150,190,255','190,170,255'];glows=Array.from({length:24},()=>({x:Math.random()*W,y:Math.random()*H*.7,r:8+Math.random()*34,p:Math.random()*6.28,c:GC[Math.floor(Math.random()*GC.length)]}))};
+ const sceneMap=()=>{const s=document.querySelector('.scene');const r=s.getBoundingClientRect(),hr=hero.getBoundingClientRect();const sc=Math.max(r.width/800,r.height/290);const ox=r.left-hr.left+(r.width-800*sc)/2,oy=r.top-hr.top+(r.height-290*sc);return (x,y)=>[ox+x*sc,oy+y*sc]};
+ /* fuochi di scintille sopra il castello: tre al caricamento, poi uno ogni tanto */
+ const LAUNCH=[[440,200,452,62],[562,205,582,72],[505,150,505,30],[420,210,410,90],[585,215,612,96]];
+ const COL=['#FFE7A3','#FFFFFF','#BFD8FF','#FFE7A3'];
+ let rockets=[],sparks=[],nextAuto=9;
+ const COLV=['#FFE7A3','#FFFFFF','#FFB0C4','#9FE8C0'];
+ const fire=(k,t)=>{const C=VINO()?COLV:COL;rockets.push({k,t0:t,dur:1.05,c:C[k%C.length]})};
+ [[0,.35],[1,1.05],[2,1.75]].forEach(([k,d])=>fire(k,d));
+ const fireworks=(t)=>{const m=sceneMap();
+  if(t>nextAuto){fire(Math.floor(Math.random()*LAUNCH.length),t);if(Math.random()<.5)fire(Math.floor(Math.random()*LAUNCH.length),t+.4);nextAuto=t+6+Math.random()*4}
+  for(let i=rockets.length-1;i>=0;i--){const r=rockets[i],u=(t-r.t0)/r.dur;if(u<0)continue;const L=LAUNCH[r.k];
+   const e=1-Math.pow(1-Math.min(u,1),2),X=L[0]+(L[2]-L[0])*e,Y=L[1]+(L[3]-L[1])*e-Math.sin(e*Math.PI)*18;const [px,py]=m(X,Y);
+   if(u<1){sparks.push({x:px,y:py,vx:(Math.random()-.5)*.5,vy:Math.random()*.5+.2,l:.8,c:'#FFE7A3',s:1.6});ctx.fillStyle='#FFF4D6';ctx.beginPath();ctx.arc(px,py,2.4,0,6.28);ctx.fill()}
+   else{const n=34;for(let j=0;j<n;j++){const a=j/n*6.283+Math.random()*.2,v=1.3+Math.random()*1.3;sparks.push({x:px,y:py,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,c:j%3?r.c:'#FFFFFF',s:2.2})}rockets.splice(i,1)}}
+  for(let i=sparks.length-1;i>=0;i--){const s=sparks[i];s.x+=s.vx;s.y+=s.vy;s.vx*=.975;s.vy=s.vy*.975+.025;s.l-=.014;if(s.l<=0){sparks.splice(i,1);continue}ctx.globalAlpha=Math.min(1,s.l*1.2);ctx.fillStyle=s.c;ctx.fillRect(s.x-s.s/2,s.y-s.s/2,s.s,s.s)}
+  ctx.globalAlpha=1};
+ const draw=(now)=>{const t=(now-t0)/1000;ctx.clearRect(0,0,W,H);
+  if(!VINO())for(const s of stars){const a=s.b*(.5+.5*Math.sin(t*s.sp+s.p));ctx.globalAlpha=Math.max(.06,a);ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.28);ctx.fill();
+   if(s.g){ctx.globalAlpha=a*.55;ctx.fillStyle='#DCE6FF';const L=s.r*4.2;ctx.fillRect(s.x-L,s.y-.35,L*2,.7);ctx.fillRect(s.x-.35,s.y-L,.7,L*2)}}
+  ctx.globalAlpha=1;
+  if(!RM&&!VINO()){if(!shoot&&t>nextShoot){const dir=Math.random()<.5?1:-1;shoot={x:W*(dir>0?.08+Math.random()*.45:.47+Math.random()*.45),y:H*(.04+Math.random()*.22),dx:dir*Math.cos(.42),dy:Math.sin(.42),len:80+Math.random()*70,t0:t,dur:.95};nextShoot=t+4.5+Math.random()*5}
+   if(shoot){const u=(t-shoot.t0)/shoot.dur;if(u>=1)shoot=null;else{const d=u*shoot.len*2.4,hx=shoot.x+shoot.dx*d,hy=shoot.y+shoot.dy*d,tx=hx-shoot.dx*shoot.len,ty=hy-shoot.dy*shoot.len,a=Math.sin(u*Math.PI);
+    const gr=ctx.createLinearGradient(tx,ty,hx,hy);gr.addColorStop(0,'rgba(220,232,255,0)');gr.addColorStop(1,`rgba(255,255,255,${(.9*a).toFixed(3)})`);ctx.strokeStyle=gr;ctx.lineWidth=1.6;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(tx,ty);ctx.lineTo(hx,hy);ctx.stroke();
+    ctx.globalAlpha=a;ctx.fillStyle='#FFFFFF';ctx.beginPath();ctx.arc(hx,hy,1.7,0,6.28);ctx.fill();ctx.globalAlpha=1}}}
+  for(const g of glows){const a=.10+.08*Math.sin(t*.6+g.p);const gr=ctx.createRadialGradient(g.x,g.y,0,g.x,g.y,g.r);gr.addColorStop(0,`rgba(${g.c},${a})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(g.x,g.y,g.r,0,6.28);ctx.fill()}
+  ctx.fillStyle='rgba(255,255,255,.85)';
+  for(const f of flakes){f.y+=f.v;f.x+=Math.sin(t*.5+f.w)*.25;if(f.y>H+4){f.y=-4;f.x=Math.random()*W}ctx.globalAlpha=.35+f.r*.25;ctx.beginPath();ctx.arc(f.x,f.y,f.r,0,6.28);ctx.fill()}
+  ctx.globalAlpha=1;
+  if(!RM)fireworks(t);
+  ctx.globalAlpha=1};
+ const loop=now=>{draw(now);if(run)raf=requestAnimationFrame(loop)};
+ const start=()=>{if(run||RM||!vis||document.hidden)return;run=true;raf=requestAnimationFrame(loop)};
+ const stop=()=>{run=false;cancelAnimationFrame(raf)};
+ size();draw(t0+1600);
+ addEventListener('resize',()=>{size();if(!run)draw(performance.now())},{passive:true});
+ document.addEventListener('palette',()=>{size();if(!run)draw(performance.now())});
+ if(!RM){if('IntersectionObserver' in window)new IntersectionObserver(e=>{vis=e[0].isIntersecting;vis?start():stop()}).observe(hero);
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());start();
+  /* parallasse leggero della scena: le casette scendono al massimo data-max (sennò il bordo le taglia, Mario 21/11), lo sfondo sale un poco così la Torre Eiffel spunta */
+  const pars=[...document.querySelectorAll('.scene .par')];let tick=false;
+  addEventListener('scroll',()=>{if(tick)return;tick=true;requestAnimationFrame(()=>{const y=Math.min(scrollY,600);pars.forEach(p=>{const m=+p.dataset.max||999,t=Math.max(-m,Math.min(m,y*+p.dataset.depth));p.style.transform=`translateY(${t.toFixed(1)}px)`});tick=false})},{passive:true});}
+}
+})();
+</script>
+<script>
+/* ---------- slitta volante della testata ----------
+   Snippet #slitta nella scena: 6 s dopo l'apertura e poi ogni 40–70 s attraversa il cielo davanti alla luna
+   (da destra o da sinistra), lascia cadere 3–5 regali che svaniscono prima dei tetti.
+   Si muove un solo gruppo (transform) più i regali (transform + opacità); ferma se la scheda è nascosta,
+   aspetta se la testata non si vede, mai con «riduci movimento». slVai() la fa partire subito (prove). */
+(()=>{
+ const slG=document.getElementById('slitta'),slSvg=slG&&slG.ownerSVGElement;
+ if(!slSvg||!window.requestAnimationFrame)return;
+ const slMq=matchMedia('(prefers-reduced-motion: reduce)');
+ if(slMq.matches)return;
+ const slVolo=slG.querySelector('.sl-volo'),slVolo2=slG.querySelector('.sl-volo2'),slDoni=[...slG.querySelectorAll('.sl-dono')];
+ const SL_LUNA=[240,70],SL_G=58,SL_SACCO=[73,-21];
+ let slP=null,slRaf=0,slLast=0,slTo=0,slAlle=0,slResto=-1,slVista=true,slAttesa=false,slFermo=false,slRimV=-1;
+ const slMulb=a=>()=>{a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+ const slClamp=(v,a,b)=>v<a?a:v>b?b:v;
+ /* la parte della scena che si vede davvero (viewBox 800×290, xMidYMax slice): [x sinistra, x destra, y in alto] */
+ const slFinestra=()=>{const r=slSvg.getBoundingClientRect();if(!r.width||!r.height)return [0,800,0];
+  const sc=Math.max(r.width/800,r.height/290),w=r.width/sc,h=r.height/sc;return [Math.max(0,400-w/2),Math.min(800,400+w/2),Math.max(0,290-h)]};
+ /* il giro: x a velocità costante, y su un arco (parabola per 3 punti) che passa davanti alla luna */
+ const slPiano=o=>{
+  const rnd=o.seme!=null?slMulb(o.seme):Math.random,R=(a,b)=>a+rnd()*(b-a);
+  const dir=o.dir===1||o.dir===-1?o.dir:(rnd()<.62?-1:1);
+  const [x0,x1,yv]=slFinestra(),dur=o.durata||R(9,12);
+  const xa=dir<0?x1+112:x0-112,xb=dir<0?x0-112:x1+112;
+  const sc=u=>.8+.14*Math.sin(Math.PI*slClamp(u,0,1));
+  /* punto del disegno che passa sulla luna: verso sinistra la seconda renna, verso destra il conducente */
+  const lp=dir<0?[-48,-15]:[38,-16];
+  let s=1,mx=0;for(let k=0;k<3;k++){mx=SL_LUNA[0]+dir*lp[0]*s;s=sc((mx-xa)/(xb-xa))}
+  /* se lo schermo taglia il cielo in alto (PC basso e largo), l'arco si abbassa quel tanto che basta: le corna restano in vista */
+  const my=Math.max(SL_LUNA[1]-lp[1]*s+R(-3,3),yv+4+46*s),ya=R(98,108),yb=Math.max(R(46,58),yv+4+46*sc(1));
+  const L=(x,a,b,c)=>(x-b)*(x-c)/((a-b)*(a-c));
+  const yx=x=>ya*L(x,xa,mx,xb)+my*L(x,mx,xa,xb)+yb*L(x,xb,xa,mx);
+  let top=1e9;for(let i=0;i<=40;i++){const u=i/40,x=xa+(xb-xa)*u;top=Math.min(top,yx(x)-48*sc(u))}
+  const off=Math.max(0,yv+6-top);
+  const p={dir,dur,xa,xb,sc,yx,off,ph:R(0,6.3),t:0,tLuna:(mx-xa)/(xb-xa)*dur,doni:[]};
+  /* regali: partono quando il pentolone è in vista, cadono con un po' della spinta della slitta */
+  let ua=1,ub=0;for(let i=0;i<=100;i++){const u=i/100,x=xa+(xb-xa)*u-dir*SL_SACCO[0]*sc(u);if(x>x0+14&&x<x1-14){ua=Math.min(ua,u);ub=Math.max(ub,u)}}
+  if(ub>ua){const n=3+Math.floor(rnd()*3),k=[...slDoni.keys()].sort(()=>rnd()-.5);
+   for(let i=0;i<n&&i<slDoni.length;i++){const tr=(ua+(ub-ua)*(.1+.72*(i+R(.15,.85))/n))*dur,q=slPosa(p,tr),c=Math.cos(q.a),si=Math.sin(q.a);
+    const lx=SL_SACCO[0]*-dir*q.s,ly=SL_SACCO[1]*q.s,x=q.x+c*lx-si*ly,y=q.y+si*lx+c*ly;
+    const vy=R(-10,-4),yEnd=Math.min(178,y+115),life=(-vy+Math.sqrt(vy*vy+2*SL_G*(yEnd-y)))/SL_G;
+    p.doni.push({el:slDoni[k[i]],tr,x,y,vx:(xb-xa)/dur*R(.35,.6),vy,yEnd,yF:y+22,life,r0:R(-30,30),w:R(90,200)*(rnd()<.5?-1:1),s:q.s})}}
+  p.fine=Math.max(dur,...p.doni.map(d=>d.tr+d.life))+.05;
+  return p};
+ /* posizione della slitta al tempo t: centro, angolo (radianti), scala, opacità */
+ const slPosa=(p,t)=>{const u=t/p.dur,x=p.xa+(p.xb-p.xa)*u,h=.4,sl=(p.yx(x+h)-p.yx(x-h))/(2*h);
+  return {x,y:p.yx(x)+p.off+2.2*Math.sin(t*3.7+p.ph),a:(slClamp(Math.atan(sl)*57.3,-12,12)+1.3*Math.cos(t*3.7+p.ph))/57.3,s:p.sc(u),o:.62+.32*Math.sin(Math.PI*slClamp(u,0,1))}};
+ const slDisegna=(p,t)=>{const q=slPosa(p,t);
+  const tf=`translate(${q.x.toFixed(1)} ${q.y.toFixed(1)}) rotate(${(q.a*57.3).toFixed(2)}) scale(${(-p.dir*q.s).toFixed(3)} ${q.s.toFixed(3)})`,op=q.o.toFixed(2);
+  slVolo.setAttribute('transform',tf);slVolo.setAttribute('opacity',op);
+  /* la copia in controluce si muove sempre insieme (zampe allineate); la maschera la fa vedere solo sul disco della luna */
+  slVolo2.setAttribute('transform',tf);slVolo2.setAttribute('opacity',op);
+  const d=Math.abs(q.x+p.dir*8*q.s-SL_LUNA[0]),rim=Math.round((.5+.5*Math.exp(-(d/70)*(d/70)))*20)/20;
+  if(rim!==slRimV){slRimV=rim;slG.style.setProperty('--sl-rim',rim)}
+  for(const g of p.doni){const tau=t-g.tr;
+   if(tau<0||tau>g.life){if(g.on){g.on=false;g.el.setAttribute('opacity','0')}continue}
+   g.on=true;const y=g.y+g.vy*tau+.5*SL_G*tau*tau,x=g.x+g.vx*(1-Math.exp(-1.3*tau))/1.3;
+   const a=Math.min(1,tau/.15)*slClamp((g.yEnd-y)/(g.yEnd-g.yF),0,1);
+   g.el.setAttribute('transform',`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(g.r0+g.w*tau).toFixed(1)}) scale(${g.s.toFixed(2)})`);
+   g.el.setAttribute('opacity',a.toFixed(2))}};
+ const slFrame=now=>{slRaf=0;if(!slP)return;slP.t+=Math.min(.05,(now-slLast)/1000);slLast=now;
+  if(slP.t>=slP.fine){slFine();return}slDisegna(slP,slP.t);slRaf=requestAnimationFrame(slFrame)};
+ const slStop=()=>{cancelAnimationFrame(slRaf);slRaf=0;slP=null;slG.classList.remove('sl-on');slDoni.forEach(d=>d.setAttribute('opacity','0'))};
+ const slProgramma=ms=>{clearTimeout(slTo);slAlle=performance.now()+ms;slTo=setTimeout(slTocca,ms)};
+ const slFine=()=>{slStop();if(!slFermo)slProgramma(40000+Math.random()*30000)};
+ const slTocca=()=>{slTo=0;if(slFermo||slP)return;if(document.hidden||!slVista){slAttesa=true;return}slVai()};
+ /* slVai(): parte subito. Prove: slVai({dir:-1|1, seme:7, ferma:0.5|'luna'}) disegna un attimo fermo e spegne i giri automatici */
+ const slVai=(o={})=>{if(slMq.matches)return null;slStop();slP=slPiano(o);slG.classList.add('sl-on');
+  if(o.ferma!=null){slFermo=true;clearTimeout(slTo);slP.t=o.ferma==='luna'?slP.tLuna:o.ferma*slP.dur;slDisegna(slP,slP.t);return slP}
+  slDisegna(slP,0);slLast=performance.now();slRaf=requestAnimationFrame(slFrame);return slP};
+ document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){cancelAnimationFrame(slRaf);slRaf=0;if(slTo){clearTimeout(slTo);slTo=0;slResto=Math.max(0,slAlle-performance.now())}return}
+  if(slResto>=0){slProgramma(slResto);slResto=-1}
+  if(slP&&!slRaf&&!slFermo){slLast=performance.now();slRaf=requestAnimationFrame(slFrame)}
+  if(slAttesa&&slVista){slAttesa=false;slProgramma(1200)}});
+ if('IntersectionObserver' in window)new IntersectionObserver(e=>{slVista=e[e.length-1].isIntersecting;
+  if(slVista&&slAttesa&&!document.hidden){slAttesa=false;slProgramma(1200)}}).observe(slSvg);
+ const slSpegni=()=>{if(slMq.matches){slFermo=true;clearTimeout(slTo);slStop()}};
+ if(slMq.addEventListener)slMq.addEventListener('change',slSpegni);else if(slMq.addListener)slMq.addListener(slSpegni);
+ const slAvvia=()=>slProgramma(6000);
+ if(document.readyState==='complete')slAvvia();else addEventListener('load',slAvvia,{once:true});
+ window.slVai=slVai;
+})();
+
+</script>
+</body></html>
