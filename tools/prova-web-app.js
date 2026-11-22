@@ -81,7 +81,9 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   // Dov'è (C5): ogni scheda degli alloggi, aperta, ha mappa, 3 distanze e 3 bottoni Maps col percorso coi mezzi
   const mappeOk = require('child_process').spawnSync('python3', ['-I', path.join(__dirname, 'fai-mappe-dicembre.py'), '--controlla'], { encoding: 'utf8' });
   ok('mappe: immagini e blocco MAPPE allineati', mappeOk.status === 0); if (mappeOk.status) console.log(mappeOk.stdout);
-  const cMappe = path.join(__dirname, '..', 'dicembre', 'mappe'), pesi = fs.readdirSync(cMappe).filter((f) => f.endsWith('.jpg')).map((f) => fs.statSync(path.join(cMappe, f)).size);
+  const cMappe = path.join(__dirname, '..', 'dicembre', 'mappe'), pesi = fs.readdirSync(cMappe).filter((f) => /^(al|par)-.*\.jpg$/.test(f)).map((f) => fs.statSync(path.join(cMappe, f)).size);
+  const mkOk = require('child_process').spawnSync('python3', ['-I', path.join(__dirname, 'fai-mappa-mercatini.py'), '--controlla'], { encoding: 'utf8' });
+  ok('mappa dei mercatini: immagine, blocco e cassetto senza rete allineati; sotto 260 KB', mkOk.status === 0 && fs.statSync(path.join(cMappe, 'mercatini.jpg')).size < 260 * 1024); if (mkOk.status) console.log(mkOk.stdout);
   ok('mappe: tutte le immagini (27) sotto 100 KB', pesi.length === 27 && pesi.every((x) => x < 100 * 1024));
   const dove = await q.evaluate(async () => {
     const out = [];
@@ -189,6 +191,24 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     // la riga mostra i km del blocco MAPPE (n. 8: 1,9 km), non i km a piedi del giorno (22/11: due funzioni col nome kmT)
     // Mario 22/11 ~11:00 «quanto ci vuole ad arrivare a Disney» e ~11:05 «i chilometri mettili visibili»: n. 8 = 8 min a piedi + 3 RER + 2 + 3 di attesa del treno, e 1,9 km (blocco MAPPE)
     ok('Riga Disney: minuti per arrivare (attese comprese), km piccoli e come; RER a piedi; n. 8 = 16 min, 1,9 km, a piedi + RER', /🏰 Disney\|16 min\|1,9 km · a piedi \+ RER · attese comprese/.test(v.chip) && /🚉 RER\|8 min\|a piedi/.test(v.chip) && v.tuttiChip); if (!/16 min\|1,9 km/.test(v.chip) || !v.tuttiChip) console.log(v.chip);
+    // C15 (Mario 22/11 «una mappa di Parigi con i mercatini … dove sono»): 7 numeri che non si toccano, il tocco apre la tappa, «Ingrandisci» e ✕
+    const mk = await q.evaluate(async () => {
+      const w = () => new Promise((r) => setTimeout(r, 200));
+      document.querySelector('.tabbar button[data-t="giorni"]').click(); await w();
+      const m = document.getElementById('mkMap'); m.scrollIntoView(); await w();
+      const bs = [...m.querySelectorAll('.mk-b')].map((b) => { const r = b.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2, r.width]; });
+      let vicini = 99; for (let i = 0; i < bs.length; i++) for (let j = i + 1; j < bs.length; j++) vicini = Math.min(vicini, Math.hypot(bs[i][0] - bs[j][0], bs[i][1] - bs[j][1]));
+      const top = [...m.querySelectorAll('.mk-b.top')].map((b) => b.dataset.n).join(',');
+      m.querySelector('.mk-b[data-n="6"]').click(); await w();
+      const apre = document.querySelectorAll('.mk-giro>li')[5].querySelector('details').open;
+      m.querySelector('.mk-zoom').click(); await w();
+      const big = m.classList.contains('big') && Math.round(m.querySelector('.mk-box').getBoundingClientRect().width) === 1400 && getComputedStyle(m.querySelector('.mk-x')).display !== 'none';
+      m.querySelector('.mk-x').click(); await w(); await w();
+      const chiusa = !m.classList.contains('big') && !document.documentElement.classList.contains('mk-lock');
+      document.querySelector('.tabbar button[data-t="dormire"]').click(); await w();
+      return { n: bs.length, vicini: Math.round(vicini), w: Math.round(bs[0] ? bs[0][2] : 0), top, apre, big, chiusa, img: m.querySelector('img').getAttribute('src') };
+    });
+    ok('Mappa dei mercatini: 7 numeri che non si toccano (4 con la stella), il tocco sul 6 apre la tappa 6, «Ingrandisci» e ✕', mk.n === 7 && mk.vicini >= mk.w && mk.top === '1,4,6,7' && mk.apre && mk.big && mk.chiusa && /mercatini\.jpg\?v=1$/.test(mk.img)); if (!(mk.n === 7 && mk.vicini >= mk.w && mk.apre && mk.big && mk.chiusa)) console.log(mk);
     const disOk = v.disMin.length > 20 && v.disMin.every((m, i) => i === 0 || m >= v.disMin[i - 1]), srcD = fs.readFileSync(path.join(__dirname, '..', 'dicembre', 'parigi-disney-natale.html'), 'utf8').match(/disney:\(a,b\)=>[^,]*(,[^,]*){0,3}/g) || [];
     ok('«Vicino a Disney» ordina solo per minuti (i km non contano: Mario 22/11 ~11:05)', disOk && srcD.length === 2 && srcD.every((s) => !/km/i.test(s))); if (!disOk || srcD.length !== 2) console.log(v.disMin.join(','), srcD);
     ok('C14: seconda camera a Bussy (Airbnb 15868262) nel riquadro B&B, conteggio «B&B» = righe + 2 camere', v.bb2 && v.bbN === v.bbR + 2); if (!(v.bb2 && v.bbN === v.bbR + 2)) console.log(v.bb2, v.bbN, v.bbR);
