@@ -43,3 +43,7 @@ su questo nostro sito rifai tutto con frontend da 0 solo migliorie»
 - Errore trovato dalle prove: `tyOf` spostata nel primo script non arrivava al secondo (due blocchi separati) → `window.pdnTyOf`; ora le prove scrivono subito gli errori della pagina. Riga in `docs/ERRORI.md`.
 - Confronti v20: `archivio/2026-11-22-c13-v20/`.
 
+## Mario 22/11 ~10:30 (Controllo 4), parole intere
+> Attenzione che se ti va a vedere anche nel posto dove dormire, che lo scegli e ti cambia l'itinerario, insomma ti cambia la pagina, la scelta, ti influisce, quello va mostrato e fatto capire.
+- Fatto in locale (v21): in cima a Dormire riquadro «🔄 La scelta cambia tutta la pagina» (Giorni, Piano, Biglietti); dopo «Scegli questo» (o da «Quanto costa», dal Giorno per giorno, «torna al consiglio») avviso in basso «✓ Scelto: …, cambiati Piano · Giorni · Biglietti» con «Vedi Giorni ›» e «Ok» (sparisce da solo dopo 12 s); pallino giallo sulle schede cambiate finché non si aprono. Evento `pdn:scelta` dal primo script alla barra delle schede. Prova nuova in `prova-web-app.js`.
+
