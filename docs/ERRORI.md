@@ -25,6 +25,7 @@
 | 22/11/2026 | Sul PC una riga netta nel cielo dove inizia il disegno della testata (dalla v30, trovata dalla Controllo 9). | La vignetta scuriva anche il bordo alto del disegno, e sopra non c’era: salto di colore. Foto della v30 solo al telefono. | Vignetta che sfuma verso l’alto (maschera); a ogni cambio della testata anche la foto del PC (1440 e 1920). |
 | 22/11/2026 | Foto di lavoro aperte senza la scritta in alto «DI LAVORO» (E314), anche se Mario le vede. | Script di foto scritti a mano per la sessione, senza il passo della scritta. | Le foto di lavoro le apro solo dopo averci messo la scritta (nello stesso script); per Mario solo confronti di `confronta-foto.py` o immagini con la scritta. |
 | 22/11/2026 | Regali della slitta invisibili dalla v30 (Mario 13:37), prova verde. | Pacchi di 6 px e scuri, lanciati anche dietro il castello; la prova li contava soltanto. | Pacchi grandi e colorati, solo sul cielo libero; prova con misura ed `elementsFromPoint`. Una cosa da vedere si prova se si VEDE, mai solo se c’è (storia in ERRORI-STORIA). |
+| 22/11/2026 | Scritto a Mario «i brillii sono al posto giusto»: letto «birilli» («ma cosa c’entrano i birilli?»). | Parola rara («brillii») che a colpo d’occhio sembra un’altra, scritta senza dire cos’è e senza foto. | A Mario parole comuni e chiare («stelline che luccicano», non «brillii» o «glint»); una cosa nuova si dice insieme alla foto. |
 
 ## Lezioni ereditate da RVC (numeri «RVC E..»)
 - **RVC E1** Si lavora solo in Claude Code. Ogni file ricevuto va subito in `archivio/` con commit.

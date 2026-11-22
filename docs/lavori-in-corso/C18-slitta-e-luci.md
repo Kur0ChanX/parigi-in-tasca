@@ -91,3 +91,7 @@
 
 ## Mario 22/11 dopo l'handoff (risposta alla DOMANDA 1), intero
 > Sì, appena finito le cose che ti ho detto, pubblica.
+
+## Mario 22/11 ~15:5x (Controllo 12), intero
+> Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa c'entrano i birilli, cioè? E tu me lo confermi pure, i birilli sono al posto giusto. Ma i birilli, che cavolo ce ne facciamo? Devono esserci cose attinenti, cioè. Puoi andare tu in una bancarella e vedere dei birilli in vendita. Ti sembra normale? Ma come ragioni? Boh.
+- Equivoco: avevo scritto «brillii» (stelline che luccicano sul castello), letto «birilli». Nelle bancarelle non ci sono birilli: merce appesa = cuori di pan di zenzero, stelle, calze, palline, bastoncini di zucchero. Spiegato a Mario con 2 foto (`archivio/2026-11-22-c18-v33/v33-d1-bancarella.jpg`, `v33-d2-castello-stelline.jpg`); riga in `docs/ERRORI.md`.
