@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (22/11/2026 11:37 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 12:09 ora italiana)
 
-No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto quelli? Perché sono stati tolti? Non andavano bene? Fammi capire.
+Quando parlo di schermata principale intendo questa, che la facciamo diventare un indice per andare direttamente subito nei posti.
