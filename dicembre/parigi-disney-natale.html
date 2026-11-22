@@ -551,10 +551,11 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 .tabbar{display:none}
 body[data-tab]{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
 body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px max(8px,env(safe-area-inset-left,0px)) calc(4px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--rule);box-shadow:0 -8px 24px -16px rgb(0 0 0 / .5)}
-/* C17 · numero della versione in alto (Mario 22/11 «un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato… clicca aggiorna versione») */
-.vnum{transition:opacity .2s;position:fixed;top:calc(8px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));z-index:55;min-height:28px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--mute);font:700 .74rem/1 var(--text);font-variant-numeric:tabular-nums;cursor:pointer}
+/* C17 · numero della versione in alto (Mario 22/11 «un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato… clicca aggiorna versione»); v32: non scende scorrendo, solo in cima alla schermata principale (Mario 12:27 «Il numerino non farlo che scende… lascialo fisso in alto alla schermata principale») */
+.vnum{position:absolute;top:calc(8px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));z-index:55;min-height:28px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--mute);font:700 .74rem/1 var(--text);font-variant-numeric:tabular-nums;cursor:pointer}
 .vnum.nuovo::after{content:"";position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--lamp);box-shadow:0 0 0 2px var(--bg)}
 .vnum.agg{background:var(--lamp);color:var(--lamp-ink);border-color:transparent}
+body[data-tab]:not([data-tab="piano"]) .vnum{display:none}
 .vbox{width:min(30rem,calc(100vw - 32px));max-height:min(80vh,40rem);border:0;border-radius:18px;padding:0;background:var(--surface);color:var(--ink);box-shadow:0 20px 60px -20px rgb(0 0 0 / .6)}
 .vbox::backdrop{background:rgb(0 0 0 / .55)}
 .vbox .vt{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 16px 8px}
@@ -572,8 +573,13 @@ body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display
  /* DOMANDA 1 = 2 (Mario 22/11 ~12:00 «foto 2»): la fila sta IN ALTO, al suo posto prima del giorno, e resta ferma in cima quando scorri; in basso solo la barra delle schede. overflow:clip (non hidden) perché la fila possa restare ferma */
  #giorni{overflow:clip}
  body[data-tab] .daybar{position:sticky;top:0;bottom:auto;margin:0 calc(-1*max(16px,env(safe-area-inset-left,0px))) var(--s5);border-radius:0 0 18px 18px;border-width:0 0 1px;padding-top:calc(6px + env(safe-area-inset-top,0px));padding-bottom:6px;box-shadow:0 10px 24px -14px rgb(0 0 0 / .45)}
- body[data-tab] .daybar .pill{top:calc(6px + env(safe-area-inset-top,0px));bottom:6px}
- body.fila-su .vnum{opacity:0;pointer-events:none}
+ body[data-tab] .daybar .pill{top:calc(4px + env(safe-area-inset-top,0px));bottom:4px}
+ /* v32 (Mario 12:27 «farla più stretta, se no mi mangia troppa pagina»): una riga sola «DOM 13», alta la metà */
+ body[data-tab] .daybar{padding-top:calc(4px + env(safe-area-inset-top,0px));padding-bottom:4px}
+ body[data-tab] .daybar button{min-height:36px;display:flex;align-items:baseline;justify-content:center;gap:4px;padding:2px}
+ body[data-tab] .daybar button .dn{font-size:.66rem}
+ body[data-tab] .daybar button .dd{font-size:1.02rem}
+ body[data-tab] .daybar .today-dot{top:3px;right:4px;width:6px;height:6px}
 }
 .tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:44px;padding:2px;border:0;border-radius:14px;background:none;color:var(--mute);font:700 .7rem/1.1 var(--text);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .tabbar button .i{font-size:1.15rem;line-height:1}
@@ -1872,8 +1878,6 @@ $('#panels').innerHTML=html;
  const rF=$('#rFull'),rS=$('#rShort');rF.addEventListener('click',()=>route(false));rS.addEventListener('click',()=>route(true));if(SHORT)route(true,1)};
 renderDays();
 const bar=$('#daybar');
-/* fila ferma in alto (telefono): il numero della versione si toglie di mezzo per non coprire «Gio 17» */
-{const su=()=>{const r=bar.getBoundingClientRect();document.body.classList.toggle('fila-su',document.body.dataset.tab==='giorni'&&getComputedStyle(bar).position==='sticky'&&r.top<48&&r.bottom>0)};addEventListener('scroll',su,{passive:true});addEventListener('resize',su)}
 bar.insertAdjacentHTML('beforeend',DAYS.map((d,i)=>`<button type="button" role="tab" id="t-${d.id}" aria-controls="p-${d.id}" aria-selected="${i?'false':'true'}" tabindex="${i?'-1':'0'}"><span class="dn">${d.dn}</span><span class="dd">${d.dd}</span></button>`).join(''));
 const tabs=[...bar.querySelectorAll('[role=tab]')],pill=bar.querySelector('.pill'),spark=$('#spark');
 let cur=0;
