@@ -5,8 +5,8 @@
 
 ## Nastro delle versioni
 🚀 Online: v33 · 🟩 Controllo 12 · 22/11 · castello dal disegno di Mario con ombre e stelline, slitta a pezzi (renne, braccia di Jack, Zero), mercatini con neve, lucine e merce vera, guida Disneyland nella schermata principale e nei giorni Disney (PR 34)
-🧪 In prova: —
-⏳ Dopo: v34 · 🟩 Controllo 12 · pagina intera più natalizia (foto a Mario prima)
+🧪 In prova: v34 · 🟩 Controllo 13 · albero dal disegno di Mario colorato e addobbato, Torre Eiffel nuova (piani, traliccio, scintillio), niente sfarfallio all’apertura, Jack passa una volta
+⏳ Dopo: v35 · 🟩 Controllo 13 · pagina intera più natalizia (foto a Mario prima)
 
 ## 0. Aspetta Mario
 - 22/11 · ❓ · 🟩 Controllo 13 · DOMANDA 1: l’albero della testata lo faccio dal tuo disegno (preso da un annuncio Etsy: sul sito pubblico potrebbe non essere permesso) o ne disegno uno nostro nello stesso stile? Scelte: 1 · il tuo disegno · 2 · uno nostro uguale nello stile. Consiglio: 1, come hai chiesto. 📌 Di cosa parliamo: l’albero di Natale nella testata della pagina di dicembre (Mario 22/11 16:29 «Ti mando un albero…»).
@@ -32,8 +32,8 @@
 - 🟩 Controllo 12 · C18 · fatto nella v33, aspetta che Mario lo veda · 👁 Lo vedi: bancarelle con neve spessa e ghiaccioli, lucine colorate sotto la tenda, merce appesa che dondola (cuori di pan di zenzero, stelle, calze, palline, bastoncini); sul banco merce vera (vin brulé, pan di zenzero, candele, alberelli e regali) e lucine sul bordo; stelline che luccicano sulle punte d’oro del castello · prova: foto `archivio/2026-11-22-c18-v33/v33-d1-bancarella.jpg`, `v33-d2-castello-stelline.jpg` mandate, poi sul sito (Mario 22/11 15:02, ~15:5x «birilli» = equivoco)
 - 🟩 Controllo 12 · C18 · 👁 Lo vedi: tutta la pagina di dicembre più natalizia (Parigi, Disney, Natale: lucine sopra i titoli, agrifoglio, fiocchi leggeri sullo sfondo, schede con un filo dorato), nella v34 dopo la v33 · prova: Prima ti mando la foto, e la metto online solo dopo che l’hai vista; poi lettura sul sito (Mario 22/11 ~16:0x «Anche la pagina del web… più stile natalizia»)
 - 🟩 Controllo 12 · C19 · 👁 Lo vedi: nella schermata principale il tasto «Guida Disneyland» e in cima a Lun 14, Mar 15, Mer 16 il riquadro «Apri la guida Disneyland»: aprono la tua app Disneyland già coi giorni del viaggio (14–16 dicembre, 2 persone) · prova: foto a Mario e prova dal suo telefono sul sito (Mario 22/11 ~16:2x)
-- 🟩 Controllo 12 · C18 · 👁 Lo vedi: all’apertura della pagina le luci della testata (Torre Eiffel, festoni, albero, neve) non sfarfallano; Jack passa una volta sola · prova: video a Mario (Mario 22/11 16:29)
-- 🟩 Controllo 12 · C18 · 👁 Lo vedi: l’albero della testata = il tuo disegno, colorato e addobbato con lucine; Torre Eiffel più bella e accesa · prova: foto e video a Mario (Mario 22/11 16:29)
+- 🟩 Controllo 13 · C18 · fatto nella v34 (in prova), aspetta che Mario lo veda · 👁 Lo vedi: all’apertura della pagina le luci della testata (Torre Eiffel, festoni, albero, neve) non sfarfallano; Jack passa una volta sola · prova: video a Mario (Mario 22/11 16:29)
+- 🟩 Controllo 13 · C18 · fatto nella v34 (in prova), aspetta che Mario lo veda · 👁 Lo vedi: l’albero della testata = il tuo disegno, colorato e addobbato con lucine; Torre Eiffel più bella e accesa · prova: `archivio/2026-11-22-c18-albero/v34-c1-telefono.jpg`, `v34-c2-pc.jpg`, `v34-video-albero-torre.mp4` (Mario 22/11 16:29)
 - 🟩 Controllo 12 · C18 · 👁 Lo vedi: le braccia di Jack sulla slitta che ogni tanto salgono e scendono, come se frustasse le renne · prova: le vedrai nel video della slitta (fatte nel codice dalla Controllo 12, giro in corso) (Mario 22/11 dopo l'handoff della Controllo 11)
 - 🟩 Controllo 11 · C18 · 👁 Lo vedi: castello con ombre e volume, colori meno pastello e in armonia con la testata, finestre più luccicanti e brillii; bancarelle con neve sopra, lucine colorate e merce appesa · prova: foto a Mario (Mario 22/11 15:02)
 - 🟩 Controllo 10 · C18 · 👁 Lo vedi: pacchi lanciati più piccoli; testata viva con tante decorazioni, lucine che si accendono nei mercatini; albero ben decorato con tanti pacchi sotto; castello coi colori del castello di Disneyland · prova: foto prima/dopo a Mario (Mario 22/11 ~14:3x)
