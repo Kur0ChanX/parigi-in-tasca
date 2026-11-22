@@ -34,5 +34,5 @@ Visto nella foto (ordine «Vicino a Disney», scheda Hotel): primi n. 30, 11 (na
 - File: `research_notes/…/alloggi_siti_diretti_hotel.md`, `…_bb.md`, `…_case.md`. Esito: **nessun alloggio nuovo valido**. I siti ufficiali delle catene mostrano il prezzo solo con lo script del calendario: non letti. Zenitude Val d'Europe (Chessy, 534 € NR / 585 € su Booking, 8,1) scartato: pulizia 8,4 (< 8,5) e reception 9–19. Chambres d'hôtes vere solo nel paese vecchio di Chessy, 2–4 km dalla RER. Oriane (n. 7) sul sito diretto 520 € (in pagina 518 €): nessun risparmio. ibis (n. 9) su Accor 488 € = prezzo già in pagina.
 - Da fare a mano, se Mario vuole: prezzi sui siti ufficiali con un browser (elenco nei file).
 
-## v18 (in corso, Controllo 2)
+## v18 (ONLINE 22/11, PR #19, Controllo 2)
 - Fatto nella pagina: consiglio = 4 notti Moxy (`MIO_S={n:"",d:8}`, `#mio`, `CK[0]`, `BARS` a 7), n. 31–35, n. 30 a 647 €, camera di Bussy in un riquadro (`#scBB`, visibile con «B&B» e «Tutti»), tasto «Tutti» (predefinito), riga con «🏰 Disney min · km» e «🚉 RER a piedi», «Vicino a Disney» per km (`kmD`, `kmDT`). Prove nuove in `tools/prova-web-app.js` (blocco «v18»).
