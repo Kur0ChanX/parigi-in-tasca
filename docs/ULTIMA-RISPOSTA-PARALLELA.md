@@ -1,12 +1,13 @@
-# Ultima risposta di Claude (22/11/2026 01:37 ora italiana)
+# Ultima risposta di Claude (22/11/2026 10:11 ora italiana)
 
-Ho capito: avvio della Controllo 4. Il lavoro aspetta la tua risposta alla DOMANDA 1.
-
-🛑 **DOMANDA 1** (fatta dalla Controllo 3): ti piace il nuovo aspetto della scheda Dormire? Rispondi col numero: 1 · pubblica e usa lo stesso stile negli altri pezzi · 2 · più corta · 3 · ritocca · 4 · com'era. Le foto sono nella chat della Controllo 3. Quando scrivi, te le rimando qui.
-
-🧠 Continuo con Opus 5.5 · Extra, come la sessione precedente. Fable non serve: c'è solo da seguire un piano già fatto, un pezzo alla volta.
+Ho capito: «va bene» è la scelta 1. Quindi pubblico la v19 e uso lo stesso stile negli altri pezzi della pagina.
+🧠 Opus · Extra
 
 ───
 ✅ **FATTO**
-- Avvio finito. Il ramo è uguale a quello su GitHub.
-- Ho …
+- **v19 online.** L'ho controllata sul sito vero. Dentro ci sono la scheda Dormire più chiara e la camera a Bussy (201 € per 4 notti).
+- **Pezzo 2 in corso.** Il passo «Domenica 13: dove dormite?» ora ha lo stesso stile: barra colorata, prezzo grande, 3 riquadri coi numeri. Le prove stanno girando. Quando finiscono ti mando la foto prima/dopo.
+
+───
+💡 **PARERE**
+- Nel passo 1 le schede sono più alte: sullo schermo entrano 3 hotel invece di 4–5. È lo …

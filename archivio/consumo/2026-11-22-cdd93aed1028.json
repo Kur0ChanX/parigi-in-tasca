@@ -2,10 +2,10 @@
 "account": "108763",
 "sessione": "cdd93aed1028",
 "giorno": "2026-11-22",
-"turni": 1,
+"turni": 2,
 "peso": 255693,
 "uscita": 9523,
-"contesto_max": 100974,
+"contesto_max": 180296,
 "anomalie": [],
 "remota": "01WTjqUuicbA",
 "aiutanti": 0,
@@ -23,5 +23,13 @@
 9523
 ]
 },
-"costo": 0.9097
+"costo": 0.9097,
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"10:11 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Quando finiscono ti mando la foto prima/dopo.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettu"
+]
+}
 }
