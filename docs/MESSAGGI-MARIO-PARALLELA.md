@@ -2,10 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 11:00 · 01WTjqUwtG4z
-Sì, perché alla fine è importante non sono quanti chilometri sono, ma quanto ci mettiamo ad arrivare, ecco.
-Cioè, nel senso, i chilometri mettili visibili, ma non prenderli in considerazione nei filtri. Ecco, qui quando entri dentro la scheda ti deve segnare tutto, sì.
-
 ## 2026-11-22 11:09 · 01WTjqUwtG4z
 Aggiungi in priorità una mappa nell'app, una mappa di Parigi con i mercatini, per farmi capire magari il percorso che dovrei fare, dove sono, insomma, perché non mi è chiaro molto dove sono. Studiatela bene in modo che capisco bene per il mio viaggio, e poi più avanti possiamo integrare che in base a quando all'hotel che scelgo mi fa vedere il tragitto che devo fare, ecco, l'itinerario dalla mattina che mi sveglio, dove vado e faccio il giro senza che sia troppo dispersivo.
 
@@ -144,3 +140,6 @@ ora prosegui con la guida con molta cura
 
 ## 2026-11-22 22:09 · 01QTFEqQQmp8
 andava bene poi invece
+
+## 2026-11-22 22:28 · 01QTFEqSjyGg
+passaggio account salva
