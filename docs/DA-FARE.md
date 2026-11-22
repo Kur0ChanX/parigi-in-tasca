@@ -5,7 +5,7 @@
 
 ## Nastro delle versioni
 🚀 Online: v24 · 🟩 Controllo 6 · 22/11 11:32 · mappa del viaggio
-🧪 In prova: —
+🧪 In prova: v25 · 🟩 Controllo 7 · fila dei giorni di nuovo visibile
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
