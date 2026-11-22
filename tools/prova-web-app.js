@@ -212,6 +212,19 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     });
     const tmOk = !tm.err && tm.zMin === tm.minZ && tm.dentro && tm.lontano[0] === 0 && tm.zGiro >= 13 && tm.vicino[0] === 7 && tm.vicino[1] === 4 && tm.vicino[2] === 6 && tm.alloggi >= 15 && tm.me >= 1 && tm.orly;
     ok('Mappa del viaggio: si apre, non va oltre Orly–Parigi–Disney, da lontano solo i posti grandi, «Mercatini» mostra 7 tappe (4 con la stella), 5 da saltare e il Louvre, «Disney» gli alloggi, «Orly» l\'aeroporto', tmOk); if (!tmOk) console.log(tm);
+    // C16 (Mario 22/11 11:37 «sotto c'era tipo domenica, lunedì… Che fine hanno fatto?»): dalla v17 la barra delle schede copriva la fila dei giorni
+    await q.evaluate(async () => { document.querySelector('.tabbar button[data-t="giorni"]').click(); await new Promise((r) => setTimeout(r, 300)); document.getElementById('giorni').scrollIntoView(); await new Promise((r) => setTimeout(r, 300)); });
+    const fg = await q.evaluate(() => {
+      const d = document.getElementById('daybar').getBoundingClientRect(), t = document.querySelector('.tabbar').getBoundingClientRect();
+      const tasti = [...document.querySelectorAll('#daybar button')].map((x) => { const r = x.getBoundingClientRect(); const e = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2); return !!e && e.closest('#daybar button') === x; });
+      const m = document.querySelector('#daybar button:nth-of-type(4)').getBoundingClientRect();
+      return { tasti, sopra: d.bottom <= t.top + 1 && d.top > innerHeight / 2, x: m.left + m.width / 2, y: m.top + m.height / 2 };
+    });
+    await q.mouse.click(fg.x, fg.y); await q.waitForTimeout(400);
+    fg.mer = await q.evaluate(() => document.querySelector('#daybar button:nth-of-type(4)').getAttribute('aria-selected') === 'true' && !document.querySelectorAll('#giorni [role=tabpanel]:not([hidden])')[1]);
+    await q.evaluate(() => document.querySelector('.tabbar button[data-t="dormire"]').click());
+    const fgOk = fg.tasti.length === 5 && fg.tasti.every(Boolean) && fg.sopra && fg.mer;
+    ok('Fila dei giorni (Dom 13 … Gio 17) visibile e cliccabile sopra la barra delle schede (telefono)', fgOk); if (!fgOk) console.log(fg);
     const disOk = v.disMin.length > 20 && v.disMin.every((m, i) => i === 0 || m >= v.disMin[i - 1]), srcD = fs.readFileSync(path.join(__dirname, '..', 'dicembre', 'parigi-disney-natale.html'), 'utf8').match(/disney:\(a,b\)=>[^,]*(,[^,]*){0,3}/g) || [];
     ok('«Vicino a Disney» ordina solo per minuti (i km non contano: Mario 22/11 ~11:05)', disOk && srcD.length === 2 && srcD.every((s) => !/km/i.test(s))); if (!disOk || srcD.length !== 2) console.log(v.disMin.join(','), srcD);
     ok('C14: seconda camera a Bussy (Airbnb 15868262) nel riquadro B&B, conteggio «B&B» = righe + 2 camere', v.bb2 && v.bbN === v.bbR + 2); if (!(v.bb2 && v.bbN === v.bbR + 2)) console.log(v.bb2, v.bbN, v.bbR);
