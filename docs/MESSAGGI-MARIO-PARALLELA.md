@@ -96,3 +96,15 @@ La slitta falla un pochettino colorata, cioè sembra ancora uno sticker così gr
 Finisci quello che devi finire. E ogni tanto salva perché sta facendo un passaggio di consegna all'altro account. Tu comunque ogni tanto salvi e vai a finire fino a esaurimento token.
 I colori del castello sono troppo slavati, non capisco. Aggiungi delle più animate, lucine che si accendono, che si spengono, un po' più aggiungi dettagli, addobbi, insomma, aggiungere di dettagli, di addobbi e di cose natalizie, ecco.
 Attento, stanno per finire il token, fai il passaggio di consegna, comunque ti do l'ok, qualsiasi ok va bene. Attento che sennò perdiamo file quando facciamo passaggio di consegne, massima priorità.
+
+## 2026-11-22 14:21 · 01Rwcxc4fE4C
+i pacchi falli più piccolini quelli che lancia. Mi raccomando, rendi viva la foto principale con tante decorazioni, lucine che si accendono nei mercatini, rendili vivi. L'albero decoralo bene e fai tanti pacchi sotto.
+
+## 2026-11-22 14:21 · 01Rwcxc4fE4C
+Conta che il castello è il castello di Disneyland, quello dietro.
+
+## 2026-11-22 14:23 · 01Rwcxc4fE4C
+il castello è fatto cosí per prendere spunto tu coloralo e decoralo  come vuoi
+
+## 2026-11-22 14:26 · 01Rwcxc4fE4C
+Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma neanche minimamente.

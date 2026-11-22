@@ -9,8 +9,8 @@
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
-- 22/11 · 🛑 · 🟩 Controllo 10 · Posso pubblicare la v33 sul sito? Il controllo dei permessi ha fermato la copia per la pubblicazione (ramo `versione-v33`): serve il tuo ok scritto in chat («ok pubblica»). Prove verdi in locale. 📌 Senza ok la v33 resta pronta sul ramo e nell'app vedi ancora la v32
-- 22/11 · 👁 · 🟩 Controllo 10 · v33: guarda le 3 foto PRIMA/DOPO e il video della testata (slitta a colori che lancia i regali, castello colorato con neve, ghirlande e lucine, casette in rilievo): ti piace o cambio qualcosa? 📌 File in `archivio/2026-11-22-c18-v33/`
+- 22/11 · 🛑 · 🟩 Controllo 10 · DOMANDA 1: posso pubblicare la v33 sul sito? 📌 Di cosa parliamo: il controllo dei permessi ha fermato la copia per la pubblicazione (ramo `versione-v33`), serve il tuo ok scritto; prove verdi. Scelte: 1 · «ok pubblica», online in ~5 minuti · 2 · aspetta, prima cambio qualcosa nelle foto. Consiglio 1
+- 22/11 · 👁 · 🟩 Controllo 10 · DOMANDA 2: ti piacciono le 3 foto PRIMA/DOPO e il video della v33 (slitta a colori coi regali, castello colorato con neve, ghirlande e lucine, casette in rilievo)? 📌 File in `archivio/2026-11-22-c18-v33/`. Scelte: 1 · sì, così · 2 · castello meno acceso · 3 · altro, dimmi cosa. Consiglio 1
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
@@ -25,6 +25,7 @@
 - 🟩 Controllo 10 · C18 · fatto nella v33, aspetta che Mario lo veda · 👁 Lo vedi: note delle versioni (v30, v32) scritte in modo tecnico e professionale · prova: lettura nell'app (Mario 22/11 ~13:37)
 - 🟩 Controllo 10 · C18 · fatto nella v33, aspetta che Mario lo veda · 🐞 👁 Lo vedi: la slitta passa E lascia cadere i regali sul telefono di Mario (adesso non li lancia) · prova: video a Mario (Mario 22/11 ~13:37)
 - 🟩 Controllo 10 · C18 · fatto nella v33, aspetta che Mario lo veda · 👁 Lo vedi: slitta colorata e meno piatta (dalla sua foto), castello con colori non slavati, più lucine che si accendono e spengono, addobbi natalizi, ombre ed effetto 3D sulle decorazioni, «effetto wow» · prova: foto prima/dopo e video a Mario (Mario 22/11 ~13:37)
+- 🟩 Controllo 10 · C18 · 👁 Lo vedi: pacchi lanciati più piccoli; testata viva con tante decorazioni, lucine che si accendono nei mercatini; albero ben decorato con tanti pacchi sotto; castello coi colori del castello di Disneyland · prova: foto prima/dopo a Mario (Mario 22/11 ~14:3x)
 - ⏳ IN CODA, senza priorità (Mario 22/11 ~12:27 «solo in coda quando non sai più cosa fare»): più fuochi d'artificio nella schermata iniziale, abbellimenti natalizi nell'app
 - 🟩 Controllo 7 · C15 · 👁 Lo vedi: Mappa del viaggio a schermo intero e zoom libero nei due sensi (pizzico avanti e indietro) · prova: foto a Mario (Mario 22/11 ~11:42)
 - 🔺 PRIORITÀ · 🟩 Controllo 6 · C15 · 👁 Lo vedi: v24 nella web app di dicembre, scheda Giorni (o «🗺️ Mappa del viaggio» in alto): mappa che si allarga col dito, chiusa su Orly–Parigi–Disney; tasti Tutto · Mercatini (7 tappe e linea) · Disney · Orly · il vostro alloggio · prova: foto a Mario e Mario la usa sul telefono (Mario 22/11 ~11:09 e ~11:55). Poi, più avanti: tragitto della giornata secondo l'alloggio scelto.
