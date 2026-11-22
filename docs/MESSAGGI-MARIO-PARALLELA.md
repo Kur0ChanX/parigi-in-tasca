@@ -2,15 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 11:20 · 01WTjqUwFBdt
-Sì, me la puoi fare la mappa zoomabile che mi faccia vedere insomma le cose che mi interessano. Zoomabile a livello di Disney, che vedo dove è Disney, dove è l'aeroporto, ecco, il range è quello. Aeroporto, Parigi e Disneyland. E con quel range lì di zoom. Andare oltre non mi serve.
-
-## 2026-11-22 11:27 · 01WTjqUwFBdt
-poi publica tranquillo e finisci il lavoro
-
-## 2026-11-22 11:35 · 01WTjqUwFBdt
-Una domanda, perché mi hai tolto la divisione dei giorni nel calendario sotto? Non andava bene?
-
 ## 2026-11-22 11:37 · 01WTjqUwFBdt
 No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto quelli? Perché sono stati tolti? Non andavano bene? Fammi capire.
 
@@ -143,3 +134,12 @@ passaggio account salva
 
 ## 2026-11-22 23:08 · 01Rwcxc7EAGC
 No, cos'hai capito? Ti ho mandato la chat dell'altra. Ti ho mandato la chat dell'altro account. Adesso voglio continuare qua.
+
+## 2026-11-22 23:09 · 01Rwcxc7EAGC
+Se è tutto verde, pubblica.
+
+## 2026-11-22 23:14 · 01Rwcxc7EAGC
+Dopo sai che cosa devi fare? Sei già informato?
+
+## 2026-11-22 23:15 · 01Rwcxc7EAGC
+Ok, va bene. Ehm, Non solo Moxie, cioè non so se noi dobbiamo prendere quello di Hotel Moxie, più che altro gli altri due che ti avevo detto. Ehm, Te l'avevo segnati. Gli altri due appartamenti, probabilmente andremo lì. Comunque le scelte sono tre, o Moxie o quei due appartamenti che ti ho detto. Quelli con molta cura, l'itinerario e la guida che si basano molto su quelli, che probabilmente sceglieremo quelli.
