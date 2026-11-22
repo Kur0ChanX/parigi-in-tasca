@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (22/11/2026 11:37 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 12:15 ora italiana)
 
-No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto quelli? Perché sono stati tolti? Non andavano bene? Fammi capire.
+Metti che ogni tanto passa questo nel cielo, stai attento bene a non renderlo troppo, cioè a rendere i colori veritieri in base alla scena, a studiarti bene le ombre, la visibilità eccetera, che lui passa e lancia dei regali, dei pacchi regali, come nel film Nightmare Before Christmas. Rendilo un po' in penombra, eccolo, e poi dagli una botta all'immagine generale di tipo un effetto tipo ray tracing, qualcosa del genere, per renderla un pochettino più bella e non piatta, visto che non sai disegnare bene. Aggiungi comunque dettagli, come ti ho già detto, alla schermata principale e in generale poi a tutto il web più natalizio.
