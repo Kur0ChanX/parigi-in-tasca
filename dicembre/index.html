@@ -584,6 +584,48 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
  .side a.ss:hover{color:var(--ink)}
 }
 
+/* C13 pezzo 1 · Dormire più chiaro (Mario 22/11 «differenziare bene … con colori, con font diversi, spaziature»): un colore per tipo
+   (Hotel azzurro, B&B lilla, Case verde acqua) su interruttore e schede; in ogni scheda 3 riquadri coi numeri grandi (Disney, RER, pulizia);
+   sotto il prezzo la differenza sul totale del viaggio. Oro solo per scelto e consiglio, verde/rosso solo per le differenze. */
+:root{--ty-hotel:#8DB6FF;--ty-bb:#D1A6FF;--ty-casa:#55D3C0;--ty-ink:#0A1230}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#0B7568;--ty-ink:#FFFFFF}}
+:root[data-theme="light"]{--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#0B7568;--ty-ink:#FFFFFF}
+[data-ty="hotel"]{--ty:var(--ty-hotel)}[data-ty="bb"]{--ty:var(--ty-bb)}[data-ty="casa"]{--ty:var(--ty-casa)}
+.tyswitch button[data-ty]:not([data-ty="tutti"]){border-color:var(--ty);color:var(--ty)}
+.tyswitch button[aria-pressed="true"]:not([data-ty="tutti"]){background:var(--ty);border-color:var(--ty);color:var(--ty-ink)}
+.tyswitch button[aria-pressed="true"]:not([data-ty="tutti"]) small{color:var(--ty-ink)}
+#scegli .sortbar{display:grid;gap:6px;margin:var(--s3) 0 var(--s2)}
+#scegli .sortbar>.small{font-weight:700}
+#scSort.switch.sort4{display:grid;grid-template-columns:1fr 1fr;width:100%;margin:0}
+@media (min-width:600px){#scSort.switch.sort4{grid-template-columns:repeat(4,1fr)}}
+#sc2{border-top:1px solid var(--rule);padding-top:var(--s4)}
+#scegli .sc-leg{margin:var(--s2) 0 var(--s3);line-height:1.45}
+#scD{gap:12px}
+#scD details.sc-o[data-ty]{box-shadow:inset 6px 0 0 var(--ty)}
+#scD details.sc-o.on[data-ty]{box-shadow:inset 6px 0 0 var(--ty),0 0 0 3px rgb(246 201 100 / .25)}
+#scD details.sc-o>summary{grid-template-columns:30px minmax(0,1fr) auto 12px;gap:4px 10px;padding:12px 14px 14px 18px}
+#scD details.sc-o[data-ty]>summary::before{grid-column:2;grid-row:1;font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
+#scD details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel"}
+#scD details.sc-o[data-ty="bb"]>summary::before{content:"🛏️ B&B · camera"}
+#scD details.sc-o[data-ty="casa"]>summary::before{content:"🏠 Casa"}
+#scD details.sc-o>summary::after{grid-column:4;grid-row:1}
+#scD .sc-o>summary>.nb{grid-column:1;grid-row:1/3;width:30px;height:30px;margin-top:2px}
+#scD details.sc-o[data-ty]>summary>.nb{background:var(--ty);color:var(--ty-ink)}
+#scD .sc-o .sc-n{grid-column:2;grid-row:2;font:800 1.08rem/1.25 var(--display)}
+#scD .sc-o .sc-n small{font-family:var(--text);font-size:.82rem}
+#scD .sc-o .sc-p{grid-column:3;grid-row:1/3;font:800 1.3rem/1.1 var(--display);font-variant-numeric:tabular-nums}
+#scD .sc-o .sc-p small{font-family:var(--text)}
+.sc-p .sc-dt{margin-top:4px;font-weight:600}
+.sc-p .sc-dt.sc-rc{display:inline-block;padding:2px 7px;border-radius:6px;background:var(--lamp);color:var(--lamp-ink);font-weight:800}
+#scD .sc-o .sc-m{grid-column:1/5;grid-row:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:8px}
+#scD .sc-m .sc-k{display:grid;align-content:start;gap:1px;min-width:0;padding:7px 9px 8px;border-radius:12px;background:var(--surface-2)}
+.sc-k>i{font:700 .66rem/1.2 var(--text);font-style:normal;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.sc-k>b{font:800 1.12rem/1.2 var(--display);font-variant-numeric:tabular-nums;color:var(--ink)}
+.sc-k>small{font-size:.74rem;line-height:1.3;color:var(--mute)}
+#scD .sc-m .sc-na{grid-column:1/-1}
+#scD .sc-b{padding:0 14px 14px 18px}
+#scBB .sc-xb{border-left:6px solid var(--ty-bb)}
+
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 
@@ -698,6 +740,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
  <h3 class="sc-step" id="sc2"><span class="nb sm">2</span>L'hotel vicino a Disney</h3>
  <p class="sc-now" id="scNowD"></p>
  <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort4" role="group" aria-label="Ordina per" id="scSort"><button type="button" data-s="prezzo" aria-pressed="true">Meno cari</button><button type="button" data-s="disney" aria-pressed="false">Vicino a Disney</button><button type="button" data-s="rer" aria-pressed="false">Vicino alla RER</button><button type="button" data-s="pulizia" aria-pressed="false">Più puliti</button></div></div>
+ <p class="sc-leg">🏰 minuti fino ai parchi (a piedi e treno, senza attese) e km in linea d'aria · 🚉 minuti fino alla RER · 🧼 pulizia. Sotto il prezzo e accanto ai km, la differenza col mio consiglio: <b class="sc-dn">verde</b> = meglio, <b class="sc-up">rosso</b> = peggio.</p>
  <div class="sc-list" id="scD"></div>
  <div class="sc-x" id="scBB" data-ty="bb">
   <p class="sc-g">Fuori elenco: una camera a Bussy-Saint-Georges</p>
@@ -713,7 +756,6 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
    <div class="sc-act"><a class="btn ghost" href="https://www.booking.com/hotel/fr/jolie-appartement-pres-de-rer-a.it.html?checkin=2026-12-13&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Booking 13→17</a><a class="btn ghost" href="https://www.booking.com/hotel/fr/jolie-appartement-pres-de-rer-a.it.html?checkin=2026-12-14&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Booking 14→17</a></div>
   </div>
  </div>
- <p class="sc-leg">🏰 minuti fino ai parchi (a piedi e treno, senza le attese) e km in linea d'aria · 🚉 minuti a piedi fino alla RER · 🧼 pulizia. Accanto, la differenza col mio consiglio: <b class="sc-up">rosso</b> = peggio, <b class="sc-dn">verde</b> = meglio.</p>
 </div></section>
 
 <div class="lights" data-n="22" aria-hidden="true"></div>
@@ -1442,6 +1484,7 @@ const goPark=(dest,name,tt)=>({t:tt||P.out,ti:"Uscite "+P.da,d:`Obiettivo: esser
 const amSpa=()=>P.am?[{t:"07:00",ti:"Spa dell'hotel",d:P.am}]:[];
 /* lunedì con la notte a Parigi: check-out, RER A con le valigie, valigie nell'alloggio, poi il parco */
 /* riga della scelta: come si arriva alla RER (Mario 22/11 «rer a piedi») */
+const rerK=h=>{const L=DV[h.id][1],w=L.filter(l=>l[0]==='w').reduce((x,l)=>x+l[1],0);if(L.every(l=>l[0]==='w'))return{v:/min/.test(h.ne)?h.ne:w+' min',s:'a piedi'};const t=L.filter(l=>l[0]!=='w');return{v:L.reduce((x,l)=>x+l[1],0)+' min',s:t.map(l=>l[2]==='navetta'?'navetta':'bus').join(' + ')+(w?' + '+w+' min a piedi':'')}};
 const rerT=h=>{const L=DV[h.id][1];if(L.every(l=>l[0]==='w'))return `🚉 RER a piedi ${/min/.test(h.ne)?h.ne:L.reduce((x,l)=>x+l[1],0)+' min'}`;return '🚌 RER: '+L.map(l=>l[0]==='w'?`${l[1]} min a piedi`:`${l[2]==='navetta'?'navetta':'bus'} ${l[1]} min`).join(' + ')};
 const legsDV=d=>DV[d][1].map(l=>l[0]==='w'?["w",`Circa ${l[1]} minuti a piedi ${B.es()}`]:["bus",`${/^\d/.test(l[2])?'Bus '+l[2]:l[2][0].toUpperCase()+l[2].slice(1)}, circa ${l[1]} minuti: orari nell'app Île-de-France Mobilités.`]);
 const monPre=()=>{if(!PN)return[];const m=monB(PN,CHO),st=DV[CHO][0],rec=REC.includes(CHO);
@@ -1737,7 +1780,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
 <div class="sc-act"><button type="button" class="btn gold" id="scShare">Manda questa scelta</button>${mio?'':'<button type="button" class="btn ghost" id="scMio">Torna al mio consiglio</button>'}</div><p class="small" id="scShareOk" role="status"></p></div>`;
   $('#scNowN').innerHTML=`Adesso: <b>${pn?esc(pn.n)+', a Parigi':'già vicino a Disney'}</b>${pn?' · '+fmt(pn.p)+' per 1 notte':''}`;
   $('#scNowD').innerHTML=`Adesso: <b>n. ${SCE.d} ${esc(h0.n)}</b>${c?' · '+fmt(c.q[0])+' per '+(SCE.n?'3 notti, 14→17':'4 notti, 13→17'):''}`;
-  const row=(k,on,off,mk,n,sub,p,ps,m,body)=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${op.includes(k)?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small></span><span class="sc-m">${m}</span></summary><div class="sc-b">${body}</div></details>`;
+  const row=(k,on,off,mk,n,sub,p,ps,m,body,px='')=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${op.includes(k)?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small>${px}</span><span class="sc-m">${m}</span></summary><div class="sc-b">${body}</div></details>`;
   const dot=on=>`<span class="sc-dot" aria-hidden="true">${on?'✓':''}</span>`;
   const nOpt=(o)=>{const s={n:o?o.id:'',d:SCE.d},k=conto(s),on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S);
    const m=(rc?'<span class="sc-rc">★ Il mio consiglio</span>':k&&cm?`<span>Totale${dX(dEur(k.tot,cm.tot))||' uguale'}</span>`:'')+(o?`<span>🚶 ${o.w} min da ${RS[o.st].n}</span><span>🧼 pulizia ${o.cl}</span>`:'<span>🧳 valigie sul treno domenica sera</span>');
@@ -1751,12 +1794,14 @@ ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class
   const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
   const byTot=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:byTot,disney:(a,b)=>(a.c?kmD(a.h.id):1e9)-(b.c?kmD(b.h.id):1e9)||(a.c?a.c.park:1e9)-(b.c?b.c.park:1e9)||byTot(a,b),rer:(a,b)=>!a.c-!b.c||rerMin(a.h)-rerMin(b.h)||byTot(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||byTot(a,b)};
   $('#scD').innerHTML=L.sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
-   const m=c?(rc?'<span class="sc-rc">★ Il mio consiglio</span>':`<span>Totale${dX(dEur(c.tot,cm.tot))||' uguale'}</span>`)+`<span>🏰 Disney ${c.park} min${dX(dMin(c.park,cm.park))} · ${kmDT(h.id)}</span><span>${rerT(h)}</span><span>🧼 ${h.cl}</span>`:h.ab?'<span>Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span>Esaurito per queste notti</span>';
+   const rk=c?rerK(h):null,c5=/\/5/.test(h.cl);
+   const m=c?`<span class="sc-k"><i>🏰 Disney</i><b>${c.park} min</b><small>${kmDT(h.id)}${dX(dMin(c.park,cm.park))}</small></span><span class="sc-k"><i>🚉 RER</i><b>${rk.v}</b><small>${rk.s}</small></span><span class="sc-k"><i>🧼 Pulizia</i><b>${esc(h.cl.replace('/5',''))}</b><small>${/\d/.test(h.cl)?(c5?'su 5 · Airbnb':'su 10'):'non letta'}</small></span>`:h.ab?'<span class="sc-na">Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span class="sc-na">Esaurito per queste notti</span>';
+   const px=c?(rc?'<small class="sc-dt sc-rc">★ consiglio</small>':`<small class="sc-dt">totale ${dEur(c.tot,cm.tot)}</small>`):'';
    return row('d-'+h.id,on,!c,`<span class="nb sm">${h.id}</span>`,esc(h.n),esc(h.sub),c?fmt(c.q[0]):h.ab?'dal 14':'?',SCE.n?'3 notti':'4 notti',m,
 `<p class="small muted">${c?esc(c.q[1]):h.ab?'Su Airbnb 13→17 non è disponibile (21/11/2026): libero solo dal 14, va bene se domenica dormite a Parigi.':'Prezzo per queste notti non disponibile (esaurito su Booking).'}</p>
 ${c?`<p class="small">Totale del viaggio ≈ ${fmt(c.tot)}${rc?'':' ('+dEur(c.tot,cm.tot)+' rispetto al consiglio)'}. Ai parchi ${c.park} min${c.nav?' + attesa della navetta':''} ogni mattina; a piedi ${c.walk} min al giorno, circa ${kmT(c.walk)}. Voto ${h.ab?'Airbnb ':''}${h.sc}.</p>`:''}
 <div class="pc"><p class="p">${h.pro}</p><p class="c">${h.con}${sp?' Con la domenica a Parigi la spa quasi non la usate: chiude alle 22:00, come i parchi.':''}${SCE.n&&!REC.includes(h.id)&&!h.ab?' Lunedì mattina le valigie: da chiedere al gestore, oppure deposito della stazione di Chessy.':''}</p></div>
-<div class="sc-act">${c?btn(s,on):''}<a class="btn ghost" href="#al-${h.id}">Scheda</a></div>`)}).join('');
+<div class="sc-act">${c?btn(s,on):''}<a class="btn ghost" href="#al-${h.id}">Scheda</a></div>`,px)}).join('');
   document.querySelectorAll('#scSort button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===SO2)))}
  /* una riga aperta per lista: le altre si chiudono e la riga toccata resta ferma sotto il dito */
  $('#scegli').addEventListener('toggle',e=>{const d=e.target;if(!d.open||!d.dataset||!d.dataset.k)return;const box=d.closest('#scN,#scD');if(!box)return;
