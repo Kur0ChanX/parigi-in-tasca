@@ -9,6 +9,7 @@
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
+- 22/11 · ❓ · 🟩 Controllo 6 · DOMANDA 1: foto della scheda Giorni dove manca «la divisione dei giorni nel calendario sotto» (Mario 22/11 ~11:35). 📌 Di cosa parliamo: nelle prove della v24 i tasti Dom 13 … Gio 17 ci sono, prima e dopo la mappa; serve la foto per capire quale parte manca sul suo telefono.
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
