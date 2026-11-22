@@ -412,6 +412,20 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     ok('Numero della versione in alto (v' + sito + ' = versione.json), novità al tocco, «Aggiorna versione» solo con una versione più nuova e ricarica la pagina', vOk); if (!vOk) console.log({ v0, box0, v1, aggVisto, ricaricata });
     await c3.close();
   }
+  // C18: la slitta passa da sola dopo 5 s (nel cielo, coi pacchi); con «riduci movimento» non parte; giovedì 17 col riquadro «Partite prima»
+  {
+    const mk = async (rm) => { const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block', reducedMotion: rm }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); }); await r.goto(B + 'dicembre/'); return [c, r]; };
+    const [c4, r4] = await mk('no-preference'), [c5, r5] = await mk('reduce');
+    await r4.waitForTimeout(5800);
+    const parte = await r4.evaluate(() => { const s = document.getElementById('slitta'); return s.style.display !== 'none' && /translate/.test(s.getAttribute('transform') || ''); });
+    const ferma = await r5.evaluate(() => document.getElementById('slitta').style.display === 'none' && !document.querySelector('#pacchi g'));
+    const vista = await r4.evaluate(() => { const n = window.slittaProva(.5, -1, 66), s = document.getElementById('slitta').getBoundingClientRect(), c = document.querySelector('.scene').getBoundingClientRect(), x = s.left + s.width / 2, y = s.top + s.height / 2;
+      return { n, dentro: x > c.left && x < c.right && y > c.top && y < c.top + c.height * .6, largo: Math.round(s.width) }; });
+    ok('Slitta: parte da sola, passa nel cielo della testata (' + vista.largo + ' px) coi pacchi che cadono (' + vista.n + '); con «riduci movimento» resta ferma', parte && ferma && vista.n >= 1 && vista.dentro && vista.largo > 60 && vista.largo < 260);
+    const gio = await r4.evaluate(() => { const p = document.getElementById('p-gio'), c = p && p.querySelector('.callout-presto'); return { c: !!c && /Partite prima/.test(c.textContent) && /2 ore e mezza/.test(c.textContent), t: !!p && /Ultimo treno sicuro:<\/b> (8:47 da Val d'Europe|8:44 da Chessy)/.test(p.innerHTML) }; });
+    ok('Giovedì 17: riquadro «Partite prima» in cima e ultimo treno sicuro 8:47 (8:44 da Chessy)', gio.c && gio.t);
+    await c4.close(); await c5.close();
+  }
   await b.close(); server.kill(); fs.unlinkSync(path.join(DIR, 'parigi-in-tasca')); fs.rmdirSync(DIR);
   process.exit(falsi ? 1 : 0);
 })().catch((e) => { console.error(e); server.kill(); process.exit(1); });
