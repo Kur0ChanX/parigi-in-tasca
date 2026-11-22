@@ -51,3 +51,22 @@ Una domanda, perché mi hai tolto la divisione dei giorni nel calendario sotto? 
 
 ## 2026-11-22 11:37 · 01WTjqUwFBdt
 No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto quelli? Perché sono stati tolti? Non andavano bene? Fammi capire.
+
+## 2026-11-22 11:49 · 01WTjqUxPidP
+Vedi qua la foto è coperta, l'immagine.
+
+## 2026-11-22 11:52 · 01WTjqUxPidP
+Conta che vabbè, la giornata di priorità di curare i dettagli è quella a Parigi, poi vabbè, quella di Disneyland, sì, andare tornare nell'alloggio, quella di Disneyland, niente di che, e poi ritornare alla fine ritornare in aeroporto con... rispettare gli orari per arrivare in anticipo, lì calcolare i trasporti con un po' di orario extra, non troppo preciso, cioè se segnalamelo di andare prima, quanto ci vuole ad arrivare lì per non perdere il volo, ecco, se ci sono da prendere i bagagli e quant'altro, eccetera eccetera.
+Ok, vai avanti da solo e mi fido di te, non c'è bisogno che ti autorizzo.
+Mi raccomando, con l'indice in alto, con i tasti, eccetera. E gli shortcut. Non eliminare cose, visto che ti sto facendo andare da solo. Cerca solo di gestire le priorità delle cose da guardare. Vabbè, che ci sia tutto, però a colpo d'occhio, ecco. Poi se entri lì dentro, entri in quello che ti serve, hai più dettagli.
+Non riesco a capire mai che versione ho nell'app. Mettiamo un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato, come abbiamo sempre fatto noi nei progetti.
+Se una persona ha un numero indietro e sta guardando un numero indietro, scelta una versione nuova, clicca aggiorna versione, clicca e gliela aggiorna.
+Mettiamo quella a sinistra, quella sotto.
+
+## 2026-11-22 12:00 · 01WTjqUxPidP
+No, facciamo quella che consigli tu, scusa, foto 2, scusa.
+Per quello ti dico, vai avanti da solo, tanto ascolta sempre i tuoi consigli, vai avanti da solo.
+Vai avanti da solo e stai attento solo alle domande molto vecchie che mi avevi fatto. Magari le domande vecchie dovrò risponderti, ma quelle nuove so che mi farai, so già che sei al passo con l'app e ti faccio scegliere, ecco. Se sono domande molto importanti ti fermi.
+
+## 2026-11-22 12:04 · 01WTjqUxPidP
+Vedi qua che l'indice, mettimi gli shortcut, anche giro di mercatini più piccoli, notte, vin brûlée più piccole, insomma regola bene gli spazi, mettimi l'indice delle cose più importanti. I tasti sotto devono occupare meno spazio, insomma tutti gli spazi ottimizzati bene, non farmi coprire troppo la pagina, ecco, la pagina da vedere.

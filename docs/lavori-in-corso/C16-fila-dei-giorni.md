@@ -14,3 +14,4 @@
 
 ## Dopo la v25
 - Mario 22/11 (foto col cerchio sul disegno delle casette): «Vedi qua la foto è coperta, l'immagine.» → DOMANDA 1 con 2 proposte (1 fila più sottile in basso, 2 fila in alto ferma scorrendo, consiglio 2; CSS provato con Playwright: in alto resta a 0 scorrendo, serve `#giorni{overflow:clip}`).
+- Mario 22/11 ~12:00 (intero): «No, facciamo quella che consigli tu, scusa, foto 2, scusa. Per quello ti dico, vai avanti da solo, tanto ascolta sempre i tuoi consigli, vai avanti da solo. Vai avanti da solo e stai attento solo alle domande molto vecchie che mi avevi fatto. Magari le domande vecchie dovrò risponderti, ma quelle nuove so che mi farai, so già che sei al passo con l'app e ti faccio scegliere, ecco. Se sono domande molto importanti ti fermi.» → DOMANDA 1 = 2: fila in alto, ferma scorrendo (v27). Da ora: domande nuove decise da me col mio consiglio (dette a Mario), mi fermo solo per quelle molto importanti.
