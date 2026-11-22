@@ -1,0 +1,22 @@
+{
+"account": "cba507",
+"sessione": "0a71158c7690",
+"giorno": "2026-11-22",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 237854,
+"anomalie": [],
+"blocchi": {
+"Stop 11 · 📸 Foto o video di": 1
+},
+"esempi_blocchi": {
+"Stop 11 · 📸 Foto o video di": [
+"14:15 · 📸 Foto o video di questa sessione in archivio/, non mandati a Mario e senza riga in «## 0. Aspetta Mario» (C516, E498): archivio/2026-11-22-c18-slitta/ (1 file). Per Mario → mandali ORA con la domanda"
+]
+},
+"remota": "01Rwcxc4fE4C",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
