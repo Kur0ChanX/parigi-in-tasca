@@ -4,17 +4,18 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v33 · 🟩 Controllo 12 · 22/11 · castello dal disegno di Mario con ombre e stelline, slitta a pezzi (renne, braccia di Jack, Zero), mercatini con neve, lucine e merce vera, guida Disneyland nella schermata principale e nei giorni Disney (PR 34)
-🧪 In prova: v34 · 🟩 Controllo 13 · albero dal disegno di Mario colorato e addobbato, Torre Eiffel nuova (piani, traliccio, scintillio), niente sfarfallio all’apertura, Jack passa una volta
-⏳ Dopo: v35 · 🟩 Controllo 13 · pagina intera più natalizia (foto a Mario prima)
+🚀 Online: v34 · 🟩 Controllo 14 · 22/11 17:20 · albero dal disegno colorato e addobbato, Torre Eiffel nuova (piani, traliccio, scintillio), niente sfarfallio all’apertura
+🧪 In prova: —
+⏳ Dopo: v36 · 🟩 Controllo 14 · pagina più natalizia (foto a Mario prima)
 
 ## 0. Aspetta Mario
-- 22/11 · 🛑 · 🟩 Controllo 13 · DOMANDA 2: metto online la v34 (albero dal tuo disegno colorato e addobbato, Torre Eiffel nuova coi piani e lo scintillio, niente luci che sfarfallano all’apertura, Jack passa una volta)? Scelte: 1 · sì, pubblica · 2 · prima ritocca (dimmi cosa). Consiglio: 1. 📌 Di cosa parliamo: la testata della pagina di dicembre sul sito; foto `archivio/2026-11-22-c18-albero/v34-c1-telefono.jpg`, `v34-c2-pc.jpg`, video `v34-video-albero-torre.mp4`. Serve perché il tuo «pubblica» valeva per la v33: la v34 è pronta e provata, aspetta solo il tuo sì.
 - 22/11 · ❓ · 🟩 Controllo 13 · DOMANDA 1: l’albero della testata lo faccio dal tuo disegno (preso da un annuncio Etsy: sul sito pubblico potrebbe non essere permesso) o ne disegno uno nostro nello stesso stile? Scelte: 1 · il tuo disegno · 2 · uno nostro uguale nello stile. Consiglio: 1, come hai chiesto. 📌 Di cosa parliamo: l’albero di Natale nella testata della pagina di dicembre (Mario 22/11 16:29 «Ti mando un albero…»).
 - 22/11 · 🟨 Controllo 12 · guarda la v33 sul telefono (se c’è ancora «v32»: numerino → «Aggiorna versione») e tocca «Guida Disneyland»: parte dal 14 dicembre? Scrivi cosa vedi, anche «ok». 📌 Serve a chiudere le voci «👁» della v33 e a sapere se il link della guida è giusto sul telefono vero.
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
+- 🟩 Controllo 14 · C20 · 👁 Lo vedi: nella pagina di dicembre («Scegli» passo 2 e «Dormire») il tasto «🙈 Nascondi» su ogni alloggio, dopo il tocco «Annulla» per 7 secondi in basso, e «🧹 Pulisci l’elenco» con le spunte; i nascosti restano dopo l’aggiornamento · prova: foto di Mario dal sito vero dopo la v35.
+- 🟩 Controllo 14 · C20 · 👁 Lo vedi: nei n. 16 e 23 (passo 2 di «Scegli» e «Dormire») la tendina «📋 Tutto sul n.» con soldi, arrivo, casa, spesa e il messaggio pronto per il gestore col tasto «Copia»; in «Dormire» il filtro «⭐ La vostra rosa» · prova: foto di Mario dal sito vero.
 - 🐞 · 🟩 Controllo 7 · Prova «dicembre: service worker suo» instabile: rossa ~1 volta su 5 anche sulla v27 (provato 22/11 12:10, 5 giri da sola); a volte la pagina di dicembre resta comandata dal service worker di novembre. Capire la causa vera (installazione di quello di dicembre? tempi?) e se sul telefono la pagina di dicembre senza rete ne soffre.
 - 🟩 Controllo 7 · 👁 Lo vedi: nella scheda Giorni la fila dei giorni IN ALTO, ferma quando scorri (DOMANDA 1 = 2, Mario ~12:00) (Dom 13 … Gio 17, apre l'itinerario del giorno) di nuovo visibile sopra la barra delle schede · prova: foto a Mario (Mario 22/11 ~11:37 «sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto?»). Causa trovata dalla Controllo 6: `#daybar` (fissa, z 30, alta 56, top 853 a 412×915) sta SOTTO `#tabbar` (fissa, z 60, top 846): coperta già nella v23, non dalla mappa.
 - 🟩 Controllo 7 · 👁 Lo vedi: nella schermata principale i tasti di tutte le cose fondamentali, le cose che servono di più (Mappa compresa), visibili subito aprendo l'app · prova: foto a Mario (Mario 22/11 ~11:45)
