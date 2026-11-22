@@ -3,7 +3,7 @@
 ## Stato (Controllo 14 sull'ALTRO account, `session_01QTFEqRq6KHUZyj1XNVa82p`, 22/11 ~18:00 ora italiana; la Controllo 14 del primo account, `session_01Rwcxc7EAGCUGyWhBTz3aWr`, era ferma al limite delle 5 ore fino alle 18:50)
 - Mario 22/11 17:11: «Cerca di non creare conflitti con l'altro account… quando andrò nell'altro account lui vedrà il lavoro che hai fatto e si adatta». Quindi: **nessuna sessione nuova**; la catena continua nella Controllo 14 del primo account, che rilegge queste righe. Numero della catena invariato (14).
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso, nessuna PR aperta della catena.
-- **v35 ONLINE** (PR 36; verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 35}`). Dentro anche la v34 (PR 35: albero dal disegno, Torre Eiffel nuova): la DOMANDA 2 della Controllo 13 è risposta («sì, pubblica»).
+- **v36 ONLINE** (PR 37; verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 36}`): n. 23 col prezzo Booking 461 € (anche nei totali). v35 = PR 36. Dentro anche la v34 (PR 35: albero dal disegno, Torre Eiffel nuova): la DOMANDA 2 della Controllo 13 è risposta («sì, pubblica»).
 - **Già deciso da Mario (non richiedere):** pubblicare v34 e v35; i due alloggi della rosa sono il **n. 16** (Airbnb 5115238) e il **n. 23** (Airbnb 1376052056754954936); il n. 23 su Booking costa 461 € (letto da lui).
 - **Kit RVC:** Mario dice di aver messo la chiave del ponte nell'ambiente, ma in questo contenitore `RVC_KIT_TOKEN` non c'è (`python3 -I tools/scarica-kit.py --versione` → esito 2). Riprovare nella Controllo 14 del primo account (o in una sessione aperta dopo aver salvato la chiave).
 - **Da non rifare:** C20 (Nascondi, «Tutto sul n.», filtro rosa: già online); la ricerca del n. 23 su Booking (una ricerca a vuoto: chiedere il link a Mario).
@@ -23,7 +23,7 @@
 - Video dal sorgente: icone storte → video dalla pagina vera `dicembre/`.
 
 ## Prossimi passi
-1. Rileggere `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md` (C20 è fatto: non rifarlo). Se Mario manda il link Booking del n. 23: leggere la cancellazione e aggiornare la tendina (oggi «letto da voi»).
+1. Rileggere `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md` (C20 è fatto: non rifarlo). DOMANDA 1 in «Aspetta Mario» (alloggi spenti n. 18, 20, 21: consiglio «in fondo, in un gruppo Liberi solo dal 14»): alla risposta, foto prima di pubblicare.
 2. Promesse 👁 della v34 e della v35 in `docs/DA-FARE.md`: si chiudono solo con la foto di Mario dal sito vero.
 3. Pagina intera più natalizia (v36): PRIMA una foto di prova a Mario (lucine sopra i titoli, agrifoglio, fiocchi leggeri, schede con un filo dorato), online solo dopo che la vede.
 4. Poi: C17 resto, orario RER A (~26/11), prova del service worker instabile 🐞, fuochi.

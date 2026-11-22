@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v35 · 🟩 Controllo 14 · 22/11 17:41 · «Nascondi» sugli alloggi, n. 16 e 23 con «Tutto sul n.» e messaggio per il gestore, filtro «La vostra rosa»
+🚀 Online: v36 · 🟩 Controllo 14 · 22/11 17:55 · n. 23 col prezzo Booking 461 €, link, indirizzo, asciugamani
 🧪 In prova: —
 ⏳ Dopo: v36 · 🟩 Controllo 14 · pagina più natalizia (foto a Mario prima)
 
