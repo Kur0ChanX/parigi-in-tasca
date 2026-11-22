@@ -26,6 +26,7 @@
 | 22/11/2026 | Regali della slitta invisibili dalla v30 (Mario 13:37), prova verde. | Pacchi di 6 px e scuri, lanciati anche dietro il castello; la prova li contava soltanto. | Pacchi grandi e colorati, solo sul cielo libero; prova con misura ed `elementsFromPoint`. Una cosa da vedere si prova se si VEDE, mai solo se c’è (storia in ERRORI-STORIA). |
 | 22/11/2026 | «brillii» letto «birilli» da Mario. | Parola rara, senza foto. | A Mario parole comuni («stelline che luccicano») e la foto insieme. |
 | 22/11/2026 | Prova dei pacchi rossa 1 volta su 8, pagina giusta. | Contava il bagliore del castello (`cglow`, luce) come «copre». | La prova salta i bagliori; una rossa a caso si rifà 8 volte prima di cercare il colpevole. |
+| 22/11/2026 | Luci della testata che sfarfallano all’apertura (Mario, video v33). | Animazioni con ritardo positivo: prima di partire la luce resta accesa piena, poi scatta. | Ritardi sempre negativi; prova «nessuna luce parte in ritardo» su tutta la testata. |
 
 ## Lezioni ereditate da RVC (numeri «RVC E..»)
 - **RVC E1** Si lavora solo in Claude Code. Ogni file ricevuto va subito in `archivio/` con commit.
