@@ -558,11 +558,11 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 }
 
 /* C13 pezzo 1 · Dormire più chiaro (Mario 22/11 «differenziare bene … con colori, con font diversi, spaziature»): un colore per tipo
-   (Hotel azzurro, B&B lilla, Case verde acqua) su interruttore e schede; in ogni scheda 3 riquadri coi numeri grandi (Disney, RER, pulizia);
+   (Hotel azzurro, B&B lilla, Case ciano: prima verde acqua, troppo vicino al verde di «meglio» e dei biglietti, Mario 22/11 «i colori non hanno un conflitto?») su interruttore e schede; in ogni scheda 3 riquadri coi numeri grandi (Disney, RER, pulizia);
    sotto il prezzo la differenza sul totale del viaggio. Oro solo per scelto e consiglio, verde/rosso solo per le differenze. */
-:root{--ty-disney:#FF8AD0;--ty-hotel:#8DB6FF;--ty-bb:#D1A6FF;--ty-casa:#55D3C0;--ty-ink:#0A1230}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ty-disney:#A8236F;--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#0B7568;--ty-ink:#FFFFFF}}
-:root[data-theme="light"]{--ty-disney:#A8236F;--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#0B7568;--ty-ink:#FFFFFF}
+:root{--ty-disney:#FF8AD0;--ty-hotel:#8DB6FF;--ty-bb:#D1A6FF;--ty-casa:#92EEFE;--ty-ink:#0A1230}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--ty-disney:#A8236F;--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#005A70;--ty-ink:#FFFFFF}}
+:root[data-theme="light"]{--ty-disney:#A8236F;--ty-hotel:#2556B8;--ty-bb:#7442C2;--ty-casa:#005A70;--ty-ink:#FFFFFF}
 [data-ty="hotel"]{--ty:var(--ty-hotel)}[data-ty="disney"]{--ty:var(--ty-disney)}[data-ty="bb"]{--ty:var(--ty-bb)}[data-ty="casa"]{--ty:var(--ty-casa)}
 .tyswitch button[data-ty]:not([data-ty="tutti"]){border-color:var(--ty);color:var(--ty)}
 .tyswitch button[aria-pressed="true"]:not([data-ty="tutti"]){background:var(--ty);border-color:var(--ty);color:var(--ty-ink)}
@@ -604,17 +604,18 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 #scN details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel a Parigi"}
 #scN details.sc-o[data-ty="dis"]>summary::before{content:"🏰 Domenica già a Disney"}
 #scN .sc-o>summary>.sc-dot{grid-column:1;grid-row:1/3;margin-top:4px}
-/* C13 pezzo 3 · Piano, «Quanto costa»: ogni strada è una scheda col colore del suo alloggio, come in Dormire; hotel e pacchetti Disney rosa (Mario 22/11 10:18 «differenzia con un altro colore gli hotel Disney») */
+/* C13 pezzo 3 · Piano, «Quanto costa»: ogni strada è una scheda; il tipo d'alloggio è scritto (icona e parola) ma SENZA il suo colore: qui i colori sono solo quelli della legenda (alloggio, biglietti, pacchetto, trasporti), Mario 22/11 «non va in conflitto con la leggenda?» */
 #bars{gap:12px}
-#bars>a.bar-row{margin:0;padding:12px 14px 12px 18px;border:2px solid var(--rule);border-radius:var(--r-lg);box-shadow:inset 6px 0 0 var(--ty)}
-#bars>a.bar-row.is-me{outline:0;border-color:var(--lamp);box-shadow:inset 6px 0 0 var(--ty),0 0 0 3px rgb(246 201 100 / .25)}
-.bar-ty{font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
+#bars>a.bar-row{margin:0;padding:12px 14px;border:2px solid var(--rule);border-radius:var(--r-lg)}
+#bars>a.bar-row.is-me{outline:0;border-color:var(--lamp);box-shadow:0 0 0 3px rgb(246 201 100 / .25)}
+.bar-ty{font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 /* La scelta dell'alloggio cambia tutta la pagina e si vede (Mario 22/11 «va mostrato e fatto capire»): riquadro prima di scegliere, avviso in basso dopo, pallino giallo sulle schede aggiornate */
 .sc-tutto{margin:var(--s3) 0 0;padding:10px 12px 11px 14px;border-radius:var(--r-md);background:var(--surface-2);box-shadow:inset 4px 0 0 var(--lamp);font-size:.93rem;line-height:1.45}
 .sc-avviso{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:61;display:grid;gap:4px;max-width:520px;margin:0 auto;padding:12px 14px;border:2px solid var(--lamp);border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:0 10px 30px rgb(0 0 0 / .45);font-size:.9rem;line-height:1.4}
 .sc-avviso[hidden]{display:none}
 .sc-avviso b{font:800 1rem/1.3 var(--display)}
-.sc-avviso div{display:flex;gap:8px;margin-top:6px}
+.sc-avviso div{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.sc-avviso button[hidden]{display:none}
 .sc-avviso button{min-height:42px;padding:6px 14px;border-radius:10px;border:2px solid var(--lamp);background:none;color:var(--ink);font:800 .9rem/1 var(--text)}
 .sc-avviso button.vai{background:var(--lamp);color:var(--lamp-ink)}
 .tabbar button.nuovo{position:relative}
@@ -1772,12 +1773,14 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
   if(tx)tx.innerHTML=isMio()?`${esc(CK[0][1])}<small>${esc(CK[0][2])}</small>`:`${esc(PN?'Prenotate le due notti nella vostra app':'Prenotate il n. '+CHO+' '+h.n+' nella vostra app')}<small>${esc(c?(PN?`${PN.n}, 13→14 dicembre: ${fmt(PN.p)}. ${strip(PN.pl)} Poi n. ${CHO} ${h.n}, 14→17 dicembre: ${fmt(c.q[0])}, ${c.q[1]}.`:`${fmt(c.q[0])}, ${c.q[1]}. Date 13→17 dicembre, 2 adulti.`):strip(h.pl))}</small>`;
   drawBars();renderSc();
   RC[1]=isMio()?RC1:h.ab?[`Prezzo del n. ${CHO} in euro`,"Prezzo letto in euro su airbnb.it il 21/11, tutto incluso: può cambiare.",PN?h.u:AB(h.u.match(/rooms\/(\d+)/)[1],13),`N. ${CHO} su Airbnb`]:[`Prezzo del n. ${CHO} con Genius`,"Il prezzo visto è quello da computer senza login.",h.u,h.ul?"Sito ufficiale":`N. ${CHO} su Booking`];drawRC()};
- const applySc=(s,say)=>{if(!s||!ACC[s.d])return;const prima=scStr(SCE);SCE={n:s.n,d:s.d};SCELTO=true;CHO=s.d;P=ACC[CHO];PN=PAR.find(p=>p.id===s.n)||null;
-  try{localStorage.setItem('pdn-scelta',scStr(SCE));localStorage.removeItem('pdn-alloggio')}catch(e){}
-  try{const u=new URL(location.href);u.searchParams.delete('alloggio');u.searchParams.set('scelta',scStr(SCE));history.replaceState(null,'',u)}catch(e){}
+ let ANN=null; /* «↩ Annulla» nell'avviso (Mario 22/11 «se uno sceglie perché per sbaglio ci clicca, che lo può annullare»): la scelta di prima e se era scelta davvero o solo il mio consiglio */
+ const applySc=(s,say,sc=true)=>{if(!s||!ACC[s.d])return;const prima=scStr(SCE),pS={n:SCE.n,d:SCE.d},pT=SCELTO;SCE={n:s.n,d:s.d};SCELTO=sc;CHO=s.d;P=ACC[CHO];PN=PAR.find(p=>p.id===s.n)||null;
+  try{if(sc)localStorage.setItem('pdn-scelta',scStr(SCE));else localStorage.removeItem('pdn-scelta');localStorage.removeItem('pdn-alloggio')}catch(e){}
+  try{const u=new URL(location.href);u.searchParams.delete('alloggio');if(sc)u.searchParams.set('scelta',scStr(SCE));else u.searchParams.delete('scelta');history.replaceState(null,'',u)}catch(e){}
   renderDays();show(cur,{quiet:true});renderAl();paint();mkAl();
   if(say)$('#chNote').insertAdjacentHTML('beforeend',' <b>Pagina aggiornata.</b>');
-  if(say&&prima!==scStr(SCE))document.dispatchEvent(new CustomEvent('pdn:scelta',{detail:scName(SCE)}))}; /* lo ascolta la barra delle schede: avviso e pallini «aggiornato» */
+  if(say&&prima!==scStr(SCE)){ANN={s:pS,t:pT};document.dispatchEvent(new CustomEvent('pdn:scelta',{detail:{nome:scName(SCE),prima:scName(pS)+(pT?'':' (il mio consiglio)')}}))}}; /* lo ascolta la barra delle schede: avviso e pallini «aggiornato» */
+ document.addEventListener('pdn:annulla',()=>{if(!ANN)return;const a=ANN;ANN=null;applySc(a.s,0,a.t)}); /* dal bottone «↩ Annulla» dell'avviso: torna com'era, senza avviso nuovo */
  const applyAl=(id,say)=>applySc({n:SCE.n,d:id},say);
  sp.addEventListener('change',()=>applySc({n:sp.value,d:SCE.d},1));
  $('#backMio').addEventListener('click',()=>applySc(MIO_S,1));
@@ -1939,13 +1942,15 @@ const side=document.querySelector('.side');
 const tabOf=el=>{const s=el.closest('main>section');if(s)return s.dataset.tab;return el.closest('header.hero')?'piano':null};
 let cur=null;const pos={};
 /* scelta dell'alloggio: si vede cosa cambia (Mario 22/11 «la scelta … ti cambia la pagina … va mostrato e fatto capire»): pallino sulle schede aggiornate finché non le aprite, avviso in basso con il bottone per andarci */
-const NUOVO={},av=document.createElement('div');av.className='sc-avviso';av.setAttribute('role','status');av.hidden=true;av.innerHTML='<b></b><span></span><div><button type="button" class="vai"></button><button type="button" class="ok">Ok</button></div>';document.body.appendChild(av);let avT=0;
+const NUOVO={},av=document.createElement('div');av.className='sc-avviso';av.setAttribute('role','status');av.hidden=true;av.innerHTML='<b></b><span></span><div><button type="button" class="vai"></button><button type="button" class="sc-ann">↩ Annulla</button><button type="button" class="ok">Ok</button></div>';document.body.appendChild(av);let avT=0,NP={},avP='';
 const segna=()=>{bar.querySelectorAll('button').forEach(b=>{const n=!!NUOVO[b.dataset.t];b.classList.toggle('nuovo',n);b.setAttribute('aria-label',T.find(t=>t.k===b.dataset.t).n+(n?', aggiornata':''))});if(side)side.querySelectorAll('a.st').forEach(a=>a.classList.toggle('nuovo',!!NUOVO[a.dataset.t]))};
-document.addEventListener('pdn:scelta',e=>{T.forEach(t=>{if(t.k!==cur)NUOVO[t.k]=1});segna();
+document.addEventListener('pdn:scelta',e=>{NP={...NUOVO};avP=e.detail.prima;T.forEach(t=>{if(t.k!==cur)NUOVO[t.k]=1});segna();
  const altre=T.filter(t=>t.k!==cur),vai=['giorni','piano','biglietti'].find(k=>k!==cur);
- av.querySelector('b').textContent='✓ Scelto: '+e.detail;av.querySelector('span').textContent='Cambiati per questa scelta: '+altre.map(t=>t.i+' '+t.n).join(' · ')+'. Il pallino giallo segna le schede da guardare.';
- const v=av.querySelector('.vai');v.dataset.t=vai;v.textContent='Vedi '+T.find(t=>t.k===vai).n+' ›';av.hidden=false;clearTimeout(avT);avT=setTimeout(()=>{av.hidden=true},12000)});
-av.addEventListener('click',e=>{if(e.target.closest('.vai')){av.hidden=true;show(e.target.closest('.vai').dataset.t)}else if(e.target.closest('.ok'))av.hidden=true});
+ av.querySelector('b').textContent='✓ Scelto: '+e.detail.nome;av.querySelector('.sc-ann').hidden=false;av.querySelector('span').textContent='Cambiati per questa scelta: '+altre.map(t=>t.i+' '+t.n).join(' · ')+'. Il pallino giallo segna le schede da guardare.';
+ const v=av.querySelector('.vai');v.hidden=false;v.dataset.t=vai;v.textContent='Vedi '+T.find(t=>t.k===vai).n+' ›';av.hidden=false;clearTimeout(avT);avT=setTimeout(()=>{av.hidden=true},12000)});
+av.addEventListener('click',e=>{if(e.target.closest('.vai')){av.hidden=true;show(e.target.closest('.vai').dataset.t)}else if(e.target.closest('.ok'))av.hidden=true;
+ else if(e.target.closest('.sc-ann')){Object.keys(NUOVO).forEach(k=>delete NUOVO[k]);Object.assign(NUOVO,NP);segna();document.dispatchEvent(new CustomEvent('pdn:annulla'));
+  av.querySelector('b').textContent='↩ Annullato';av.querySelector('span').textContent='Di nuovo: '+avP+'. La pagina è tornata com\'era.';av.querySelector('.vai').hidden=true;av.querySelector('.sc-ann').hidden=true;clearTimeout(avT);avT=setTimeout(()=>{av.hidden=true},6000);av.querySelector('.ok').focus()}});
 const show=(k,o={})=>{
  if(!T.some(t=>t.k===k))k='piano';
  if(document.body.dataset.card&&!o.card)closeCard(true);
