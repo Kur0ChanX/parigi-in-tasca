@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-- 🚀 Online: v17 · 🟩 Controllo 1 · 22/11 00:34 · pagina a 4 schede
-- 🧪 In prova: v18 · 🟩 Controllo 2 · 22/11 · alloggi nuovi, tasto Tutti, distanze
+- 🚀 Online: v18 · 🟩 Controllo 2 · 22/11 · alloggi nuovi, tasto Tutti, distanze
+- 🧪 In prova: nessuna
 - ⏳ Dopo: v19 · 🟩 Controllo 2 · aspetto più chiaro
 
 ## 0. Aspetta Mario
