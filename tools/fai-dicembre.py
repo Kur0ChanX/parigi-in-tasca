@@ -7,12 +7,15 @@ Uso:
   python3 -I tools/fai-dicembre.py              rifà dicembre/index.html
   python3 -I tools/fai-dicembre.py --controlla  esce con 1 se index.html non è allineato (prima di pubblicare)
 """
+import json
 import pathlib
+import re
 import sys
 
 RADICE = pathlib.Path(__file__).resolve().parent.parent
 SORGENTE = RADICE / 'dicembre' / 'parigi-disney-natale.html'
 USCITA = RADICE / 'dicembre' / 'index.html'
+VERSIONE = RADICE / 'dicembre' / 'versione.json'  # C17: il numero dell'ultima versione, per il tasto «Aggiorna versione»
 
 TESTA = """<!doctype html>
 <html lang="it">
@@ -60,16 +63,28 @@ def costruisci() -> str:
     return TESTA + pagina + '\n' + CODA
 
 
+def versione() -> str:
+    m = re.search(r'const VERSIONI=\[\s*\{v:(\d+)', SORGENTE.read_text(encoding='utf-8'))
+    if not m:
+        raise SystemExit('FALSO: manca «const VERSIONI=[{v:…» nella pagina')
+    return json.dumps({'v': int(m.group(1))}) + '\n'
+
+
 def main() -> int:
     nuovo = costruisci()
+    ver = versione()
     if '--controlla' in sys.argv[1:]:
         vecchio = USCITA.read_text(encoding='utf-8') if USCITA.exists() else ''
         if vecchio != nuovo:
             print('FALSO: dicembre/index.html non è allineato alla pagina. Rifallo: python3 -I tools/fai-dicembre.py')
             return 1
+        if not VERSIONE.exists() or VERSIONE.read_text(encoding='utf-8') != ver:
+            print('FALSO: dicembre/versione.json non ha il numero della pagina. Rifallo: python3 -I tools/fai-dicembre.py')
+            return 1
         print('VERO: dicembre/index.html allineato alla pagina')
         return 0
     USCITA.write_text(nuovo, encoding='utf-8')
+    VERSIONE.write_text(ver, encoding='utf-8')
     print(f'Scritto {USCITA.relative_to(RADICE)} ({len(nuovo.encode())} byte)')
     return 0
 

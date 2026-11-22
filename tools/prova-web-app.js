@@ -372,6 +372,27 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     return img.naturalWidth === 800;
   }));
   ok('nessun errore nella pagina', errs.length === 0); if (errs.length) console.log(errs);
+  // C17 (Mario 22/11 «un numerino piccolo in alto… clicca aggiorna versione»): numero = versione.json; con una versione più nuova sul sito, «Aggiorna versione» ricarica
+  {
+    const c3 = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const r = await c3.newPage();
+    r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+    const sito = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'dicembre', 'versione.json'), 'utf8')).v;
+    await r.goto(B + 'dicembre/'); await r.waitForTimeout(2200);
+    const v0 = await r.evaluate(() => { const b = document.getElementById('vnum'), x = b.getBoundingClientRect(), e = document.elementFromPoint(x.left + x.width / 2, x.top + x.height / 2); return { t: b.textContent, agg: b.classList.contains('agg'), toccabile: e === b, inAlto: x.top < 60 }; });
+    await r.click('#vnum'); await r.waitForTimeout(300);
+    const box0 = await r.evaluate(() => ({ aperta: document.getElementById('vbox').open, voci: document.querySelectorAll('#vbox ol>li').length, agg: !document.querySelector('#vbox .vagg').hidden }));
+    await r.click('#vbox .vx');
+    await r.route('**/versione.json', (rt) => rt.fulfill({ contentType: 'application/json', body: JSON.stringify({ v: sito + 1 }) }));
+    await r.reload(); await r.waitForTimeout(2200);
+    const v1 = await r.evaluate(() => document.getElementById('vnum').textContent);
+    await r.click('#vnum'); await r.waitForTimeout(300);
+    const aggVisto = await r.evaluate(() => !document.querySelector('#vbox .vagg').hidden && /Aggiorna versione/.test(document.querySelector('#vbox .vagg button').textContent));
+    let ricaricata = false; r.once('load', () => { ricaricata = true; });
+    await r.click('#vbox .vagg button'); await r.waitForTimeout(2500);
+    const vOk = v0.t === 'v' + sito && !v0.agg && v0.toccabile && v0.inAlto && box0.aperta && box0.voci >= 5 && !box0.agg && v1 === 'v' + sito + ' → v' + (sito + 1) && aggVisto && ricaricata;
+    ok('Numero della versione in alto (v' + sito + ' = versione.json), novità al tocco, «Aggiorna versione» solo con una versione più nuova e ricarica la pagina', vOk); if (!vOk) console.log({ v0, box0, v1, aggVisto, ricaricata });
+    await c3.close();
+  }
   await b.close(); server.kill(); fs.unlinkSync(path.join(DIR, 'parigi-in-tasca')); fs.rmdirSync(DIR);
   process.exit(falsi ? 1 : 0);
 })().catch((e) => { console.error(e); server.kill(); process.exit(1); });

@@ -11,3 +11,6 @@
 ## Scelte
 - La fila resta in basso, come prima (Mario la vuole «sotto»), appoggiata SOPRA la barra delle schede.
 - Lo spazio in fondo alla scheda Giorni e l'avviso della scelta salgono dell'altezza della fila, per non coprire il testo.
+
+## Dopo la v25
+- Mario 22/11 (foto col cerchio sul disegno delle casette): «Vedi qua la foto è coperta, l'immagine.» → DOMANDA 1 con 2 proposte (1 fila più sottile in basso, 2 fila in alto ferma scorrendo, consiglio 2; CSS provato con Playwright: in alto resta a 0 scorrendo, serve `#giorni{overflow:clip}`).
