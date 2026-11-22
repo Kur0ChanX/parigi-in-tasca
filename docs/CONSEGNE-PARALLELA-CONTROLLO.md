@@ -18,6 +18,7 @@
 - Un 4° colore con tinta propria per i biglietti: non c'è (solo verde oliva, vicino al verde «meglio») → bianco/nero e grigio.
 
 ## Prossimi passi
+0. **Mario 22/11 ~11:05 (dopo l'handoff, parole intere in C13):** i km tornano VISIBILI (testi «distanza» delle schede come prima della v23, riga Disney di «Dov'è», e nella riga 🏰 come dato piccolo accanto al «come»), ma ordini e filtri solo per tempo: togliere `kmD` dallo spareggio di «Vicino a Disney» (`SORT` e `SRT`). Prova da aggiornare (n. 8: «16 min» e anche «1,9 km»). Poi foto e v23.
 1. Foto della v23 (Playwright, `dicembre/index.html` servito con `python3 -m http.server`, tema scuro, 412×915, 2x; PRIMA = `git show origin/main:dicembre/index.html` servito con `page.route`, `serviceWorkers: 'block'`): confronto «Quanto costa» (colori nuovi e legenda) e riga Disney in Dormire (senza km); `tools/confronta-foto.py`; foto alte → solo etichetta + parte che conta (hook `foto-check.py`).
 2. v23 online: ramo-copia `versione-v23`, PR non in bozza (giro in locale già verde), unione squash, `git merge origin/main`, nastro, notifica, `send_message` alla Principale, controllo del sito vero.
 3. Voci 👁 di `docs/DA-FARE.md` sezione 1: chiuderle solo quando Mario dice di averle viste. `kmDT` non serve più: toglierlo se `grep` non trova altri usi.
@@ -27,6 +28,9 @@
 - Le ricerche web portano pagine intere (spreco di token): obiettivi stretti, niente `full_content`.
 
 ## Ultimo messaggio di Mario
+> Sì, perché alla fine è importante non sono quanti chilometri sono, ma quanto ci mettiamo ad arrivare, ecco.
+> Cioè, nel senso, i chilometri mettili visibili, ma non prenderli in considerazione nei filtri. Ecco, qui quando entri dentro la scheda ti deve segnare tutto, sì.
+(prima, 10:51:)
 > Sì, non so, te l'avevo già detto. No. Vicino alla RAR metti quanto ci vuole a piedi per arrivare alla RAR. E Disney non mettere i chilometri, ma effettivamente quanto ci vuole poi ad arrivare con il tempo a Disney.
 > Guarda che non per forza devi togliere i colori, puoi decidere dei colori per la leggenda di biglietti e quant'altro e colori tipo per Disney, per gli hotel Disney, per gli B&B, eccetera eccetera eccetera. Basta che non si mischiano, che non ci siano doppioni.
 
