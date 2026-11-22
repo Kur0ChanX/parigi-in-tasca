@@ -490,6 +490,34 @@ table.cmp td.r{white-space:nowrap}
 .dove-t{font:800 1.05rem/1.2 var(--display);margin:0}
 .mappa{position:relative;display:block;aspect-ratio:800/534;border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--rule);background:#EEF0F2;text-decoration:none;color:#0D1838}
 .mappa img{display:block;width:100%;height:100%;object-fit:cover}
+/* C15 · Mappa del viaggio (Mario 22/11 «zoomabile … Aeroporto, Parigi e Disneyland»): Leaflet sui pezzi Plan IGN */
+.tm{position:relative;z-index:0;height:min(64vh,560px);min-height:320px;margin-top:var(--s3);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--rule);background:#E8ECEF;color:#0D1838}
+.tm-no{margin:0;padding:var(--s5) var(--s4);color:#3A4256;font-size:.95rem}
+.tm-vai{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--s3)}
+.tm-vai button{min-height:40px;padding:6px 12px;border:2px solid var(--rule);border-radius:999px;background:var(--surface);color:var(--ink);font:700 .9rem/1.1 var(--text);cursor:pointer}
+.tm-vai button[aria-pressed="true"]{border-color:#F6C964}
+.tm .leaflet-container{font:600 .85rem/1.3 var(--text)}
+.tm .leaflet-popup-content{margin:10px 12px;color:#0D1838;font:500 .9rem/1.35 var(--text)}
+.tm .leaflet-popup-content a{color:#1F4FB4;font-weight:800}
+.tm-i{display:grid;place-items:center}
+.tm-n b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#C8102E;color:#fff;font:800 .85rem/1 var(--display);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45)}
+.tm-n.top b{border-color:#F6C964}
+.tm-c span{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:999px;background:#fff;color:#0D1838;font:800 .78rem/1.2 var(--text);white-space:nowrap;border:2px solid #0D1838;box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.tm-c.me span{background:#C8102E;color:#fff;border-color:#fff}
+.tm-c.st span{padding:2px 6px;font-size:.72rem;border-width:1.5px}
+.tm-g{position:relative}
+.tm-g i{display:block;width:10px;height:10px;border-radius:50%;background:#8A90A0;border:2px solid #fff;box-shadow:0 0 0 1px #8A90A0}
+.tm-g span{position:absolute;left:12px;top:50%;transform:translateY(-50%);padding:1px 5px;border-radius:5px;background:rgba(255,255,255,.92);color:#4A5060;font:700 .7rem/1.2 var(--text);white-space:nowrap}
+.tm-a i{display:block;width:12px;height:12px;border-radius:50%;border:2px solid #0D1838;background:var(--ty-hotel)}
+.tm-a.ty-bb i{background:var(--ty-bb)}.tm-a.ty-casa i{background:var(--ty-casa)}.tm-a.ty-disney i{background:var(--ty-disney)}
+.tm-lg{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:var(--s3) 0 var(--s2);color:var(--mute);font-size:.88rem}
+.tm-sw{display:inline-grid;place-items:center;width:30px;height:18px;margin-right:6px;border-radius:5px;background:#fff;vertical-align:middle}
+.tm-sw i{display:block;width:22px;border-top:3.5px solid #C8102E}
+.tm-sw i.m{border-top:3.5px dashed #1F4FB4}
+.tm-dot{display:inline-grid;place-items:center;width:18px;height:18px;margin-right:6px;border-radius:50%;vertical-align:middle;font:800 .7rem/1 var(--display)}
+.tm-dot.r{background:#C8102E;color:#fff;border:2px solid #F6C964}
+.tm-dot.g{width:12px;height:12px;background:#8A90A0;border:2px solid #fff}
+.tm-dot.a{width:12px;height:12px;background:var(--ty-hotel);border:2px solid #0D1838}
 .mk-h{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#C8102E;color:#fff;font:800 .9rem/1 var(--display);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45);font-variant-numeric:tabular-nums}
 .mk-s{position:absolute;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#0D1838;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
 .mk-s>span{position:absolute;top:50%;display:inline-flex;align-items:center;gap:5px;padding:3px 7px 3px 3px;border-radius:7px;background:rgba(255,255,255,.95);color:#0D1838;font:700 .78rem/1 var(--text);white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.3);transform:translateY(-50%)}
@@ -688,6 +716,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
   <div class="pal" role="group" aria-label="Colori della pagina"><button type="button" data-pal="blu" aria-pressed="true">🌙 Blu notte</button><button type="button" data-pal="vino" aria-pressed="false">🍷 Vin brulé</button></div>
   <nav class="go" aria-label="Vai subito a">
    <a class="hot" href="#mercatini">🎄 Il giro dei mercatini<small>Domenica 13: dove andare, la strada, cosa guardare</small></a>
+   <a href="#mappa">🗺️ Mappa del viaggio<small>Orly, Parigi e Disney: dove sono le cose</small></a>
    <a href="#scegli">🛏️ Scegli dove dormire<small>Domenica a Parigi o no, poi l'hotel</small></a>
    <a href="#costi">💶 Costi<small>Quanto spendete</small></a>
    <a href="#giorni">📅 Giorno per giorno<small>Orari e strade</small></a>
@@ -838,7 +867,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
  <div class="sec-head"><p class="kicker">🎄 Mercatini di Natale · domenica 13</p><h2 id="h-merc">Il giro dei mercatini</h2><p class="sec-ans" id="a-merc">7 tappe da Notre-Dame agli Champs-Élysées, senza mai tornare indietro.</p>
  <p class="muted small">Di giorno gli artigiani, al tramonto la terrazza, col buio le luci. Si parte appena lasciate le valigie. Toccate una tappa per sapere perché andarci, cosa mangiare, gli orari di domenica e la strada.</p></div>
  <div class="mk-al" id="mkAl" aria-live="polite"></div>
- <div class="mk-btns"><a class="btn" href="#mega" data-day="0">Orari minuto per minuto</a><a class="btn ghost" href="https://www.google.com/maps/dir/March%C3%A9%20de%20No%C3%ABl%20Notre-Dame%2C%20Square%20Ren%C3%A9%20Viviani%2C%20Paris/Place%20Saint-Michel%2C%20Paris/%C3%89glise%20de%20Saint-Germain-des-Pr%C3%A9s%2C%20Paris/Galeries%20Lafayette%20Haussmann%2C%2040%20Boulevard%20Haussmann%2C%20Paris/Place%20Vend%C3%B4me%2C%20Paris/Jardin%20des%20Tuileries%2C%20Paris/March%C3%A9%20de%20No%C3%ABl%20des%20Champs-%C3%89lys%C3%A9es%2C%20Paris" target="_blank" rel="noopener">Tutto il giro su Google Maps</a></div>
+ <div class="mk-btns"><a class="btn" href="#mega" data-day="0">Orari minuto per minuto</a><a class="btn ghost" href="#mappa" data-tmv="giro">🗺️ Il giro sulla mappa</a><a class="btn ghost" href="https://www.google.com/maps/dir/March%C3%A9%20de%20No%C3%ABl%20Notre-Dame%2C%20Square%20Ren%C3%A9%20Viviani%2C%20Paris/Place%20Saint-Michel%2C%20Paris/%C3%89glise%20de%20Saint-Germain-des-Pr%C3%A9s%2C%20Paris/Galeries%20Lafayette%20Haussmann%2C%2040%20Boulevard%20Haussmann%2C%20Paris/Place%20Vend%C3%B4me%2C%20Paris/Jardin%20des%20Tuileries%2C%20Paris/March%C3%A9%20de%20No%C3%ABl%20des%20Champs-%C3%89lys%C3%A9es%2C%20Paris" target="_blank" rel="noopener">Tutto il giro su Google Maps</a></div>
  <ol class="mk-giro">
   <li class="mk-tappa mk-top"><details><summary><span class="mk-n">1</span><span class="mk-t"><b>Notre-Dame · mercatino di Square Viviani</b><small>Mattina · ⭐ Da non perdere</small></span></summary>
    <div class="mk-body"><span class="bd ok">confermato 2026</span><p><b>Perché:</b> il più vero. Circa 40 casette di artigiani francesi, con la cattedrale dietro.</p><p><b>Cosa comprare e mangiare:</b> gioielli, giocattoli di legno, ceramiche; foie gras, salumi, formaggi, torrone, pan di zenzero, caldarroste.</p><p><b>Domenica 13:</b> mercatino 10:00–20:00. Cattedrale 8:15–19:30, ingresso gratis. La prenotazione è gratis e facoltativa, solo sul sito ufficiale: attenzione ai biglietti falsi a pagamento. Messe alle 10:00 e alle 11:30: la visita è più ristretta.</p><p><b>Da vedere:</b> il presepe provenzale con una cinquantina di statuine e il grande albero illuminato sul sagrato.</p><p class="mk-via"><b>🚶 La strada:</b> Dalla Gare de Lyon, valigie negli armadietti: metro 1 direzione La Défense, 3 fermate fino a Hôtel de Ville, poi 7 minuti a piedi. Passando, la facciata dell'Hôtel de Ville e la Senna.</p><p class="mk-act"><a class="maps" href="https://www.google.com/maps/dir/?api=1&destination=March%C3%A9%20de%20No%C3%ABl%20Notre-Dame%2C%20Square%20Ren%C3%A9%20Viviani%2C%20Paris&travelmode=walking" target="_blank" rel="noopener"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>Apri in Google Maps</a></p><p class="small muted">Fonte: <a href="https://www.paris.fr/evenements/marche-de-noel-notre-dame-124520" target="_blank" rel="noopener">paris.fr</a> · <a href="https://www.notredamedeparis.fr/" target="_blank" rel="noopener">notredamedeparis.fr</a></p></div></details></li>
@@ -869,6 +898,14 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 </div></section>
 
 <div class="lights" data-n="22" aria-hidden="true"></div>
+
+<section id="mappa" aria-labelledby="h-mappa"><div class="wrap">
+ <div class="sec-head"><p class="kicker">🗺️ Dove sono le cose</p><h2 id="h-mappa">Mappa del viaggio</h2><p class="sec-ans">Orly, Parigi e Disneyland in una mappa sola: allargate con due dita, spostate col dito.</p></div>
+ <div class="tm-vai" role="group" aria-label="Mostra sulla mappa"><button type="button" data-tmv="tutto">🧭 Tutto</button><button type="button" data-tmv="giro">🎄 Mercatini</button><button type="button" data-tmv="disney">🏰 Disney</button><button type="button" data-tmv="orly">✈️ Orly</button><button type="button" data-tmv="al">🛏️ Il vostro alloggio</button></div>
+ <div class="tm" id="tmMap" role="region" aria-label="Mappa del viaggio"><p class="tm-no">La mappa si apre qui…</p></div>
+ <p class="tm-lg"><span><span class="tm-sw"><i></i></span>a piedi</span><span><span class="tm-sw"><i class="m"></i></span>metro</span><span><b class="tm-dot r">1</b>tappa del giro (bordo d'oro = da non perdere)</span><span><b class="tm-dot g"></b>mercatino da saltare</span><span><b class="tm-dot a"></b>altri alloggi (colore del tipo)</span></p>
+ <p class="muted small">Toccate un segno per sapere cos'è; dalla finestrella aprite la tappa o la scheda dell'alloggio. Con poco zoom si vedono solo i posti grandi; allargando compaiono tappe, stazioni e alloggi. La mappa si ferma ad Orly, Parigi e Disneyland. Senza internet si vedono le zone già guardate. Mappa: © IGN (Plan IGN, mappa ufficiale francese).</p>
+</div></section>
 
 <section id="costi" aria-labelledby="h-costi"><div class="wrap">
  <div class="sec-head"><p class="kicker">Toccate una barra per sceglierla</p><h2 id="h-costi">Quanto costa</h2><p class="sec-ans" id="a-costi">Da circa 1.040 € a 1.560 € in due, secondo l'alloggio. Gli hotel Disney costano molto di più.</p></div>
@@ -1483,6 +1520,9 @@ const MPV=1,MP={
  rh:{h:[56.7, 39.2],m:[[43.3, 60.8, "CL", "r", ""]],km:["1,2 km", "32 km", "15 km"]}
 };
 /* FINE MAPPE */
+/* MAPPA VIAGGIO: fatta da tools/fai-mappa-viaggio.py, non modificare a mano */
+const TM={"b":[[48.7,2.245],[48.915,2.845]],"t":[[48.852122,2.347539],[48.853391,2.343462],[48.854148,2.333399],[48.873486,2.330296],[48.867527,2.329528],[48.8655,2.3245],[48.8681,2.3157]],"r":[["p",[[48.852122,2.347539],[48.853391,2.343462],[48.854148,2.333399],[48.859575,2.333044],[48.86101,2.335857],[48.862409,2.336643]]],["m",[[48.862409,2.336643],[48.872919,2.332776]]],["p",[[48.872919,2.332776],[48.873486,2.330296],[48.867527,2.329528],[48.8655,2.3245],[48.867063,2.321554],[48.8681,2.3157]]]],"g":[["Hôtel de Ville",[48.856426,2.352528]],["Les Halles",[48.862442,2.344138]],["Torre Eiffel",[48.856037,2.290137]],["Montmartre",[48.884753,2.338484]],["Gare de l'Est",[48.876025,2.357994]]],"p":[["disney","Parchi Disney",[48.86965,2.77696]],["aereo","Aeroporto di Orly",[48.728917,2.366476]],["treno","Chessy · Disney",[48.869921,2.782744]],["treno","Val d'Europe",[48.855639,2.773812]],["treno","Gare de Lyon",[48.844162,2.374677]],["posto","Louvre",[48.86101,2.335857]]],"a":{"1":[48.882657,2.767534],"2":[48.836754,2.797596],"3":[48.866619,2.760818],"4":[48.857028,2.761728],"5":[48.854194,2.768012],"6":[48.859523,2.769329],"7":[48.879138,2.751376],"8":[48.855342,2.769222],"9":[48.854412,2.770828],"10":[48.852326,2.765107],"11":[48.855533,2.808091],"12":[48.857193,2.773043],"13":[48.843224,2.79268],"14":[48.870489,2.787769],"15":[48.855587,2.775849],"22":[48.854226,2.792897],"24":[48.854229,2.813714],"29":[48.855873,2.774927],"30":[48.85495,2.770771]},"pa":{"as":[48.871806,2.328095],"is":[48.845916,2.375592],"lo":[48.847092,2.37205],"nv":[48.845372,2.375268],"pa":[48.84565,2.375372],"rh":[48.863192,2.348896],"sb":[48.846654,2.369834],"sp":[48.872154,2.328131]}};
+/* FINE MAPPA VIAGGIO */
 /* ---------- Dov'è: mappa e distanze nella scheda di ogni alloggio (C5) ----------
    Orari ufficiali (research_notes/…/trasporti_bagagli.md): RER A Val d'Europe→Châtelet 39 min, Chessy→Châtelet 42,
    Val d'Europe→Gare de Lyon 36, Chessy→Gare de Lyon 39, Val d'Europe→Chessy 3; metro 14 Gare de Lyon→Orly 23 (Paris Aéroport);
@@ -1674,7 +1714,55 @@ const spaSun=d=>{const g=d.full.findIndex(x=>x.ti.startsWith("Galeries"));if(g<0
  d.cutNote=P.spa?"Si chiude alle 18:50 per essere in spa alle 20:20. In ritardo? Saltate Hôtel de Ville, Saint-Michel, il Louvre e place Vendôme.":`Si chiude alle 18:50: ${P.chi||'il B&B'} accetta arrivi solo fino alle 22:00. In ritardo? Saltate Hôtel de Ville, Saint-Michel, il Louvre e place Vendôme.`;
 };
 /* sezione Mercatini: il consiglio segue l'alloggio scelto (Mario 21/11 ~19:47 «in base all'hotel che scegliamo mi dai il consiglio sui mercatini») */
-const mkAl=()=>{const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode==='bus'||P.mode==='busrer';let v,li;
+/* C15 · Mappa del viaggio (Mario 22/11 «zoomabile … dove è Disney, dove è l'aeroporto … Aeroporto, Parigi e Disneyland. E con quel range lì»).
+   Leaflet 1.9.4 (cdnjs, con controllo d'integrità) sui pezzi Plan IGN (Géoplateforme, mappa ufficiale francese); dati nel blocco MAPPA VIAGGIO.
+   La libreria si carica solo quando la mappa entra nello schermo; zoom e spostamento chiusi nel riquadro TM.b.
+   Con poco zoom solo i posti grandi (🎄 giro, 🏰, ✈️, 🛏️); da vicino tappe, linea, stazioni, alloggi e mercatini da saltare. */
+const TM_LIB='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.',TM_SRI={js:'sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO',css:'sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb'};
+let tmM=null,tmVista='tutto',tmMe=null;
+const tmP=n=>(TM.p.find(x=>x[1]===n)||[])[2];
+const tmCarica=()=>window.L?Promise.resolve():new Promise((ok,no)=>{const c=document.createElement('link');c.rel='stylesheet';c.href=TM_LIB+'css';c.integrity=TM_SRI.css;c.crossOrigin='anonymous';document.head.appendChild(c);const s=document.createElement('script');s.src=TM_LIB+'js';s.integrity=TM_SRI.js;s.crossOrigin='anonymous';s.onload=()=>window.L?ok():no();s.onerror=()=>no();document.head.appendChild(s)});
+const tmIco=(cls,html,w,h,ax,ay)=>L.divIcon({className:'tm-i '+cls,html,iconSize:[w,h],iconAnchor:[ax??w/2,ay??h/2]});
+const tmVai=v=>{if(!tmM)return;tmVista=v;const m=tmM,B=L.latLngBounds(TM.b),me=TM.a[CHO];
+ document.querySelectorAll('.tm-vai button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.tmv===v?'true':'false'));
+ if(v==='giro')m.fitBounds(L.latLngBounds(TM.t).pad(.12));
+ else if(v==='disney')m.fitBounds(L.latLngBounds([tmP('Parchi Disney'),tmP('Chessy · Disney'),tmP("Val d'Europe")].concat(me?[me]:[])).pad(.25));
+ else if(v==='orly')m.setView(tmP('Aeroporto di Orly'),14);
+ else if(v==='al'){const p=me||(PN&&TM.pa[PN.id]);if(p)m.setView(p,15);else m.fitBounds(L.latLngBounds([tmP('Chessy · Disney'),tmP("Val d'Europe")]).pad(.6))}
+ else m.fitBounds(B);};
+const tmAl=()=>{if(!tmM)return;const L1=[],h=AL.find(x=>x.id===CHO);if(tmMe)tmM.removeLayer(tmMe);
+ if(TM.a[CHO])L1.push(L.marker(TM.a[CHO],{icon:tmIco('tm-c me',`<span>🛏️ n. ${CHO}</span>`,64,24,32,-4),zIndexOffset:900,keyboard:true,title:'Il vostro alloggio'}).bindPopup(`<b>Il vostro alloggio: n. ${CHO} ${h?esc(h.n):''}</b><br><a href="#al-${CHO}">Apri la scheda ›</a>`));
+ else if(h)L1.push(L.marker(tmP("Val d'Europe"),{icon:tmIco('tm-c me',`<span>🛏️ n. ${CHO} · zona</span>`,96,24,48,-4),zIndexOffset:900,title:'Il vostro alloggio'}).bindPopup(`<b>Il vostro alloggio: n. ${CHO} ${esc(h.n)}</b><br>Indirizzo esatto dopo la prenotazione: segno messo sulla stazione di Val d'Europe.<br><a href="#al-${CHO}">Apri la scheda ›</a>`));
+ if(PN&&TM.pa[PN.id])L1.push(L.marker(TM.pa[PN.id],{icon:tmIco('tm-c me','<span>🛏️ Parigi</span>',72,24),zIndexOffset:900,title:'Notte a Parigi'}).bindPopup(`<b>Notte a Parigi: ${esc(PN.n)}</b>`));
+ tmMe=L.layerGroup(L1).addTo(tmM);};
+let tmVicini=null;
+const tmApri=()=>{const el=$('#tmMap');if(!el||tmM)return;el.innerHTML='<p class="tm-no">Carico la mappa…</p>';
+ tmCarica().then(()=>{if(tmM)return;el.innerHTML='';
+  const B=L.latLngBounds(TM.b),m=L.map(el,{maxBounds:B.pad(.04),maxBoundsViscosity:1,zoomSnap:.5,zoomDelta:.5,maxZoom:17,attributionControl:false});tmM=m;window.pdnTM=m;
+  L.control.attribution({prefix:false}).addAttribution('© <a href="https://geoservices.ign.fr/" target="_blank" rel="noopener">IGN</a> Plan IGN').addTo(m);
+  let errori=0;L.tileLayer('https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image/png',{maxZoom:17,bounds:B.pad(.6),crossOrigin:true}).on('tileerror',()=>{if(++errori===4&&!navigator.onLine){const n=document.createElement('p');n.className='tm-no';n.style.cssText='position:absolute;left:8px;right:8px;bottom:8px;z-index:500;background:#fff;border-radius:10px;padding:8px 10px';n.textContent='Senza internet si vedono solo le zone già guardate prima.';el.appendChild(n)}}).addTo(m);
+  const li=[...document.querySelectorAll('.mk-giro>li')],sempre=[],vicino=[],lontano=[];
+  TM.r.forEach(([k,ps])=>{vicino.push(L.polyline(ps,{color:'#fff',weight:7,opacity:.9,interactive:false}));vicino.push(L.polyline(ps,{color:k==='m'?'#1F4FB4':'#C8102E',weight:3.5,dashArray:k==='m'?'7 6':null,interactive:false}))});
+  TM.t.forEach((p,i)=>{const x=li[i],nome=x?(x.querySelector('.mk-t b')||{}).textContent||'':'',sub=x?(x.querySelector('.mk-t small')||{}).textContent||'':'';
+   vicino.push(L.marker(p,{icon:tmIco('tm-n'+(x&&x.classList.contains('mk-top')?' top':''),`<b>${i+1}</b>`,30,30),zIndexOffset:500,title:`Tappa ${i+1}: ${nome}`}).bindPopup(`<b>${i+1}. ${esc(nome)}</b><br><small>${esc(sub)}</small><br><a href="#mercatini" data-tappa="${i+1}">Apri la tappa ›</a>`))});
+  lontano.push(L.marker(L.latLngBounds(TM.t).getCenter(),{icon:tmIco('tm-c','<span>🎄 Giro dei mercatini</span>',150,26),title:'Giro dei mercatini'}).on('click',()=>tmVai('giro')));
+  TM.g.forEach(([n,p])=>vicino.push(L.marker(p,{icon:tmIco('tm-g',`<i></i><span>✕ ${esc(n)}</span>`,14,14),title:n+': da saltare'}).bindPopup(`<b>${esc(n)}</b><br>Da saltare: il perché è in «Dove NON andare».`)));
+  TM.p.forEach(([k,n,p])=>{if(k==='disney')sempre.push(L.marker(p,{icon:tmIco('tm-c','<span>🏰 Parchi Disney</span>',124,26),zIndexOffset:400,title:n}).bindPopup('<b>Parchi Disney</b><br>Disneyland Park e Disney Adventure World, davanti alla stazione di Chessy.'));
+   else if(k==='aereo')sempre.push(L.marker(p,{icon:tmIco('tm-c','<span>✈️ Orly</span>',72,26),zIndexOffset:400,title:n}).bindPopup('<b>Aeroporto di Orly</b><br>Arrivo e partenza del volo.'));
+   else if(k==='treno')vicino.push(L.marker(p,{icon:tmIco('tm-c st',`<span>🚉 ${esc(n)}</span>`,n.length*7+34,22),zIndexOffset:300,title:'Stazione '+n}).bindPopup(`<b>Stazione ${esc(n)}</b>`));
+   else vicino.push(L.marker(p,{icon:tmIco('tm-g',`<i style="background:#0D1838"></i><span>${esc(n)}</span>`,14,14),interactive:false}))});
+  AL.forEach(h=>{const p=TM.a[h.id];if(!p)return;vicino.push(L.marker(p,{icon:tmIco('tm-a ty-'+tyOf(h.sub),'<i></i>',16,16),title:`n. ${h.id} ${h.n}`}).bindPopup(`<b>n. ${h.id} ${esc(h.n)}</b><br><small>${esc(h.sub)}</small><br><a href="#al-${h.id}">Apri la scheda ›</a>`))});
+  L.layerGroup(sempre).addTo(m);const gV=L.layerGroup(vicino),gL=L.layerGroup(lontano);
+  const minZ=()=>{m.setMinZoom(0);const z=m.getBoundsZoom(B,false);m.setMinZoom(Math.floor(z*2)/2)};
+  tmVicini=()=>{if(m.getZoom()>=12.5){m.removeLayer(gL);gV.addTo(m)}else{m.removeLayer(gV);gL.addTo(m)}};
+  m.on('zoomend',tmVicini);m.on('resize',minZ);
+  m.fitBounds(B);minZ();tmAl();tmVai(tmVista);
+  if('ResizeObserver' in window)new ResizeObserver(()=>m.invalidateSize()).observe(el);
+ }).catch(()=>{el.innerHTML='<p class="tm-no">La mappa ha bisogno di internet la prima volta che si apre. Riprovate con la rete: poi le zone già guardate restano anche senza.</p>';tmM=null});};
+{const el=$('#tmMap');if(el){if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();tmApri()}},{rootMargin:'300px'});io.observe(el)}else tmApri()}}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-tmv]');if(b){tmVista=b.dataset.tmv;if(tmM)requestAnimationFrame(()=>{tmM.invalidateSize();tmVai(tmVista)});else tmApri();return}
+ const a=e.target.closest('#tmMap a[data-tappa]');if(a){const x=document.querySelectorAll('.mk-giro>li')[a.dataset.tappa-1],dt=x&&x.querySelector('details');if(dt){dt.open=true;setTimeout(()=>x.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'}),60)}}});
+const mkAl=()=>{tmAl();const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode==='bus'||P.mode==='busrer';let v,li;
  if(PN){v="Tutto il giro con calma, e la sera restate quanto volete";
   li=["Champs-Élysées anche fino alle 22–23: il mercatino chiude alle 23:00.",`Metro fino a ${RS[PN.st].n}, poi ${PN.w} minuti a piedi fino a ${esc(PN.n)}: niente valigie e niente treni.`,`Lunedì mattina RER A con le valigie: uscite alle ${T(monB(PN,CHO).out)}.`]}
  else if(P.spa){v="Tutte e 7 le tappe, più svelti dopo il tramonto: alle 20:20 siete nella spa";
@@ -1956,7 +2044,7 @@ if(cv&&cv.getContext){
 const T=[
  {k:'piano',i:'🏠',n:'Piano',s:[['breve','In breve'],['costi','Costi'],['dafare','Da fare'],['ricontrollare','Da ricontrollare']]},
  {k:'dormire',i:'🛏️',n:'Dormire',s:[['scegli','Scegli dove dormire'],['hotel','Tutti gli alloggi'],['hoteldisney','Hotel Disney']]},
- {k:'giorni',i:'📅',n:'Giorni',s:[['giorni','Giorno per giorno'],['mercatini','Giro dei mercatini']]},
+ {k:'giorni',i:'📅',n:'Giorni',s:[['giorni','Giorno per giorno'],['mercatini','Giro dei mercatini'],['mappa','Mappa del viaggio']]},
  {k:'biglietti',i:'🎟️',n:'Biglietti',s:[['biglietti','Biglietti Disney'],['trasporti','Treni e ticket'],['fonti','Fonti']]}];
 const main=document.querySelector('main');if(!main)return;
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
