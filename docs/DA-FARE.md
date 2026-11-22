@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v37 · 🟩 Controllo 16 · 22/11 18:27 · tasto «⭐ Rosa alloggi»
+🚀 Online: v37 · 🟩 Controllo 16 · 22/11 18:26 · tasto «⭐ Rosa alloggi»
 🧪 In prova: — (v38 · 🟩 Controllo 16 · C22 controllo itinerari e alloggi, in lavoro)
 ⏳ Dopo: v39 · 🟩 Controllo 16 · pagina più natalizia (foto a Mario prima)
 
@@ -15,7 +15,7 @@
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
-- 🟩 Controllo · C21 · tasto «⭐ Rosa alloggi» nella schermata principale, rosa scelta da Mario (piano in `docs/lavori-in-corso/C21-rosa-alloggi.md`) · v37 online 22/11 18:27 (PR #38), aspetta che Mario la veda · 👁 Lo vedi: nella schermata principale il tasto «⭐ Rosa alloggi», dentro le spunte per scegliere la rosa · prova: foto di Mario dal sito vero.
+- 🟩 Controllo · C21 · tasto «⭐ Rosa alloggi» nella schermata principale, rosa scelta da Mario (piano in `docs/lavori-in-corso/C21-rosa-alloggi.md`) · v37 online 22/11 18:26 (PR #38), aspetta che Mario la veda · 👁 Lo vedi: nella schermata principale il tasto «⭐ Rosa alloggi», dentro le spunte per scegliere la rosa · prova: foto di Mario dal sito vero.
 - 🟩 Controllo 14 · C20 · 👁 Lo vedi: nella pagina di dicembre («Scegli» passo 2 e «Dormire») il tasto «🙈 Nascondi» su ogni alloggio, dopo il tocco «Annulla» per 7 secondi in basso, e «🧹 Pulisci l’elenco» con le spunte; i nascosti restano dopo l’aggiornamento · prova: foto di Mario dal sito vero dopo la v35.
 - 🟩 Controllo 14 · C20 · 👁 Lo vedi: nei n. 16 e 23 (passo 2 di «Scegli» e «Dormire») la tendina «📋 Tutto sul n.» con soldi, arrivo, casa, spesa e il messaggio pronto per il gestore col tasto «Copia»; in «Dormire» il filtro «⭐ La vostra rosa» · prova: foto di Mario dal sito vero.
 - 🐞 · 🟩 Controllo 7 · Prova «dicembre: service worker suo» instabile: rossa ~1 volta su 5 anche sulla v27 (provato 22/11 12:10, 5 giri da sola); a volte la pagina di dicembre resta comandata dal service worker di novembre. Capire la causa vera (installazione di quello di dicembre? tempi?) e se sul telefono la pagina di dicembre senza rete ne soffre.
