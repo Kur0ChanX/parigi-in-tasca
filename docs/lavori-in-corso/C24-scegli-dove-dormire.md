@@ -30,7 +30,7 @@
 - DOMANDA 2: rosa come filtro ovunque (con il mio consiglio sempre come riferimento) o solo in «Dormire». Consiglio: ovunque.
 - DOMANDA 3: riquadro «Il vostro alloggio» (soluzione smart sopra). Consiglio: sì.
 
-## Risposte di Mario (22/11 ~19:5x)
+## Risposte di Mario (22/11 19:28)
 > 11 21 31
 >
 > Mi raccomando è una guida deve aiutarmi in base a che hotel scelgo cosa fare nella giornata specialmente domenica con i mercatini come spostarmi consigli info ecc ecc ecc molto accurato
@@ -50,7 +50,7 @@
 - Tasto della scheda «🛏️ Dormiamo qui» / «✓ Dormite qui» (prima «Scegli questo»); barre del Piano «Dormiamo qui ›».
 
 ## Manca (in ordine)
-0. **Prove rosse da adattare (8, `prova-web-app.js`, giro del 22/11 ~20:1x)**: «Ordine: 4 pulsanti…», «Ordine: Vicino a Disney…», «v18: interruttore con Tutti…», «v18: camera di Bussy…», «Riga Disney…», «Vicino a Disney ordina solo per minuti», «C14: seconda camera a Bussy…», «Hotel Disney (n. 14) rosa…»: partono da «Tutti · 35» ma ora il passo 2 parte dalla rosa (voluto, DOMANDA 2 → 1). Nelle prove: tocco su `[data-ro-f="0"]` («Tutti») prima di contare i 35, NON tornare a `ROF=false`. `--controlla` VERO, `prova-scritte` verde.
+0. **Prove rosse da adattare (8, `prova-web-app.js`, giro del 22/11 ~19:35)**: «Ordine: 4 pulsanti…», «Ordine: Vicino a Disney…», «v18: interruttore con Tutti…», «v18: camera di Bussy…», «Riga Disney…», «Vicino a Disney ordina solo per minuti», «C14: seconda camera a Bussy…», «Hotel Disney (n. 14) rosa…»: partono da «Tutti · 35» ma ora il passo 2 parte dalla rosa (voluto, DOMANDA 2 → 1). Nelle prove: tocco su `[data-ro-f="0"]` («Tutti») prima di contare i 35, NON tornare a `ROF=false`. `--controlla` VERO, `prova-scritte` verde.
 1. Rosa ovunque (DOMANDA 2 → 1): elenco di «Dormire» (`FI` parte da 'rosa' se piena), barre del Piano (`BARS`), confronti «n. X o n. Y?», mappa (strato «Disney»): solo rosa + mio consiglio + scelto, tasto «Tutti i 35».
 2. In cima a ogni giorno «🛏️ Dormite al n. X · cambia».
 3. Riquadro «Il vostro alloggio» in cima ai Giorni (DOMANDA 3 → 1): arrivo e partenza, domenica sera (chiavi / gestore di persona / reception), scadenza della cancellazione gratuita + promemoria `.ics`, messaggio in francese da copiare. Dati sicuri: n. 8 (Marriott), n. 16 e 23 (Airbnb, `XX` di C20); gli altri: testo `sun` della scheda.
