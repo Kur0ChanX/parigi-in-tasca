@@ -54,3 +54,8 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 
 | 22/11/2026 | «brillii» letto «birilli» da Mario. | Parola rara, senza foto. | A Mario parole comuni («stelline che luccicano») e la foto insieme. | (spostata da ERRORI.md il 22/11, tetto 10 KB)
 | 22/11/2026 | Prova dei pacchi rossa 1 volta su 8, pagina giusta. | Contava il bagliore del castello (`cglow`, luce) come «copre». | La prova salta i bagliori; una rossa a caso si rifà 8 volte prima di cercare il colpevole. | (spostata il 22/11, tetto 10 KB)
+
+## 22/11/2026 · v40 «testata più leggera» più pesante (Controllo 18)
+- Mario 19:35, video della v40: riga nel cielo, rettangoli e casette che spariscono allargando con due dita, luna sfocata anche senza zoom (nitida nel video della v39 delle 17:57).
+- Causa misurata (Chromium di prova, Pixel 7, 3 s): la v40 contava 814 → 306 animazioni, ma i 38 gruppi di lucine sparse su tutto il disegno portano il lavoro di disegno da 271 a 592 ms e lo stile da 148 a 222 ms. Luna sfocata e rettangoli: ipotesi forte (non misurabile da qui), la prova sarà il telefono di Mario con la v41.
+- Difesa: a ogni cambio della testata traccia del browser prima/dopo (paint, stile, strati) e prova con la pagina ingrandita; testata ferma a pagina ingrandita. Dettagli: `docs/lavori-in-corso/C23-testata-leggera.md`.
