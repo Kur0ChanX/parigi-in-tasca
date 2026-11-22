@@ -4,6 +4,10 @@
 Prima: «ma se ti scrivo dal 13 al 17 perché mi metti dal 14 che problemi hai?»
 Poi: «metti alloggi dal 14 al 17 e in priorità dal 13 al 17 rifai la ricerca accurata profonda i piú validi dal web con i criteri che ti ho detto e sistema tutto il nostro sito c'è un disordine allucinante rendi tutto ordinato chiaro e di facile lettura non listoni chilometrici risistema in modo intelligente e von Logica e bello da vedere professionale non amatoriale»
 
+## Messaggio di Mario 22/11 ~00:45 (arrivato alla Controllo 1 dopo l'handoff, passato qui; «qui» + foto `archivio/2026-11-22-mario-dormire-tasto-tutti.jpg`)
+Parole intere in `docs/CONSEGNE-PARALLELA-CONTROLLO.md` «Messaggio di Mario arrivato dopo l'handoff». In breve: tasto «Tutti» nell'interruttore; in vista distanza da Disney (tempo e km a piedi) e minuti a piedi dalla RER; ricerca anche sui siti diretti (3 aiutanti); aspetto più chiaro (colori, font, spazi); plugin `frontend-design` e «rifai tutto con frontend da 0, solo migliorie».
+Visto nella foto (ordine «Vicino a Disney», scheda Hotel): primi n. 30, 11 (navetta ogni 30 min), 12; il n. 14 Hotel Disney solo 4°. Causa: si ordinava per minuti coi mezzi SENZA le attese. Scelta: «Vicino a Disney» = distanza dai parchi in linea d'aria (km del blocco MAPPE, IGN), a pari km i minuti; nella riga km e minuti in vista.
+
 ## Scelte
 - Date: 13→17 (4 notti tutte vicino a Disney) in primo piano; 14→17 (con la domenica a Parigi) come seconda strada. Supera «non rifare la ricerca» del 21/11 20:25: ora Mario la chiede.
 - Criteri (da `alloggi_nuovi_13_17_ricerca.md`): sotto ~650 € le 4 notti · ≤ ~12 min a piedi dalla RER A (Chessy o Val d'Europe) o navetta gratuita · Booking ≥ 8,0 e pulizia ≥ 8,5 · Airbnb ≥ 4,8 con ≥ 20 recensioni · libero tutte le notti · senza auto né taxi.
@@ -12,3 +16,23 @@ Poi: «metti alloggi dal 14 al 17 e in priorità dal 13 al 17 rifai la ricerca a
 
 ## Stato
 - 22/11 ~00:15: aiutanti partiti. Poi: controllo a campione dei loro dati, scelta dei migliori.
+
+## Esito della ricerca (22/11 ~00:55)
+- Hotel, B&B, camere (`alloggi_ricerca_profonda_hotel.md`): 40+ nuove controllate, 1 sola valida: **Jolie chambre** (camera privata, Bussy-Saint-Georges, 9,1 / pulizia 9,2, 450 m dalla RER di Bussy, ≈ 350 € con cancellazione fino al 29/11, stima; da chiedere se il bagno è privato; arrivo 19–23; conferma dell'host). Nessun hotel nuovo. Dati nuovi: Moxy matrimoniale 677 € (già in pagina), Residhome salito a 647 € NR / 752 € canc.
+- Appartamenti (`alloggi_ricerca_profonda_appartamenti.md`): 80+ controllati, 15 validi (tutti Airbnb, Val d'Europe). I 5 migliori, NON in pagina (controllato con grep): 24683013 · 24130153 · 974712785668568895 · 1107761783058404933 · 928939744715124546 (schede corte nel file, righe 88–133). 898344935961342834 non libero.
+
+## Piano v18 (pronto, da fare)
+1. **Consiglio ★ sul 13→17**: `MIO_S={n:"",d:8}` (4 notti Moxy «Family Sleeper», 677 € canc. fino al 13/12; Q[8] già giusto). Aggiornare i testi fissi: `#mio` (righe ~752–764), `CK[0]` («Oggi… Il mio consiglio: Hotel Locomo…», riga ~1558), `BARS`: prima `{n:"",d:8,t:"Il mio consiglio. 4 notti al Moxy…"}`, poi `{n:"",d:31,…}` (200 € in meno, niente reception), `{n:"lo",d:8,…}` (domenica a Parigi), `{n:"lo",d:16}`, `{n:"",d:4}`, `{n:"",d:1}`, `{n:"",d:12}`; togliere `{n:"is",d:8}` e il vecchio `{n:"",d:8}` (restano 7 barre: la prova «9 barre» resta giusta).
+2. **n. 31–35** (Airbnb, come il n. 25): righe in `AL` (sub, g, sc, cl, p, pr, pl con `ab4`, min, ne, dist, sun, tr, pro, con con `abCon`, u `AB(id,13)`, ul), `Q` (4 notti, 3 notti), `ACC` con `vde(min,{mt,da,al,a:VDE})`, tabella km `{z:1,km:["31 km","1,7 km","33 km"]}`, `DV` `["VDE",[["w",min]]]`; minuti: 31→7, 32→5 (4–5), 33→9 (5–9), 34→3 (2–3), 35→12 (10–12). ID sempre fra virgolette (E: arrotondati). `tools/fai-mappe-dicembre.py` `ZONA`: aggiungere 31–35.
+3. **Jolie chambre**: il motore conosce solo le stazioni VDE e CH (`RS`, `DV`): NON entra nel motore. Riquadro fisso sotto l'elenco quando l'interruttore è su «🛏️ B&B» (script delle schede), con prezzo, link Booking e gli avvisi.
+4. n. 30: prezzo 647 € NR (cancellabile 752 €).
+5. Testi: «fra 30» (riga ~676) → 35; «i 30 a confronto, anche 11 Airbnb» → 35 e 16; lead «I n. 16–21 e 23 sono su Airbnb» → «16–21, 23, 25–28 e 31–35».
+6. Prove (`tools/prova-web-app.js`): conteggi 30 → 35, lista Airbnb del filtro (16–21, 23, 25–28, 31–35), Airbnb 11 → 16 schede, «tutti e 15 col prezzo» nella scelta con domenica a Parigi (+5 = 20), «Dov'è: 19 schede» invariato.
+7. Poi: fai-dicembre, prove (web app, scritte, --controlla, colori, kit), versione-v18, PR, unione, nastro, foto a Mario delle 2 schede nuove e del consiglio.
+
+## Ricerca sui siti diretti (22/11 ~01:00, 3 aiutanti, Mario «usa 3 agenti»)
+- File: `research_notes/…/alloggi_siti_diretti_hotel.md`, `…_bb.md`, `…_case.md`. Esito: **nessun alloggio nuovo valido**. I siti ufficiali delle catene mostrano il prezzo solo con lo script del calendario: non letti. Zenitude Val d'Europe (Chessy, 534 € NR / 585 € su Booking, 8,1) scartato: pulizia 8,4 (< 8,5) e reception 9–19. Chambres d'hôtes vere solo nel paese vecchio di Chessy, 2–4 km dalla RER. Oriane (n. 7) sul sito diretto 520 € (in pagina 518 €): nessun risparmio. ibis (n. 9) su Accor 488 € = prezzo già in pagina.
+- Da fare a mano, se Mario vuole: prezzi sui siti ufficiali con un browser (elenco nei file).
+
+## v18 (in corso, Controllo 2)
+- Fatto nella pagina: consiglio = 4 notti Moxy (`MIO_S={n:"",d:8}`, `#mio`, `CK[0]`, `BARS` a 7), n. 31–35, n. 30 a 647 €, camera di Bussy in un riquadro (`#scBB`, visibile con «B&B» e «Tutti»), tasto «Tutti» (predefinito), riga con «🏰 Disney min · km» e «🚉 RER a piedi», «Vicino a Disney» per km (`kmD`, `kmDT`). Prove nuove in `tools/prova-web-app.js` (blocco «v18»).

@@ -533,6 +533,11 @@ details.sc-par{margin-top:var(--s3);border:2px solid var(--rule);border-radius:v
 .tyswitch{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:var(--s3) 0 var(--s2)}
 .tyswitch button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:58px;padding:6px 4px;border:2px solid var(--rule);border-radius:14px;background:var(--surface);color:var(--ink);font:700 .9rem/1.15 var(--text);cursor:pointer;text-align:center}
 .tyswitch button small{font-weight:500;color:var(--mute);font-size:.78rem}
+.tyswitch button[data-ty="tutti"]{grid-column:1/-1;min-height:46px;flex-direction:row;gap:8px}
+.sc-x{display:none;margin-top:var(--s3)}
+#scD:is([data-ty="bb"],[data-ty="tutti"])~.sc-x{display:block}
+.sc-xb{border:2px dashed var(--rule);border-radius:var(--r-lg);padding:12px 14px;display:grid;gap:8px}
+.sc-xb p{margin:0}
 .tyswitch button[aria-pressed="true"]{border-color:var(--lamp);background:var(--lamp);color:var(--lamp-ink)}
 .tyswitch button[aria-pressed="true"] small{color:var(--lamp-ink)}
 #scD[data-ty="hotel"]>[data-ty]:not([data-ty="hotel"]),#scD[data-ty="bb"]>[data-ty]:not([data-ty="bb"]),#scD[data-ty="casa"]>[data-ty]:not([data-ty="casa"]){display:none}
@@ -667,15 +672,29 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
  <p class="sc-now" id="scNowD"></p>
  <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort4" role="group" aria-label="Ordina per" id="scSort"><button type="button" data-s="prezzo" aria-pressed="true">Meno cari</button><button type="button" data-s="disney" aria-pressed="false">Vicino a Disney</button><button type="button" data-s="rer" aria-pressed="false">Vicino alla RER</button><button type="button" data-s="pulizia" aria-pressed="false">Più puliti</button></div></div>
  <div class="sc-list" id="scD"></div>
- <p class="sc-leg">Accanto a ogni alloggio la differenza col mio consiglio: <b class="sc-up">rosso</b> = peggio, <b class="sc-dn">verde</b> = meglio.</p>
+ <div class="sc-x" id="scBB" data-ty="bb">
+  <p class="sc-g">Fuori elenco: una camera a Bussy-Saint-Georges</p>
+  <div class="sc-xb">
+   <p><b>Jolie chambre</b> · camera privata, Bussy-Saint-Georges · voto Booking 9,1 su 86 recensioni, pulizia 9,2 <span class="bd ok">visto il 21/11/2026</span></p>
+   <ul class="sc-l">
+    <li><b>4 notti 13→17:</b> circa 350 € con cancellazione gratuita fino al 29/11 (circa 316 € non rimborsabile). <b>3 notti 14→17:</b> circa 267 € <span class="bd es">stima</span>: Booking mostra 288 € e 220 €, più IVA 10 % e tassa di soggiorno.</li>
+    <li>450 m dalla stazione RER A di Bussy-Saint-Georges (Booking), poi 2 fermate fino a Chessy, 6–8 minuti <span class="bd nu">non ufficiale</span>. Treno: 30,60 € in due, come da Val d'Europe.</li>
+    <li>Letto matrimoniale alla francese, 15 m². Arrivo dalle 19:00 alle 23:00, da comunicare prima. Check-out alle 11:00.</li>
+   </ul>
+   <p class="small"><b>Contro:</b> è una richiesta di prenotazione (l'host risponde entro 24 ore). Bagno: Booking scrive sia «in camera» sia «in comune», chiedetelo all'host. Niente reception. Domenica sera da Parigi: i treni che finiscono a Torcy non fermano a Bussy.</p>
+   <p class="small muted">Non è nell'elenco perché la pagina calcola tempi e costi solo da Val d'Europe e Chessy.</p>
+   <div class="sc-act"><a class="btn ghost" href="https://www.booking.com/hotel/fr/jolie-appartement-pres-de-rer-a.it.html?checkin=2026-12-13&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Booking 13→17</a><a class="btn ghost" href="https://www.booking.com/hotel/fr/jolie-appartement-pres-de-rer-a.it.html?checkin=2026-12-14&amp;checkout=2026-12-17&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Booking 14→17</a></div>
+  </div>
+ </div>
+ <p class="sc-leg">🏰 minuti fino ai parchi (a piedi e treno, senza le attese) e km in linea d'aria · 🚉 minuti a piedi fino alla RER · 🧼 pulizia. Accanto, la differenza col mio consiglio: <b class="sc-up">rosso</b> = peggio, <b class="sc-dn">verde</b> = meglio.</p>
 </div></section>
 
 <div class="lights" data-n="22" aria-hidden="true"></div>
 
 <section id="breve" aria-labelledby="h-breve"><div class="wrap">
- <div class="sec-head"><p class="kicker">Tutto in una schermata</p><h2 id="h-breve">Il viaggio in breve</h2><p class="sec-ans" id="a-breve">Scegliete l'alloggio fra 30 e prenotate il biglietto Disney da 3 giorni. Il resto si paga sul posto.</p></div>
+ <div class="sec-head"><p class="kicker">Tutto in una schermata</p><h2 id="h-breve">Il viaggio in breve</h2><p class="sec-ans" id="a-breve">Scegliete l'alloggio fra 35 e prenotate il biglietto Disney da 3 giorni. Il resto si paga sul posto.</p></div>
  <div class="answer">
-  <div class="verdict"><span class="k">Dove dormire</span><span class="v" id="brAlV">Il mio consiglio: domenica a Parigi, poi n. 8 Moxy</span><p id="brAlP">Domenica niente treno con le valigie la sera. Lunedì–mercoledì solo Disney: 8 minuti a piedi e 1 fermata di treno. <a href="#scegli">Scegli o cambia</a></p></div>
+  <div class="verdict"><span class="k">Dove dormire</span><span class="v" id="brAlV">Il mio consiglio: n. 8 Moxy Paris Val d'Europe, 4 notti</span><p id="brAlP">Stesso posto per tutte e 4 le notti: domenica sera valigie e RER A. Lunedì–mercoledì solo Disney: 8 minuti a piedi e 1 fermata di treno. <a href="#scegli">Scegli o cambia</a></p></div>
   <div class="verdict"><span class="k">Domenica, appena arrivati</span><span class="v">Il mega consiglio: Notre-Dame, Tuileries e Champs-Élysées</span><p>Un giro solo, da est a ovest: mercatini di giorno, luci la sera. <a href="#mercatini">Tutti i mercatini, dove andare e dove no</a> · <a href="#mega" data-day="0">Orari</a></p></div>
   <div class="verdict"><span class="k">Biglietti Disney</span><span class="v">3 giorni / 2 parchi, dal 14 al 16: 544 € in due</span><p>Costa come 1 parco lunedì + 2 giorni, ma vi dà tutti e due i parchi anche lunedì. <span class="bd nu">non ufficiale</span></p></div>
   <div class="verdict"><span class="k">Hotel Disney</span><span class="v">No</span><p>Il più economico con voto 8,0 costa circa 900 € più del n. 8 Moxy e circa 520 € più del n. 12. Unico vantaggio: entrate un'ora prima.</p></div>
@@ -746,18 +765,20 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <div class="lights" data-n="22" aria-hidden="true"></div>
 
 <section id="hotel" aria-labelledby="h-hotel"><div class="wrap wide">
- <div class="sec-head"><p class="kicker">Dove dormire · 4 notti, 13→17 dic, 2 adulti, 1 camera</p><h2 id="h-hotel">Tutti gli alloggi</h2><p class="sec-ans" id="a-hotel">Vicino a Disney: i 30 a confronto, anche 11 Airbnb. Si sceglie in cima alla pagina, insieme alla domenica.</p>
- <p class="lead">Prezzi per 4 notti, tasse incluse, letti su Booking da computer il 21/11/2026. Nella vostra app, con Genius, spesso costano circa il 12 % in meno. I n. 16–21 e 23 sono su Airbnb: prezzo tutto incluso, letto in euro su airbnb.it; i n. 18, 20 e 21 sono liberi solo dal 14.</p></div>
+ <div class="sec-head"><p class="kicker">Dove dormire · 4 notti, 13→17 dic, 2 adulti, 1 camera</p><h2 id="h-hotel">Tutti gli alloggi</h2><p class="sec-ans" id="a-hotel">Vicino a Disney: i 35 a confronto, anche 16 Airbnb. Si sceglie in cima alla pagina, insieme alla domenica.</p>
+ <p class="lead">Prezzi per 4 notti, tasse incluse, letti su Booking da computer il 21/11/2026. Nella vostra app, con Genius, spesso costano circa il 12 % in meno. I n. 16–21, 23, 25–28 e 31–35 sono su Airbnb: prezzo tutto incluso, letto in euro su airbnb.it; i n. 18, 20 e 21 sono liberi solo dal 14.</p></div>
 
   <div class="mine is-rec" id="mio">
   <span class="rec"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>Il mio consiglio</span>
-  <h3 class="mine-t"><span class="nb">8</span><span>Domenica all'Hotel Locomo, a Parigi; poi 3 notti al n. 8 Moxy</span></h3>
-  <p>Circa 720 € per le 4 notti, tutte con cancellazione gratuita: Locomo 190 € (fino al 12/12) + Moxy «Family Sleeper» con letto matrimoniale, 530 € (fino al 14/12) <span class="bd ok">visto il 21/11/2026</span>.</p>
+  <h3 class="mine-t"><span class="nb">8</span><span>4 notti al n. 8 Moxy, vicino a Disney</span></h3>
+  <p>Circa 677 € per le 4 notti, 13→17: camera «Family Sleeper» con letto matrimoniale, cancellazione gratuita fino al 13/12 <span class="bd ok">visto il 21/11/2026</span>.</p>
   <ul class="clean mine-why">
-   <li><b>Domenica, relax vero:</b> valigie in hotel alle 9, a 3 minuti dalla Gare de Lyon; mercatini fino a sera, senza treni né valigie la sera.</li>
-   <li><b>Lunedì:</b> RER A con le valigie (36 minuti), valigie alla reception del Moxy, poi al parco. Si esce presto: verso le 7:10.</li>
-   <li><b>Lunedì–mercoledì, solo Disney:</b> 8 minuti a piedi e 1 fermata di treno. Reception sempre aperta, pulizia 9,0.</li>
-   <li><b>Volete la spa domenica sera?</b> 4 notti al n. 12 Relais Spa: circa 190 € in più (908 € contro 720 €).</li>
+   <li><b>Stesso posto per tutte e 4 le notti:</b> niente cambio di hotel con le valigie.</li>
+   <li><b>Domenica:</b> valigie negli armadietti della Gare de Lyon (fino alle 22:00), mercatini, poi la sera RER A fino a Val d'Europe. Reception sempre aperta: si arriva a qualsiasi ora.</li>
+   <li><b>Lunedì–mercoledì, solo Disney:</b> 8 minuti a piedi e 1 fermata di treno. Pulizia 9,0.</li>
+   <li><b>Spendere meno?</b> N. 31 su Airbnb: circa 200 € in meno, letto matrimoniale, arrivo fino a mezzanotte, ma niente reception.</li>
+   <li><b>Domenica senza valigie?</b> La prima notte all'Hotel Locomo, a Parigi, poi 3 notti al Moxy: circa 720 €.</li>
+   <li><b>Volete la spa domenica sera?</b> 4 notti al n. 12 Relais Spa: circa 230 € in più (908 €).</li>
   </ul>
   <a class="btn gold" href="#scegli">Scegli o cambia in cima alla pagina</a>
  </div>
@@ -1021,7 +1042,7 @@ drawGarland();
 /* ---------- barre dei costi ---------- */
 /* barre dei costi: si calcolano con conto() (C11), dopo che dati e profili sono pronti */
 const MAX=2100;
-const BARS=[{n:"lo",d:8,t:"Il mio consiglio. Domenica a Parigi, poi 8 minuti dal treno."},{n:"is",d:8,t:"Come il consiglio, con l'hotel di Parigi più economico e la colazione."},{n:"lo",d:16,t:"Come il consiglio, ma poi 3 notti su Airbnb a 1 minuto dal treno. Niente reception: lunedì valigie al deposito."},{n:"",d:8,t:"4 notti al Moxy: domenica sera valigie e treno."},{n:"",d:4,t:"4 notti nell'appartamento grande, 15–20 minuti a piedi dal treno."},{n:"",d:1,t:"Il più economico. Bus ogni giorno."},{n:"",d:12,t:"4 notti con la spa domenica sera, 5 minuti dal treno."}];
+const BARS=[{n:"",d:8,t:"Il mio consiglio. 4 notti al Moxy: reception sempre aperta, 8 minuti dal treno."},{n:"",d:31,t:"Airbnb con letto matrimoniale, 7 minuti dal treno. Niente reception: si arriva fino a mezzanotte."},{n:"lo",d:8,t:"Domenica a Parigi, poi 3 notti al Moxy: niente valigie domenica sera."},{n:"lo",d:16,t:"Domenica a Parigi, poi 3 notti su Airbnb a 1 minuto dal treno. Niente reception: lunedì valigie al deposito."},{n:"",d:4,t:"4 notti nell'appartamento grande, 15–20 minuti a piedi dal treno."},{n:"",d:1,t:"Il più economico. Bus ogni giorno."},{n:"",d:12,t:"4 notti con la spa domenica sera, 5 minuti dal treno."}];
 const PKG=[{n:"Misto: 2 notti Cheyenne + 2 notti vicino",s:[["s-p",1102.78,"pacchetto 1.103 €"],["s-h",249,"2 notti Moxy 249 €"],["s-r",86.6,"trasporti 87 €"]],note:"Due cambi di hotel con le valigie."},{n:"Tutte e 4 le notti al Cheyenne",s:[["s-p",1970.24,"pacchetto 1.970 €"],["s-r",76.4,"trasporti 76 €"]],note:"Due giorni di biglietti inclusi ma non usati."}];
 const drawBars=()=>{const cm=conto(MIO_S),me=scStr(SCE);let h='',cl='';
  const L=BARS.map(b=>{const c=conto(b);return c&&{sc:b,n:scName(b),s:[["s-h",c.al,(b.n?"alloggi ":"alloggio ")+fmt(c.al)],["s-t",544,"biglietti 544 €"],["s-r",c.tr,"trasporti "+fmt(c.tr)]],note:b.t}}).filter(Boolean).concat(PKG);
@@ -1038,14 +1059,14 @@ const drawBars=()=>{const cm=conto(MIO_S),me=scStr(SCE);let h='',cl='';
 /* ---------- alloggi: tutti a confronto, numero fisso (ordinati per prezzo), filtri per desiderio ---------- */
 const BK=s=>`https://www.booking.com/hotel/fr/${s}.it.html?checkin=2026-12-13&checkout=2026-12-17&group_adults=2&group_children=0&no_rooms=1`;
 const VIS=B.ok('visto il 21/11/2026');
-/* Airbnb (n. 16–21, 23 e 25–28): appunti research_notes/…/alloggi_airbnb_disney_14_17.md e alloggi_nuovi_13_17_ricerca.md. Prezzi tutto incluso letti in euro su airbnb.it il 21/11/2026 sera;
+/* Airbnb (n. 16–21, 23, 25–28 e 31–35): appunti research_notes/…/alloggi_airbnb_disney_14_17.md e alloggi_nuovi_13_17_ricerca.md. Prezzi tutto incluso letti in euro su airbnb.it il 21/11/2026 sera;
    p e Q[id][0] = 4 notti 13→17 (null = Airbnb dice «date non disponibili»: libero solo dal 14) */
 const AB=(id,d)=>`https://www.airbnb.it/rooms/${id}?check_in=2026-12-${d}&check_out=2026-12-17&adults=2`,ABV=B.ok('visto su Airbnb il 21/11/2026'),
  EURT="Prezzi tutto incluso, letti in euro su airbnb.it.",DAL14="<b>Libero solo dal 14:</b> va bene se domenica dormite a Parigi.",
  abCon=h=>`Niente reception. Con la domenica a Parigi, lunedì 14 si entra solo dalle ${h}: valigie al deposito della stazione di Chessy (livello +1, 7:00–22:00) o accordo col gestore.`,
  ab4=(id,t)=>`<a href="${AB(id,13)}" target="_blank" rel="noopener">${t}</a>`;
 const GN={meno:"Spendere meno",vicino:"Vicino al treno",comodo:"Tutto comodo",spa:"Spa e piscina",romantico:"Romantico",spazio:"Più spazio",parchi:"A piedi dai parchi",airbnb:"Airbnb"};
-const GD={tutti:"Tutti, con il numero fisso: ordinateli come volete.",meno:"Il prezzo più basso con pulizia buona.",vicino:"Al massimo 10 minuti a piedi dalla stazione Val d'Europe, poi 3 minuti di treno fino ai parchi.",comodo:"Reception 24 ore, poco cammino, bar e negozi vicino: la vacanza più rilassata.",spa:"Piscina, sauna o idromassaggio. Tutte le spa chiudono entro le 22:00: col n. 12 la usate domenica sera, dopo i mercatini. Vicino al treno ce n'è una sola: il n. 12.",romantico:"Vasca privata, una casa curata con colazione o una spa con massaggi di coppia.",spazio:"Appartamenti da 47 a 70 m², o con 2 camere.",parchi:"Dormire dentro Disney: a piedi ai parchi, ma costa molto di più.",airbnb:"Appartamenti su Airbnb (n. 16–21, 23 e 25–28): niente reception, di solito arrivo con la cassetta delle chiavi. Prezzi tutto incluso, letti in euro su airbnb.it. I n. 18, 20 e 21 sono liberi solo dal 14: vanno bene se domenica dormite a Parigi. Voti su 5, di solito più alti di quelli di Booking: per ordinarli la pagina li conta ×2, ma non sono confrontabili 1 a 1."};
+const GD={tutti:"Tutti, con il numero fisso: ordinateli come volete.",meno:"Il prezzo più basso con pulizia buona.",vicino:"Al massimo 10 minuti a piedi dalla stazione Val d'Europe, poi 3 minuti di treno fino ai parchi.",comodo:"Reception 24 ore, poco cammino, bar e negozi vicino: la vacanza più rilassata.",spa:"Piscina, sauna o idromassaggio. Tutte le spa chiudono entro le 22:00: col n. 12 la usate domenica sera, dopo i mercatini. Vicino al treno ce n'è una sola: il n. 12.",romantico:"Vasca privata, una casa curata con colazione o una spa con massaggi di coppia.",spazio:"Appartamenti da 47 a 70 m², o con 2 camere.",parchi:"Dormire dentro Disney: a piedi ai parchi, ma costa molto di più.",airbnb:"Appartamenti su Airbnb (n. 16–21, 23, 25–28 e 31–35): niente reception, di solito arrivo con la cassetta delle chiavi. Prezzi tutto incluso, letti in euro su airbnb.it. I n. 18, 20 e 21 sono liberi solo dal 14: vanno bene se domenica dormite a Parigi. Voti su 5, di solito più alti di quelli di Booking: per ordinarli la pagina li conta ×2, ma non sono confrontabili 1 a 1."};
 const AL=[
  {id:1,n:"Love N Chic",sub:"Monolocale · Chessy, il paese",g:["meno"],sc:"8,9",cl:"9,0",p:391,pr:"391 €",pl:`${VIS} Cancellazione gratuita fino al 29/11.`,min:30,ne:"bus",dist:"Lontano (4 km): bus 2233, circa 10 minuti fino alla stazione dei parchi.",sun:"Arrivo fino alle 23:30. Domenica il bus da Val d'Europe parte alle 22:00 e arriva alle 22:16.",tr:"Bus: 24,60 € in due da lunedì a mercoledì.",pro:"Il prezzo più basso tra gli alloggi buoni, con tante recensioni (548). 27 m², letto matrimoniale, cucina.",con:"Dipendete dal bus: la sera, dopo le 22:00, potete aspettare fino a 40 minuti.",u:BK('studio-1-chessy')},
  {id:2,pc:[730,"Con cancellazione gratuita fino al 10/12 (stima)"],n:"Ki Space Hotel & Spa",sub:"Hotel 4 stelle con spa · Serris",g:["spa","meno"],sc:"8,4",cl:"8,9",p:465,pr:"465 €",pl:`Prezzo che avete visto nella vostra app. Da computer ${VIS} 559 €. Non rimborsabile. Con cancellazione gratuita fino al 10/12 circa 730 € ${B.es()}. Sul sito ufficiale −20 % per queste notti: prezzo da leggere lì.`,min:30,ne:"navetta",dist:"3,1 km: navetta gratuita circa ogni 50 minuti.",sun:"Reception 24 ore, ma dalla stazione serve la navetta: anche 50 minuti di attesa.",tr:"Navetta gratis, oppure bus 24,60 € in due.",spa:`Piscina di 23 m con idromassaggio, inclusa (7–22). Sauna e hammam 20 € a persona all'ora se prenotate su Booking, dai 16 anni. <b>Domenica, col giro dei mercatini fino a sera, non si usa:</b> arrivate verso le 22:30 ${B.es('stima, navetta da confermare')} (treno delle 21:08 o 21:23 più la navetta, che passa circa ogni 50 minuti; orario non ufficiale) e la piscina chiude alle 22. Per usarla, lasciate Parigi verso le 19:30 ${B.es()}.`,pro:"La spa più grande della zona al prezzo più basso. Camera di 27 m² con cucina.",con:"Senza auto è scomodo: la navetta è rara e la sera è piena. Domenica, se restate ai mercatini fino a sera, arrivate verso le 22:30 (stima, navetta da confermare: treno delle 21:08 o 21:23 più la navetta, circa ogni 50 minuti; orario non ufficiale) e la piscina chiude alle 22. Hotel per famiglie, niente negozi vicino. Colazione 22 € a testa.",u:BK('ki-space-amp-spa')},
@@ -1076,7 +1097,12 @@ const AL=[
  {id:27,ab:1,n:"Appartamento Confort Disneyland Paris",sub:"Appartamento con 2 camere su Airbnb · Montévrain, zona Val d'Europe",g:["airbnb","meno","vicino","spazio"],sc:"4,85/5",cl:"5,0/5",p:452,pr:"452 €",pl:`${ABV} ${ab4('1156535924916338825','4 notti 13→17')}: 452 € «in totale» (prima 557 €; dettaglio di pulizia e tasse ${B.nc('non letto')}), cancellazione gratuita fino al 12/12; 3 notti 14→17: 352 € (prima 429 €), cancellazione gratuita fino al 13/12. Voto Airbnb 4,85 su 5 con 250 recensioni.`,min:5,ne:"5 min",dist:`400 metri dalla stazione Val d'Europe, scrive il gestore: circa 5 minuti a piedi ${B.es()}.`,sun:"Libero dal 13. Arrivo solo dalle 16:00 alle 22:00: domenica lasciate Parigi prima, verso le 18:50.",tr:"Treno: 30,60 € in due.",pro:"Spazioso: 3 locali, una camera con letto matrimoniale e una con 2 letti singoli, più un divano letto, in una residenza nuova. Voto 4,85 su 5 con 250 recensioni, pulizia 5,0, gestore Superhost. Cancellazione gratuita fino al 12/12.",con:`Domenica arrivo entro le 22:00: per arrivare più tardi serve l'ok scritto del gestore. Telecamere all'esterno della proprietà (lo scrive l'annuncio). Età minima e cauzione ${B.nc('non lette')}. ${abCon('16:00')} Check-out alle 11:00.`,u:AB('1156535924916338825',13),ul:"Apri su Airbnb: 13→17 dic, 2 adulti"},
  {id:28,ab:1,n:"Appartamento Disney, RER a 6 minuti",sub:"Bilocale su Airbnb · Montévrain, zona Val d'Europe",g:["airbnb","vicino"],sc:"4,85/5",cl:"4,8/5",p:546,pr:"546 €",pl:`${ABV} ${ab4('1006404591826375173','4 notti 13→17')}: 546 € «in totale», pulizia finale inclusa (lo scrive il gestore), cancellazione gratuita fino al 12/12; 3 notti 14→17: 415 €, cancellazione gratuita fino al 13/12. Voto Airbnb 4,85 su 5 con 124 recensioni.`,min:6,ne:"5–6 min",dist:"«A 5 minuti a piedi» dalla stazione Val d'Europe, «a soli 500 metri»: lo scrive il gestore.",sun:"Libero dal 13. Arrivo dalle 16:00 con la serratura elettronica (smart lock): domenica dopo i mercatini va bene.",tr:"Treno: 30,60 € in due.",pro:"Letto matrimoniale grande (160 × 190 cm) in una camera separata, più un divano letto. Voto 4,85 su 5 con 124 recensioni, gestore Superhost. Cancellazione gratuita fino al 12/12.",con:`Il più caro dei 4 Airbnb di Montévrain. Pulizia 4,8 su 5, al limite. m² ${B.nc('non letti')}: un'ospite scrive che «nelle foto sembra più grande». Età minima e cauzione ${B.nc('non lette')}. ${abCon('16:00')} Check-out alle 11:00.`,u:AB('1006404591826375173',13),ul:"Apri su Airbnb: 13→17 dic, 2 adulti"},
  {id:29,n:"ARIANE 1, davanti alla RER",sub:"Appartamento su Booking · Serris, davanti alla stazione Val d'Europe",g:["vicino","spazio"],sc:"8,9",cl:"9,1",p:650,pr:"650 €",pl:`${VIS} su Booking: appartamento con 1 camera, 650 € con tasse e costi, cancellazione gratuita prima dell'8/12, non si paga niente prima del 6/12. È una <b>richiesta di prenotazione</b>: il gestore deve accettarla. 3 notti 14→17: 512 €, cancellazione gratuita prima del 9/12.`,min:2,ne:"1–2 min",dist:`100 m dalla stazione Val d'Europe, scrive Booking (la descrizione dice 300 m): da 1 a 4 minuti a piedi ${B.es()}.`,sun:"Libero dal 13. Arrivo dalle 15:00 a qualsiasi ora, con la serratura a codice: l'ora di arrivo va comunicata prima.",tr:"Treno: 30,60 € in due.",pro:"Il treno davanti alla porta. 49 m² con camera separata, vasca, lavastoviglie, balcone e terrazza. Voto 8,9, pulizia 9,1, posizione 9,8. Domenica si arriva a qualsiasi ora.",con:`650 €, al limite del tetto. Poche recensioni (38) e prenotazione da far confermare al gestore. Letto matrimoniale alla francese (stretto, circa 140 cm ${B.es()}). Danni fino a 300 € addebitati dopo la partenza. ${abCon('15:00')} Check-out alle 10:00.`,u:BK('ariane-1-face-rer-val-d-europe-5mn-de-disneyland')},
- {id:30,n:"Residhome Val d'Europe",sub:"Aparthotel · Montévrain, 200 m dalla stazione Val d'Europe",g:["vicino","comodo"],sc:"8,4",cl:"8,5",p:600,pr:"600 €",pl:`${VIS} su Booking: 600 € <b>non rimborsabile</b> (tipo di camera ${B.nc('non letto')}). Per poter cancellare gratis (fino alle 18:00 del 13/12) da 697 €. 3 notti 14→17: 582 € con cancellazione gratuita fino alle 18:00 del 14/12 (non rimborsabile 500 €), appartamento familiare di 34 m² con letto matrimoniale alla francese e 2 divani letto. Colazione 16 € a parte.`,min:3,ne:"3 min",dist:`200 m dalla stazione Val d'Europe, scrive Booking: circa 3 minuti a piedi ${B.es()}.`,sun:"Reception 24 ore, a 3 minuti dal treno.",tr:"Treno: 30,60 € in due.",pro:"Reception 24 ore a 3 minuti dal treno: lunedì mattina le valigie restano lì e nessun orario da rispettare. Angolo cottura. Tantissime recensioni (7.335).",con:"Pulizia 8,5, proprio sulla soglia. Sotto 650 € solo non rimborsabile: per poter cancellare circa 700 €. Cauzione 250 € con carta di credito all'arrivo. Check-out alle 11:00.",u:BK('residence-val-d-europe')}
+ {id:30,n:"Residhome Val d'Europe",sub:"Aparthotel · Montévrain, 200 m dalla stazione Val d'Europe",g:["vicino","comodo"],sc:"8,4",cl:"8,5",p:647,pr:"647 €",pl:`${VIS} su Booking: 647 € <b>non rimborsabile</b> (prima 600 €; tipo di camera ${B.nc('non letto')}). Per poter cancellare gratis (fino alle 18:00 del 13/12) 752 €. 3 notti 14→17: 585 € con cancellazione gratuita fino alle 18:00 del 14/12 (non rimborsabile 467 €), appartamento familiare di 34 m² con letto matrimoniale alla francese e 2 divani letto. Colazione 16 € a parte.`,min:3,ne:"3 min",dist:`200 m dalla stazione Val d'Europe, scrive Booking: circa 3 minuti a piedi ${B.es()}.`,sun:"Reception 24 ore, a 3 minuti dal treno.",tr:"Treno: 30,60 € in due.",pro:"Reception 24 ore a 3 minuti dal treno: lunedì mattina le valigie restano lì e nessun orario da rispettare. Angolo cottura. Tantissime recensioni (7.335).",con:"Pulizia 8,5, proprio sulla soglia. Sotto 650 € solo non rimborsabile, al limite del tetto: per poter cancellare 752 €. Cauzione 250 € con carta di credito all'arrivo. Check-out alle 11:00.",u:BK('residence-val-d-europe')},
+ {id:31,ab:1,n:"Top Appartamento Disneyland Paris",sub:"Appartamento su Airbnb · Chessy, zona Val d'Europe",g:["airbnb","meno","vicino"],sc:"4,84/5",cl:"4,9/5",p:475,pr:"475 €",pl:`${ABV} ${ab4('24683013','4 notti 13→17')}: 475 € «in totale» (dettaglio di pulizia e tasse ${B.nc('non letto')}), cancellazione gratuita fino all'8/12, poi rimborso parziale fino al 13/12; 3 notti 14→17: 376 €. Voto Airbnb 4,84 su 5 con 193 recensioni.`,min:7,ne:"7 min",dist:`«A pochi passi» dalla stazione Val d'Europe, scrive il gestore; sulla mappa di Airbnb 440 m: circa 7 minuti a piedi ${B.es()}.`,sun:"Libero dal 13. Arrivo dalle 16:00 a mezzanotte con la cassetta delle chiavi: domenica dopo i mercatini va bene.",tr:"Treno: 30,60 € in due.",pro:"Letto matrimoniale vero (152 × 203 cm) in una camera separata. Voto 4,84 su 5 con 193 recensioni, pulizia 4,9, gestori Superhost. Si arriva fino a mezzanotte. Cancellazione gratuita fino all'8/12.",con:`Piano terra: un'ospite lo trova un po' esposto ai passanti. Niente forno. In sala un letto a castello (è per 4). Silenzio dalle 20:00. m² ${B.nc('non letti')}. Età minima e cauzione ${B.nc('non lette')}. ${abCon('16:00')} Check-out presto: alle 10:00.`,u:AB('24683013',13),ul:"Apri su Airbnb: 13→17 dic, 2 adulti"},
+ {id:32,ab:1,n:"Nice Studio at Mickey's",sub:"Monolocale su Airbnb · Montévrain, zona Val d'Europe",g:["airbnb","meno","vicino"],sc:"4,82/5",cl:"4,8/5",p:484,pr:"484 €",pl:`${ABV} ${ab4('24130153','4 notti 13→17')}: 484 € «in totale» (dettaglio di pulizia e tasse ${B.nc('non letto')}), cancellazione gratuita fino al 12/12; 3 notti 14→17: 370 €. Voto Airbnb 4,82 su 5 con 531 recensioni.`,min:5,ne:"4–5 min",dist:`La stazione Val d'Europe è «a 400 m» (in un altro punto «300 m»), scrive il gestore: 4–5 minuti a piedi ${B.es()}.`,sun:"Libero dal 13. Arrivo dalle 14:00 con la cassetta delle chiavi: domenica dopo i mercatini va bene.",tr:"Treno: 30,60 € in due.",pro:"Tantissime recensioni: 531, voto 4,82 su 5. A 4–5 minuti dal treno. Si entra dalle 14:00. Cancellazione gratuita fino al 12/12.",con:`Piccolo: monolocale di 27 m² con 2 letti matrimoniali e un divano letto nella stessa stanza, arredato per famiglie. Pulizia 4,8 su 5, proprio sulla soglia. Età minima e cauzione ${B.nc('non lette')}. ${abCon('14:00')} Check-out alle 11:00.`,u:AB('24130153',13),ul:"Apri su Airbnb: 13→17 dic, 2 adulti"},
+ {id:33,ab:1,n:"A pochi passi da Disney, con balcone",sub:"Bilocale su Airbnb · Chessy, zona Val d'Europe",g:["airbnb","vicino"],sc:"4,89/5",cl:"4,9/5",p:583,pr:"583 €",pl:`${ABV} ${ab4('974712785668568895','4 notti 13→17')}: 583 € «in totale» (dettaglio di pulizia e tasse ${B.nc('non letto')}), cancellazione gratuita fino al 12/12; 3 notti 14→17: 449 €. Voto Airbnb 4,89 su 5 con 140 recensioni.`,min:9,ne:"5–9 min",dist:`«5 minuti a piedi dalla stazione RER A», scrive il gestore; sulla mappa di Airbnb 537 m: circa 9 minuti ${B.es()}.`,sun:"Libero dal 13. Arrivo dalle 17:00 con la cassetta delle chiavi: domenica dopo i mercatini va bene.",tr:"Treno: 30,60 € in due.",pro:"Camera con letto matrimoniale (152 × 203 cm), più un divano letto. Aria condizionata. Dal balcone si vedono le luci dello spettacolo Disney, scrive il gestore. Voto 4,89 su 5 con 140 recensioni, pulizia 4,9, gestore Superhost.",con:`583 €: fra i più cari degli Airbnb. Un ospite scrive «25 minuti a piedi dal parco» (a piedi fino al parco; col treno da Val d'Europe sono 3 minuti). Silenzio dalle 21:00. Età minima e cauzione ${B.nc('non lette')}. ${abCon('17:00')} Check-out alle 11:00.`,u:AB('974712785668568895',13),ul:"Apri su Airbnb: 13→17 dic, 2 adulti"},
+ {id:34,ab:1,n:"2 min Disney, accanto alla stazione",sub:"Bilocale su Airbnb · Chessy, accanto alla stazione Val d'Europe",g:["airbnb","vicino"],sc:"4,98/5",cl:"4,9/5",p:598,pr:"598 €",pl:`${ABV} ${ab4('1107761783058404933','4 notti 13→17')}: 598 € «in totale» (dettaglio di pulizia e tasse ${B.nc('non letto')}), cancellazione gratuita <b>solo per 24 ore</b>, poi rimborso parziale fino al 6/12; 3 notti 14→17: 477 €. Voto Airbnb 4,98 su 5 con 154 recensioni.`,min:3,ne:"2–3 min",dist:`«A pochi passi dalla stazione», scrive Airbnb; sulla mappa 146 m: 2–3 minuti a piedi ${B.es()}.`,sun:"Libero dal 13. Arrivo dalle 16:00 con la cassetta delle chiavi: domenica dopo i mercatini va bene.",tr:"Treno: 30,60 € in due.",pro:"Voto altissimo: 4,98 su 5 con 154 recensioni, pulizia 4,9, gestore Superhost. A 2–3 minuti dal treno, sopra un minimarket e ristoranti. Letto matrimoniale (152 × 203 cm) in una camera grande con balcone, più un divano letto.",con:`Cancellazione gratuita solo per 24 ore: dopo, se cancellate, riavete solo una parte dei soldi. Età minima e cauzione ${B.nc('non lette')}. ${abCon('16:00')} Check-out presto: alle 10:00.`,u:AB('1107761783058404933',13),ul:"Apri su Airbnb: 13→17 dic, 2 adulti"},
+ {id:35,ab:1,n:"Appartamento Premium 41 m²",sub:"Bilocale su Airbnb · Montévrain, zona Val d'Europe",g:["airbnb"],sc:"4,89/5",cl:"4,8/5",p:547,pr:"547 €",pl:`${ABV} ${ab4('928939744715124546','4 notti 13→17')}: 547 € «in totale» (prezzo pieno 614 €; dettaglio di pulizia e tasse ${B.nc('non letto')}), cancellazione gratuita fino al 12/12; 3 notti 14→17: 419 €, cancellazione gratuita fino al 13/12. Voto Airbnb 4,89 su 5 con 170 recensioni.`,min:12,ne:"10–12 min",dist:`«10 minuti a piedi» dalla stazione Val d'Europe, scrivono il gestore e un ospite; sulla mappa di Airbnb 741 m: circa 12 minuti ${B.es()}.`,sun:"Libero dal 13. Arrivo dalle 16:00 a mezzanotte con la cassetta delle chiavi: domenica dopo i mercatini va bene.",tr:"Treno: 30,60 € in due.",pro:"41 m² con camera separata e letto matrimoniale, più un divano letto da 160 × 200 cm. Check-out comodo, alle 12:00. Voto 4,89 su 5 con 170 recensioni, gestore Superhost (lo stesso del n. 17).",con:`10–12 minuti a piedi: al limite di «vicino al treno». Pulizia 4,8 su 5, al limite. Silenzio dalle 20:00. Età minima e cauzione ${B.nc('non lette')}. ${abCon('16:00')}`,u:AB('928939744715124546',13),ul:"Apri su Airbnb: 13→17 dic, 2 adulti"}
 ];
 const PICKS=[["Spendere poco",4,"492 €, pulizia 9,5, 47 m². A 15–20 minuti a piedi dal treno."],["Tutto comodo",8,"524 €, reception 24 ore, 8 minuti dal treno. Se si libera, il n. 15 è ancora meglio."],["Con la spa",12,"Il migliore per 4 notti nello stesso posto. Spa inclusa per la domenica sera, 5 minuti dal treno. 908 € con letto matrimoniale e cancellazione gratuita fino all'8/12."],["Romantico",13,"773 €, vasca idromassaggio privata, solo adulti."],["Il prezzo più basso",1,"391 €, pulizia 9,0. Serve il bus."],["Più spazio, vicino al treno",6,"509 €, 50 m² con terrazza, 8 minuti dal treno."]];
 const byId=id=>AL.find(h=>h.id===id);
@@ -1139,10 +1165,16 @@ const Q={1:[[391,"letto matrimoniale, cancellazione gratuita fino al 29/11"],[29
  27:[[452,"Airbnb, «in totale»; cancellazione gratuita fino al 12/12"],[352,"Airbnb, «in totale»; cancellazione gratuita fino al 13/12"]],
  28:[[546,"Airbnb, «in totale»; cancellazione gratuita fino al 12/12"],[415,"Airbnb, «in totale»; cancellazione gratuita fino al 13/12"]],
  29:[[650,"richiesta di prenotazione; cancellazione gratuita prima dell'8/12"],[512,"richiesta di prenotazione; cancellazione gratuita prima del 9/12"]],
- 30:[[600,"non rimborsabile; per poter cancellare da 697 €"],[582,"cancellazione gratuita fino al 14/12 alle 18:00 (non rimborsabile 500 €)"]]};
+ 30:[[647,"non rimborsabile; per poter cancellare 752 €"],[585,"cancellazione gratuita fino al 14/12 alle 18:00 (non rimborsabile 467 €)"]],
+ /* n. 31–35: alloggi_ricerca_profonda_appartamenti.md (ricerca C12, letti su airbnb.it il 21/11/2026 sera); cancellazione delle 3 notti non letta */
+ 31:[[475,"Airbnb, «in totale»; cancellazione gratuita fino all'8/12"],[376,"Airbnb, «in totale»; cancellazione: leggetela su Airbnb"]],
+ 32:[[484,"Airbnb, «in totale»; monolocale; cancellazione gratuita fino al 12/12"],[370,"Airbnb, «in totale»; monolocale; cancellazione: leggetela su Airbnb"]],
+ 33:[[583,"Airbnb, «in totale»; cancellazione gratuita fino al 12/12"],[449,"Airbnb, «in totale»; cancellazione: leggetela su Airbnb"]],
+ 34:[[598,"Airbnb, «in totale»; cancellazione gratuita solo per 24 ore, poi rimborso parziale fino al 6/12"],[477,"Airbnb, «in totale»; cancellazione gratuita solo per 24 ore"]],
+ 35:[[547,"Airbnb, «in totale» (prezzo pieno 614 €); cancellazione gratuita fino al 12/12"],[419,"Airbnb, «in totale»; cancellazione gratuita fino al 13/12"]]};
 const REC=[2,3,8,9,11,12,14,15,22,24,30]; /* reception: le valigie del lunedì mattina si lasciano lì */
 let PO=false; /* elenco degli hotel di Parigi aperto (C6) */
-const MIO_S={n:"lo",d:8},scStr=s=>(s.n||'4n')+'-'+s.d,isMio=()=>scStr(SCE)===scStr(MIO_S);
+const MIO_S={n:"",d:8},scStr=s=>(s.n||'4n')+'-'+s.d,isMio=()=>scStr(SCE)===scStr(MIO_S);
 const scParse=v=>{const m=/^(lo|sb|is|nv|pa|sp|as|rh|4n)-(\d{1,2})$/.exec(String(v||''));return m&&AL.some(h=>h.id===+m[2])?{n:m[1]==='4n'?'':m[1],d:+m[2]}:null};
 let SCE=null;try{const u=new URLSearchParams(location.search),a=+u.get('alloggio'),b=+localStorage.getItem('pdn-alloggio');SCE=scParse(u.get('scelta'))||(AL.some(h=>h.id===a)?{n:'',d:a}:null)||scParse(localStorage.getItem('pdn-scelta'))||(AL.some(h=>h.id===b)?{n:'',d:b}:null)}catch(e){}
 let SCELTO=!!SCE;if(!SCE)SCE={n:MIO_S.n,d:MIO_S.d};
@@ -1168,7 +1200,8 @@ const num=s=>parseFloat(String(s).replace(',','.'))||0,v10=(h,k)=>num(h[k])*(h.a
 /* ordine (Mario 21/11 23:5x: «dai più vicini a Disneyland, i meno cari, i più puliti e vicino alla RER»); parkMin è più sotto: si usa solo al tocco */
 /* vicino alla RER: minuti a piedi fino alla stazione (DV); chi va con la navetta o il bus dopo tutti quelli a piedi */
 const rerMin=h=>{const L=DV[h.id][1];return L.every(l=>l[0]==='w')?L.reduce((x,l)=>x+l[1],0):100+h.min};
-const byP=(a,b)=>(a.p??1e9)-(b.p??1e9),SORT={prezzo:byP,disney:(a,b)=>parkMin(a.id)-parkMin(b.id)||byP(a,b),rer:(a,b)=>rerMin(a)-rerMin(b)||byP(a,b),pulizia:(a,b)=>v10(b,'cl')-v10(a,'cl')||byP(a,b)};
+const kmD=d=>{const m=MP[d];return m?parseFloat(m.km[1].replace(',','.')):99},kmDT=d=>{const m=MP[d];return m?(m.z?'≈ ':'')+m.km[1]:''};
+const byP=(a,b)=>(a.p??1e9)-(b.p??1e9),SORT={prezzo:byP,disney:(a,b)=>kmD(a.id)-kmD(b.id)||parkMin(a.id)-parkMin(b.id)||byP(a,b),rer:(a,b)=>rerMin(a)-rerMin(b)||byP(a,b),pulizia:(a,b)=>v10(b,'cl')-v10(a,'cl')||byP(a,b)};
 $('#filters').innerHTML=[['tutti','Tutti'],...Object.entries(GN)].map(([k,t])=>`<button type="button" data-f="${k}" aria-pressed="${k===FI}">${esc(t)}</button>`).join('');
 const renderAl=()=>{const L=AL.filter(h=>FI==='tutti'||h.g.includes(FI)).sort(SORT[SO]);
  $('#fdesc').textContent=GD[FI]+` Sono ${L.length}.`;
@@ -1265,7 +1298,12 @@ const ACC={
  27:vde(5,{da:"dall'appartamento",al:"all'appartamento",a:VDE,by22:1,inBy:"20:10",chi:"l'appartamento",warn:"L'appartamento accetta arrivi solo dalle 16:00 alle 22:00: per arrivare più tardi serve l'ok scritto del gestore."}),
  28:vde(6,{mt:"5–6",da:"dall'appartamento",al:"all'appartamento",a:VDE}),
  29:vde(2,{mt:"1–2",da:"dall'appartamento",al:"all'appartamento",a:"9 Place d'Ariane, 77700 Serris"}),
- 30:vde(3,{da:"dal Residhome",al:"al Residhome",a:"Residhome Val d'Europe, 3 place Jean Monnet, 77144 Montévrain"})
+ 30:vde(3,{da:"dal Residhome",al:"al Residhome",a:"Residhome Val d'Europe, 3 place Jean Monnet, 77144 Montévrain"}),
+ 31:vde(7,{da:"dall'appartamento",al:"all'appartamento",a:VDE}),
+ 32:vde(5,{mt:"4–5",da:"dal monolocale",al:"al monolocale",a:VDE}),
+ 33:vde(9,{mt:"5–9",da:"dall'appartamento",al:"all'appartamento",a:VDE}),
+ 34:vde(3,{mt:"2–3",da:"dall'appartamento",al:"all'appartamento",a:VDE}),
+ 35:vde(12,{mt:"10–12",da:"dall'appartamento",al:"all'appartamento",a:VDE})
 };
 const SN={VDE:"Val d'Europe",CH:"Marne-la-Vallée–Chessy"};
 /* euro a testa da lunedì a mercoledì (6 corse) più l'eventuale bus di domenica sera e di giovedì mattina */
@@ -1303,6 +1341,11 @@ const MPV=1,MP={
  28:{z:1,km:["31 km", "1,7 km", "33 km"]},
  29:{h:[43.1, 82.3],m:[[40.8, 83.3, "VDE", "l", "u"], [59.2, 16.7, "CH", "l", ""]],km:["31 km", "1,7 km", "33 km"]},
  30:{h:[38.3, 83.3],m:[[44.2, 80.3, "VDE", "r", ""], [61.7, 16.7, "CH", "l", ""]],km:["31 km", "1,9 km", "33 km"]},
+ 31:{z:1,km:["31 km", "1,7 km", "33 km"]},
+ 32:{z:1,km:["31 km", "1,7 km", "33 km"]},
+ 33:{z:1,km:["31 km", "1,7 km", "33 km"]},
+ 34:{z:1,km:["31 km", "1,7 km", "33 km"]},
+ 35:{z:1,km:["31 km", "1,7 km", "33 km"]},
  lo:{h:[41.9, 29.4],m:[[58.1, 70.6, "GL", "l", ""]],km:["1,9 km", "30 km", "13 km"]},
  sb:{h:[35.0, 32.5],m:[[65.0, 67.5, "GL", "l", ""]],km:["1,7 km", "30 km", "13 km"]},
  is:{h:[52.8, 37.6],m:[[47.2, 62.3, "GL", "r", ""]],km:["2,2 km", "30 km", "13 km"]},
@@ -1325,7 +1368,8 @@ const DV={1:["CH",[["w",5],["bus",10,"2233"]]],2:["CH",[["bus",15,"navetta"]],"N
  8:["VDE",[["w",8]]],9:["VDE",[["w",7]]],10:["VDE",[["w",12]]],11:["CH",[["bus",8,"navetta"]],"Navetta ogni 30 minuti: aggiungete l'attesa.",1],
  12:["VDE",[["w",5]]],13:["VDE",[["bus",12,"2234"]],"Oppure 30 minuti a piedi fino alla stazione."],14:["CH",[["w",10]]],15:["VDE",[["w",2]]],
  16:["VDE",[["w",1]]],17:["VDE",[["w",1]]],18:["VDE",[["w",10]]],19:["VDE",[["w",3]]],20:["VDE",[["w",5]]],21:["VDE",[["w",8]]],22:["CH",[["bus",10,"navetta"]],"Navetta gratuita, orari da chiedere: aggiungete l'attesa.",1],23:["VDE",[["w",5]]],24:["CH",[["bus",10,"navetta"]],"Navetta circa ogni 20–30 minuti (non ufficiale): aggiungete l'attesa.",1],
- 25:["VDE",[["w",10]]],26:["VDE",[["w",5]]],27:["VDE",[["w",5]]],28:["VDE",[["w",6]]],29:["VDE",[["w",2]]],30:["VDE",[["w",3]]]};
+ 25:["VDE",[["w",10]]],26:["VDE",[["w",5]]],27:["VDE",[["w",5]]],28:["VDE",[["w",6]]],29:["VDE",[["w",2]]],30:["VDE",[["w",3]]],
+ 31:["VDE",[["w",7]]],32:["VDE",[["w",5]]],33:["VDE",[["w",9]]],34:["VDE",[["w",3]]],35:["VDE",[["w",12]]]};
 const legChip=l=>l[0]==="bus"?`<span>${lb('bus')}${esc(/^\d/.test(l[2])?'bus '+l[2]:l[2])} ${l[1]} min</span>`:`<span>${lb(l[0])}${l[1]} min</span>`;
 const durata=m=>{m=Math.max(5,Math.round(m/5)*5);if(m<60)return `circa ${m} minuti`;const h=Math.floor(m/60),r=m%60;return `circa ${h===1?'1 ora':h+' ore'}${r?' e '+r:''}`};
 const dove=n=>{const d=DV[n],mp=MP[n],a=ACC[n].a,s=RA[d[0]],acc=d[1];
@@ -1370,6 +1414,8 @@ let P=ACC[CHO];
 const goPark=(dest,name,tt)=>({t:tt||P.out,ti:"Uscite "+P.da,d:`Obiettivo: essere ai cancelli verso le ${P.early?'7:55':'8:30'}. ${name} apre alle 9:00${P.early?', per voi alle 8:00':''}.`,legs:P.go,maps:[["Apri in Google Maps",gm(dest,{from:P.a})]]});
 const amSpa=()=>P.am?[{t:"07:00",ti:"Spa dell'hotel",d:P.am}]:[];
 /* lunedì con la notte a Parigi: check-out, RER A con le valigie, valigie nell'alloggio, poi il parco */
+/* riga della scelta: come si arriva alla RER (Mario 22/11 «rer a piedi») */
+const rerT=h=>{const L=DV[h.id][1];if(L.every(l=>l[0]==='w'))return `🚉 RER a piedi ${/min/.test(h.ne)?h.ne:L.reduce((x,l)=>x+l[1],0)+' min'}`;return '🚌 RER: '+L.map(l=>l[0]==='w'?`${l[1]} min a piedi`:`${l[2]==='navetta'?'navetta':'bus'} ${l[1]} min`).join(' + ')};
 const legsDV=d=>DV[d][1].map(l=>l[0]==='w'?["w",`Circa ${l[1]} minuti a piedi ${B.es()}`]:["bus",`${/^\d/.test(l[2])?'Bus '+l[2]:l[2][0].toUpperCase()+l[2].slice(1)}, circa ${l[1]} minuti: orari nell'app Île-de-France Mobilités.`]);
 const monPre=()=>{if(!PN)return[];const m=monB(PN,CHO),st=DV[CHO][0],rec=REC.includes(CHO);
  return [{t:T(m.out),ti:"Check-out e RER A con le valigie",d:`Obiettivo: valigie ${P.al} e ai cancelli verso le 8:30, come gli altri giorni. Volete dormire di più? Uscite mezz'ora dopo: ai cancelli verso le 9:00, all'apertura. Ticket 2,55 €.`,legs:[["w",`${PN.w} minuti a piedi fino a ${RS[PN.st].n} ${B.es()}`],["A",`Direzione Marne-la-Vallée–Chessy fino a ${SN[st]}, ${RS[PN.st][st]} minuti. Salite solo sui treni con scritto Marne-la-Vallée–Chessy.`],...legsDV(CHO)],maps:[["Apri in Google Maps",gm(P.a,{from:PN.a})]]},
@@ -1555,7 +1601,7 @@ function route(s,quiet){SHORT=s;const rF=$('#rFull'),rS=$('#rShort');rF.setAttri
 
 /* ---------- checklist ---------- */
 const CK=[
- ["Oggi","Scegliete dove dormire e prenotate nella vostra app","Il mio consiglio: Hotel Locomo 13→14 dicembre (190 €, cancellazione gratuita fino al 12/12), poi n. 8 Moxy 14→17 dicembre, «Family Sleeper» con letto matrimoniale (530 €, cancellazione gratuita fino al 14/12). 2 adulti."],
+ ["Oggi","Scegliete dove dormire e prenotate nella vostra app","Il mio consiglio: n. 8 Moxy, 4 notti 13→17 dicembre, camera «Family Sleeper» con letto matrimoniale (677 €, cancellazione gratuita fino al 13/12). 2 adulti."],
  ["Subito dopo","Comprate il biglietto Disney 3 giorni / 2 parchi","Sul sito ufficiale, primo giorno 14/12. Controllate il prezzo nel carrello (circa 544 € in due). Rimborsabile fino all'11/12."],
  ["Questa settimana","Controllate la tariffa Volotea e il bagaglio a mano","Se non avete imbarco prioritario o Megavolotea, il trolley al gate costa 65 €: aggiungetelo online."],
  ["Prima di partire","Installate l'app Île-de-France Mobilités e l'app Disneyland Paris","Verificate che i due telefoni siano compatibili. Altrimenti: Navigo Easy da 2 € allo sportello."],
@@ -1676,9 +1722,9 @@ ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class
 <div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>`:''}</div>`)};
   $('#scN').innerHTML=`<p class="sc-g">Prima scelta: tutte e 4 le notti vicino a Disney, 13→17</p><div class="sc-list">${nOpt(null)}</div><details class="sc-par"${PO?' open':''}><summary>Oppure domenica a Parigi, poi 3 notti vicino a Disney (14→17) · ${PAR.length} hotel</summary><p class="sc-g">Vicino alla Gare de Lyon: i più comodi per i treni</p><div class="sc-list">${PAR.filter(p=>p.z==='gl').map(nOpt).join('')}</div><p class="sc-g">In centro, più belli (Opéra, Châtelet)</p><div class="sc-list">${PAR.filter(p=>p.z==='ce').map(nOpt).join('')}</div></details>`;
   const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
-  const byTot=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:byTot,disney:(a,b)=>(a.c?a.c.park:1e9)-(b.c?b.c.park:1e9)||byTot(a,b),rer:(a,b)=>!a.c-!b.c||rerMin(a.h)-rerMin(b.h)||byTot(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||byTot(a,b)};
+  const byTot=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:byTot,disney:(a,b)=>(a.c?kmD(a.h.id):1e9)-(b.c?kmD(b.h.id):1e9)||(a.c?a.c.park:1e9)-(b.c?b.c.park:1e9)||byTot(a,b),rer:(a,b)=>!a.c-!b.c||rerMin(a.h)-rerMin(b.h)||byTot(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||byTot(a,b)};
   $('#scD').innerHTML=L.sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
-   const m=c?(rc?'<span class="sc-rc">★ Il mio consiglio</span>':`<span>Totale${dX(dEur(c.tot,cm.tot))||' uguale'}</span>`)+`<span>🚆 ${c.park} min${dX(dMin(c.park,cm.park))}</span><span>🚶 ${c.walk} min${dX(dMin(c.walk,cm.walk))}</span><span>🧼 ${h.cl}</span>`:h.ab?'<span>Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span>Esaurito per queste notti</span>';
+   const m=c?(rc?'<span class="sc-rc">★ Il mio consiglio</span>':`<span>Totale${dX(dEur(c.tot,cm.tot))||' uguale'}</span>`)+`<span>🏰 Disney ${c.park} min${dX(dMin(c.park,cm.park))} · ${kmDT(h.id)}</span><span>${rerT(h)}</span><span>🧼 ${h.cl}</span>`:h.ab?'<span>Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span>Esaurito per queste notti</span>';
    return row('d-'+h.id,on,!c,`<span class="nb sm">${h.id}</span>`,esc(h.n),esc(h.sub),c?fmt(c.q[0]):h.ab?'dal 14':'?',SCE.n?'3 notti':'4 notti',m,
 `<p class="small muted">${c?esc(c.q[1]):h.ab?'Su Airbnb 13→17 non è disponibile (21/11/2026): libero solo dal 14, va bene se domenica dormite a Parigi.':'Prezzo per queste notti non disponibile (esaurito su Booking).'}</p>
 ${c?`<p class="small">Totale del viaggio ≈ ${fmt(c.tot)}${rc?'':' ('+dEur(c.tot,cm.tot)+' rispetto al consiglio)'}. Ai parchi ${c.park} min${c.nav?' + attesa della navetta':''} ogni mattina; a piedi ${c.walk} min al giorno, circa ${kmT(c.walk)}. Voto ${h.ab?'Airbnb ':''}${h.sc}.</p>`:''}
@@ -1810,16 +1856,17 @@ bar.addEventListener('keydown',e=>{const bs=[...bar.querySelectorAll('button')],
 if(side)side.addEventListener('click',e=>{const a=e.target.closest('a.st');if(a){e.preventDefault();show(a.dataset.t)}});
 
 /* ── pezzo 2 · Dormire ── */
-const TY=[['hotel','🏨 Hotel','e aparthotel'],['bb','🛏️ B&B','e camere'],['casa','🏠 Case','appartamenti e Airbnb']];
+const TY=[['tutti','Tutti','ogni tipo'],['hotel','🏨 Hotel','e aparthotel'],['bb','🛏️ B&B','e camere'],['casa','🏠 Case','appartamenti e Airbnb']];
 const tyOf=t=>/B&B|B&amp;B|chambres? d'h|affittacamer|love room|stanza|camera privata|guest ?house/i.test(t)?'bb':/^(hotel|aparthotel|residence|residhome)/i.test(t.trim())?'hotel':'casa';
 const scD=document.getElementById('scD');
 if(scD){
  let ty=null;try{ty=localStorage.getItem('pdn-tipo')}catch(e){}
  const sw=document.createElement('div');sw.className='tyswitch';sw.setAttribute('role','group');sw.setAttribute('aria-label','Tipo di alloggio');
  const sb=document.querySelector('#scegli .sortbar');(sb||scD).before(sw);
- const tag=()=>{const n={hotel:0,bb:0,casa:0};let on=null;
-  scD.querySelectorAll(':scope>details[data-k^="d-"]').forEach(d=>{const sm=d.querySelector('.sc-n small');const t=tyOf(sm?sm.textContent:'');d.dataset.ty=t;n[t]++;if(d.classList.contains('on'))on=t});
-  if(!ty||!n[ty])ty=on||'hotel';scD.dataset.ty=ty;
+ const tag=()=>{const n={tutti:0,hotel:0,bb:0,casa:0};
+  scD.querySelectorAll(':scope>details[data-k^="d-"]').forEach(d=>{const sm=d.querySelector('.sc-n small');const t=tyOf(sm?sm.textContent:'');d.dataset.ty=t;n[t]++;n.tutti++});
+  if(document.getElementById('scBB')){n.bb++;n.tutti++}
+  if(!ty||!n[ty])ty='tutti';scD.dataset.ty=ty;
   sw.innerHTML=TY.map(([k,a,b])=>`<button type="button" data-ty="${k}" aria-pressed="${k===ty}">${a} · ${n[k]}<small>${b}</small></button>`).join('')};
  sw.addEventListener('click',e=>{const b=e.target.closest('button[data-ty]');if(!b)return;ty=b.dataset.ty;try{localStorage.setItem('pdn-tipo',ty)}catch(e){}tag()});
  new MutationObserver(tag).observe(scD,{childList:true});tag();
