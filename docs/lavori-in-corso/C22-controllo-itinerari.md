@@ -25,3 +25,8 @@
 - N. 16 (Airbnb 5115238): 4,95 su 571, pulizia 4,9, Superhost da 12 anni, 1 minuto dalla RER, arrivo 15:00–02:00 con cassetta delle chiavi, partenza 11:00 → giusti.
 - N. 23 (Airbnb 1376052056754954936): 5,0 su 68, pulizia 5,0, Superhost da 11 anni, meno di 5 minuti dalla RER, arrivo dalle 15:00, partenza 10:00 → giusti.
 - Resta: orari RER A di dicembre (escono verso il 26/11), Orly e mercatini.
+
+## Mario 22/11 ~23:16 (Controllo 20), intero
+> Ok, va bene. Ehm, Non solo Moxie, cioè non so se noi dobbiamo prendere quello di Hotel Moxie, più che altro gli altri due che ti avevo detto. Ehm, Te l'avevo segnati. Gli altri due appartamenti, probabilmente andremo lì. Comunque le scelte sono tre, o Moxie o quei due appartamenti che ti ho detto. Quelli con molta cura, l'itinerario e la guida che si basano molto su quelli, che probabilmente sceglieremo quelli.
+
+→ Scelte possibili SOLO tre: n. 8 Moxy, n. 16, n. 23; più probabili i due appartamenti (n. 16 e 23): itinerario e guida dei giorni curati soprattutto per quelli, con molta cura.
