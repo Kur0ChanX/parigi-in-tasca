@@ -2245,10 +2245,11 @@ if(SL&&PK&&POL&&SC){
  /* in vista adesso? (niente IntersectionObserver: all'apertura diceva «non si vede» e a volte non si correggeva più, la slitta non partiva) */
  const inVista=()=>{const r=SC.getBoundingClientRect();return r.width>0&&r.bottom>0&&r.top<innerHeight};
  const view=()=>{const r=SC.getBoundingClientRect(),s=Math.max(r.width/800,r.height/290),w=r.width/s;return [400-w/2,400+w/2]};
- const COL=[['#D8323F','#F6C964','#F0606A'],['#23955E','#F2606A','#4CC487'],['#3C74D6','#EEF3FF','#77A3F0'],['#E3A92F','#C8202E','#F5CC6A'],['#8E46C2','#F6C964','#B57EE0']];
- /* un pacco di 9 unità rimpicciolito a .72 (~6 px sul telefono, Mario «più piccolini»), lato destro in ombra, coperchio più chiaro, fiocco e alone dorato: si vede sul cielo scuro */
- const nuovoPacco=(x,y,vx,vy)=>{const c=COL[(n*3+pk.length)%COL.length],g=document.createElementNS(NS,'g');
-  g.innerHTML=`<circle r="8" fill="url(#kglow)" opacity=".6"/><rect x="-4.2" y="-2.4" width="8.4" height="6.8" rx=".7" style="fill:${c[0]}"/><rect x="1" y="-2.4" width="3.2" height="6.8" rx=".5" style="fill:#000000" opacity=".24"/><rect x="-.8" y="-2.4" width="1.6" height="6.8" style="fill:${c[1]}"/><rect x="-4.8" y="-4.4" width="9.6" height="2.3" rx=".5" style="fill:${c[2]}"/><rect x="-.8" y="-4.4" width="1.6" height="2.3" style="fill:${c[1]}"/><path d="M0 -4.4q-2.8 -3.2 -3.6 -.4M0 -4.4q2.8 -3.2 3.6 -.4" fill="none" style="stroke:${c[1]}" stroke-width="1.1" stroke-linecap="round"/><circle cx="-2.7" cy="-.6" r=".8" style="fill:#FFFFFF" opacity=".35"/>`;
+ /* v33 · pacchi lanciati (Mario ~14:5x «uno piccolo… uno quadrato, uno un pochettino più grande… più scuri perché sono in lontananza… un po’ in penombra»): forme e misure diverse, tutti più piccoli di prima (8,4×6,8 a .72), colori spenti verso il blu della notte, coperchio appena più chiaro (luna dall’alto), lato destro in ombra, alone leggero */
+ const COL=[['#93404C','#B49A62','#A85A64'],['#2E6A52','#A86870','#3F8066'],['#45609A','#AEB6CC','#5A74AC'],['#9C7C42','#84343E','#AE9058'],['#64487E','#B49A62','#7A5E94']];
+ const FORME=[[4.4,2.6],[3.4,3.4],[5.6,4.8],[3,4.2],[4.8,3.8]];
+ const nuovoPacco=(x,y,vx,vy)=>{const i=n*3+pk.length,c=COL[i%COL.length],[w,h]=FORME[(i*2+n)%FORME.length],x0=-w/2,y0=-h/2,lh=Math.max(.9,h*.28),r=Math.max(.6,w*.18),F=v=>v.toFixed(2),g=document.createElementNS(NS,'g');
+  g.innerHTML=`<circle r="${F(w*.9)}" fill="url(#kglow)" opacity=".25"/><rect x="${F(x0)}" y="${F(y0+lh*.6)}" width="${F(w)}" height="${F(h-lh*.6)}" rx=".4" style="fill:${c[0]}"/><rect x="${F(w*.14)}" y="${F(y0+lh*.6)}" width="${F(w*.36)}" height="${F(h-lh*.6)}" style="fill:#000000" opacity=".28"/><rect x="${F(-r/2)}" y="${F(y0)}" width="${F(r)}" height="${F(h)}" style="fill:${c[1]}"/><rect x="${F(x0-.3)}" y="${F(y0)}" width="${F(w+.6)}" height="${F(lh)}" rx=".35" style="fill:${c[2]}"/><rect x="${F(-r/2)}" y="${F(y0)}" width="${F(r)}" height="${F(lh)}" style="fill:${c[1]}"/><path d="M0 ${F(y0)}q${F(-w*.3)} ${F(-lh*1.4)} ${F(-w*.4)} -.2M0 ${F(y0)}q${F(w*.3)} ${F(-lh*1.4)} ${F(w*.4)} -.2" fill="none" style="stroke:${c[1]}" stroke-width=".7" stroke-linecap="round"/>`;
   PK.appendChild(g);pk.push({g,x,y,vx,vy,a:(Math.random()-.5)*30,va:(Math.random()-.5)*120})};
  /* un granello di polvere di stelle: cade piano e si spegne in meno di 2 s */
  const polvere=(x,y,vx)=>{const e=document.createElementNS(NS,'circle');e.setAttribute('r',(.35+Math.random()*.75).toFixed(2));e.setAttribute('cx',x.toFixed(1));e.setAttribute('cy',y.toFixed(1));e.setAttribute('style','fill:'+(Math.random()<.7?'var(--lamp-hot)':'#FFFFFF'));POL.appendChild(e);pol.push({e,x,y,vx,vy:2+Math.random()*4,v:0,l:.8+Math.random()*.9})};
@@ -2263,7 +2264,7 @@ if(SL&&PK&&POL&&SC){
   if(P.te==null)P.te=t;while(P.te<t){P.te+=.05;const [x,y]=pt(62+Math.random()*44,36+Math.random()*6);polvere(x,y,vx*.15)}};
  const pacchi=dt=>{for(let i=pk.length-1;i>=0;i--){const q=pk[i];q.vy+=30*dt;q.vx*=1-.55*dt;q.x+=q.vx*dt;q.y+=q.vy*dt;q.a+=q.va*dt;
   if(q.y>285){q.g.remove();pk.splice(i,1);continue}
-  q.g.setAttribute('transform',`translate(${q.x.toFixed(2)} ${q.y.toFixed(2)}) rotate(${q.a.toFixed(1)}) scale(.72)`)}
+  q.g.setAttribute('transform',`translate(${q.x.toFixed(2)} ${q.y.toFixed(2)}) rotate(${q.a.toFixed(1)})`)}
   for(let i=pol.length-1;i>=0;i--){const q=pol[i];q.v+=dt;if(q.v>=q.l){q.e.remove();pol.splice(i,1);continue}
    q.x+=q.vx*dt;q.y+=q.vy*dt;q.e.setAttribute('cx',q.x.toFixed(1));q.e.setAttribute('cy',q.y.toFixed(1));q.e.setAttribute('opacity',(.9*(1-q.v/q.l)).toFixed(2))}};
  /* castello da x 400 a 601 del disegno: lì sotto i pacchi cadrebbero dietro le torri (v32: non si vedevano) */
