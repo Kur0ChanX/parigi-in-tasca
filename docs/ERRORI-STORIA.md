@@ -59,3 +59,10 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 - Mario 19:35, video della v40: riga nel cielo, rettangoli e casette che spariscono allargando con due dita, luna sfocata anche senza zoom (nitida nel video della v39 delle 17:57).
 - Causa misurata (Chromium di prova, Pixel 7, 3 s): la v40 contava 814 → 306 animazioni, ma i 38 gruppi di lucine sparse su tutto il disegno portano il lavoro di disegno da 271 a 592 ms e lo stile da 148 a 222 ms. Luna sfocata e rettangoli: ipotesi forte (non misurabile da qui), la prova sarà il telefono di Mario con la v41.
 - Difesa: a ogni cambio della testata traccia del browser prima/dopo (paint, stile, strati) e prova con la pagina ingrandita; testata ferma a pagina ingrandita. Dettagli: `docs/lavori-in-corso/C23-testata-leggera.md`.
+
+## Spostati dal diario il 22/11/2026 (Controllo 19, file snello)
+| Data | Errore | Causa vera | Difesa |
+|---|---|---|---|
+| 21/11/2026 | Il `sw.js` di novembre salvava ogni pagina come «./»: dicembre sovrascriveva la copia senza rete di novembre. | Service worker per un sito con una pagina sola. | `sw.js` lascia stare `/dicembre/`; prova `prova-web-app.js` con e senza rete (storia in ERRORI-STORIA). |
+| 21/11/2026 | La #10 ha tolto da sola la testa di Topolino dall'icona chiesta da Mario. | Dubbio di marchio trattato come divieto, deciso senza Mario. | Dubbi su marchi e personaggi: a Mario il rischio in una riga, decide lui (storia in ERRORI-STORIA). |
+| 21/11/2026 | Link di dicembre mandato a un amico con l'anteprima di novembre. | Link dato come testo semplice con gli spazi: l'app ne ha preso solo un pezzo. | Link da mandare: riquadro di codice, da solo su una riga, anteprima controllata (storia in ERRORI-STORIA). |
