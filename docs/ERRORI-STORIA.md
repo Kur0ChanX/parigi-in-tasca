@@ -51,3 +51,5 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 ## Spostati dal diario il 22/11/2026 (Controllo 15: la lezione è già nella riga del 22/11 sui nomi già usati)
 | 21/11/2026 | Pagina di dicembre larga 735 px su 412, scorreva di lato. | Classe nuova `.pc` già usata dai pro/contro (`display:grid`). | `.pc>main{min-width:0}`, prova «non scorre di lato»; nome nuovo: prima `grep` (storia in ERRORI-STORIA). |
 | 21/11/2026 | Costi: scritte sovrapposte (barre, scala, barra in alto). | Due cose con lo stesso nome `go`. | `prova-scritte.js` su tutta la pagina; nome nuovo: prima `grep` (storia in ERRORI-STORIA). |
+
+| 22/11/2026 | «brillii» letto «birilli» da Mario. | Parola rara, senza foto. | A Mario parole comuni («stelline che luccicano») e la foto insieme. | (spostata da ERRORI.md il 22/11, tetto 10 KB)

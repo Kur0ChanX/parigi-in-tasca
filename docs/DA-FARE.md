@@ -4,9 +4,9 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v37 · 🟩 Controllo 16 · 22/11 18:26 · tasto «⭐ Rosa alloggi»
-🧪 In prova: — (v38 · 🟩 Controllo 16 · C22 controllo itinerari e alloggi, in lavoro)
-⏳ Dopo: v39 · 🟩 Controllo 16 · pagina più natalizia (foto a Mario prima)
+🚀 Online: v38 · 🟩 Controllo 16 · 22/11 18:4x · tasto Rosa pulito
+🧪 In prova: — (v39 · 🟩 Controllo 16 · testata: luci, scorrimento, Torre fissa)
+⏳ Dopo: v40 · 🟩 Controllo 16 · C22 controllo itinerari e alloggi
 
 ## 0. Aspetta Mario
 - 22/11 · 🛑 · 🟩 Controllo 14 · DOMANDA 1: gli alloggi «spenti» (n. 18, 20, 21: su Airbnb liberi solo dal 14) come li mostro? 📌 Di cosa parliamo: passo 2 di «Scegli», righe grigie quando avete scelto 4 notti dal 13. Scelte: 1 · in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché · 2 · nascosti da soli finché scegliete 4 notti · 3 · come ora, con la scritta «non libero il 13» più chiara. Consiglio 1.
@@ -83,6 +83,7 @@
 - 👁 Lo vedi: nella web app (sezioni «Alloggi» e mercatini della domenica) e nel messaggio con la domanda sull'hotel · prova: Mario legge la pagina corretta e la domanda rifatta · Promessa della #9 (21/11 ~18:15): «Poi correggo io, e vi rifaccio la domanda sull'hotel con la pagina già sistemata» (controllo dell'aiutante sui due scopi, C4 `docs/lavori-in-corso/C4-icona-anteprima-21-11.md`). **Pagina corretta online dal 21/11 18:15**; domanda sull'hotel rifatta dalla #10 alle 18:20.
 - 👁 Lo vedi: icona sulla schermata Home e immagine sotto il link su WhatsApp e Telegram, con la luna a forma di Topolino · prova: Mario manda il link e vede l'immagine · Risposta alla DOMANDA 1 (Mario 21/11 18:03 alla #9 chiusa: «aggiungi anche topolino di Disney a forma di luna nello sfondo nell'icona e immagine / e poi publica»): nel cielo di icona e anteprima la luna diventa la testa di Topolino (3 cerchi), poi si pubblica tutto C4 (ok a pubblicare già dato da Mario). Promessa della #9 (21/11 18:0x): «Lei metterà Topolino e pubblicherà subito, senza chiederti un altro ok, poi ti manderà le foto e il link» → fatto dalla #10, poi la testa di Topolino è stata tolta (personaggio protetto di Disney) e sostituita con una luna piena con le stelline: **online dal 21/11 18:36** (PR #5), foto `archivio/2026-11-21-icona-luna/` mandate alle 18:32; manca solo che Mario le veda sul telefono.
 - 👁 Lo vedi: nelle tappe coi trasporti della pagina di dicembre e in un messaggio a Mario la settimana prima della partenza · prova: Mario legge orari e avvisi ricontrollati · Ricontrollo della settimana prima (7–12/12): orari della RER A del 13–17/12, scioperi, terminal del volo Volotea, vendita dei ticket della metro sul telefono (piano B Navigo Easy già nella pagina). Dai «Prossimi passi» delle consegne; sveglia del 7/12. Il 7/12 arrivano 2 promemoria uguali (sveglie della #16 e della #17, non cancellabili dalla #18): 👁 Lo vedi: due messaggi il 7/12 · prova: Mario ne riceve due, il secondo si ignora.
+- 🟩 Controllo · C23 · testata di dicembre (video di Mario 22/11 18:31, `archivio/2026-11-22-video-flicker/`): «guarda come flickera poi pesa nello scroll e la torre eifell se scrolli vola da serra tienila fissa» → luci che sfarfallano all’apertura, scorrimento pesante, Torre Eiffel ferma quando si scorre · 👁 Lo vedi: apri e scorri sul telefono, niente sfarfallio, scorre liscio, la Torre resta ferma · prova: video di Mario dal sito vero.
 - 🟩 Controllo · C22 · controllo di itinerari e informazioni degli alloggi, soprattutto n. 8 Moxy e n. 16 e 23, poi pubblicare (Mario 22/11 ~18:2x: «Controlla che tutti gli itinerari e info per hotel sono giusti sopratutto moxi e gli ultimi 2 mandati mella sessione precedente / poi publica / prima publica la rosa poi controllo itinerari e info») · 👁 Lo vedi: itinerari e schede giusti sul sito vero · prova: foto di Mario dal sito
 
 ## 2. Claude dopo scelta o ok di Mario
