@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (22/11/2026 15:49 ora italiana)
+# Ultima risposta di Claude (22/11/2026 16:33 ora italiana)
 
-Il controllo che ti ho chiesto è segnato in Da fare.
+Ho corretto lo sfarfallio e la slitta che passa una volta sola; le prove stanno finendo, poi salvo e passo albero e Torre Eiffel alla sessione nuova.
