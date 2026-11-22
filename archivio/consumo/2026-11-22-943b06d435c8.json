@@ -2,10 +2,10 @@
 "account": "cba507",
 "sessione": "943b06d435c8",
 "giorno": "2026-11-22",
-"turni": 3,
-"peso": 56371,
-"uscita": 583,
-"contesto_max": 262985,
+"turni": 4,
+"peso": 491322,
+"uscita": 8252,
+"contesto_max": 345524,
 "anomalie": [],
 "blocchi": {
 "Stop 5 · Notifica non letta (in coda": 1,
@@ -30,19 +30,19 @@
 },
 "remota": "01Rwcxc4aWHi",
 "aiutanti": 0,
-"strumenti": 1,
+"strumenti": 11,
 "bilancia": 2,
 "motori": {
-"opus": 56371
+"opus": 491322
 },
 "grezzi": {
 "opus": [
-6,
-524779,
-778,
+29,
+4241901,
+20675,
 0,
-583
+8252
 ]
 },
-"costo": 0.1229
+"costo": 1.179
 }
