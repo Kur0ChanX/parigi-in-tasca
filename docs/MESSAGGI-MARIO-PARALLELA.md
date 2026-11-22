@@ -111,3 +111,6 @@ Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma nea
 
 ## 2026-11-22 14:27 · 01Rwcxc4fE4C
 Basta che risulti con lo stesso stile della foto.
+
+## 2026-11-22 14:29 · 01Rwcxc4fE4C
+ok
