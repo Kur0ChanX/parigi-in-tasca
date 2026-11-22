@@ -5,8 +5,8 @@
 
 ## Nastro delle versioni
 🚀 Online: v21 · 🟩 Controllo 5 · 22/11 10:44 · scelta, colori, Annulla
-🧪 In prova: —
-⏳ Dopo: v22 · 🟩 Controllo 5 · verifiche passate dalla Principale
+🧪 In prova: v22 · 🟩 Controllo 5 · spa e valigie
+⏳ Dopo: —
 
 ## 0. Aspetta Mario
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
@@ -14,7 +14,6 @@
 ## 1. Claude da solo
 - 👁 Lo vedi: grafica della pagina di dicembre rifatta a pezzi, a ogni pezzo foto prima/dopo prima di pubblicare · prova: foto a Mario · pezzo 1 online (v19, 22/11 10:06); pezzo 2 (passo 1 «Domenica 13») confronto mandato 22/11 ~10:12; pezzo 3 (Piano, «Quanto costa») e richieste di Mario 22/11 10:18 (ordine per tempo, hotel Disney rosa, «Vedi i dettagli» in fondo alle schede) e pezzo 4 (Biglietti, ticket a schede) fatti in locale, confronti `archivio/2026-11-22-c13-v20/` mandati 22/11 ~10:33; v20 online 22/11 10:26 (letta sul sito vero); v21 «la scelta cambia la pagina» (riquadro, avviso, pallini) foto `archivio/2026-11-22-c13-v21/` mandate ~10:40, si pubblica a prove verdi · prova: lettura del sito vero + Mario lo vede nell'app · Mario 22/11 ~00:45, C13 (dopo la risposta alla DOMANDA 1 della Controllo 2) · v21 online 22/11 10:44 (scelta che si vede, «↩ Annulla», Case ciano, «Quanto costa» coi soli colori della legenda; foto `archivio/2026-11-22-c13-v21-colori-annulla/`)
 - 👁 Lo vedi: nella web app di dicembre, Dormire → «Scegli questo» → avviso in basso con «↩ Annulla» che riporta la scelta di prima (anche al mio consiglio); Case in ciano; in Piano «Quanto costa» senza colori dei tipi · prova: Mario lo prova sul suo telefono (v21 online 22/11 10:44, Controllo 5, foto `archivio/2026-11-22-c13-v21-colori-annulla/`)
-- Verifiche passate dalla Principale 22 alla Controllo (22/11 10:08, fonte `docs/lavori-in-corso/C11-scelta-alloggio-pagina.md` riga 33), non urgenti (nella pagina già «da chiedere / non confermato»): deposito valigie di Astra e Saint-Pétersbourg; spa del Saint-Pétersbourg (orari, prezzo); cancellazione dell'Airbnb di David (vecchio n. 21).
 - 👁 Lo vedi: scheda Dormire con tasto «Tutti», distanza da Disney (tempo e km a piedi) e minuti a piedi dalla RER in vista; alloggi in più da siti diretti; aspetto rifatto da zero «solo migliorie» · prova: foto a Mario · Mario 22/11 ~00:45 (consegne Controllo, foto `archivio/2026-11-22-mario-dormire-tasto-tutti.jpg`).
 - 👁 Lo vedi: nella web app, scheda Dormire e Piano, «Il mio consiglio ★» su 4 notti vicino a Disney dal 13 al 17 (oggi è ancora domenica a Parigi + n. 8 Moxy), scelto dopo la ricerca C12 · prova: Mario apre il link e legge il consiglio nuovo · promesso da Controllo 1 il 22/11 00:36 con la v17 (Mario 22/11 ~00:15 «in priorità dal 13 al 17»).
 - 👁 Lo vedi: nella web app, scheda Dormire → «🛏️ B&B», la camera «Jolie chambre» a Bussy-Saint-Georges (circa 350 € 13→17) con gli avvisi (bagno da chiedere all'host, arrivo 19–23, conferma dell'host, 2 fermate in più) · prova: Mario la trova nel gruppo B&B · promessa di Controllo 1 il 22/11 ~01:00 (C12).
