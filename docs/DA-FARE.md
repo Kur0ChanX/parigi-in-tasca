@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v34 · 🟩 Controllo 14 · 22/11 17:20 · albero dal disegno colorato e addobbato, Torre Eiffel nuova (piani, traliccio, scintillio), niente sfarfallio all’apertura
+🚀 Online: v35 · 🟩 Controllo 14 · 22/11 17:41 · «Nascondi» sugli alloggi, n. 16 e 23 con «Tutto sul n.» e messaggio per il gestore, filtro «La vostra rosa»
 🧪 In prova: —
 ⏳ Dopo: v36 · 🟩 Controllo 14 · pagina più natalizia (foto a Mario prima)
 
