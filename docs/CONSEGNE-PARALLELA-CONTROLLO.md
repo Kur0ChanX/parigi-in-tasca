@@ -1,5 +1,9 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
+## Stato (Controllo 7 `session_01WTjqUxPidPtPV7FCfpJpKr`, 22/11 12:23 ora italiana, chiusa alla soglia; la apre la Controllo 7 con `create_session` (catena 6 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01WTjqUxPidP/claude/parigi-ramo-definitivo.
+- (qui le righe di giudizio della Controllo 7: fatto, provato, dove si verifica)
+
 ## Stato (Controllo 6 `session_01WTjqUwFBdtHy8LkTqYTScN`, 22/11 11:38 ora italiana, chiusa alla soglia; la apre la Controllo 6 con `create_session` (catena 5 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01WTjqUwFBdt/claude/parigi-ramo-definitivo.
 - **v24 online** (22/11 11:32, PR #25), sito vero controllato (mappa caricata e tasti provati con Playwright sull'indirizzo vero): «Mappa del viaggio» zoomabile in fondo alla scheda Giorni (`#mappa`), scorciatoia in alto, bottone «🗺️ Il giro sulla mappa» nel giro. Verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c tmMap` > 0. v23 online 11:07 (PR #24).
@@ -35,24 +39,26 @@
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 7
-la apre la Controllo 6 con `create_session` (catena 5 di 8). Scritto da Controllo 6 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 8
+la apre la Controllo 7 con `create_session` (catena 6 di 8). Scritto da Controllo 7 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 7 · barra dei giorni`
+Titolo: `🟩 🗼 Controllo 8 · giovedì e slitta`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 7 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 8 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 11:00 · [AVVIO] Sei la chat parallela Controllo 6 di Parigi in tasca, linea «Controllo» … → avvio; v23 finita con km visibili (Mario 11:05), online 11:07
-- 2026-11-22 11:20 · Sì, me la puoi fare la mappa zoomabile che mi faccia vedere insomma le cose che … → C15: v24 mappa zoomabile online 11:32
-- 2026-11-22 11:27 · poi publica tranquillo e finisci il lavoro → v24 pubblicata a prove verdi
-- 2026-11-22 11:35 · Una domanda, perché mi hai tolto la divisione dei giorni nel calendario sotto? N… → controllato: tasti dei giorni presenti; DOMANDA 1 foto
-- 2026-11-22 11:37 · No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'e… → risposta alla DOMANDA 1: causa trovata (fila coperta dalla barra delle schede, già in v23); correzione = Prossimi passi 1, voce 🔴 in Da fare
+- 2026-11-22 11:40 · [AVVIO] Sei la chat parallela Controllo 7 di Parigi in tasca, linea «Controllo» … → 
+- 2026-11-22 11:49 · Vedi qua la foto è coperta, l'immagine. → 
+- 2026-11-22 11:52 · Conta che vabbè, la giornata di priorità di curare i dettagli è quella a Parigi,… → 
+- 2026-11-22 12:00 · No, facciamo quella che consigli tu, scusa, foto 2, scusa. Per quello ti dico, v… → 
+- 2026-11-22 12:04 · Vedi qua che l'indice, mettimi gli shortcut, anche giro di mercatini più piccoli… → 
+- 2026-11-22 12:09 · Quando parlo di schermata principale intendo questa, che la facciamo diventare u… → 
+- 2026-11-22 12:15 · Metti che ogni tanto passa questo nel cielo, stai attento bene a non renderlo tr… → 
 
 Ultimo, intero:
-> No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto quelli? Perché sono stati tolti? Non andavano bene? Fammi capire.
+> Metti che ogni tanto passa questo nel cielo, stai attento bene a non renderlo troppo, cioè a rendere i colori veritieri in base alla scena, a studiarti bene le ombre, la visibilità eccetera, che lui passa e lancia dei regali, dei pacchi regali, come nel film Nightmare Before Christmas. Rendilo un po' in penombra, eccolo, e poi dagli una botta all'immagine generale di tipo un effetto tipo ray tracing, qualcosa del genere, per renderla un pochettino più bella e non piatta, visto che non sai disegnare bene. Aggiungi comunque dettagli, come ti ho già detto, alla schermata principale e in generale poi a tutto il web più natalizio.
 
