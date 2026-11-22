@@ -4,12 +4,13 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v24 · 🟩 Controllo 6 · 22/11 11:32 · mappa del viaggio
-🧪 In prova: v25 · 🟩 Controllo 7 · fila dei giorni di nuovo visibile
+🚀 Online: v25 · 🟩 Controllo 7 · 22/11 · fila dei giorni di nuovo visibile
+🧪 In prova: —
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
+- 22/11 · ❓ · 🟩 Controllo 7 · DOMANDA 1: la fila dei giorni copre il disegno del giorno: PROPOSTA 1 fila più sottile in basso, PROPOSTA 2 fila in alto che resta ferma scorrendo (consiglio 2); foto in `archivio/2026-11-22-c16-fila-dei-giorni/proposta-*.jpg` 📌 Di cosa parliamo: la fila Dom 13 … Gio 17 della scheda Giorni (Mario 11:5x «la foto è coperta, l'immagine»)
 
 ## 1. Claude da solo
 - 🔴 · 🟩 Controllo 7 · 👁 Lo vedi: nella scheda Giorni la fila dei giorni in basso (Dom 13 … Gio 17, apre l'itinerario del giorno) di nuovo visibile sopra la barra delle schede · prova: foto a Mario (Mario 22/11 ~11:37 «sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto?»). Causa trovata dalla Controllo 6: `#daybar` (fissa, z 30, alta 56, top 853 a 412×915) sta SOTTO `#tabbar` (fissa, z 60, top 846): coperta già nella v23, non dalla mappa.
