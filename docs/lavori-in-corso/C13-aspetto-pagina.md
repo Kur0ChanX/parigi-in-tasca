@@ -6,7 +6,8 @@ su questo nostro sito rifai tutto con frontend da 0 solo migliorie»
 
 ## Stato
 - Plugin `frontend-design` letto (22/11, raw.githubusercontent.com/anthropics/claude-plugins-official, `skills/frontend-design/SKILL.md`): solo istruzioni di grafica (piano di colori e caratteri prima del codice, niente look «da modello», foto per controllare), nessun programma che gira. Costo 0 €; installarlo vuol dire toccare `.claude/settings.json`. Consiglio: non installarlo, applico io le sue regole.
-- DOMANDA 1: Mario 22/11 ~01:10 «a pezzi». DOMANDA 2 senza risposta → consiglio: plugin non installato, le sue regole le applico io. In mano alla Controllo 3.
+- DOMANDA 1: Mario 22/11 ~01:10 «a pezzi». DOMANDA 2 senza risposta → consiglio: plugin non installato, le sue regole le applico io. In mano alla Controllo 4.
+- DOMANDA 1 della Controllo 3 (foto del pezzo 1): Mario 22/11 10:02 «va bene» = scelta 1: pubblica (v19) e stesso stile sugli altri pezzi.
 
 ## Piano proposto (se Mario sceglie «a pezzi»)
 1. Piano grafico corto (4–6 colori, 1–2 caratteri, spazi), con il colore per tipo di alloggio (Hotel, B&B, Case) e i numeri importanti (prezzo, minuti) più grandi.

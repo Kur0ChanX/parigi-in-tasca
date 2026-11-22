@@ -5,11 +5,10 @@
 
 ## Nastro delle versioni
 - 🚀 Online: v18 · 🟩 Controllo 2 · 22/11 · alloggi nuovi, tasto Tutti, distanze
-- 🧪 In prova: v19 · 🟩 Controllo 3 · 22/11 · Dormire più chiaro (un colore per tipo, numeri grandi), aspetta l'ok delle foto
-- ⏳ Dopo: v20 · 🟩 Controllo 3 · stesso stile sugli altri pezzi e alloggi dei siti diretti (se validi)
+- 🧪 In prova: v19 · 🟩 Controllo 4 · Dormire più chiaro e camera di Bussy
+- ⏳ Dopo: v20 · 🟩 Controllo 4 · stesso stile sugli altri pezzi e alloggi dei siti diretti (se validi)
 
 ## 0. Aspetta Mario
-- 22/11 · 🛑 · 🟩 Controllo 3 · DOMANDA 1: 📌 Di cosa parliamo: il nuovo aspetto della scheda Dormire (primo pezzo della grafica rifatta «a pezzi»), non ancora pubblico. 1 · va bene: pubblica e stesso stile sugli altri pezzi (consiglio) · 2 · va bene ma più corto (riquadri più bassi, più alloggi per schermata) · 3 · ritocca (dimmi cosa) · 4 · torna com'era. Foto `archivio/2026-11-22-c13-dormire/1-tipi-e-ordine.png`, `2-schede.png` · `docs/lavori-in-corso/C13-aspetto-pagina.md` · Con la stessa versione: camera Airbnb a Bussy 201 € (foto `archivio/2026-11-22-c14-alloggi/camera-bussy-1.png`, `-2.png`) e prezzo diretto della Résidence du Parc · `docs/lavori-in-corso/C14-siti-diretti-giro-2.md`
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
