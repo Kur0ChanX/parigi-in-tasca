@@ -966,6 +966,7 @@ const VERSIONI=[
  <div class="sortbar"><span class="small muted">Ordina per</span><div class="switch sort4" role="group" aria-label="Ordina per" id="scSort"><button type="button" data-s="prezzo" aria-pressed="true">Meno cari</button><button type="button" data-s="disney" aria-pressed="false">Vicino a Disney</button><button type="button" data-s="rer" aria-pressed="false">Vicino alla RER</button><button type="button" data-s="pulizia" aria-pressed="false">Più puliti</button></div></div>
  <p class="sc-leg">🏰 quanto ci mettete ad arrivare ai parchi (a piedi e coi mezzi, attese medie di treno, navetta e bus comprese; «Vicino a Disney» ordina così) e, piccoli, i km in linea d'aria (solo da leggere: gli ordini non li usano) · 🚉 minuti a piedi fino alla RER («Vicino alla RER» ordina così) · 🧼 pulizia. Sotto il prezzo e accanto ai minuti, la differenza col mio consiglio: <b class="sc-dn">verde</b> = meglio, <b class="sc-up">rosso</b> = peggio.</p>
  <div class="sc-list" id="scD"></div>
+ <div id="scNas"></div>
  <div class="sc-x" id="scBB" data-ty="bb">
   <p class="sc-g">Fuori elenco: 2 camere a Bussy-Saint-Georges</p>
   <div class="sc-xb">
@@ -1481,6 +1482,15 @@ const AL=[
 ];
 const PICKS=[["Spendere poco",4,"492 €, pulizia 9,5, 47 m². A 15–20 minuti a piedi dal treno."],["Tutto comodo",8,"524 €, reception 24 ore, 8 minuti dal treno. Se si libera, il n. 15 è ancora meglio."],["Con la spa",12,"Il migliore per 4 notti nello stesso posto. Spa inclusa per la domenica sera, 5 minuti dal treno. 908 € con letto matrimoniale e cancellazione gratuita fino all'8/12."],["Romantico",13,"773 €, vasca idromassaggio privata, solo adulti."],["Il prezzo più basso",1,"391 €, pulizia 9,0. Serve il bus."],["Più spazio, vicino al treno",6,"509 €, 50 m² con terrazza, 8 minuti dal treno."]];
 const byId=id=>AL.find(h=>h.id===id);
+/* C20 (Mario 22/11 17:1x «togliere gli hotel per pulire un po'»): alloggi nascosti su questo telefono; chiavi 'd-<n>' (vicino a Disney) e 'n-<n>' (Parigi, domenica).
+   Restano dopo ogni aggiornamento della pagina; l'alloggio scelto non si nasconde mai; si rimettono da «Pulisci l'elenco». */
+const NASC=new Set(),nasOk=k=>/^[dn]-\d{1,3}$/.test(k);
+try{(JSON.parse(localStorage.getItem('pdn-nascosti')||'[]')||[]).forEach(k=>{if(nasOk(k))NASC.add(k)})}catch(e){}
+const nasSalva=()=>{try{if(NASC.size)localStorage.setItem('pdn-nascosti',JSON.stringify([...NASC]));else localStorage.removeItem('pdn-nascosti')}catch(e){}};
+const nasSc=k=>k==='d-'+SCE.d||k==='d-'+CHO||(!!SCE.n&&k==='n-'+SCE.n); /* la scelta di adesso: mai nascosta */
+const hidN=k=>NASC.has(k)&&!nasSc(k);
+const nasB=k=>nasSc(k)?'':`<button type="button" class="btn ghost nas-b" data-nas="${k}" aria-pressed="${NASC.has(k)}">${NASC.has(k)?'↩︎ Rimetti nell’elenco':'🙈 Nascondi'}</button>`;
+let APRI=0; /* scheda nascosta aperta da un link: si vede finché non se ne apre un'altra */
 const tyOf=t=>/^hotel disney/i.test(t.trim())?'disney':/B&B|B&amp;B|chambres? d'h|affittacamer|love room|stanza|camera privata|guest ?house/i.test(t)?'bb':/^(hotel|aparthotel|residence|residhome)/i.test(t.trim())?'hotel':'casa';window.pdnTyOf=tyOf; /* tipo di alloggio dal sottotitolo: qui perché serve anche alle barre dei costi (pezzo 3); la scheda Dormire (secondo script) la prende da window */
 $('#picks').innerHTML=PICKS.map(([k,id,d])=>`<a class="pick" href="#al-${id}"><span class="nb">${id}</span><span class="k">${esc(k)}</span><span class="t">${esc(byId(id).n)}</span><span class="d">${esc(d)}</span></a>`).join('');
 const DUELS=[
@@ -1556,7 +1566,7 @@ let SCE=null;try{const u=new URLSearchParams(location.search),a=+u.get('alloggio
 let SCELTO=!!SCE;if(!SCE)SCE={n:MIO_S.n,d:MIO_S.d};
 let CHO=SCE.d,PN=PAR.find(p=>p.id===SCE.n)||null;
 const scName=s=>{const p=PAR.find(x=>x.id===s.n),h=AL.find(x=>x.id===s.d);return p?`${p.n} + n. ${s.d} ${h.n}`:`n. ${s.d} ${h.n}, 4 notti`};
-const card=h=>`<article class="card${h.id===MIO?' is-rec':''}" id="al-${h.id}">
+const card=h=>`<article class="card${h.id===MIO?' is-rec':''}${hidN('d-'+h.id)?' nas-on':''}" id="al-${h.id}">${hidN('d-'+h.id)?'<p class="nas-tag">🙈 Nascosto dai vostri elenchi</p>':''}
  <div class="card-top"><div class="ttl"><span class="nb" aria-label="numero ${h.id}">${h.id}</span><div><h3>${esc(h.n)}</h3><p class="small muted">${esc(h.sub)}</p></div></div>${h.id===MIO?`<span class="rec">${STAR}Nel mio consiglio</span>`:''}</div>
  <div class="facts"><div class="fact"><div class="k">${h.ab?'Voto Airbnb':'Voto Booking'}</div><div class="v">${h.sc}</div></div><div class="fact"><div class="k">Pulizia</div><div class="v">${h.cl}</div></div><div class="fact"><div class="k">4 notti</div><div class="v">${h.pr}</div></div></div>
  <p class="small"><b>Dal treno:</b> ${h.dist}</p>${h.ab?`
@@ -1569,6 +1579,7 @@ const card=h=>`<article class="card${h.id===MIO?' is-rec':''}" id="al-${h.id}">
  <div class="pc"><p class="p">${h.pro}</p><p class="c">${h.con}</p></div>
  <a class="btn ghost" href="${h.u}" target="_blank" rel="noopener">${h.ul||'Apri su Booking: 13→17 dic, 2 adulti'}${OUT}</a>
  <button type="button" class="btn ghost use-al" data-use="${h.id}" aria-pressed="${h.id===CHO}">${h.id===CHO?'✓ La pagina segue questo alloggio':'Usa questo nella pagina'}</button>
+ ${nasB('d-'+h.id)}
  </div></details>
 </article>`;
 let FI='tutti',SO='prezzo';
@@ -1579,8 +1590,8 @@ const rerMin=h=>{const L=DV[h.id][1];return L.every(l=>l[0]==='w')?L.reduce((x,l
 const kmDT=d=>{const m=MP[d];return m?(m.z?'≈ ':'')+m.km[1]:''};
 const byP=(a,b)=>(a.p??1e9)-(b.p??1e9),SORT={prezzo:byP,disney:(a,b)=>arrMin(a.id)-arrMin(b.id)||byP(a,b),rer:(a,b)=>rerMin(a)-rerMin(b)||byP(a,b),pulizia:(a,b)=>v10(b,'cl')-v10(a,'cl')||byP(a,b)};
 $('#filters').innerHTML=[['tutti','Tutti'],...Object.entries(GN)].map(([k,t])=>`<button type="button" data-f="${k}" aria-pressed="${k===FI}">${esc(t)}</button>`).join('');
-const renderAl=()=>{const L=AL.filter(h=>FI==='tutti'||h.g.includes(FI)).sort(SORT[SO]);
- $('#fdesc').textContent=GD[FI]+` Sono ${L.length}.`;
+const renderAl=()=>{const L0=AL.filter(h=>FI==='tutti'||h.g.includes(FI)),L=L0.filter(h=>!hidN('d-'+h.id)||h.id===APRI).sort(SORT[SO]),nh=L0.length-L0.filter(h=>!hidN('d-'+h.id)).length;
+ $('#fdesc').innerHTML=esc(GD[FI]+` Sono ${L0.length-nh}.`)+(nh?` <a href="#scNas" class="nas-va">🙈 ${nh} nascost${nh>1?'i':'o'}: rimettili</a>`:'');
  $('#cmpBody').innerHTML=L.map(h=>`<tr><td class="num"><span class="nb sm">${h.id}</span></td><td><a href="#al-${h.id}">${esc(h.n)}</a>${h.id===MIO?' <span class="small muted">★ il mio consiglio</span>':''}</td><td class="r num">${h.pr}</td><td>${esc(h.ne)}</td><td class="r num">${h.sc}</td><td class="r num">${h.cl||'–'}</td></tr>`).join('');
  $('#hotelCards').innerHTML=L.map(card).join('');
  document.querySelectorAll('#filters button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.f===FI)));
@@ -1588,7 +1599,7 @@ const renderAl=()=>{const L=AL.filter(h=>FI==='tutti'||h.g.includes(FI)).sort(SO
 $('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;FI=b.dataset.f;renderAl()});
 $('#sort').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;SO=b.dataset.s;renderAl()});
 renderAl();
-const toCard=e=>{const a=e.target.closest('a[href^="#al-"]');if(!a)return;const id=a.getAttribute('href');if(!document.querySelector(id)){FI='tutti';renderAl()}
+const toCard=e=>{const a=e.target.closest('a[href^="#al-"]');if(!a)return;const id=a.getAttribute('href');{const n=+id.slice(4);if(hidN('d-'+n)&&APRI!==n){APRI=n;renderAl()}}if(!document.querySelector(id)){FI='tutti';renderAl()}
  const c=document.querySelector(id);if(c){const d=c.querySelector('details.more');if(d)d.open=true;c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash');setTimeout(()=>c.classList.remove('flash'),2400)}};
 document.addEventListener('click',toCard);
 
@@ -1932,7 +1943,8 @@ const spaSun=d=>{const g=d.full.findIndex(x=>x.ti.startsWith("Galeries"));if(g<0
    La libreria si carica solo quando la mappa entra nello schermo; zoom e spostamento chiusi nel riquadro TM.b.
    Con poco zoom solo i posti grandi (🎄 giro, 🏰, ✈️, 🛏️); da vicino tappe, linea, stazioni, alloggi e mercatini da saltare. */
 const TM_LIB='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.',TM_SRI={js:'sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO',css:'sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb'};
-let tmM=null,tmVista='tutto',tmMe=null;
+let tmM=null,tmVista='tutto',tmMe=null,tmMk={},tmGV=null;
+const tmNas=()=>{if(!tmGV)return;AL.forEach(h=>{const mk=tmMk[h.id];if(!mk)return;const v=!hidN('d-'+h.id);if(v&&!tmGV.hasLayer(mk))tmGV.addLayer(mk);else if(!v&&tmGV.hasLayer(mk))tmGV.removeLayer(mk)})};
 const tmP=n=>(TM.p.find(x=>x[1]===n)||[])[2];
 const tmCarica=()=>window.L?Promise.resolve():new Promise((ok,no)=>{const c=document.createElement('link');c.rel='stylesheet';c.href=TM_LIB+'css';c.integrity=TM_SRI.css;c.crossOrigin='anonymous';document.head.appendChild(c);const s=document.createElement('script');s.src=TM_LIB+'js';s.integrity=TM_SRI.js;s.crossOrigin='anonymous';s.onload=()=>window.L?ok():no();s.onerror=()=>no();document.head.appendChild(s)});
 const tmIco=(cls,html,w,h,ax,ay)=>L.divIcon({className:'tm-i '+cls,html,iconSize:[w,h],iconAnchor:[ax??w/2,ay??h/2]});
@@ -1964,7 +1976,7 @@ const tmApri=()=>{const el=$('#tmMap');if(!el||tmM)return;el.innerHTML='<p class
    else if(k==='aereo')sempre.push(L.marker(p,{icon:tmIco('tm-c','<span>✈️ Orly</span>',72,26),zIndexOffset:400,title:n}).bindPopup('<b>Aeroporto di Orly</b><br>Arrivo e partenza del volo.'));
    else if(k==='treno')vicino.push(L.marker(p,{icon:tmIco('tm-c st',`<span>🚉 ${esc(n)}</span>`,n.length*7+34,22),zIndexOffset:300,title:'Stazione '+n}).bindPopup(`<b>Stazione ${esc(n)}</b>`));
    else vicino.push(L.marker(p,{icon:tmIco('tm-g',`<i style="background:#0D1838"></i><span>${esc(n)}</span>`,14,14),interactive:false}))});
-  AL.forEach(h=>{const p=TM.a[h.id];if(!p)return;vicino.push(L.marker(p,{icon:tmIco('tm-a ty-'+tyOf(h.sub),'<i></i>',16,16),title:`n. ${h.id} ${h.n}`}).bindPopup(`<b>n. ${h.id} ${esc(h.n)}</b><br><small>${esc(h.sub)}</small><br><a href="#al-${h.id}">Apri la scheda ›</a>`))});
+  AL.forEach(h=>{const p=TM.a[h.id];if(!p)return;const mk=(tmMk[h.id]=L.marker(p,{icon:tmIco('tm-a ty-'+tyOf(h.sub),'<i></i>',16,16),title:`n. ${h.id} ${h.n}`}).bindPopup(`<b>n. ${h.id} ${esc(h.n)}</b><br><small>${esc(h.sub)}</small><br><a href="#al-${h.id}">Apri la scheda ›</a>`))});
   L.layerGroup(sempre).addTo(m);const gV=L.layerGroup(vicino),gL=L.layerGroup(lontano);
   tmVicini=()=>{if(m.getZoom()>=12.5){m.removeLayer(gL);gV.addTo(m)}else{m.removeLayer(gV);gL.addTo(m)}};
   m.on('zoomend',tmVicini);
@@ -2158,12 +2170,12 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
 ${k?`<p class="small">Con il n. ${SCE.d}: totale del viaggio ≈ ${fmt(k.tot)}${rc?'':' ('+dEur(k.tot,cm.tot)+' rispetto al consiglio)'}.</p>`:''}
 <div class="pc"><p class="p">${o?o.pro:"Un solo alloggio: valigie disfatte una volta. Col n. 12 la spa domenica sera."}</p><p class="c">${o?o.con:"Domenica sera valigie e treno: via da Parigi alle 20:40 (alle 18:50 col n. 12)."}</p></div>
 ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class="in"><div class="dove" data-par="${o.id}"></div></div></details>`:''}
-<div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>`:''}</div>`,px)};
-  $('#scN').innerHTML=`<p class="sc-g">Prima scelta: tutte e 4 le notti vicino a Disney, 13→17</p><div class="sc-list">${nOpt(null)}</div><details class="sc-par"${PO?' open':''}><summary>Oppure domenica a Parigi, poi 3 notti vicino a Disney (14→17) · ${PAR.length} hotel</summary><p class="sc-g">Vicino alla Gare de Lyon: i più comodi per i treni</p><div class="sc-list">${PAR.filter(p=>p.z==='gl').map(nOpt).join('')}</div><p class="sc-g">In centro, più belli (Opéra, Châtelet)</p><div class="sc-list">${PAR.filter(p=>p.z==='ce').map(nOpt).join('')}</div></details>`;
+<div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>${nasB('n-'+o.id)}`:''}</div>`,px)};
+  $('#scN').innerHTML=`<p class="sc-g">Prima scelta: tutte e 4 le notti vicino a Disney, 13→17</p><div class="sc-list">${nOpt(null)}</div><details class="sc-par"${PO?' open':''}><summary>Oppure domenica a Parigi, poi 3 notti vicino a Disney (14→17) · ${PAR.filter(p=>!hidN('n-'+p.id)).length} hotel</summary>${['gl','ce'].map(z=>{const V=PAR.filter(p=>p.z===z&&!hidN('n-'+p.id));return V.length?`<p class="sc-g">${z==='gl'?'Vicino alla Gare de Lyon: i più comodi per i treni':'In centro, più belli (Opéra, Châtelet)'}</p><div class="sc-list">${V.map(nOpt).join('')}</div>`:''}).join('')}</details>`;
   $('#scN').querySelectorAll('details.sc-o').forEach(d=>{d.dataset.ty=d.dataset.k==='n-4n'?'dis':'hotel'}); /* C13 pezzo 2: colore e etichetta come nel passo 2 */
   const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
   const byTot=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:byTot,disney:(a,b)=>(a.c?arrMin(a.h.id):1e9)-(b.c?arrMin(b.h.id):1e9)||byTot(a,b),rer:(a,b)=>!a.c-!b.c||rerMin(a.h)-rerMin(b.h)||byTot(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||byTot(a,b)};
-  $('#scD').innerHTML=L.sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
+  $('#scD').innerHTML=L.filter(x=>!hidN('d-'+x.h.id)).sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
    const rk=c?rerK(h):null,c5=/\/5/.test(h.cl);
    const m=c?`<span class="sc-k"><i>🏰 Disney</i><b>${arrMin(h.id)} min</b><small>${kmDT(h.id)?kmDT(h.id)+' · ':''}${comeD(h.id)}${dX(dMin(arrMin(h.id),arrMin(MIO_S.d)))}</small></span><span class="sc-k"><i>🚉 RER</i><b>${rk.v}</b><small>${rk.s}</small></span><span class="sc-k"><i>🧼 Pulizia</i><b>${esc(h.cl.replace('/5',''))}</b><small>${/\d/.test(h.cl)?(c5?'su 5 · Airbnb':'su 10'):'non letta'}</small></span>`:h.ab?'<span class="sc-na">Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span class="sc-na">Esaurito per queste notti</span>';
    const px=c?(rc?'<small class="sc-dt sc-rc">★ consiglio</small>':`<small class="sc-dt">totale ${dEur(c.tot,cm.tot)}</small>`):'';
@@ -2171,7 +2183,8 @@ ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class
 `<p class="small muted">${c?esc(c.q[1]):h.ab?'Su Airbnb 13→17 non è disponibile (21/11/2026): libero solo dal 14, va bene se domenica dormite a Parigi.':'Prezzo per queste notti non disponibile (esaurito su Booking).'}</p>
 ${c?`<p class="small">Totale del viaggio ≈ ${fmt(c.tot)}${rc?'':' ('+dEur(c.tot,cm.tot)+' rispetto al consiglio)'}. Ai parchi ${c.park} min${c.nav?' + attesa della navetta':''} ogni mattina; a piedi ${c.walk} min al giorno, circa ${kmT(c.walk)}. Voto ${h.ab?'Airbnb ':''}${h.sc}.</p>`:''}
 <div class="pc"><p class="p">${h.pro}</p><p class="c">${h.con}${sp?' Con la domenica a Parigi la spa quasi non la usate: chiude alle 22:00, come i parchi.':''}${SCE.n&&!REC.includes(h.id)&&!h.ab?' Lunedì mattina le valigie: da chiedere al gestore, oppure deposito della stazione di Chessy.':''}</p></div>
-<div class="sc-act">${c?btn(s,on):''}<a class="btn ghost" href="#al-${h.id}">Scheda</a></div>`,px)}).join('');
+<div class="sc-act">${c?btn(s,on):''}<a class="btn ghost" href="#al-${h.id}">Scheda</a>${nasB('d-'+h.id)}</div>`,px)}).join('');
+  renderNas()
   document.querySelectorAll('#scSort button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===SO2)))}
  /* una riga aperta per lista: le altre si chiudono e la riga toccata resta ferma sotto il dito */
  $('#scegli').addEventListener('toggle',e=>{const d=e.target;if(!d.open||!d.dataset||!d.dataset.k)return;const box=d.closest('#scN,#scD');if(!box)return;
@@ -2179,9 +2192,32 @@ ${c?`<p class="small">Totale del viaggio ≈ ${fmt(c.tot)}${rc?'':' ('+dEur(c.to
   const y1=d.getBoundingClientRect().top;if(Math.abs(y1-y0)>1)scrollBy(0,y1-y0)},true);
  $('#scegli').addEventListener('toggle',e=>{if(e.target.classList&&e.target.classList.contains('sc-par'))PO=e.target.open},true);
  $('#scSort').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;SO2=b.dataset.s;renderSc()});
+ /* C20: pannello per tenere solo gli alloggi che interessano (una spunta per alloggio) */
+ let nasDaLink=null;try{const v=new URLSearchParams(location.search).get('nascosti');if(v){const A=v.split(',').filter(nasOk).filter(k=>!NASC.has(k));if(A.length)nasDaLink=A}}catch(e){}
+ const nasLi=(k,nb,n,pr)=>{const sc=nasSc(k);return `<li><label class="nas-r${sc?' sc':''}"><input type="checkbox" data-nas-k="${k}"${NASC.has(k)&&!sc?'':' checked'}${sc?' disabled':''}><span class="nb sm">${nb}</span><span class="nas-n">${esc(n)}${sc?' <small>· la vostra scelta</small>':''}</span><small class="nas-p">${pr}</small></label></li>`};
+ function renderNas(){const box=$('#scNas');if(!box)return;const n=[...NASC].filter(hidN).length,ap=!!box.querySelector('details[open]');
+  box.innerHTML=`${nasDaLink?`<div class="nas-link" role="status"><p class="small">Nel link che vi hanno mandato ci sono <b>${nasDaLink.length} alloggi nascosti</b>. Li nascondo anche su questo telefono?</p><div class="sc-act"><button type="button" class="btn gold" data-nas-link="1">Sì, nascondili</button><button type="button" class="btn ghost" data-nas-link="0">No</button></div></div>`:''}
+<details class="nas-p"${ap?' open':''}><summary>🧹 Pulisci l'elenco<small id="nasConta">${n?`${n} nascost${n>1?'i':'o'}`:'tieni solo quelli che vi interessano'}</small></summary><div class="in">
+<p class="small">Togliete la spunta agli alloggi che non vi interessano: spariscono dagli elenchi di «Scegli» e «Dormire» e dalla mappa, solo su questo telefono. Rimetteteli quando volete. La vostra scelta resta sempre.</p>
+<p class="sc-g">Vicino a Disney · ${AL.length}</p><ul class="nas-l">${AL.slice().sort((a,b)=>a.id-b.id).map(h=>nasLi('d-'+h.id,h.id,h.n,h.pr)).join('')}</ul>
+<p class="sc-g">Domenica a Parigi · ${PAR.length}</p><ul class="nas-l">${PAR.map(p=>nasLi('n-'+p.id,'P',p.n,fmt(p.p))).join('')}</ul>
+<div class="sc-act"><button type="button" class="btn ghost" data-nas-tutti="1"${NASC.size?'':' disabled'}>Rimetti tutti</button></div>
+<p class="small muted">Per avere lo stesso elenco sull’altro telefono: «Manda questa scelta» qui sopra porta anche gli alloggi nascosti.</p></div></details>`}
+ let nasT=null;
+ const nasSet=(L,via,annulla)=>{const prima=[...NASC];L.forEach(k=>{if(via)NASC.add(k);else NASC.delete(k)});nasSalva();renderSc();renderAl();if(typeof tmNas==='function')tmNas();
+  if(annulla){let t=$('#nasToast');if(!t){document.body.insertAdjacentHTML('beforeend','<div id="nasToast" class="nas-toast" role="status" aria-live="polite"></div>');t=$('#nasToast')}
+   t.innerHTML=`<span>${esc(annulla)}</span><button type="button" class="btn ghost">Annulla</button>`;t.classList.add('on');
+   t.querySelector('button').onclick=()=>{NASC.clear();prima.forEach(k=>NASC.add(k));nasSalva();renderSc();renderAl();if(typeof tmNas==='function')tmNas();t.classList.remove('on')};
+   clearTimeout(nasT);nasT=setTimeout(()=>t.classList.remove('on'),7000)}};
+ const nasNome=k=>{const n=+k.slice(2),o=k[0]==='d'?AL.find(h=>h.id===n):PAR.find(p=>p.id===n);return o?(k[0]==='d'?'n. '+n+' ':'')+o.n:k};
+ document.addEventListener('click',e=>{const b=e.target.closest('[data-nas]');if(b){e.preventDefault();const k=b.dataset.nas,via=!NASC.has(k);if(!via&&APRI===+k.slice(2))APRI=0;nasSet([k],via,(via?'Nascosto: ':'Rimesso: ')+nasNome(k));return}
+  const t=e.target.closest('[data-nas-tutti]');if(t){nasSet([...NASC],false,'Rimessi tutti nell’elenco');return}
+  const l=e.target.closest('[data-nas-link]');if(l){const A=nasDaLink||[];nasDaLink=null;if(l.dataset.nasLink==='1')nasSet(A,true,'Nascosti '+A.length+' alloggi, come nel link');else renderNas()}});
+ $('#scNas').addEventListener('change',e=>{const c=e.target.closest('[data-nas-k]');if(!c)return;const k=c.dataset.nasK;nasSet([k],!c.checked,(c.checked?'Rimesso: ':'Nascosto: ')+nasNome(k));
+  const d=$('#scNas details');if(d)d.open=true});
  $('#scegli').addEventListener('click',e=>{const b=e.target.closest('[data-sc]');if(b){const s=scParse(b.dataset.sc),k=b.dataset.sc;applySc(s,1);const nb=document.querySelector(`#scegli [data-sc="${k}"]`);if(nb)nb.insertAdjacentHTML('afterend',b.closest('#scN')?'<p class="small sc-fatto" role="status">✓ Fatto. Ora il passo 2: <a href="#sc2">l\'hotel vicino a Disney ↓</a></p>':'<p class="small sc-fatto" role="status">✓ Fatto: giorni, mercatini, costi e trasporti seguono questa scelta. <a href="#scRis">Riepilogo ↑</a></p>');return}
   if(e.target.closest('#scMio')){applySc(MIO_S,1);return}
-  if(e.target.closest('#scShare')){const u=location.origin+location.pathname+'?scelta='+scStr(SCE),ok=$('#scShareOk');
+  if(e.target.closest('#scShare')){const u=location.origin+location.pathname+'?scelta='+scStr(SCE)+(NASC.size?'&nascosti='+[...NASC].join(','):''),ok=$('#scShareOk');
    if(navigator.share)navigator.share({title:'Parigi e Disney a Natale: la nostra scelta',text:scName(SCE),url:u}).catch(()=>{});
    else if(navigator.clipboard)navigator.clipboard.writeText(u).then(()=>{ok.textContent='Link copiato: mandatelo su WhatsApp.'},()=>{ok.textContent=u});else ok.textContent=u}});
  paint();mkAl();
