@@ -24,3 +24,7 @@ su questo nostro sito rifai tutto con frontend da 0 solo migliorie»
 - Prove: web app 41/41 (blocco v18 aggiornato ai riquadri), scritte VERO, `--controlla` VERO, colori VERO. Foto: `archivio/2026-11-22-c13-dormire/`.
 - Nota: le schede sono circa un quarto più alte (4 per schermata invece di 5).
 - Prossimi pezzi (dopo l'ok): passo 1 della scheda Dormire (notti di domenica) con lo stesso stile, poi Piano, Giorni, Biglietti.
+
+## Pezzo 2 · passo 1 della scheda Dormire (domenica 13), 22/11 dalle 10:07 (Controllo 4)
+- Stesso stile del pezzo 1 (Mario «va bene», scelta 1): hotel di Parigi con barra azzurra ed etichetta «🏨 Hotel a Parigi»; «4 notti vicino a Disney» con barra neutra ed etichetta «🏰 Domenica già a Disney»; totale sotto il prezzo (`.sc-dt`); 3 riquadri: Parigi = a piedi, lunedì (uscita con le valigie), pulizia; 4 notti = domenica (treno), in camera, lunedì (uscita senza valigie). Regole CSS del passo 2 allargate con `:is(#scD,#scN)`.
+- Prova nuova «C13 pezzo 2» in `tools/prova-web-app.js`. Foto prima/dopo: da mandare a Mario col confronto.
