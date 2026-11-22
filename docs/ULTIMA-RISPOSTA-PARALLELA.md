@@ -1,7 +1,15 @@
-# Ultima risposta di Claude (22/11/2026 14:54 ora italiana)
+# Ultima risposta di Claude (22/11/2026 15:48 ora italiana)
 
-Tutte le prove sono verdi: 60 su 60 per l'app e 20 su 20 per le scritte sovrapposte. Passano anche i controlli di pagina e colori. Il lavoro è salvato su GitHub (commit `94809b5`): manca solo la tua risposta alla DOMANDA 1 per pubblicare.
+✅ FATTO
+- **La versione 33 è sul sito.** Ho controllato il sito vero: dice «33», e il tasto della guida Disneyland c'è.
+- Dentro ci sono:
+  - il castello dal tuo disegno, con le ombre e le stelline;
+  - la slitta con le renne ognuna per conto suo, le braccia di Jack e Zero;
+  - le bancarelle con neve, lucine e merce vera;
+  - la guida Disneyland nella schermata principale e nei giorni Disney.
 
-⚠️ Aspettano te: 2
-- 🛑 Controllo 10 · posso pubblicare la v33 sul sito, appena il…
-- Principale 13 · la luna nuova
+───
+👉 DA FARE TU
+A cosa serve: vedere la versione nuova sul tuo telefono e controllare che la guida Disneyland si apra coi giorni giusti.
+1. Apri la pagina di dicembre:
+``` …
