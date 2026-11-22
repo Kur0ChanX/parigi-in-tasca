@@ -603,6 +603,12 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 #scN details.sc-o[data-ty="hotel"]>summary::before{content:"🏨 Hotel a Parigi"}
 #scN details.sc-o[data-ty="dis"]>summary::before{content:"🏰 Domenica già a Disney"}
 #scN .sc-o>summary>.sc-dot{grid-column:1;grid-row:1/3;margin-top:4px}
+/* C13 pezzo 3 · Piano, «Quanto costa»: ogni strada è una scheda col colore del suo alloggio, come in Dormire */
+#bars{gap:12px}
+#bars [data-ty="pkg"]{--ty:var(--seg-pack)}
+#bars>a.bar-row{margin:0;padding:12px 14px 12px 18px;border:2px solid var(--rule);border-radius:var(--r-lg);box-shadow:inset 6px 0 0 var(--ty)}
+#bars>a.bar-row.is-me{outline:0;border-color:var(--lamp);box-shadow:inset 6px 0 0 var(--ty),0 0 0 3px rgb(246 201 100 / .25)}
+.bar-ty{font:800 .7rem/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--ty)}
 #scBB .sc-xb{border-left:6px solid var(--ty-bb)}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -1106,8 +1112,8 @@ const drawBars=()=>{const cm=conto(MIO_S),me=scStr(SCE);let h='',cl='';
  const L=BARS.map(b=>{const c=conto(b);return c&&{sc:b,n:scName(b),s:[["s-h",c.al,(b.n?"alloggi ":"alloggio ")+fmt(c.al)],["s-t",544,"biglietti 544 €"],["s-r",c.tr,"trasporti "+fmt(c.tr)]],note:b.t}}).filter(Boolean).concat(PKG);
  L.forEach(c=>{const tot=c.s.reduce((a,b)=>a+b[1],0),d=tot-cm.tot,k=c.sc?scStr(c.sc):'',ref=k===scStr(MIO_S);
   const dl=ref?'<span class="bar-diff eq">il mio consiglio</span>':`<span class="bar-diff ${d>0?'up':'dn'}">${d>0?'+':'−'}${fmt(Math.abs(d))}</span>`;
-  const lab=c.s.map(x=>x[2]).join(', ');
-  h+=`<a class="bar-row${k===me?' is-me':''}" href="${k?'#scegli':'#hoteldisney'}"${k?` data-sc="${k}"`:''}><div class="bar-top"><span class="bar-name">${esc(c.n)}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
+  const lab=c.s.map(x=>x[2]).join(', '),ty=c.sc?tyOf(byId(c.sc.d).sub):'pkg',tl={hotel:'🏨 Hotel',bb:'🛏️ B&B · camera',casa:'🏠 Casa',pkg:'🏰 Hotel Disney · pacchetto'}[ty];
+  h+=`<a class="bar-row${k===me?' is-me':''}" data-ty="${ty}" href="${k?'#scegli':'#hoteldisney'}"${k?` data-sc="${k}"`:''}><span class="bar-ty">${c.sc&&c.sc.n?'Parigi + ':''}${tl}</span><div class="bar-top"><span class="bar-name">${esc(c.n)}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
  <div class="track" role="img" aria-label="${esc(c.n)}: circa ${fmt(tot)} (${lab})"><span class="grid-lines">${[500,1000,1500,2000].map(v=>`<i style="left:${v/MAX*100}%"></i>`).join('')}</span><span class="fill" style="width:${tot/MAX*100}%">${c.s.map(x=>`<i class="${x[0]}" style="width:${x[1]/tot*100}%"></i>`).join('')}</span></div>
  <p class="bar-note">${esc(c.note)} <span class="bar-go">${k?(k===me?'✓ La vostra scelta':'Scegli questo ›'):'Perché non conviene ›'}</span></p></a>`;
   if(c.sc)cl+=`<li><b>${esc(c.n)}${ref?' (il mio consiglio)':''}:</b> ${c.s.map(x=>x[2]).join(' + ')} = ${fmt(tot)}.</li>`});
@@ -1164,6 +1170,7 @@ const AL=[
 ];
 const PICKS=[["Spendere poco",4,"492 €, pulizia 9,5, 47 m². A 15–20 minuti a piedi dal treno."],["Tutto comodo",8,"524 €, reception 24 ore, 8 minuti dal treno. Se si libera, il n. 15 è ancora meglio."],["Con la spa",12,"Il migliore per 4 notti nello stesso posto. Spa inclusa per la domenica sera, 5 minuti dal treno. 908 € con letto matrimoniale e cancellazione gratuita fino all'8/12."],["Romantico",13,"773 €, vasca idromassaggio privata, solo adulti."],["Il prezzo più basso",1,"391 €, pulizia 9,0. Serve il bus."],["Più spazio, vicino al treno",6,"509 €, 50 m² con terrazza, 8 minuti dal treno."]];
 const byId=id=>AL.find(h=>h.id===id);
+const tyOf=t=>/B&B|B&amp;B|chambres? d'h|affittacamer|love room|stanza|camera privata|guest ?house/i.test(t)?'bb':/^(hotel|aparthotel|residence|residhome)/i.test(t.trim())?'hotel':'casa';window.pdnTyOf=tyOf; /* tipo di alloggio dal sottotitolo: qui perché serve anche alle barre dei costi (pezzo 3); la scheda Dormire (secondo script) la prende da window */
 $('#picks').innerHTML=PICKS.map(([k,id,d])=>`<a class="pick" href="#al-${id}"><span class="nb">${id}</span><span class="k">${esc(k)}</span><span class="t">${esc(byId(id).n)}</span><span class="d">${esc(d)}</span></a>`).join('');
 const DUELS=[
  ["N. 12 Relais Spa o n. 8 Moxy?","Per i parchi sono uguali: 5–8 minuti a piedi e 1 fermata di treno, reception sempre aperta. Il 12 ha la spa inclusa per la domenica sera. Il Moxy costa circa 330 € in meno, ma niente spa. Volete il relax della domenica: 12. Volete spendere meno: 8."],
@@ -1920,8 +1927,8 @@ bar.addEventListener('keydown',e=>{const bs=[...bar.querySelectorAll('button')],
 if(side)side.addEventListener('click',e=>{const a=e.target.closest('a.st');if(a){e.preventDefault();show(a.dataset.t)}});
 
 /* ── pezzo 2 · Dormire ── */
+const tyOf=window.pdnTyOf;
 const TY=[['tutti','Tutti','ogni tipo'],['hotel','🏨 Hotel','e aparthotel'],['bb','🛏️ B&B','e camere'],['casa','🏠 Case','appartamenti e Airbnb']];
-const tyOf=t=>/B&B|B&amp;B|chambres? d'h|affittacamer|love room|stanza|camera privata|guest ?house/i.test(t)?'bb':/^(hotel|aparthotel|residence|residhome)/i.test(t.trim())?'hotel':'casa';
 const scD=document.getElementById('scD');
 if(scD){
  let ty=null;try{ty=localStorage.getItem('pdn-tipo')}catch(e){}
