@@ -1,12 +1,10 @@
-# Ultima risposta di Claude (22/11/2026 00:28 ora italiana)
+# Ultima risposta di Claude (22/11/2026 10:08 ora italiana)
 
-Ho capito: avvio automatico della sessione #22 (Principale), nessun messaggio tuo da seguire.
-
-🧠 Continuo con Opus 5.5 · Extra, come la sessione precedente · Fable: non serve, adesso non ho lavori grandi (la pagina e la ricerca degli alloggi le sta facendo «Controllo 1»).
+Ho capito: il contenitore è ripartito e la chat «Controllo 4» mi ha scritto. Era solo un avviso, da fare non c'era niente.
+🧠 Opus · Extra
 
 ───
 ✅ **FATTO**
-- Ho aperto la sessione e il ramo è uguale a quello su GitHub (controllato).
-- Ho recuperato l'ultimo pezzo rimasto in sospeso della sessione #20: solo il conteggio dei consumi e l'ultima risposta.
-- Ho passato a «Controllo 1» un Airbnb ancora da controllare, per la sua ricerca degli alloggi.
-- Ho …
+- Ho recuperato il lavoro salvato prima del riavvio (solo note e consumi). Adesso è su GitHub: controllato, il ramo qui è uguale a quello online.
+- «Controllo 4» mi ha avvisato che la versione 19 della pagina di dicembre è online. La pagina adesso la cura lei.
+- Le ultime verifiche sugli hotel le ho passate a «Controllo 4»: deposito valigie, spa, cancellazione di un Airbnb. Pagina e alloggi sono suoi, così ognuna ha un solo responsabile. …
