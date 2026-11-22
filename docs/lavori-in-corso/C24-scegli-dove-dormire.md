@@ -30,7 +30,14 @@
 - DOMANDA 2: rosa come filtro ovunque (con il mio consiglio sempre come riferimento) o solo in «Dormire». Consiglio: ovunque.
 - DOMANDA 3: riquadro «Il vostro alloggio» (soluzione smart sopra). Consiglio: sì.
 
-## Piano (dopo la DOMANDA 1)
+## Risposte di Mario (22/11 ~19:5x)
+> 11 21 31
+>
+> Mi raccomando è una guida deve aiutarmi in base a che hotel scelgo cosa fare nella giornata specialmente domenica con i mercatini come spostarmi consigli info ecc ecc ecc molto accurato
+- DOMANDA 1 → 1: tre riquadri affiancati (Guida Disneyland, Rosa alloggi, Scegli dove dormire). DOMANDA 2 → 1: rosa ovunque, consiglio sempre come riferimento, tasto «Tutti i 35». DOMANDA 3 → 1: riquadro «Il vostro alloggio» completo.
+- In più: ogni giorno, e soprattutto domenica coi mercatini, dice cosa fare e come spostarsi secondo l'hotel scelto, con cura.
+
+## Piano
 1. Schermata principale: tasto secondo la risposta; scritte dal JS con la rosa e l'alloggio scelto.
 2. Passo 2: con la rosa piena parte su «La vostra rosa»; confronto affiancato (prezzo, minuti ai parchi, RER, pulizia, arrivo domenica sera); su ogni alloggio un tasto grande «Dormiamo qui».
 3. Dopo la scelta: avviso con Annulla, alloggio scritto in cima a ogni giorno, «cambia» che riporta alla rosa.
