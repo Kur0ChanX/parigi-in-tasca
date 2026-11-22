@@ -1,7 +1,10 @@
-# Ultima risposta di Claude (22/11/2026 14:54 ora italiana)
+# Ultima risposta di Claude (22/11/2026 15:39 ora italiana)
 
-Tutte le prove sono verdi: 60 su 60 per l'app e 20 su 20 per le scritte sovrapposte. Passano anche i controlli di pagina e colori. Il lavoro è salvato su GitHub (commit `94809b5`): manca solo la tua risposta alla DOMANDA 1 per pubblicare.
+Ho capito: vuoi la tua app Disneyland collegata a questa, nella schermata principale e nei giorni Disney. E vuoi sapere se ognuno ha il suo link.
 
-⚠️ Aspettano te: 2
-- 🛑 Controllo 10 · posso pubblicare la v33 sul sito, appena il…
-- Principale 13 · la luna nuova
+───
+✅ FATTO
+- **Schermata principale**: c'è il tasto «Guida Disneyland», sotto gli altri tasti (foto 1).
+- **Giorni Disney**: in cima a lunedì 14, martedì 15 e mercoledì 16 c'è il riquadro «Apri la guida Disneyland» (foto 2).
+- Il tasto apre la tua app già impostata coi giorni del viaggio: dal 14 dicembre, 3 giorni, 2 persone, tutti e due i parchi. L'ho provato come su un telefono nuovo: la guida si imposta da sola.
+- **Braccia di Jack**: si …
