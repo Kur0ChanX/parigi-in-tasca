@@ -19,8 +19,10 @@
 
 ## Prossimi passi
 1. **Fila dei giorni coperta (🔴 in Da fare):** `#daybar` (fissa, z-index 30, alta 56, top 853 a 412×915) sta sotto `#tabbar` (fissa, z-index 60, top 846) in v23 e v24: Mario non la vede più. Trovare da quale versione (prova: `git log -S daybar` sul CSS di `.daybar` e `.tabbar`), rimetterla SOPRA la barra delle schede (bottom = altezza della tabbar + zona sicura), prova nuova in `tools/prova-web-app.js` «fila dei giorni visibile e cliccabile sopra la barra delle schede» (`elementFromPoint` sul centro di un tasto = il tasto), foto prima/dopo, pubblicare (Mario ha già detto di pubblicare), diario degli errori. Poi a Mario la causa in parole semplici.
-2. Voci 👁 di `docs/DA-FARE.md`: chiuderle solo quando Mario dice di averle viste (v23, v24 mappa).
-3. Più avanti (Mario: «più avanti»): sulla mappa il tragitto della giornata secondo l'alloggio scelto (C15, fase 2).
+2. **Mario 22/11 ~11:42 (dopo l'handoff, parole intere in C15):** Mappa del viaggio a **schermo intero** (tasto, ✕ e «indietro» per uscire) e **zoom sbloccato** nei due sensi: oggi si ferma allontanando (minZoom = riquadro, `maxBounds`) e avvicinando (maxZoom 17). Supera il suo «andare oltre non mi serve» delle 11:20: allargare minZoom/maxBounds (es. Île-de-France) e maxZoom fino al massimo del Plan IGN (verificare). Aggiornare la prova della mappa (oggi controlla `zMin === minZ` e il centro dentro il riquadro). Poi foto e pubblicare.
+3. **Mario 22/11 ~11:45 (dopo l'handoff, parole intere in C15):** nella schermata principale tutti i tasti delle cose principali («la mappa deve avere un tasto shortcut nella schermata principale e anche tante altre cose fondamentali»). La griglia «Vai subito a» (`nav.go`, testata della scheda Piano) ha GIÀ 10 tasti, Mappa compresa (v24): Mario non l'ha notata → controllare che si veda subito aprendo l'app sul telefono e aggiungere i fondamentali che mancano (es. il giorno di oggi, il vostro alloggio, orari minuto per minuto, hotel Disney), senza doppioni.
+4. Voci 👁 di `docs/DA-FARE.md`: chiuderle solo quando Mario dice di averle viste (v23, v24 mappa).
+5. Più avanti (Mario: «più avanti»): sulla mappa il tragitto della giornata secondo l'alloggio scelto (C15, fase 2).
 
 ## Blocchi e rischi
 - **Alla Principale niente `send_message` per le versioni pubblicate** (Principale 22, 22/11 11:08). Scriverle solo per un'azione sua o un rischio sui suoi file.
