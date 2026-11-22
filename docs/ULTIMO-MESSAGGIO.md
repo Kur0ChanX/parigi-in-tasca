@@ -1,4 +1,10 @@
-# Ultimo messaggio di Mario (22/11/2026 17:34 ora italiana)
+# Ultimo messaggio di Mario (21/11/2026 23:46 ora italiana)
 
-Attenzione perché molti, tipo questi due, uno di questi due su Booking costa meno addirittura. Ti dico esattamente quale, così non fai ricerche invano. Quello nella foto su Booking è 461 euro. Strano questi prezzi di differita. Speriamo sia affidabile la guida che mi stai facendo. Comunque potenziali per questi due che ti ho messo. Hotel, potenzia la guida.
-metti la funzione potenzia in2 alloggi da me citati e publica
+Aparthotel Adagio Val d'Europe
+https://www.online-reservations.com/?hotelid=51666&gacc=gmcc&gad_source=1&gad_campaignid=20870933251&gbraid=[segreto tolto dalla scorta]&gclid=[segreto tolto dalla scorta]
+Staycity Aparthotels Paris, Marne-la-Vallée
+poi publica
+metti un filtro dai piú vicini a Disneyland i meno cari i piú puliti e vicino alla rer
+
+e guardane altri se ne trovi da inserire spulcia bene 
+quindi non cari vicini alla rer vicini a disneyland dal 13 al 17 e puliti decentemente come voto
