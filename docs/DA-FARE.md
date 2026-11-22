@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v27 · 🟩 Controllo 7 · 22/11 · fila dei giorni in alto
-🧪 In prova: v28 · 🟩 Controllo 7 · indice nella schermata principale
+🚀 Online: v28 · 🟩 Controllo 7 · 22/11 · indice nella schermata principale
+🧪 In prova: —
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
@@ -17,6 +17,7 @@
 - 🟩 Controllo 7 · 👁 Lo vedi: nella schermata principale i tasti di tutte le cose fondamentali, le cose che servono di più (Mappa compresa), visibili subito aprendo l'app · prova: foto a Mario (Mario 22/11 ~11:45)
 - 🟩 Controllo 7 · C17 · 👁 Lo vedi: in alto nella pagina di dicembre un numerino della versione; toccandolo le novità; se il telefono ha una versione vecchia, il tasto «Aggiorna versione» che la aggiorna · prova: foto a Mario (Mario 22/11 ~11:55)
 - 🟩 Controllo 7 · C17 · 👁 Lo vedi: Gio 17 con l'ora a cui partire per Orly (margine, bagagli dal deposito, avviso «partite prima»), Domenica a Parigi più curata, giorni Disney semplici · prova: foto a Mario (Mario 22/11 ~11:55)
+- 🟩 Controllo 7 · C18 · 👁 Lo vedi: nella schermata principale ogni tanto passa nel cielo la slitta con le renne scheletro che lancia regali, in penombra; luce e ombre più vere sul disegno; più dettagli di Natale in tutta la pagina · prova: foto e video a Mario (Mario 22/11 ~12:12)
 - 🟩 Controllo 7 · C15 · 👁 Lo vedi: Mappa del viaggio a schermo intero e zoom libero nei due sensi (pizzico avanti e indietro) · prova: foto a Mario (Mario 22/11 ~11:42)
 - 🔺 PRIORITÀ · 🟩 Controllo 6 · C15 · 👁 Lo vedi: v24 nella web app di dicembre, scheda Giorni (o «🗺️ Mappa del viaggio» in alto): mappa che si allarga col dito, chiusa su Orly–Parigi–Disney; tasti Tutto · Mercatini (7 tappe e linea) · Disney · Orly · il vostro alloggio · prova: foto a Mario e Mario la usa sul telefono (Mario 22/11 ~11:09 e ~11:55). Poi, più avanti: tragitto della giornata secondo l'alloggio scelto.
 - 👁 Lo vedi: grafica della pagina di dicembre rifatta a pezzi, a ogni pezzo foto prima/dopo prima di pubblicare · prova: foto a Mario · pezzo 1 online (v19, 22/11 10:06); pezzo 2 (passo 1 «Domenica 13») confronto mandato 22/11 ~10:12; pezzo 3 (Piano, «Quanto costa») e richieste di Mario 22/11 10:18 (ordine per tempo, hotel Disney rosa, «Vedi i dettagli» in fondo alle schede) e pezzo 4 (Biglietti, ticket a schede) fatti in locale, confronti `archivio/2026-11-22-c13-v20/` mandati 22/11 ~10:33; v20 online 22/11 10:26 (letta sul sito vero); v21 «la scelta cambia la pagina» (riquadro, avviso, pallini) foto `archivio/2026-11-22-c13-v21/` mandate ~10:40, si pubblica a prove verdi · prova: lettura del sito vero + Mario lo vede nell'app · Mario 22/11 ~00:45, C13 (dopo la risposta alla DOMANDA 1 della Controllo 2) · v21 online 22/11 10:44 (scelta che si vede, «↩ Annulla», Case ciano, «Quanto costa» coi soli colori della legenda; foto `archivio/2026-11-22-c13-v21-colori-annulla/`)
