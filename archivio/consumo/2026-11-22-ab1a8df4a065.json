@@ -2,26 +2,36 @@
 "account": "108763",
 "sessione": "ab1a8df4a065",
 "giorno": "2026-11-22",
-"turni": 1,
-"peso": 328382,
-"uscita": 12395,
-"contesto_max": 110363,
+"turni": 2,
+"peso": 569975,
+"uscita": 17366,
+"contesto_max": 122178,
 "anomalie": [],
 "remota": "01WTjqUtegBC",
 "aiutanti": 0,
-"strumenti": 24,
+"strumenti": 34,
 "motori": {
-"opus": 328382
+"opus": 569975
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-38,
-1857745,
-64476,
+59,
+3071273,
+140767,
 0,
-12395
+17366
 ]
 },
-"costo": 1.1354
+"costo": 2.0879,
+"costo_fredde": 0.5323,
+"memoria_scaduta": 1,
+"ricreati": 66542,
+"fredde": [
+[
+112,
+579,
+0
+]
+]
 }
