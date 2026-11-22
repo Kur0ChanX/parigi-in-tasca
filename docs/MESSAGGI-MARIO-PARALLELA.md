@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 00:49 · 01WTjqUxihdo
-qui
-
 ## 2026-11-22 01:08 · 01WTjqUxihdo
 qui metti un tasto tutti non solo hotel b&b ecc e metti anche in bista distanza Disney con tempi e km a piedi rer a piedi
 
@@ -132,6 +129,12 @@ Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocc
 
 ## 2026-11-22 15:09 · 01Rwcxc4aWHi
 Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.
+
+## 2026-11-22 15:13 · 01Rwcxc4aWHi
+Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
+
+## 2026-11-22 15:15 · 01Rwcxc4aWHi
+Sì, appena finito le cose che ti ho detto, pubblica.
 
 ## 2026-11-22 15:22 · 01Rwcxc4Xr46
 Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa c'entrano i birilli, cioè? E tu me lo confermi pure, i birilli sono al posto giusto. Ma i birilli, che cavolo ce ne facciamo? Devono esserci cose attinenti, cioè. Puoi andare tu in una bancarella e vedere dei birilli in vendita. Ti sembra normale? Ma come ragioni? Boh.
