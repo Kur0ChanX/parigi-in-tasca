@@ -421,10 +421,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         document.querySelector('.tabbar button[data-t="giorni"]').click(); await w(400);
         const nascosto = getComputedStyle(n).display === 'none', fila = document.getElementById('daybar').getBoundingClientRect().height;
         document.querySelector('.tabbar button[data-t="piano"]').click(); await w(300);
-        return { su, giu, nascosto, fila, fin: document.querySelectorAll('#castFin .fin-c').length, luci: document.querySelectorAll('#castLuci circle').length, filo: document.querySelectorAll('#filoAlbero g.hb').length, neve: document.querySelectorAll('#pjNeve path').length, clip: !!document.querySelector('.scene g[clip-path="url(#castClip)"] .pj') };
+        return { su, giu, nascosto, fila, fin: document.querySelectorAll('#castFin .fin-c').length, luci: document.querySelectorAll('#castLuci circle').length, filo: document.querySelectorAll('#filoAlbero g.hb').length, neve: document.querySelectorAll('#pjNeve path').length, clip: !!document.querySelector('.scene g[mask="url(#castM)"] .pj') };
       });
-      const vOk2 = v.su < 60 && v.giu < -500 && v.nascosto && v.fila <= 50 && v.fin === 17 && v.luci >= 60 && v.filo >= 25 && v.neve === 7 && v.clip;
-      ok('Numero della versione solo in cima alla schermata principale (scorrendo va via, nelle altre schede non c’è); fila dei giorni stretta (≤ 50 px); testata con 17 finestre, lucine sul castello e sull’albero, proiezioni ritagliate sul castello', vOk2); if (!vOk2) console.log(v);
+      const vOk2 = v.su < 60 && v.giu < -500 && v.nascosto && v.fila <= 50 && v.fin >= 10 && v.luci >= 60 && v.filo >= 25 && v.neve === 7 && v.clip;
+      ok('Numero della versione solo in cima alla schermata principale (scorrendo va via, nelle altre schede non c’è); fila dei giorni stretta (≤ 50 px); testata con finestre del castello che si accendono, lucine sul castello e sull’albero, proiezioni solo sul castello', vOk2); if (!vOk2) console.log(v);
       await c4.close();
     }
     // v32 · PC (Mario 22/11 12:27 «per desktop… che occupa bene la pagina»): titolo a sinistra e indice a destra; «in breve» su 3 colonne (la regola dei 3 c’era, ma quella dei 2 veniva dopo e vinceva)
@@ -447,16 +447,25 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     await r4.waitForTimeout(5800);
     const parte = await r4.evaluate(() => { const s = document.getElementById('slitta'); return s.style.visibility === 'visible' && /translate/.test(s.getAttribute('transform') || ''); });
     const ferma = await r5.evaluate(() => document.getElementById('slitta').style.visibility === 'hidden' && !document.querySelector('#pacchi g'));
-    const vista = await r4.evaluate(() => { const n = window.slittaProva(.8, -1, 66), s = document.getElementById('slitta').getBoundingClientRect(), c = document.querySelector('.scene').getBoundingClientRect(), x = s.left + s.width / 2, y = s.top + s.height / 2;
+    const vista = await r4.evaluate(async () => {
+      /* v33 · il castello è un’immagine (il disegno di Mario): conta come «davanti» solo dove il disegno non è trasparente; le proiezioni (g con maschera) si vedono solo sul castello */
+      const ci = document.getElementById('castImg'), cu = document.querySelector('.scene use[href="#castImg"]'), im = new Image(); im.src = ci.getAttribute('href'); await im.decode();
+      const cv = document.createElement('canvas'); cv.width = im.width; cv.height = im.height; const cx = cv.getContext('2d'); cx.drawImage(im, 0, 0);
+      const alfa = (X, Y) => { const p = new DOMPoint(X, Y).matrixTransform(cu.getScreenCTM().inverse()), px = Math.floor((p.x - +ci.getAttribute('x')) / +ci.getAttribute('width') * im.width), py = Math.floor((p.y - +ci.getAttribute('y')) / +ci.getAttribute('height') * im.height);
+        return px < 0 || py < 0 || px >= im.width || py >= im.height ? 0 : cx.getImageData(px, py, 1, 1).data[3]; };
+      const n = window.slittaProva(.8, -1, 66), s = document.getElementById('slitta').getBoundingClientRect(), c = document.querySelector('.scene').getBoundingClientRect(), x = s.left + s.width / 2, y = s.top + s.height / 2;
       /* v33 (Mario 13:37 «non lancia nessun regalo»): i pacchi c’erano ma di 6 px, scuri, e cadevano dietro il castello. Mario ~14:5x: misure diverse, più piccoli, in penombra: almeno 2,8 px, nessuno oltre 8 px, almeno due misure diverse, colore del pacco spento, e niente disegno davanti (solo nebbia, vignetta e la slitta che li sta lanciando) */
       document.head.insertAdjacentHTML('beforeend', '<style id="provaPE">.scene,.scene *{pointer-events:auto!important}</style>');
       const pk = [...document.querySelectorAll('#pacchi > g')].map((g) => { const b = g.children[1].getBoundingClientRect(), px = b.left + b.width / 2, py = b.top + b.height / 2, sopra = [];
         for (const e of document.elementsFromPoint(px, py)) { if (g.contains(e)) break; sopra.push(e); }
         const col = (g.children[1].style.fill.match(/\d+/g) || [255, 255, 255]).map(Number);
-        return { largo: b.width, misura: g.children[1].getAttribute('width') + 'x' + g.children[1].getAttribute('height'), spento: Math.max(...col) <= 176, coperto: sopra.some((e) => e.id !== 'vigna' && !e.closest('#slitta') && !/nebbia/.test(e.getAttribute('fill') || '')) }; });
+        return { largo: b.width, misura: g.children[1].getAttribute('width') + 'x' + g.children[1].getAttribute('height'), spento: Math.max(...col) <= 176, coperto: sopra.some((e) => e.id !== 'vigna' && !e.closest('#slitta') && !e.closest('g[mask]') && !(e === cu && alfa(px, py) < 40) && !/nebbia/.test(e.getAttribute('fill') || '')) }; });
+      const sc0 = document.querySelector('.scene').getBoundingClientRect(), kk = sc0.height / 290, gx = sc0.left + sc0.width / 2 + (514 - 400) * kk, gy = sc0.top + 60 * kk;
+      const davanti = document.elementsFromPoint(gx, gy).find((e) => !e.closest('#castLuci,#castFin,#castDeco,#pacchi,#polvere,#slitta,g[mask]') && e.id !== 'vigna' && !/nebbia/.test(e.getAttribute('fill') || ''));
+      const castello = { disegno: /^data:image\/webp;base64,/.test(ci.getAttribute('href') || ''), largo: Math.round(cu.getBBox().width), guglia: davanti === cu && alfa(gx, gy) > 200, davanti: davanti ? davanti.tagName + '.' + (davanti.getAttribute('class') || davanti.id || '') : '-', alfa: alfa(gx, gy) };
       document.getElementById('provaPE').remove();
-      return { n, visti: pk.filter((q) => q.largo >= 2.8 && q.spento && !q.coperto).length, diversi: new Set(pk.map((q) => q.misura)).size >= Math.min(2, pk.length), grandi: pk.filter((q) => q.largo > 8).length, dentro: x > c.left && x < c.right && y > c.top && y < c.top + c.height * .6, largo: Math.round(s.width) }; });
-    ok('Slitta: parte da sola, passa nel cielo della testata (' + vista.largo + ' px) coi pacchi che cadono (' + vista.n + ', visibili ' + vista.visti + ': almeno 2,8 px, colori spenti, non dietro il castello; misure diverse ' + vista.diversi + ', troppo grandi ' + vista.grandi + '); con «riduci movimento» resta ferma', parte && ferma && vista.n >= 2 && vista.visti === vista.n && vista.diversi && vista.grandi === 0 && vista.dentro && vista.largo > 60 && vista.largo < 260);
+      return { castello, n, visti: pk.filter((q) => q.largo >= 2.8 && q.spento && !q.coperto).length, diversi: new Set(pk.map((q) => q.misura)).size >= Math.min(2, pk.length), grandi: pk.filter((q) => q.largo > 8).length, dentro: x > c.left && x < c.right && y > c.top && y < c.top + c.height * .6, largo: Math.round(s.width) }; });
+    ok('Slitta: parte da sola, passa nel cielo della testata (' + vista.largo + ' px) coi pacchi che cadono (' + vista.n + ', visibili ' + vista.visti + ': almeno 2,8 px, colori spenti, non dietro il castello; misure diverse ' + vista.diversi + ', troppo grandi ' + vista.grandi + '); castello dal disegno di Mario ' + JSON.stringify(vista.castello) + '; con «riduci movimento» resta ferma', parte && ferma && vista.n >= 2 && vista.visti === vista.n && vista.diversi && vista.grandi === 0 && vista.castello.disegno && vista.castello.largo >= 170 && vista.castello.largo <= 230 && vista.castello.guglia && vista.dentro && vista.largo > 60 && vista.largo < 260);
     const gio = await r4.evaluate(() => { const p = document.getElementById('p-gio'), c = p && p.querySelector('.callout-presto'); return { c: !!c && /Partite prima/.test(c.textContent) && /2 ore e mezza/.test(c.textContent), t: !!p && /Ultimo treno sicuro:<\/b> (8:47 da Val d'Europe|8:44 da Chessy)/.test(p.innerHTML) }; });
     ok('Giovedì 17: riquadro «Partite prima» in cima e ultimo treno sicuro 8:47 (8:44 da Chessy)', gio.c && gio.t);
     await c4.close(); await c5.close();
