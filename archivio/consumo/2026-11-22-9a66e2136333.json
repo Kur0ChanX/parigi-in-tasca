@@ -1,0 +1,47 @@
+{
+"account": "cba507",
+"sessione": "9a66e2136333",
+"giorno": "2026-11-22",
+"turni": 5,
+"peso": 360349,
+"uscita": 5510,
+"contesto_max": 298268,
+"anomalie": [],
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 4,
+"Stop 15 · There are uncommitted changes in": 4,
+"Stop 5 · Notifica non letta (in coda": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"15:28 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Prima ti mando la foto, e la metto online solo dopo che l'hai vista». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> ",
+"15:39 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Le vedrai nel video.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura dei dati veri>», commi",
+"15:44 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Prima ti mando la foto.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura dei dati veri>», co"
+],
+"Stop 15 · There are uncommitted changes in": [
+"15:28 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"15:39 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"15:44 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 5 · Notifica non letta (in coda": [
+"15:23 · Notifica non letta (in coda dalle 15:16: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+]
+},
+"remota": "01Rwcxc4Xr46",
+"aiutanti": 0,
+"strumenti": 11,
+"bilancia": 2,
+"motori": {
+"opus": 360349
+},
+"grezzi": {
+"opus": [
+22,
+3233066,
+7576,
+0,
+5510
+]
+},
+"costo": 0.8175
+}
