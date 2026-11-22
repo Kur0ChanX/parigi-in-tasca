@@ -95,3 +95,8 @@
 ## Mario 22/11 ~15:5x (Controllo 12), intero
 > Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa c'entrano i birilli, cioè? E tu me lo confermi pure, i birilli sono al posto giusto. Ma i birilli, che cavolo ce ne facciamo? Devono esserci cose attinenti, cioè. Puoi andare tu in una bancarella e vedere dei birilli in vendita. Ti sembra normale? Ma come ragioni? Boh.
 - Equivoco: avevo scritto «brillii» (stelline che luccicano sul castello), letto «birilli». Nelle bancarelle non ci sono birilli: merce appesa = cuori di pan di zenzero, stelle, calze, palline, bastoncini di zucchero. Spiegato a Mario con 2 foto (`archivio/2026-11-22-c18-v33/v33-d1-bancarella.jpg`, `v33-d2-castello-stelline.jpg`); riga in `docs/ERRORI.md`.
+
+## Mario 22/11 ~16:0x (Controllo 12), intero
+> No, però scusami, anche io ho sbagliato. Tipo quelle sfere che ci sono nelle bancarelle, mi spieghi che cavolo ci fanno? Che cosa significa? Cioè, metti qualcosa di inerente. Per le lucine sono sempre d'accordo, cioè più ce n'è meglio è, più da atmosfera meglio è, da tutte le parti. Anche la pagina del web farà più stile natalizia. Parigi, Disney, Natale, ecco.
+- Fatto (Controllo 12): sul banco merce vera, una casetta per tipo (vin brulé con tazze fumanti e pentolone, omini di pan di zenzero, candele accese, alberelli e pacchi); lucine anche sul bordo del banco; festoni fra le casette più fitti. Foto `archivio/2026-11-22-c18-v33/v33-d3-banchi-merce.jpg`.
+- Scelta: la pagina intera più natalizia viene DOPO la v33 (v34): prima una prova con foto a Mario (lucine sopra i titoli, agrifoglio, fiocchi leggeri sullo sfondo, schede con un filo dorato), online solo dopo che la vede. Motivo: tocca tutta la pagina e la leggibilità; la v33 (testata) non resta ferma.
