@@ -88,3 +88,6 @@
 ## Mario 22/11 ~15:2x (dopo l'handoff, passato alla Controllo 12), intero
 > Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
 - Da fare (Controllo 12): braccia di Jack come pezzo a parte della foto della slitta (come le zampe delle renne, `renne-pezzi.py`/`metti-renne.py`), che ogni tanto salgono e scendono, come se frustasse le renne.
+
+## Mario 22/11 dopo l'handoff (risposta alla DOMANDA 1), intero
+> Sì, appena finito le cose che ti ho detto, pubblica.

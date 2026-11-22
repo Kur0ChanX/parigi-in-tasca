@@ -9,7 +9,6 @@
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
-- 22/11 · 🛑 · 🟩 Controllo 10 · DOMANDA 1: posso pubblicare la v33 sul sito, appena il castello è fatto col tuo disegno? 📌 Di cosa parliamo: il controllo dei permessi ha fermato la copia per la pubblicazione (ramo `versione-v33`), serve il tuo ok scritto; prove verdi. Castello fatto (Controllo 11, 22/11 ~15:0x), foto mandate: `archivio/2026-11-22-c18-castello/v33-c0-testata-telefono.jpg`, `v33-c1-castello.jpg`, `v33-c2-pc.jpg`, `v33-c3-albero.jpg`. Scelte: 1 · «ok pubblica», online in ~5 minuti · 2 · aspetta, ritocca prima (cosa). Consiglio 1
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
