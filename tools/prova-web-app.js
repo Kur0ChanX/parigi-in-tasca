@@ -81,6 +81,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   // Dov'è (C5): ogni scheda degli alloggi, aperta, ha mappa, 3 distanze e 3 bottoni Maps col percorso coi mezzi
   const mappeOk = require('child_process').spawnSync('python3', ['-I', path.join(__dirname, 'fai-mappe-dicembre.py'), '--controlla'], { encoding: 'utf8' });
   ok('mappe: immagini e blocco MAPPE allineati', mappeOk.status === 0); if (mappeOk.status) console.log(mappeOk.stdout);
+  const mvOk = require('child_process').spawnSync('python3', ['-I', path.join(__dirname, 'fai-mappa-viaggio.py'), '--controlla'], { encoding: 'utf8' });
+  ok('mappa del viaggio: blocco dei dati allineato', mvOk.status === 0); if (mvOk.status) console.log(mvOk.stdout);
+  // 22/11 (C15): il service worker di novembre cancellava TUTTI gli altri cassetti, anche quelli di dicembre
+  ok('service worker di novembre: cancella solo i suoi cassetti', /k\.filter\(\(n\) => n\.startsWith\('parigi-in-tasca-'\) && n !== CASSETTO\)/.test(fs.readFileSync(path.join(__dirname, '..', 'sw.js'), 'utf8')));
   const cMappe = path.join(__dirname, '..', 'dicembre', 'mappe'), pesi = fs.readdirSync(cMappe).filter((f) => f.endsWith('.jpg')).map((f) => fs.statSync(path.join(cMappe, f)).size);
   ok('mappe: tutte le immagini (27) sotto 100 KB', pesi.length === 27 && pesi.every((x) => x < 100 * 1024));
   const dove = await q.evaluate(async () => {
@@ -189,6 +193,25 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     // la riga mostra i km del blocco MAPPE (n. 8: 1,9 km), non i km a piedi del giorno (22/11: due funzioni col nome kmT)
     // Mario 22/11 ~11:00 «quanto ci vuole ad arrivare a Disney» e ~11:05 «i chilometri mettili visibili»: n. 8 = 8 min a piedi + 3 RER + 2 + 3 di attesa del treno, e 1,9 km (blocco MAPPE)
     ok('Riga Disney: minuti per arrivare (attese comprese), km piccoli e come; RER a piedi; n. 8 = 16 min, 1,9 km, a piedi + RER', /🏰 Disney\|16 min\|1,9 km · a piedi \+ RER · attese comprese/.test(v.chip) && /🚉 RER\|8 min\|a piedi/.test(v.chip) && v.tuttiChip); if (!/16 min\|1,9 km/.test(v.chip) || !v.tuttiChip) console.log(v.chip);
+    // C15 (Mario 22/11 «zoomabile … Aeroporto, Parigi e Disneyland. E con quel range lì»): mappa che si apre, chiusa nel riquadro, segni per zoom
+    const tm = await q.evaluate(async () => {
+      const w = (ms) => new Promise((r) => setTimeout(r, ms || 250));
+      document.querySelector('.tabbar button[data-t="giorni"]').click(); await w();
+      document.getElementById('mappa').scrollIntoView(); for (let i = 0; i < 40 && !window.pdnTM; i++) await w();
+      const m = window.pdnTM; if (!m) return { err: (document.getElementById('tmMap') || {}).textContent };
+      await w(600);
+      const conta = (s) => document.querySelectorAll('#tmMap ' + s).length, r = { z0: m.getZoom(), minZ: m.getMinZoom(), lontano: [conta('.tm-n'), conta('.tm-c')] };
+      m.setZoom(m.getMinZoom() - 2); await w(400); r.zMin = m.getZoom();
+      m.setView([48.2, 1.5], 12); await w(500); const c = m.getCenter(); r.dentro = c.lat > 48.69 && c.lat < 48.93 && c.lng > 2.23 && c.lng < 2.86;
+      document.querySelector('.tm-vai [data-tmv="giro"]').click(); await w(700); r.zGiro = m.getZoom(); r.vicino = [conta('.tm-n'), conta('.tm-n.top'), conta('.tm-g'), conta('path.leaflet-interactive') + conta('path')];
+      document.querySelector('.tm-vai [data-tmv="disney"]').click(); await w(700); r.alloggi = conta('.tm-a'); r.me = conta('.tm-c.me');
+      document.querySelector('.tm-vai [data-tmv="orly"]').click(); await w(700); const o = m.getCenter(); r.orly = Math.abs(o.lat - 48.729) < 0.01 && Math.abs(o.lng - 2.366) < 0.01;
+      document.querySelector('.tm-vai [data-tmv="tutto"]').click(); await w(500);
+      document.querySelector('.tabbar button[data-t="dormire"]').click(); await w();
+      return r;
+    });
+    const tmOk = !tm.err && tm.zMin === tm.minZ && tm.dentro && tm.lontano[0] === 0 && tm.zGiro >= 13 && tm.vicino[0] === 7 && tm.vicino[1] === 4 && tm.vicino[2] === 5 && tm.alloggi >= 15 && tm.me >= 1 && tm.orly;
+    ok('Mappa del viaggio: si apre, non va oltre Orly–Parigi–Disney, da lontano solo i posti grandi, «Mercatini» mostra 7 tappe (4 con la stella) e 5 da saltare, «Disney» gli alloggi, «Orly» l\'aeroporto', tmOk); if (!tmOk) console.log(tm);
     const disOk = v.disMin.length > 20 && v.disMin.every((m, i) => i === 0 || m >= v.disMin[i - 1]), srcD = fs.readFileSync(path.join(__dirname, '..', 'dicembre', 'parigi-disney-natale.html'), 'utf8').match(/disney:\(a,b\)=>[^,]*(,[^,]*){0,3}/g) || [];
     ok('«Vicino a Disney» ordina solo per minuti (i km non contano: Mario 22/11 ~11:05)', disOk && srcD.length === 2 && srcD.every((s) => !/km/i.test(s))); if (!disOk || srcD.length !== 2) console.log(v.disMin.join(','), srcD);
     ok('C14: seconda camera a Bussy (Airbnb 15868262) nel riquadro B&B, conteggio «B&B» = righe + 2 camere', v.bb2 && v.bbN === v.bbR + 2); if (!(v.bb2 && v.bbN === v.bbR + 2)) console.log(v.bb2, v.bbN, v.bbR);
