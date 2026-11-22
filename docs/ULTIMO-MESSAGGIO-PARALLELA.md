@@ -1,3 +1,4 @@
-# Ultimo messaggio di Mario (22/11/2026 11:37 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 11:40 ora italiana)
 
-No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto quelli? Perché sono stati tolti? Non andavano bene? Fammi capire.
+Cioè non è che voglio importi le cose, io voglio solo il meglio dell'applicazione, non voglio aggiungere delle cose che non vanno bene, che sia chiaro.
+Mappe, la mappa fammela, vedo che fammela mettere a schermo intero la mappa che abbiamo appena fatto, e poi il pinch to zoom dopo un po' indietro non va, sbloccalo, e anche pinch out.
