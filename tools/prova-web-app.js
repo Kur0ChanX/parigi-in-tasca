@@ -177,13 +177,20 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const kpi = (d) => [...d.querySelectorAll('.sc-k')].map((x) => [...x.children].map((c) => c.textContent).join('|')).join(' / ');
       const r8 = document.querySelector('#scD details[data-k="d-8"]');
       const chip = r8 ? kpi(r8) : '';
+      // Mario 22/11 ~11:05 «i chilometri mettili visibili, ma non prenderli in considerazione nei filtri»: «Vicino a Disney» ordina solo per minuti
+      document.querySelector('#scSort [data-s="disney"]').click(); await w();
+      const disMin = righe().map((d) => +((kpi(d).match(/^🏰 Disney\|(\d+) min/) || [])[1] || 1e9));
+      document.querySelector('#scSort [data-s="prezzo"]').click(); await w();
       const tuttiChip = righe().every((d) => { const k = kpi(d); return k ? /^🏰 Disney\|\d+ min\|/.test(k) && /🚉 RER\|\d/.test(k) && /🧼 Pulizia\|/.test(k) : /Libero solo dal 14|Esaurito/.test(d.querySelector('.sc-m').textContent); });
-      return { bb2, bbN, bbR, bt: bt.join(','), tutti, hotel, bbT, bbH, bbB, bbLink, chip, tuttiChip, mio: document.querySelector('#mio .mine-t').textContent, dovekm: (document.querySelector('#al-8 .dr') || {}).textContent || '' };
+      return { bb2, bbN, bbR, bt: bt.join(','), tutti, hotel, bbT, bbH, bbB, bbLink, chip, tuttiChip, disMin, mio: document.querySelector('#mio .mine-t').textContent, dovekm: (document.querySelector('#al-8 .dr') || {}).textContent || '' };
     });
     ok('v18: interruttore con «Tutti» per primo, «Tutti» mostra tutti e 35, «Hotel» meno', v.bt === 'tutti,hotel,bb,casa' && v.tutti === 35 && v.hotel > 0 && v.hotel < 35); if (v.bt !== 'tutti,hotel,bb,casa' || v.tutti !== 35) console.log(v);
     ok('v18: camera di Bussy visibile con «B&B» e «Tutti», nascosta con «Hotel», link Booking', v.bbT && v.bbB && !v.bbH && v.bbLink);
     // la riga mostra i km del blocco MAPPE (n. 8: 1,9 km), non i km a piedi del giorno (22/11: due funzioni col nome kmT)
-    ok('v18: nella riga Disney (minuti e km dai parchi) e RER a piedi, n. 8 = 1,9 km come la scheda', /🏰 Disney\|13 min\|1,9 km/.test(v.chip) && /🚉 RER\|8 min\|a piedi/.test(v.chip) && v.tuttiChip); if (!/1,9 km/.test(v.chip) || !v.tuttiChip) console.log(v.chip);
+    // Mario 22/11 ~11:00 «quanto ci vuole ad arrivare a Disney» e ~11:05 «i chilometri mettili visibili»: n. 8 = 8 min a piedi + 3 RER + 2 + 3 di attesa del treno, e 1,9 km (blocco MAPPE)
+    ok('Riga Disney: minuti per arrivare (attese comprese), km piccoli e come; RER a piedi; n. 8 = 16 min, 1,9 km, a piedi + RER', /🏰 Disney\|16 min\|1,9 km · a piedi \+ RER · attese comprese/.test(v.chip) && /🚉 RER\|8 min\|a piedi/.test(v.chip) && v.tuttiChip); if (!/16 min\|1,9 km/.test(v.chip) || !v.tuttiChip) console.log(v.chip);
+    const disOk = v.disMin.length > 20 && v.disMin.every((m, i) => i === 0 || m >= v.disMin[i - 1]), srcD = fs.readFileSync(path.join(__dirname, '..', 'dicembre', 'parigi-disney-natale.html'), 'utf8').match(/disney:\(a,b\)=>[^,]*(,[^,]*){0,3}/g) || [];
+    ok('«Vicino a Disney» ordina solo per minuti (i km non contano: Mario 22/11 ~11:05)', disOk && srcD.length === 2 && srcD.every((s) => !/km/i.test(s))); if (!disOk || srcD.length !== 2) console.log(v.disMin.join(','), srcD);
     ok('C14: seconda camera a Bussy (Airbnb 15868262) nel riquadro B&B, conteggio «B&B» = righe + 2 camere', v.bb2 && v.bbN === v.bbR + 2); if (!(v.bb2 && v.bbN === v.bbR + 2)) console.log(v.bb2, v.bbN, v.bbR);
     ok('v18: il mio consiglio è 4 notti al n. 8 Moxy (13→17)', /4 notti al n\. 8 Moxy/.test(v.mio));
   }
