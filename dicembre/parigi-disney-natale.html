@@ -539,6 +539,13 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 .tabbar{display:none}
 body[data-tab]{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px max(8px,env(safe-area-inset-left,0px)) calc(6px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--rule);box-shadow:0 -8px 24px -16px rgb(0 0 0 / .5)}
+/* C16 (Mario 22/11 11:37 «sotto mi mettevi le date … Che fine hanno fatto?»): dalla v17 la barra delle schede copriva la fila dei giorni; sul telefono la fila sta appoggiata SOPRA la barra (69 px = 6 + 56 + 6 + bordo) */
+@media (max-width:719px){
+ body[data-tab] .daybar{bottom:calc(69px + env(safe-area-inset-bottom,0px));padding-bottom:6px;box-shadow:0 -10px 24px -14px rgb(0 0 0 / .45)}
+ body[data-tab] .daybar .pill{bottom:6px}
+ body[data-tab="giorni"]{padding-bottom:calc(153px + env(safe-area-inset-bottom,0px))}
+ body[data-tab="giorni"] .sc-avviso{bottom:calc(153px + env(safe-area-inset-bottom,0px))}
+}
 .tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:56px;padding:4px 2px;border:0;border-radius:14px;background:none;color:var(--mute);font:700 .8rem/1.1 var(--text);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .tabbar button .i{font-size:1.4rem;line-height:1}
 .tabbar button[aria-selected="true"]{background:var(--lamp);color:var(--lamp-ink)}
