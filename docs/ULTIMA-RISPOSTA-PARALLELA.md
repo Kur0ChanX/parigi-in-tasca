@@ -1,9 +1,21 @@
-# Ultima risposta di Claude (22/11/2026 22:31 ora italiana)
+# Ultima risposta di Claude (22/11/2026 22:28 ora italiana)
 
-Ho capito: questa chat si è riavviata adesso, ma nel frattempo il lavoro è andato avanti fino alla Controllo 19.
-🧠 Opus · Extra
+Ho capito: riparto da sola dalla guida dei giorni secondo l’hotel (C24), con molta cura.
+🧠 Continuo con Opus · Extra, come la sessione precedente · Fable: non serve, il piano c’era già e i dati sono quelli della pagina.
 
+───
 ✅ FATTO
-- Questa è la **vecchia Controllo 14**. Si era fermata verso le 17:05. Poi hai cambiato account e la catena è arrivata alla **Controllo 19**, che lavora ancora.
-- Non si è perso niente. I messaggi tuoi che erano rimasti nelle **scorte** (copie di sicurezza automatiche) ora sono nel registro. È tutto su GitHub (commit `2b3cd27`).
-- Prima di fermarmi avevo provato 12 volte da sola la parte del **service worker** (il pezzo che fa aprire la pagina anche senza …
+- In «Giorni», prima della fila dei giorni, c’è un **riquadro nuovo «Il vostro alloggio»**. Funziona per tutti i 35 alloggi, anche con la notte a Parigi. Dice:
+  - come si entra (reception, cassetta delle chiavi, gestore di persona);
+  - la domenica sera: treno e ora d’arrivo;
+  - il giovedì: a che ora uscire e l’ultimo treno sicuro;
+  - fino a quando si cancella …
+
+## Domande a Mario
+
+❓ DOMANDE
+**DOMANDA 1 🛑** · la guida dei giorni nuova va bene così?
+📌 Di cosa parliamo: nelle 3 foto (con il n. 23 scelto) vedi il riquadro in «Giorni» e l’avviso in cima alla domenica. La tua risposta decide se pubblico la v42.
+1 · sì, pubblica
+2 · cambia qualcosa (scrivimi cosa)
+Il mio consiglio: **1**. Tutto viene dai dati della pagina, e le prove sono verdi.
