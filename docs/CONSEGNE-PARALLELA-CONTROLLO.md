@@ -18,8 +18,9 @@
 - Fisarmonica del passo 2 (una scheda aperta alla volta): nella rosa tolta, sennò non si confronta.
 
 ## Prossimi passi
-1. **Testata v40 dal video di Mario** (19:35): rifare il caso (Playwright con zoom: `page.setViewportSize` piccolo + `deviceScaleFactor` alto, oppure `document.body.style.zoom`; scorrimento), trovare la riga nel cielo e i rettangoli nella neve, luna più nitida; confronto prima/dopo o video a Mario; v41 SOLO con C24 a posto o tolto (il pezzo 1 è già nel ramo: o finirlo o metterlo dietro un interruttore).
+1. **Testata v40 dal video di Mario** (19:35), **guardato fotogramma per fotogramma** (Mario: «se no non capisci»; `ffmpeg -vf fps=…` su tutti i 16 s, pezzi piccoli con la scritta DI LAVORO): rifare il caso (Playwright con zoom: `page.setViewportSize` piccolo + `deviceScaleFactor` alto, oppure `document.body.style.zoom`; scorrimento), trovare la riga nel cielo e i rettangoli nella neve, luna più nitida; confronto prima/dopo o video a Mario; v41 SOLO con C24 a posto o tolto (il pezzo 1 è già nel ramo: o finirlo o metterlo dietro un interruttore).
 2. **C24**: prima le 8 prove (punto 0 del file C24), poi «Manca» 1–5 del file (rosa ovunque, «Dormite al n. X» sui giorni, riquadro «Il vostro alloggio», domenica col gestore di persona, prove e foto).
+2b. **C25**: l’app si apre sempre sul Piano in cima (niente ripresa da `#…` o dalla scheda di prima). **C26**: «Questo o quello?» con hotel scelti da Mario (non le coppie fatte), insieme alla rosa di C24.
 3. C22 parte 2: camera 17 m² e colazione 25 € del Moxy (non sulla pagina ufficiale), orari RER A di dicembre (~26/11), Orly, mercatini 2026.
 4. Ponte RVC quando Mario scrive «fatto» (nuova chat: `python3 -I tools/scarica-kit.py --versione`).
 5. Poi: DOMANDA 1 🛑 Controllo 14 (alloggi spenti), prova instabile del service worker 🐞 (ipotesi: registrazione su `load`, che tarda), pagina più natalizia, fuochi.
@@ -30,7 +31,9 @@
 - Il ramo ha codice non pubblicabile (C24 pezzo 1): nessuna versione finché le prove non sono verdi.
 
 ## Ultimo messaggio di Mario
-22/11 19:35 (video v40): «Non  benissimo ancora come puoi vedere» → video in archivio, difetti in DA-FARE (C23), primo passo della Controllo 18. Controllo Da fare: 0 voci aggiunte (tutte già dentro: C23, C24, ponte RVC).
+22/11 ~19:4x (dopo l’handoff, passato alla Controllo 18 con send_message): «la pagina si deve aprire quando clicco nellapp sempre nella schermata principale Piano  in cima
+nella sezione Questo o quello devo poter scegliere io gli hotel per un confronto non le abbinate prefatte
+il video guardalo frame ler frame se no non capisci» → C25 (apertura sempre sul Piano in cima), C26 («Questo o quello?» con hotel scelti da Mario), video della v40 fotogramma per fotogramma. Controllo Da fare: 2 voci aggiunte (C25, C26).
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
