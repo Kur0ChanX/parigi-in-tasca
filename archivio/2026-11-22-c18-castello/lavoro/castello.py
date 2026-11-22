@@ -40,15 +40,20 @@ coni = []
 for q in colorati:
     ys, xs, lo, hi = righe(q)
     u = (xs - lo[ys]) / np.maximum(1, hi[ys] - lo[ys])
-    ombra[ys, xs] = 1.12 - .34 * u
-    y0, y1, x0, x1 = ys.min(), ys.max(), xs.min(), xs.max()
+    y0, y1, x0, x1 = ys.min(), ys.max(), xs.min(), xs.max(); v = (ys - y0) / max(1, y1 - y0)
+    # v34 (Mario 15:02 «aggiungi un po' di ombre, sennò sembra piatta»): lato della luna chiaro, lato opposto in ombra piena (cilindro),
+    # ombra del tetto sotto la gronda (in alto in ogni pezzo), un po' più scuro in basso
+    ombra[ys, xs] = (1.22 - .66 * u ** 1.25) * (.68 + .32 * np.clip((ys - y0) / (.16 * (y1 - y0) + 2), 0, 1)) * (1 - .16 * v ** 2)
     if (B[ys, xs] > R[ys, xs] + .1).mean() > .8 and (y1 - y0) >= .5 * (x1 - x0) and q.sum() >= 900 and y1 < 1450:
         coni.append((q, ys, xs, lo, hi))
 # --- notte: colori del disegno, esposizione più bassa, ombre fredde, luce di luna dall'alto a sinistra, riflesso caldo dei mercatini in basso
 lum = (A * [.299, .587, .114]).sum(2, keepdims=True)
-rgb = np.clip(lum + (A - lum) * 1.38, 0, 1)
+rgb = np.clip(lum + (A - lum) * 1.62, 0, 1)   # meno pastello (Mario 15:02 «colori… pastello e molto piatti»)
 yy, xx = np.mgrid[0:H, 0:W]; yN, xN = yy / H, xx / W
-rgb = rgb * (.93 * ombra * (1.07 - .2 * yN - .1 * xN))[..., None]
+vicino = np.asarray(Image.fromarray((linea * 255).astype('uint8')).filter(ImageFilter.MaxFilter(9))) > 0   # vicino ai tratti: un filo più scuro (volume)
+rgb = rgb * (.98 * ombra * np.where(vicino & ~linea, .9, 1) * (1.07 - .2 * yN - .1 * xN))[..., None]
+buio = np.clip((1.22 - ombra) / .9, 0, 1)[..., None]                       # 0 = lato della luna, 1 = ombra
+rgb = rgb * (1 - buio * np.array([.14, .32, .02])) + (1 - buio) * np.array([.0, .015, .05])   # ombre verso il viola notte, luce di luna fredda
 rgb = rgb * (1 - (1 - lum) * np.array([.2, .12, -.04]))
 rgb = rgb + (np.array([1, .6, .3]) * .1 * yN[..., None] ** 2)
 # --- neve sui tetti a cono: fascia in basso con l'orlo a onde e qualche goccia, solo dentro il tetto (mai fuori dal disegno)
@@ -99,5 +104,9 @@ for (q, ys, xs, lo, hi) in coni:
     y0, y1 = ys.min(), ys.max(); top = xs[ys == y0].mean()
     rr = [y for y in range(y0, y1 + 1) if hi[y] >= 0]
     geo['coni'].append(dict(apice=[sx(top), sy(y0)], sx=[[sx(lo[y]), sy(y)] for y in rr[::6]], dx=[[sx(hi[y]), sy(y)] for y in rr[::6]], base=[sx(xs[ys >= y1 - 3].min()), sx(xs[ys >= y1 - 3].max()), sy(y1)]))
+ori = []
+for q in pezzi(oro & (yy < H * .8), 12, 2):
+    ys, xs = np.where(q); ori.append([sx(xs.mean()), sy(ys.mean())])
+geo['ori'] = ori
 json.dump(geo, open(OUT + '/castello-geo.json', 'w'))
 import os; print('webp', small.size, os.path.getsize(OUT + '/castello-notte.webp'), 'finestre', len(fin), 'coni', len(coni), 'img svg', geo['img'])

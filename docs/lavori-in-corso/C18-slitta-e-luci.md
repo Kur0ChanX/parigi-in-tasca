@@ -80,3 +80,7 @@
 > Dietro lo deve inseguire questo cane, animalo e fallo piccolino, piccolo piccolo. Il naso lasciaglielo luminoso, però ripeto, il cane è piccolo, non farlo grande quanto la renna, ovviamente. Cioè non grande, scusami, non grande quanto tutta il, non farlo grande quanto tutta la renne è slitta, fallo più piccolo in proporzione.
 > Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocca a poco si apre e si chiude, insomma come se avesse un po' di vento.
 - Piano: la SUA foto ritagliata (mai disegnato da noi), dietro la slitta che la insegue, più piccolo di una renna; naso a zucca acceso (bagliore che pulsa); a pezzi come le renne: orecchie che sventolano, mantello in basso che ondeggia, bocca (mascella) che si apre e si chiude piano.
+
+## Mario 22/11 ~15:3x, intero
+> Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.
+- Fatto: in `slitta-rosso.py` il verde della slitta più spento e scuro (in ombra), resta acceso solo il rosso di Jack.
