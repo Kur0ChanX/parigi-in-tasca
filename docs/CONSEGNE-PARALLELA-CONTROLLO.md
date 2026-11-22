@@ -19,8 +19,9 @@
 - Filtro dei tipi insieme alla rosa: poteva nascondere righe della rosa → con la rosa il filtro dei tipi è spento (`#scD:not([data-solo-rosa])`) e nascosto.
 
 ## Prossimi passi
-1. DOMANDA 1 🛑 della Controllo 15 (v37): a «1» pubblicare la v37 (skill `pr`: ramo-copia, PR pronta, giro completo, unione, sito letto); a «2» correggere e rifare foto.
-2. DOMANDA 1 🛑 della Controllo 14 (alloggi spenti n. 18, 20, 21; consiglio «in fondo, in un gruppo Liberi solo dal 14»): alla risposta, foto prima di pubblicare (anche nella stessa versione).
+1. **Pubblicare SUBITO la v37 (rosa)**: Mario ha risposto alla DOMANDA 1 della Controllo 15 («prima publica la rosa»). Skill `pr`: ramo-copia `versione-v37`, PR pronta, giro completo, unione, sito letto.
+2. **C22 (dopo la v37)**: controllare tutti gli itinerari e le informazioni degli alloggi, soprattutto n. 8 Moxy e i n. 16 e 23 (parole intere sotto, «Ultimo messaggio»), correggere con le fonti ufficiali, poi pubblicare. Scrivere `docs/lavori-in-corso/C22-controllo-itinerari.md`.
+2b. DOMANDA 1 🛑 della Controllo 14 (alloggi spenti n. 18, 20, 21): alla risposta, foto prima di pubblicare.
 3. Promesse 👁 della v34, v35, v36 (e v37 quando online) in `docs/DA-FARE.md`: si chiudono solo con la foto di Mario dal sito vero.
 4. Se Mario mette altri alloggi nella rosa: proporre la scheda «📋 Tutto sul n.» anche per loro (ricerca dagli annunci, come C20).
 5. Poi: pagina intera più natalizia (PRIMA una foto di prova a Mario), C17 resto, orario RER A (~26/11), prova del service worker instabile 🐞, fuochi. Kit RVC: chiave mancante.
@@ -33,7 +34,9 @@
 - Diritti del disegno dell’albero (annuncio Etsy): DOMANDA 1 della Controllo 13 aperta, consiglio 1.
 
 ## Ultimo messaggio di Mario
-22/11 ~17:55 (alla Controllo 14): «metti il tasto Rosa alloggi  nella home e li mo fai mettere la rosa» → C21 fatto (v37 pronta), DOMANDA 1 della Controllo 15. In questa sessione nessun messaggio di Mario. Controllo Da fare: 0 voci aggiunte (C21 già c’era).
+22/11 ~18:2x (alla Controllo 15, dopo l’handoff): «Controlla che tutti gli itinerari e info per hotel sono giusti sopratutto moxi e gli ultimi 2 mandati mella sessione precedente
+poi publica
+prima publica la rosa poi controllo itinerari e info» → risposta alla DOMANDA 1 (pubblica la v37) + C22. Controllo Da fare: 1 voce aggiunta (C22).
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
@@ -54,4 +57,4 @@ Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o
 
 Ultimo, intero:
 > [AVVIO] Sei la chat parallela Controllo 15 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
-
+- 2026-11-22 18:2x · Controlla che tutti gli itinerari e info per hotel sono giusti sopratutto moxi e… → risposta alla DOMANDA 1 (pubblica v37) + C22, passato alla Controllo 16
