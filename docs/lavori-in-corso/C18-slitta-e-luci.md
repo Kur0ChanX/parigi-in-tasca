@@ -23,3 +23,4 @@
 - Foto ritagliata (bianco tolto anche fra redini e zampe), 640 px, in penombra: luce di luna debole e fredda, bordo chiaro in alto a sinistra, riflesso caldo sotto (`v30-slitta-ritagliata-notte.webp`, dentro la pagina). Il mio disegno vettoriale è stato tolto tutto.
 - I pacchi che cadono restano rettangolini colorati (non sono personaggi); se Mario li vuole da foto, si cambia.
 - Albero, cielo e castello (richiesta delle 12:27): sono il paesaggio a disegno piatto di tutta la testata; si migliorano con LUCI (finestre che si accendono, proiezioni, lucine), senza figure nuove disegnate da noi. Detto a Mario nel PARERE.
+- Slitta vettoriale dell'aiutante della Controllo 7 (`archivio/2026-11-22-c18-slitta/aiutante/`): scartata, superata dalla foto di Mario (12:49).
