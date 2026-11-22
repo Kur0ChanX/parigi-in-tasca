@@ -54,7 +54,7 @@ Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o
 - 2026-11-22 23:09 · Se è tutto verde, pubblica. → v42 online (PR #43, 9192b19, versione.json = 42 alle 23:14)
 - 2026-11-22 23:14 · Dopo sai che cosa devi fare? Sei già informato? → risposto col piano e la DOMANDA 1 della Controllo 14
 
-- 2026-11-22 23:15 · Ok, va bene. Ehm, Non solo Moxie… → C22: scelte solo n. 8, 16, 23; guida curata su 16 e 23 (Già deciso, prossimo passo 1)
+- 2026-11-22 23:15 · Ok, va bene. Ehm, Non solo Moxie, cioè non so se noi dobbiamo prendere quello di Hotel… → C22: scelte solo n. 8, 16, 23; guida curata su 16 e 23 (Già deciso, prossimo passo 1)
 
 Ultimo, intero:
 > Ok, va bene. Ehm, Non solo Moxie, cioè non so se noi dobbiamo prendere quello di Hotel Moxie, più che altro gli altri due che ti avevo detto. Ehm, Te l'avevo segnati. Gli altri due appartamenti, probabilmente andremo lì. Comunque le scelte sono tre, o Moxie o quei due appartamenti che ti ho detto. Quelli con molta cura, l'itinerario e la guida che si basano molto su quelli, che probabilmente sceglieremo quelli.
