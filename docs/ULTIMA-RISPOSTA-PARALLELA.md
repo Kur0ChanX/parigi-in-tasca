@@ -1,24 +1,14 @@
-# Ultima risposta di Claude (22/11/2026 01:06 ora italiana)
+# Ultima risposta di Claude (22/11/2026 01:33 ora italiana)
 
-Ho capito: nella scheda Dormire vuoi un tasto «Tutti», le distanze in vista nella riga di ogni alloggio, una ricerca anche sui siti diretti e una grafica più chiara.
-🧠 Opus · Extra, come la sessione di prima · Fable: non serve, la grafica si rifà a pezzi piccoli con foto da approvare.
+I 3 aiutanti hanno finito. Ho trovato una camera nuova che rispetta i tuoi criteri, oltre a un piccolo risparmio. Non è ancora sul sito: va online insieme alla nuova scheda Dormire quando rispondi alla DOMANDA 1.
 
 ───
-✅ FATTO · v18 online (controllata sul sito, 4 foto qui sopra)
-- **Tasto «Tutti»**: in cima, sopra Hotel · B&B · Case. All'apertura è già acceso.
-- **Distanze nella riga di ogni alloggio**: 🏰 minuti e km fino ai parchi, 🚉 minuti a piedi fino alla RER.
-- **«Vicino a Disney»**: prima metteva in cima il …
+✅ **FATTO**
+| Cosa | Risultato |
+|---|---|
+| **Camera a Bussy-Saint-Georges** (Airbnb) | **201 € per 4 notti** (13→17), 151 € per 3 notti (14→17). Cancellazione gratis fino al 29/11. Voto 4,95 su 722 recensioni, pulizia 5,0. A pochi passi dalla RER, poi 2 fermate fino a Disney. L'ho ricontrollata io sulla pagina di Airbnb. Aggiunta sotto il tasto «B&B», accanto alla Jolie …
 
 ## Domande a Mario
 
-❓ DOMANDE
-**DOMANDA 1 🛑** (mi fermo sulla grafica finché rispondi)
-📌 Di cosa parliamo: come rifaccio la grafica della pagina di dicembre.
-1. A pezzi: prima la scheda Dormire, con le foto prima/dopo, poi le altre (consiglio).
-2. Tutta la pagina in una volta: ci vuole di più e c'è più rischio di rompere qualcosa.
-3. Va già bene così: solo piccoli ritocchi.
-
-**DOMANDA 2** (se non rispondi, vado col consiglio)
-📌 Di cosa parliamo: il plugin `frontend-design`.
-1. Non installarlo: le sue regole le seguo io (consiglio).
-2. Installalo nelle impostazioni del progetto.
+❓ **DOMANDE**
+Ti aspetta ancora la DOMANDA 1 sulle foto della scheda Dormire (messaggio di prima): 1 · pubblica · 2 · più corta · 3 · ritocca · 4 · com'era.
