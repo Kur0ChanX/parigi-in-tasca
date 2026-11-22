@@ -1,0 +1,26 @@
+# C20 · Pubblicare la v34, nascondere gli alloggi che non interessano, potenziare i 2 scelti (Controllo 14, 22/11)
+
+Lavorato dall'**altro account** di Mario (sessione `session_01QTFEqRq6KHUZyj1XNVa82p`, titolo «Controllo 14»), mentre la Controllo 14 del primo account era ferma al limite delle 5 ore (fino alle 18:50). Chi riprende: legge qui e continua da qui, senza rifare.
+
+## Mario 22/11 17:1x, intero (con foto della scheda n. 23)
+> Sì, se tutte le prove sono verdi, pubblica. Dopo che è pubblicato dovresti fare un aggiornamento che possa andare a eliminare nell'app o archiviare o nascondere gli hotel. Gli hotel che non mi interessano perché ce n'è troppi e ne ho scelto solo alcuni. Così senza andare in conflitto con la pagina che si trasforma, insomma, mi hai capito come funziona. Dammi la possibilità di modificare, di togliere gli hotel per pulire un po'.
+>
+> Poi quelli che andiamo a potenziare sono questi due, quindi li andiamo a trovare un sacco di informazioni e a migliorare la pagina su questi due.
+>
+> https://www.airbnb.it/rooms/5115238?…&check_in=2026-12-13&check_out=2026-12-17&guests=2&adults=2
+>
+> Uno è in foto, uno è nel link. Ti ho messo nell'ambiente, ti ho messo il codice per il ponte per prenderti il kit RVC aggiornato.
+
+Prima di questo: «Cerca di non creare conflitti con l'altro account… cerca di non calpestarvi lavoro l'uno con l'altro… quando andrò nell'altro account lui vedrà il lavoro che hai fatto e si adatta.»
+
+## I due alloggi da potenziare
+- Foto: **n. 23** «Appartamento a 2 km da Disneyland» (Airbnb, Montévrain, 489 €, voto 5,0).
+- Link: **n. 16** «Nice studio near Disneyland Paris» (Airbnb 5115238, Chessy, accanto alla stazione Val d'Europe).
+
+## Piano
+1. v34: tutte le prove in locale (`giro: locale`), verdi → ramo-copia `versione-v34`, PR, unione, sito.
+2. Nascondi alloggi (v35): tasto «Nascondi» su ogni alloggio (lista del passo 2 di «Scegli», schede di «Dormire», tabella, grafico, mappa); «Annulla» subito; in fondo «Nascosti: N · Mostra / Rimetti»; l'alloggio scelto non si nasconde; ricordato sul telefono (`localStorage`, resta dopo ogni aggiornamento della pagina); il link «Condividi» porta anche i nascosti, chi lo apre sceglie se nasconderli anche lui.
+3. N. 23 e n. 16: ricerca (pagina Airbnb, recensioni, regole, check-in, foto, distanze), poi schede più ricche.
+
+## Scelte in corsa
+- Kit RVC: in questo contenitore `RVC_KIT_TOKEN` non c'è (`scarica-kit.py --versione` → esito 2). Le variabili nuove arrivano solo in una sessione aperta dopo averle salvate, e nell'ambiente giusto.
