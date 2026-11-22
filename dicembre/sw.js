@@ -4,6 +4,11 @@
 const CASSETTO = 'parigi-natale-v1';
 const BASE = ['./', 'icona-192.png', 'icona-512.png', 'icona-180.png', 'manifest.webmanifest'];
 const FONT = /^https:\/\/fonts\.(googleapis|gstatic)\.com\//;
+// Mappa del viaggio (C15): libreria Leaflet e pezzi della mappa IGN già guardati, in un cassetto a parte
+// (non comincia con «parigi-natale-», così non lo cancella il cambio di versione). Al massimo ~900 pezzi (~50 MB).
+const MAPPA = 'mappa-natale-v1';
+const DA_MAPPA = /^https:\/\/(cdnjs\.cloudflare\.com\/ajax\/libs\/leaflet\/1\.9\.4\/|data\.geopf\.fr\/wmts\?)/;
+let pezziNuovi = 0;
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CASSETTO).then((c) => c.addAll(BASE)).then(() => self.skipWaiting()));
@@ -37,6 +42,16 @@ self.addEventListener('fetch', (e) => {
       }
       return risposta;
     })));
+    return;
+  }
+  if (DA_MAPPA.test(r.url)) {
+    e.respondWith(caches.open(MAPPA).then((c) => c.match(r).then((salvata) => salvata || fetch(r).then((risposta) => {
+      if (risposta.ok) {
+        const copia = risposta.clone();
+        e.waitUntil(c.put(r, copia).then(() => (++pezziNuovi % 50 ? null : c.keys().then((k) => Promise.all(k.slice(0, Math.max(0, k.length - 900)).map((x) => c.delete(x)))))));
+      }
+      return risposta;
+    }))));
     return;
   }
   if (url.origin !== self.location.origin) return; // Google Maps, Booking, siti ufficiali: non si toccano
