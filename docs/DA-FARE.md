@@ -4,7 +4,7 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v38 · 🟩 Controllo 16 · 22/11 18:4x · tasto Rosa pulito
+🚀 Online: v38 · 🟩 Controllo 16 · 22/11 18:36 · tasto Rosa pulito
 🧪 In prova: — (v39 · 🟩 Controllo 16 · testata: luci, scorrimento, Torre fissa)
 ⏳ Dopo: v40 · 🟩 Controllo 16 · C22 controllo itinerari e alloggi
 

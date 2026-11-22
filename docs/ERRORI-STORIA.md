@@ -53,3 +53,4 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 | 21/11/2026 | Costi: scritte sovrapposte (barre, scala, barra in alto). | Due cose con lo stesso nome `go`. | `prova-scritte.js` su tutta la pagina; nome nuovo: prima `grep` (storia in ERRORI-STORIA). |
 
 | 22/11/2026 | «brillii» letto «birilli» da Mario. | Parola rara, senza foto. | A Mario parole comuni («stelline che luccicano») e la foto insieme. | (spostata da ERRORI.md il 22/11, tetto 10 KB)
+| 22/11/2026 | Prova dei pacchi rossa 1 volta su 8, pagina giusta. | Contava il bagliore del castello (`cglow`, luce) come «copre». | La prova salta i bagliori; una rossa a caso si rifà 8 volte prima di cercare il colpevole. | (spostata il 22/11, tetto 10 KB)
