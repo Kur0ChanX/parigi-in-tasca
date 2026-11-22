@@ -2,30 +2,30 @@
 "account": "cba507",
 "sessione": "8134e686dbef",
 "giorno": "2026-11-22",
-"turni": 2,
-"peso": 478360,
-"uscita": 12001,
-"contesto_max": 163221,
+"turni": 3,
+"peso": 547317,
+"uscita": 14376,
+"contesto_max": 171364,
 "anomalie": [
 "un turno ha aggiunto 127k token al contesto"
 ],
 "remota": "01Rwcxc7EAGC",
 "aiutanti": 0,
-"strumenti": 16,
+"strumenti": 19,
 "motori": {
-"opus": 478360
+"opus": 547317
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-33,
-2154273,
-162316,
+39,
+2659570,
+167553,
 0,
-12001
+14376
 ]
 },
-"costo": 1.9695,
+"costo": 2.16,
 "costo_fredde": 0.9407,
 "memoria_scaduta": 1,
 "ricreati": 117587,

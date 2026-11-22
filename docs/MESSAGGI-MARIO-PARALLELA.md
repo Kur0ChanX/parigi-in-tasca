@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 11:20 · 01WTjqUwFBdt
-Sì, me la puoi fare la mappa zoomabile che mi faccia vedere insomma le cose che mi interessano. Zoomabile a livello di Disney, che vedo dove è Disney, dove è l'aeroporto, ecco, il range è quello. Aeroporto, Parigi e Disneyland. E con quel range lì di zoom. Andare oltre non mi serve.
-
 ## 2026-11-22 11:27 · 01WTjqUwFBdt
 poi publica tranquillo e finisci il lavoro
 
@@ -143,3 +140,6 @@ passaggio account salva
 
 ## 2026-11-22 23:08 · 01Rwcxc7EAGC
 No, cos'hai capito? Ti ho mandato la chat dell'altra. Ti ho mandato la chat dell'altro account. Adesso voglio continuare qua.
+
+## 2026-11-22 23:09 · 01Rwcxc7EAGC
+Se è tutto verde, pubblica.
