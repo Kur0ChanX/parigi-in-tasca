@@ -44,3 +44,7 @@ Fable non serve: c'è già lo script delle mappe da copiare e i dati sono nella 
 > Cioè non è che voglio importi le cose, io voglio solo il meglio dell'applicazione, non voglio aggiungere delle cose che non vanno bene, che sia chiaro.
 > Mappe, la mappa fammela, vedo che fammela mettere a schermo intero la mappa che abbiamo appena fatto, e poi il pinch to zoom dopo un po' indietro non va, sbloccalo, e anche pinch out.
 - Per la Controllo 7: schermo intero; zoom sbloccato allontanando (minZoom/maxBounds più larghi) e avvicinando (maxZoom più alto). Supera «andare oltre non mi serve» delle 11:20.
+
+## Mario 22/11 ~11:45 (dopo l'handoff della Controllo 6), parole intere
+> E nella schermata principale mettimi tutte gli shortcut, ecco, delle cose principali, dei tasti, così non vado a cercare direttamente nelle pagine. Tipo la mappa deve avere un tasto shortcut nella schermata principale e anche tante altre cose fondamentali.
+- Per la Controllo 7: la griglia «Vai subito a» ha già «🗺️ Mappa del viaggio» (v24): verificare che si veda subito e completarla coi fondamentali che mancano.
