@@ -1,0 +1,30 @@
+{
+"account": "108763",
+"sessione": "0e8fcd49cdcf",
+"giorno": "2026-11-22",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 211911,
+"anomalie": [],
+"blocchi": {
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 15 · There are untracked files in": 1,
+"Stop 8 · Il turno finisce con una": 1
+},
+"esempi_blocchi": {
+"Stop 5 · Notifica non letta (in coda": [
+"01:24 · Notifica non letta (in coda dalle 01:09: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 15 · There are untracked files in": [
+"01:24 · There are untracked files in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 8 · Il turno finisce con una": [
+"01:24 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+]
+},
+"remota": "01WTjqUwRSHU",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
