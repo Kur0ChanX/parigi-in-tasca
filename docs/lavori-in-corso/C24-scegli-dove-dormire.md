@@ -59,7 +59,7 @@
 
 ## Piano della guida (Controllo 18, 22/11 ~20:2x, dopo «priorità massima nella guida» e «prosegui con la guida con molta cura»)
 Pezzo 2 = v42, prima di tutto il resto. C’è già: giorni da `mkDays()` col profilo `P=ACC[n]` (strade `go`/`back`, uscita `out`, domenica `sunT`/`sunLeg`, giovedì `thuT`/`thu`), domenica a Parigi `parSun`, spa `spaSun`; dati ricchi dei n. 16 e 23 in `XX`/`XXI`.
-1. In cima a ogni giorno: «🛏️ Dormite al n. X · nome · cambia» (cambia → «Scegli dove dormire»).
+1. In cima a ogni giorno: «🛏️ Dormite al n. X · nome · cambia» (cambia → «Scegli dove dormire»). ✅ nel ramo (Controllo 18, `dormeDi`, classe `.dorme-day`; senza scelta dice «è il mio consiglio, non l’avete ancora scelto · scegliete voi›»; giovedì «🧳 Si parte dal…»), provato a mano con e senza `?scelta=lo-16`; manca la prova automatica e la foto.
 2. Riquadro «Il vostro alloggio» in cima ai Giorni: indirizzo e Maps; come si entra (reception 24 ore / cassetta delle chiavi / gestore di persona); domenica sera: ora d’arrivo prevista e ultimo treno utile; giovedì: uscita e treno per Orly; cancellazione gratuita fino al … con promemoria nel calendario (`.ics`); messaggio in francese da copiare per il gestore.
 3. Domenica secondo l’alloggio: reception 24 ore (n. 8) → giro completo senza fretta; cassetta delle chiavi (n. 16) → giro completo, ora da scrivere 48 ore prima; gestore di persona (n. 23) → avviso in cima alla domenica con l’ora proposta e il messaggio pronto, e se il gestore vuole prima il percorso corto.
 4. Ogni fatto dalla pagina ufficiale (Marriott, annuncio Airbnb, RATP/IDFM) con la fonte; quello che non è ufficiale segnato così.

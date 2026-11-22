@@ -504,6 +504,7 @@ table.cmp td.r{white-space:nowrap}
  body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 }
 .day-head{display:grid;gap:var(--s2);margin-bottom:var(--s4)}
+.dorme-day{font-size:.95rem;font-weight:600;padding:var(--s2) var(--s3);border-radius:12px;background:color-mix(in srgb,var(--lamp) 14%,transparent);border:1px solid color-mix(in srgb,var(--lamp) 35%,transparent)}.dorme-day a{white-space:nowrap}
 .day-head h3{font-size:clamp(1.45rem,1.2rem + 1.2vw,1.9rem);font-weight:800}
 .panel.enter{animation:pin .45s cubic-bezier(.2,.8,.2,1)}
 .panel.enter.back{animation-name:pinb}
@@ -2165,6 +2166,11 @@ const mkAl=()=>{tmAl();const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode=
 /* menù del PC: la sezione che state leggendo è evidenziata */
 {const sa=[...document.querySelectorAll('.side a')];if(sa.length&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){sa.forEach(a=>{if(a.getAttribute('href')==='#'+e.target.id)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});}})},{rootMargin:'-35% 0px -60% 0px'});sa.forEach(a=>{const t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t)})}}
 let SHORT=false;
+/* C24 pezzo 2 (Mario 22/11 «una guida… in base a che hotel scelgo cosa fare nella giornata»): in cima a ogni giorno dove dormite, con «cambia» */
+const dormeDi=d=>{const h=AL.find(x=>x.id===CHO),nm=h?`n. ${h.id} · ${esc(h.n)}`:'',par=d.id==='dom'&&PN,ul=d.id==='gio';
+ const chi=par?`${esc(PN.n)} <span class="muted">(Parigi)</span>`:nm;
+ const tx=ul?`🧳 Si parte da${SCELTO?'l':'l mio consiglio,'} ${nm}`:SCELTO?`🛏️ Stanotte dormite qui: ${chi}`:`🛏️ Stanotte: ${chi} <span class="muted">· è il mio consiglio, non l’avete ancora scelto</span>`;
+ return `<p class="dorme-day">${tx} · <a href="#scegli">${SCELTO?'cambia':'scegliete voi'} ›</a></p>`};
 const renderDays=()=>{DAYS=mkDays();if(PN)parSun(DAYS[0]);else if(P.spa||P.by22)spaSun(DAYS[0]);let html='';
 DAYS.forEach((d,i)=>{
  let body;
@@ -2175,7 +2181,7 @@ DAYS.forEach((d,i)=>{
   <div id="routeFull"><p class="small muted" style="margin-bottom:var(--s3)">Circa 8–9 km a piedi. ${d.cutNote}</p><ol class="tl">${d.full.map(item).join('')}${d.post.map(item).join('')}</ol></div>
   <div id="routeShort" hidden><p class="small muted" style="margin-bottom:var(--s3)">Solo Notre-Dame, grandi magazzini e Tuileries. Quasi sempre al coperto, finisce alle 18:30.</p><ol class="tl">${d.short.map(item).join('')}</ol></div>`;
  }else body=`${d.mood==="magic"?dlBox():''}${d.top||''}<ol class="tl">${d.items.map(item).join('')}</ol>${d.foot||''}`;
- html+=`<div class="panel" role="tabpanel" id="p-${d.id}" aria-labelledby="t-${d.id}" ${i?'hidden':''}><div class="day-head"><p class="kicker">${d.mood==="market"?"Mercatini e città":"Parchi"}</p><h3>${esc(d.h)}</h3><p class="muted">${esc(d.sub)}</p>${d.id==="dom"?`<svg class="market" viewBox="0 0 400 112" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${MK.mini(400,112,1)}</svg>`:""}</div>${body}</div>`;
+ html+=`<div class="panel" role="tabpanel" id="p-${d.id}" aria-labelledby="t-${d.id}" ${i?'hidden':''}><div class="day-head"><p class="kicker">${d.mood==="market"?"Mercatini e città":"Parchi"}</p><h3>${esc(d.h)}</h3><p class="muted">${esc(d.sub)}</p>${dormeDi(d)}${d.id==="dom"?`<svg class="market" viewBox="0 0 400 112" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${MK.mini(400,112,1)}</svg>`:""}</div>${body}</div>`;
 });
 $('#panels').innerHTML=html;
  const rF=$('#rFull'),rS=$('#rShort');rF.addEventListener('click',()=>route(false));rS.addEventListener('click',()=>route(true));if(SHORT)route(true,1)};
