@@ -1,5 +1,9 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
+## Stato (Controllo 16 `session_01QTFEqRCHFhdKvoJDeCbedf`, 22/11 19:08 ora italiana, chiusa alla soglia; la apre la Controllo 16 con `create_session` (catena 3 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01QTFEqRCHFh/claude/parigi-ramo-definitivo.
+- (qui le righe di giudizio della Controllo 16: fatto, provato, dove si verifica)
+
 ## Stato (Controllo 15 `session_01QTFEqR4smB9LCwjXG1Qzwj`, 22/11 18:18 ora italiana, chiusa alla soglia; la apre la Controllo 15 con `create_session` (catena 2 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01QTFEqR4smB/claude/parigi-ramo-definitivo.
 - **v37 PRONTA, NON ONLINE** (commit 9da22ae sul ramo comune; verifica: `grep -o "{v:37" dicembre/index.html` e `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 36}`). Aspetta la DOMANDA 1 🛑 della Controllo 15 (foto 1–4 mandate 18:2x): «1 · sì, pubblica» → ramo-copia `versione-v37`, PR, giro completo, unione (skill `pr`).
@@ -41,20 +45,25 @@ prima publica la rosa poi controllo itinerari e info» → risposta alla DOMANDA
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 16
-la apre la Controllo 15 con `create_session` (catena 2 di 8). Scritto da Controllo 15 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 17
+la apre la Controllo 16 con `create_session` (catena 3 di 8). Scritto da Controllo 16 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 16 · rosa: aspetta ok`
+Titolo: `🟩 🗼 Controllo 17 · v40: aspetta ok`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 16 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 17 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 17:58 · [AVVIO] Sei la chat parallela Controllo 15 di Parigi in tasca, linea «Controllo»… → testo d’avvio (non di Mario): C21 fatto, v37 pronta, DOMANDA 1 della Controllo 15
+- 2026-11-22 18:19 · [AVVIO] Sei la chat parallela Controllo 16 di Parigi in tasca, linea «Controllo»… → 
+- 2026-11-22 18:27 · mi devi spiegare perché hai scritto 2n 16 e 23.... assurdo... come tovinare una … → 
+- 2026-11-22 18:32 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/5a064185-VID_20261122_18311… → 
+- 2026-11-22 18:37 · publica rosa adesso ho capito le scritte ma falle meglio nel tasto non cosí... → 
+- 2026-11-22 18:47 · è qui il ponte lo vedi vabbè guardalo dopo prima sistema la foto animata e alleg… → 
+- 2026-11-22 18:58 · l'albero fai un tratto meno spesso → 
 
 Ultimo, intero:
-> [AVVIO] Sei la chat parallela Controllo 15 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
-- 2026-11-22 18:2x · Controlla che tutti gli itinerari e info per hotel sono giusti sopratutto moxi e… → risposta alla DOMANDA 1 (pubblica v37) + C22, passato alla Controllo 16
+> l'albero fai un tratto meno spesso
+

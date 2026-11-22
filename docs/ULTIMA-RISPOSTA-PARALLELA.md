@@ -1,20 +1,25 @@
-# Ultima risposta di Claude (22/11/2026 18:17 ora italiana)
+# Ultima risposta di Claude (22/11/2026 19:08 ora italiana)
 
-Ho capito: dovevo mettere il tasto «Rosa alloggi» nella schermata principale e farti scegliere lì quali alloggi stanno nella rosa.
-🧠 Opus · Extra · Fable non serve: il piano era già pronto, si trattava di eseguirlo.
-
-🛑 Ti aspetta ancora la DOMANDA 1 della Controllo 14: come mostro gli alloggi «spenti» n. 18, 20 e 21. Te la scrivo intera quando vuoi.
+Ho capito: albero col tratto più sottile, e nella stessa versione il disegno in alto più leggero.
 
 ───
-✅ FATTO (v37 pronta, **non ancora online**)
-- Tasto «⭐ Rosa alloggi · 2» accanto a «Guida Disneyland» (foto 1).
-- Lo tocchi e si apre Dormire con solo gli alloggi della rosa (foto 2). Sotto c'è «✏️ Cambia la rosa», con una spunta per ogni …
+✅ FATTO
+- **v39 online** (18:52): sulla stella del tasto «Rosa alloggi» un numerino, sotto «n. 16» e «n. 23» in piccole pastiglie.
+- **v40 pronta, non ancora online**. Video prima/dopo qui sopra.
+  - **Albero**: tratto più sottile, rifatto dal tuo disegno. Colori e contorno restano uguali.
+  - **Torre Eiffel**: ferma sulle casette quando scorri.
+  - **Scorrimento**: la causa vera era che nel disegno giravano 814 animazioni insieme, una per ogni lucina. Le lucine che lampeggiano insieme ora …
 
 ## Domande a Mario
 
 ❓ DOMANDE
-**DOMANDA 1 🛑** (serve a pubblicare la v37 sul sito vero: si pubblica solo con le foto approvate)
-La v37 con la rosa (foto 1–4) va bene?
+🛑 DOMANDA 1: la v40 del video (Torre ferma, scorrimento più leggero, albero sottile) va bene?
 1 · sì, pubblica
-2 · cambia qualcosa (scrivimi cosa)
-Consiglio: **1**. Rispondi col numero.
+2 · cambia (scrivi cosa)
+Consiglio 1.
+
+⚠️ Aspettano te: 5
+- 🛑 Controllo 16 · Torre ferma, scorrimento più leggero, albero col tratto…
+- 🛑 Controllo 14 · gli alloggi «spenti»
+- Controllo 13 · l'albero della testata lo faccio dal tuo disegno
+- poi altre 2: tutte nella Bacheca delle 8:40
