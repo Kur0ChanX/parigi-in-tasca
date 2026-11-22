@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 10:27 · 01WTjqUuicbA
-Attenzione che se ti va a vedere anche nel posto dove dormire, che lo scegli e ti cambia l'itinerario, insomma ti cambia la pagina, la scelta, ti influisce, quello va mostrato e fatto capire.
-
 ## 2026-11-22 10:30 · 01WTjqUuicbA
 Il colore casa e quant'altro non va in conflitto con la leggenda tipo biglietti Disney e quant'altro? I colori non hanno un conflitto. Ti disorienta un po'?
 della possibilità, se uno sceglie perché per sbaglio ci clicca, che lo può annullare.
@@ -144,3 +141,7 @@ Mi raccomando è una guida deve aiutarmi in base a che hotel scelgo cosa fare ne
 
 ## 2026-11-22 19:35 · 01QTFEqRa2TK
 @"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta].mp4" Non  benissimo ancora come puoi vedere
+
+## 2026-11-22 20:03 · 01QTFEqQQmp8
+Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata
+anche nella 39 la vedevo non caticata a volte la luna
