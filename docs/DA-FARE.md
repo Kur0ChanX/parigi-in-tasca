@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v19 · 🟩 Controllo 4 · 22/11 10:06 · Dormire più chiaro
-🧪 In prova: v20 · 🟩 Controllo 4 · grafica, Disney rosa, dettagli
+🚀 Online: v20 · 🟩 Controllo 4 · 22/11 10:26 · grafica, Disney, dettagli
+🧪 In prova: —
 ⏳ Dopo: v21 · 🟩 Controllo 4 · verifiche passate dalla Principale
 
 ## 0. Aspetta Mario
