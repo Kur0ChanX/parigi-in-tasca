@@ -1,12 +1,18 @@
-# Ultima risposta di Claude (22/11/2026 01:37 ora italiana)
+# Ultima risposta di Claude (22/11/2026 10:13 ora italiana)
 
-Ho capito: avvio della Controllo 4. Il lavoro aspetta la tua risposta alla DOMANDA 1.
-
-🛑 **DOMANDA 1** (fatta dalla Controllo 3): ti piace il nuovo aspetto della scheda Dormire? Rispondi col numero: 1 · pubblica e usa lo stesso stile negli altri pezzi · 2 · più corta · 3 · ritocca · 4 · com'era. Le foto sono nella chat della Controllo 3. Quando scrivi, te le rimando qui.
-
-🧠 Continuo con Opus 5.5 · Extra, come la sessione precedente. Fable non serve: c'è solo da seguire un piano già fatto, un pezzo alla volta.
+Il pezzo 2 è finito e salvato su GitHub. Le prove sono tutte verdi: 43 su 43, compresa una nuova solo per questo pezzo. Non è ancora sul sito.
 
 ───
 ✅ **FATTO**
-- Avvio finito. Il ramo è uguale a quello su GitHub.
-- Ho …
+- Il passo «Domenica 13: dove dormite?» ora ha lo stesso stile del passo 2. I confronti prima/dopo sono le due foto qui sopra.
+- La chat Principale mi ha passato 3 controlli da fare: dove lasciare le valigie all'Astra e al Saint-Pétersbourg, la spa del Saint-Pétersbourg, la cancellazione dell'Airbnb di David. Non sono urgenti: nella pagina sono già segnati «da chiedere». Li ho scritti nella lista delle cose da fare.
+
+───
+💡 **PARERE** …
+
+## Domande a Mario
+
+❓ **DOMANDE**
+**DOMANDA 1** · 📌 Di cosa parliamo: il passo «Domenica 13» rifatto con lo stesso stile (foto qui sopra).
+1 · va bene (consiglio) · 2 · ritocca (dimmi cosa)
+Intanto vado avanti col pezzo 3, la scheda Piano. La foto «prima» si sta facendo adesso.
