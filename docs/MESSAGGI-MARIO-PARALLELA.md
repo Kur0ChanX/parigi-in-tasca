@@ -112,6 +112,9 @@ Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma nea
 ## 2026-11-22 14:27 · 01Rwcxc4fE4C
 Basta che risulti con lo stesso stile della foto.
 
+## 2026-11-22 14:29 · 01Rwcxc4fE4C
+ok
+
 ## 2026-11-22 14:33 · 01Rwcxc4aWHi
 Non vedo più i pacchi sotto l'albero, poi i pacchi che lancia la renna devono essere uno piccolo, un po' più piccolo, uno un pochettino più grande. In genere sono tutti un po' grandetti della stessa misura, non mi piacciono così. Falli un pochettino più scuri perché sono in lontananza. Colorali sì, ma non troppo, devono essere un po' in penombra perché in lontananza. Quindi i pacchi sono uno magari un po' rettangolare, piccolo, uno quadrato, uno un pochettino più grande, ma comunque la dimensione di adesso sono tutti troppo grandi e tutti troppo colori accesi.
 
