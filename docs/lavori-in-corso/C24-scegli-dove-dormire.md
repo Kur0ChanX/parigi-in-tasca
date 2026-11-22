@@ -57,6 +57,15 @@
 4. Domenica secondo l'hotel: caso «gestore di persona» (n. 23) in `mkAl` e nel check-in della domenica (ora da concordare).
 5. Prove nuove in `tools/prova-web-app.js` (riquadro, rosa di partenza, schede aperte, Dormite al n. X), foto o video a Mario, poi v41.
 
+## Piano della guida (Controllo 18, 22/11 ~20:2x, dopo «priorità massima nella guida» e «prosegui con la guida con molta cura»)
+Pezzo 2 = v42, prima di tutto il resto. C’è già: giorni da `mkDays()` col profilo `P=ACC[n]` (strade `go`/`back`, uscita `out`, domenica `sunT`/`sunLeg`, giovedì `thuT`/`thu`), domenica a Parigi `parSun`, spa `spaSun`; dati ricchi dei n. 16 e 23 in `XX`/`XXI`.
+1. In cima a ogni giorno: «🛏️ Dormite al n. X · nome · cambia» (cambia → «Scegli dove dormire»).
+2. Riquadro «Il vostro alloggio» in cima ai Giorni: indirizzo e Maps; come si entra (reception 24 ore / cassetta delle chiavi / gestore di persona); domenica sera: ora d’arrivo prevista e ultimo treno utile; giovedì: uscita e treno per Orly; cancellazione gratuita fino al … con promemoria nel calendario (`.ics`); messaggio in francese da copiare per il gestore.
+3. Domenica secondo l’alloggio: reception 24 ore (n. 8) → giro completo senza fretta; cassetta delle chiavi (n. 16) → giro completo, ora da scrivere 48 ore prima; gestore di persona (n. 23) → avviso in cima alla domenica con l’ora proposta e il messaggio pronto, e se il gestore vuole prima il percorso corto.
+4. Ogni fatto dalla pagina ufficiale (Marriott, annuncio Airbnb, RATP/IDFM) con la fonte; quello che non è ufficiale segnato così.
+5. Prove: ogni numero 1–35 ha profilo e riquadro; la domenica cambia con n. 8, 16, 23; foto a Mario prima di pubblicare.
+Dopo (v43): C26 «Questo o quello?» con gli hotel scelti da Mario e la rosa in tutte le liste.
+
 ## Scelte in corsa
 - Fable non serve: la logica c'è già (profili `ACC`), si tratta di renderla chiara; nessun dato vero o soldi in gioco.
 - Mario 22/11 ~20:1x: «Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata» → C24 prima di tutto; la v41 porta anche le correzioni della testata già fatte (C23).
