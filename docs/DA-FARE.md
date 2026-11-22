@@ -4,15 +4,15 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v25 · 🟩 Controllo 7 · 22/11 · fila dei giorni di nuovo visibile
-🧪 In prova: v26 · 🟩 Controllo 7 · fila dei giorni sottile, numero della versione con «Aggiorna»
+🚀 Online: v26 · 🟩 Controllo 7 · 22/11 · fila dei giorni sottile, numero della versione con «Aggiorna»
+🧪 In prova: v27 · 🟩 Controllo 7 · fila dei giorni in alto, ferma scorrendo
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
-- 🟩 Controllo 7 · 👁 Lo vedi: nella scheda Giorni la fila dei giorni in basso, sottile (DOMANDA 1 = 1) (Dom 13 … Gio 17, apre l'itinerario del giorno) di nuovo visibile sopra la barra delle schede · prova: foto a Mario (Mario 22/11 ~11:37 «sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto?»). Causa trovata dalla Controllo 6: `#daybar` (fissa, z 30, alta 56, top 853 a 412×915) sta SOTTO `#tabbar` (fissa, z 60, top 846): coperta già nella v23, non dalla mappa.
+- 🟩 Controllo 7 · 👁 Lo vedi: nella scheda Giorni la fila dei giorni IN ALTO, ferma quando scorri (DOMANDA 1 = 2, Mario ~12:00) (Dom 13 … Gio 17, apre l'itinerario del giorno) di nuovo visibile sopra la barra delle schede · prova: foto a Mario (Mario 22/11 ~11:37 «sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto?»). Causa trovata dalla Controllo 6: `#daybar` (fissa, z 30, alta 56, top 853 a 412×915) sta SOTTO `#tabbar` (fissa, z 60, top 846): coperta già nella v23, non dalla mappa.
 - 🟩 Controllo 7 · 👁 Lo vedi: nella schermata principale i tasti di tutte le cose fondamentali, le cose che servono di più (Mappa compresa), visibili subito aprendo l'app · prova: foto a Mario (Mario 22/11 ~11:45)
 - 🟩 Controllo 7 · C17 · 👁 Lo vedi: in alto nella pagina di dicembre un numerino della versione; toccandolo le novità; se il telefono ha una versione vecchia, il tasto «Aggiorna versione» che la aggiorna · prova: foto a Mario (Mario 22/11 ~11:55)
 - 🟩 Controllo 7 · C17 · 👁 Lo vedi: Gio 17 con l'ora a cui partire per Orly (margine, bagagli dal deposito, avviso «partite prima»), Domenica a Parigi più curata, giorni Disney semplici · prova: foto a Mario (Mario 22/11 ~11:55)
