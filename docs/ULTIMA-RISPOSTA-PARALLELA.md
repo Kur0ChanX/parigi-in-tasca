@@ -1,5 +1,11 @@
-# Ultima risposta di Claude (22/11/2026 11:00 ora italiana)
+# Ultima risposta di Claude (22/11/2026 11:33 ora italiana)
 
-Ho passato il tuo messaggio alla Controllo 6 (km visibili nella scheda, ordini e filtri solo per tempo).
+Ho capito: dovevo finire la mappa e pubblicarla senza aspettarti.
 
-⚠️ ATTENZIONE: nell'ultimo turno ho scritto circa 43.000 token, soprattutto per il cambio di colori e km fatto tutto in un turno: da qui ci pensa la Controllo 6, che parte leggera.
+───
+✅ **FATTO**
+- **v24 online** alle 11:32. L'ho aperta sul sito vero: la mappa si carica e i tasti funzionano.
+- **Mappa del viaggio**: è nella scheda **Giorni**, dopo il giro dei mercatini. C'è anche il tasto «🗺️ Mappa del viaggio» in cima alla pagina.
+  - Si allarga con due dita e si sposta col dito. Non va oltre Orly, Parigi e Disneyland, come hai chiesto.
+  - Tasti rapidi: Tutto, Mercatini, Disney, Orly, Il vostro alloggio.
+  - Da lontano vedi solo i posti grandi. Allargando compaiono le 7 tappe con il percorso, le …
