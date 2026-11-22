@@ -571,7 +571,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     {
       const cg = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const g = await cg.newPage();
       g.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
-      const leggi = () => g.evaluate(() => { const t = (s) => (document.querySelector(s) || {}).textContent || ''; return { box: t('#vaBox'), avv: t('#p-dom .va-dom'), dorme: [...document.querySelectorAll('#panels .dorme-day')].map((x) => x.textContent), gio: t('#p-gio'), msg: [...document.querySelectorAll('#vaBox .xx-msg')].map((x) => x.textContent), ics: (document.querySelector('#vaBox a[download]') || {}).href || '', gc: (document.querySelector('#vaBox a[href*="calendar.google.com"]') || {}).href || '' }; });
+      const leggi = () => g.evaluate(() => { const t = (s) => (document.querySelector(s) || {}).textContent || ''; return { box: t('#vaBox'), dom: t('#p-dom'), avv: t('#p-dom .va-dom'), dorme: [...document.querySelectorAll('#panels .dorme-day')].map((x) => x.textContent), gio: t('#p-gio'), msg: [...document.querySelectorAll('#vaBox .xx-msg')].map((x) => x.textContent), ics: (document.querySelector('#vaBox a[download]') || {}).href || '', gc: (document.querySelector('#vaBox a[href*="calendar.google.com"]') || {}).href || '' }; });
       const vai = async (k) => { await g.goto(B + 'dicembre/' + (k ? '?scelta=' + k : '')); await g.waitForTimeout(700); return leggi(); };
       const r0 = await vai(''), r8 = await vai('4n-8'), r23 = await vai('4n-23'), r16 = await vai('4n-16'), rP = await vai('lo-16'), r1 = await vai('4n-1'), r29 = await vai('4n-29');
       const okD = r0.dorme.length === 5 && r0.dorme.every((x) => /n\. 8/.test(x)) && /mio consiglio/.test(r0.dorme[0]) && r8.dorme.every((x) => /n\. 8/.test(x) && !/mio consiglio/.test(x)) && /Hotel Locomo/.test(rP.dorme[0]) && rP.dorme.slice(1).every((x) => /n\. 16/.test(x));
@@ -584,6 +584,11 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const ok16 = /48 ore prima/.test(r16.avv) && r16.msg.length === 1 && /Vincent/.test(r16.msg[0]) && /prime 24 ore/.test(r16.box) && !r16.gc;
       const okP = /Domenica notte a Parigi/.test(rP.box) && /Lunedì mattina/.test(rP.box) && !rP.avv && /du 14 au 17/.test(rP.msg[0] || '') && /lundi 14 décembre/.test(rP.msg[0] || '') && /Hotel Locomo: gratis fino a sabato 12\/12/.test(rP.box);
       ok('C24: domenica secondo l’alloggio: n. 23 gestore di persona (avviso, 2 messaggi, indirizzo), n. 16 ora 48 ore prima, notte a Parigi (date 14→17)', ok23 && ok16 && okP); if (!(ok23 && ok16 && okP)) console.log({ ok23, ok16, okP, r23, r16, rP });
+      // C22 (Controllo 21, Mario 22/11 23:16 «con molta cura» sui n. 16 e 23): orari ufficiali RER A, n. 23 a 700 m (giovedì 8:10), arrivo Booking entro le 23:00, messaggi secondo il piano
+      const okC22 = /alle 8:10/.test(r23.box) && /8h10/.test(r23.msg[0]) && /entro le 23:00/.test(r23.avv) && /14:00–23:00/.test(r23.dom)
+        && !/déposer/.test(r16.msg[0]) && /où laisser les clés/.test(r16.msg[0]) && /déposer nos valises/.test(rP.msg[0] || '')
+        && /21:43/.test(r8.dom) && /22:08 \(22:43\)/.test(r8.dom) && !/non fermano a Val d'Europe/.test(r8.gio) && /8:18, 8:24/.test(r8.gio);
+      ok('C22: n. 23 giovedì alle 8:10 e arrivo entro le 23:00, messaggio del n. 16 senza valigie (con la notte a Parigi sì), RER 21:43 e treni di riserva', okC22); if (!okC22) console.log({ b23: r23.box.slice(0, 600), m16: r16.msg, mP: rP.msg, d8: r8.dom.slice(-1500) });
       const ok1 = /8:44 da Chessy/.test(r1.gio) && /8:44 da Chessy/.test(r1.box) && /8:47 da Val d'Europe/.test(r8.gio) && /Gratis fino a lunedì 7\/12/.test(r29.box);
       ok('C24: giovedì del n. 1 da Chessy (8:44, non Val d’Europe); n. 29 «prima dell’8/12» = gratis fino al 7/12', ok1); if (!ok1) console.log(r1.gio.slice(-400), r29.box);
       // tutti e 35, con 4 notti e con la notte a Parigi: riquadro pieno, niente «undefined», «NaN» o «null» nel riquadro e nei giorni
