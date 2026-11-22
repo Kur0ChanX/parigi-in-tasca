@@ -29,3 +29,8 @@ su questo nostro sito rifai tutto con frontend da 0 solo migliorie»
 - Stesso stile del pezzo 1 (Mario «va bene», scelta 1): hotel di Parigi con barra azzurra ed etichetta «🏨 Hotel a Parigi»; «4 notti vicino a Disney» con barra neutra ed etichetta «🏰 Domenica già a Disney»; totale sotto il prezzo (`.sc-dt`); 3 riquadri: Parigi = a piedi, lunedì (uscita con le valigie), pulizia; 4 notti = domenica (treno), in camera, lunedì (uscita senza valigie). Regole CSS del passo 2 allargate con `:is(#scD,#scN)`.
 - Prova nuova «C13 pezzo 2» in `tools/prova-web-app.js`. Prove 22/11 10:17: web app 43/43, scritte VERO, `--controlla` VERO, colori VERO. Confronti in `archivio/2026-11-22-c13-dormire-pezzo2/`, mandati a Mario (DOMANDA 1 della Controllo 4).
 - Prossimo: pezzo 3 = scheda Piano, poi Giorni, Biglietti; v20 quando il gruppo è pronto e approvato.
+
+## Pezzo 3 · scheda Piano, «Quanto costa» (22/11 dalle 10:25, Controllo 4)
+- Il resto della scheda Piano (testata, voli, viaggio in breve, da fare) è già nello stile: cambiato solo «Quanto costa». Ogni strada è una scheda col bordo, barra a sinistra ed etichetta del tipo del suo alloggio (🏨 Hotel azzurro, 🏠 Casa verde acqua, 🛏️ B&B lilla, 🏰 pacchetto Disney rosso; «Parigi + …» se domenica a Parigi); la scelta in oro come in Dormire.
+- `tyOf` spostata accanto a `byId` (primo script): le barre si disegnano prima del secondo script. Prova nuova «C13 pezzo 3». Confronto: `archivio/2026-11-22-c13-piano-pezzo3/`.
+
