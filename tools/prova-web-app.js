@@ -417,8 +417,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const mk = async (rm) => { const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block', reducedMotion: rm }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); }); await r.goto(B + 'dicembre/'); return [c, r]; };
     const [c4, r4] = await mk('no-preference'), [c5, r5] = await mk('reduce');
     await r4.waitForTimeout(5800);
-    const parte = await r4.evaluate(() => { const s = document.getElementById('slitta'); return s.style.display !== 'none' && /translate/.test(s.getAttribute('transform') || ''); });
-    const ferma = await r5.evaluate(() => document.getElementById('slitta').style.display === 'none' && !document.querySelector('#pacchi g'));
+    const parte = await r4.evaluate(() => { const s = document.getElementById('slitta'); return s.style.visibility === 'visible' && /translate/.test(s.getAttribute('transform') || ''); });
+    const ferma = await r5.evaluate(() => document.getElementById('slitta').style.visibility === 'hidden' && !document.querySelector('#pacchi g'));
     const vista = await r4.evaluate(() => { const n = window.slittaProva(.5, -1, 66), s = document.getElementById('slitta').getBoundingClientRect(), c = document.querySelector('.scene').getBoundingClientRect(), x = s.left + s.width / 2, y = s.top + s.height / 2;
       return { n, dentro: x > c.left && x < c.right && y > c.top && y < c.top + c.height * .6, largo: Math.round(s.width) }; });
     ok('Slitta: parte da sola, passa nel cielo della testata (' + vista.largo + ' px) coi pacchi che cadono (' + vista.n + '); con «riduci movimento» resta ferma', parte && ferma && vista.n >= 1 && vista.dentro && vista.largo > 60 && vista.largo < 260);
