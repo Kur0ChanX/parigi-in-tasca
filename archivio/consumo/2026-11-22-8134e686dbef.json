@@ -1,0 +1,47 @@
+{
+"account": "cba507",
+"sessione": "8134e686dbef",
+"giorno": "2026-11-22",
+"turni": 2,
+"peso": 478360,
+"uscita": 12001,
+"contesto_max": 163221,
+"anomalie": [
+"un turno ha aggiunto 127k token al contesto"
+],
+"remota": "01Rwcxc7EAGC",
+"aiutanti": 0,
+"strumenti": 16,
+"motori": {
+"opus": 478360
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+33,
+2154273,
+162316,
+0,
+12001
+]
+},
+"costo": 1.9695,
+"costo_fredde": 0.9407,
+"memoria_scaduta": 1,
+"ricreati": 117587,
+"fredde": [
+[
+117,
+320,
+0
+]
+],
+"blocchi": {
+"Stop 8 · Il turno finisce con una": 1
+},
+"esempi_blocchi": {
+"Stop 8 · Il turno finisce con una": [
+"22:41 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+]
+}
+}

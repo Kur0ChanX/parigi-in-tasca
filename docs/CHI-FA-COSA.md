@@ -6,7 +6,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
 | Principale | cerchi | 🟢 🟡 🔴 ⚫ | 22 | session_01WTjqUtegBCzTHdbgdaXDm1 | — |
-| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 18 | session_01QTFEqQQmp8CBZ7C3hCtNKP | — |
+| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 20 | session_01Rwcxc7EAGCUGyWhBTz3aWr | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
@@ -26,7 +26,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C18 | Controllo 14 (da Controllo 13) | Testata: ora ALBERO dal disegno di Mario (colorato e addobbato) e Torre Eiffel più bella, poi v34; dopo pagina più natalizia | `dicembre/parigi-disney-natale.html` (testata), `docs/lavori-in-corso/C18-slitta-e-luci.md` | 22/11 |
 | C19 | Controllo 12 | Guida Disneyland di Mario nella schermata principale e nei giorni Disney (link coi giorni del viaggio) | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C19-guida-disneyland.md` | 22/11 |
 | C20 | Controllo 14 (altro account, session_01QTFEqRq6KHUZyj1XNVa82p) | v34, v35, v36 online (Nascondi, schede ricche dei n. 16 e 23, Booking del n. 23); resta: DOMANDA sugli alloggi spenti | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md` | 22/11 |
-| C22 | Controllo 18 (da Controllo 17) | Controllo di itinerari e informazioni degli alloggi (soprattutto n. 8 Moxy, n. 16 e 23), poi pubblicare | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C22-controllo-itinerari.md` | 22/11 |
-| C23 | Controllo 18 (da Controllo 17) | Testata di dicembre: lucine a gruppi, niente parallasse, albero sottile; v40 online 22/11 19:18, aspetta che Mario la veda sul telefono | `dicembre/parigi-disney-natale.html`, `archivio/2026-11-22-c18-albero/lavoro/albero.py` | 22/11 |
-| C24 | Controllo 18 (da Controllo 17) | Tasto «Scegli dove dormire»: rosa → confronto → scelta che cambia l'itinerario (risposte 11 21 31), guida dei giorni secondo l'hotel | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C24-scegli-dove-dormire.md` | 22/11 |
+| C22 | Controllo 19 (da Controllo 18) | Controllo di itinerari e informazioni degli alloggi (soprattutto n. 8 Moxy, n. 16 e 23), poi pubblicare | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C22-controllo-itinerari.md` | 22/11 |
+| C23 | Controllo 19 (da Controllo 18) | Testata di dicembre: lucine a gruppi, niente parallasse, albero sottile; v40 online 22/11 19:18, aspetta che Mario la veda sul telefono | `dicembre/parigi-disney-natale.html`, `archivio/2026-11-22-c18-albero/lavoro/albero.py` | 22/11 |
+| C24 | Controllo 19 (da Controllo 18) | Tasto «Scegli dove dormire»: rosa → confronto → scelta che cambia l'itinerario (risposte 11 21 31), guida dei giorni secondo l'hotel | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C24-scegli-dove-dormire.md` | 22/11 |
 | PR 37 | Controllo 14 (altro account) | v36 da `versione-v36` (commit df327f9), unita 22/11 | — | 22/11 |

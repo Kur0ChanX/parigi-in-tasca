@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (22/11/2026 19:35 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 23:08 ora italiana)
 
-@"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta].mp4" Non  benissimo ancora come puoi vedere
+No, cos'hai capito? Ti ho mandato la chat dell'altra. Ti ho mandato la chat dell'altro account. Adesso voglio continuare qua.
