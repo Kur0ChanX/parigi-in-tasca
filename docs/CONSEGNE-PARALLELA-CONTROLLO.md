@@ -50,11 +50,11 @@ Testo da incollare:
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 15:13 · [AVVIO] Sei la chat parallela Controllo 12 di Parigi in tasca, linea «Controllo»… → 
-- 2026-11-22 15:22 · Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa… → 
-- 2026-11-22 15:24 · No, però scusami, anche io ho sbagliato. Tipo quelle sfere che ci sono nelle ban… → 
-- 2026-11-22 15:30 · Quando siamo nel giorno di Disneyland, oppure anche nella schermata principale, … → 
-- 2026-11-22 16:29 · All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio… → 
+- 2026-11-22 15:13 · [AVVIO] Sei la chat parallela Controllo 12 di Parigi in tasca, linea «Controllo»… → avvio; bancarelle, stelline del castello, braccia di Jack, v33 pubblicata (PR 34)
+- 2026-11-22 15:22 · Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa… → equivoco «brillii»/«birilli» spiegato con foto (C18, ERRORI)
+- 2026-11-22 15:24 · No, però scusami, anche io ho sbagliato. Tipo quelle sfere che ci sono nelle ban… → merce vera sul banco, più lucine (C18); pagina natalizia → v34/v35 con foto prima (Da fare)
+- 2026-11-22 15:30 · Quando siamo nel giorno di Disneyland, oppure anche nella schermata principale, … → C19 guida Disneyland: tasto e riquadri, nella v33
+- 2026-11-22 16:29 · All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio… → sfarfallio e slitta una volta: fatti (v34, commit 84d2cf0); albero dal disegno e Torre Eiffel: Prossimi passi 1–2
 
 Ultimo, intero:
 > All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio dietro, l'albero che dovresti farlo meglio, cioè l'albero non flickera, molte luci però flickerano all'inizio. Ti mando un albero che puoi mettere al posto di quello se vuoi. Ovviamente lo devi colorare e addobbare. La Torre Eiffel è fatta male dietro e poi flickera all'inizio appena nel video. E Jack Scheletro non farlo passare più volte. Passa una volta, poi non lo vedo più.
