@@ -1,5 +1,9 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
+## Stato (Controllo 10 `session_01Rwcxc4fE4Cr4TbKimLKr1U`, 22/11 14:27 ora italiana, chiusa alla soglia; la apre la Controllo 10 con `create_session` (catena 1 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
+- (qui le righe di giudizio della Controllo 10: fatto, provato, dove si verifica)
+
 ## Stato (Controllo 9 `session_01WTjqUupr9MVG6nPkyrLatA`, 22/11 13:36 ora italiana, chiusa alla soglia; la apre Mario (catena a 8 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`)
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01WTjqUupr9M/claude/parigi-ramo-definitivo.
 - **v32 online** (22/11 ~13:34, PR #33), sito vero: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 32}`. Prove della v32 in locale: `prova-web-app.js` 60 VERO (2 nuove: numero/fila/luci, PC), `prova-scritte.js` 20 VERO, `fai-dicembre.py --controlla` VERO. Scorta mia già unita.
@@ -32,25 +36,24 @@ Intero in fondo («Messaggi di Mario di questa sessione») e in `docs/lavori-in-
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 10
-la apre Mario (catena a 8 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`. Scritto da Controllo 9 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 11
+la apre la Controllo 10 con `create_session` (catena 1 di 8). Scritto da Controllo 10 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 10 · slitta e castello`
+Titolo: `🟩 🗼 Controllo 11 · castello dal disegno`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 10 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 11 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 13:12 · [AVVIO] Sei la chat parallela Controllo 9 di Parigi in tasca, linea «Controllo» … → v32 (C16, C17 PC, C18 luci)
-- 2026-11-22 13:35 · Allora, nelle note delle versioni scrivilo in modo professionale, non che passa,… → C18 v33 (Prossimi passi 1), voci in Da fare, consegne
+- 2026-11-22 13:57 · [AVVIO] Sei la chat parallela Controllo 10 di Parigi in tasca, linea «Controllo»… → 
+- 2026-11-22 14:21 · i pacchi falli più piccolini quelli che lancia. Mi raccomando, rendi viva la fot… → 
+- 2026-11-22 14:21 · Conta che il castello è il castello di Disneyland, quello dietro. → 
+- 2026-11-22 14:23 · il castello è fatto cosí per prendere spunto tu coloralo e decoralo come vuoi → 
+- 2026-11-22 14:26 · Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma nea… → 
 
 Ultimo, intero:
-> Allora, nelle note delle versioni scrivilo in modo professionale, non che passa, lancia i regali così, non vuole cioè è brutto, devo dire. Scrivilo in descrizione tecnica e poi la slitta passa ma non lancia nessun regalo. Non so perché. E poi le ombre curale meglio, l'effetto un po' 3D delle decorazioni iniziali delle immagini, fagli abbellimenti più effetto wow. Mandami delle foto prima e dopo.
-> La slitta falla un pochettino colorata, cioè sembra ancora uno sticker così grigio, non lo so, rendila, non te lo so dire, graficamente falla, colorala meglio, ecco, così è proprio, è piattissima, sembra uno sticker che si muove.
-> Finisci quello che devi finire. E ogni tanto salva perché sta facendo un passaggio di consegna all'altro account. Tu comunque ogni tanto salvi e vai a finire fino a esaurimento token.
-> I colori del castello sono troppo slavati, non capisco. Aggiungi delle più animate, lucine che si accendono, che si spengono, un po' più aggiungi dettagli, addobbi, insomma, aggiungere di dettagli, di addobbi e di cose natalizie, ecco.
-> Attento, stanno per finire il token, fai il passaggio di consegna, comunque ti do l'ok, qualsiasi ok va bene. Attento che sennò perdiamo file quando facciamo passaggio di consegne, massima priorità.
+> Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma neanche minimamente.
 
