@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v21 · 🟩 Controllo 5 · 22/11 10:44 · scelta, colori, Annulla
-🧪 In prova: v22 · 🟩 Controllo 5 · spa e valigie
+🚀 Online: v22 · 🟩 Controllo 5 · 22/11 10:49 · spa e valigie
+🧪 In prova: —
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
