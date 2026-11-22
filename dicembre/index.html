@@ -841,6 +841,8 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 /* C19 · tasto e riquadro della guida Disneyland */
 .dlApp{display:flex;align-items:center;gap:12px;margin-top:10px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,rgb(246 201 100 / .22),rgb(255 255 255 / .06));border:1.5px solid var(--lamp);color:var(--night-ink);text-decoration:none;box-shadow:0 0 0 4px rgb(246 201 100 / .12)}
 .dlApp i{font-style:normal;font-size:1.6rem;line-height:1}.dlApp span{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}.dlApp b{font-size:1.05rem}.dlApp small{font-weight:500;opacity:.85;font-size:.8rem;line-height:1.25}.dlApp em{font-style:normal;font-size:1.6rem;color:var(--lamp)}
+.roApp i{position:relative}.ro-n{position:absolute;top:-.45em;right:-.55em;min-width:1.25em;height:1.25em;padding:0 .25em;border-radius:1em;background:var(--lamp);color:#1a1f4a;font:800 .72rem/1.25em system-ui,sans-serif;text-align:center;box-shadow:0 0 0 2px rgb(20 26 70 / .9)}
+.dlApp small.ro-cs{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px;-webkit-line-clamp:unset;opacity:1}.ro-c{padding:1px 7px;border-radius:999px;border:1px solid rgb(246 201 100 / .7);background:rgb(246 201 100 / .14);font-size:.74rem;font-weight:700;white-space:nowrap}
 .dlGiorno{margin-bottom:var(--s4)}.dlGiorno p{margin:0 0 8px}.dlGiorno a{display:inline-block;padding:9px 16px;border-radius:999px;background:var(--lamp);color:var(--lamp-ink);font-weight:800;text-decoration:none}
 /* C21 · rosa degli alloggi: tasto nella schermata principale (stile di .dlApp), «rosa / tutti» in cima al passo 2, spunte per cambiarla */
 .ro-sw{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:var(--s3) 0 var(--s2)}
@@ -869,7 +871,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
- {v:38,d:'22/11',n:['Tasto «⭐ Rosa alloggi» più pulito: una riga sola con quanti alloggi avete scelto.']},{v:37,d:'22/11',n:['Tasto «⭐ Rosa alloggi» nella schermata principale: lì scegliete voi gli alloggi della rosa, con le spunte o con la ⭐.']},
+ {v:39,d:'22/11',n:['Tasto «⭐ Rosa alloggi»: sulla stella quanti ne avete scelti, sotto i numeri degli alloggi.']},{v:38,d:'22/11',n:['Tasto «⭐ Rosa alloggi» più pulito: una riga sola con quanti alloggi avete scelto.']},{v:37,d:'22/11',n:['Tasto «⭐ Rosa alloggi» nella schermata principale: lì scegliete voi gli alloggi della rosa, con le spunte o con la ⭐.']},
  {v:36,d:'22/11',n:['Alloggio n. 23: prezzo Booking 461 € con cancellazione gratuita, indirizzo, orari d’arrivo 14–23, asciugamani inclusi.']},
  {v:35,d:'22/11',n:['Alloggi n. 16 e 23: scheda «📋 Tutto sul n.» con soldi, arrivo, casa, spesa la domenica e messaggio pronto per il gestore.','Filtro «⭐ La vostra rosa» fra gli alloggi; n. 23: prezzo su Booking, regole della casa lette (niente cauzione).','Alloggi: tasto «Nascondi» su ogni alloggio, con «Annulla». Gli elenchi mostrano solo quelli che vi interessano.','Alloggi: «Pulisci l’elenco» con una spunta per alloggio; «Rimetti tutti» li fa tornare. L’alloggio scelto resta sempre.','«Manda questa scelta» porta anche gli alloggi nascosti: chi apre il link sceglie se nasconderli anche sul suo telefono.']},
  {v:34,d:'22/11',n:['Testata, albero: ora è il disegno fornito, colorato (palline colorate, stella dorata, luna da sinistra) con lucine sul festone.','Testata, Torre Eiffel ridisegnata in proporzioni reali: gambe aperte, tre piani, traliccio, luce dorata e scintillio bianco.','Correzione: alcune luci della testata lampeggiavano all’apertura (animazioni avviate in ritardo). Ora partono già a metà ciclo.','Slitta: un solo passaggio a ogni apertura della pagina.']},
@@ -1576,8 +1578,8 @@ const rosaNum=(L=[...ROSA])=>{L=L.slice().sort((a,b)=>a-b);return L.length>4?'n.
 /* rosa arrivata con «Manda questa scelta» (&rosa=…): si chiede prima di metterla */
 let rosaLink=null;try{const v=new URLSearchParams(location.search).get('rosa');if(v){const A=[...new Set(v.split(',').map(Number).filter(rosaOk))].sort((a,b)=>a-b);if(A.length&&A.join()!==[...ROSA].sort((a,b)=>a-b).join())rosaLink=A}}catch(e){}
 const rosaB=id=>`<button type="button" class="btn ghost ro-b" data-ro-b="${id}" aria-pressed="${ROSA.has(id)}">${ROSA.has(id)?'☆ Togli dalla rosa':'⭐ Metti nella rosa'}</button>`;
-const rosaHome=()=>{const a=document.getElementById('roApp');if(!a)return;const n=ROSA.size;a.querySelector('b').textContent='Rosa alloggi';
- a.querySelector('small').textContent=rosaLink?'📩 Rosa nel link':n?(n===1?'1 scelto':n+' scelti'):'Da scegliere'};
+const rosaHome=()=>{const a=document.getElementById('roApp');if(!a)return;const n=ROSA.size;a.querySelector('b').textContent='Rosa alloggi';a.querySelector('i').innerHTML='⭐'+(n?'<sup class="ro-n">'+n+'</sup>':'');
+ const L=[...ROSA].sort((x,y)=>x-y),sm=a.querySelector('small');sm.classList.toggle('ro-cs',!rosaLink&&n>0);sm.innerHTML=rosaLink?'📩 Rosa nel link':n?L.slice(0,4).map(k=>'<span class="ro-c">n. '+k+'</span>').join('')+(n>4?'<span class="ro-c">+'+(n-4)+'</span>':''):'Da scegliere'};
 rosaHome();
 const nasSc=k=>k==='d-'+SCE.d||k==='d-'+CHO||(!!SCE.n&&k==='n-'+SCE.n); /* la scelta di adesso: mai nascosta */
 const hidN=k=>NASC.has(k)&&!nasSc(k)&&!inRosa(k);
