@@ -21,6 +21,7 @@
 ## Prossimi passi
 1. Rifare il giro: `python3 -I tools/fai-dicembre.py`, `node tools/prova-web-app.js`, `node tools/prova-scritte.js`, `--controlla`, `controlla-colori.py`; correggere i rossi.
 2. Brillii sul castello: glint animati sui puntali d'oro (`ori` di `castello-geo.json`, da portare in `addobbi.py` → JS `castDeco`), finestre più luccicanti (stellina che brilla su alcune).
+2b. **Braccia di Jack** (Mario dopo l'handoff, parole in `docs/lavori-in-corso/C18-slitta-e-luci.md` in fondo): pezzo a parte della foto della slitta che ogni tanto sale e scende, come se frustasse le renne.
 3. **Bancarelle** (Mario 15:02): nel JS delle casette (cerca «una casetta vista di fronte») neve più spessa sul tetto con gocce e ghiaccioli, lucine colorate lungo il tetto, merce appesa (palline, cuori di pan di zenzero, stelle, calze); occhio a `prova-scritte.js` e alle prove della testata.
 4. Foto PRIMA (`git show 94809b5:dicembre/parigi-disney-natale.html`) / DOPO al telefono e PC con `tools/confronta-foto.py` + VIDEO della slitta con renne e Zero (`archivio/2026-11-22-c18-v33/lavoro/video.js` + ffmpeg, ritaglio della scena, ingrandito ×2); mandarli e chiedere «ok pubblica».
 5. Con «ok pubblica»: ramo-copia `versione-v33`, PR verso `main`, unione (skill `unione-pr`), `git merge origin/main`.
