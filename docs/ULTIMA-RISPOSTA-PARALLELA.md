@@ -1,20 +1,8 @@
-# Ultima risposta di Claude (22/11/2026 18:17 ora italiana)
+# Ultima risposta di Claude (22/11/2026 18:57 ora italiana)
 
-Ho capito: dovevo mettere il tasto «Rosa alloggi» nella schermata principale e farti scegliere lì quali alloggi stanno nella rosa.
-🧠 Opus · Extra · Fable non serve: il piano era già pronto, si trattava di eseguirlo.
+Stato: la **v39 è online** (18:52). Sul tasto «Rosa alloggi» ora c'è un numerino sulla stella e sotto le pastiglie «n. 16» e «n. 23». Ho chiuso il turno solo per leggere tuoi eventuali messaggi: riparto da sola fra un minuto.
 
-🛑 Ti aspetta ancora la DOMANDA 1 della Controllo 14: come mostro gli alloggi «spenti» n. 18, 20 e 21. Te la scrivo intera quando vuoi.
-
-───
-✅ FATTO (v37 pronta, **non ancora online**)
-- Tasto «⭐ Rosa alloggi · 2» accanto a «Guida Disneyland» (foto 1).
-- Lo tocchi e si apre Dormire con solo gli alloggi della rosa (foto 2). Sotto c'è «✏️ Cambia la rosa», con una spunta per ogni …
-
-## Domande a Mario
-
-❓ DOMANDE
-**DOMANDA 1 🛑** (serve a pubblicare la v37 sul sito vero: si pubblica solo con le foto approvate)
-La v37 con la rosa (foto 1–4) va bene?
-1 · sì, pubblica
-2 · cambia qualcosa (scrivimi cosa)
-Consiglio: **1**. Rispondi col numero.
+Testata (v40, non ancora online):
+- **Torre ferma**: tolta la parallasse, cioè le parti del disegno che scorrevano a velocità diverse.
+- **Scorrimento pesante**: la causa sono le luci animate del disegno. Ogni luce fa ridisegnare tutto il disegno. Su un telefono lento simulato arriva a circa 9 immagini al secondo, con la testata nascosta a 43.
+- Fermarle mentre scorri …
