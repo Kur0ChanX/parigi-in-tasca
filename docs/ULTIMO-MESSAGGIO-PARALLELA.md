@@ -1,4 +1,3 @@
-# Ultimo messaggio di Mario (22/11/2026 10:51 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 11:09 ora italiana)
 
-Sì, non so, te l'avevo già detto. No. Vicino alla RAR metti quanto ci vuole a piedi per arrivare alla RAR. E Disney non mettere i chilometri, ma effettivamente quanto ci vuole poi ad arrivare con il tempo a Disney.
-Guarda che non per forza devi togliere i colori, puoi decidere dei colori per la leggenda di biglietti e quant'altro e colori tipo per Disney, per gli hotel Disney, per gli B&B, eccetera eccetera eccetera. Basta che non si mischiano, che non ci siano doppioni.
+Aggiungi in priorità una mappa nell'app, una mappa di Parigi con i mercatini, per farmi capire magari il percorso che dovrei fare, dove sono, insomma, perché non mi è chiaro molto dove sono. Studiatela bene in modo che capisco bene per il mio viaggio, e poi più avanti possiamo integrare che in base a quando all'hotel che scelgo mi fa vedere il tragitto che devo fare, ecco, l'itinerario dalla mattina che mi sveglio, dove vado e faccio il giro senza che sia troppo dispersivo.
