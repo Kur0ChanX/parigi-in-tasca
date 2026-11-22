@@ -5,10 +5,11 @@
 
 ## Nastro delle versioni
 🚀 Online: v41 · 🟩 Controllo 18 · 22/11 20:16 · Piano, Scegli, testata
-🧪 In prova: —
+🧪 In prova: v42 · 🟩 Controllo 19 · guida dei giorni (aspetta l’ok alle foto)
 ⏳ Dopo: v42 · 🟩 Controllo 18 · C24 guida dei giorni, C26 confronto, C22 itinerari
 
 ## 0. Aspetta Mario
+- 22/11 · 🛑 · 🟩 Controllo 19 · DOMANDA 1: la guida dei giorni secondo l’hotel (riquadro «Il vostro alloggio» in «Giorni» e avviso in cima alla domenica; 3 foto in `archivio/2026-11-22-c24-guida-v42/`) va bene così? 📌 Di cosa parliamo: in «Giorni», prima della fila dei giorni, un riquadro dice come si entra, la domenica sera, il giovedì, fino a quando si cancella gratis (con promemoria nel calendario) e un messaggio in francese per il gestore; la risposta decide se pubblico la v42. Scelte: 1 · sì, pubblica · 2 · cambia qualcosa (scrivimi cosa). Consiglio 1.
 - 22/11 · 🛑 · 🟩 Controllo 14 · DOMANDA 1: gli alloggi «spenti» (n. 18, 20, 21: su Airbnb liberi solo dal 14) come li mostro? 📌 Di cosa parliamo: passo 2 di «Scegli», righe grigie quando avete scelto 4 notti dal 13. Scelte: 1 · in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché · 2 · nascosti da soli finché scegliete 4 notti · 3 · come ora, con la scritta «non libero il 13» più chiara. Consiglio 1.
 - 22/11 · ❓ · 🟩 Controllo 13 · DOMANDA 1: l’albero della testata lo faccio dal tuo disegno (preso da un annuncio Etsy: sul sito pubblico potrebbe non essere permesso) o ne disegno uno nostro nello stesso stile? Scelte: 1 · il tuo disegno · 2 · uno nostro uguale nello stile. Consiglio: 1, come hai chiesto. 📌 Di cosa parliamo: l’albero di Natale nella testata della pagina di dicembre (Mario 22/11 16:29 «Ti mando un albero…»).
 - 22/11 · 🟨 Controllo 12 · guarda la v33 sul telefono (se c’è ancora «v32»: numerino → «Aggiorna versione») e tocca «Guida Disneyland»: parte dal 14 dicembre? Scrivi cosa vedi, anche «ok». 📌 Serve a chiudere le voci «👁» della v33 e a sapere se il link della guida è giusto sul telefono vero.
