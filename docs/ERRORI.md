@@ -2,7 +2,6 @@
 
 | Data | Errore | Causa vera | Difesa |
 |---|---|---|---|
-| 21/11/2026 | Chiesto a Mario per 3 sessioni «quante notti, dal 13 o dal 12» quando le date del volo 13→17 erano già in «Già deciso» (Mario: «Scusa, che domanda è?»). | La ricerca con le foto di Booking (12→17) ha aperto un dubbio e la domanda è passata di sessione in sessione senza confronto con «Già deciso» e coi file ricevuti. | Prima di ogni domanda nuova o ereditata: confronto con «Già deciso» delle consegne e coi file in `archivio/`; se la risposta c'è, niente domanda. |
 | 21/11/2026 | Il `sw.js` di novembre salvava ogni pagina come «./»: dicembre sovrascriveva la copia senza rete di novembre. | Service worker per un sito con una pagina sola. | `sw.js` lascia stare `/dicembre/`; prova `prova-web-app.js` con e senza rete (storia in ERRORI-STORIA). |
 | 21/11/2026 | La #10 ha tolto da sola la testa di Topolino dall'icona chiesta da Mario. | Dubbio di marchio trattato come divieto, deciso senza Mario. | Dubbi su marchi e personaggi: a Mario il rischio in una riga, decide lui (storia in ERRORI-STORIA). |
 | 21/11/2026 | Link di dicembre mandato a un amico con l'anteprima di novembre. | Link dato come testo semplice con gli spazi: l'app ne ha preso solo un pezzo. | Link da mandare: riquadro di codice, da solo su una riga, anteprima controllata (storia in ERRORI-STORIA). |
@@ -26,6 +25,7 @@
 | 22/11/2026 | Foto di lavoro aperte senza la scritta in alto «DI LAVORO» (E314), anche se Mario le vede. | Script di foto scritti a mano per la sessione, senza il passo della scritta. | Le foto di lavoro le apro solo dopo averci messo la scritta (nello stesso script); per Mario solo confronti di `confronta-foto.py` o immagini con la scritta. |
 | 22/11/2026 | Regali della slitta invisibili dalla v30 (Mario 13:37), prova verde. | Pacchi di 6 px e scuri, lanciati anche dietro il castello; la prova li contava soltanto. | Pacchi grandi e colorati, solo sul cielo libero; prova con misura ed `elementsFromPoint`. Una cosa da vedere si prova se si VEDE, mai solo se c’è (storia in ERRORI-STORIA). |
 | 22/11/2026 | Scritto a Mario «i brillii sono al posto giusto»: letto «birilli» («ma cosa c’entrano i birilli?»). | Parola rara («brillii») che a colpo d’occhio sembra un’altra, scritta senza dire cos’è e senza foto. | A Mario parole comuni e chiare («stelline che luccicano», non «brillii» o «glint»); una cosa nuova si dice insieme alla foto. |
+| 22/11/2026 | Prova «Slitta… pacchi» rossa 1 volta su 8 (Controllo 12), pagina giusta. | La prova contava come «copre il pacco» il bagliore morbido dietro il castello (`cglow`), che è luce. | La prova salta i bagliori come la nebbia; una prova rossa a caso si rifà 8 volte con la stessa misura prima di cercare il colpevole. |
 
 ## Lezioni ereditate da RVC (numeri «RVC E..»)
 - **RVC E1** Si lavora solo in Claude Code. Ogni file ricevuto va subito in `archivio/` con commit.
