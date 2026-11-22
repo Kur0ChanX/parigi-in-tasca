@@ -32,3 +32,7 @@ della possibilità, se uno sceglie perché per sbaglio ci clicca, che lo può an
 ## 2026-11-22 10:51 · 01WTjqUwtG4z
 Sì, non so, te l'avevo già detto. No. Vicino alla RAR metti quanto ci vuole a piedi per arrivare alla RAR. E Disney non mettere i chilometri, ma effettivamente quanto ci vuole poi ad arrivare con il tempo a Disney.
 Guarda che non per forza devi togliere i colori, puoi decidere dei colori per la leggenda di biglietti e quant'altro e colori tipo per Disney, per gli hotel Disney, per gli B&B, eccetera eccetera eccetera. Basta che non si mischiano, che non ci siano doppioni.
+
+## 2026-11-22 11:00 · 01WTjqUwtG4z
+Sì, perché alla fine è importante non sono quanti chilometri sono, ma quanto ci mettiamo ad arrivare, ecco.
+Cioè, nel senso, i chilometri mettili visibili, ma non prenderli in considerazione nei filtri. Ecco, qui quando entri dentro la scheda ti deve segnare tutto, sì.

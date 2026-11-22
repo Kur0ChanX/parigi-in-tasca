@@ -2,38 +2,40 @@
 "account": "108763",
 "sessione": "62f571e73346",
 "giorno": "2026-11-22",
-"turni": 2,
-"peso": 2791792,
-"uscita": 74184,
-"contesto_max": 262043,
+"turni": 3,
+"peso": 4286209,
+"uscita": 117307,
+"contesto_max": 343065,
 "anomalie": [
 "7 uscite di strumento enormi (308 KB la più grande): leggere a pezzi (grep -n, sed -n)",
-"57k token scritti in un turno"
+"57k token scritti in un turno",
+"43k token scritti in un turno"
 ],
 "remota": "01WTjqUwtG4z",
 "aiutanti": 0,
-"strumenti": 130,
+"strumenti": 168,
 "motori": {
-"opus": 2791792
+"opus": 4286209
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-245,
-22191205,
-161205,
+318,
+33965718,
+242227,
 0,
-74184
+117307
 ]
 },
-"costo": 7.2126,
+"costo": 11.0784,
 "blocchi": {
-"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 10 · Promessa a Mario senza voce": 2,
 "Stop 5 · Notifica non letta (in coda": 1
 },
 "esempi_blocchi": {
 "Stop 10 · Promessa a Mario senza voce": [
-"10:46 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): ««»**: dopo «» compare un avviso in basso con il tasto «»». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <f"
+"10:46 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): ««»**: dopo «» compare un avviso in basso con il tasto «»». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <f",
+"11:00 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Farà le foto prima/dopo e metterà online la v23.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o le"
 ],
 "Stop 5 · Notifica non letta (in coda": [
 "10:46 · Notifica non letta (in coda dalle 10:44: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
