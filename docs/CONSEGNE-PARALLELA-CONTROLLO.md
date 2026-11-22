@@ -56,7 +56,7 @@ Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o
 - 2026-11-22 14:23 · il castello è fatto cosí per prendere spunto tu coloralo e decoralo come vuoi → disegno in `archivio/2026-11-22-c18-v33/mario-castello-riferimento.jpg`, Prossimi passi 1
 - 2026-11-22 14:26 · Ma non mi sembra che il castello sia uguale al disegno che ti ho mandato, ma nea… → Prossimi passi 1 (castello dal suo disegno), C18
 
-- 2026-11-22 14:2x · Basta che risulti con lo stesso stile della foto. → Prossimi passi 1
+- 2026-11-22 14:27 · Basta che risulti con lo stesso stile della foto. → Prossimi passi 1
 
 Ultimo, intero:
 > Basta che risulti con lo stesso stile della foto.
