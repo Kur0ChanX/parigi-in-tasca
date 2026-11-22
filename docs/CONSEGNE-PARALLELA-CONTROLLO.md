@@ -6,6 +6,7 @@
 - **v35 ONLINE** (PR 36; verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 35}`). Dentro anche la v34 (PR 35: albero dal disegno, Torre Eiffel nuova): la DOMANDA 2 della Controllo 13 è risposta («sì, pubblica»).
 - **Già deciso da Mario (non richiedere):** pubblicare v34 e v35; i due alloggi della rosa sono il **n. 16** (Airbnb 5115238) e il **n. 23** (Airbnb 1376052056754954936); il n. 23 su Booking costa 461 € (letto da lui).
 - **Kit RVC:** Mario dice di aver messo la chiave del ponte nell'ambiente, ma in questo contenitore `RVC_KIT_TOKEN` non c'è (`python3 -I tools/scarica-kit.py --versione` → esito 2). Riprovare nella Controllo 14 del primo account (o in una sessione aperta dopo aver salvato la chiave).
+- **Da non rifare:** C20 (Nascondi, «Tutto sul n.», filtro rosa: già online); la ricerca del n. 23 su Booking (una ricerca a vuoto: chiedere il link a Mario).
 - **Cosa preme a Mario adesso:** che la guida sia affidabile (prezzi diversi fra Airbnb e Booking) e i due alloggi della rosa completi.
 
 ## Cosa è stato fatto (Controllo 14, altro account) · verifica: `git log --oneline -12`; tutto in `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md`
@@ -34,12 +35,12 @@
 - Diritti del disegno dell'albero (annuncio Etsy): DOMANDA 1 aperta, consiglio 1.
 
 ## Ultimo messaggio di Mario
-22/11 ~17:55 (nell'altro account): «Attenzione perché molti… Quello nella foto su Booking è 461 euro… potenziali per questi due… metti la funzione potenzia in2 alloggi da me citati e publica» → fatto e pubblicato (v35). Intero in `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md`. Controllo Da fare: 2 voci 👁 aggiunte (Nascondi; Tutto sul n. e filtro rosa).
+22/11 17:34 (nell'altro account): «Attenzione perché molti… Quello nella foto su Booking è 461 euro… potenziali per questi due… metti la funzione potenzia in2 alloggi da me citati e publica» → fatto e pubblicato (v35). Intero in `docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md`. Controllo Da fare: 2 voci 👁 aggiunte (Nascondi; Tutto sul n. e filtro rosa).
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per riprendere nella Controllo 14 del primo account (nessuna sessione nuova)
+## Testo per aprire la Controllo 15 (non serve adesso: si riprende nella Controllo 14 del primo account, testo qui sotto)
 Mario lo incolla nella chat «Controllo 14» del primo account, quando torna lì:
 ```
 Ho lavorato dall'altro account (Controllo 14, session_01QTFEqRq6KHUZyj1XNVa82p): v34 e v35 sono online. git fetch origin claude/parigi-ramo-definitivo && git merge origin/claude/parigi-ramo-definitivo, poi rileggi docs/CONSEGNE-PARALLELA-CONTROLLO.md e docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md e continua dai «Prossimi passi», senza rifare C20.
@@ -47,6 +48,6 @@ Ho lavorato dall'altro account (Controllo 14, session_01QTFEqRq6KHUZyj1XNVa82p):
 
 ## Messaggi di Mario di questa sessione
 Controllo 14 sull'altro account (dopo «→» cosa ne è stato):
-- 2026-11-22 17:11 · «Cerca di non creare conflitti con l'altro account…» → fermata, piano a Mario; nessuna sessione nuova (queste consegne)
-- 2026-11-22 17:15 · «Sì, se tutte le prove sono verdi, pubblica… nascondere gli hotel… potenziare questi due…» → v34 online (PR 35); C20 «Nascondi» e ricerche dei n. 16 e 23
-- 2026-11-22 ~17:55 · «…su Booking è 461 euro… metti la funzione potenzia in2 alloggi da me citati e publica» → v35 online (PR 36)
+- 2026-11-22 17:11 · Cerca di non creare conflitti con l'altro account. Mi sto spostando qui provviso… → fermata, piano a Mario; nessuna sessione nuova, la catena continua nella Controllo 14 del primo account (queste consegne)
+- 2026-11-22 17:15 · Sì, se tutte le prove sono verdi, pubblica. Dopo che è pubblicato dovresti fare … → v34 online (PR 35); C20: «Nascondi» sugli alloggi e ricerche dei n. 16 e 23
+- 2026-11-22 17:34 · Attenzione perché molti, tipo questi due, uno di questi due su Booking costa men… → v35 online (PR 36): «Tutto sul n.» nei n. 16 e 23, filtro «La vostra rosa», Booking 461 € nella tendina
