@@ -1,26 +1,20 @@
-# Ultima risposta di Claude (22/11/2026 23:14 ora italiana)
+# Ultima risposta di Claude (22/11/2026 23:46 ora italiana)
 
-Ho capito: vuoi sapere se so già cosa fare dopo la v42. Sì, il piano è nelle consegne.
-🧠 Opus · Extra
+Ho capito: dovevo ricontrollare la guida giorno per giorno sui tre alloggi possibili (Moxy n. 8, appartamenti n. 16 e n. 23), con più cura sui due appartamenti.
+🧠 Opus · Extra · Fable: non serve (è un controllo con le fonti, non c'è niente da progettare).
 
 ✅ FATTO
-- **La v42 è online.** Alle 23:14 ho letto il numero della versione sul sito vero: è 42. Nella pagina vera c'è anche «Il vostro alloggio».
-- Prima di pubblicare ho rifatto le prove: 72 su 72 verdi e nessuna scritta sovrapposta.
-- Sul telefono: se vedi ancora «v41», tocca il numerino in alto e poi «Aggiorna versione».
+Ho aperto la guida con ognuno dei tre alloggi scelti, come la usi tu, e l'ho confrontata con le pagine ufficiali. Ho trovato 6 errori o mancanze e li ho corretti (versione **v43**, salvata su GitHub ma non ancora online):
 
-───
-💡 PARERE · cosa faccio dopo, in ordine
-
-| # | Lavoro | Cosa vedi tu |
+| Cosa | Prima | Adesso |
 |---|---|---|
-| 1 | Controllo i dati della guida: orari dei treni, alloggi n. 8, 16 e 23, …
+| N. 23, giovedì | uscita alle 8:15, ma la stazione è a 700 m …
 
 ## Domande a Mario
 
 ❓ DOMANDE
-**DOMANDA 1 🛑 · gli alloggi «spenti», come li mostro?**
-📌 Di cosa parliamo: in «Scegli», passo 2. Se scegli 4 notti dal 13, i n. 18, 20 e 21 diventano righe grigie, perché su Airbnb sono liberi solo dal 14.
-1 · in fondo, in un gruppo «Liberi solo dal 14», coi colori normali e il perché
-2 · nascosti da soli finché scegli 4 notti
-3 · come adesso, con la scritta «non libero il 13» più chiara
-Il mio consiglio: **1**. Non sparisce niente e capisci subito il perché.
+**DOMANDA 1** 🛑 (foto 1)
+📌 Di cosa parliamo: la v43 è pronta e tutte le prove sono verdi. Il sistema però mi ha bloccato la pubblicazione, perché in questa sessione non c'è ancora un tuo ok scritto.
+1 · sì, pubblica
+2 · no, aspetta
+Consiglio: **1**.
