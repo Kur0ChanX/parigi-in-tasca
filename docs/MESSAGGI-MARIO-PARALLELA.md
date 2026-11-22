@@ -17,3 +17,14 @@ a pezzi
 
 ## 2026-11-22 10:02 · 01WTjqUuicbA
 va bene
+
+## 2026-11-22 10:17 · 01WTjqUuicbA
+Fai tutta la grafica e pubblica.
+I più vicini metti in ordine di tempo per arrivare, non di chilometri. e differenzia con un altro colore gli hotel Disney dagli hotel normali. Poi nei posti dove dormire schedano si capisce bene che apre tutto con i dettagli. Non si capisce in fondo, è difficile da vederlo.
+
+## 2026-11-22 10:27 · 01WTjqUuicbA
+Attenzione che se ti va a vedere anche nel posto dove dormire, che lo scegli e ti cambia l'itinerario, insomma ti cambia la pagina, la scelta, ti influisce, quello va mostrato e fatto capire.
+
+## 2026-11-22 10:30 · 01WTjqUuicbA
+Il colore casa e quant'altro non va in conflitto con la leggenda tipo biglietti Disney e quant'altro? I colori non hanno un conflitto. Ti disorienta un po'?
+della possibilità, se uno sceglie perché per sbaglio ci clicca, che lo può annullare.
