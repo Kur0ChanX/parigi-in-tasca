@@ -6,7 +6,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
 | Principale | cerchi | 🟢 🟡 🔴 ⚫ | 22 | session_01WTjqUtegBCzTHdbgdaXDm1 | — |
-| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 6 | session_01WTjqUwFBdtHy8LkTqYTScN | — |
+| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 7 | session_01WTjqUxPidPtPV7FCfpJpKr | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
@@ -22,3 +22,4 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C13 | Controllo 6 (da Controllo 5) | Grafica della pagina di dicembre rifatta a pezzi (DOMANDA 1 = «a pezzi»), primo la scheda Dormire, foto prima/dopo | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C13-aspetto-pagina.md` | 22/11 |
 | C14 | Controllo 4 (da Controllo 3) | Alloggi su siti diretti e privati, giro 2 (3 aiutanti con browser) | `research_notes/…/alloggi_siti_diretti_2_*.md`, `docs/lavori-in-corso/C14-siti-diretti-giro-2.md` | 22/11 |
 | C15 | Controllo 6 | Mappa di Parigi coi mercatini e il giro (fase 1); poi itinerario secondo l'alloggio | `dicembre/parigi-disney-natale.html`, `tools/fai-mappe-dicembre.py` o script nuovo, `dicembre/mappe/`, `docs/lavori-in-corso/C15-mappa-mercatini.md` | 22/11 |
+| C16 | Controllo 7 | Fila dei giorni (Dom 13 … Gio 17) di nuovo visibile sopra la barra delle schede sul telefono (coperta dalla v17), prova e pubblicazione | `dicembre/parigi-disney-natale.html` (CSS `.daybar`), `tools/prova-web-app.js` | 22/11 |
