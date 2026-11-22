@@ -13,3 +13,7 @@
 - «quella a sinistra, quella sotto» = risposta alla DOMANDA 1: PROPOSTA 1, fila dei giorni più sottile, in basso (C16).
 - Niente si toglie: si mette in ordine di importanza, a colpo d'occhio, i dettagli dentro.
 - Pezzi, in quest'ordine: 1) fila sottile (C16) · 2) numero di versione in alto + novità + «Aggiorna» · 3) indice coi tasti subito in alto aprendo l'app · 4) mappa: buco grigio, schermo intero, zoom libero (C15) · 5) ultimo giorno: a che ora partire per Orly con margine, bagagli, avviso «partite prima»; Domenica a Parigi più curata; Disney semplice (alloggio ↔ parchi).
+
+## Mario 22/11 12:02 (foto della schermata principale, v26), intero
+> Vedi qua che l'indice, mettimi gli shortcut, anche giro di mercatini più piccoli, notte, vin brûlée più piccole, insomma regola bene gli spazi, mettimi l'indice delle cose più importanti. I tasti sotto devono occupare meno spazio, insomma tutti gli spazi ottimizzati bene, non farmi coprire troppo la pagina, ecco, la pagina da vedere.
+- Da fare (v28): indice coi tasti delle cose più importanti subito visibile aprendo l'app; «Il giro dei mercatini» più piccolo; «Blu notte / Vin brulé» più piccoli; barra delle schede più bassa; spazi più stretti. Foto in `archivio/2026-11-22-c17-versione/mario-1202-schermata-principale.jpg`.
