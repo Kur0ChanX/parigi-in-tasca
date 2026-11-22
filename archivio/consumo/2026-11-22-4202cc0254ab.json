@@ -1,0 +1,56 @@
+{
+"account": "108763",
+"sessione": "4202cc0254ab",
+"giorno": "2026-11-22",
+"turni": 8,
+"peso": 1624361,
+"uscita": 64309,
+"contesto_max": 354660,
+"anomalie": [
+"1 uscite di strumento enormi (112 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"5 uscite di strumento enormi (409 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"44k token scritti in un turno"
+],
+"remota": "01WTjqUxeDzv",
+"aiutanti": 2,
+"strumenti": 71,
+"motori": {
+"opus": 1624361
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+124,
+11039119,
+159024,
+0,
+64309
+]
+},
+"costo": 4.7668,
+"blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 8 · Il turno finisce con una": 1,
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 9 · Versione unita in questo turno:": 1,
+"Stop 10 · Promessa a Mario senza voce": 2
+},
+"esempi_blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": [
+"00:09 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1:** cosa volevi con questo link? 1. Sol», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso); mancano le sce"
+],
+"Stop 8 · Il turno finisce con una": [
+"00:09 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+],
+"Stop 5 · Notifica non letta (in coda": [
+"00:36 · Notifica non letta (in coda dalle 00:34: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 9 · Versione unita in questo turno:": [
+"00:36 · Versione unita in questo turno: aggiorna in docs/DA-FARE.md la sezione «## Nastro delle versioni» (3 righe): «🚀 Online: v<N> · <segno e catena> · 22/11 <ora> · <3 parole>», poi «🧪 In prova» e «⏳ Dopo»"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"00:36 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Oggi è ancora «»: lo porto su 4 notti dal 13 al 17, scegliendo il migliore dopo la ricerca». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi",
+"00:39 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Bussy è 2 fermate più lontana da Disney: la metto nella v18 con questi avvisi scritti.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <d"
+]
+}
+}
