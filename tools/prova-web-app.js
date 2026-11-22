@@ -202,7 +202,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       await w(600);
       const conta = (s) => document.querySelectorAll('#tmMap ' + s).length, r = { z0: m.getZoom(), minZ: m.getMinZoom(), lontano: [conta('.tm-n'), conta('.tm-c')] };
       m.setZoom(m.getMinZoom() - 2); await w(400); r.zMin = m.getZoom();
-      m.setView([48.2, 1.5], 12); await w(500); const c = m.getCenter(); r.dentro = c.lat > 48.69 && c.lat < 48.93 && c.lng > 2.23 && c.lng < 2.86;
+      r.maxZ = m.getMaxZoom(); m.setView([46, 1], 12); await w(500); const c = m.getCenter(); r.dentro = c.lat > 48.0 && c.lat < 49.35 && c.lng > 1.3 && c.lng < 3.7;
+      document.querySelector('.tm-fs').click(); await w(500); const mr = document.getElementById('tmMap').getBoundingClientRect(); r.pieno = mr.height > innerHeight * 0.75 && mr.width >= innerWidth - 1 && document.elementFromPoint(innerWidth / 2, innerHeight - 30).closest('#tmMap') !== null; history.back(); await w(500); r.chiusa = !document.querySelector('.tm-box').classList.contains('pieno');
       document.querySelector('.tm-vai [data-tmv="giro"]').click(); await w(700); r.zGiro = m.getZoom(); r.vicino = [conta('.tm-n'), conta('.tm-n.top'), conta('.tm-g'), conta('path.leaflet-interactive') + conta('path')];
       document.querySelector('.tm-vai [data-tmv="disney"]').click(); await w(700); r.alloggi = conta('.tm-a'); r.me = conta('.tm-c.me');
       document.querySelector('.tm-vai [data-tmv="orly"]').click(); await w(700); const o = m.getCenter(); r.orly = Math.abs(o.lat - 48.729) < 0.01 && Math.abs(o.lng - 2.366) < 0.01;
@@ -210,8 +211,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       document.querySelector('.tabbar button[data-t="dormire"]').click(); await w();
       return r;
     });
-    const tmOk = !tm.err && tm.zMin === tm.minZ && tm.dentro && tm.lontano[0] === 0 && tm.zGiro >= 13 && tm.vicino[0] === 7 && tm.vicino[1] === 4 && tm.vicino[2] === 6 && tm.alloggi >= 15 && tm.me >= 1 && tm.orly;
-    ok('Mappa del viaggio: si apre, non va oltre Orly–Parigi–Disney, da lontano solo i posti grandi, «Mercatini» mostra 7 tappe (4 con la stella), 5 da saltare e il Louvre, «Disney» gli alloggi, «Orly» l\'aeroporto', tmOk); if (!tmOk) console.log(tm);
+    const tmOk = !tm.err && tm.zMin === tm.minZ && tm.minZ <= 8 && tm.maxZ === 19 && tm.pieno && tm.chiusa && tm.dentro && tm.lontano[0] === 0 && tm.zGiro >= 13 && tm.vicino[0] === 7 && tm.vicino[1] === 4 && tm.vicino[2] === 6 && tm.alloggi >= 15 && tm.me >= 1 && tm.orly;
+    ok('Mappa del viaggio: si apre, zoom libero (fino a 8 e a 19), schermo intero sopra le barre e «indietro» la chiude, da lontano solo i posti grandi, «Mercatini» mostra 7 tappe (4 con la stella), 5 da saltare e il Louvre, «Disney» gli alloggi, «Orly» l\'aeroporto', tmOk); if (!tmOk) console.log(tm);
     // C16 (Mario 22/11 11:37 «sotto c'era tipo domenica, lunedì… Che fine hanno fatto?»): dalla v17 la barra delle schede copriva la fila dei giorni; ~12:00 «foto 2»: fila in alto, ferma scorrendo
     await q.evaluate(async () => { document.querySelector('.tabbar button[data-t="giorni"]').click(); await new Promise((r) => setTimeout(r, 300)); const p = document.querySelector('#giorni .panel:not([hidden])'); scrollTo(0, p.getBoundingClientRect().top + scrollY + 500); await new Promise((r) => setTimeout(r, 400)); });
     const fg = await q.evaluate(() => {

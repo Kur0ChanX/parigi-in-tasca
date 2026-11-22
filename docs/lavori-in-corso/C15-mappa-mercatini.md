@@ -48,3 +48,6 @@ Fable non serve: c'è già lo script delle mappe da copiare e i dati sono nella 
 ## Mario 22/11 ~11:45 (dopo l'handoff della Controllo 6), parole intere
 > E nella schermata principale mettimi tutte gli shortcut, ecco, delle cose principali, dei tasti, così non vado a cercare direttamente nelle pagine. Tipo la mappa deve avere un tasto shortcut nella schermata principale e anche tante altre cose fondamentali.
 - Per la Controllo 7: la griglia «Vai subito a» ha già «🗺️ Mappa del viaggio» (v24): verificare che si veda subito e completarla coi fondamentali che mancano.
+
+## v29 (Controllo 7, 22/11)
+- Schermo intero (⛶, ✕ o «indietro»), zoom 8–19 (Plan IGN arriva a 19: capabilities del 22/11), riquadro largo Île-de-France. Buco grigio: il WMTS IGN non ha limiti di richieste (cartes.gouv.fr, limiti d'usage, 07/08/2026) → ipotesi: pezzi non arrivati e mai richiesti di nuovo; ora ogni pezzo fallito si richiede fino a 3 volte (800/1600/2400 ms). Non provato con un guasto vero.

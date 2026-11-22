@@ -5,7 +5,7 @@
 
 ## Nastro delle versioni
 🚀 Online: v28 · 🟩 Controllo 7 · 22/11 · indice nella schermata principale
-🧪 In prova: —
+🧪 In prova: v29 · 🟩 Controllo 7 · mappa a schermo intero, zoom libero
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
