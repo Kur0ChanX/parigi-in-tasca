@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (22/11/2026 14:27 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 15:02 ora italiana)
 
-Basta che risulti con lo stesso stile della foto.
+Ok, però nel castello mettili, aggiungili un po' di ombre, sennò sembra piatta, che poi ha i colori diversi dalla nostra foto, sono pastello e molto piatti. Da lì un senso a quei colori, fargli degli abbellimenti, le finestre che magari, cosa ne so, boh, più luccicose, ma non solo le finestre, dico in generale. E fargli aggiungi nell'arena che sale, aggiungi un po' di colore, un pochino, soprattutto il rosso del cappellino, che così almeno si capisce che Babbo, è Jack Skeleton di Nightmare Before Christmas, Babbo Natale. E niente, fammi vedere cosa è il risultato. E aggiungi anche abbellimenti nelle bancarelle, anche nella neve, aggiungi della neve sopra le bancarelle, le lucine colorate, roba appesa nelle bancarelle, di roba della vendita, non lo so, fai tu, abbelliscilo.
