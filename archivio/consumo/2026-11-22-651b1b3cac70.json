@@ -1,0 +1,34 @@
+{
+"account": "377be6",
+"sessione": "651b1b3cac70",
+"giorno": "2026-11-22",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 148727,
+"anomalie": [],
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 5 · Notifica non letta (in coda": 1,
+"Stop 11 · 📸 Foto o video di": 1,
+"Stop 8 · Il turno finisce con una": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"18:36 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Prima di pubblicare ti mando un video prima/dopo (versione v39).». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · p"
+],
+"Stop 5 · Notifica non letta (in coda": [
+"18:36 · Notifica non letta (in coda dalle 18:19: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 11 · 📸 Foto o video di": [
+"18:36 · 📸 Foto o video di questa sessione in archivio/, non mandati a Mario e senza riga in «## 0. Aspetta Mario» (C516, E498): archivio/2026-11-22-video-flicker/ (1 file). Per Mario → mandali ORA con la doma"
+],
+"Stop 8 · Il turno finisce con una": [
+"18:36 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+]
+},
+"remota": "01QTFEqRCHFh",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
