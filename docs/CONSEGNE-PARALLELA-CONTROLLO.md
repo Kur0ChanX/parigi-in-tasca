@@ -1,6 +1,6 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
-## Stato (Controllo 19 `session_01QTFEqSjyGg65BtFyBPPGGk`, 22/11 22:28 ora italiana, fermata dal limite delle 5 ore durante «passaggio account salva»; consegne salvate dalla vecchia Controllo 14 `session_01Rwcxc7EAGCUGyWhBTz3aWr`; CAMBIO ACCOUNT: la Controllo 20 la apre Mario nell'altro account)
+## Stato (Controllo 19 `session_01QTFEqSjyGg65BtFyBPPGGk`, 22/11 22:28 ora italiana, fermata dal limite delle 5 ore durante «passaggio account salva»; consegne salvate dalla vecchia Controllo 14 `session_01Rwcxc7EAGCUGyWhBTz3aWr`; la Controllo 20 è questa stessa sessione: Mario 22/11 ~22:40 «Adesso voglio continuare qua»)
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
 - **Già deciso da Mario (non richiedere):** C24 → tre riquadri (1), rosa ovunque con consiglio e «Tutti i 35» (1), riquadro «Il vostro alloggio» completo (1); guida giorno per giorno secondo l’hotel, soprattutto domenica coi mercatini, «molto accurato». **Fasci di luce del faro: restano** (Mario 20:07 «mi piaceva il fascio di luce»). Priorità: **prima la guida, poi la grafica** (Mario 20:03).
 - **Da non rifare:** v41 (online, PR #42); prove di C24 e «Nascondi» adattate alla rosa (click su «Tutti»); C25 (apertura sul Piano); misure della testata (in `docs/lavori-in-corso/C23-testata-leggera.md`); scritta «Dormite al n. X» in cima ai giorni (nel ramo).
