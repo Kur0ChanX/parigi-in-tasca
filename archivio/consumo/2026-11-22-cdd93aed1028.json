@@ -2,26 +2,57 @@
 "account": "108763",
 "sessione": "cdd93aed1028",
 "giorno": "2026-11-22",
-"turni": 1,
-"peso": 255693,
-"uscita": 9523,
-"contesto_max": 100974,
-"anomalie": [],
+"turni": 7,
+"peso": 614570,
+"uscita": 17913,
+"contesto_max": 294317,
+"anomalie": [
+"1 uscite di strumento enormi (60 KB la più grande): leggere a pezzi (grep -n, sed -n)"
+],
 "remota": "01WTjqUuicbA",
 "aiutanti": 0,
-"strumenti": 19,
+"strumenti": 32,
 "motori": {
-"opus": 255693
+"opus": 614570
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-32,
-1391872,
-55087,
+63,
+4426264,
+65853,
 0,
-9523
+17913
 ]
 },
-"costo": 0.9097
+"costo": 1.7706,
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 3,
+"Stop 9 · Versione unita in questo turno:": 1,
+"Stop 15 · There are uncommitted changes in": 3,
+"Stop 5 · Notifica non letta (in coda": 2,
+"Stop 11 · 📸 Foto o video di": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"10:11 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Quando finiscono ti mando la foto prima/dopo.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettu",
+"10:17 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Quando finiscono ti mando il confronto prima/dopo.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o ",
+"10:25 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Quando finiscono pubblico e ti mando i confronti.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o l"
+],
+"Stop 9 · Versione unita in questo turno:": [
+"10:11 · Versione unita in questo turno: aggiorna in docs/DA-FARE.md la sezione «## Nastro delle versioni» (3 righe): «🚀 Online: v<N> · <segno e catena> · 22/11 <ora> · <3 parole>», poi «🧪 In prova» e «⏳ Dopo»"
+],
+"Stop 15 · There are uncommitted changes in": [
+"10:11 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"10:17 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"10:25 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 5 · Notifica non letta (in coda": [
+"10:11 · Notifica non letta (in coda dalle 10:08: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat",
+"10:26 · Notifica non letta (in coda dalle 10:25: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+],
+"Stop 11 · 📸 Foto o video di": [
+"10:25 · 📸 Foto o video di questa sessione in archivio/, non mandati a Mario e senza riga in «## 0. Aspetta Mario» (C516, E498): archivio/2026-11-22-c13-v20/ (4 file). Per Mario → mandali ORA con la domanda, o"
+]
+}
 }
