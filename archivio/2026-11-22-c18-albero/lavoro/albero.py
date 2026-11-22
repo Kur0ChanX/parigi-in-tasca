@@ -80,7 +80,10 @@ idx = nd.distance_transform_edt(~pezzi, return_indices=True)[1]
 fill = fill[idx[0], idx[1]]
 vicino = ilab[idx[0], idx[1]]
 stella_i = [i for i, t in tipo.items() if t == 'stella']
-inchiostro = np.clip((.80 - mn) / .55, 0, 1)
+# v40 (Mario 22/11 «l'albero fai un tratto meno spesso»): tratti interni assottigliati di SOTTILE px (il nero si stringe), contorno uguale
+SOTTILE = int(os.environ.get('SOTTILE', '9'))
+mn_t = nd.grey_dilation(mn, size=(SOTTILE, SOTTILE)) if SOTTILE > 1 else mn
+inchiostro = np.clip((.80 - mn_t) / .55, 0, 1)
 linea[:] = np.array([.02, .085, .07])                                           # tratti verde notte
 st = np.isin(vicino, stella_i); linea[st] = np.array([.42, .25, .04])            # la stella ha il bordo d'oro scuro
 pal = np.isin(vicino, palle); linea[pal] = np.array([.06, .05, .12])
