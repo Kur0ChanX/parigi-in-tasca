@@ -539,12 +539,32 @@ footer .wrap{padding-block:var(--s6);color:var(--mute);font-size:.92rem}
 .tabbar{display:none}
 body[data-tab]{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 body[data-tab] .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px max(8px,env(safe-area-inset-left,0px)) calc(6px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--rule);box-shadow:0 -8px 24px -16px rgb(0 0 0 / .5)}
+/* C17 · numero della versione in alto (Mario 22/11 «un numerino piccolo in alto e se clicco mi fa vedere cosa è stato implementato… clicca aggiorna versione») */
+.vnum{position:fixed;top:calc(8px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));z-index:55;min-height:28px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);background:color-mix(in srgb,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--mute);font:700 .74rem/1 var(--text);font-variant-numeric:tabular-nums;cursor:pointer}
+.vnum.nuovo::after{content:"";position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--lamp);box-shadow:0 0 0 2px var(--bg)}
+.vnum.agg{background:var(--lamp);color:var(--lamp-ink);border-color:transparent}
+.vbox{width:min(30rem,calc(100vw - 32px));max-height:min(80vh,40rem);border:0;border-radius:18px;padding:0;background:var(--surface);color:var(--ink);box-shadow:0 20px 60px -20px rgb(0 0 0 / .6)}
+.vbox::backdrop{background:rgb(0 0 0 / .55)}
+.vbox .vt{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 16px 8px}
+.vbox .vt h2{font-size:1.15rem;margin:0}
+.vbox .vx{min-width:44px;min-height:44px;border:0;border-radius:12px;background:none;color:var(--ink);font-size:1.3rem;cursor:pointer}
+.vbox .vagg{margin:0 16px 12px;padding:12px;border-radius:14px;background:color-mix(in srgb,var(--lamp) 22%,var(--surface));display:grid;gap:8px}
+.vbox .vagg button{min-height:48px;border:0;border-radius:999px;background:var(--lamp);color:var(--lamp-ink);font:800 1rem/1 var(--text);cursor:pointer}
+.vbox ol{list-style:none;margin:0;padding:0 16px 16px;overflow:auto;max-height:calc(min(80vh,40rem) - 72px)}
+.vbox li{padding:10px 0;border-top:1px solid var(--rule)}
+.vbox li b{display:block;margin-bottom:4px}
+.vbox li ul{margin:0;padding-left:1.1em;color:var(--ink)}
+.vbox li li{border:0;padding:2px 0}
 /* C16 (Mario 22/11 11:37 «sotto mi mettevi le date … Che fine hanno fatto?»): dalla v17 la barra delle schede copriva la fila dei giorni; sul telefono la fila sta appoggiata SOPRA la barra (69 px = 6 + 56 + 6 + bordo) */
 @media (max-width:719px){
  body[data-tab] .daybar{bottom:calc(69px + env(safe-area-inset-bottom,0px));padding-bottom:6px;box-shadow:0 -10px 24px -14px rgb(0 0 0 / .45)}
  body[data-tab] .daybar .pill{bottom:6px}
- body[data-tab="giorni"]{padding-bottom:calc(153px + env(safe-area-inset-bottom,0px))}
- body[data-tab="giorni"] .sc-avviso{bottom:calc(153px + env(safe-area-inset-bottom,0px))}
+ /* DOMANDA 1 = 1 (Mario 22/11 «quella a sinistra, quella sotto»): fila più sottile, «DOM 13» su una riga, per coprire meno il disegno del giorno */
+ body[data-tab] .daybar button{min-height:40px;grid-auto-flow:column;align-items:baseline;gap:5px;padding:2px}
+ body[data-tab] .daybar button .dd{font-size:1.15rem}
+ body[data-tab] .daybar .today-dot{top:4px;right:4px}
+ body[data-tab="giorni"]{padding-bottom:calc(137px + env(safe-area-inset-bottom,0px))}
+ body[data-tab="giorni"] .sc-avviso{bottom:calc(137px + env(safe-area-inset-bottom,0px))}
 }
 .tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:56px;padding:4px 2px;border:0;border-radius:14px;background:none;color:var(--mute);font:700 .8rem/1.1 var(--text);cursor:pointer;-webkit-tap-highlight-color:transparent}
 .tabbar button .i{font-size:1.4rem;line-height:1}
@@ -686,6 +706,39 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 
 <div class="bokeh" aria-hidden="true"></div>
 <div class="stars" id="stars" aria-hidden="true"><i class="tw1"></i><i class="tw2"></i><i class="tw3"></i></div>
+<button type="button" class="vnum" id="vnum" aria-haspopup="dialog">v…</button>
+<dialog class="vbox" id="vbox" aria-labelledby="vbox-t"><div class="vt"><h2 id="vbox-t">Novità</h2><button type="button" class="vx" aria-label="Chiudi">✕</button></div><div class="vagg" hidden><span></span><button type="button">⬆ Aggiorna versione</button></div><ol></ol></dialog>
+<script>
+/* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
+const VERSIONI=[
+ {v:26,d:'22/11',n:['Numero della versione in alto: toccalo per le novità e, se ce n\'è una più nuova, per «Aggiorna versione».','Fila dei giorni più sottile, in basso sopra le schede: copre meno il disegno del giorno.']},
+ {v:25,d:'22/11',n:['Sul telefono torna la fila dei giorni (Dom 13 … Gio 17): era coperta dalla barra delle schede.']},
+ {v:24,d:'22/11',n:['Mappa del viaggio da ingrandire col dito: Orly, Parigi, Disneyland, mercatini e alloggi.']},
+ {v:23,d:'22/11',n:['Costi coi colori dei tipi, tempi per Disney con le attese del treno, chilometri in vista.']},
+ {v:22,d:'22/11',n:['Spa e deposito valigie ricontrollati sui siti ufficiali.']},
+ {v:21,d:'22/11',n:['La scelta dell\'alloggio cambia tutta la pagina, con il tasto «↩ Annulla».']},
+ {v:20,d:'22/11',n:['Grafica rinnovata: hotel Disney in rosa, alloggi in ordine di tempo, «Vedi i dettagli».']},
+ {v:19,d:'22/11',n:['Scheda Dormire più chiara e una camera nuova a Bussy.']},
+ {v:18,d:'22/11',n:['Consiglio di 4 notti, 5 Airbnb nuovi, tasto «Tutti», distanze subito in vista.']},
+ {v:17,d:'22/11',n:['Pagina divisa in 4 schede: Piano, Dormire, Giorni, Biglietti.']}];
+(()=>{const VER=VERSIONI[0].v,b=document.getElementById('vnum'),box=document.getElementById('vbox'),agg=box.querySelector('.vagg');
+ window.pdnVER=VER;b.textContent='v'+VER;b.setAttribute('aria-label','Versione '+VER+': novità');
+ box.querySelector('ol').innerHTML=VERSIONI.map(x=>`<li><b>v${x.v} · ${x.d}</b><ul>${x.n.map(t=>`<li>${t}</li>`).join('')}</ul></li>`).join('');
+ let vista=null;try{vista=+localStorage.getItem('pdn-ver-vista')||null}catch(e){}
+ if(vista&&vista<VER)b.classList.add('nuovo');else if(!vista)try{localStorage.setItem('pdn-ver-vista',VER)}catch(e){}
+ const apri=()=>{b.classList.remove('nuovo');try{localStorage.setItem('pdn-ver-vista',VER)}catch(e){}if(box.showModal)box.showModal();else box.setAttribute('open','')};
+ const chiudi=()=>{if(box.close)box.close();else box.removeAttribute('open')};
+ b.addEventListener('click',apri);box.querySelector('.vx').addEventListener('click',chiudi);box.addEventListener('click',e=>{if(e.target===box)chiudi()});
+ /* versione più nuova sul sito? (solo con la rete; senza rete resta quella che c'è) */
+ const guarda=()=>{if(!navigator.onLine||!/^https?:/.test(location.protocol))return;fetch('versione.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||!(j.v>VER))return;
+  b.classList.add('agg');b.textContent='v'+VER+' → v'+j.v;b.setAttribute('aria-label','Versione '+VER+': c\'è la '+j.v+', tocca per aggiornare');
+  agg.hidden=false;agg.querySelector('span').textContent='C\'è la versione '+j.v+'. Questo telefono ha la '+VER+'.'}).catch(()=>{})};
+ agg.querySelector('button').addEventListener('click',async e=>{const t=e.currentTarget;t.disabled=true;t.textContent='Aggiorno…';
+  try{const r=navigator.serviceWorker&&await navigator.serviceWorker.getRegistration();if(r)await r.update()}catch(x){}
+  try{await fetch(location.pathname,{cache:'reload'})}catch(x){}location.reload()});
+ addEventListener('load',()=>setTimeout(guarda,1500));document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')guarda()});
+})();
+</script>
 <header class="hero" id="top">
  <canvas id="sky" aria-hidden="true"></canvas>
  <svg class="garland" id="garland" aria-hidden="true"></svg>
