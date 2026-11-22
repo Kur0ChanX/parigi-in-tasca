@@ -1,0 +1,42 @@
+{
+"account": "108763",
+"sessione": "62f571e73346",
+"giorno": "2026-11-22",
+"turni": 1,
+"peso": 1939704,
+"uscita": 57522,
+"contesto_max": 200295,
+"anomalie": [
+"7 uscite di strumento enormi (308 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"57k token scritti in un turno"
+],
+"remota": "01WTjqUwtG4z",
+"aiutanti": 0,
+"strumenti": 99,
+"motori": {
+"opus": 1939704
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+187,
+15207134,
+104955,
+0,
+57522
+]
+},
+"costo": 5.0323,
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 5 · Notifica non letta (in coda": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"10:46 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): ««»**: dopo «» compare un avviso in basso con il tasto «»». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <f"
+],
+"Stop 5 · Notifica non letta (in coda": [
+"10:46 · Notifica non letta (in coda dalle 10:44: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+]
+}
+}
