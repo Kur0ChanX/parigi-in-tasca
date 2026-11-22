@@ -130,7 +130,7 @@ b,strong{font-weight:700}
 .checked{margin-top:var(--s4);font-size:.92rem;color:var(--night-mute)}
 .checked b{color:var(--night-ink)}
 .scene{position:relative;z-index:1;display:block;width:100%;height:clamp(270px,16vw + 210px,380px);margin-top:var(--s3);max-width:100%}
-.scene .par{will-change:transform}
+
 .luna-t .luna-bagliore{opacity:.6;transform-box:fill-box;transform-origin:center}
 .luna-st{fill:#FFF8E2;transform-box:fill-box;transform-origin:center}
 .sl{opacity:.95}.pk-c{fill:var(--ember)}.ombraC{fill:var(--night-2);opacity:.3}.neve-st{fill:#FFFFFF;opacity:.5;transform-box:fill-box;transform-origin:center}
@@ -814,7 +814,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 /* C19 · tasto e riquadro della guida Disneyland */
 .dlApp{display:flex;align-items:center;gap:12px;margin-top:10px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,rgb(246 201 100 / .22),rgb(255 255 255 / .06));border:1.5px solid var(--lamp);color:var(--night-ink);text-decoration:none;box-shadow:0 0 0 4px rgb(246 201 100 / .12)}
 .dlApp i{font-style:normal;font-size:1.6rem;line-height:1}.dlApp span{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}.dlApp b{font-size:1.05rem}.dlApp small{font-weight:500;opacity:.85;font-size:.8rem;line-height:1.25}.dlApp em{font-style:normal;font-size:1.6rem;color:var(--lamp)}
-#top.anim-pausa *{animation-play-state:paused!important}#top .lucgrp-el{animation:none!important}
+#top.anim-pausa *{animation-play-state:paused!important}
 .apps2 .dlApp.roApp{gap:16px}.roApp i{position:relative}.ro-n{position:absolute;top:-.45em;right:-.55em;min-width:1.25em;height:1.25em;padding:0 .25em;border-radius:1em;background:var(--lamp);color:#1a1f4a;font:800 .72rem/1.25em system-ui,sans-serif;text-align:center;box-shadow:0 0 0 2px rgb(20 26 70 / .9)}
 .apps2 .dlApp small.ro-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px;-webkit-line-clamp:unset;opacity:1}.dlApp .ro-c{display:inline-block;flex:none;padding:1px 7px;border-radius:999px;border:1px solid rgb(246 201 100 / .7);background:rgb(246 201 100 / .14);font-size:.74rem;font-weight:700;white-space:nowrap}
 .dlGiorno{margin-bottom:var(--s4)}.dlGiorno p{margin:0 0 8px}.dlGiorno a{display:inline-block;padding:9px 16px;border-radius:999px;background:var(--lamp);color:var(--lamp-ink);font-weight:800;text-decoration:none}
@@ -836,6 +836,18 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 .apps2 .dlApp{margin-top:0;padding:10px;gap:8px;min-width:0}
 .apps2 .dlApp i{font-size:1.4rem}.apps2 .dlApp b{font-size:.98rem;line-height:1.15}.apps2 .dlApp em{display:none}
 .apps2 .dlApp small{font-size:.76rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* C24 · tre riquadri affiancati: icona e titolo in alto, sotto una riga corta; stessa altezza di prima */
+.apps2.tre{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.apps2.tre .dlApp{display:grid;grid-template-columns:auto 1fr;align-content:start;column-gap:5px;row-gap:3px;padding:8px 7px}
+.apps2.tre .dlApp i{font-size:1.1rem;align-self:start}
+.apps2.tre .dlApp>span{display:contents}
+.apps2.tre .dlApp b{font-size:.84rem;line-height:1.12;align-self:center}
+.apps2.tre .dlApp small{grid-column:1/-1;font-size:.7rem;line-height:1.2}
+.apps2.tre .dlApp small.ro-cs{gap:4px;margin-top:1px}
+.apps2.tre .dlApp .ro-c{padding:0 5px;font-size:.68rem}
+.apps2.tre .dlApp.roApp{gap:0;column-gap:5px}
+.apps2 .scApp{background:linear-gradient(135deg,rgb(246 201 100 / .5),rgb(246 201 100 / .22))}
+.apps2 .scApp small b{font-size:inherit;font-weight:800}
 </style>
 
 <div class="bokeh" aria-hidden="true"></div>
@@ -845,7 +857,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
- {v:40,d:'22/11',n:['Disegno in alto più leggero: scorre liscio, la Torre Eiffel resta ferma e l’albero ha il tratto più sottile.']},{v:39,d:'22/11',n:['Tasto «⭐ Rosa alloggi»: sulla stella quanti ne avete scelti, sotto i numeri degli alloggi.']},{v:38,d:'22/11',n:['Tasto «⭐ Rosa alloggi» più pulito: una riga sola con quanti alloggi avete scelto.']},{v:37,d:'22/11',n:['Tasto «⭐ Rosa alloggi» nella schermata principale: lì scegliete voi gli alloggi della rosa, con le spunte o con la ⭐.']},
+ {v:41,d:'22/11',n:['L’app si apre sempre sul Piano, in cima.','Schermata principale a tre riquadri: «Scegli dove dormire» apre la vostra rosa con le schede affiancate da confrontare; «🛏️ Dormiamo qui» cambia giorni, strade e orari.','Disegno in alto più nitido, e sta fermo quando allargate la pagina con due dita.']},{v:40,d:'22/11',n:['Disegno in alto più leggero: scorre liscio, la Torre Eiffel resta ferma e l’albero ha il tratto più sottile.']},{v:39,d:'22/11',n:['Tasto «⭐ Rosa alloggi»: sulla stella quanti ne avete scelti, sotto i numeri degli alloggi.']},{v:38,d:'22/11',n:['Tasto «⭐ Rosa alloggi» più pulito: una riga sola con quanti alloggi avete scelto.']},{v:37,d:'22/11',n:['Tasto «⭐ Rosa alloggi» nella schermata principale: lì scegliete voi gli alloggi della rosa, con le spunte o con la ⭐.']},
  {v:36,d:'22/11',n:['Alloggio n. 23: prezzo Booking 461 € con cancellazione gratuita, indirizzo, orari d’arrivo 14–23, asciugamani inclusi.']},
  {v:35,d:'22/11',n:['Alloggi n. 16 e 23: scheda «📋 Tutto sul n.» con soldi, arrivo, casa, spesa la domenica e messaggio pronto per il gestore.','Filtro «⭐ La vostra rosa» fra gli alloggi; n. 23: prezzo su Booking, regole della casa lette (niente cauzione).','Alloggi: tasto «Nascondi» su ogni alloggio, con «Annulla». Gli elenchi mostrano solo quelli che vi interessano.','Alloggi: «Pulisci l’elenco» con una spunta per alloggio; «Rimetti tutti» li fa tornare. L’alloggio scelto resta sempre.','«Manda questa scelta» porta anche gli alloggi nascosti: chi apre il link sceglie se nasconderli anche sul suo telefono.']},
  {v:34,d:'22/11',n:['Testata, albero: ora è il disegno fornito, colorato (palline colorate, stella dorata, luna da sinistra) con lucine sul festone.','Testata, Torre Eiffel ridisegnata in proporzioni reali: gambe aperte, tre piani, traliccio, luce dorata e scintillio bianco.','Correzione: alcune luci della testata lampeggiavano all’apertura (animazioni avviate in ritardo). Ora partono già a metà ciclo.','Slitta: un solo passaggio a ogni apertura della pagina.']},
@@ -907,10 +919,12 @@ const VERSIONI=[
    <a href="#hoteldisney"><i>🏰</i>Hotel Disney<small>Dentro e vicino ai parchi</small></a>
   </nav>
   <!-- C19 · la guida Disneyland di Mario (Mario 22/11 ~16:2x «sono due app abbinate, questa e quella di Disneyland»): il link porta i giorni del viaggio (14–16/12, 3 giorni, 2 persone, tutti e due i parchi); ogni telefono tiene il suo profilo e i suoi preferiti. Unico posto del link: lo legge anche il JS dei giorni Disney. -->
-  <div class="apps2">
+  <div class="apps2 tre">
   <a class="dlApp" id="dlApp" href="https://guida-disneyland-ynoy.pages.dev/?d=2026-12-14&amp;n=3&amp;a=2&amp;p=t.t.t&amp;prova=idee" target="_blank" rel="noopener"><i>🏰</i><span><b>Guida Disneyland</b><small>La vostra app dei parchi</small></span><em aria-hidden="true">›</em></a>
   <!-- C21 · rosa degli alloggi (Mario 22/11 17:56 «metti il tasto Rosa alloggi nella home e lì mi fai mettere la rosa»): porta al passo 2 di «Scegli» con la sola rosa e le spunte per cambiarla; scritte dal JS (rosaHome) -->
   <a class="dlApp roApp" id="roApp" href="#sc2"><i>⭐</i><span><b>Rosa alloggi</b><small>Gli alloggi da guardare da vicino</small></span><em aria-hidden="true">›</em></a>
+  <!-- C24 · «Scegli dove dormire» (Mario 22/11 ~19:5x, DOMANDA 1 → tre riquadri affiancati): apre il passo 2 con la rosa e le schede aperte per confrontare; sotto, l’alloggio di adesso (scritte dal JS: scHome) -->
+  <a class="dlApp scApp" id="scApp" href="#sc2"><i>🛏️</i><span><b>Scegli dove dormire</b><small>Cambia tutto l’itinerario</small></span><em aria-hidden="true">›</em></a>
   </div>
   <p class="go-more"><a href="#fonti">Fonti</a></p>
  </div>
@@ -1008,7 +1022,7 @@ const VERSIONI=[
 <main>
 <section id="scegli" aria-labelledby="h-scegli"><div class="wrap">
  <div class="sec-head"><p class="kicker">Prima di tutto · dove dormite</p><h2 id="h-scegli">Scegliete dove dormire</h2><p class="sec-ans" id="a-scegli">In 2 passi: tutta la pagina segue la vostra scelta.</p>
- <p class="lead">Toccate un alloggio: vedete pro, contro e differenze.</p><p class="sc-tutto">🔄 <b>La scelta cambia tutta la pagina.</b> Con «Scegli questo» cambiano subito gli orari di 📅 Giorni, i costi del 🏠 Piano e i ticket di 🎟️ Biglietti.</p></div>
+ <p class="lead">Toccate un alloggio: vedete pro, contro e differenze.</p><p class="sc-tutto">🔄 <b>La scelta cambia tutta la pagina.</b> Con «🛏️ Dormiamo qui» cambiano subito gli orari di 📅 Giorni, i costi del 🏠 Piano e i ticket di 🎟️ Biglietti.</p></div>
  <div id="scRis"></div>
  <h3 class="sc-step" id="sc1"><span class="nb sm">1</span>Domenica 13: dove dormite?</h3>
  <p class="sc-now" id="scNowN"></p>
@@ -1482,7 +1496,7 @@ const drawBars=()=>{const cm=conto(MIO_S),me=scStr(SCE);let h='',cl='';
   const lab=c.s.map(x=>x[2]).join(', '),ty=c.sc?tyOf(byId(c.sc.d).sub):'disney',tl={hotel:'🏨 Hotel',bb:'🛏️ B&B · camera',casa:'🏠 Casa',disney:c.sc?'🏰 Hotel Disney':'🏰 Hotel Disney · pacchetto'}[ty];
   h+=`<a class="bar-row${k===me?' is-me':''}" data-ty="${ty}" href="${k?'#scegli':'#hoteldisney'}"${k?` data-sc="${k}"`:''}><span class="bar-ty">${c.sc&&c.sc.n?'Parigi + ':''}${tl}</span><div class="bar-top"><span class="bar-name">${esc(c.n)}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
  <div class="track" role="img" aria-label="${esc(c.n)}: circa ${fmt(tot)} (${lab})"><span class="grid-lines">${[500,1000,1500,2000].map(v=>`<i style="left:${v/MAX*100}%"></i>`).join('')}</span><span class="fill" style="width:${tot/MAX*100}%">${c.s.map(x=>`<i class="${x[0]}"${x[3]?` data-ty="${x[3]}"`:''} style="width:${x[1]/tot*100}%"></i>`).join('')}</span></div>
- <p class="bar-note">${esc(c.note)} <span class="bar-go">${k?(k===me?'✓ La vostra scelta':'Scegli questo ›'):'Perché non conviene ›'}</span></p></a>`;
+ <p class="bar-note">${esc(c.note)} <span class="bar-go">${k?(k===me?'✓ La vostra scelta':'Dormiamo qui ›'):'Perché non conviene ›'}</span></p></a>`;
   if(c.sc)cl+=`<li><b>${esc(c.n)}${ref?' (il mio consiglio)':''}:</b> ${c.s.map(x=>x[2]).join(' + ')} = ${fmt(tot)}.</li>`});
  h+=`<div class="axis" aria-hidden="true">${[0,500,1000,1500,2000].map(v=>`<span style="left:${v/MAX*100}%">${v?grp(v)+' €':'0 €'}</span>`).join('')}</div>`;
  $('#bars').innerHTML=h;$('#calc').innerHTML=cl};
@@ -1634,6 +1648,9 @@ let SCE=null;try{const u=new URLSearchParams(location.search),a=+u.get('alloggio
 let SCELTO=!!SCE;if(!SCE)SCE={n:MIO_S.n,d:MIO_S.d};
 let CHO=SCE.d,PN=PAR.find(p=>p.id===SCE.n)||null;
 const scName=s=>{const p=PAR.find(x=>x.id===s.n),h=AL.find(x=>x.id===s.d);return p?`${p.n} + n. ${s.d} ${h.n}`:`n. ${s.d} ${h.n}, 4 notti`};
+/* C24 · riquadro «Scegli dove dormire» della schermata principale: sotto, l’alloggio di adesso (scelto da voi o il mio consiglio) */
+const scHome=()=>{const a=document.getElementById('scApp');if(!a)return;const h=AL.find(x=>x.id===SCE.d),sm=a.querySelector('small');if(!h||!sm)return;sm.innerHTML=(SCELTO&&!isMio()?'Scelto: ':'Consiglio: ')+'<b>n. '+SCE.d+'</b> '+esc(h.n)};
+scHome();
 /* C20 (Mario 22/11 «potenziali per questi due… potenzia la guida»): i due alloggi della rosa, tutto quello che sappiamo. Letto il 22/11/2026: annunci Airbnb, Monoprix; ricerca in research_notes/…/alloggio_n16_* e alloggio_n23_* */
 const XX={
  16:{host:'Vincent',k:[
@@ -2237,7 +2254,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
  const applySc=(s,say,sc=true)=>{if(!s||!ACC[s.d])return;const prima=scStr(SCE),pS={n:SCE.n,d:SCE.d},pT=SCELTO;SCE={n:s.n,d:s.d};SCELTO=sc;CHO=s.d;P=ACC[CHO];PN=PAR.find(p=>p.id===s.n)||null;
   try{if(sc)localStorage.setItem('pdn-scelta',scStr(SCE));else localStorage.removeItem('pdn-scelta');localStorage.removeItem('pdn-alloggio')}catch(e){}
   try{const u=new URL(location.href);u.searchParams.delete('alloggio');if(sc)u.searchParams.set('scelta',scStr(SCE));else u.searchParams.delete('scelta');history.replaceState(null,'',u)}catch(e){}
-  renderDays();show(cur,{quiet:true});renderAl();paint();mkAl();
+  renderDays();show(cur,{quiet:true});renderAl();paint();mkAl();scHome();
   if(say)$('#chNote').insertAdjacentHTML('beforeend',' <b>Pagina aggiornata.</b>');
   if(say&&prima!==scStr(SCE)){ANN={s:pS,t:pT};document.dispatchEvent(new CustomEvent('pdn:scelta',{detail:{nome:scName(SCE),prima:scName(pS)+(pT?'':' (il mio consiglio)')}}))}}; /* lo ascolta la barra delle schede: avviso e pallini «aggiornato» */
  document.addEventListener('pdn:annulla',()=>{if(!ANN)return;const a=ANN;ANN=null;applySc(a.s,0,a.t);document.querySelectorAll('.sc-fatto').forEach(p=>p.remove())}); /* dal bottone «↩ Annulla» dell'avviso: torna com'era, senza avviso nuovo */
@@ -2250,12 +2267,12 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
   const dm=document.querySelector(`#al-${id} details.more`);if(dm)dm.open=true;
   const nb=document.querySelector(`#al-${id} [data-use]`);if(nb){nb.focus();nb.insertAdjacentHTML('afterend','<p class="small sc-fatto" role="status">Fatto: giorno per giorno, costi, trasporti e «Da fare» ora seguono questo alloggio.</p>')}});
  /* sezione «Scegli dove dormire» (C11) */
- let SO2='prezzo',ROF=false,roAp=false; /* C21: ROF = si vede solo la rosa; roAp = apri le spunte (dal tasto della schermata principale) */
+ let SO2='prezzo',ROF=ROSA.size>0,roAp=false,scAp=false; /* C24: con la rosa piena si parte dalla rosa (Mario «vedo solo gli hotel selezionati»); scAp = schede della rosa aperte per confrontare (dal riquadro «Scegli dove dormire») */ /* C21: ROF = si vede solo la rosa; roAp = apri le spunte (dal tasto della schermata principale) */
  const dEur=(a,b)=>Math.abs(a-b)<5?'<b class="sc-eq">uguale</b>':`<b class="${a>b?'sc-up':'sc-dn'}">${a>b?'+':'−'}${fmt(Math.abs(a-b))}</b>`;
  const kmT=m=>(m*80/1000).toFixed(1).replace('.',',')+' km';
  const dMin=(a,b)=>a===b?'<b class="sc-eq">uguale</b>':`<b class="${a>b?'sc-up':'sc-dn'}">${a>b?'+':'−'}${Math.abs(a-b)} min</b>`;
  const dOra=(a,b)=>a===b?'<b class="sc-eq">uguale</b>':a<b?`<b class="sc-up">${b-a} min prima</b>`:`<b class="sc-dn">${a-b} min dopo</b>`;
- const btn=(s,on)=>`<button type="button" class="btn ${on?'gold':'ghost'}" data-sc="${scStr(s)}" aria-pressed="${on}">${on?'✓ Scelto':'Scegli questo'}</button>`;
+ const btn=(s,on)=>`<button type="button" class="btn ${on?'gold':'ghost'}" data-sc="${scStr(s)}" aria-pressed="${on}">${on?'✓ Dormite qui':'🛏️ Dormiamo qui'}</button>`;
  const dX=(d)=>/sc-eq/.test(d)?'':' '+d; /* differenza solo se c'è */
  const kpi=(k,v,d)=>`<div><span class="k">${k}</span><span class="v">${v}</span>${d?`<span class="d">${d}</span>`:''}</div>`;
  function renderSc(){const c=conto(SCE),cm=conto(MIO_S),me=scStr(SCE),mio=isMio(),pn=PAR.find(p=>p.id===SCE.n)||null,h0=AL.find(h=>h.id===SCE.d);
@@ -2273,7 +2290,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
 <div class="sc-act"><button type="button" class="btn gold" id="scShare">Manda questa scelta</button>${mio?'':'<button type="button" class="btn ghost" id="scMio">Torna al mio consiglio</button>'}</div><p class="small" id="scShareOk" role="status"></p></div>`;
   $('#scNowN').innerHTML=`Adesso: <b>${pn?esc(pn.n)+', a Parigi':'già vicino a Disney'}</b>${pn?' · '+fmt(pn.p)+' per 1 notte':''}`;
   $('#scNowD').innerHTML=`Adesso: <b>n. ${SCE.d} ${esc(h0.n)}</b>${c?' · '+fmt(c.q[0])+' per '+(SCE.n?'3 notti, 14→17':'4 notti, 13→17'):''}`;
-  const row=(k,on,off,mk,n,sub,p,ps,m,body,px='')=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${inRosa(k)?' data-ro="1"':''}${op.includes(k)?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small>${px}</span><span class="sc-m">${m}</span><span class="sc-more" aria-hidden="true"></span></summary><div class="sc-b">${body}</div></details>`;
+  const row=(k,on,off,mk,n,sub,p,ps,m,body,px='')=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${inRosa(k)?' data-ro="1"':''}${op.includes(k)||(scAp&&inRosa(k))?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small>${px}</span><span class="sc-m">${m}</span><span class="sc-more" aria-hidden="true"></span></summary><div class="sc-b">${body}</div></details>`;
   const dot=on=>`<span class="sc-dot" aria-hidden="true">${on?'✓':''}</span>`;
   const nOpt=(o)=>{const s={n:o?o.id:'',d:SCE.d},k=conto(s),on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S);
    const px=rc?'<small class="sc-dt sc-rc">★ consiglio</small>':k&&cm?`<small class="sc-dt">totale ${dEur(k.tot,cm.tot)}</small>`:'';
@@ -2302,7 +2319,7 @@ ${xxBox(h)}
   renderNas();renderRosa()
   document.querySelectorAll('#scSort button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===SO2)))}
  /* una riga aperta per lista: le altre si chiudono e la riga toccata resta ferma sotto il dito */
- $('#scegli').addEventListener('toggle',e=>{const d=e.target;if(!d.open||!d.dataset||!d.dataset.k)return;const box=d.closest('#scN,#scD');if(!box)return;
+ $('#scegli').addEventListener('toggle',e=>{const d=e.target;if(!d.open||!d.dataset||!d.dataset.k)return;const box=d.closest('#scN,#scD');if(!box)return;if(box.id==='scD'&&ROF)return; /* C24: nella rosa più schede aperte insieme, per confrontare */
   const y0=d.getBoundingClientRect().top;box.querySelectorAll('details[open][data-k]').forEach(x=>{if(x!==d)x.open=false});
   const y1=d.getBoundingClientRect().top;if(Math.abs(y1-y0)>1)scrollBy(0,y1-y0)},true);
  $('#scegli').addEventListener('toggle',e=>{if(e.target.classList&&e.target.classList.contains('sc-par'))PO=e.target.open},true);
@@ -2343,6 +2360,7 @@ ${xxBox(h)}
   const l=e.target.closest('[data-ro-link]');if(l){const A=rosaLink||[];rosaLink=null;if(l.dataset.roLink==='1'&&A.length)rosaCambia(()=>{ROSA.clear();A.forEach(id=>{ROSA.add(id);NASC.delete('d-'+id)})},'Rosa come nel link: '+rosaNum(A));else{renderSc();rosaHome()}}});
  $('#scRosaP').addEventListener('change',e=>{const c=e.target.closest('[data-ro-k]');if(c)rosaUno(+c.dataset.roK,c.checked)});
  {const a=$('#roApp');if(a)a.addEventListener('click',()=>{ROF=true;roAp=true;renderSc()})}
+ {const a=$('#scApp');if(a)a.addEventListener('click',()=>{ROF=ROSA.size>0;scAp=true;renderSc();scAp=false})}
  document.addEventListener('click',e=>{const b=e.target.closest('[data-nas]');if(b){e.preventDefault();const k=b.dataset.nas,via=!NASC.has(k);if(!via&&APRI===+k.slice(2))APRI=0;nasSet([k],via,(via?'Nascosto: ':'Rimesso: ')+nasNome(k));return}
   const t=e.target.closest('[data-nas-tutti]');if(t){nasSet([...NASC],false,'Rimessi tutti nell’elenco');return}
   const l=e.target.closest('[data-nas-link]');if(l){const A=nasDaLink||[];nasDaLink=null;if(l.dataset.nasLink==='1')nasSet(A,true,'Nascosti '+A.length+' alloggi, come nel link');else renderNas()}});
@@ -2414,7 +2432,7 @@ if(cv&&cv.getContext){
   if(!RM)fireworks(t);
   ctx.globalAlpha=1};
  const loop=now=>{draw(now);if(run)raf=requestAnimationFrame(loop)};
- const start=()=>{if(run||RM||!vis||document.hidden)return;run=true;raf=requestAnimationFrame(loop)};
+ const start=()=>{if(run||RM||!vis||document.hidden||hero.classList.contains('anim-pausa'))return;run=true;raf=requestAnimationFrame(loop)};
  const stop=()=>{run=false;cancelAnimationFrame(raf)};
  size();draw(t0+1600);
  addEventListener('resize',()=>{size();if(!run)draw(performance.now())},{passive:true});
@@ -2423,14 +2441,12 @@ if(cv&&cv.getContext){
   document.addEventListener('visibilitychange',()=>document.hidden?stop():start());start();
   /* C23 (Mario 22/11 18:31, video: «flickera poi pesa nello scroll e la torre eifell se scrolli vola da serra tienila fissa»): niente più parallasse, il disegno scorre intero e la Torre resta ferma sulle casette;
      mentre si scorre le luci della testata si fermano (ogni luce animata fa ridisegnare tutto il disegno: ~9 immagini al secondo su un telefono lento) e ripartono 0,2 s dopo */
-  /* C23 · 800 lucine con un’animazione ciascuna = la testata ridisegnata 800 volte a ogni immagine: si raggruppano per fase (le lucine con lo stesso tempo
-     lampeggiano in un gruppo solo, stesso effetto, poche animazioni); quelle già in gruppo hanno .lucgrp-el (animazione spenta, la fa il gruppo) */
-  {const Q={lampC:4,lampM:4,hb:6,ond:8},NSg='http://www.w3.org/2000/svg';let rq=0;
-   const lucGrp=()=>{rq=0;const m=new Map();hero.querySelectorAll('.lampC,.lampM,.hb,.ond').forEach(el=>{if(el.classList.contains('lucgrp-el')||el.classList.contains('lucgrp'))return;const c=Object.keys(Q).find(k=>el.classList.contains(k)),cs=getComputedStyle(el),D=parseFloat(cs.animationDuration)||1,d=((-parseFloat(cs.animationDelay)||0)%D+D)%D,b=Math.round(d/D*Q[c])%Q[c],k=c+'|'+b+'|'+D;
-    let pm=m.get(el.parentNode);if(!pm)m.set(el.parentNode,pm=new Map());let L=pm.get(k);if(!L)pm.set(k,L=[]);L.push([el,cs.animationName,cs.animationTimingFunction])});
-    m.forEach((pm,par)=>pm.forEach((L,k)=>{const [c,b,D]=k.split('|'),g=document.createElementNS(NSg,'g');g.setAttribute('class','lucgrp');g.style.animation=`${L[0][1]} ${D}s ${L[0][2]} infinite`;g.style.animationDelay=`-${(b*D/Q[c]).toFixed(2)}s`;par.insertBefore(g,L[0][0]);L.forEach(([e])=>{e.classList.add('lucgrp-el');g.appendChild(e)})}))};
-   lucGrp();new MutationObserver(()=>{if(!rq)rq=requestAnimationFrame(lucGrp)}).observe(hero,{childList:true,subtree:true});window.pdnRaggruppa=lucGrp}
-  let pz=0;addEventListener('scroll',()=>{if(!vis)return;if(!hero.classList.contains('anim-pausa')){hero.classList.add('anim-pausa');stop()}clearTimeout(pz);pz=setTimeout(()=>{hero.classList.remove('anim-pausa');start()},200)},{passive:true});}
+  /* C23 · v41 (video di Mario 22/11 19:35, pagina allargata con due dita: rettangoli nella neve, luna sfocata): con la pagina ingrandita la testata sta ferma,
+     così il telefono la disegna una volta sola, intera e nitida; riparte quando la pagina torna normale */
+  const VV=window.visualViewport,zoom=()=>!!VV&&VV.scale>1.05;let pz=0;
+  const riparti=()=>{if(zoom())return;hero.classList.remove('anim-pausa');start()};
+  const pausa=f=>{if(!f&&!vis)return;if(!hero.classList.contains('anim-pausa')){hero.classList.add('anim-pausa');stop()}clearTimeout(pz);pz=setTimeout(riparti,200)};
+  addEventListener('scroll',()=>pausa(),{passive:true});if(VV)VV.addEventListener('resize',()=>pausa(1));}
 }
 /* ---------- C18 · la slitta nel cielo (Mario 22/11): la sua foto ritagliata, coi suoi colori in luce di notte (v33: archivio/2026-11-22-c18-slitta/lavoro/v33-slitta-colori.webp; prima un'ombra grigia, «piattissima»), mai disegnata da noi; ogni tanto passa davanti alla luna, lascia una scia di polvere di stelle e lancia i pacchi dove sotto c'è cielo libero (sopra il castello cadrebbero dietro le torri, e nella v32 erano di 6 px e scuri: non si vedevano). Ferma con «riduci movimento». ---------- */
 {const SL=document.getElementById('slitta'),PK=document.getElementById('pacchi'),POL=document.getElementById('polvere'),SC=document.querySelector('.scene'),NS='http://www.w3.org/2000/svg';
@@ -2591,9 +2607,14 @@ document.querySelectorAll('#mercatini h3.mk-h3').forEach(h=>{const l=h.nextEleme
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a||a.classList.contains('st'))return;const id=decodeURIComponent(a.getAttribute('href').slice(1));if(!id)return;if(go(id,true))e.preventDefault()},true);
 /* se il motore porta lo schermo su una parte nascosta (es. una scheda d'alloggio dai costi), prima apre la sua scheda */
 {const siv=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(o){const c=this.closest&&this.closest('#hotelCards>.card');if(c&&c.id&&document.body.dataset.card!==c.id)openCard(c.id,1);const k=tabOf(this);if(k&&k!==cur)show(k,{keep:true});return siv.call(this,o)}}
-let first=null;try{first=localStorage.getItem('pdn-scheda')}catch(e){}
+/* C25 (Mario 22/11 ~19:4x «la pagina si deve aprire quando clicco nellapp sempre nella schermata principale Piano in cima»): si apre SEMPRE sul Piano, in cima
+   (prima riapriva l’ultima scheda). Un link con # (mandato da qualcuno) porta ancora lì. Tornando all’app dopo più di 30 minuti: Piano in cima;
+   dopo pochi minuti (es. un salto su Maps o WhatsApp) resta dov’era. */
+try{history.scrollRestoration='manual'}catch(e){}
 const h=decodeURIComponent(location.hash.slice(1));
 if(h&&document.getElementById(h)){show(tabOf(document.getElementById(h))||'piano',{keep:true});requestAnimationFrame(()=>document.getElementById(h).scrollIntoView({block:'start'}))}
-else show(first||'piano',{keep:true});
+else{show('piano',{keep:true});scrollTo(0,0)}
+{let nascostaDa=0;document.addEventListener('visibilitychange',()=>{if(document.hidden){nascostaDa=Date.now();return}
+ if(nascostaDa&&Date.now()-nascostaDa>30*60*1000&&!document.body.dataset.card){show('piano',{keep:true});scrollTo(0,0)}nascostaDa=0})}
 })();
 </script>

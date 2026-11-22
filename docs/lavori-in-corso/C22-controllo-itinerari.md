@@ -17,3 +17,11 @@
 
 ## Scelte in corsa
 - Fable non serve: è un controllo con le fonti, non un lavoro da progettare.
+
+## Controllato (Controllo 17, 22/11 ~19:30)
+- Ticket 2026 (Île-de-France Mobilités, tariffe dal 1/1/2026): Métro-Train-RER 2,55 €, Bus-Tram 2,05 € → giusti nella pagina.
+- Parchi Disney 14–16/12/2026: 9:00–22:00 (calendario ufficiale, uguale nei siti non ufficiali) → giusto.
+- N. 8 Moxy (Marriott): 2 Avenue de l'Europe, Montévrain; reception 24 ore; arrivo dalle 15:00, partenza entro le 12:00; bar 6:00–23:00, snack 24 ore; colazione a pagamento → giusti. Marriott scrive «5 minuti a piedi dalla RER», la pagina 650 m / 8 minuti (Booking): più prudente, resta. Da controllare: camera 17 m² e colazione 25 € (non sulla pagina ufficiale).
+- N. 16 (Airbnb 5115238): 4,95 su 571, pulizia 4,9, Superhost da 12 anni, 1 minuto dalla RER, arrivo 15:00–02:00 con cassetta delle chiavi, partenza 11:00 → giusti.
+- N. 23 (Airbnb 1376052056754954936): 5,0 su 68, pulizia 5,0, Superhost da 11 anni, meno di 5 minuti dalla RER, arrivo dalle 15:00, partenza 10:00 → giusti.
+- Resta: orari RER A di dicembre (escono verso il 26/11), Orly e mercatini.
