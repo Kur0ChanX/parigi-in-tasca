@@ -1,7 +1,11 @@
-# Ultima risposta di Claude (22/11/2026 14:54 ora italiana)
+# Ultima risposta di Claude (22/11/2026 15:28 ora italiana)
 
-Tutte le prove sono verdi: 60 su 60 per l'app e 20 su 20 per le scritte sovrapposte. Passano anche i controlli di pagina e colori. Il lavoro è salvato su GitHub (commit `94809b5`): manca solo la tua risposta alla DOMANDA 1 per pubblicare.
+✅ FATTO
+- Ho tolto le sfere dal banco. Adesso ogni casetta vende una cosa vera (foto): omini di pan di zenzero, candele accese, alberelli e pacchi regalo, vin brulé con tazze e pentolone che fumano.
+- Più lucine: ora ci sono anche sul bordo di ogni banco, e i fili tra una casetta e l'altra hanno più lampadine.
+- Sotto la tenda restano le palline appese, insieme a cuori, stelle, calze e bastoncini: sono addobbi di Natale in vendita. Se non ti piacciono, le tolgo.
+- Le prove automatiche stanno girando. Sul sito non c'è ancora niente.
 
-⚠️ Aspettano te: 2
-- 🛑 Controllo 10 · posso pubblicare la v33 sul sito, appena il…
-- Principale 13 · la luna nuova
+───
+💡 PARERE
+- Rendere tutta la pagina più natalizia la …
