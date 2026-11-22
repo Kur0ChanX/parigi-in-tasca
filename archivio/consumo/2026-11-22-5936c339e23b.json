@@ -1,0 +1,23 @@
+{
+"account": "cba507",
+"sessione": "5936c339e23b",
+"giorno": "2026-11-22",
+"turni": 2,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 238749,
+"anomalie": [],
+"blocchi": {
+"Stop 15 · There are uncommitted changes in": 2
+},
+"esempi_blocchi": {
+"Stop 15 · There are uncommitted changes in": [
+"23:29 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"23:33 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+]
+},
+"remota": "01Rwcxc3NLHA",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
