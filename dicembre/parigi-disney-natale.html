@@ -836,6 +836,18 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 .apps2 .dlApp{margin-top:0;padding:10px;gap:8px;min-width:0}
 .apps2 .dlApp i{font-size:1.4rem}.apps2 .dlApp b{font-size:.98rem;line-height:1.15}.apps2 .dlApp em{display:none}
 .apps2 .dlApp small{font-size:.76rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* C24 · tre riquadri affiancati: icona e titolo in alto, sotto una riga corta; stessa altezza di prima */
+.apps2.tre{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.apps2.tre .dlApp{display:grid;grid-template-columns:auto 1fr;align-content:start;column-gap:5px;row-gap:3px;padding:8px 7px}
+.apps2.tre .dlApp i{font-size:1.1rem;align-self:start}
+.apps2.tre .dlApp>span{display:contents}
+.apps2.tre .dlApp b{font-size:.84rem;line-height:1.12;align-self:center}
+.apps2.tre .dlApp small{grid-column:1/-1;font-size:.7rem;line-height:1.2}
+.apps2.tre .dlApp small.ro-cs{gap:4px;margin-top:1px}
+.apps2.tre .dlApp .ro-c{padding:0 5px;font-size:.68rem}
+.apps2.tre .dlApp.roApp{gap:0;column-gap:5px}
+.apps2 .scApp{background:linear-gradient(135deg,rgb(246 201 100 / .5),rgb(246 201 100 / .22))}
+.apps2 .scApp small b{font-size:inherit;font-weight:800}
 </style>
 
 <div class="bokeh" aria-hidden="true"></div>
@@ -907,10 +919,12 @@ const VERSIONI=[
    <a href="#hoteldisney"><i>🏰</i>Hotel Disney<small>Dentro e vicino ai parchi</small></a>
   </nav>
   <!-- C19 · la guida Disneyland di Mario (Mario 22/11 ~16:2x «sono due app abbinate, questa e quella di Disneyland»): il link porta i giorni del viaggio (14–16/12, 3 giorni, 2 persone, tutti e due i parchi); ogni telefono tiene il suo profilo e i suoi preferiti. Unico posto del link: lo legge anche il JS dei giorni Disney. -->
-  <div class="apps2">
+  <div class="apps2 tre">
   <a class="dlApp" id="dlApp" href="https://guida-disneyland-ynoy.pages.dev/?d=2026-12-14&amp;n=3&amp;a=2&amp;p=t.t.t&amp;prova=idee" target="_blank" rel="noopener"><i>🏰</i><span><b>Guida Disneyland</b><small>La vostra app dei parchi</small></span><em aria-hidden="true">›</em></a>
   <!-- C21 · rosa degli alloggi (Mario 22/11 17:56 «metti il tasto Rosa alloggi nella home e lì mi fai mettere la rosa»): porta al passo 2 di «Scegli» con la sola rosa e le spunte per cambiarla; scritte dal JS (rosaHome) -->
   <a class="dlApp roApp" id="roApp" href="#sc2"><i>⭐</i><span><b>Rosa alloggi</b><small>Gli alloggi da guardare da vicino</small></span><em aria-hidden="true">›</em></a>
+  <!-- C24 · «Scegli dove dormire» (Mario 22/11 ~19:5x, DOMANDA 1 → tre riquadri affiancati): apre il passo 2 con la rosa e le schede aperte per confrontare; sotto, l’alloggio di adesso (scritte dal JS: scHome) -->
+  <a class="dlApp scApp" id="scApp" href="#sc2"><i>🛏️</i><span><b>Scegli dove dormire</b><small>Cambia tutto l’itinerario</small></span><em aria-hidden="true">›</em></a>
   </div>
   <p class="go-more"><a href="#fonti">Fonti</a></p>
  </div>
@@ -1008,7 +1022,7 @@ const VERSIONI=[
 <main>
 <section id="scegli" aria-labelledby="h-scegli"><div class="wrap">
  <div class="sec-head"><p class="kicker">Prima di tutto · dove dormite</p><h2 id="h-scegli">Scegliete dove dormire</h2><p class="sec-ans" id="a-scegli">In 2 passi: tutta la pagina segue la vostra scelta.</p>
- <p class="lead">Toccate un alloggio: vedete pro, contro e differenze.</p><p class="sc-tutto">🔄 <b>La scelta cambia tutta la pagina.</b> Con «Scegli questo» cambiano subito gli orari di 📅 Giorni, i costi del 🏠 Piano e i ticket di 🎟️ Biglietti.</p></div>
+ <p class="lead">Toccate un alloggio: vedete pro, contro e differenze.</p><p class="sc-tutto">🔄 <b>La scelta cambia tutta la pagina.</b> Con «🛏️ Dormiamo qui» cambiano subito gli orari di 📅 Giorni, i costi del 🏠 Piano e i ticket di 🎟️ Biglietti.</p></div>
  <div id="scRis"></div>
  <h3 class="sc-step" id="sc1"><span class="nb sm">1</span>Domenica 13: dove dormite?</h3>
  <p class="sc-now" id="scNowN"></p>
@@ -1482,7 +1496,7 @@ const drawBars=()=>{const cm=conto(MIO_S),me=scStr(SCE);let h='',cl='';
   const lab=c.s.map(x=>x[2]).join(', '),ty=c.sc?tyOf(byId(c.sc.d).sub):'disney',tl={hotel:'🏨 Hotel',bb:'🛏️ B&B · camera',casa:'🏠 Casa',disney:c.sc?'🏰 Hotel Disney':'🏰 Hotel Disney · pacchetto'}[ty];
   h+=`<a class="bar-row${k===me?' is-me':''}" data-ty="${ty}" href="${k?'#scegli':'#hoteldisney'}"${k?` data-sc="${k}"`:''}><span class="bar-ty">${c.sc&&c.sc.n?'Parigi + ':''}${tl}</span><div class="bar-top"><span class="bar-name">${esc(c.n)}</span><span><span class="bar-val">≈ ${fmt(tot)}</span>${dl}</span></div>
  <div class="track" role="img" aria-label="${esc(c.n)}: circa ${fmt(tot)} (${lab})"><span class="grid-lines">${[500,1000,1500,2000].map(v=>`<i style="left:${v/MAX*100}%"></i>`).join('')}</span><span class="fill" style="width:${tot/MAX*100}%">${c.s.map(x=>`<i class="${x[0]}"${x[3]?` data-ty="${x[3]}"`:''} style="width:${x[1]/tot*100}%"></i>`).join('')}</span></div>
- <p class="bar-note">${esc(c.note)} <span class="bar-go">${k?(k===me?'✓ La vostra scelta':'Scegli questo ›'):'Perché non conviene ›'}</span></p></a>`;
+ <p class="bar-note">${esc(c.note)} <span class="bar-go">${k?(k===me?'✓ La vostra scelta':'Dormiamo qui ›'):'Perché non conviene ›'}</span></p></a>`;
   if(c.sc)cl+=`<li><b>${esc(c.n)}${ref?' (il mio consiglio)':''}:</b> ${c.s.map(x=>x[2]).join(' + ')} = ${fmt(tot)}.</li>`});
  h+=`<div class="axis" aria-hidden="true">${[0,500,1000,1500,2000].map(v=>`<span style="left:${v/MAX*100}%">${v?grp(v)+' €':'0 €'}</span>`).join('')}</div>`;
  $('#bars').innerHTML=h;$('#calc').innerHTML=cl};
@@ -1634,6 +1648,9 @@ let SCE=null;try{const u=new URLSearchParams(location.search),a=+u.get('alloggio
 let SCELTO=!!SCE;if(!SCE)SCE={n:MIO_S.n,d:MIO_S.d};
 let CHO=SCE.d,PN=PAR.find(p=>p.id===SCE.n)||null;
 const scName=s=>{const p=PAR.find(x=>x.id===s.n),h=AL.find(x=>x.id===s.d);return p?`${p.n} + n. ${s.d} ${h.n}`:`n. ${s.d} ${h.n}, 4 notti`};
+/* C24 · riquadro «Scegli dove dormire» della schermata principale: sotto, l’alloggio di adesso (scelto da voi o il mio consiglio) */
+const scHome=()=>{const a=document.getElementById('scApp');if(!a)return;const h=AL.find(x=>x.id===SCE.d),sm=a.querySelector('small');if(!h||!sm)return;sm.innerHTML=(SCELTO&&!isMio()?'Scelto: ':'Consiglio: ')+'<b>n. '+SCE.d+'</b> '+esc(h.n)};
+scHome();
 /* C20 (Mario 22/11 «potenziali per questi due… potenzia la guida»): i due alloggi della rosa, tutto quello che sappiamo. Letto il 22/11/2026: annunci Airbnb, Monoprix; ricerca in research_notes/…/alloggio_n16_* e alloggio_n23_* */
 const XX={
  16:{host:'Vincent',k:[
@@ -2237,7 +2254,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
  const applySc=(s,say,sc=true)=>{if(!s||!ACC[s.d])return;const prima=scStr(SCE),pS={n:SCE.n,d:SCE.d},pT=SCELTO;SCE={n:s.n,d:s.d};SCELTO=sc;CHO=s.d;P=ACC[CHO];PN=PAR.find(p=>p.id===s.n)||null;
   try{if(sc)localStorage.setItem('pdn-scelta',scStr(SCE));else localStorage.removeItem('pdn-scelta');localStorage.removeItem('pdn-alloggio')}catch(e){}
   try{const u=new URL(location.href);u.searchParams.delete('alloggio');if(sc)u.searchParams.set('scelta',scStr(SCE));else u.searchParams.delete('scelta');history.replaceState(null,'',u)}catch(e){}
-  renderDays();show(cur,{quiet:true});renderAl();paint();mkAl();
+  renderDays();show(cur,{quiet:true});renderAl();paint();mkAl();scHome();
   if(say)$('#chNote').insertAdjacentHTML('beforeend',' <b>Pagina aggiornata.</b>');
   if(say&&prima!==scStr(SCE)){ANN={s:pS,t:pT};document.dispatchEvent(new CustomEvent('pdn:scelta',{detail:{nome:scName(SCE),prima:scName(pS)+(pT?'':' (il mio consiglio)')}}))}}; /* lo ascolta la barra delle schede: avviso e pallini «aggiornato» */
  document.addEventListener('pdn:annulla',()=>{if(!ANN)return;const a=ANN;ANN=null;applySc(a.s,0,a.t);document.querySelectorAll('.sc-fatto').forEach(p=>p.remove())}); /* dal bottone «↩ Annulla» dell'avviso: torna com'era, senza avviso nuovo */
@@ -2250,12 +2267,12 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
   const dm=document.querySelector(`#al-${id} details.more`);if(dm)dm.open=true;
   const nb=document.querySelector(`#al-${id} [data-use]`);if(nb){nb.focus();nb.insertAdjacentHTML('afterend','<p class="small sc-fatto" role="status">Fatto: giorno per giorno, costi, trasporti e «Da fare» ora seguono questo alloggio.</p>')}});
  /* sezione «Scegli dove dormire» (C11) */
- let SO2='prezzo',ROF=false,roAp=false; /* C21: ROF = si vede solo la rosa; roAp = apri le spunte (dal tasto della schermata principale) */
+ let SO2='prezzo',ROF=ROSA.size>0,roAp=false,scAp=false; /* C24: con la rosa piena si parte dalla rosa (Mario «vedo solo gli hotel selezionati»); scAp = schede della rosa aperte per confrontare (dal riquadro «Scegli dove dormire») */ /* C21: ROF = si vede solo la rosa; roAp = apri le spunte (dal tasto della schermata principale) */
  const dEur=(a,b)=>Math.abs(a-b)<5?'<b class="sc-eq">uguale</b>':`<b class="${a>b?'sc-up':'sc-dn'}">${a>b?'+':'−'}${fmt(Math.abs(a-b))}</b>`;
  const kmT=m=>(m*80/1000).toFixed(1).replace('.',',')+' km';
  const dMin=(a,b)=>a===b?'<b class="sc-eq">uguale</b>':`<b class="${a>b?'sc-up':'sc-dn'}">${a>b?'+':'−'}${Math.abs(a-b)} min</b>`;
  const dOra=(a,b)=>a===b?'<b class="sc-eq">uguale</b>':a<b?`<b class="sc-up">${b-a} min prima</b>`:`<b class="sc-dn">${a-b} min dopo</b>`;
- const btn=(s,on)=>`<button type="button" class="btn ${on?'gold':'ghost'}" data-sc="${scStr(s)}" aria-pressed="${on}">${on?'✓ Scelto':'Scegli questo'}</button>`;
+ const btn=(s,on)=>`<button type="button" class="btn ${on?'gold':'ghost'}" data-sc="${scStr(s)}" aria-pressed="${on}">${on?'✓ Dormite qui':'🛏️ Dormiamo qui'}</button>`;
  const dX=(d)=>/sc-eq/.test(d)?'':' '+d; /* differenza solo se c'è */
  const kpi=(k,v,d)=>`<div><span class="k">${k}</span><span class="v">${v}</span>${d?`<span class="d">${d}</span>`:''}</div>`;
  function renderSc(){const c=conto(SCE),cm=conto(MIO_S),me=scStr(SCE),mio=isMio(),pn=PAR.find(p=>p.id===SCE.n)||null,h0=AL.find(h=>h.id===SCE.d);
@@ -2273,7 +2290,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
 <div class="sc-act"><button type="button" class="btn gold" id="scShare">Manda questa scelta</button>${mio?'':'<button type="button" class="btn ghost" id="scMio">Torna al mio consiglio</button>'}</div><p class="small" id="scShareOk" role="status"></p></div>`;
   $('#scNowN').innerHTML=`Adesso: <b>${pn?esc(pn.n)+', a Parigi':'già vicino a Disney'}</b>${pn?' · '+fmt(pn.p)+' per 1 notte':''}`;
   $('#scNowD').innerHTML=`Adesso: <b>n. ${SCE.d} ${esc(h0.n)}</b>${c?' · '+fmt(c.q[0])+' per '+(SCE.n?'3 notti, 14→17':'4 notti, 13→17'):''}`;
-  const row=(k,on,off,mk,n,sub,p,ps,m,body,px='')=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${inRosa(k)?' data-ro="1"':''}${op.includes(k)?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small>${px}</span><span class="sc-m">${m}</span><span class="sc-more" aria-hidden="true"></span></summary><div class="sc-b">${body}</div></details>`;
+  const row=(k,on,off,mk,n,sub,p,ps,m,body,px='')=>`<details class="sc-o${on?' on':''}${off?' off':''}" data-k="${k}"${inRosa(k)?' data-ro="1"':''}${op.includes(k)||(scAp&&inRosa(k))?' open':''}><summary>${mk}<span class="sc-n">${n}${on?'<span class="sc-ok">scelto</span>':''}<small>${sub}</small></span><span class="sc-p">${p}<small>${ps}</small>${px}</span><span class="sc-m">${m}</span><span class="sc-more" aria-hidden="true"></span></summary><div class="sc-b">${body}</div></details>`;
   const dot=on=>`<span class="sc-dot" aria-hidden="true">${on?'✓':''}</span>`;
   const nOpt=(o)=>{const s={n:o?o.id:'',d:SCE.d},k=conto(s),on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S);
    const px=rc?'<small class="sc-dt sc-rc">★ consiglio</small>':k&&cm?`<small class="sc-dt">totale ${dEur(k.tot,cm.tot)}</small>`:'';
@@ -2302,7 +2319,7 @@ ${xxBox(h)}
   renderNas();renderRosa()
   document.querySelectorAll('#scSort button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===SO2)))}
  /* una riga aperta per lista: le altre si chiudono e la riga toccata resta ferma sotto il dito */
- $('#scegli').addEventListener('toggle',e=>{const d=e.target;if(!d.open||!d.dataset||!d.dataset.k)return;const box=d.closest('#scN,#scD');if(!box)return;
+ $('#scegli').addEventListener('toggle',e=>{const d=e.target;if(!d.open||!d.dataset||!d.dataset.k)return;const box=d.closest('#scN,#scD');if(!box)return;if(box.id==='scD'&&ROF)return; /* C24: nella rosa più schede aperte insieme, per confrontare */
   const y0=d.getBoundingClientRect().top;box.querySelectorAll('details[open][data-k]').forEach(x=>{if(x!==d)x.open=false});
   const y1=d.getBoundingClientRect().top;if(Math.abs(y1-y0)>1)scrollBy(0,y1-y0)},true);
  $('#scegli').addEventListener('toggle',e=>{if(e.target.classList&&e.target.classList.contains('sc-par'))PO=e.target.open},true);
@@ -2343,6 +2360,7 @@ ${xxBox(h)}
   const l=e.target.closest('[data-ro-link]');if(l){const A=rosaLink||[];rosaLink=null;if(l.dataset.roLink==='1'&&A.length)rosaCambia(()=>{ROSA.clear();A.forEach(id=>{ROSA.add(id);NASC.delete('d-'+id)})},'Rosa come nel link: '+rosaNum(A));else{renderSc();rosaHome()}}});
  $('#scRosaP').addEventListener('change',e=>{const c=e.target.closest('[data-ro-k]');if(c)rosaUno(+c.dataset.roK,c.checked)});
  {const a=$('#roApp');if(a)a.addEventListener('click',()=>{ROF=true;roAp=true;renderSc()})}
+ {const a=$('#scApp');if(a)a.addEventListener('click',()=>{ROF=ROSA.size>0;scAp=true;renderSc();scAp=false})}
  document.addEventListener('click',e=>{const b=e.target.closest('[data-nas]');if(b){e.preventDefault();const k=b.dataset.nas,via=!NASC.has(k);if(!via&&APRI===+k.slice(2))APRI=0;nasSet([k],via,(via?'Nascosto: ':'Rimesso: ')+nasNome(k));return}
   const t=e.target.closest('[data-nas-tutti]');if(t){nasSet([...NASC],false,'Rimessi tutti nell’elenco');return}
   const l=e.target.closest('[data-nas-link]');if(l){const A=nasDaLink||[];nasDaLink=null;if(l.dataset.nasLink==='1')nasSet(A,true,'Nascosti '+A.length+' alloggi, come nel link');else renderNas()}});
