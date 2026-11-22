@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (22/11/2026 19:27 ora italiana)
+# Ultima risposta di Claude (22/11/2026 20:17 ora italiana)
 
-Titolo verde: vado avanti con gli itinerari.
+Ti ho mandato la notifica sul telefono.
