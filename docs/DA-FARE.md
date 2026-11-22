@@ -4,14 +4,17 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v23 · 🟩 Controllo 6 · 22/11 11:07 · colori, minuti e km
-🧪 In prova: v24 · 🟩 Controllo 6 · mappa del viaggio
+🚀 Online: v24 · 🟩 Controllo 6 · 22/11 11:32 · mappa del viaggio
+🧪 In prova: v25 · 🟩 Controllo 7 · fila dei giorni di nuovo visibile
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
+- 🔴 · 🟩 Controllo 7 · 👁 Lo vedi: nella scheda Giorni la fila dei giorni in basso (Dom 13 … Gio 17, apre l'itinerario del giorno) di nuovo visibile sopra la barra delle schede · prova: foto a Mario (Mario 22/11 ~11:37 «sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto?»). Causa trovata dalla Controllo 6: `#daybar` (fissa, z 30, alta 56, top 853 a 412×915) sta SOTTO `#tabbar` (fissa, z 60, top 846): coperta già nella v23, non dalla mappa.
+- 🟩 Controllo 7 · 👁 Lo vedi: nella schermata principale i tasti di tutte le cose fondamentali (Mappa compresa), visibili subito aprendo l'app · prova: foto a Mario (Mario 22/11 ~11:45)
+- 🟩 Controllo 7 · C15 · 👁 Lo vedi: Mappa del viaggio a schermo intero e zoom libero nei due sensi (pizzico avanti e indietro) · prova: foto a Mario (Mario 22/11 ~11:42)
 - 🔺 PRIORITÀ · 🟩 Controllo 6 · C15 · 👁 Lo vedi: v24 nella web app di dicembre, scheda Giorni (o «🗺️ Mappa del viaggio» in alto): mappa che si allarga col dito, chiusa su Orly–Parigi–Disney; tasti Tutto · Mercatini (7 tappe e linea) · Disney · Orly · il vostro alloggio · prova: foto a Mario e Mario la usa sul telefono (Mario 22/11 ~11:09 e ~11:55). Poi, più avanti: tragitto della giornata secondo l'alloggio scelto.
 - 👁 Lo vedi: grafica della pagina di dicembre rifatta a pezzi, a ogni pezzo foto prima/dopo prima di pubblicare · prova: foto a Mario · pezzo 1 online (v19, 22/11 10:06); pezzo 2 (passo 1 «Domenica 13») confronto mandato 22/11 ~10:12; pezzo 3 (Piano, «Quanto costa») e richieste di Mario 22/11 10:18 (ordine per tempo, hotel Disney rosa, «Vedi i dettagli» in fondo alle schede) e pezzo 4 (Biglietti, ticket a schede) fatti in locale, confronti `archivio/2026-11-22-c13-v20/` mandati 22/11 ~10:33; v20 online 22/11 10:26 (letta sul sito vero); v21 «la scelta cambia la pagina» (riquadro, avviso, pallini) foto `archivio/2026-11-22-c13-v21/` mandate ~10:40, si pubblica a prove verdi · prova: lettura del sito vero + Mario lo vede nell'app · Mario 22/11 ~00:45, C13 (dopo la risposta alla DOMANDA 1 della Controllo 2) · v21 online 22/11 10:44 (scelta che si vede, «↩ Annulla», Case ciano, «Quanto costa» coi soli colori della legenda; foto `archivio/2026-11-22-c13-v21-colori-annulla/`)
 - 👁 Lo vedi: nella web app di dicembre, Dormire → «Scegli questo» → avviso in basso con «↩ Annulla» che riporta la scelta di prima (anche al mio consiglio); Case in ciano; in Piano «Quanto costa» senza colori dei tipi · prova: Mario lo prova sul suo telefono (v21 online 22/11 10:44, Controllo 5, foto `archivio/2026-11-22-c13-v21-colori-annulla/`)

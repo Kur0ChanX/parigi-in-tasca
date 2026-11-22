@@ -39,3 +39,15 @@ Cioè, nel senso, i chilometri mettili visibili, ma non prenderli in considerazi
 
 ## 2026-11-22 11:09 · 01WTjqUwtG4z
 Aggiungi in priorità una mappa nell'app, una mappa di Parigi con i mercatini, per farmi capire magari il percorso che dovrei fare, dove sono, insomma, perché non mi è chiaro molto dove sono. Studiatela bene in modo che capisco bene per il mio viaggio, e poi più avanti possiamo integrare che in base a quando all'hotel che scelgo mi fa vedere il tragitto che devo fare, ecco, l'itinerario dalla mattina che mi sveglio, dove vado e faccio il giro senza che sia troppo dispersivo.
+
+## 2026-11-22 11:20 · 01WTjqUwFBdt
+Sì, me la puoi fare la mappa zoomabile che mi faccia vedere insomma le cose che mi interessano. Zoomabile a livello di Disney, che vedo dove è Disney, dove è l'aeroporto, ecco, il range è quello. Aeroporto, Parigi e Disneyland. E con quel range lì di zoom. Andare oltre non mi serve.
+
+## 2026-11-22 11:27 · 01WTjqUwFBdt
+poi publica tranquillo e finisci il lavoro
+
+## 2026-11-22 11:35 · 01WTjqUwFBdt
+Una domanda, perché mi hai tolto la divisione dei giorni nel calendario sotto? Non andava bene?
+
+## 2026-11-22 11:37 · 01WTjqUwFBdt
+No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto quelli? Perché sono stati tolti? Non andavano bene? Fammi capire.
