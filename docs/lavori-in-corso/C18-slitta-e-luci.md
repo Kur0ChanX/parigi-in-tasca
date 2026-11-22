@@ -75,3 +75,8 @@
 ## Mario 22/11 ~15:1x, intero
 > Le renne, siccome sono tre, farle un po' indipendenti di movimento l'una con l'altra e che si muovono magari un po' le zampe. Così non sembra uno sticker che si muove tutto insieme, ecco. E dargli un senso di movimento reale.
 - Piano (Controllo 11): la foto della slitta resta UNA immagine (sua), ma mostrata a pezzi con ritagli: ogni renna ha corpo, zampe davanti e zampe dietro; ogni renna ondeggia col suo ritmo, le zampe galoppano (davanti e dietro in controfase); le redini fra le renne tolte dalla foto e disegnate come linee che seguono le renne.
+
+## Mario 22/11 ~15:2x, intero (foto `archivio/2026-11-22-c18-castello/mario-zero-cane.webp`: Zero, il cane fantasma col naso a zucca)
+> Dietro lo deve inseguire questo cane, animalo e fallo piccolino, piccolo piccolo. Il naso lasciaglielo luminoso, però ripeto, il cane è piccolo, non farlo grande quanto la renna, ovviamente. Cioè non grande, scusami, non grande quanto tutta il, non farlo grande quanto tutta la renne è slitta, fallo più piccolo in proporzione.
+> Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocca a poco si apre e si chiude, insomma come se avesse un po' di vento.
+- Piano: la SUA foto ritagliata (mai disegnato da noi), dietro la slitta che la insegue, più piccolo di una renna; naso a zucca acceso (bagliore che pulsa); a pezzi come le renne: orecchie che sventolano, mantello in basso che ondeggia, bocca (mascella) che si apre e si chiude piano.
