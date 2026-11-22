@@ -2216,6 +2216,11 @@ const vaMsg=h=>{const a=xxArr(h.id);if(XXM[h.id])return XXM[h.id](a,xxDal(),xxG(
  return `Bonjour,\nNous sommes deux adultes, ${xxDal()} décembre. Nous pensons arriver ${a}${SCE.n?'':', après les marchés de Noël à Paris'} : est-ce que cette heure vous convient ?${REC.includes(h.id)?'':`\nLe jeudi 17, nous partons vers ${tq} : comment vous rendre les clés ?`}\nMerci beaucoup et à bientôt !`};
 const vaTreno=()=>{const c=conto(SCE),o=((c&&c.sunIn)||P.sunT).replace(':','h');return `Bonjour, nous sommes dans le RER : nous serons à l’appartement vers ${o}. À tout à l’heure !`};
 const vaCopia=t=>`<div class="in va-mm"><pre class="xx-msg">${esc(t)}</pre><div class="sc-act"><button type="button" class="btn ghost" data-copia="1">Copia il messaggio</button></div></div>`;
+/* C22 (Controllo 21): colazione per i tre alloggi possibili; orari dal sito Monoprix (22/11/2026): domenica 8–22, da lunedì 7–22, in Place d’Ariane davanti alla stazione */
+const vaCol=id=>{const m=`<a href="https://www.monoprix.fr/1965.html" target="_blank" rel="noopener">Monop’ di Serris</a>, in Place d’Ariane davanti alla stazione Val d’Europe ${B.ok('Monoprix')}: domenica fino alle 22:00, da lunedì 7:00–22:00`;
+ return ({8:`In hotel a pagamento, circa 25 € a testa ${B.nu()}. Più economico: ${m}.`,
+  16:PN?`Niente colazione in casa: ${m}, a circa 110 m.`:`Niente colazione in casa: ${m}, a circa 110 m. Domenica sera, appena scesi dal treno, uno dei due la compra (chiude alle 22:00); lunedì mattina è sulla strada per il treno.`,
+  23:PN?`Niente colazione in casa: ${m}.`:`Niente colazione in casa: ${m}. Domenica sera il gestore vi aspetta: compratela lunedì mattina, sulla strada per il treno (uscite 10 minuti prima).`})[id]||''};
 const vaHtml=()=>{const h=AL.find(x=>x.id===CHO);if(!h)return'';const c=conto(SCE),en=vaEntra(h),rec=REC.includes(CHO),d0=DAYS[0],x=XX[CHO]||{},nav=P.mode==='nav',bus=/bus/.test(P.mode),nm=`n. ${h.id} · ${esc(h.n)}`,rows=[];
  let op=true;try{op=localStorage.getItem('pdn-va')!=='0'}catch(e){}
  const R=(k,v)=>rows.push(`<li><span class="va-k">${k}</span>${v}</li>`),mp=q=>`<a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Maps</a>`;
@@ -2227,6 +2232,7 @@ const vaHtml=()=>{const h=AL.find(x=>x.id===CHO);if(!h)return'';const c=conto(SC
   R(`${en[0]} Come si entra`,vaSun(h,en));
   R('🌙 Domenica sera',P.spa?`Giro dei mercatini più svelto: metro 1 alle 18:50 e RER A delle ${rt}, in hotel verso le ${ora}, spa dalle 20:20.`:P.by22?`Giro dei mercatini più svelto: metro 1 alle 18:50 e RER A delle ${rt}, ${esc(P.al)} verso le ${ora} ${B.es()}. Arrivi solo fino alle 22:00.`:`Champs-Élysées fino alle ${d0.full[d0.full.length-1].t}, valigie dagli armadietti della Gare de Lyon (chiudono alle 22:00), RER A delle ${rt}${bus?' e poi il bus':nav?' e poi la navetta':''}: ${esc(P.al)} verso le ${ora} ${B.es()}.${bus||nav?`<span class="va-s">${P.sunLeg.map(l=>l[1]).join(' ')}</span>`:''}`)}
  R('✈️ Giovedì 17',`Uscite ${esc(P.da)} alle ${P.thuT.replace(/^0/,'')} con le valigie${rec?'':': chiedete al gestore dove lasciare le chiavi'}. Ultimo treno sicuro: ${thuCH()?'8:44 da Chessy':"8:47 da Val d'Europe"}.`);
+ if(vaCol(CHO))R('🥐 Colazione',vaCol(CHO));
  const cs=[];if(PN)cs.push([PN.n,PN.pl]);if(c)cs.push([`n. ${h.id} ${h.n}`,c.q[1]]);
  R('💶 Cancellazione',cs.length?cs.map(([chi,t])=>{const k=vaCanc(t);return `<span class="va-c">${PN?`<b>${esc(chi)}</b>: ${k.tx[0].toLowerCase()+k.tx.slice(1)}`:k.tx} <span class="muted small">(${esc(vaTx(t))})</span>${vaCal(k,chi)}</span>`}).join(''):`Nella <a href="#al-${h.id}">scheda del n. ${h.id}</a>.`);
  const ad=x.ad||(P.a===VDE?'':P.a);
