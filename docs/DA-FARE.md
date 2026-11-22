@@ -4,11 +4,12 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v29 · 🟩 Controllo 7 · 22/11 · mappa a schermo intero, zoom libero
-🧪 In prova: v30 · 🟩 Controllo 8 · 22/11 · slitta come un’ombra, luce sulla testata, giovedì 17 «Partite prima»
+🚀 Online: v31 · 🟩 Controllo 8 · 22/11 · slitta come un’ombra (parte sempre), luce sulla testata, giovedì 17 «Partite prima»
+🧪 In prova: —
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
+- 22/11 · ⏭ · 🟨 Controllo 9 · guarda foto e video della v32 (testata con finestre che si accendono, proiezioni sul castello, lucine e faro; fila dei giorni su una riga; PC in due colonne): ti piacciono o cambio qualcosa? `archivio/2026-11-22-c18-v32/` (⏭ intanto pubblico e vado avanti)
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
@@ -18,8 +19,8 @@
 - 🟩 Controllo 7 · C17 · 👁 Lo vedi: in alto nella pagina di dicembre un numerino della versione; toccandolo le novità; se il telefono ha una versione vecchia, il tasto «Aggiorna versione» che la aggiorna · prova: foto a Mario (Mario 22/11 ~11:55)
 - 🟩 Controllo 7 · C17 · 👁 Lo vedi: Gio 17 con l'ora a cui partire per Orly (margine, bagagli dal deposito, avviso «partite prima»), Domenica a Parigi più curata, giorni Disney semplici · prova: foto a Mario (Mario 22/11 ~11:55)
 - 🟩 Controllo 8 · C18 · 👁 Lo vedi: nella schermata principale (slitta già disegnata, in `archivio/2026-11-22-c18-slitta/aiutante/`, da mettere nella pagina) ogni tanto passa nel cielo la slitta con le renne scheletro che lancia regali, in penombra; luce e ombre più vere sul disegno; più dettagli di Natale in tutta la pagina · prova: foto e video a Mario (Mario 22/11 ~12:12)
-- 🟩 Controllo 8 · C16 · 👁 Lo vedi: fila dei giorni in alto più stretta; numero della versione solo in alto nella schermata principale (non segue lo scorrere); desktop che riempie bene la pagina · prova: foto a Mario (Mario 22/11 ~12:27)
-- 🟩 Controllo 8 · C18 · 👁 Lo vedi: testata animata più bella: albero migliore, cielo più romantico e vivo, castello con finestre che si accendono e proiezioni · prova: foto e video a Mario (Mario 22/11 ~12:27)
+- 🟩 Controllo 9 · C16 · fatto nella v32, aspetta che Mario lo veda · 👁 Lo vedi: fila dei giorni in alto più stretta; numero della versione solo in alto nella schermata principale (non segue lo scorrere); desktop che riempie bene la pagina · prova: foto a Mario (Mario 22/11 ~12:27)
+- 🟩 Controllo 9 · C18 · fatto nella v32, aspetta che Mario lo veda · 👁 Lo vedi: testata animata più bella con le luci (lucine sull'albero, cielo più romantico e vivo, castello con finestre che si accendono e proiezioni), senza figure disegnate da noi · prova: foto e video a Mario (Mario 22/11 ~12:27)
 - ⏳ IN CODA, senza priorità (Mario 22/11 ~12:27 «solo in coda quando non sai più cosa fare»): più fuochi d'artificio nella schermata iniziale, abbellimenti natalizi nell'app
 - 🟩 Controllo 7 · C15 · 👁 Lo vedi: Mappa del viaggio a schermo intero e zoom libero nei due sensi (pizzico avanti e indietro) · prova: foto a Mario (Mario 22/11 ~11:42)
 - 🔺 PRIORITÀ · 🟩 Controllo 6 · C15 · 👁 Lo vedi: v24 nella web app di dicembre, scheda Giorni (o «🗺️ Mappa del viaggio» in alto): mappa che si allarga col dito, chiusa su Orly–Parigi–Disney; tasti Tutto · Mercatini (7 tappe e linea) · Disney · Orly · il vostro alloggio · prova: foto a Mario e Mario la usa sul telefono (Mario 22/11 ~11:09 e ~11:55). Poi, più avanti: tragitto della giornata secondo l'alloggio scelto.

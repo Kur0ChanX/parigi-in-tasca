@@ -30,3 +30,13 @@
 > Se no sembra uno sticker che si muove.
 > Fallo passare dietro il castello, ma davanti alla luna, e fallo un po' più piccolo. E niente, il cappellino là so già sceglierlo rosso, però
 - Fatto: foto resa un'ombra (buio della notte, un filo di dettaglio, bordo di luna sottile, rosso di cappello e vestito spento ma visibile, opacità .93) → `v30-slitta-ombra.webp`; larga 110 invece di 150; strada che esce da dietro il castello (y ~100 a x 520) e sale davanti alla luna (240,70); regali più piccoli e spenti. «il cappellino … rosso, però» letto come «il cappello lascialo rosso».
+
+## v32 (Controllo 9, 22/11): luci della testata, fila, numero, PC (richiesta delle 12:27)
+- Castello: finestre ad arco con la croce e un rosone; all’apertura si accendono una a una, poi ogni tanto qualcuna si spegne e si riaccende. Lucine sugli spigoli dei tetti, luce calda dal basso.
+- Proiezioni: ogni 30 s, per ~16 s, colori che scorrono, fiocchi di neve e una lama di luce, ritagliati sulla sagoma del castello. Prima prova troppo forte (castello «dipinto», sembrava finto): colori più scuri e più leggeri.
+- Albero: filo dorato a spirale con lucine calde che si rincorrono, riflesso sulle palline, raggi della stella che girano piano, bagliore e luce sulla neve. Forma dell’albero NON ridisegnata (niente figure nostre).
+- Cielo: nuvole leggere che passano, stelle di colori diversi, rosa sopra i tetti; faro della Torre Eiffel (due fasci che girano, lampo quando guardano verso di noi).
+- Vignetta sfumata verso l’alto: sul PC spariva di colpo e faceva una riga dove inizia il disegno (c’era dalla v30).
+- «Riduci movimento»: tutto fermo, niente proiezioni.
+- Fila dei giorni su una riga («DOM 13»), alta 45 px invece di ~70. Numero della versione: scorre via con la testata e non c’è nelle altre schede.
+- PC (≥1100 px): testata in due colonne (titolo a sinistra, indice a destra); schermi ≥1600 px contenuto largo 96rem; «in breve» su 3 colonne (la regola c’era ma quella dei 2 veniva dopo e vinceva).
