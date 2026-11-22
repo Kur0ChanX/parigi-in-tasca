@@ -489,6 +489,27 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       return { link: /^https:\/\/guida-disneyland-ynoy\.pages\.dev\/\?d=2026-12-14&n=3&a=2&p=t\.t\.t/.test(h), visto: r.height > 30 && a.target === '_blank', giorni }; });
     ok('Guida Disneyland: tasto nella schermata principale coi giorni del viaggio (14/12, 3 giorni, 2 persone) e riquadro solo nei giorni Disney ' + JSON.stringify(dl.giorni), dl.link && dl.visto && dl.giorni.join() === 'false,true,true,true,false');
     await c4.close(); await c5.close();
+    // C20 (Mario 22/11 17:1x «togliere gli hotel per pulire un po'»): Nascondi con Annulla, spunte di «Pulisci l'elenco», resta dopo la ricarica, la scelta non si nasconde, il link porta i nascosti
+    {
+      const c6 = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const u6 = await c6.newPage();
+      u6.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+      await u6.goto(B + 'dicembre/'); await u6.waitForTimeout(1200);
+      const n1 = await u6.evaluate(async () => { const w = (ms) => new Promise((r) => setTimeout(r, ms)), q = (x) => document.querySelector(x);
+        const nD = () => document.querySelectorAll('#scD details.sc-o').length, nC = () => document.querySelectorAll('#hotelCards article').length, o = { d0: nD(), c0: nC() };
+        q('#scD [data-nas="d-5"]').click(); await w(150); o.via = nD() === o.d0 - 1 && nC() === o.c0 - 1 && !q('#al-5'); o.toast = q('#nasToast').classList.contains('on');
+        q('#nasToast button').click(); await w(150); o.annulla = nD() === o.d0 && !!q('#al-5');
+        q('#scNas input[data-nas-k="d-7"]').click(); await w(150); o.spunta = !q('#scD details[data-k="d-7"]') && /1 nascosto/.test(q('#nasConta').textContent);
+        const sc = q('#scNas input:disabled'); o.scelta = !!sc && !q('#scD [data-nas="' + sc.dataset.nasK + '"]') && !!q('#scD details[data-k="' + sc.dataset.nasK + '"]');
+        q('#scNas input[data-nas-k="n-' + (PAR[0] && PAR[0].id) + '"]').click(); await w(150); o.parigi = !q('#scN details[data-k="n-' + PAR[0].id + '"]');
+        return o; });
+      await u6.reload(); await u6.waitForTimeout(1200);
+      const n2 = await u6.evaluate(() => ({ resta: !document.querySelector('#scD details[data-k="d-7"]'), ls: localStorage.getItem('pdn-nascosti') }));
+      const u7 = await c6.newPage(); await u7.goto(B + 'dicembre/?scelta=4n-8&nascosti=d-1,d-2'); await u7.waitForTimeout(1200);
+      const n3 = await u7.evaluate(async () => { const b = document.querySelector('[data-nas-link="1"]'); if (!b) return { banner: false }; b.click(); await new Promise((r) => setTimeout(r, 150)); return { banner: true, via: !document.querySelector('#scD details[data-k="d-1"]') && !document.querySelector('#scD details[data-k="d-2"]') }; });
+      ok('Alloggi: «Nascondi» toglie dagli elenchi, «Annulla» rimette, spunte di «Pulisci l’elenco» (anche Parigi), resta dopo la ricarica, la scelta non si nasconde, il link chiede e nasconde ' + JSON.stringify({ n1, n2, n3 }),
+        n1.via && n1.toast && n1.annulla && n1.spunta && n1.scelta && n1.parigi && n2.resta && n3.banner && n3.via);
+      await c6.close();
+    }
   }
   await b.close(); server.kill(); fs.unlinkSync(path.join(DIR, 'parigi-in-tasca')); fs.rmdirSync(DIR);
   process.exit(falsi ? 1 : 0);

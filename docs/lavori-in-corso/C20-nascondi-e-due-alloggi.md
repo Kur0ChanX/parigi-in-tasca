@@ -24,3 +24,6 @@ Prima di questo: «Cerca di non creare conflitti con l'altro account… cerca di
 
 ## Scelte in corsa
 - Kit RVC: in questo contenitore `RVC_KIT_TOKEN` non c'è (`scarica-kit.py --versione` → esito 2). Le variabili nuove arrivano solo in una sessione aperta dopo averle salvate, e nell'ambiente giusto.
+- v34 online 22/11 (PR 35, sito letto: `versione.json` = 34).
+- «Nascondi» fatto in `dicembre/parigi-disney-natale.html` (v35 in prova): archivio `NASC` (`localStorage` `pdn-nascosti`, chiavi `d-<n>`/`n-<n>`), `hidN` esclude sempre la scelta di adesso; tasto in passo 1 (Parigi), passo 2 e schede di «Dormire»; pannello `#scNas` «🧹 Pulisci l'elenco» con le spunte; avviso con «Annulla» 7 s; mappa (`tmNas`); link «Manda questa scelta» con `&nascosti=` e domanda a chi lo apre (unione, mai sostituzione). Grafico dei confronti e tendina «Usa questo» lasciati interi (sono confronti scelti, non elenchi). Prova in `tools/prova-web-app.js` («Alloggi: «Nascondi»…»). Foto 1–4 in `archivio/2026-11-22-c20-nascondi-alloggi/`: aspetta l'ok di Mario (DOMANDA 1 in «Aspetta Mario»).
+- Ricerca dei n. 23 e 16: 2 aiutanti in sottofondo, risultati in arrivo.
