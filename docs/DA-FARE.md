@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-- 🚀 Online: v18 · 🟩 Controllo 2 · 22/11 · alloggi nuovi, tasto Tutti, distanze
-- 🧪 In prova: v19 · 🟩 Controllo 4 · Dormire più chiaro e camera di Bussy
+- 🚀 Online: v19 · 🟩 Controllo 4 · 22/11 10:06 · Dormire più chiaro
+- 🧪 In prova: —
 - ⏳ Dopo: v20 · 🟩 Controllo 4 · stesso stile sugli altri pezzi e alloggi dei siti diretti (se validi)
 
 ## 0. Aspetta Mario
