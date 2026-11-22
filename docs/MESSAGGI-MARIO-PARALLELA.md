@@ -17,3 +17,10 @@ a pezzi
 
 ## 2026-11-22 10:02 · 01WTjqUuicbA
 va bene
+
+## 2026-11-22 10:17 · 01WTjqUuicbA
+Fai tutta la grafica e pubblica.
+I più vicini metti in ordine di tempo per arrivare, non di chilometri. e differenzia con un altro colore gli hotel Disney dagli hotel normali. Poi nei posti dove dormire schedano si capisce bene che apre tutto con i dettagli. Non si capisce in fondo, è difficile da vederlo.
+
+## 2026-11-22 10:27 · 01WTjqUuicbA
+Attenzione che se ti va a vedere anche nel posto dove dormire, che lo scegli e ti cambia l'itinerario, insomma ti cambia la pagina, la scelta, ti influisce, quello va mostrato e fatto capire.
