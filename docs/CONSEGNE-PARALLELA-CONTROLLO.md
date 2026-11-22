@@ -18,6 +18,7 @@
 - Un 4° colore con tinta propria per i biglietti: non c'è (solo verde oliva, vicino al verde «meglio») → bianco/nero e grigio.
 
 ## Prossimi passi
+- **Controllo 6, 22/11 11:07:** passi 0, 1 e 2 FATTI (km visibili, ordini solo per minuti, foto, v23 online con PR #24, sito vero controllato). `kmDT` serve di nuovo (riga 🏰): resta. Aperte solo le voci 👁 (passo 3).
 0. **Mario 22/11 ~11:05 (dopo l'handoff, parole intere in C13):** i km tornano VISIBILI (testi «distanza» delle schede come prima della v23, riga Disney di «Dov'è», e nella riga 🏰 come dato piccolo accanto al «come»), ma ordini e filtri solo per tempo: togliere `kmD` dallo spareggio di «Vicino a Disney» (`SORT` e `SRT`). Prova da aggiornare (n. 8: «16 min» e anche «1,9 km»). Poi foto e v23.
 1. Foto della v23 (Playwright, `dicembre/index.html` servito con `python3 -m http.server`, tema scuro, 412×915, 2x; PRIMA = `git show origin/main:dicembre/index.html` servito con `page.route`, `serviceWorkers: 'block'`): confronto «Quanto costa» (colori nuovi e legenda) e riga Disney in Dormire (senza km); `tools/confronta-foto.py`; foto alte → solo etichetta + parte che conta (hook `foto-check.py`).
 2. v23 online: ramo-copia `versione-v23`, PR non in bozza (giro in locale già verde), unione squash, `git merge origin/main`, nastro, notifica, `send_message` alla Principale, controllo del sito vero.
