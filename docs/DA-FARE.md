@@ -4,9 +4,9 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v38 · 🟩 Controllo 16 · 22/11 18:36 · tasto Rosa pulito
-🧪 In prova: — (v39 · 🟩 Controllo 16 · testata: luci, scorrimento, Torre fissa)
-⏳ Dopo: v40 · 🟩 Controllo 16 · C22 controllo itinerari e alloggi
+🚀 Online: v39 · 🟩 Controllo 16 · 22/11 18:52 · tasto Rosa col numerino
+🧪 In prova: — (v40 · 🟩 Controllo 16 · testata: luci, scorrimento, Torre fissa)
+⏳ Dopo: v41 · 🟩 Controllo 16 · C22 controllo itinerari e alloggi
 
 ## 0. Aspetta Mario
 - 22/11 · 🛑 · 🟩 Controllo 14 · DOMANDA 1: gli alloggi «spenti» (n. 18, 20, 21: su Airbnb liberi solo dal 14) come li mostro? 📌 Di cosa parliamo: passo 2 di «Scegli», righe grigie quando avete scelto 4 notti dal 13. Scelte: 1 · in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché · 2 · nascosti da soli finché scegliete 4 notti · 3 · come ora, con la scritta «non libero il 13» più chiara. Consiglio 1.
