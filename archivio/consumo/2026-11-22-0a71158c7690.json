@@ -1,0 +1,30 @@
+{
+"account": "cba507",
+"sessione": "0a71158c7690",
+"giorno": "2026-11-22",
+"turni": 1,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 237854,
+"anomalie": [],
+"blocchi": {
+"Stop 11 · 📸 Foto o video di": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 11 · 📸 Foto o video di": [
+"14:15 · 📸 Foto o video di questa sessione in archivio/, non mandati a Mario e senza riga in «## 0. Aspetta Mario» (C516, E498): archivio/2026-11-22-c18-slitta/ (1 file). Per Mario → mandali ORA con la domanda"
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"14:15 · Ti fermi ad aspettare Mario con il contesto a 237k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"14:15 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1 🛑**: posso pubblicare la v33? 📌 Il con», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l"
+]
+},
+"remota": "01Rwcxc4fE4C",
+"aiutanti": 0,
+"strumenti": 0,
+"bilancia": 2
+}
