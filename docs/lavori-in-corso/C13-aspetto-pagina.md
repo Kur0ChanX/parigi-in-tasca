@@ -34,3 +34,8 @@ su questo nostro sito rifai tutto con frontend da 0 solo migliorie»
 - Il resto della scheda Piano (testata, voli, viaggio in breve, da fare) è già nello stile: cambiato solo «Quanto costa». Ogni strada è una scheda col bordo, barra a sinistra ed etichetta del tipo del suo alloggio (🏨 Hotel azzurro, 🏠 Casa verde acqua, 🛏️ B&B lilla, 🏰 pacchetto Disney rosso; «Parigi + …» se domenica a Parigi); la scelta in oro come in Dormire.
 - `tyOf` spostata accanto a `byId` (primo script): le barre si disegnano prima del secondo script. Prova nuova «C13 pezzo 3». Confronto: `archivio/2026-11-22-c13-piano-pezzo3/`.
 
+## Mario 22/11 ~10:18 (Controllo 4), parole intere
+> Fai tutta la grafica e pubblica.
+> I più vicini metti in ordine di tempo per arrivare, non di chilometri. e differenzia con un altro colore gli hotel Disney dagli hotel normali. Poi nei posti dove dormire schedano si capisce bene che apre tutto con i dettagli. Non si capisce in fondo, è difficile da vederlo.
+- Letto così: tutti i pezzi rimasti (Giorni, Biglietti) e pubblicare senza aspettare l'ok di ogni foto (vale anche come risposta alla DOMANDA 1 della Controllo 4); «Vicino a Disney» ordinato per minuti fino ai parchi; hotel Disney con un colore loro; nelle schede di Dormire un invito chiaro «Dettagli» in fondo.
+

@@ -17,7 +17,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   const b = await chromium.launch({ executablePath: fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined });
   // Mario: ha già la guida di novembre, poi apre dicembre
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 } }); const p = await ctx.newPage();
-  const errs = []; p.on('pageerror', (e) => errs.push(e.message));
+  const errs = []; p.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
   await p.goto(B); await sw(p); await p.reload(); await p.waitForTimeout(800);
   const nov = await p.title();
   await p.goto(B + 'dicembre/'); await sw(p);
@@ -46,7 +46,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   await ctx.close();
   // L'amico: apre solo dicembre
   const c2 = await b.newContext({ viewport: { width: 390, height: 844 } }); const q = await c2.newPage();
-  q.on('pageerror', (e) => errs.push(e.message));
+  q.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
   await q.goto(B + 'dicembre/'); await sw(q);
   ok('amico: manifest letto', await q.evaluate(async () => (await (await fetch('manifest.webmanifest')).json()).name === 'Parigi e Disney a Natale'));
   ok('amico: noindex', await q.evaluate(() => document.querySelector('meta[name=robots]').content.includes('noindex')));
@@ -195,6 +195,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     });
     const ok4 = v.ty4 === 'dis' && /^🧳 Domenica\|\d{1,2}:\d{2}\|.* \/ 🛏️ In camera\|\d{1,2}:\d{2}\|.* \/ 🎢 Lunedì\|\d{1,2}:\d{2}\|/.test(v.k4) && v.dt4;
     ok('C13 pezzo 2: passo 1 con 3 riquadri (4 notti: domenica, in camera, lunedì; Parigi: a piedi, lunedì, pulizia) e totale sotto il prezzo', ok4 && v.par >= 8 && !v.bad.length && !v.vec); if (!(ok4 && v.par >= 8 && !v.bad.length && !v.vec)) console.log(v);
+    // C13 pezzo 3 (22/11): in «Quanto costa» ogni strada ha il tipo del suo alloggio (colore ed etichetta), come in Dormire; n. 8 hotel, n. 31 casa
+    const b3 = await q.evaluate(() => [...document.querySelectorAll('#bars>a.bar-row')].map((a) => [a.dataset.sc || '', a.dataset.ty, (a.querySelector('.bar-ty') || {}).textContent || '']));
+    const ok3 = b3.length === 9 && b3.every(([, t, l]) => /^(hotel|bb|casa|pkg)$/.test(t) && l.length > 3) && b3.some(([k, t]) => /-8$/.test(k) && t === 'hotel') && b3.some(([k, t]) => /-31$/.test(k) && t === 'casa');
+    ok('C13 pezzo 3: «Quanto costa» con tipo di alloggio su ogni strada (9 strade, n. 8 hotel, n. 31 casa)', ok3); if (!ok3) console.log(b3);
   }
   // 21/11 sera: la pagina era larga 735 px su un telefono da 412 (classe .pc del contenitore uguale a quella dei pro/contro)
   ok('telefono 390 px: la pagina non scorre di lato', await q.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
