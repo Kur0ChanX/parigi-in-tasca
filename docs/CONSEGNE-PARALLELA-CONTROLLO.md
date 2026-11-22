@@ -1,5 +1,9 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
+## Stato (Controllo 2 `session_01WTjqUxihdodXx5rgGV3q9Q`, 22/11 01:06 ora italiana, chiusa alla soglia; la apre la Controllo 2 con `create_session` (catena 2 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01WTjqUxihdo/claude/parigi-ramo-definitivo.
+- (qui le righe di giudizio della Controllo 2: fatto, provato, dove si verifica)
+
 ## Stato (Controllo 1 `session_01WTjqUxeDzvNf7FCCkrmhkz`, 22/11 00:43 ora italiana, chiusa alla soglia; la apre la Controllo 1 con `create_session` (catena 1 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
 
@@ -49,26 +53,21 @@ usa 3 agenti» → per quel lavoro, 3 aiutanti.
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 2
-la apre la Controllo 1 con `create_session` (catena 1 di 8). Scritto da Controllo 1 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 3
+la apre la Controllo 2 con `create_session` (catena 2 di 8). Scritto da Controllo 2 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 2 · v18 alloggi nuovi`
+Titolo: `🟩 🗼 Controllo 3 · aspetto pagina`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 2 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 3 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 00:08 · https://kur0chanx.github.io/parigi-in-tasca/dicembre/?v=15 → controllata online (funziona), DOMANDA 1 risposta dal messaggio dopo
-- 2026-11-22 00:10 · ma se ti scrivo dal 13 al 17 perché mi metti dal 14 che problemi hai? → spiegato (notte a Parigi del 21/11), DOMANDA 1 🛑 → risposta 00:13
-- 2026-11-22 00:13 · metti alloggi dal 14 al 17 e in priorità dal 13 al 17 rifai la ricerca accurata … → C12 (2 aiutanti, file salvati), C6 (v17 online, PR #18)
-- 2026-11-22 00:21 · vai da solo e pubblica prendi 2 agenti dividi bene le cose non listoni mischiati… → v17 pubblicata; Dormire diviso Hotel · B&B · Case; v18 pianificata (C12 «Piano v18»)
+- 2026-11-22 00:44 · [AVVIO] Sei la chat parallela Controllo 2 di Parigi in tasca, linea «Controllo» … → 
+- 2026-11-22 00:49 · qui → 
 
 Ultimo, intero:
-> vai da solo e pubblica 
-> prendi 2 agenti 
-> dividi bene le cose non listoni mischiati tutto attaccato
-> tutto anche b&b affittacamere hotel  appartamenti ecc ecc
+> qui
 
