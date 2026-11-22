@@ -410,6 +410,23 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     await r.click('#vbox .vagg button'); await r.waitForTimeout(2500);
     const vOk = v0.t === 'v' + sito && !v0.agg && v0.toccabile && v0.inAlto && box0.aperta && box0.voci >= 5 && !box0.agg && v1 === 'v' + sito + ' → v' + (sito + 1) && aggVisto && ricaricata;
     ok('Numero della versione in alto (v' + sito + ' = versione.json), novità al tocco, «Aggiorna versione» solo con una versione più nuova e ricarica la pagina', vOk); if (!vOk) console.log({ v0, box0, v1, aggVisto, ricaricata });
+    // v32 (Mario 22/11 12:27 «Il numerino non farlo che scende… lascialo fisso in alto alla schermata principale», «farla più stretta», «L’albero fallo meglio… il castello… finestre… proiezioni»)
+    {
+      const c4 = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const u4 = await c4.newPage();
+      u4.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+      await u4.goto(B + 'dicembre/'); await u4.waitForTimeout(1200);
+      const v = await u4.evaluate(async () => {
+        const w = (ms) => new Promise((r) => setTimeout(r, ms)), n = document.getElementById('vnum');
+        const su = n.getBoundingClientRect().top; scrollTo(0, 700); await w(300); const giu = n.getBoundingClientRect().top;
+        document.querySelector('.tabbar button[data-t="giorni"]').click(); await w(400);
+        const nascosto = getComputedStyle(n).display === 'none', fila = document.getElementById('daybar').getBoundingClientRect().height;
+        document.querySelector('.tabbar button[data-t="piano"]').click(); await w(300);
+        return { su, giu, nascosto, fila, fin: document.querySelectorAll('#castFin .fin-c').length, luci: document.querySelectorAll('#castLuci circle').length, filo: document.querySelectorAll('#filoAlbero g.hb').length, neve: document.querySelectorAll('#pjNeve path').length, clip: !!document.querySelector('.scene g[clip-path="url(#castClip)"] .pj') };
+      });
+      const vOk2 = v.su < 60 && v.giu < -500 && v.nascosto && v.fila <= 50 && v.fin === 17 && v.luci >= 60 && v.filo >= 25 && v.neve === 7 && v.clip;
+      ok('Numero della versione solo in cima alla schermata principale (scorrendo va via, nelle altre schede non c’è); fila dei giorni stretta (≤ 50 px); testata con 17 finestre, lucine sul castello e sull’albero, proiezioni ritagliate sul castello', vOk2); if (!vOk2) console.log(v);
+      await c4.close();
+    }
     await c3.close();
   }
   // C18: la slitta passa da sola dopo 5 s (nel cielo, coi pacchi); con «riduci movimento» non parte; giovedì 17 col riquadro «Partite prima»
