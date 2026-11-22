@@ -2,16 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 01:08 · 01WTjqUxihdo
-qui metti un tasto tutti non solo hotel b&b ecc e metti anche in bista distanza Disney con tempi e km a piedi rer a piedi
-
-Cerca meglio anche su siti privati Non per forza Booking, Airbnb ecc ecc, anche siti privati che si va a risparmiare sulla commissione dei portali. Metti altri hotel in base ai miei requisiti, solo quelli validi che possono soddisfare le nostre esigenze. Cerca bene ovunque 
-
-Se vuoi differenziare bene con magari evidenziando, con colori, con font diversi, spaziature, fai pure, almeno si capisce bene tutto.  usa  /plugin install frontend-design@claude-plugins-official
-su questo nostro sito rifai tutto con frontend da 0 solo migliorie  Come ti ho già detto nella scorsa sessione, usa tre agenti.
-E allora continuo a cercare se non hai trovato nessun alloggio diretto.
-a pezzi
-
 ## 2026-11-22 10:02 · 01WTjqUuicbA
 va bene
 
@@ -149,3 +139,6 @@ https://guida-disneyland-ynoy.pages.dev/?prova=idee
 
 ## 2026-11-22 16:29 · 01Rwcxc4Xr46
 All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio dietro, l'albero che dovresti farlo meglio, cioè l'albero non flickera, molte luci però flickerano all'inizio. Ti mando un albero che puoi mettere al posto di quello se vuoi. Ovviamente lo devi colorare e addobbare. La Torre Eiffel è fatta male dietro e poi flickera all'inizio appena nel video. E Jack Scheletro non farlo passare più volte. Passa una volta, poi non lo vedo più.
+
+## 2026-11-22 18:27 · 01QTFEqRCHFh
+mi devi spiegare perché hai scritto 2n 16 e 23.... assurdo... come tovinare una grafica a gratis
