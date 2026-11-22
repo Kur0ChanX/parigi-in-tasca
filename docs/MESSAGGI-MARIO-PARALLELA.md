@@ -129,3 +129,6 @@ Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocc
 
 ## 2026-11-22 15:09 · 01Rwcxc4aWHi
 Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.
+
+## 2026-11-22 15:22 · 01Rwcxc4Xr46
+Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa c'entrano i birilli, cioè? E tu me lo confermi pure, i birilli sono al posto giusto. Ma i birilli, che cavolo ce ne facciamo? Devono esserci cose attinenti, cioè. Puoi andare tu in una bancarella e vedere dei birilli in vendita. Ti sembra normale? Ma come ragioni? Boh.
