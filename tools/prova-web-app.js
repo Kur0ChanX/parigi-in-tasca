@@ -575,8 +575,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const prima = await u10.evaluate(() => document.body.dataset.tab + ' ' + Math.round(scrollY));
       await u10.reload(); await u10.waitForTimeout(1200);
       const dopo = await u10.evaluate(() => ({ tab: document.body.dataset.tab, y: Math.round(scrollY) }));
-      await u10.goto(B + 'dicembre/#scegli'); await u10.waitForTimeout(1200);
-      const link = await u10.evaluate(() => document.body.dataset.tab);
+      const u11 = await c9.newPage(); await u11.goto(B + 'dicembre/#scegli'); await u11.waitForTimeout(1200); // pagina nuova: con la stessa pagina cambierebbe solo il # senza riaprirla
+      const link = await u11.evaluate(() => document.body.dataset.tab);
       const okP = /^dormire [1-9]/.test(prima) && dopo.tab === 'piano' && dopo.y === 0 && link === 'dormire';
       ok('C25: l’app si apre sempre sul Piano in cima (anche se prima eri su «Dormire» più giù); un link con #scegli porta ancora a Dormire', okP); if (!okP) console.log({ prima, dopo, link });
       await c9.close();
