@@ -593,6 +593,23 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       // C22 parte 2 (Controllo 22): Galeries con la pista sul tetto dal 24/11 (sito Galeries), carta bancaria solo all'uscita della metro a Orly (IDFM)
       const okC22b = await g.evaluate(() => { const t = document.body.textContent; return /pista di pattinaggio \(16 €/.test(t) && /forse chi non pattina non sale/.test(t) && /uscita<\/b> della metro a Orly|uscita della metro a Orly/.test(document.body.innerHTML) && /14,80 € a testa/.test(t); });
       ok('C22: Galeries con la pista sul tetto (terrazza forse solo per chi pattina); Orly: carta bancaria all’uscita della metro, 14,80 €', okC22b);
+      // C26 (Controllo 22, Mario 22/11 «in Questo o quello devo poter scegliere io gli hotel per un confronto non le abbinate prefatte»): tasti accesi/spenti, «＋ Aggiungi», confronto riga per riga, salvato sul telefono
+      {
+        const prima = await g.evaluate(() => { const o = {}; ['pdn-rosa', 'pdn-qoq', 'pdn-scelta', 'pdn-alloggio'].forEach((k) => { o[k] = localStorage.getItem(k); }); localStorage.setItem('pdn-rosa', '[16,23]'); ['pdn-qoq', 'pdn-scelta', 'pdn-alloggio'].forEach((k) => localStorage.removeItem(k)); return o; });
+        const leggiQ = () => g.evaluate(() => { const el = document.getElementById('duels'); return { chips: [...el.querySelectorAll('button[data-qoq]')].map((b) => b.dataset.qoq + ':' + b.getAttribute('aria-pressed')).join(' '), righe: el.querySelectorAll('.qoq-r').length, breve: (el.querySelector('.qoq-in') || {}).textContent || '', pareri: [...el.querySelectorAll('.qoq-r details summary')].map((s) => s.textContent).join(' | '), schede: el.querySelectorAll('a[href^="#al-"]').length, brutto: /undefined|NaN|\bnull\b/.test(el.textContent), largo: el.scrollWidth > el.clientWidth + 1, riass: (el.closest('details.more-al') || { querySelector: () => ({}) }).querySelector('summary').textContent }; });
+        await g.goto(B + 'dicembre/'); await g.waitForTimeout(700);
+        const q0 = await leggiQ();
+        await g.evaluate(() => { const d = document.getElementById('duels').closest('details'); let p = d; while (p) { if (p.tagName === 'DETAILS') p.open = true; p = p.parentElement; } document.querySelector('#duels button[data-qoq="8"]').click(); });
+        const q1 = await leggiQ();
+        await g.evaluate(() => { const s = document.querySelector('#duels select[data-qoq-add]'); s.value = '12'; s.dispatchEvent(new Event('change', { bubbles: true })); });
+        await g.reload(); await g.waitForTimeout(700);
+        const q2 = await leggiQ(), salvato = await g.evaluate(() => localStorage.getItem('pdn-qoq'));
+        await g.evaluate((o) => { Object.entries(o).forEach(([k, v]) => { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); }); }, prima);
+        const okQ = /Confrontate voi/.test(q0.riass) && q0.chips === '8:true 16:true 23:true' && q0.righe === 11 && q0.schede === 3 && /spende meno n\. 23/.test(q0.breve) && /più vicino ai parchi n\. 16/.test(q0.breve) && /N\. 16 Nice studio/.test(q0.pareri) && !q0.brutto && !q0.largo
+          && q1.chips === '8:false 16:true 23:true' && q1.schede === 2 && q1.pareri === ''
+          && salvato === '[12,16,23]' && /12:true/.test(q2.chips) && /8:false/.test(q2.chips) && q2.schede === 3 && /N\. 12 Relais Spa o n\. 13|^$/.test(q2.pareri) && !q2.brutto;
+        ok('C26: «Questo o quello?» lo sceglie Mario: parte da n. 8, 16 e 23 (rosa + consiglio), si spegne un alloggio, si aggiunge il n. 12, resta dopo la ricarica; niente coppie fisse', okQ); if (!okQ) console.log({ q0, q1, q2, salvato });
+      }
       const ok1 = /8:44 da Chessy/.test(r1.gio) && /8:44 da Chessy/.test(r1.box) && /8:47 da Val d'Europe/.test(r8.gio) && /Gratis fino a lunedì 7\/12/.test(r29.box);
       ok('C24: giovedì del n. 1 da Chessy (8:44, non Val d’Europe); n. 29 «prima dell’8/12» = gratis fino al 7/12', ok1); if (!ok1) console.log(r1.gio.slice(-400), r29.box);
       // tutti e 35, con 4 notti e con la notte a Parigi: riquadro pieno, niente «undefined», «NaN» o «null» nel riquadro e nei giorni
