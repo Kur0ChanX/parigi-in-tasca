@@ -421,10 +421,16 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         document.querySelector('.tabbar button[data-t="giorni"]').click(); await w(400);
         const nascosto = getComputedStyle(n).display === 'none', fila = document.getElementById('daybar').getBoundingClientRect().height;
         document.querySelector('.tabbar button[data-t="piano"]').click(); await w(300);
-        return { su, giu, nascosto, fila, fin: document.querySelectorAll('#castFin .fin-c').length, luci: document.querySelectorAll('#castLuci circle').length, filo: document.querySelectorAll('#filoAlbero g.hb').length, neve: document.querySelectorAll('#pjNeve path').length, clip: !!document.querySelector('.scene g[clip-path="url(#castClip)"] .pj') };
+        return { su, giu, nascosto, fila, fin: document.querySelectorAll('#castFin .fin-c').length, luci: document.querySelectorAll('#castLuci circle').length, filo: document.querySelectorAll('#filoAlbero g.hb').length, neve: document.querySelectorAll('#pjNeve path').length, clip: !!document.querySelector('.scene g[mask="url(#castM)"] .pj'),
+          /* v33 (Mario 14:26 «non mi sembra che il castello sia uguale al disegno»): il castello è il SUO disegno (immagine), caricato, grande come quello di prima e con la guglia non coperta da niente */
+          castello: (() => { const im = document.getElementById('castImg'), u = document.querySelector('.scene use[href="#castImg"]'); if (!im || !u || !/^data:image\/webp;base64,/.test(im.getAttribute('href') || '')) return 'manca';
+            const r = u.getBoundingClientRect(), s = document.querySelector('.scene').getBoundingClientRect(), k = s.height / 290, x = s.left + s.width / 2 + (513 - 400) * k, y = s.top + 60 * k;
+            document.head.insertAdjacentHTML('beforeend', '<style id="provaPE2">.scene,.scene *{pointer-events:auto!important}</style>');
+            const e = document.elementsFromPoint(x, y).find((q) => !q.closest('#castLuci,#castFin,#castDeco,#pacchi,#polvere,#slitta') && q.tagName !== 'rect' && q.tagName !== 'path' && q.tagName !== 'circle'); document.getElementById('provaPE2').remove();
+            return { largo: Math.round(r.width / k), sopra: e ? e.tagName + '#' + (e.id || '') : '-' }; })() };
       });
-      const vOk2 = v.su < 60 && v.giu < -500 && v.nascosto && v.fila <= 50 && v.fin === 17 && v.luci >= 60 && v.filo >= 25 && v.neve === 7 && v.clip;
-      ok('Numero della versione solo in cima alla schermata principale (scorrendo va via, nelle altre schede non c’è); fila dei giorni stretta (≤ 50 px); testata con 17 finestre, lucine sul castello e sull’albero, proiezioni ritagliate sul castello', vOk2); if (!vOk2) console.log(v);
+      const vOk2 = v.su < 60 && v.giu < -500 && v.nascosto && v.fila <= 50 && v.fin >= 10 && v.luci >= 60 && v.filo >= 25 && v.neve === 7 && v.clip && v.castello.largo >= 170 && v.castello.largo <= 230 && /^use/i.test(v.castello.sopra);
+      ok('Numero della versione solo in cima alla schermata principale (scorrendo va via, nelle altre schede non c’è); fila dei giorni stretta (≤ 50 px); testata col castello dal disegno di Mario (guglia scoperta), finestre che si accendono, lucine sul castello e sull’albero, proiezioni solo sul castello', vOk2); if (!vOk2) console.log(v);
       await c4.close();
     }
     // v32 · PC (Mario 22/11 12:27 «per desktop… che occupa bene la pagina»): titolo a sinistra e indice a destra; «in breve» su 3 colonne (la regola dei 3 c’era, ma quella dei 2 veniva dopo e vinceva)
