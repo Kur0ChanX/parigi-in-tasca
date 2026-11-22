@@ -1,3 +1,6 @@
-# Ultimo messaggio di Mario (22/11/2026 16:29 ora italiana)
+# Ultimo messaggio di Mario (22/11/2026 19:10 ora italiana)
 
-All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio dietro, l'albero che dovresti farlo meglio, cioè l'albero non flickera, molte luci però flickerano all'inizio. Ti mando un albero che puoi mettere al posto di quello se vuoi. Ovviamente lo devi colorare e addobbare. La Torre Eiffel è fatta male dietro e poi flickera all'inizio appena nel video. E Jack Scheletro non farlo passare più volte. Passa una volta, poi non lo vedo più.
+poi metti piú chiaro ed in evidenza della scelta hotel che cambia tutto l'itinerario se non seleziono gli hotel che voglio nel app vedo solo gli hotel selezionati
+
+quindi devo poter scremare quello da vedere per confrontare come abbiamo fatto con la rosa poi per sceglierli devo avere un tasto Scegli dove dormire e mi cambia l'itinerario in base a l'hotel scelto info le strade da fare i consigli orari ecc ecc ecc con cura mi raccomando che c'è un viaggio di mezzo
+publica
