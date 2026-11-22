@@ -1,0 +1,42 @@
+{
+"account": "cba507",
+"sessione": "5936c339e23b",
+"giorno": "2026-11-22",
+"turni": 4,
+"peso": 1149062,
+"uscita": 22591,
+"contesto_max": 277721,
+"anomalie": [
+"2 uscite di strumento enormi (51 KB la più grande): leggere a pezzi (grep -n, sed -n)"
+],
+"blocchi": {
+"Stop 15 · There are uncommitted changes in": 2,
+"Stop 10 · Promessa a Mario senza voce": 1
+},
+"esempi_blocchi": {
+"Stop 15 · There are uncommitted changes in": [
+"23:29 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"23:33 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"23:35 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Appena finisce pubblico.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura dei dati veri>», c"
+]
+},
+"remota": "01Rwcxc3NLHA",
+"aiutanti": 0,
+"strumenti": 37,
+"bilancia": 2,
+"motori": {
+"opus": 1149062
+},
+"grezzi": {
+"opus": [
+76,
+9905133,
+36414,
+0,
+22591
+]
+},
+"costo": 2.7245
+}
