@@ -38,4 +38,8 @@ su questo nostro sito rifai tutto con frontend da 0 solo migliorie»
 > Fai tutta la grafica e pubblica.
 > I più vicini metti in ordine di tempo per arrivare, non di chilometri. e differenzia con un altro colore gli hotel Disney dagli hotel normali. Poi nei posti dove dormire schedano si capisce bene che apre tutto con i dettagli. Non si capisce in fondo, è difficile da vederlo.
 - Letto così: tutti i pezzi rimasti (Giorni, Biglietti) e pubblicare senza aspettare l'ok di ogni foto (vale anche come risposta alla DOMANDA 1 della Controllo 4); «Vicino a Disney» ordinato per minuti fino ai parchi; hotel Disney con un colore loro; nelle schede di Dormire un invito chiaro «Dettagli» in fondo.
+- Fatto (22/11 ~10:20–10:30): «Vicino a Disney» per minuti per arrivare con l'attesa media di navetta e bus (`arrMin` = `parkMin` + `waitMin`), nel riquadro 🏰 lo stesso numero («con attesa» se c'è), legenda aggiornata; primi i n. 16/17 (6 min), Hotel Disney n. 14 a 10 min. Hotel Disney rosa (`--ty-disney`, contrasto ≥ 5,3 in tutti i temi), etichetta «🏰 Hotel Disney», col tasto «Hotel» resta visibile e contato; pacchetti Disney rosa nei costi. «Vedi i dettagli ⌄» / «Chiudi i dettagli» in fondo a ogni scheda di Dormire (freccina dell'angolo tolta).
+- Pezzo 4 · Biglietti: «Treni e ticket» sul telefono a schede (la tabella usciva dallo schermo). Giorni: già nello stile (tappe numerate, oro per «da non perdere»), non toccato.
+- Errore trovato dalle prove: `tyOf` spostata nel primo script non arrivava al secondo (due blocchi separati) → `window.pdnTyOf`; ora le prove scrivono subito gli errori della pagina. Riga in `docs/ERRORI.md`.
+- Confronti v20: `archivio/2026-11-22-c13-v20/`.
 
