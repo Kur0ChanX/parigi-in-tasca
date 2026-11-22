@@ -1,63 +1,60 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
-## Stato (Controllo 3 `session_01WTjqUwRSHUqXvqRfjgFGFA`, 22/11 01:33 ora italiana, chiusa alla soglia; la apre la Controllo 3 con `create_session` (catena 3 di 8))
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01WTjqUwRSHU/claude/parigi-ramo-definitivo.
-- **v19 pronta ma NON online**: aspetta la DOMANDA 1 della Controllo 3 🛑 (riga in «## 0. Aspetta Mario» di `docs/DA-FARE.md`: 1 pubblica e stesso stile sugli altri pezzi · 2 più corta · 3 ritocca · 4 com'era). Dentro: scheda Dormire più chiara (C13 pezzo 1) + camera Airbnb a Bussy + nota del prezzo diretto della Résidence du Parc (C14). Verifica: `grep -c 'sc-k' dicembre/index.html` > 0 nel ramo, `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c 15868262` = 0 finché non è pubblicata.
-- Prove sull'ultimo commit di codice (`1dc0839`): web app 42/42, scritte VERO (esito 0), `fai-dicembre.py --controlla` VERO, colori VERO.
-- **Già deciso da Mario (non richiedere):** grafica «a pezzi» con foto prima/dopo (22/11 ~01:10); alloggi 13→17 in priorità; criteri (C12); «metti solo quelli validi»; plugin `frontend-design` non installato (consiglio, DOMANDA 2 senza risposta).
-- **Da non rifare:** ricerca su siti diretti giro 1 e 2 (file `alloggi_siti_diretti_*.md` e `_2_*.md`: le catene bloccano i browser automatici, nessun altro alloggio valido); verifica della camera di Bussy; foto prima/dopo del pezzo 1 (già mandate).
-- **Cosa preme a Mario adesso:** risposta alla DOMANDA 1 (aspetto della scheda Dormire, con dentro la camera di Bussy a 201 €), poi la pubblicazione.
-- La pagina di dicembre è di questa catena (la Principale non la tocca). Principale attiva: «Principale 22».
-- Controllo Da fare: 0 voci aggiunte (le richieste di Mario hanno già le loro voci 👁 in sezione 1).
+## Stato (Controllo 4 `session_01WTjqUuicbA1iGVJV2srBYv`, 22/11 10:31 ora italiana, chiusa alla soglia; la apre la Controllo 4 con `create_session` (catena 4 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261122-01WTjqUuicbA/claude/parigi-ramo-definitivo.
+- **v20 online** (22/11 10:26, PR #21): verifica `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/ | grep -c ty-disney` > 0. Dentro: passo «Domenica 13» nello stile del passo 2, «Vicino a Disney» per minuti con le attese (`arrMin`), hotel Disney rosa, «Vedi i dettagli» in fondo alle schede, «Quanto costa» col tipo, «Treni e ticket» a schede. v19 online 10:06 (PR #20).
+- **v21 nel ramo, NON online**: «la scelta cambia la pagina» (riquadro `.sc-tutto`, avviso `.sc-avviso` dopo «Scegli questo», pallini gialli sulle schede, evento `pdn:scelta`). Prove sul commit `v21 (non ancora pubblicata)…`: web app 47/47, scritte, `--controlla`, colori (anche `controlla-colori.py dicembre/parigi-disney-natale.html`) tutti VERO. Verifica: `grep -c sc-avviso dicembre/index.html` > 0 nel ramo, 0 sul sito.
+- **Già deciso da Mario (non richiedere):** «Fai tutta la grafica e pubblica» (22/11 10:17: niente ok per ogni foto, si pubblica a prove verdi); «Vicino a Disney» per tempo, non km; hotel Disney colore suo; la scelta dell'alloggio va mostrata; poter annullare una scelta sbagliata; criteri e decisioni di prima nelle consegne della Controllo 3 (sotto, in `git log`).
+- **Da non rifare:** pezzi 1–4 della grafica (Giorni lasciato com'era: già nello stile); ricerche sui siti diretti (C14).
+- **Cosa preme a Mario adesso:** colori senza conflitti e «Annulla» (suo ultimo messaggio), poi la v21 online.
+- Controllo Da fare: 0 voci aggiunte (le 4 richieste sono in `docs/lavori-in-corso/C13-aspetto-pagina.md` con parole intere e nella voce 👁 «grafica a pezzi» di `docs/DA-FARE.md` sezione 1; verifiche della Principale in sezione 1).
 
-## Cosa è stato fatto (Controllo 3)
-- C13 pezzo 1 (`docs/lavori-in-corso/C13-aspetto-pagina.md`, piano grafico lì): colori per tipo `--ty-hotel` azzurro, `--ty-bb` lilla, `--ty-casa` verde acqua (scuro, chiaro, vino; contrasto ≥ 5,4); interruttore dei tipi colorato; «Ordina per» a tutta larghezza; legenda `.sc-leg` prima dell'elenco; schede di `#scD` con etichetta del tipo (`summary::before` da `data-ty`), barra a sinistra, cerchio del numero colorato, prezzo grande con `.sc-dt` («totale ±… €» o «★ consiglio», parametro `px` di `row()`), 3 riquadri `.sc-k` (Disney, RER con `rerK`, Pulizia). Prova v18 aggiornata ai riquadri. Foto: `archivio/2026-11-22-c13-dormire/` (mandate).
-- C14 (`docs/lavori-in-corso/C14-siti-diretti-giro-2.md`): 3 aiutanti con Chromium; file `research_notes/…/alloggi_siti_diretti_2_{hotel,case,bb}.md`. Camera Airbnb 15868262 a Bussy ricontrollata da me (201 € / 151 €, gratis fino al 29/11 e 30/11, 4,95 su 722, WC in comune, arrivo 18–22) → secondo riquadro in `#scBB`, conteggio B&B = riquadri `.sc-xb`, prova nuova «C14». Nota prezzo diretto n. 3 (circa 410 €, stima). Foto `archivio/2026-11-22-c14-alloggi/` (mandate).
+## Cosa è stato fatto (Controllo 4)
+- Avvio, scorta della Controllo 2 unita (registro dei messaggi). v19 e v20 pubblicate (nastro, notifiche, `send_message` alla Principale 22). Pezzi 2–4 e richieste di Mario: tutto in `docs/lavori-in-corso/C13-aspetto-pagina.md`. Foto: `archivio/2026-11-22-c13-dormire-pezzo2/`, `-c13-v20/`, `-c13-v21/` (mandate). Errori nel diario: nastro col trattino (hook non lo leggeva), `tyOf` fra i due script (`window.pdnTyOf`). Prove nuove in `tools/prova-web-app.js` (pezzi 2–4, Disney, ordine, ticket, avviso); la prova ora stampa subito «ERRORE NELLA PAGINA».
+- La Principale 22 ha passato a questa catena 3 verifiche (riga in `docs/DA-FARE.md` sezione 1).
 
 ## Strade provate e scartate
-- Prezzi diretti delle catene col browser automatico: bloccati (Marriott, IHG, Choice «Access Denied»; Accor Incapsula; Staycity Cloudflare; Elysée, All Suites, Ki Space DataDome; Residhome chiude). Non si aggira: restano «a mano» per Mario se li vuole.
-- Siti diretti degli Airbnb n. 16–35: nessuno (host privati). 123home e GuestReady: voto sotto soglia.
-- Foto dal file sorgente `parigi-disney-natale.html`: scritte rotte (manca `<meta charset>`); si fotografa sempre `dicembre/index.html`, tema **scuro** (quello di Mario), 412×915.
+- «Vicino a Disney» per km (v18): Mario vuole il tempo. Per minuti SENZA attese (prima del 22/11) la navetta del n. 11 finiva in cima: ora `arrMin` = minuti + attesa media di navetta (25) e bus (10). L'attesa del RER non è contata (da cercare sul sito ufficiale se Mario la vuole: nel PARERE delle 10:26).
+- Colori dei tipi anche in «Quanto costa»: conflitto con la legenda (vedi Prossimi passi 1).
+- Foto mandate con «prima»/«dopo» nel nome ma senza confronto: le blocca `foto-check.py`; due foto nuove → nomi senza «prima/dopo».
 
 ## Prossimi passi
-1. Alla risposta della DOMANDA 1: «1» → pubblicare la v19 (skill `pr`: PR verso `main`, giro dove dice `tools/scegli-giro.py`, unione col verde, nastro), poi pezzo 2 = passo 1 della scheda Dormire (`#scN`, notti di domenica) con lo stesso stile, poi Piano, Giorni, Biglietti, ognuno con foto prima/dopo (script delle foto: rifarli come in C13, `colorScheme:'dark'`, `serviceWorkers:'block'`). «2» → riquadri più bassi (meno padding, etichetta e numero su una riga), nuove foto. «3»/«4» → come dice Mario.
-2. Se Mario sceglie la camera di Bussy come consiglio: solo con un suo sì esplicito (oggi il consiglio è Moxy 4 notti).
-3. Voci 👁 di `docs/DA-FARE.md` sezione 1: chiuderle solo quando Mario le vede online.
+1. Piano scritto in `docs/lavori-in-corso/C13-aspetto-pagina.md` «Mario 22/11 ~10:45»: «Quanto costa» senza colori dei tipi; Casa arancio (`#FFA15C` / `#A34A00`, contrasti misurati lì); «Annulla» nell'avviso (evento `pdn:annulla`, torna alla scelta di prima) con prova nuova. Script delle foto nella sessione vecchia persi: rifarli (Playwright, `dicembre/index.html` servito con `python3 -m http.server` come `tools/prova-web-app.js`, tema scuro, 412×915, 2x, clic sulle schede con `evaluate(...click())`); confronti con `tools/confronta-foto.py`.
+2. Prove complete (web app, scritte, `--controlla`, colori di novembre e dicembre), poi v21: ramo-copia `versione-v21`, PR, unione, `git merge origin/main`, nastro, notifica, controllo del sito vero.
+3. Le 3 verifiche della Principale (deposito valigie Astra e Saint-Pétersbourg; spa del Saint-Pétersbourg; cancellazione dell'Airbnb di David, vecchio n. 21): pagine ufficiali, skill `ricerca-aggiornata`; v22.
+4. Voci 👁 di `docs/DA-FARE.md` sezione 1: chiuderle solo quando Mario dice di averle viste.
 
 ## Blocchi e rischi
-- Prezzi letti il 21–22/11: possono salire. Camera di Bussy: cancellazione gratuita fino al 29/11; Jolie chambre fino al 29/11.
-- Schede di `#scD` circa un quarto più alte (4 per schermata invece di 5): detto a Mario nel PARERE.
-- Prova «dicembre: service worker suo» instabile (vedi Controllo 2): rilanciarla da sola.
-- Nomi nuovi nella pagina: prima `grep -c '\bnome\b'` = 0 (E del 22/11).
+- Prezzi letti il 21–22/11: possono salire; camera di Bussy e Jolie chambre gratis fino al 29/11.
+- Nomi nuovi: prima `grep -c`; funzioni fra i due `<script>` (ognuno chiuso in `(()=>{…})()`): passano da `window`.
+- Prova «dicembre: service worker suo» a volte instabile: rilanciarla da sola.
 
 ## Ultimo messaggio di Mario
-Arrivato alla Controllo 2 dopo il suo handoff (22/11 ~01:10), passato qui:
-> qui metti un tasto tutti non solo hotel b&b ecc e metti anche in bista distanza Disney con tempi e km a piedi rer a piedi
->
-> Cerca meglio anche su siti privati Non per forza Booking, Airbnb ecc ecc, anche siti privati che si va a risparmiare sulla commissione dei portali. Metti altri hotel in base ai miei requisiti, solo quelli validi che possono soddisfare le nostre esigenze. Cerca bene ovunque
->
-> Se vuoi differenziare bene con magari evidenziando, con colori, con font diversi, spaziature, fai pure, almeno si capisce bene tutto.  usa  /plugin install frontend-design@claude-plugins-official
-> su questo nostro sito rifai tutto con frontend da 0 solo migliorie  Come ti ho già detto nella scorsa sessione, usa tre agenti.
-> E allora continuo a cercare se non hai trovato nessun alloggio diretto.
-> a pezzi
+> Il colore casa e quant'altro non va in conflitto con la leggenda tipo biglietti Disney e quant'altro? I colori non hanno un conflitto. Ti disorienta un po'?
+> della possibilità, se uno sceglie perché per sbaglio ci clicca, che lo può annullare.
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 4
-la apre la Controllo 3 con `create_session` (catena 3 di 8). Scritto da Controllo 3 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 5
+la apre la Controllo 4 con `create_session` (catena 4 di 8). Scritto da Controllo 4 il 22/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 4 · grafica e alloggi`
+Titolo: `🟩 🗼 Controllo 5 · colori e Annulla`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 4 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 5 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 01:08 · [AVVIO] Sei la chat parallela Controllo 3 di Parigi in tasca, linea «Controllo» … → avvio fatto; poi il messaggio di Mario passato dalla Controllo 2 («a pezzi», siti diretti con 3 aiutanti): C13 pezzo 1 e C14 fatti in locale, DOMANDA 1 della Controllo 3
+- 2026-11-22 01:35 · [AVVIO] Sei la chat parallela Controllo 4 di Parigi in tasca, linea «Controllo» … → avvio fatto, scorta Controllo 2 unita
+- 2026-11-22 10:02 · va bene → risposta alla DOMANDA 1 della Controllo 3 (scelta 1): v19 online
+- 2026-11-22 10:17 · Fai tutta la grafica e pubblica. I più vicini metti in ordine di tempo per arriv… → C13: v20 online (pezzi 2–4, ordine per tempo, Disney rosa, «Vedi i dettagli»)
+- 2026-11-22 10:27 · Attenzione che se ti va a vedere anche nel posto dove dormire, che lo scegli e t… → C13: v21 nel ramo (riquadro, avviso, pallini), non ancora online
+- 2026-11-22 10:30 · Il colore casa e quant'altro non va in conflitto con la leggenda tipo biglietti … → C13 «Mario 22/11 ~10:45»: piano per la Controllo 5 (colori, Annulla)
 
 Ultimo, intero:
-> [AVVIO] Sei la chat parallela Controllo 3 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+> Il colore casa e quant'altro non va in conflitto con la leggenda tipo biglietti Disney e quant'altro? I colori non hanno un conflitto. Ti disorienta un po'?
+> della possibilità, se uno sceglie perché per sbaglio ci clicca, che lo può annullare.
 
