@@ -2,7 +2,7 @@
    Prima prova la rete (pagina sempre aggiornata); se non risponde entro 4 secondi usa la copia salvata.
    Stesso metodo della guida di novembre, con un cassetto suo: le due pagine non si toccano. */
 const CASSETTO = 'parigi-natale-v1';
-const BASE = ['./', 'icona-192.png', 'icona-512.png', 'icona-180.png', 'manifest.webmanifest'];
+const BASE = ['./', 'icona-192.png', 'icona-512.png', 'icona-180.png', 'manifest.webmanifest', 'mappe/mercatini.jpg?v=1'];  // mappa dei mercatini: subito nel cassetto, serve a Parigi anche senza rete (C15)
 const FONT = /^https:\/\/fonts\.(googleapis|gstatic)\.com\//;
 
 self.addEventListener('install', (e) => {
