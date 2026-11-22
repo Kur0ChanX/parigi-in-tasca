@@ -169,15 +169,17 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       document.querySelector('.tyswitch [data-ty="bb"]').click(); await w();
       const bbB = vis(document.getElementById('scBB')), bbLink = !!document.querySelector('#scBB a[href*="jolie-appartement-pres-de-rer-a"]');
       document.querySelector('.tyswitch [data-ty="tutti"]').click(); await w();
-      const r8 = document.querySelector('#scD details[data-k="d-8"] .sc-m');
-      const chip = r8 ? r8.textContent : '';
-      const tuttiChip = righe().every((d) => !d.querySelector('.sc-m span') || /🏰 Disney \d+ min/.test(d.querySelector('.sc-m').textContent) && /RER/.test(d.querySelector('.sc-m').textContent) || /Libero solo dal 14|Esaurito/.test(d.querySelector('.sc-m').textContent));
+      // C13: nella riga 3 riquadri (Disney, RER, pulizia) con etichetta | numero grande | riga piccola
+      const kpi = (d) => [...d.querySelectorAll('.sc-k')].map((x) => [...x.children].map((c) => c.textContent).join('|')).join(' / ');
+      const r8 = document.querySelector('#scD details[data-k="d-8"]');
+      const chip = r8 ? kpi(r8) : '';
+      const tuttiChip = righe().every((d) => { const k = kpi(d); return k ? /^🏰 Disney\|\d+ min\|/.test(k) && /🚉 RER\|\d/.test(k) && /🧼 Pulizia\|/.test(k) : /Libero solo dal 14|Esaurito/.test(d.querySelector('.sc-m').textContent); });
       return { bt: bt.join(','), tutti, hotel, bbT, bbH, bbB, bbLink, chip, tuttiChip, mio: document.querySelector('#mio .mine-t').textContent, dovekm: (document.querySelector('#al-8 .dr') || {}).textContent || '' };
     });
     ok('v18: interruttore con «Tutti» per primo, «Tutti» mostra tutti e 35, «Hotel» meno', v.bt === 'tutti,hotel,bb,casa' && v.tutti === 35 && v.hotel > 0 && v.hotel < 35); if (v.bt !== 'tutti,hotel,bb,casa' || v.tutti !== 35) console.log(v);
     ok('v18: camera di Bussy visibile con «B&B» e «Tutti», nascosta con «Hotel», link Booking', v.bbT && v.bbB && !v.bbH && v.bbLink);
     // la riga mostra i km del blocco MAPPE (n. 8: 1,9 km), non i km a piedi del giorno (22/11: due funzioni col nome kmT)
-    ok('v18: nella riga Disney (minuti e km dai parchi) e RER a piedi, n. 8 = 1,9 km come la scheda', /🏰 Disney 13 min · 1,9 km/.test(v.chip) && /🚉 RER a piedi 8 min/.test(v.chip) && v.tuttiChip); if (!/1,9 km/.test(v.chip)) console.log(v.chip);
+    ok('v18: nella riga Disney (minuti e km dai parchi) e RER a piedi, n. 8 = 1,9 km come la scheda', /🏰 Disney\|13 min\|1,9 km/.test(v.chip) && /🚉 RER\|8 min\|a piedi/.test(v.chip) && v.tuttiChip); if (!/1,9 km/.test(v.chip) || !v.tuttiChip) console.log(v.chip);
     ok('v18: il mio consiglio è 4 notti al n. 8 Moxy (13→17)', /4 notti al n\. 8 Moxy/.test(v.mio));
   }
   // 21/11 sera: la pagina era larga 735 px su un telefono da 412 (classe .pc del contenitore uguale a quella dei pro/contro)
