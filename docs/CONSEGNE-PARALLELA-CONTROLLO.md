@@ -48,10 +48,10 @@ Testo da incollare:
 
 ## Messaggi di Mario di questa sessione
 Controllo Da fare: 0 voci aggiunte (ogni richiesta ha già la sua voce 👁 o 🐞).
-- 2026-11-22 11:40 · foto della mappa col buco grigio → v29 (pezzi richiesti di nuovo)
-- 2026-11-22 11:49 · «Vedi qua la foto è coperta, l'immagine.» (foto) → DOMANDA 1 con 2 proposte
-- 2026-11-22 11:52 · «Conta che vabbè, la giornata di priorità…» (priorità dei giorni, vai da solo, indice, numero di versione, aggiorna, «quella a sinistra, quella sotto») → v26; giovedì = Prossimi passi 2
-- 2026-11-22 12:00 · «No, facciamo quella che consigli tu, scusa, foto 2…» → v27
-- 2026-11-22 12:04 · «Vedi qua che l'indice, mettimi gli shortcut…» (foto) → v28
-- 2026-11-22 12:08 · «Quando parlo di schermata principale intendo questa…» (foto) → v28
-- 2026-11-22 12:12 · slitta nel cielo (foto di riferimento) → C18, Prossimi passi 1
+- 2026-11-22 11:40 · [AVVIO] Sei la chat parallela Controllo 7 di Parigi in tasca, linea «Controllo» … → v29: pezzi della mappa richiesti di nuovo (C15)
+- 2026-11-22 11:49 · Vedi qua la foto è coperta, l'immagine. → DOMANDA 1 con 2 proposte (C16), poi scelta la 2 → v27
+- 2026-11-22 11:52 · Conta che vabbè, la giornata di priorità di curare i dettagli è quella a Parigi,… → v26 (numero della versione, Aggiorna), DOMANDA 1 = 1 poi cambiata; giovedì 17 = Prossimi passi 2 (C17)
+- 2026-11-22 12:00 · No, facciamo quella che consigli tu, scusa, foto 2, scusa. Per quello ti dico, v… → DOMANDA 1 = 2: fila in alto, v27 (C16)
+- 2026-11-22 12:04 · Vedi qua che l'indice, mettimi gli shortcut, anche giro di mercatini più piccoli… → v28: indice di 12 tasti, testata e barra compatte (C17)
+- 2026-11-22 12:09 · Quando parlo di schermata principale intendo questa, che la facciamo diventare u… → vedi Prossimi passi
+- 2026-11-22 12:15 · Metti che ogni tanto passa questo nel cielo, stai attento bene a non renderlo tr… → vedi Prossimi passi
