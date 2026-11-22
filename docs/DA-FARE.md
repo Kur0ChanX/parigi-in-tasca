@@ -4,9 +4,9 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v32 · 🟩 Controllo 9 · 22/11 · luci della testata (finestre, proiezioni, lucine, faro, nuvole), fila dei giorni su una riga, PC in due colonne
-🧪 In prova: v33 · 🟩 Controllo 10 · 22/11 · slitta a colori, regali visibili, castello addobbato con lucine, decorazioni in rilievo, note delle versioni tecniche
-⏳ Dopo: —
+🚀 Online: v33 · 🟩 Controllo 12 · 22/11 · castello dal disegno di Mario con ombre e stelline, slitta a pezzi (renne, braccia di Jack, Zero), mercatini con neve, lucine e merce vera, guida Disneyland nella schermata principale e nei giorni Disney (PR 34)
+🧪 In prova: —
+⏳ Dopo: v34 · 🟩 Controllo 12 · pagina intera più natalizia (foto a Mario prima)
 
 ## 0. Aspetta Mario
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
