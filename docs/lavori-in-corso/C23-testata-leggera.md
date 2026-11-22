@@ -7,6 +7,9 @@
 - 22/11 ~20:1x (Controllo 18, dopo la DOMANDA 1 sul faro), intero: «Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata / anche nella 39 la vedevo non caticata a volte la luna»
   → la testata aspetta: prima la guida (C24). La luna «non caricata» c’era a volte anche nella v39: l’ipotesi «luna sfocata per i gruppi della v40» si indebolisce; nuova ipotesi da provare dopo: l’immagine della luna (webp dentro l’SVG) a volte non viene disegnata e resta solo il bagliore sfocato.
 
+- 22/11 22:09 (foto della v41 delle 22:08, `archivio/2026-11-22-c23-v41/mario-2208-v41-luna-sfocata.jpg`), intero: «andava bene poi invece»
+  → anche nella v41 la luna diventa una macchia sfocata senza crateri (resta solo il bagliore). Indizio nuovo: **all’apertura è giusta, poi si rovina**. Ipotesi da provare (dopo la guida): dopo un po’ il telefono butta via l’immagine della luna (memoria della grafica) e non la ridisegna; il bagliore sfocato, animato e con il filtro, resta. Prova possibile: luna in un pezzo solo, ferma, col bagliore già dentro l’immagine (niente filtro né animazioni intorno), oppure luna fuori dal disegno animato.
+
 ## Cosa si vede nel video della v40 (Controllo 18, fotogrammi)
 - Riga dritta nel cielo all’altezza della cima della Torre: sono i due fasci del faro (triangoli lunghi e sottili), anche senza zoom.
 - Pagina allargata con due dita (secondi 5–7): rettangoli a scatti, casette e Torre che spariscono a pezzi = pezzi di disegno (tasselli) che il telefono non fa in tempo a ridisegnare.
