@@ -183,7 +183,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     ok('v18: interruttore con «Tutti» per primo, «Tutti» mostra tutti e 35, «Hotel» meno', v.bt === 'tutti,hotel,bb,casa' && v.tutti === 35 && v.hotel > 0 && v.hotel < 35); if (v.bt !== 'tutti,hotel,bb,casa' || v.tutti !== 35) console.log(v);
     ok('v18: camera di Bussy visibile con «B&B» e «Tutti», nascosta con «Hotel», link Booking', v.bbT && v.bbB && !v.bbH && v.bbLink);
     // la riga mostra i km del blocco MAPPE (n. 8: 1,9 km), non i km a piedi del giorno (22/11: due funzioni col nome kmT)
-    ok('v18: nella riga Disney (minuti e km dai parchi) e RER a piedi, n. 8 = 1,9 km come la scheda', /🏰 Disney\|13 min\|1,9 km/.test(v.chip) && /🚉 RER\|8 min\|a piedi/.test(v.chip) && v.tuttiChip); if (!/1,9 km/.test(v.chip) || !v.tuttiChip) console.log(v.chip);
+    // Mario 22/11 ~11:00 «Disney non mettere i chilometri, ma quanto ci vuole»: n. 8 = 8 min a piedi + 3 RER + 2 + 3 di attesa del treno
+    ok('Riga Disney senza km: minuti per arrivare (attese comprese) e come; RER a piedi; n. 8 = 16 min a piedi + RER', /🏰 Disney\|16 min\|a piedi \+ RER · attese comprese/.test(v.chip) && !/km/.test(v.chip) && /🚉 RER\|8 min\|a piedi/.test(v.chip) && v.tuttiChip); if (!/16 min/.test(v.chip) || /km/.test(v.chip) || !v.tuttiChip) console.log(v.chip);
     ok('C14: seconda camera a Bussy (Airbnb 15868262) nel riquadro B&B, conteggio «B&B» = righe + 2 camere', v.bb2 && v.bbN === v.bbR + 2); if (!(v.bb2 && v.bbN === v.bbR + 2)) console.log(v.bb2, v.bbN, v.bbR);
     ok('v18: il mio consiglio è 4 notti al n. 8 Moxy (13→17)', /4 notti al n\. 8 Moxy/.test(v.mio));
   }

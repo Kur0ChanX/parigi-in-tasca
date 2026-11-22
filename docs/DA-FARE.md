@@ -5,7 +5,7 @@
 
 ## Nastro delle versioni
 🚀 Online: v22 · 🟩 Controllo 5 · 22/11 10:49 · spa e valigie
-🧪 In prova: —
+🧪 In prova: v23 · 🟩 Controllo 5 · colori e minuti
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
