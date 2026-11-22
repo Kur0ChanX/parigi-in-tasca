@@ -470,6 +470,41 @@ table.cmp td.r{white-space:nowrap}
 .mk-s.u>span{transform:translateY(-140%)}.mk-s.d>span{transform:translateY(40%)}
 .mk-s .lb{min-width:20px;height:18px;padding:0 4px;font-size:.7rem}
 .mk-c{position:absolute;right:0;bottom:0;padding:2px 6px;border-top-left-radius:6px;background:rgba(255,255,255,.88);color:#333;font:600 .66rem/1.3 var(--text)}
+/* C15 · mappa del giro dei mercatini (Mario 22/11 «una mappa di Parigi con i mercatini … dove sono»): immagine IGN, sopra numeri, linea e grigi */
+.mk-map{margin:var(--s4) 0 var(--s3)}
+.mk-box{position:relative;aspect-ratio:4/3;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--rule);background:#EEF0F2;color:#0D1838}
+.mk-box>img{display:block;width:100%;height:100%}
+.mk-box>svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.mk-r{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.mk-r.h{stroke:#fff;stroke-width:7px;opacity:.9}
+.mk-r.p{stroke:#C8102E;stroke-width:3.5px}
+.mk-r.m{stroke:#1F4FB4;stroke-width:3.5px;stroke-dasharray:7 6}
+.mk-ld{stroke:#0D1838;stroke-width:1.5px;vector-effect:non-scaling-stroke}
+.mk-pt{fill:#0D1838}
+.mk-b{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:26px;height:26px;padding:0;border-radius:50%;background:#C8102E;color:#fff;font:800 .85rem/1 var(--display);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.45);cursor:pointer;font-variant-numeric:tabular-nums}
+.mk-b.top{border-color:#F6C964}
+.mk-b:focus-visible{outline:3px solid #0D1838;outline-offset:2px}
+.mk-p,.mk-g>span,.mk-f{position:absolute;padding:2px 6px;border-radius:6px;background:rgba(255,255,255,.93);color:#0D1838;font:700 .72rem/1.2 var(--text);white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.mk-p{transform:translate(7px,-50%)}
+.mk-g{position:absolute;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#8A90A0;border:2px solid #fff}
+.mk-g>span{top:50%;left:11px;transform:translateY(-50%);color:#4A5060}
+.mk-g.l>span{left:auto;right:11px}
+.mk-f{color:#4A5060}
+.mk-f.l{left:4px;transform:translateY(-50%)}.mk-f.r{right:4px;transform:translateY(-50%)}.mk-f.t{top:4px}.mk-f.b{bottom:4px}
+.mk-lg{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin:var(--s2) 0 0;color:var(--mute);font-size:.88rem}
+.mk-sw{display:inline-grid;place-items:center;width:30px;height:18px;margin-right:6px;border-radius:5px;background:#fff;vertical-align:middle}
+.mk-sw i{display:block;width:22px;border-top:3.5px solid #C8102E}
+.mk-sw i.m{border-top:3.5px dashed #1F4FB4}
+.mk-sw.o i{width:10px;height:10px;border:2.5px solid #F6C964;border-radius:50%;background:#C8102E}
+.mk-sw.g i{width:9px;height:9px;border:0;border-radius:50%;background:#8A90A0}
+.mk-zoom{margin-top:var(--s3)}
+.mk-map:not(.big) .mk-x{display:none}
+/* «Ingrandisci»: la mappa alla sua misura vera (1400 px), si sposta col dito; ✕ o «indietro» la chiudono */
+.mk-map.big{position:fixed;inset:0;z-index:300;margin:0;overflow:auto;background:rgba(5,10,30,.95);overscroll-behavior:contain}
+.mk-map.big .mk-box{width:1400px;max-width:none;border-radius:0;border:0}
+.mk-map.big .mk-lg,.mk-map.big .mk-zoom{display:none}
+.mk-map.big .mk-x{display:inline-flex;position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:10px;z-index:301}
+html.mk-lock{overflow:hidden}
 .dr{list-style:none;margin:0;padding:0;display:grid}
 .dr li{display:grid;grid-template-columns:1fr auto;gap:var(--s2) var(--s3);align-items:center;padding:var(--s2) 0;border-top:1px solid var(--rule)}
 .dr-k{display:block;font-weight:700}
@@ -811,6 +846,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
  <div class="sec-head"><p class="kicker">🎄 Mercatini di Natale · domenica 13</p><h2 id="h-merc">Il giro dei mercatini</h2><p class="sec-ans" id="a-merc">7 tappe da Notre-Dame agli Champs-Élysées, senza mai tornare indietro.</p>
  <p class="muted small">Di giorno gli artigiani, al tramonto la terrazza, col buio le luci. Si parte appena lasciate le valigie. Toccate una tappa per sapere perché andarci, cosa mangiare, gli orari di domenica e la strada.</p></div>
  <div class="mk-al" id="mkAl" aria-live="polite"></div>
+ <div class="mk-map" id="mkMap"></div>
  <div class="mk-btns"><a class="btn" href="#mega" data-day="0">Orari minuto per minuto</a><a class="btn ghost" href="https://www.google.com/maps/dir/March%C3%A9%20de%20No%C3%ABl%20Notre-Dame%2C%20Square%20Ren%C3%A9%20Viviani%2C%20Paris/Place%20Saint-Michel%2C%20Paris/%C3%89glise%20de%20Saint-Germain-des-Pr%C3%A9s%2C%20Paris/Galeries%20Lafayette%20Haussmann%2C%2040%20Boulevard%20Haussmann%2C%20Paris/Place%20Vend%C3%B4me%2C%20Paris/Jardin%20des%20Tuileries%2C%20Paris/March%C3%A9%20de%20No%C3%ABl%20des%20Champs-%C3%89lys%C3%A9es%2C%20Paris" target="_blank" rel="noopener">Tutto il giro su Google Maps</a></div>
  <ol class="mk-giro">
   <li class="mk-tappa mk-top"><details><summary><span class="mk-n">1</span><span class="mk-t"><b>Notre-Dame · mercatino di Square Viviani</b><small>Mattina · ⭐ Da non perdere</small></span></summary>
@@ -1456,6 +1492,9 @@ const MPV=1,MP={
  rh:{h:[56.7, 39.2],m:[[43.3, 60.8, "CL", "r", ""]],km:["1,2 km", "32 km", "15 km"]}
 };
 /* FINE MAPPE */
+/* MAPPA MERCATINI: fatta da tools/fai-mappa-mercatini.py, non modificare a mano */
+const MKM={"v":1,"w":1400,"h":1050,"t":{"1":[75.41,90.98],"2":[67.69,86.11],"3":[48.64,83.21],"4":[42.77,9.01],"5":[41.32,31.87],"6":[31.8,39.65],"7":[15.14,29.68]},"b":{"1":[75.93,91.31],"2":[67.17,85.78],"3":[48.64,83.21],"4":[42.77,9.01],"5":[41.32,31.87],"6":[31.8,39.65],"7":[15.14,29.68]},"r":[["p",[[75.41,90.98],[67.69,86.11],[48.64,83.21],[47.97,62.39],[53.3,56.88],[54.79,51.51]]],["m",[[54.79,51.51],[47.47,11.18]]],["p",[[47.47,11.18],[42.77,9.01],[41.32,31.87],[31.8,39.65],[26.22,33.66],[15.14,29.68]]]],"p":[["Louvre",[53.3,56.88]]],"g":[["Hôtel de Ville",[84.85,74.47]],["Les Halles",[68.97,51.39]]],"f":[["Torre Eiffel","l",65.6],["La Défense","l",19.5],["Montmartre","t",54.9],["Gare de l'Est","r",14]]};
+/* FINE MAPPA MERCATINI */
 /* ---------- Dov'è: mappa e distanze nella scheda di ogni alloggio (C5) ----------
    Orari ufficiali (research_notes/…/trasporti_bagagli.md): RER A Val d'Europe→Châtelet 39 min, Chessy→Châtelet 42,
    Val d'Europe→Gare de Lyon 36, Chessy→Gare de Lyon 39, Val d'Europe→Chessy 3; metro 14 Gare de Lyon→Orly 23 (Paris Aéroport);
@@ -1647,6 +1686,27 @@ const spaSun=d=>{const g=d.full.findIndex(x=>x.ti.startsWith("Galeries"));if(g<0
  d.cutNote=P.spa?"Si chiude alle 18:50 per essere in spa alle 20:20. In ritardo? Saltate Hôtel de Ville, Saint-Michel, il Louvre e place Vendôme.":`Si chiude alle 18:50: ${P.chi||'il B&B'} accetta arrivi solo fino alle 22:00. In ritardo? Saltate Hôtel de Ville, Saint-Michel, il Louvre e place Vendôme.`;
 };
 /* sezione Mercatini: il consiglio segue l'alloggio scelto (Mario 21/11 ~19:47 «in base all'hotel che scegliamo mi dai il consiglio sui mercatini») */
+/* C15 · mappa del giro dei mercatini (dati: blocco MAPPA MERCATINI). Toccando un numero si apre la sua tappa. */
+const mkMappa=()=>{const el=$('#mkMap');if(!el)return;const d=MKM,Y=d.h/d.w,yy=v=>(v*Y).toFixed(2),P=p=>p[0]+','+yy(p[1]),A={l:'←',r:'→',t:'↑',b:'↓'},
+ li=[...document.querySelectorAll('.mk-giro>li')],
+ ln=['h',''].map(c=>d.r.map(([k,ps])=>`<polyline class="mk-r ${c||k}" points="${ps.map(P).join(' ')}"/>`).join('')).join(''),
+ ld=Object.keys(d.t).filter(n=>d.t[n]+''!==d.b[n]+'').map(n=>`<line class="mk-ld" x1="${d.t[n][0]}" y1="${yy(d.t[n][1])}" x2="${d.b[n][0]}" y2="${yy(d.b[n][1])}"/><circle class="mk-pt" cx="${d.t[n][0]}" cy="${yy(d.t[n][1])}" r=".8"/>`).join(''),
+ bs=Object.keys(d.b).map(n=>{const x=li[n-1],nome=x?(x.querySelector('.mk-t b')||{}).textContent||'':'';return `<button type="button" class="mk-b${x&&x.classList.contains('mk-top')?' top':''}" data-n="${n}" style="left:${d.b[n][0]}%;top:${d.b[n][1]}%" aria-label="Tappa ${n}: ${esc(nome)}">${n}</button>`}).join(''),
+ pp=d.p.map(([n,p])=>`<span class="mk-p" style="left:${p[0]}%;top:${p[1]}%">${esc(n)}</span>`).join(''),
+ gg=d.g.map(([n,p])=>`<span class="mk-g${p[0]>60?' l':''}" style="left:${p[0]}%;top:${p[1]}%"><span>✕ ${esc(n)}</span></span>`).join(''),
+ ff=d.f.map(([n,s,v])=>`<span class="mk-f ${s}" style="${s==='l'||s==='r'?'top':'left'}:${v}%">${s==='r'?esc(n)+' '+A[s]:A[s]+' '+esc(n)}</span>`).join('');
+ el.innerHTML=`<div class="mk-box"><img src="mappe/mercatini.jpg?v=${d.v}" width="${d.w}" height="${d.h}" loading="lazy" alt="Mappa del centro di Parigi col giro dei mercatini: 7 tappe da Notre-Dame agli Champs-Élysées"><svg viewBox="0 0 100 ${yy(100)}" preserveAspectRatio="none" aria-hidden="true">${ln}${ld}</svg>${pp}${gg}${ff}${bs}<span class="mk-c">© IGN</span></div><button type="button" class="btn mk-x">✕ Chiudi</button><p class="mk-lg"><span><span class="mk-sw"><i></i></span>a piedi</span><span><span class="mk-sw"><i class="m"></i></span>metro</span><span><span class="mk-sw o"><i></i></span>da non perdere</span><span><span class="mk-sw g"><i></i></span>da saltare</span></p><p class="mk-lg">Toccate un numero per aprire la sua tappa. La linea dice l'ordine; la strada passo per passo è dentro ogni tappa.</p><button type="button" class="btn ghost mk-zoom">⤢ Ingrandisci la mappa</button>`;
+ const piccola=()=>{el.classList.remove('big');document.documentElement.classList.remove('mk-lock')};
+ el.onclick=e=>{const t=e.target;
+  if(t.closest('.mk-zoom')){el.classList.add('big');document.documentElement.classList.add('mk-lock');try{history.pushState({mk:1},'')}catch(_){}requestAnimationFrame(()=>{el.scrollLeft=(el.scrollWidth-el.clientWidth)/2;el.scrollTop=(el.scrollHeight-el.clientHeight)/2});return}
+  if(t.closest('.mk-x')){if(history.state&&history.state.mk)history.back();else piccola();return}
+  const b=t.closest('.mk-b');if(!b)return;
+  if(el.classList.contains('big')){if(history.state&&history.state.mk)history.back();piccola()}
+  const x=li[b.dataset.n-1],dt=x&&x.querySelector('details');if(dt){dt.open=true;requestAnimationFrame(()=>x.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'}))}};
+ addEventListener('popstate',()=>{if(el.classList.contains('big'))piccola()});
+ addEventListener('keydown',e=>{if(e.key==='Escape'&&el.classList.contains('big')){if(history.state&&history.state.mk)history.back();else piccola()}});
+};
+mkMappa();
 const mkAl=()=>{const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode==='bus'||P.mode==='busrer';let v,li;
  if(PN){v="Tutto il giro con calma, e la sera restate quanto volete";
   li=["Champs-Élysées anche fino alle 22–23: il mercatino chiude alle 23:00.",`Metro fino a ${RS[PN.st].n}, poi ${PN.w} minuti a piedi fino a ${esc(PN.n)}: niente valigie e niente treni.`,`Lunedì mattina RER A con le valigie: uscite alle ${T(monB(PN,CHO).out)}.`]}
