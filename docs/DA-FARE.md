@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v22 · 🟩 Controllo 5 · 22/11 10:49 · spa e valigie
-🧪 In prova: v23 · 🟩 Controllo 6 · colori, minuti e km
+🚀 Online: v23 · 🟩 Controllo 6 · 22/11 11:07 · colori, minuti e km
+🧪 In prova: —
 ⏳ Dopo: —
 
 ## 0. Aspetta Mario
