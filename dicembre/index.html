@@ -497,6 +497,15 @@ table.cmp td.r{white-space:nowrap}
 .tm-vai{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--s3)}
 .tm-vai button{min-height:40px;padding:6px 12px;border:2px solid var(--rule);border-radius:999px;background:var(--surface);color:var(--ink);font:700 .9rem/1.1 var(--text);cursor:pointer}
 .tm-vai button[aria-pressed="true"]{border-color:#F6C964}
+/* C15 (Mario 22/11 ~11:42 «fammela mettere a schermo intero… il pinch to zoom… sbloccalo, e anche pinch out»): mappa a tutto schermo, ✕ o «indietro» per uscire */
+.tm-vai .tm-fs{background:var(--lamp);color:var(--lamp-ink);border-color:transparent}
+.tm-box.pieno{position:fixed;inset:0;z-index:300;display:flex;flex-direction:column;background:var(--bg);padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.tm-box.pieno .tm-vai{margin:0;padding:8px;flex-wrap:nowrap;overflow-x:auto}
+.tm-box.pieno .tm-vai button{flex:0 0 auto}
+.tm-box.pieno .tm{flex:1;height:auto;min-height:0;margin:0;border-radius:0;border:0}
+body.tm-aperta{overflow:hidden}
+body.tm-aperta #mappa>.wrap{z-index:300}
+body.tm-aperta .tabbar,body.tm-aperta .vnum,body.tm-aperta .sc-avviso,body.tm-aperta .daybar{visibility:hidden}
 .tm .leaflet-container{font:600 .85rem/1.3 var(--text)}
 .tm .leaflet-popup-content{margin:10px 12px;color:#0D1838;font:500 .9rem/1.35 var(--text)}
 .tm .leaflet-popup-content a{color:#1F4FB4;font-weight:800}
@@ -748,6 +757,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
+ {v:29,d:'22/11',n:['Mappa del viaggio a schermo intero (⛶), si chiude con ✕ o col tasto indietro.','Mappa: zoom libero, da tutta l\'Île-de-France fino alle singole vie; i pezzi che non arrivano si richiedono da soli.']},
  {v:28,d:'22/11',n:['Indice nella schermata principale: 12 tasti per le cose più importanti, tutti in vista appena apri.','Titolo, colori e barra delle schede più compatti: più spazio per la pagina.','Tasto «Volo 17»: porta dritto a giovedì, con gli orari per Orly.']},
  {v:27,d:'22/11',n:['Fila dei giorni in alto: resta ferma mentre scorri; toccando un giorno si parte dal suo titolo.']},
  {v:26,d:'22/11',n:['Numero della versione in alto: toccalo per le novità e, se ce n\'è una più nuova, per «Aggiorna versione».','Fila dei giorni più sottile, in basso sopra le schede: copre meno il disegno del giorno.']},
@@ -975,10 +985,10 @@ const VERSIONI=[
 
 <section id="mappa" aria-labelledby="h-mappa"><div class="wrap">
  <div class="sec-head"><p class="kicker">🗺️ Dove sono le cose</p><h2 id="h-mappa">Mappa del viaggio</h2><p class="sec-ans">Orly, Parigi e Disneyland in una mappa sola: allargate con due dita, spostate col dito.</p></div>
- <div class="tm-vai" role="group" aria-label="Mostra sulla mappa"><button type="button" data-tmv="tutto">🧭 Tutto</button><button type="button" data-tmv="giro">🎄 Mercatini</button><button type="button" data-tmv="disney">🏰 Disney</button><button type="button" data-tmv="orly">✈️ Orly</button><button type="button" data-tmv="al">🛏️ Il vostro alloggio</button></div>
- <div class="tm" id="tmMap" role="region" aria-label="Mappa del viaggio"><p class="tm-no">La mappa si apre qui…</p></div>
+ <div class="tm-box"><div class="tm-vai" role="group" aria-label="Mostra sulla mappa"><button type="button" class="tm-fs" aria-pressed="false">⛶ Schermo intero</button><button type="button" data-tmv="tutto">🧭 Tutto</button><button type="button" data-tmv="giro">🎄 Mercatini</button><button type="button" data-tmv="disney">🏰 Disney</button><button type="button" data-tmv="orly">✈️ Orly</button><button type="button" data-tmv="al">🛏️ Il vostro alloggio</button></div>
+ <div class="tm" id="tmMap" role="region" aria-label="Mappa del viaggio"><p class="tm-no">La mappa si apre qui…</p></div></div>
  <p class="tm-lg"><span><span class="tm-sw"><i></i></span>a piedi</span><span><span class="tm-sw"><i class="m"></i></span>metro</span><span><b class="tm-dot r">1</b>tappa del giro (bordo d'oro = da non perdere)</span><span><b class="tm-dot g"></b>mercatino da saltare</span><span><b class="tm-dot a"></b>altri alloggi (colore del tipo)</span></p>
- <p class="muted small">Toccate un segno per sapere cos'è; dalla finestrella aprite la tappa o la scheda dell'alloggio. Con poco zoom si vedono solo i posti grandi; allargando compaiono tappe, stazioni e alloggi. La mappa si ferma ad Orly, Parigi e Disneyland. Senza internet si vedono le zone già guardate. Mappa: © IGN (Plan IGN, mappa ufficiale francese).</p>
+ <p class="muted small">Toccate un segno per sapere cos'è; dalla finestrella aprite la tappa o la scheda dell'alloggio. Con poco zoom si vedono solo i posti grandi; allargando compaiono tappe, stazioni e alloggi. Con «⛶ Schermo intero» la vedete grande; si allarga e si allontana quanto volete. Senza internet si vedono le zone già guardate. Mappa: © IGN (Plan IGN, mappa ufficiale francese).</p>
 </div></section>
 
 <section id="costi" aria-labelledby="h-costi"><div class="wrap">
@@ -1812,9 +1822,9 @@ const tmAl=()=>{if(!tmM)return;const L1=[],h=AL.find(x=>x.id===CHO);if(tmMe)tmM.
 let tmVicini=null;
 const tmApri=()=>{const el=$('#tmMap');if(!el||tmM)return;el.innerHTML='<p class="tm-no">Carico la mappa…</p>';
  tmCarica().then(()=>{if(tmM)return;el.innerHTML='';
-  const B=L.latLngBounds(TM.b),m=L.map(el,{maxBounds:B.pad(.04),maxBoundsViscosity:1,zoomSnap:.5,zoomDelta:.5,maxZoom:17,attributionControl:false});tmM=m;window.pdnTM=m;
+  const B=L.latLngBounds(TM.b),BB=L.latLngBounds([[48.05,1.35],[49.3,3.65]]),m=L.map(el,{maxBounds:BB,maxBoundsViscosity:.8,zoomSnap:.5,zoomDelta:.5,minZoom:8,maxZoom:19,attributionControl:false});/* zoom libero (Mario ~11:42): da tutta l'Île-de-France fino al 19, il massimo del Plan IGN (capabilities lette il 22/11) */tmM=m;window.pdnTM=m;
   L.control.attribution({prefix:false}).addAttribution('© <a href="https://geoservices.ign.fr/" target="_blank" rel="noopener">IGN</a> Plan IGN').addTo(m);
-  let errori=0;L.tileLayer('https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image/png',{maxZoom:17,bounds:B.pad(.6),crossOrigin:true}).on('tileerror',()=>{if(++errori===4&&!navigator.onLine){const n=document.createElement('p');n.className='tm-no';n.style.cssText='position:absolute;left:8px;right:8px;bottom:8px;z-index:500;background:#fff;border-radius:10px;padding:8px 10px';n.textContent='Senza internet si vedono solo le zone già guardate prima.';el.appendChild(n)}}).addTo(m);
+  let errori=0;L.tileLayer('https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image/png',{maxZoom:19,bounds:BB.pad(.1),keepBuffer:3,crossOrigin:true}).on('tileerror',e=>{/* buco grigio (foto di Mario 11:42): un pezzo non arrivato si richiede da solo, fino a 3 volte */const t=e.tile,n=+(t.dataset.prova||0);if(n<3&&navigator.onLine){t.dataset.prova=n+1;const u=t.src.replace(/&prova=\d+$/,'');setTimeout(()=>{t.src=u+'&prova='+(n+1)},800*(n+1))}if(++errori===4&&!navigator.onLine){const n=document.createElement('p');n.className='tm-no';n.style.cssText='position:absolute;left:8px;right:8px;bottom:8px;z-index:500;background:#fff;border-radius:10px;padding:8px 10px';n.textContent='Senza internet si vedono solo le zone già guardate prima.';el.appendChild(n)}}).addTo(m);
   const li=[...document.querySelectorAll('.mk-giro>li')],sempre=[],vicino=[],lontano=[];
   TM.r.forEach(([k,ps])=>{vicino.push(L.polyline(ps,{color:'#fff',weight:7,opacity:.9,interactive:false}));vicino.push(L.polyline(ps,{color:k==='m'?'#1F4FB4':'#C8102E',weight:3.5,dashArray:k==='m'?'7 6':null,interactive:false}))});
   TM.t.forEach((p,i)=>{const x=li[i],nome=x?(x.querySelector('.mk-t b')||{}).textContent||'':'',sub=x?(x.querySelector('.mk-t small')||{}).textContent||'':'';
@@ -1827,13 +1837,15 @@ const tmApri=()=>{const el=$('#tmMap');if(!el||tmM)return;el.innerHTML='<p class
    else vicino.push(L.marker(p,{icon:tmIco('tm-g',`<i style="background:#0D1838"></i><span>${esc(n)}</span>`,14,14),interactive:false}))});
   AL.forEach(h=>{const p=TM.a[h.id];if(!p)return;vicino.push(L.marker(p,{icon:tmIco('tm-a ty-'+tyOf(h.sub),'<i></i>',16,16),title:`n. ${h.id} ${h.n}`}).bindPopup(`<b>n. ${h.id} ${esc(h.n)}</b><br><small>${esc(h.sub)}</small><br><a href="#al-${h.id}">Apri la scheda ›</a>`))});
   L.layerGroup(sempre).addTo(m);const gV=L.layerGroup(vicino),gL=L.layerGroup(lontano);
-  const minZ=()=>{m.setMinZoom(0);const z=m.getBoundsZoom(B,false);m.setMinZoom(Math.floor(z*2)/2)};
   tmVicini=()=>{if(m.getZoom()>=12.5){m.removeLayer(gL);gV.addTo(m)}else{m.removeLayer(gV);gL.addTo(m)}};
-  m.on('zoomend',tmVicini);m.on('resize',minZ);
-  m.fitBounds(B);minZ();tmAl();tmVai(tmVista);
+  m.on('zoomend',tmVicini);
+  m.fitBounds(B);tmAl();tmVai(tmVista);
   if('ResizeObserver' in window)new ResizeObserver(()=>m.invalidateSize()).observe(el);
  }).catch(()=>{el.innerHTML='<p class="tm-no">La mappa ha bisogno di internet la prima volta che si apre. Riprovate con la rete: poi le zone già guardate restano anche senza.</p>';tmM=null});};
 {const el=$('#tmMap');if(el){if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();tmApri()}},{rootMargin:'300px'});io.observe(el)}else tmApri()}}
+{const box=$('.tm-box'),fs=$('.tm-fs');const pieno=(on,daStoria)=>{if(!box||on===box.classList.contains('pieno'))return;box.classList.toggle('pieno',on);document.body.classList.toggle('tm-aperta',on);fs.textContent=on?'✕ Chiudi':'⛶ Schermo intero';fs.setAttribute('aria-pressed',on);
+ if(on){if(!tmM)tmApri();history.pushState({tmPieno:1},'')}else if(!daStoria&&history.state&&history.state.tmPieno)history.back();requestAnimationFrame(()=>{if(tmM)tmM.invalidateSize()})};window.pdnTmPieno=pieno;
+ if(fs)fs.addEventListener('click',()=>pieno(!box.classList.contains('pieno')));addEventListener('popstate',()=>pieno(false,true));addEventListener('keydown',e=>{if(e.key==='Escape')pieno(false)})}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-tmv]');if(b){tmVista=b.dataset.tmv;if(tmM)requestAnimationFrame(()=>{tmM.invalidateSize();tmVai(tmVista)});else tmApri();return}
  const a=e.target.closest('#tmMap a[data-tappa]');if(a){const x=document.querySelectorAll('.mk-giro>li')[a.dataset.tappa-1],dt=x&&x.querySelector('details');if(dt){dt.open=true;setTimeout(()=>x.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'}),60)}}});
 const mkAl=()=>{tmAl();const h=AL.find(x=>x.id===CHO),st=SN[P.sunSt],bus=P.mode==='bus'||P.mode==='busrer';let v,li;
