@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (22/11/2026 19:27 ora italiana)
+# Ultima risposta di Claude (22/11/2026 20:07 ora italiana)
 
-Titolo verde: vado avanti con gli itinerari.
+La promessa sulla v41 è scritta nel «Da fare» e salvata su GitHub; aspetto la fine delle prove.
