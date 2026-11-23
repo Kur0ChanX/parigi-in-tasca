@@ -9,7 +9,6 @@
 ⏳ Dopo: orari RER A del 13–17/12 (il 23/11 ancora no, sito fino al 6/12; sveglia 26/11 10:17 della Controllo 25)
 
 ## 0. Aspetta Mario
-- 23/11 · ❓ · 🟩 Controllo 28 · C28 · DOMANDA 1: in quali zone cerco i ristoranti? Scelte: 1 · le tre zone del viaggio (Saint-Germain, centro la sera, Val d'Europe e Disney Village) · 2 · tutta Parigi · 3 · solo Parigi. Consiglio: 1 (vado con questa). 📌 Di cosa parliamo: a Parigi solo domenica, lun–mer cene vicino all'alloggio.
 - 23/11 · ❓ · 🟩 Controllo 28 · C28 · DOMANDA 2: quanto spendere a testa nei ristoranti? Scelte: 1 · un po' di tutto, segnato € / €€ / €€€ · 2 · solo fino a 50 € · 3 · anche lusso. Consiglio: 1 (vado con questa).
 - 23/11 · 🛑 · 🟨 Controllo 25 · C27 · guarda la v46 sul telefono (se c’è ancora «v45»: numerino in alto → «Aggiorna versione») e lascia la testata in vista mentre passa la slitta (parte 5 s dopo l’apertura): Torre, faro, slitta e Zero spariscono ancora per un attimo? Scrivi cosa vedi, anche «ok». 📌 A cosa serve: chiudere lo sfarfallio (C27); se resta, mandami un video di 30 s.
 - 22/11 · 🛑 · 🟩 Controllo 14 · DOMANDA 1: gli alloggi «spenti» (n. 18, 20, 21: su Airbnb liberi solo dal 14) come li mostro? 📌 Di cosa parliamo: passo 2 di «Scegli», righe grigie quando avete scelto 4 notti dal 13. Scelte: 1 · in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché · 2 · nascosti da soli finché scegliete 4 notti · 3 · come ora, con la scritta «non libero il 13» più chiara. Consiglio 1.

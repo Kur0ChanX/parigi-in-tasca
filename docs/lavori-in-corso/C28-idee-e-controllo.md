@@ -28,3 +28,4 @@
 - Meteo: Open-Meteo non provabile da qui il 23/11 (limite giornaliero del proxy condiviso: 429); nella prova della web app si finge la risposta.
 - Ristoranti: 3 aiutanti in ricerca (file JSON nello scratchpad, poi in `research_notes/`).
 - 23/11 Mario «metti Google, The Fork e TripAdvisor»: in ogni scheda i voti dei tre siti (con numero di recensioni e data), ognuno col suo link; detto ai 3 aiutanti in corsa.
+- 23/11 Mario (risposta alla DOMANDA 1): «metti in Parigi in generale, in posti dove si può arrivare tranquillamente con i mezzi … non mandarmi a un'ora di distanza per mangiare un piatto di pasta» → tutta Parigi entro ~30 min coi mezzi da Châtelet e ~8 min a piedi da una fermata; 4° aiutante sui quartieri fuori dal giro; in ogni scheda fermata e minuti. Val d'Europe resta per le cene lun–mer.
