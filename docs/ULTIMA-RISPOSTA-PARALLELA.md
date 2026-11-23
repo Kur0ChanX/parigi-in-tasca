@@ -1,13 +1,8 @@
-# Ultima risposta di Claude (23/11/2026 11:38 ora italiana)
+# Ultima risposta di Claude (23/11/2026 11:47 ora italiana)
 
-Ho capito: vuoi il kit RVC più nuovo in questo progetto. Dopo vuoi un controllo della guida di dicembre e idee nuove, da approvare una per una.
-🧠 Opus · Extra
+Ho capito: GitHub ti chiede un codice di 6 cifre, aspetti che arrivi nell'app GitHub, ma non arriva.
 
-✅ **FATTO**
-- Ho provato a scaricare il kit: senza chiave non si può. Il repo RVC è privato e GitHub risponde «non trovato».
-- In questo ambiente la chiave `RVC_KIT_TOKEN` non c'è.
-- Ho segnato la tua richiesta di controllo e idee (lavoro C28): la faccio subito dopo il kit, così uso già le regole nuove.
+Non sbagli niente: è un equivoco. **Quel codice GitHub non lo manda.** Lo crea da sola la tua **app di autenticazione** (un'app che fa un numero nuovo di 6 cifre ogni 30 secondi, per esempio Google Authenticator o Microsoft Authenticator). È l'app dove avevi aggiunto GitHub: nella tua foto è «Authenticator app · Configured».
+L'app GitHub invece i codici non li fa. Manda solo una richiesta «approva», e solo se la scegli da «More options».
 
-───
-💡 **PARERE**
-- La strada migliore è una **chiave di sola lettura** (un **token**: una password che permette solo di leggere il …
+Quella pagina è il **controllo dei 28 giorni**: …
