@@ -4,6 +4,7 @@
 - Ramo comune ≠ origin: PUSH DA FARE (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
 - **v45 ONLINE** (PR #45, main `7ac754f`, sito `{"v": 45}`): luna di Topolino sulla tela del cielo (C23). **Prova «luci ferme» ONLINE** (PR #46, main `5eb4756`): `https://kur0chanx.github.io/parigi-in-tasca/dicembre/?luci=ferme` ferma tutte le animazioni del foglio di stile (12 strati invece di 1.355), scritta gialla «PROVA · luci ferme». Prove sul commit `5a8d6bb`: colori ok, `--controlla` VERO, web app 80/80, scritte 20/20.
 - **Già deciso da Mario (non richiedere):** alloggi n. 8, 16, 23 (più probabili 16 e 23); fasci del faro restano; prima la guida, poi la grafica (guida finita con la v44).
+- **Da non rifare:** C23 luna (v45), misure del video di C27 (16 fotogrammi, 1.355 strati; script in `archivio/2026-11-23-c27-strati/lavoro/`), prova `?luci=ferme` (PR 46), C22, C26, v41–v45.
 - **Cosa preme a Mario adesso:** Torre, faro e slitta che spariscono per un attimo (video 02:05, «fastidioso», «tutto quello che vola»): C27, `docs/lavori-in-corso/C27-testata-strati.md`.
 
 ## Cosa è stato fatto (Controllo 23) · verifica: `git show --stat 6022aec 5a8d6bb` e PR #45, #46
