@@ -27,3 +27,4 @@
 - Treni in tempo reale, link ufficiali RATP trovati il 23/11 (il sito blocca i programmi: verificati dall'indice del motore di ricerca, non aperti): bonjour-ratp.fr/gares/val-d-europe/ · /gares/marne-la-vallee-chessy/ · /gares/chatelet-les-halles/ · /stations-metro/gare-de-lyon/ (metro 1 e 14) · /stations-metro/aeroport-d-orly/ · /horaires-rer/ligne-a/ · /horaires-metro/ligne-1/ e /ligne-14/ · /fr/info-trafic/ · ratp.fr/vos-lignes/vos-stations/gare-de-lyon (RER A e D). Da aprire a mano dal browser della prova prima di pubblicare.
 - Meteo: Open-Meteo non provabile da qui il 23/11 (limite giornaliero del proxy condiviso: 429); nella prova della web app si finge la risposta.
 - Ristoranti: 3 aiutanti in ricerca (file JSON nello scratchpad, poi in `research_notes/`).
+- 23/11 Mario «metti Google, The Fork e TripAdvisor»: in ogni scheda i voti dei tre siti (con numero di recensioni e data), ognuno col suo link; detto ai 3 aiutanti in corsa.
