@@ -903,6 +903,13 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 .qoq-r ul{list-style:none;padding-left:0}
 .qoq-n{display:inline-block;margin-right:6px;padding:1px 8px;border-radius:999px;background:var(--lamp);color:var(--lamp-ink);font-weight:800;font-size:.8rem;white-space:nowrap}
 #duels{overflow-wrap:anywhere}
+.tr-ora{margin-top:var(--s5)}
+.tr-h{font-size:1.25rem;margin-bottom:var(--s2)}
+.tr-l{display:grid;gap:var(--s2);grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));margin-block:var(--s3)}
+.tr-l .btn{justify-content:space-between;text-align:left;min-width:0;padding:8px 14px}
+.meteo{margin:0;line-height:1.45}
+.meteo .mt-i{font-size:1.1rem}
+.tr-go{justify-self:start;font-weight:700}
 </style>
 
 <div class="bokeh" aria-hidden="true"></div>
@@ -1340,6 +1347,21 @@ const VERSIONI=[
    <tr><td colspan="2"><b>Totale</b> <span class="bd es">stima</span> <span id="trWho">· col mio consiglio</span></td><td class="r"><b id="trTot">53,50 €</b></td></tr>
   </tbody>
  </table></div>
+ <div class="tr-ora" id="treniOra">
+  <h3 class="tr-h">🚆 Prossimi treni, adesso</h3>
+  <p class="small">Orari dal vivo sulle pagine ufficiali RATP <span class="bd ok">ufficiale</span>: scegliete la direzione e vedete fra quanti minuti passa il treno. Senza rete non si aprono: guardate i tabelloni in stazione.</p>
+  <div class="tr-l">
+   <a class="btn ghost" href="https://www.bonjour-ratp.fr/gares/val-d-europe/" target="_blank" rel="noopener">🏠 Val d'Europe · RER A<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg></a>
+   <a class="btn ghost" href="https://www.bonjour-ratp.fr/gares/marne-la-vallee-chessy/" target="_blank" rel="noopener">🏰 Marne-la-Vallée Chessy, ai parchi · RER A<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg></a>
+   <a class="btn ghost" href="https://www.ratp.fr/vos-lignes/vos-stations/gare-de-lyon" target="_blank" rel="noopener">🚉 Gare de Lyon · RER A<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg></a>
+   <a class="btn ghost" href="https://www.bonjour-ratp.fr/stations-metro/gare-de-lyon/" target="_blank" rel="noopener">🚇 Gare de Lyon · metro 1 e 14<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg></a>
+   <a class="btn ghost" href="https://www.bonjour-ratp.fr/gares/chatelet-les-halles/" target="_blank" rel="noopener">🚉 Châtelet–Les Halles · RER A<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg></a>
+   <a class="btn ghost" href="https://www.bonjour-ratp.fr/stations-metro/aeroport-d-orly/" target="_blank" rel="noopener">✈️ Aeroporto di Orly · metro 14<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg></a>
+   <a class="btn ghost" href="https://www.bonjour-ratp.fr/horaires-metro/ligne-1/" target="_blank" rel="noopener">🚇 Metro 1: Champs-Élysées, Tuileries, Louvre<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg></a>
+   <a class="btn gold" href="https://www.bonjour-ratp.fr/fr/info-trafic/" target="_blank" rel="noopener">⚠️ Scioperi, lavori e ritardi adesso<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg></a>
+  </div>
+  <p class="small muted">Nell’app Île-de-France Mobilités la voce «À proximité» mostra i prossimi passaggi della fermata più vicina a voi (<a href="https://www.iledefrance-mobilites.fr/en/aide-et-contacts/trouver-un-horaire/comment-trouver-les-horaires-de-prochains-passages-rubrique-a-proximite" target="_blank" rel="noopener">guida ufficiale</a>).</p>
+ </div>
  <div class="stack" style="margin-top:var(--s5)">
   <details><summary>In che ordine comprare (regola del telefono)</summary><div class="in small">
    <ul class="clean">
@@ -2314,9 +2336,9 @@ DAYS.forEach((d,i)=>{
   <div id="routeFull"><p class="small muted" style="margin-bottom:var(--s3)">Circa 8–9 km a piedi. ${d.cutNote}</p><ol class="tl">${d.full.map(item).join('')}${d.post.map(item).join('')}</ol></div>
   <div id="routeShort" hidden><p class="small muted" style="margin-bottom:var(--s3)">Solo Notre-Dame, grandi magazzini e Tuileries. Quasi sempre al coperto, finisce alle 18:30.</p><ol class="tl">${d.short.map(item).join('')}</ol></div>`;
  }else body=`${d.mood==="magic"?dlBox():''}${d.top||''}<ol class="tl">${d.items.map(item).join('')}</ol>${d.foot||''}`;
- html+=`<div class="panel" role="tabpanel" id="p-${d.id}" aria-labelledby="t-${d.id}" ${i?'hidden':''}><div class="day-head"><p class="kicker">${d.mood==="market"?"Mercatini e città":"Parchi"}</p><h3>${esc(d.h)}</h3><p class="muted">${esc(d.sub)}</p>${dormeDi(d)}${d.id==="dom"?`<svg class="market" viewBox="0 0 400 112" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${MK.mini(400,112,1)}</svg>`:""}</div>${body}</div>`;
+ html+=`<div class="panel" role="tabpanel" id="p-${d.id}" aria-labelledby="t-${d.id}" ${i?'hidden':''}><div class="day-head"><p class="kicker">${d.mood==="market"?"Mercatini e città":"Parchi"}</p><h3>${esc(d.h)}</h3><p class="muted">${esc(d.sub)}</p>${dormeDi(d)}<p class="meteo small" data-d="${d.date}"></p><a class="tr-go small" href="#treniOra">🚆 Prossimi treni adesso ›</a>${d.id==="dom"?`<svg class="market" viewBox="0 0 400 112" preserveAspectRatio="xMidYMax slice" aria-hidden="true">${MK.mini(400,112,1)}</svg>`:""}</div>${body}</div>`;
 });
-$('#panels').innerHTML=html;
+$('#panels').innerHTML=html;if(window.pdnMeteo)pdnMeteo();
  const rF=$('#rFull'),rS=$('#rShort');rF.addEventListener('click',()=>route(false));rS.addEventListener('click',()=>route(true));if(SHORT)route(true,1);vaRender()};
 /* C19 · nei giorni Disney il riquadro della guida Disneyland di Mario (stesso link del tasto della schermata principale) */
 function dlBox(){const a=document.getElementById('dlApp');return a?`<div class="callout dlGiorno"><p><b>🏰 Guida Disneyland</b> · giochi, show, personaggi, cibo e orari di oggi, nella vostra app dei parchi.</p><a href="${a.getAttribute('href')}" target="_blank" rel="noopener">Apri la guida Disneyland ›</a></div>`:''}
@@ -2706,6 +2728,33 @@ if(SL&&PK&&POL&&SC){
   for(let i=0;i<=40;i++){const v=Math.max(0,u-(40-i)*.012);frame(P,v,i*.05);pacchi(.05)}frame(P,u,2);return pk.length};
  if(!RM)tm=setTimeout(parti,5000);
 }}
+})();
+
+/* C28 · meteo dei 5 giorni (Mario 23/11 «il meteo va bene»). Previsioni di Open-Meteo (gratis, senza chiave, modelli anche di Météo-France): arrivano 16 giorni prima.
+   L'ultima previsione resta salvata sul telefono, così si legge anche senza rete; con la rete si rinnova se ha più di 2 ore. Domenica Parigi, poi i parchi. */
+(()=>{
+const K='pdn-meteo',LAT='48.8566,48.8674',LON='2.3522,2.7836',FIN='2026-12-17',VEC=2*36e5;
+const U=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FParis&forecast_days=16`;
+const MF={0:'https://meteofrance.com/previsions-meteo-france/paris/75000',1:'https://meteofrance.com/previsions-meteo-france/chessy/77700'};
+const DOVE=g=>g==='2026-12-13'?0:1;
+const WC=c=>c===0?['☀️','sereno']:c<=2?['🌤️','poco nuvoloso']:c===3?['☁️','nuvoloso']:c<=48?['🌫️','nebbia']:c<=57?['🌦️','pioviggine']:c<=67?['🌧️','pioggia']:c<=77?['🌨️','neve']:c<=82?['🌦️','rovesci']:c<=86?['🌨️','rovesci di neve']:['⛈️','temporale'];
+let D=null;try{D=JSON.parse(localStorage.getItem(K))}catch(e){}
+if(!D||typeof D!=='object'||!D.g)D={t:0,g:{}};
+const oggi=()=>new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Paris'});
+const dal=g=>{const d=new Date(g+'T12:00:00Z');d.setUTCDate(d.getUTCDate()-15);return d.getUTCDate()+'/'+(d.getUTCMonth()+1)};
+const quando=t=>new Date(t).toLocaleString('it-IT',{day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).replace(',',' ore');
+const mf=g=>`<a href="${MF[DOVE(g)]}" target="_blank" rel="noopener">Météo-France ›</a>`;
+const fill=()=>document.querySelectorAll('.meteo[data-d]').forEach(el=>{const g=el.dataset.d,x=D.g[g];
+ if(x){const [i,w]=WC(x.c);el.innerHTML=`<span class="mt-i" aria-hidden="true">${i}</span> <b>${w}</b> · ${Math.round(x.mn)}°–${Math.round(x.mx)}° · pioggia ${x.p==null?'—':x.p+' %'} <span class="muted">· previsione del ${quando(D.t)}</span> ${B.nu('Open-Meteo')} ${mf(g)}`}
+ else el.innerHTML=`<span class="mt-i" aria-hidden="true">🌡️</span> Meteo: le previsioni per questo giorno arrivano dal ${dal(g)}, 16 giorni prima. ${mf(g)}`});
+window.pdnMeteo=fill;
+const prendi=()=>{const o=oggi();if(o>FIN||o<'2026-11-28'||!navigator.onLine||Date.now()-D.t<VEC)return;
+ fetch(U).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(j=>{if(!Array.isArray(j)||j.length!==2)throw new Error('risposta strana');
+  const g={...D.g};let n=0;['2026-12-13','2026-12-14','2026-12-15','2026-12-16','2026-12-17'].forEach(d=>{const z=j[DOVE(d)].daily;if(!z||!z.time)return;const k=z.time.indexOf(d);if(k<0)return;
+   g[d]={c:z.weather_code[k],mx:z.temperature_2m_max[k],mn:z.temperature_2m_min[k],p:z.precipitation_probability_max[k]};n++});
+  if(!n)return;D={t:Date.now(),g};try{localStorage.setItem(K,JSON.stringify(D))}catch(e){}fill()}).catch(e=>{console.warn('meteo:',e.message)})};
+fill();prendi();
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)prendi()});addEventListener('online',prendi);
 })();
 </script>
 <script>
