@@ -36,7 +36,7 @@ CON_RIGA = os.path.join(TMP, "con-riga")
 SENZA_RIGA = os.path.join(TMP, "senza-riga")
 SENZA_SEZIONE = os.path.join(TMP, "senza-sezione")
 SENZA_DA_FARE = os.path.join(TMP, "senza-da-fare")
-for cartella, testo in ((CON_RIGA, "# Da fare\n\n## 0. Aspetta Mario\n- 31/10 · 🧪 · #463 · vecchia\n- 01/11 · 🧪 · #464 · scegli i colori\n\n| N. | Cosa |\n## 1. Claude da solo\n"),
+for cartella, testo in ((CON_RIGA, "# Da fare\n\n## 0. Aspetta Mario\n- 31/10 · 🧪 · Principale 1 · vecchia\n- 01/11 · 🧪 · #1 · scegli i colori\n\n| N. | Cosa |\n## 1. Claude da solo\n"),
                         (SENZA_RIGA, "# Da fare\n\n## 0. Aspetta Mario\n- 31/10 · 🧪 · #463 · vecchia\n\n## 1. Claude da solo\n- 01/11 fuori dalla sezione\n"),
                         (SENZA_SEZIONE, "# Da fare\n\n## 1. Claude da solo\n- 01/11 · 🧪 · #464 · nella sezione sbagliata\n"),
                         (SENZA_DA_FARE, None)):
@@ -63,6 +63,13 @@ def stop(messaggio, voci, attivo=False, percorso=None, progetto=CON_RIGA):
 DOMANDA = "✅ FATTO\n- cosa\n───\n❓ DOMANDE\n1. 📌 Di cosa parliamo: x\n   - 1 · a · 2 · b"
 PASSI = "✅ FATTO\n- cosa\n───\n👉 DA FARE TU\n1. Apri il link"
 SOLO = "✅ FATTO\n- cosa fatta, niente per Mario"
+
+
+def detto(testo):
+    return {"type": "assistant", "message": {"role": "assistant", "content": [{"type": "text", "text": testo}]}}
+
+
+CHIESTA = detto(DOMANDA)  # C536: in un turno prima questa sessione ha chiesto qualcosa a Mario in chat
 
 c, err = stop(DOMANDA, [utente("ciao"), titolo("🟢 ⭐ Lavoro · #1"), esito()])
 controlla(c == 0, "domanda col titolo 🟢 dato nel turno (continua a lavorare, E245): passa", err)
@@ -115,7 +122,7 @@ for g in ("🟨 🧪 Dov'è 8 · foto", "💛 🧪 Scorte 68 · foto", "✴️ �
     controlla(c == 0, f"giallo della parallela {g[0]}: passa (kit 30.7)")
 c, err = stop(SOLO, GIALLO, progetto=SENZA_RIGA)
 controlla(c == 2 and "Titolo giallo" in err and "Aspetta Mario" in err and "rinomina" not in err, "titolo giallo senza domande e senza riga di oggi: blocca per la riga (kit 30.6)", err)
-c, _ = stop(SOLO, [utente("ciao"), titolo("🟡 🧪 Principale 1 ❓2 · Planner colori"), esito()])
+c, _ = stop(SOLO, [CHIESTA, utente("ciao"), titolo("🟡 🧪 Principale 1 ❓2 · Planner colori"), esito()])
 controlla(c == 0, "titolo giallo senza domande con la riga di oggi (2 righe → ❓2): passa")
 c, _ = stop(DOMANDA, GIALLO, attivo=True, progetto=SENZA_RIGA)
 controlla(c == 0, "secondo giro senza riga: passa (blocca una volta sola)")
@@ -163,13 +170,13 @@ c, err = stop("❓ DOMANDE\n```\n🛑\n```\n1. colore? 1 · blu", [utente("ciao"
 controlla(c == 0, "🛑 dentro un blocco di codice: non conta", err)
 
 # C454 (prima C423): « ❓N» nel titolo, N dalle righe della catena in «Aspetta Mario» (CON_RIGA: 2 righe).
-c, err = stop(SOLO, [utente("x"), titolo("🟢 🧪 Principale 1 · lavoro"), esito()])
+c, err = stop(SOLO, [CHIESTA, utente("x"), titolo("🟢 🧪 Principale 1 · lavoro"), esito()])
 controlla(c == 2 and "Principale 1 ❓2 · lavoro" in err, "verde senza ❓N con 2 domande della catena: blocca col titolo giusto", err)
-c, err = stop(SOLO, [utente("x"), titolo("🟢 🧪 Principale 1 ❔ · lavoro"), esito()])
+c, err = stop(SOLO, [CHIESTA, utente("x"), titolo("🟢 🧪 Principale 1 ❔ · lavoro"), esito()])
 controlla(c == 2 and "Principale 1 ❓2 · lavoro" in err, "verde col vecchio ❔: blocca col titolo nuovo", err)
-c, err = stop(SOLO, [utente("x"), titolo("🟢 🧪 Principale 1 ❓2 · lavoro"), esito()])
+c, err = stop(SOLO, [CHIESTA, utente("x"), titolo("🟢 🧪 Principale 1 ❓2 · lavoro"), esito()])
 controlla(c == 0, "verde con ❓2 e 2 domande aperte: passa", err)
-c, err = stop(SOLO, [utente("x"), titolo("🟢 🧪 Principale 1 ❓1 · lavoro"), esito()])
+c, err = stop(SOLO, [CHIESTA, utente("x"), titolo("🟢 🧪 Principale 1 ❓1 · lavoro"), esito()])
 controlla(c == 2 and "Principale 1 ❓2 · lavoro" in err, "numero sbagliato (❓1 con 2 righe): blocca col numero giusto", err)
 c, err = stop(SOLO, [titolo("🟢 🧪 Principale 1 ❓2 · lavoro"), esito(), utente("1"), esito()], progetto=SENZA_SEZIONE)
 controlla(c == 2 and "«🟢 🧪 Principale 1 · lavoro»" in err, "Mario ha risposto (nessuna riga): blocca per togliere ❓N", err)
@@ -177,10 +184,34 @@ TRE = os.path.join(TMP, "tre-domande")
 os.makedirs(os.path.join(TRE, "docs"), exist_ok=True)
 with open(os.path.join(TRE, "docs", "DA-FARE.md"), "w", encoding="utf-8") as f:
     f.write("# Da fare\n\n## 0. Aspetta Mario\n- 04/11 · 🛑 · 🟡 Principale 1 · Planning (C444): 3 domande (colonne, dove)\n- 04/11 · 🟡 Principale 1 · linguette\n- 04/11 · 💛 Scorte 2 · altro\n\n## 1. Claude da solo\n")
-c, err = stop(SOLO, [utente("x"), titolo("🟢 🧪 Principale 1 · lavoro"), esito()], progetto=TRE)
+c, err = stop(SOLO, [CHIESTA, utente("x"), titolo("🟢 🧪 Principale 1 · lavoro"), esito()], progetto=TRE)
 controlla(c == 2 and "Principale 1 ❓4 · lavoro" in err, "una riga con «3 domande» conta 3 (3 + 1 = 4), le altre catene no", err)
 c, err = stop(SOLO, [titolo("🟢 🧪 Scorte 3 · lavoro"), esito(), utente("1"), esito()])
 controlla(c == 0, "altra catena senza righe sue: niente segno, passa", err)
+# B48 (Mario 20/11 00:22, Codice 33): contano solo le righe di QUESTA sessione (nome E numero), mai quelle ereditate.
+EREDI = os.path.join(TMP, "ereditate")
+os.makedirs(os.path.join(EREDI, "docs"), exist_ok=True)
+with open(os.path.join(EREDI, "docs", "DA-FARE.md"), "w", encoding="utf-8") as f:
+    f.write("# Da fare\n\n## 0. Aspetta Mario\n- 18/11 · 📗 Giri 91 · prova adesso?\n- 17/11 · 📗 Giri 88 · nome?\n- 19/11 · 📒 Risparmio 33 → 34 · apri la 34\n- 19/11 · 📗 Giri 92 · ordine?\n\n## 1. Claude da solo\n")
+c, err = stop(SOLO, [CHIESTA, titolo("📗 🧪 Giri 92 · lavoro"), esito(), utente("1"), esito()], progetto=EREDI)
+controlla(c == 2 and "Giri 92 ❓1 · lavoro" in err, "solo la riga della Giri 92 conta (le 2 della 91 e della 88 no)", err)
+# C536 (Mario 22/11, la Controllo 12 appena aperta con «❓1»): la riga conta solo se QUESTA sessione ha chiesto in chat.
+c, err = stop(SOLO, [titolo("📗 🧪 Giri 92 · lavoro"), esito(), utente("1"), esito()], progetto=EREDI)
+controlla(c == 0, "riga a suo nome scritta dalla sessione di prima, nessuna domanda in chat: niente ❓, passa", err)
+c, err = stop(SOLO, [titolo("📗 🧪 Giri 92 ❓1 · lavoro"), esito(), utente("1"), esito()], progetto=EREDI)
+controlla(c == 2 and "«📗 🧪 Giri 92 · lavoro»" in err and "C536" in err, "❓1 senza domande in chat: blocca per toglierlo", err)
+c, err = stop(SOLO, [detto("Esempio:\n```\n❓ DOMANDE\n```"), titolo("📗 🧪 Giri 92 · lavoro"), esito(), utente("1"), esito()], progetto=EREDI)
+controlla(c == 0, "❓ solo dentro un blocco di codice in chat: non è una domanda, niente ❓", err)
+c, err = stop(SOLO, [detto(PASSI), titolo("📗 🧪 Giri 92 · lavoro"), esito(), utente("1"), esito()], progetto=EREDI)
+controlla(c == 2 and "Giri 92 ❓1 · lavoro" in err, "passo a mano chiesto in un turno prima: conta, vuole ❓1", err)
+c, err = stop(DOMANDA, [utente("x"), titolo("📒 🧪 Giri 92 ❓1 · rispondi"), esito()], progetto=EREDI)
+controlla(c == 2 and "rinomina" not in err, "domanda nel messaggio di adesso: la riga conta, ❓1 resta (blocca solo per la riga di oggi)", err)
+c, err = stop(SOLO, [titolo("📗 🧪 Giri 93 · lavoro"), esito(), utente("1"), esito()], progetto=EREDI)
+controlla(c == 0, "sessione appena aperta con righe ereditate: niente ❓, passa", err)
+c, err = stop(SOLO, [titolo("📗 🧪 Giri 93 ❓3 · lavoro"), esito(), utente("1"), esito()], progetto=EREDI)
+controlla(c == 2 and "«📗 🧪 Giri 93 · lavoro»" in err, "❓ falso ereditato: blocca per toglierlo", err)
+c, err = stop(SOLO, [titolo("📗 🧪 Risparmio 34 · lavoro"), esito(), utente("1"), esito()], progetto=EREDI)
+controlla(c == 0, "«Risparmio 33 → 34»: la 34 non l'ha fatta, niente ❓", err)
 c, err = stop(SOLO, [titolo("Regola nuova"), esito(), utente("1"), esito()])
 controlla(c == 0, "titolo senza catena: silenzio", err)
 c, err = stop(SOLO, [titolo("🟢 🧪 Principale 1 · lavoro"), esito(), utente("1"), esito()], attivo=True)

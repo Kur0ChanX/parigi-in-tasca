@@ -161,17 +161,38 @@ with tempfile.TemporaryDirectory() as tmp:
     controlla(giri[0] == "⚠️ Aspettano te: 5" and len(giri) == 5, "Giri: conto di tutte, 3 righe e il resto: " + repr(giri))
     controlla(giri[1].startswith("- 🛑 Giri 48 · Versione 17") and giri[2].startswith("- Giri 30 · PC di casa"),
               "Giri: prima la mia catena, la 🛑 in cima: " + repr(giri[1:3]))
-    controlla(giri[3].startswith("- 🛑 Principale 599") and giri[4] == "- poi altre 2: tutte nella Bacheca delle 8:40",
+    controlla(giri[3].startswith("- 🛑 Principale 599") and giri[4] == "- poi altre 2: tutte nell'Atlante › 📌 Bacheca",
               "Giri: poi le altre catene con la 🛑 prima, il resto contato: " + repr(giri[3:]))
     controlla(all("(C" not in r and "?" not in r for r in giri), "niente sigle tra parentesi né «?» nelle righe")
     principale = blocco("Principale", "2")
     controlla(principale[1].startswith("- 🛑 Principale 599") and principale[2].startswith("- Principale 590")
-              and principale[3] == "- poi altre 3 (1 decisive 🛑): tutte nella Bacheca delle 8:40",
+              and principale[3] == "- poi altre 3 (1 decisive 🛑): tutte nell'Atlante › 📌 Bacheca",
               "Principale, 2 righe: la sua 🛑, la sua più vecchia, poi il conto con le 🛑 nascoste: " + repr(principale))
     controlla(any(r.startswith("- Dov'è 50 · ") for r in blocco("Dov'è", "1")), "catena col nome con l'apostrofo")
     with open(os.path.join(tmp, "docs", "DA-FARE.md"), "w", encoding="utf-8") as f:
         f.write(da_fare.replace("- 12/11 · 🛑 · 📒 Giri 48 · Versione 17 della macchina (C476). 📌 Di cosa parliamo: z\n", ""))
     controlla(blocco("Giri")[2].startswith("- 🛑 Principale 599"), "Mario risponde a una (riga tolta) → sale la successiva")
+    BACHECA = os.path.join(os.path.dirname(HOOK), "..", "..", "tools", "atlante", "bacheca.mjs")
+    if os.path.isfile(BACHECA):  # solo dove c'è la Bacheca dell'Atlante (nella prova del pacchetto no)
+        # C518 (Bacheca 2): la riga con la sua scheda della 📌 Bacheca → numero B e titolo semplice; «📌» dentro il testo
+        # («La «📌 Bacheca» vera…») non taglia più la riga a «La «».
+        os.makedirs(os.path.join(tmp, "atlante"))
+        os.makedirs(os.path.join(tmp, "tools", "atlante"))  # la regola sola delle schede (bacheca.mjs --titoli)
+        shutil.copy(BACHECA, os.path.join(tmp, "tools", "atlante"))
+        with open(os.path.join(tmp, "atlante", "bacheca.json"), "w", encoding="utf-8") as f:
+            json.dump({"schede": {"B7": {"trova": "PC di casa dopo una mancanza", "titolo": "Il PC deve ripartire da solo?"},
+                                  "B8": {"trova": "niente titolo"}, "X1": {"trova": "Colori", "titolo": "non è una B"}}}, f)
+        con = blocco("Giri")
+        controlla(con[1] == "- Giri 30 · B7 · Il PC deve ripartire da solo?", "C518: riga con la scheda: numero B e titolo: " + repr(con))
+        controlla(con[2].startswith("- 🛑 Principale 599 · Giornata nuova"), "C518: senza scheda resta il testo corto: " + repr(con))
+        with open(os.path.join(tmp, "docs", "DA-FARE.md"), "w", encoding="utf-8") as f:
+            f.write(da_fare.replace("Una riga per ogni cosa che aspetta Mario.\n", "Una riga per ogni cosa che aspetta Mario.\n"
+                                    "- 01/11 · 📒 Giri 31 · La «📌 Bacheca» vera è pronta nell'Atlante: apri l'Atlante. 📌 Di cosa parliamo: w\n"))
+        controlla(any(r.startswith("- Giri 31 · La «📌 Bacheca» vera è pronta nell") for r in blocco("Giri", "9")),
+                  "C518: «📌» dentro il testo non taglia la riga: " + repr(blocco("Giri", "9")))
+        os.remove(os.path.join(tmp, "atlante", "bacheca.json"))
+        with open(os.path.join(tmp, "docs", "DA-FARE.md"), "w", encoding="utf-8") as f:
+            f.write(da_fare.replace("- 12/11 · 🛑 · 📒 Giri 48 · Versione 17 della macchina (C476). 📌 Di cosa parliamo: z\n", ""))
     os.remove(os.path.join(tmp, "docs", "CHI-FA-COSA.md"))  # C511 p.13: progetto appena installato, senza la tabella
     senza = blocco("Principale")
     controlla(senza[0] == "⚠️ Aspettano te: 4" and senza[1].startswith("- 🛑 Principale 599") and len(senza) == 5,
@@ -182,6 +203,21 @@ import importlib.util
 spec = importlib.util.spec_from_file_location("avvio_check", HOOK)
 av = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(av)
+# C518 (Bacheca 2): le risposte di Mario dall'Atlante (📌 Bacheca, 👁, idee) a ogni avvio; senza lo script o senza
+# risposte niente riga; lunghe: tagliate col rimando al comando intero.
+with tempfile.TemporaryDirectory() as tmp:
+    av.CWD = tmp
+    controlla(av.risposte_atlante() == "", "C518: senza tools/atlante/risposte.mjs niente riga")
+    os.makedirs(os.path.join(tmp, "tools", "atlante"))
+    finto = os.path.join(tmp, "tools", "atlante", "risposte.mjs")
+    open(finto, "w").write("console.log(\"Nessuna risposta nuova di Mario dall'Atlante.\");\n")
+    controlla(av.risposte_atlante() == "", "C518: nessuna risposta nuova = niente riga")
+    open(finto, "w").write("if (process.argv[2] === 'nuove') console.log('Mario ha risposto dalla 📌 Bacheca alla B7: 1');\n")
+    r = av.risposte_atlante()
+    controlla(r.startswith("RISPOSTE DI MARIO DALL'ATLANTE (1,") and r.endswith("alla B7: 1"), "C518: la risposta arriva alla chat: " + r)
+    open(finto, "w").write("for (let i = 0; i < 40; i++) console.log('Mario ha risposto dalla 📌 Bacheca alla B' + i + ': una risposta lunga di prova');\n")
+    r = av.risposte_atlante()
+    controlla(len(r) < 1800 and "(40," in r and r.endswith("node tools/atlante/risposte.mjs nuove)"), "C518: tante risposte: tagliate col rimando: " + r[-80:])
 with tempfile.TemporaryDirectory() as tmp:
     av.CWD = tmp
     controlla(av.avvia_difetti() is None and av.riga_difetti(None) == "", "C505: senza l'attrezzo niente")
@@ -195,6 +231,20 @@ with tempfile.TemporaryDirectory() as tmp:
     controlla(av.riga_difetti(av.avvia_difetti(), tetto=1) == "" and time.time() - t0 < 4, "C505: oltre il tetto niente riga, non aspetta")
     open(finto, "w").write("")
     controlla(av.riga_difetti(av.avvia_difetti()) == "", "C505: niente stampato = niente riga")
+
+# Codice 37 (20/11): tempo dell'avvio finito = git non risponde: l'elenco delle scorte non va scritto nella cartella
+# da cui parte l'hook (radice del progetto: file non tracciato e avviso «untracked» alla fine del turno).
+with tempfile.TemporaryDirectory() as tmp:
+    prima = os.getcwd()
+    os.chdir(tmp)
+    try:
+        vecchio = av.git
+        av.git = lambda *a: ""
+        r = av.scrivi_elenco(["uno", "due"])
+        av.git = vecchio
+        controlla(r == "non scritto" and os.listdir(tmp) == [], "Codice 37: senza cartella di git l'elenco non si scrive nella cartella di lavoro: " + repr((r, os.listdir(tmp))))
+    finally:
+        os.chdir(prima)
 
 # C511 p.25: .gitattributes senza le righe dei driver → avviso; installa.py le scrive tutte
 with tempfile.TemporaryDirectory() as tmp:
@@ -212,10 +262,26 @@ with tempfile.TemporaryDirectory() as tmp:
 av.CWD = None
 controlla(av.attributi_mancanti() == "" or "C511" in av.attributi_mancanti(), "repo vero letto")
 # E391 (Risparmio 32, 18/11): la scorta della sessione precedente della MIA catena si unisce, quella di un'altra no.
-catena = {"31vecchia", "32mia"}
+catena = {"nome": "Prova", "ids": ["32mia", "31vecchia"], "attiva": "32mia"}  # colonna «Sessione»: la più nuova per prima
 controlla(av.precedente_della_catena("31vecchia", "32mia", catena), "E391: precedente della mia catena → da unire")
 controlla(not av.precedente_della_catena("altra", "32mia", catena), "E391: sessione fuori dalla catena → non unire")
 controlla(not av.precedente_della_catena("32mia", "32mia", catena), "E391: la mia stessa sessione resta il caso «riavvio»")
 controlla(not av.precedente_della_catena("31vecchia", "32mia", None), "E391: catena sconosciuta → avviso di prima")
+controlla(av.sei_chiusa("32mia", catena) == "", "E503: sessione aperta della catena → nessun avviso «sei chiusa»")
+# E503 (Principale 636, 19/11): la chat chiusa che si riavvia non deve prendere il lavoro della sessione DOPO.
+dopo = {"nome": "Prova", "ids": ["33dopo", "32mia", "31vecchia"], "attiva": "33dopo"}
+controlla(not av.precedente_della_catena("33dopo", "32mia", dopo), "E503: scorta della sessione DOPO la mia → non unire")
+controlla(not av.precedente_della_catena("31vecchia", "32mia", dopo), "E503: io chiusa → nessuna scorta della catena da unire")
+controlla(av.precedente_della_catena("32mia", "33dopo", dopo), "E503: la sessione aperta unisce la precedente")
+controlla("SEI CHIUSA" in av.sei_chiusa("32mia", dopo) and "33dopo" in av.sei_chiusa("32mia", dopo), "E503: io chiusa → avviso con la sessione aperta")
+chiusa = {"nome": "Prova", "ids": ["32mia"], "attiva": "", "chiusa": True}
+controlla("nessuna (catena chiusa)" in av.sei_chiusa("32mia", chiusa), "E503: catena chiusa → avviso")
+controlla(not av.precedente_della_catena("31vecchia", "32mia", chiusa), "E503: catena chiusa → niente da unire")
+# E527 (Codice 43, 21/11): la sessione di prima mi apre e scrive un'ora in «Chiusa il» → l'avviso dice la causa probabile.
+controlla("E527" in av.sei_chiusa("32mia", chiusa), "E527: prima della riga e catena «chiusa» → suggerisce la colonna sbagliata")
+vecchia = {"nome": "Prova", "ids": ["33dopo", "32mia"], "attiva": "", "chiusa": True}
+controlla("E527" not in av.sei_chiusa("32mia", vecchia), "E527: non sono la prima della riga → niente suggerimento")
+controlla("E527" not in av.sei_chiusa("32mia", dopo), "E527: catena aperta da un'altra → niente suggerimento")
+controlla(av.sei_chiusa("32mia", None) == "" and av.sei_chiusa("", dopo) == "", "E503: catena sconosciuta → nessun avviso")
 print(f"ERRORI: {errori}")
 sys.exit(1 if errori else 0)

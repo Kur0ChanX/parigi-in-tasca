@@ -511,17 +511,25 @@ def driver_registro(base, nostro, loro, archivio=False):
         return 1
 
 
+def voci_archiviate(head="HEAD"):
+    """PT E155 (Kit 51): le chiavi di tutte le voci dell'archivio intero del ramo (senza tetto)."""
+    return {chiave(v) for f in git("ls-tree", "--name-only", head, f"{ARCHIVIO}/").splitlines()
+            for v in leggi_voci(git("show", f"{head}:{f}"))}
+
+
 def messaggi_nuovi(scorta, head="HEAD"):
     """C469 B6: voci del registro della scorta che il ramo non ha e più nuove della voce più vecchia del ramo (quelle
     più vecchie sono uscite per il tetto delle REGISTRO_MAX, ma erano arrivate). Una scorta che porta solo un messaggio
     di Mario NON è «niente»: va unita, sennò il messaggio non entra mai nel registro del ramo."""
-    nuove = []
+    nuove, archiviate = [], voci_archiviate(head)
     for f in FILE_REGISTRO.values():
         rc, suo = run("show", f"{scorta}:{f}")
         if rc:
             continue
         ramo = leggi_voci(git("show", f"{head}:{f}"))
-        piu_vecchia, gia = min((ora_voce(v[0]) for v in ramo), default=""), {chiave(v) for v in ramo}
+        # PT E155: già nell'archivio intero del ramo = arrivata (uscita dal registro per il tetto o per un buco), non
+        # nuova: prima ogni scorta vecchia con quella voce risultava «1 nuovi» all'avvio (5 scorte, Pronti in Tavola 21/11)
+        piu_vecchia, gia = min((ora_voce(v[0]) for v in ramo), default=""), {chiave(v) for v in ramo} | archiviate
         nuove += [v for v in leggi_voci(suo) if chiave(v) not in gia and ora_voce(v[0]) >= piu_vecchia]
     # C469 fase 1: l'archivio non ha tetto, il confronto è esatto (anche i messaggi più vecchi della prima voce del ramo);
     # una voce che il ramo ha nei registri ma non ancora nell'archivio non è nuova (la porta la prossima scorta)

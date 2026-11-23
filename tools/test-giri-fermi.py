@@ -212,6 +212,25 @@ testo = '\n'.join(gf.righe(a_mano, finti, RAMO, []))
 prova('fermo a mano: non rilanciare', 'NON rilanciare' in testo and 'actions_run_trigger' not in testo, testo)
 prova('tutto bene', gf.righe([], finti, RAMO)[0].startswith('STATO: TUTTO BENE') and gf.esito_di([]) == 0)
 
+# 8b · C535 (E528, 22/11): giri finiti «startup_failure» = GIRI MORTI, una voce sola, niente rilancio
+def morto(numero, secondi_fa, flusso='BuildFailed'):
+    g = giro(numero, 'completed', secondi_fa, flusso=flusso, esito='startup_failure')
+    g['path'] = flusso if flusso == 'BuildFailed' else g['path']
+    return g
+
+
+morti = gf.giudica([morto(5, 900), morto(6, 400), morto(7, 120, 'prove-vivo.yml')], lambda n: [],
+                   {'prove-vivo.yml': ('c' * 40, fa(700))}, ADESSO)
+prova('morti: una voce sola, «non nato» assorbito', [v['stato'] for v in morti] == ['MORTI'] and morti[0]['quanti'] == 3,
+      str(morti))
+testo = '\n'.join(gf.righe(morti, finti, RAMO, []))
+prova('morti: testo, niente rilancio, riga per Mario', 'GIRI MORTI · 3 giri' in testo and 'NON rilanciare' in testo
+      and 'actions_run_trigger' not in testo and 'rilanciato a mano' not in testo and 'A Mario, SUBITO' in testo
+      and gf.esito_di(morti) == 20, testo)
+prova('morti anche senza miei push', [v['stato'] for v in gf.giudica([morto(8, 200)], lambda n: [], {}, ADESSO)] == ['MORTI'])
+prova('morti vecchi (oltre un\'ora): zitto', gf.giudica([morto(9, 4000)], lambda n: [], {}, ADESSO) == [])
+prova('giro finito bene: zitto', gf.giudica([giro(10, 'completed', 200, esito='success')], lambda n: [], {}, ADESSO) == [])
+
 # 9 · l'hook dello Stop (C476 P13c), in un progetto finto con `gh` e `curl` finti e l'ora vera
 HOOK = QUI.parent / '.claude' / 'hooks' / 'giri-fermi.py'
 

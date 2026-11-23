@@ -9,8 +9,11 @@ Su `set_session_title` e `create_session` (strumenti di claude-code-remote) cont
 - Nome della catena in una parola, fisso (Principale, Dov'è, Scorte, Atlante), spazio, numero senza # né P; mai in fondo;
 - cosa fa: al massimo 3 parole e ~24 caratteri.
 - C454 (Mario 04/11 16:5x «io nelle sessioni non vedo nessun punto di domanda»; prima C423): subito dopo il numero,
-  facoltativo, « ❓N» = N risposte che Mario deve dare (righe della catena in «## 0. Aspetta Mario»), su ogni colore;
-  sessione chiusa (rosso o nero) con domande aperte: « ❓N → NN» (la sessione dove rispondere). Mai il «❔».
+  facoltativo, « ❓N» = N risposte che Mario deve dare alle domande di QUESTA sessione (righe in «## 0. Aspetta Mario»
+  con il suo nome e numero), su verde e giallo; mai sulle chiuse (rosso o nero), mai «→ NN» (B48, Mario 20/11 00:22
+  «risolvimi i punti di domanda falsi … [solo quando] qualcuno mi ha fatto una domanda»). Mai il «❔».
+- C536 (Mario 22/11, la Controllo 12 appena aperta con «❓1»): `create_session` mai col «❓»: la sessione nuova non ha
+  ancora chiesto niente (le domande di prima restano in «⚠️ Aspettano te»).
 I cerchi sono solo della catena «Principale». Se `docs/CHI-FA-COSA.md` ha la tabella «## Catene» (| Catena | Forma | …),
 il segno deve essere della forma di quella catena.
 Eccezione: i titoli che cominciano con «✗ DOPPIONE» (E44).
@@ -33,7 +36,7 @@ PRINCIPALE = 'principale'
 TETTO_COSA = 24
 STRUMENTO = re.compile(r'(?:^|__)(set_session_title|create_session)$')
 ESEMPI = ('«🟢 <icona> Principale 466 · colori Planner» · «🟨 <icona> Dov\'è 8 · foto da ridare» · «❤️ <icona> Scorte 67 · v118 online» '
-          '· con domande aperte «🟢 <icona> Principale 535 ❓5 · minibar» · chiusa «🔴 <icona> Principale 534 ❓5 → 535 · consegne»')
+          '· con domande di questa sessione «🟢 <icona> Principale 535 ❓2 · minibar» · chiusa «🔴 <icona> Principale 534 · consegne»')
 
 
 def forma_di(segno):
@@ -63,7 +66,7 @@ def linee(progetto):
     return uscita
 
 
-def controlla(titolo, tabella=None):
+def controlla(titolo, tabella=None, nuova=False):
     """→ '' se il titolo va bene, sennò il motivo (una riga)."""
     t = ' '.join(str(titolo or '').split())
     if t.startswith('✗ DOPPIONE'):
@@ -83,15 +86,20 @@ def controlla(titolo, tabella=None):
     if re.search(r'[#⭐]|\bP\d', catena):
         return 'il numero va senza #, ⭐ né P, subito dopo il nome della catena (Principale 466, Dov\'è 8)'
     if re.search(r'[❔❓]', catena) and not re.search(r' ❓[1-9]\d*(?: → \d+)?$', catena):
-        return ('il segno delle domande è « ❓N» dopo il numero, N = risposte che Mario deve dare (Principale 535 ❓5); '
-                'chiusa con domande aperte « ❓N → NN» (dove rispondere); mai il «❔» (C454)')
+        return ('il segno delle domande è « ❓N» dopo il numero, N = risposte che Mario deve dare alle domande di QUESTA '
+                'sessione (Principale 535 ❓2); mai il «❔» (C454)')
     m = re.fullmatch(r"([^\W\d_][\w'’]*) (\d+)(?: ❓(\d+)(?: → (\d+))?)?", catena)
     if not m:
         return f'«{catena}»: serve il nome della catena in una parola, spazio, numero (Principale 466, Scorte 68)'
     nome = m.group(1).lower()
     stato = FORME[forma].index(segno)  # 0 verde · 1 giallo · 2 rosso · 3 nero
-    if m.group(4) and stato < 2:
-        return '«→ NN» (la sessione dove rispondere) va solo sulle sessioni chiuse (rosso o nero); una sessione aperta risponde da sé'
+    if m.group(4):
+        return '«→ NN» non si usa più (B48): le domande di una sessione chiusa restano nella 📌 Bacheca e in «⚠️ Aspettano te»'
+    if m.group(3) and nuova:
+        return ('sessione nuova: niente «❓», non ha ancora chiesto niente a Mario; le domande della sessione di prima '
+                'restano in «⚠️ Aspettano te» (C536)')
+    if m.group(3) and stato >= 2:
+        return 'sessione chiusa (rosso o nero): niente «❓» (B48, Mario 20/11: il «❓» solo sulla chat che aspetta la risposta)'
     if nome == PRINCIPALE and forma != 'cerchi':
         return 'la catena Principale usa i cerchi: 🟢 lavora · 🟡 tocca a Mario · 🔴 chiusa · ⚫ bloccata'
     if nome != PRINCIPALE and forma == 'cerchi':
@@ -114,13 +122,14 @@ def main():
         dati = json.load(sys.stdin)
     except Exception:
         return 0
-    if not STRUMENTO.search(str(dati.get('tool_name', ''))):
+    strumento = STRUMENTO.search(str(dati.get('tool_name', '')))
+    if not strumento:
         return 0
     titolo = (dati.get('tool_input') or {}).get('title')
     if titolo is None:
         return 0
     progetto = os.environ.get('CLAUDE_PROJECT_DIR') or dati.get('cwd') or os.getcwd()
-    motivo = controlla(titolo, linee(progetto))
+    motivo = controlla(titolo, linee(progetto), nuova=strumento.group(1) == 'create_session')
     if not motivo:
         return 0
     print(json.dumps({'hookSpecificOutput': {

@@ -28,7 +28,14 @@ C454 (Mario 04/11 16:5x «io nelle sessioni non vedo nessun punto di domanda …
 prima C423): segno delle domande subito dopo il numero del titolo, deciso dalle righe della catena in «## 0. Aspetta Mario»
 («<segno> <Nome> <numero>»): « ❓N», N = risposte attese (una riga con «3 domande» conta 3), sul verde e sul giallo;
 nessuna riga → nessun segno. Ultimo titolo diverso → blocca UNA volta: rinomina (un solo strumento, zero letture).
-Titolo senza catena o rosso/nero: silenzio (il «❓N → NN» delle chiuse lo mette la skill consegne alla chiusura).
+Mario 19/11 23:02 «a volte mette il punto di domanda e non ha alcun senso» e 20/11 00:22 «risolvimi i punti di domanda
+falsi in modo intelligente e [solo quando] qualcuno mi ha fatto una domanda» (scelta 2 di B48, Codice 33): contano SOLO
+le righe di QUESTA sessione (stesso nome E stesso numero: «Giri 92», mai «Giri 91»). Prima contavano tutte le righe
+della catena: la Giri 92 appena aperta aveva «❓16» senza nessuna domanda nella sua chat. La riga sparisce quando Mario
+risponde, e con lei il segno. Titolo senza catena o rosso/nero: silenzio (le chiuse non hanno più il «❓»).
+C536 (Mario 22/11: «il ❓N solo se in QUESTA sessione c'è una domanda nuova o ancora in sospeso»; la Controllo 12 appena
+aperta aveva «❓1» senza domande, con una riga a suo nome scritta dalla sessione di prima): le righe contano solo se in
+questa sessione un messaggio di Claude ha chiesto qualcosa a Mario (blocco «❓» o «👉 DA FARE TU», in tutta la trascrizione).
 Prova: python3 -I tools/test-titolo-giallo.py
 """
 import datetime
@@ -58,6 +65,30 @@ def decisiva(testo):
 
 def tocca_a_mario(testo):
     return bool(TOCCA_A_MARIO.search(BLOCCHI_CODICE.sub(' ', testo)))
+
+
+def chiesto(percorso):
+    """→ True se in QUESTA sessione un messaggio di Claude ha già chiesto qualcosa a Mario (blocco «❓» o «👉 DA FARE TU»
+    fuori dai blocchi di codice), in tutta la trascrizione (C536); trascrizione illeggibile: True (conta le righe come prima)."""
+    try:
+        f = open(percorso, 'rb')
+    except Exception:
+        return True
+    with f:
+        for grezza in f:
+            if b'assistant' not in grezza or not any(s in grezza for s in (b'\xe2\x9d\x93', b'\\u2753', b'DA FARE TU')):
+                continue
+            try:
+                voce = json.loads(grezza)
+            except Exception:
+                continue
+            contenuto = (voce.get('message') or {}).get('content') if voce.get('type') == 'assistant' else None
+            if isinstance(contenuto, str):
+                contenuto = [{'type': 'text', 'text': contenuto}]
+            for b in contenuto if isinstance(contenuto, list) else []:
+                if isinstance(b, dict) and b.get('type') == 'text' and tocca_a_mario(str(b.get('text', ''))):
+                    return True
+    return False
 
 
 def inizio_turno(voce):
@@ -133,8 +164,9 @@ DOMANDE_NELLA_RIGA = re.compile(r'(\d+) domande')
 VERDI = ('🟢', '🟩', '💚', '✳️', '📗')
 
 
-def segno_domande(titolo, righe):
-    """→ '' se il segno delle domande nel titolo è giusto, sennò il titolo corretto (C423)."""
+def segno_domande(titolo, righe, ha_chiesto=lambda: True):
+    """→ '' se il segno delle domande nel titolo è giusto, sennò il titolo corretto (C423). `ha_chiesto()` False = questa
+    sessione non ha mai chiesto niente a Mario in chat: niente «❓», anche con righe a suo nome (C536)."""
     t = ' '.join(str(titolo or '').split())
     m = CATENA.match(t)
     if not m or righe is None:
@@ -142,13 +174,16 @@ def segno_domande(titolo, righe):
     segno = t.split(' ', 1)[0]
     if segno not in VERDI and segno not in GIALLI:
         return ''
-    nome = m.group(1)
-    giro = rf"(?:^|[\s·]){re.escape(nome)} \d+\b" + (r"|(?:^|[\s·])[#⭐]\d+\b" if nome.lower() == 'principale' else '')
+    nome, numero = m.group(1), m.group(2)
+    # Solo le righe di QUESTA sessione (B48, Mario 20/11 00:22): stesso nome e stesso numero, mai le righe ereditate.
+    giro = rf"(?:^|[\s·]){re.escape(nome)} {numero}\b" + (rf"|(?:^|[\s·])[#⭐]{numero}\b" if nome.lower() == 'principale' else '')
     aperte = 0
     for r in righe:
         if re.search(giro, r):
             q = DOMANDE_NELLA_RIGA.search(r)
             aperte += int(q.group(1)) if q else 1
+    if aperte and not ha_chiesto():
+        aperte = 0
     voluto = f' ❓{aperte}' if aperte else ''
     if (m.group(3) or '') == voluto:
         return ''
@@ -186,12 +221,14 @@ def main():
     giallo = bool(titoli) and titoli[-1].lstrip().startswith(GIALLI)
     progetto = os.environ.get('CLAUDE_PROJECT_DIR') or dati.get('cwd') or os.getcwd()
     righe = righe_aspetta(progetto)
+    percorso = dati.get('transcript_path') or ''
+    ha_chiesto = (lambda: True) if domanda else (lambda: chiesto(percorso))
     if not domanda and not giallo:
-        giusto = segno_domande(ultimo[-1], righe)
+        giusto = segno_domande(ultimo[-1], righe, ha_chiesto)
         if giusto:
             # Risparmio 29 (C455 D1): titolo giusto e titolo di adesso nei primi 200 caratteri (esempi di spreco-token.py)
-            print(f'Segno delle domande nel titolo «{giusto}» (era «{ultimo[-1]}»; C454: « ❓N» dopo il numero, N = risposte che Mario deve dare alle righe della tua catena in «{SEZIONE_0}», '
-                  f'niente se non ce ne sono): rinomina SOLO col titolo «{giusto}» '
+            print(f'Segno delle domande nel titolo «{giusto}» (era «{ultimo[-1]}»; C454: « ❓N» dopo il numero, N = risposte che Mario deve dare alle domande fatte in chat da QUESTA sessione (righe col suo nome e numero in «{SEZIONE_0}»), '
+                  f'niente se non ne ha fatte; C536): rinomina SOLO col titolo «{giusto}» '
                   '(set_session_title). NON riscrivere il messaggio; chiudi con 3-5 parole' + ALTRI + '.', file=sys.stderr)
             return 2
         return 0
@@ -201,7 +238,7 @@ def main():
     manca_stop = (domanda and decisiva(finale) and righe is not None and not manca_riga
                   and not any(giorno in r and DECISIVA in r for r in righe))
     if not manca_titolo and not manca_riga and not manca_stop:
-        giusto = segno_domande((titoli or ultimo)[-1], righe)
+        giusto = segno_domande((titoli or ultimo)[-1], righe, ha_chiesto)
         if giusto:
             print(f'Segno delle domande nel titolo «{giusto}» (era «{(titoli or ultimo)[-1]}»; C454, « ❓N»): rinomina SOLO col titolo «{giusto}» (set_session_title). NON '
                   'riscrivere il messaggio; chiudi con 3-5 parole' + ALTRI + '.', file=sys.stderr)

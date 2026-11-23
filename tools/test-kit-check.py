@@ -111,9 +111,9 @@ try:
     controlla("manca docs/kit-progetto/PREFERENZE-CHAT.txt" in riga(cartella), "manca il testo della chat: avviso")
 
     progetto_buono(cartella)
-    scrivi(cartella, "docs/kit-progetto/REGOLE.md", "# Regole di lavoro · kit 23.0 · 23/10/2026\n" + "- regola\n" * 1500)
+    scrivi(cartella, "docs/kit-progetto/REGOLE.md", "# Regole di lavoro · kit 23.0 · 23/10/2026\n" + "- regola\n" * 1600)
     u = riga(cartella)
-    controlla("REGOLE.md ha ~" in u and "(tetto 6275)" in u, "REGOLE.md oltre 6.275 token: avviso", u)
+    controlla("REGOLE.md ha ~" in u and "(tetto 6600)" in u, "REGOLE.md oltre 6.600 token: avviso", u)
 
     progetto_buono(cartella)
     scrivi(cartella, "CLAUDE.md", "# Progetto\n@docs/kit-progetto/REGOLE.md\n" + "riga\n" * 450)

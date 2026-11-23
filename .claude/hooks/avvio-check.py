@@ -284,10 +284,27 @@ def attributi_mancanti():
             "ULTIMA-RISPOSTA e sui registri dei messaggi di Mario). Aggiungile e fai commit: " + " · ".join(mancano) + " (C511 p.25).")
 
 
-def precedente_della_catena(chi, mia, mie):
-    """E391: la scorta è di un'altra sessione della MIA catena (docs/CHI-FA-COSA.md)? Le catene vanno in fila (E494):
-    una sessione di prima è chiusa, la sua scorta si unisce."""
-    return bool(mia and chi and chi != mia and mie is not None and chi in mie)
+def precedente_della_catena(chi, mia, catena):
+    """E391: la scorta è di una sessione PRIMA della mia, nella MIA catena (docs/CHI-FA-COSA.md, colonna «Sessione»: la più
+    nuova per prima)? Le catene vanno in fila (E494): una sessione di prima è chiusa, la sua scorta si unisce.
+    E503 (Principale 636, 19/11): solo se io sono la sessione aperta della catena e la scorta è più VECCHIA della mia;
+    una chat chiusa che si riavvia non prende il lavoro della sessione dopo."""
+    ids = list((catena or {}).get("ids") or [])
+    if not (mia and chi and chi != mia and mia in ids and chi in ids):
+        return False
+    return catena.get("attiva") == mia and ids.index(chi) > ids.index(mia)
+
+
+def sei_chiusa(mia, catena):
+    """E503: questa sessione è nella catena ma non è più la sua sessione aperta (chat chiusa che si riavvia)."""
+    if not (mia and catena and mia in (catena.get("ids") or [])) or catena.get("attiva") == mia:
+        return ""
+    aperta = catena.get("attiva") or "nessuna (catena chiusa)"
+    return (f"ATTENZIONE: SEI CHIUSA (E503): la sessione aperta della catena «{catena.get('nome', '')}» è {aperta}, non tu "
+            "(docs/CHI-FA-COSA.md). Niente lavoro nuovo e nessuna scorta della catena da unire: avvisa Mario e digli dove continuare."
+            + (" Sei la PRIMA sessione della riga: se ti ha appena aperta la sessione di prima e tu non hai fatto consegne di "
+               "chiusura, è sbagliata la colonna «Chiusa il» (E527, Codice 43): rimettila a «—», commit e push, poi lavora."
+               if catena.get("chiusa") and (catena.get("ids") or [""])[0] == mia else ""))
 
 
 def di_chi(remoto, mia, chi=""):
@@ -308,7 +325,10 @@ def di_chi(remoto, mia, chi=""):
 def scrivi_elenco(righe):
     """C469 A1: elenco lungo in .git/avvio-scorte.txt (fuori dal contesto; si legge solo se serve)."""
     try:
-        percorso = os.path.join(git("rev-parse", "--absolute-git-dir"), "avvio-scorte.txt")
+        cartella = git("rev-parse", "--absolute-git-dir")
+        if not cartella:  # tempo dell'avvio finito o git fermo: mai nella cartella di lavoro (Codice 37, 20/11)
+            return "non scritto"
+        percorso = os.path.join(cartella, "avvio-scorte.txt")
         with open(percorso, "w", encoding="utf-8") as f:
             f.write("\n".join(righe) + "\n")
         return percorso
@@ -431,7 +451,7 @@ def controlla_scorta(mia=""):
     for ruolo, remoto, tipo, perche, chi in trovate:
         if mio and ruolo != mio:
             notizie.append(f"{remoto} (chat {ruolo})")
-        elif precedente_della_catena(chi, mia, mie):
+        elif precedente_della_catena(chi, mia, catena):
             # E391 (Risparmio 32, 18/11): la scorta della sessione prima della mia, nella MIA catena, era detta «non della
             # tua» e dentro c'era un messaggio di Mario arrivato dopo il passaggio: le catene vanno in fila, quindi è chiusa.
             avvisi.append(f"SCORTA della sessione {chi}, la precedente della tua catena «{catena['nome']}» (chiusa): ha lavoro "
@@ -465,6 +485,9 @@ def controlla_scorta(mia=""):
         nomi = [f"{v[1]} ({e})" for v, e in ignorate]
         elenco = ", ".join(nomi) if len(nomi) <= 4 else ", ".join(nomi[:3]) + f" e altre {len(nomi) - 3}"
         avvisi.append(f"Scorte senza lavoro nuovo (merge simulato: già nel ramo o superate), da NON unire: {elenco}.")
+    chiusa = sei_chiusa(mia, catena)  # E503: per prima, prima di ogni scorta da unire
+    if chiusa:
+        avvisi.insert(0, chiusa)
     if altre_catene:
         avvisi.append(f"Scorte di altre catene non guardate: {altre_catene} (la tua catena «{catena['nome']}» è in docs/CHI-FA-COSA.md; "
                       "non si uniscono, E97; le elenca la Bacheca del mattino).")
@@ -553,6 +576,27 @@ def promesse_aperte(riavvio=False):
     return r.stdout.strip()
 
 
+def risposte_atlante():
+    # C518 (Bacheca 2, 19/11): le risposte che Mario tocca nell'Atlante (📌 Bacheca, 👁, idee) arrivano in
+    # atlante/risposte.json, ma le leggeva solo la chat Atlante (chiusa il 18/11): nessuna chat le vedeva più.
+    # Ora ogni avvio le stampa; restano finché la chat giusta non le accetta (risposte.mjs accetta).
+    script = os.path.join(CWD or ".", "tools", "atlante", "risposte.mjs")
+    if not os.path.isfile(script):
+        return ""
+    try:
+        r = subprocess.run(["node", script, "nuove"], capture_output=True, text=True, timeout=10, cwd=CWD or ".")
+    except Exception:  # noqa: BLE001
+        return ""
+    testo = r.stdout.strip()
+    if r.returncode or not testo or testo.startswith("Nessuna risposta"):
+        return ""
+    righe = testo.splitlines()
+    corte = " | ".join(righe)[:1500]
+    return (f"RISPOSTE DI MARIO DALL'ATLANTE ({len(righe)}, valgono come suoi messaggi): fai quelle della tua catena e "
+            f"accettale; le altre restano per la loro chat. {corte}"
+            + (" … (tutte: node tools/atlante/risposte.mjs nuove)" if len(" | ".join(righe)) > 1500 else ""))
+
+
 def aspetta_mario(riavvio=False):
     # C369 (Mario 31/10 ~23:10): le righe di «## 0. Aspetta Mario» restano all'handoff; la sessione nuova parte SEMPRE
     # verde (E245, Mario 1/11 01:45: il colore dice cosa fa adesso), le ricorda a Mario e cancella le sveglie della
@@ -582,8 +626,8 @@ def aspetta_mario(riavvio=False):
         stop = [r.strip()[2:][:120] for r in righe if "🛑" in r]
         return (f"🛑 DECISIVE (C422): {len(stop)}: " + " | ".join(stop[:5]) + ". " if stop else "") + testa
     testa = (f"ASPETTA MARIO (C369, skill `domande`): {len(righe)} righe in «## 0. Aspetta Mario» di docs/DA-FARE.md "
-             f"(Principale: {principale}; altre catene: {len(righe) - principale}): titolo VERDE della tua catena con « ❓N» "
-             "(N = risposte alle righe tue, C454, E245); in fondo a ogni messaggio il blocco «⚠️ Aspettano te: N» a turno (le prime 3, prima la tua catena), stampato da `python3 -I .claude/hooks/avvio-check.py --aspettano <tua catena>` (skill `domande`) "
+             f"(Principale: {principale}; altre catene: {len(righe) - principale}): titolo VERDE della tua catena, « ❓N» solo per righe con il TUO numero di sessione "
+             "(appena aperta: niente «❓»; C454, B48, E245); in fondo a ogni messaggio il blocco «⚠️ Aspettano te: N» a turno (le prime 3, prima la tua catena), stampato da `python3 -I .claude/hooks/avvio-check.py --aspettano <tua catena>` (skill `domande`) "
              "(C347, E179, C469); la domanda intera quando Mario scrive, una per messaggio con foto e video (E240, E247): "
              + " | ".join(r.strip()[2:][:160] for r in righe[:8]) + ". " if righe else
              "ASPETTA MARIO (C369): nessuna riga in «## 0. Aspetta Mario» di docs/DA-FARE.md: titolo verde della tua catena. ")
@@ -673,8 +717,8 @@ def aspettano_te(catena="", quante=3):
         if resto.startswith("📌") or not resto.strip():
             m = re.search(r"Di cosa parliamo:\s*", resto)
             resto = resto[m.end():] if m else resto
-        else:
-            resto = resto.split("📌")[0]
+        else:  # Bacheca 2: solo «📌 Di cosa parliamo» (la riga «La «📌 Bacheca» vera…» diventava «La «»)
+            resto = re.split(r"📌\s*Di cosa parliamo", resto)[0]
         resto = re.sub(r"\(C\d+[^)]*\)", "", resto.replace("`", ""))
         resto = re.sub(r"^\s*C\d+\s*:\s*", "", resto)
         for pezzo in re.split(r"[:(?]|\.\s", resto):
@@ -684,13 +728,29 @@ def aspettano_te(catena="", quante=3):
         parole = resto.replace("?", "").split()
         return " ".join(parole[:8]).rstrip(" .,;·") + ("…" if len(parole) > 8 else "")
 
+    # C518 (Bacheca 2): la riga con la sua scheda della «📌 Bacheca» dell'Atlante: numero B e titolo semplice, così Mario
+    # risponde «B7: 1». Chi è la scheda di una riga lo dice tools/atlante/bacheca.mjs --titoli (una regola sola, E158:
+    # «trova» intero o parole vicine); senza Node o senza lo script, il testo corto come prima.
+    titoli = []
+    script = os.path.join(CWD or ".", "tools", "atlante", "bacheca.mjs")
+    if os.path.isfile(script):
+        try:
+            uscita = subprocess.run(["node", script, "--titoli"], capture_output=True, text=True, timeout=10,
+                                    cwd=CWD or ".").stdout
+            titoli = [p for p in (x.split("\t") for x in uscita.splitlines()) if len(p) == 3]
+        except Exception:  # noqa: BLE001
+            titoli = []
+
+    def scheda(r):
+        return next((f"{n} · {t}" for n, t, riga in titoli if r in riga), "")
+
     voci = []
     for i, r in enumerate(righe):
         nome, numero, fine = di_chi(r)
         data = re.match(r"(\d{1,2})/(\d{1,2})", r)
         quando = (int(data.group(2)), int(data.group(1))) if data else (99, 99)
         mia = 0 if catena and nome == catena else 1
-        voci.append(((mia, 0 if "🛑" in r else 1, quando, i), nome, numero, corto(r, fine), "🛑" in r))
+        voci.append(((mia, 0 if "🛑" in r else 1, quando, i), nome, numero, scheda(r) or corto(r, fine), "🛑" in r))
     voci.sort(key=lambda v: v[0])
     fuori = [f"⚠️ Aspettano te: {len(voci)}"]
     for _, nome, numero, titolo, stop in voci[:quante]:
@@ -699,7 +759,7 @@ def aspettano_te(catena="", quante=3):
     if altre:
         stop = sum(1 for v in altre if v[4])
         fuori.append(f"- poi altre {len(altre)}" + (f" ({stop} decisive 🛑)" if stop else "")
-                     + ": tutte nella Bacheca delle 8:40")
+                     + ": tutte nell'Atlante › 📌 Bacheca")
     return "\n".join(fuori)
 
 
@@ -763,7 +823,8 @@ if __name__ == "__main__":
                           "--aperte; i messaggi di Mario dalla scheda d'avvio (tools/consegne.py avvio).")
         else:
             avvisi += [fase("messaggi di Mario", messaggi_dopo_handoff, mia),
-                       fase("Aspetta Mario", aspetta_mario, riavvio), fase("promesse", promesse_aperte, riavvio)]
+                       fase("Aspetta Mario", aspetta_mario, riavvio), fase("promesse", promesse_aperte, riavvio),
+                       fase("risposte dell'Atlante", risposte_atlante)]
         avvisi.append(fase("difetti dei giri", riga_difetti, difetti))
         avvisi.insert(0, frase) if riavvio else avvisi.append(frase)
         if time.time() - INIZIO > TEMPO_MAX:  # per il rodaggio: quale passo è lento

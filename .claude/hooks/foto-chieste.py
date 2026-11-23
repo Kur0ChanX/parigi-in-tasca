@@ -9,10 +9,12 @@ Una foto è a posto se vale una di queste:
   mandata   lo stesso file mandato (SendUserFile) in questa sessione; oppure, dopo la nascita della foto, un file
             della stessa cartella o un suo pezzo o confronto (`<nome>-1di3.png`, `<nome>-confronto.png`) da ovunque;
   citata    la sezione 0 cita il file, la sua cartella o l'inizio del suo percorso (ricordato in
-            .git/foto-chieste.json: quando Mario risponde e la riga va via la foto non torna aperta);
+            .git/foto-chieste.json col contenuto: quando Mario risponde e la riga va via la foto non torna aperta);
+Foto RIFATTA sopra lo stesso file (un mio commit la cambia, stato M; anche solo ricompressa): è un'immagine nuova.
+Torna aperta finché non la rimando (un invio di prima della rinascita non conta) o non c'è la riga che la cita.
   non per Mario   un pezzo del percorso contiene «mario» (ricevuta da lui: `foto-mario/`, `mario-….jpg`), una
             cartella si chiama `lavoro`, `rapporti` o `collaudo`, o il nome comincia con `lavoro-`.
-Foto «di questa sessione»: aggiunte da un commit del registro dei movimenti di git («commit», mai «merge», «pull» o
+Foto «di questa sessione»: aggiunte o rifatte da un commit del registro dei movimenti di git («commit», mai «merge», «pull» o
 «checkout»: le foto delle altre chat non contano) dopo l'inizio della trascrizione. I file non ancora in commit no.
 Modi:
   (niente)   hook Stop: con foto aperte blocca la fine del turno (uscita 2, una riga su stderr), una volta per turno
@@ -109,7 +111,8 @@ def trascrizione_piu_nuova(progetto):
 
 
 def foto_mie(progetto, inizio):
-    """→ foto e video in archivio/ aggiunti dai commit di questa sessione (registro dei movimenti), ancora presenti."""
+    """→ (foto e video in archivio/ aggiunti o rifatti dai commit di questa sessione, ancora presenti; le rifatte).
+    Rifatta = cambiata sopra lo stesso percorso (stato M): è un'immagine nuova, un invio o una riga di prima non bastano."""
     miei = []
     for riga in git(progetto, 'reflog', '--date=unix', '--format=%H %gd %gs', '-n', '500').splitlines():
         m = RIGA_REFLOG.match(riga)
@@ -120,11 +123,28 @@ def foto_mie(progetto, inizio):
         if MIO_COMMIT.match(m.group(3)):
             miei.append(m.group(1))
     if not miei:
-        return []
-    nomi = git(progetto, 'show', '--no-renames', '--diff-filter=A', '--name-only', '--format=', *miei, '--',
-               'archivio/')
-    return sorted({n for n in nomi.splitlines()
-                   if n.lower().endswith(MEDIA) and os.path.isfile(os.path.join(progetto, n))})
+        return [], set()
+    righe = git(progetto, 'show', '--no-renames', '--diff-filter=AM', '--name-status', '--format=', *miei, '--',
+                'archivio/')
+    foto, rifatte = set(), set()
+    for riga in righe.splitlines():
+        stato, _, nome = riga.partition('\t')
+        if nome.lower().endswith(MEDIA) and os.path.isfile(os.path.join(progetto, nome)):
+            foto.add(nome)
+            if stato.startswith('M'):
+                rifatte.add(nome)
+    return sorted(foto), rifatte
+
+
+def impronte(progetto, foto):
+    """→ {foto: impronta del contenuto salvato (blob di HEAD)}: una foto rifatta ha un'impronta nuova."""
+    esito = {}
+    for riga in git(progetto, 'ls-tree', '-r', 'HEAD', '--', *foto).splitlines():
+        dati, _, nome = riga.partition('\t')
+        pezzi = dati.split()
+        if len(pezzi) >= 3:
+            esito[nome] = pezzi[2]
+    return esito
 
 
 def non_per_mario(foto):
@@ -159,14 +179,14 @@ def citata(foto, citati, progetto):
     return False
 
 
-def mandata(foto, mandati, progetto):
+def mandata(foto, mandati, progetto, rifatta=False):
     try:
         nata = os.path.getmtime(os.path.join(progetto, foto))
     except OSError:
         return True
     cartella, nome = os.path.dirname(foto), os.path.splitext(os.path.basename(foto))[0]
     for inviato, quando in mandati:
-        if inviato == foto:
+        if inviato == foto and not rifatta:  # rifatta: vale solo l'invio fatto dopo che è rinata (qui sotto)
             return True
         if quando + TOLLERANZA < nata:
             continue
@@ -207,15 +227,21 @@ def aperte(progetto, trascrizione):
     inizio, mandati = leggi_trascrizione(trascrizione, progetto)
     if not inizio:
         inizio = time.time() - 24 * 3600  # trascrizione che non si legge: solo i commit dell'ultimo giorno
-    foto = [f for f in foto_mie(progetto, inizio) if not non_per_mario(f)]
+    foto, rifatte = foto_mie(progetto, inizio)
+    foto = [f for f in foto if not non_per_mario(f)]
     if not foto:
         return {}
     citati = {p.rstrip('./') for p in PERCORSO.findall(sezione)}
-    ora_citate = [f for f in foto if citata(f, citati, progetto)]
-    gia_citate = memoria(progetto, ora_citate) | set(ora_citate)
+    blob = impronte(progetto, foto)
+    ora_citate = {f for f in foto if citata(f, citati, progetto)}
+    # La memoria ricorda foto E contenuto («percorso@impronta»): rifatta sopra lo stesso file dopo la risposta di
+    # Mario, torna aperta. Le voci di prima (solo il percorso) valgono per le foto mai rifatte.
+    viste = memoria(progetto, [f'{f}@{blob.get(f, "")}' for f in ora_citate])
     fuori = {}
     for f in foto:
-        if f in gia_citate or mandata(f, mandati, progetto):
+        if f in ora_citate or f'{f}@{blob.get(f, "")}' in viste or (f in viste and f not in rifatte):
+            continue
+        if mandata(f, mandati, progetto, f in rifatte):
             continue
         fuori[os.path.dirname(f)] = fuori.get(os.path.dirname(f), 0) + 1
     return fuori
@@ -229,14 +255,22 @@ def elenco(fuori, massimo=4):
 def arretrati(progetto, giorni):
     """Stima una tantum: cartelle di foto aggiunte negli ultimi GIORNI e mai citate in una riga di «Aspetta Mario»."""
     registro = git(progetto, 'log', f'--since={giorni} days ago', '--no-merges', '--no-renames', '--diff-filter=A',
-                   '--name-only', '--format=@%h|%cd|%s', '--date=format:%d/%m', '--', 'archivio/')
+                   '--name-only', '--format=@%H|%cd|%s', '--date=format:%d/%m', '--', 'archivio/')
+    # Copia corta: nei commit del taglio (.git/shallow, senza genitore) git dà per «aggiunto» tutto l'archivio.
+    try:
+        with open(os.path.join(progetto, git(progetto, 'rev-parse', '--git-path', 'shallow').strip()),
+                  encoding='utf-8') as f:
+            tagliati = {r.strip() for r in f if r.strip()}
+    except OSError:
+        tagliati = set()
     cartelle, commit = {}, ('', '', '')
     for riga in registro.splitlines():
         if riga.startswith('@'):
             commit = (riga[1:].split('|', 2) + ['', ''])[:3]
-        elif riga.lower().endswith(MEDIA) and not non_per_mario(riga):
+        elif commit[0] not in tagliati and riga.lower().endswith(MEDIA) and not non_per_mario(riga):
             voce = cartelle.setdefault(os.path.dirname(riga), {'file': [], 'commit': commit})
-            voce['file'].append(riga)
+            if riga not in voce['file']:
+                voce['file'].append(riga)
             voce['commit'] = commit
     storia = git(progetto, 'log', f'--since={giorni + 10} days ago', '-p', '--format=', '--', 'docs/DA-FARE.md')
     citati = {p.rstrip('./') for riga in storia.splitlines() if RIGA_ASPETTA.match(riga)
@@ -250,7 +284,8 @@ def arretrati(progetto, giorni):
             continue
         fuori += 1
         print(f"{voce['commit'][1]} · {cartella}/ · {len(presenti)} file · {voce['commit'][2][:70]}")
-    print(f'Arretrati (stima{", storia corta" if corta else ""}): {fuori} cartelle su {len(cartelle)} degli ultimi '
+    print(f'Arretrati (stima{", storia corta: i commit del taglio non contano" if corta else ""}): {fuori} cartelle '
+          f'su {len(cartelle)} degli ultimi '
           f'{giorni} giorni senza una riga in «Aspetta Mario». Da guardare a mano: mandate in chat o no?')
     return 0
 

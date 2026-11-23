@@ -5,7 +5,7 @@ SessionStart (startup|resume), zero token. Legge docs/kit-progetto/VERSIONE («k
 controlla che coincida con la testata di docs/kit-progetto/REGOLE.md («kit N.M») e con la riga «vN · gg/mm/aaaa» in
 testa a docs/kit-progetto/PREFERENZE-CHAT.txt e a docs/PREFERENZE-CLAUDE.md (se c'è). Avvisa anche se CLAUDE.md non
 importa REGOLE.md (le regole del kit non arriverebbero a Claude) e se i tetti sono superati (CLAUDE.md ~1.000 token,
-REGOLE.md ~6.275, stimati dai caratteri). Nel repo fonte del kit (c'è tools/fai-kit.py) lancia anche `fai-kit.py --controlla`;
+REGOLE.md ~6.475, stimati dai caratteri). Nel repo fonte del kit (c'è tools/fai-kit.py) lancia anche `fai-kit.py --controlla`;
 negli altri, con la chiave RVC_KIT_TOKEN, `tools/scarica-kit.py --versione`: kit più nuovo nella fonte → «KIT NUOVO» (C259).
 Poi dice a Claude di confrontare la versione con la riga «v…» in testa alle Preferenze ricevute da claude.ai.
 Prende il posto della riga «Preferenze del kit» di avvio-check.py. Non blocca mai (uscita 0).
@@ -20,7 +20,7 @@ import time
 
 KIT = "docs/kit-progetto"
 IMPORTA = "@docs/kit-progetto/REGOLE.md"
-TETTI = (("CLAUDE.md", 1000), (KIT + "/REGOLE.md", 6275))  # token, tetti di Mario (23/10; REGOLE 6100 Mario 12/11, 6150 dal kit 38.51, 6225 dal kit 41 C502, 6275 dal kit 42 C516), uguali a tools/fai-kit.py
+TETTI = (("CLAUDE.md", 1000), (KIT + "/REGOLE.md", 6600))  # token, tetti di Mario (23/10; REGOLE 6100 Mario 12/11, 6150 dal kit 38.51, 6225 dal kit 41 C502, 6275 dal kit 42 C516, 6475 dal kit 47 C530, 6600 dal kit 48 C531), uguali a tools/fai-kit.py
 CARATTERI_PER_TOKEN = 2.1  # stima tarata su /context vero (23/10), come tools/fai-kit.py
 PREFERENZE = (KIT + "/PREFERENZE-CHAT.txt", "docs/PREFERENZE-CLAUDE.md")
 # Dal Kit 39 (Mario 18/11 «va bene 2 cifre»): «Kit N», un numero che cresce di 1; si legge ancora la forma vecchia «kit N.M».
