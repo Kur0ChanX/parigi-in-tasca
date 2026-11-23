@@ -36,6 +36,12 @@
 - Suite completa su una copia v40 + sole correzioni della testata (senza C24, che la ferma a metà): vedi commit.
 - Confronto del faro: `archivio/2026-11-22-c23-v41/confronto-faro.jpg` → DOMANDA 1 della Controllo 18 (in «Aspetta Mario»).
 
+## Controllo 23 (23/11): la luna sfocata
+- Foto di Mario delle 22:08 guardata da vicino: le stelline accanto alla luna sono nitide, il bagliore sfocato c’è, **manca solo l’immagine della luna** (`<image id="lunaT">` nel disegno SVG). Non è sfocata: non viene più disegnata.
+- Nuvole del cielo: stanno sulla tela (canvas) DIETRO il disegno → non coprono la luna (scartata).
+- Nessun codice tocca `lunaT`. Ricerca (23/11/2026): nessun difetto noto preciso; aperta una segnalazione di Chromium su animazioni SVG complesse che consumano memoria grafica col tempo (issues.chromium.org/issues/423073247). Causa = **ipotesi**: col tempo il telefono non ridisegna più quell’immagine dentro un disegno con ~800 animazioni che lo fanno ridisegnare di continuo.
+- **Scelta (tecnica, mia):** luna, alone e bagliore si disegnano sulla tela del cielo (`#sky`, dietro il disegno, già ridisegnata a ogni fotogramma e dove le stelle si vedono sempre), con l’immagine decodificata una volta e tenuta dal programma (`createImageBitmap`); nel disegno SVG restano solo le 3 stelline. Stesso posto, grandezza, colori e respiro di prima; la slitta passa ancora davanti. L’immagine resta nella pagina (`<image id="lunaT">` dentro `<defs>`, non disegnata) così `tools/fai-icone-dicembre.js` continua a scriverla.
+
 ## Manca
 - v41 insieme a C24 pezzo 1 sistemato (8 prove + la prova che si ferma a riga 309) oppure C24 dietro un interruttore.
 - 👁 Mario: apre la v41 sul telefono, scorre e allarga con due dita: niente riga, niente rettangoli, luna nitida.
