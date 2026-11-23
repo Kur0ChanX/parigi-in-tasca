@@ -2,28 +2,28 @@
 "account": "cba507",
 "sessione": "1c7384da951e",
 "giorno": "2026-11-23",
-"turni": 1,
-"peso": 271991,
-"uscita": 9358,
-"contesto_max": 96314,
+"turni": 2,
+"peso": 587296,
+"uscita": 25346,
+"contesto_max": 118864,
 "anomalie": [],
 "remota": "01Rwcxc5ahDd",
 "aiutanti": 0,
-"strumenti": 20,
+"strumenti": 33,
 "motori": {
-"opus": 271991
+"opus": 587296
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-36,
-1552234,
-55953,
+60,
+2924344,
+134457,
 0,
-9358
+25346
 ]
 },
-"costo": 0.9454,
+"costo": 2.1677,
 "blocchi": {
 "Stop 10 · Promessa a Mario senza voce": 1
 },
@@ -31,5 +31,15 @@
 "Stop 10 · Promessa a Mario senza voce": [
 "09:48 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «18, 20, 21):** come li mostro? La domanda è ancora aperta (Controllo 14).». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede M"
 ]
-}
+},
+"costo_fredde": 0.4727,
+"memoria_scaduta": 1,
+"ricreati": 59084,
+"fredde": [
+[
+99,
+107,
+0
+]
+]
 }
