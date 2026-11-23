@@ -18,8 +18,10 @@
 3. Le altre parti animate (`.appeso`, `.scint`, `.stellaC`, `.vapore`, `.fiamma`, `.neve-st`, proiezioni) una per una: tela o meno strati.
 4. Prova automatica «strati della testata ≤ 150» in `tools/prova-web-app.js` (CDP LayerTree) + prova che Torre e slitta si VEDONO; video prima/dopo a Mario; v46.
 
-## Pezzo 2 · Controllo 24 (23/11, in corso)
+## Pezzi 2 e 3 · Controllo 24 (23/11, sul ramo, non pubblicati)
 - Scelta (DOMANDA 1 senza risposta, consiglio 1 «prima la prova»): preparo il pezzo 2 sul ramo, **non lo pubblico** finché il video con `?luci=ferme` non conferma la causa (o Mario dice «vai»).
 - Come: le lucine con animazione di sola luminosità (`lampC` 441, `hb` 251, `lampM` 192, `ond` 86, `tw` 70, `lucBanco`, `stellaC`, finestre) non sono più animate nel disegno: le copio una per una in un’immagine (atlante) e una tela sopra il disegno le ridisegna 30 volte al secondo con la luminosità calcolata dalla stessa animazione (stessi tempi, ritardi, curve). Le lucine coperte da qualcosa disegnato dopo (nebbia, casette davanti) restano nel disegno com’erano. La vignetta passa sopra la tela (stesso aspetto). Ferma come oggi mentre si scorre, a pagina ingrandita e con «riduci movimento».
 - Misura di partenza (Pixel 7, `index.html`): 1.264 animazioni (798 testata, 428 mercatino in fondo, 16–36 ghirlanda).
-
+- Fatto sul ramo: tutte le animazioni di sola luminosità e di movimento semplice (rotate, scale, translate) sulla tela, anche con due animazioni insieme (finestre del castello) e con cose sopra che le coprono (ridisegnate sopra la copia; per chi si muove su una tela d’appoggio). Restano nel disegno: fiammelle dentro le lanterne che dondolano (animazione dentro animazione), proiezioni del castello (maschera), stelline della luna (sotto la slitta). Telefono di prova: **1.355 → 73 strati**; confronto a pixel allo stesso istante: scarto medio ~1 su 255, solo bordi sotto il pixel.
+- Prova automatica: «C27 · tela» in `tools/prova-web-app.js` (strati ≤ 120, confronto a pixel, niente tela con «riduci movimento»). Strumenti di misura in `archivio/2026-11-23-c27-strati/lavoro/` (`confronto.js`, `perche.js`).
+- Manca: video di Mario con `?luci=ferme` (conferma della causa), poi versione nuova pubblicata e suo video; dopo, togliere `?luci=ferme`.
