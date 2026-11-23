@@ -44,3 +44,8 @@ Prima di questo: «Cerca di non creare conflitti con l'altro account… cerca di
 
 - I 3 «spenti» (n. 18, 20, 21) sono le righe `off` del passo 2: su Airbnb liberi solo dal 14, quindi con «4 notti 13→17» non si possono scegliere. DOMANDA a Mario (in «Aspetta Mario») su come mostrarli.
 - v36: n. 23 col prezzo Booking 461 € (anche in `Q[23]` 4 notti: i totali ora usano Booking), link Booking, indirizzo, arrivo 14–23, asciugamani inclusi (Booking), 32 m², letto queen + 2 divani letto; data limite della cancellazione Booking non letta (si vede prima di pagare).
+
+## Controllo 29 (23/11 18:39)
+> 14 ok
+
+- Risposta alla DOMANDA 1 (riga 🛑 Controllo 14): scelta 1, il consiglio → passo 2 di «Scegli», con 4 notti dal 13 gli alloggi liberi solo dal 14 (n. 18, 20, 21) vanno in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché.

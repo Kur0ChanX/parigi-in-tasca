@@ -99,3 +99,10 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 | Data | Errore | Causa vera | Difesa |
 |---|---|---|---|
 | 22/11/2026 | Novità v30 con «un'ombra» fra apici semplici: la scritta si chiudeva e tutto lo script della pagina si fermava (trovato da me prima delle prove). | Testo scritto da Python dentro un heredoc di bash: `\\'` diventa `'`. | Nei testi della pagina l'apostrofo tipografico «’»; dopo ogni modifica via script, controllo della sintassi dei 4 `<script>` (e la prova «nessun errore nella pagina»). |
+
+## Spostate dal diario il 23/11/2026 (Controllo 27)
+| 22/11/2026 | v30 online: la slitta a volte non partiva mai (2 aperture su 3 in una prova a parte); la prova «parte da sola» era verde per caso. | All'apertura l'IntersectionObserver diceva «testata non in vista» e a volte non si correggeva più; la slitta aspettava quel segnale. | Si guarda se è in vista nel momento della partenza (`getBoundingClientRect`); un'animazione che deve partire si prova su più aperture (6 su 6), non una. |
+| 22/11/2026 | Sul PC una riga netta nel cielo dove inizia il disegno della testata (dalla v30, trovata dalla Controllo 9). | La vignetta scuriva anche il bordo alto del disegno, e sopra non c’era: salto di colore. Foto della v30 solo al telefono. | Vignetta che sfuma verso l’alto (maschera); a ogni cambio della testata anche la foto del PC (1440 e 1920). |
+
+## Spostate dal diario il 23/11/2026 (Controllo 29)
+| 22/11/2026 | Luci della testata che sfarfallano all’apertura (Mario, video v33). | Animazioni con ritardo positivo: prima di partire la luce resta accesa piena, poi scatta. | Ritardi sempre negativi; prova «nessuna luce parte in ritardo» su tutta la testata. |

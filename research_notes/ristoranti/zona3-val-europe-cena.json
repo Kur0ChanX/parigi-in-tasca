@@ -1,0 +1,480 @@
+[
+ {
+  "nome": "Omakase by Goma",
+  "zona": "Val d'Europe · cene lun–mer",
+  "cucina": "sushi",
+  "pasti": [
+   "cena"
+  ],
+  "aperto": "cena solo da mercoledì a sabato, arrivo fra le 19:45 e le 20:00, dura 2h30–3h; chiuso domenica, lunedì e martedì: per voi solo mercoledì 16 (sito ufficiale, visto 23/11/2026)",
+  "indirizzo": "15 rue d'Ariane, 77700 Chessy",
+  "lat": 48.857688,
+  "lon": 2.771704,
+  "fermata": "Val d'Europe · RER A, 3–5 min",
+  "da_val_europe": "3–5 min a piedi (il sito dice 2 min)",
+  "fascia": "€€€",
+  "prezzo": "98 € a testa, bevande escluse (menù unico, sito ufficiale)",
+  "voti": [
+   {
+    "fonte": "Google",
+    "valore": "4,9/5",
+    "recensioni": 822,
+    "visto": "23/11/2026",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ3d1jDMMd5kcRkMQLRnQGRk8",
+    "nota": "voto Google non ufficiale, dato aggiornato al 05/11/2026"
+   },
+   {
+    "fonte": "TheFork",
+    "valore": "non c'è",
+    "recensioni": null,
+    "visto": "23/11/2026",
+    "url": null,
+    "nota": "non trovato su TheFork: si prenota dal sito"
+   },
+   {
+    "fonte": "TripAdvisor",
+    "valore": "5,0/5",
+    "recensioni": 573,
+    "visto": "23/11/2026",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19335130-Reviews-Goma_Omakase-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+    "nota": "voto non ufficiale"
+   }
+  ],
+  "nicchia": true,
+  "perche": "Il chef Eric Ticana ha fondato e allena la squadra francese di sushi, campione del mondo 2024. Siete al bancone, 14 posti, e lui prepara i nigiri davanti a voi. È il posto più alto della zona: la vostra «occasione speciale».",
+  "da_sapere": "Solo su prenotazione, pochi posti: prenotate subito. 6 giorni prima chiedono i dati della carta; se non vi presentate senza disdire 72 ore prima, addebitano 50 € a testa. Menù a base di pesce crudo e cotto: non adatto a vegetariani né a chi non può mangiare glutine. Il chef parla anche inglese.",
+  "sito": "https://www.goma-restaurant.com/omakase",
+  "menu": "https://www.goma-restaurant.com/omakase-contact",
+  "prenota": "https://www.goma-restaurant.com/omakase-contact",
+  "thefork": null,
+  "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19335130-Reviews-Goma_Omakase-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+  "maps": "https://www.google.com/maps/search/?api=1&query=Omakase+by+Goma+15+rue+d%27Ariane+77700+Chessy",
+  "fonti": [
+   "https://www.goma-restaurant.com/omakase-contact (23/11/2026)",
+   "https://www.goma-restaurant.com/omakase (23/11/2026)",
+   "https://www.google.com/maps/place/?q=place_id:ChIJ3d1jDMMd5kcRkMQLRnQGRk8 (dati del 05/11/2026, visto 23/11/2026)",
+   "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19335130-Reviews-Goma_Omakase-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)"
+  ],
+  "best_buy": false
+ },
+ {
+  "nome": "Sushibar by Goma",
+  "zona": "Val d'Europe · cene lun–mer",
+  "cucina": "sushi",
+  "pasti": [
+   "pranzo",
+   "cena"
+  ],
+  "aperto": "da martedì a sabato, cena 18:45–21:30; chiuso domenica e lunedì: per voi martedì 15 e mercoledì 16 (sito ufficiale, visto 23/11/2026)",
+  "indirizzo": "15 rue d'Ariane, 77700 Chessy",
+  "lat": 48.857688,
+  "lon": 2.771704,
+  "fermata": "Val d'Europe · RER A, 3–5 min",
+  "da_val_europe": "3–5 min a piedi",
+  "fascia": "€€",
+  "prezzo": "circa 30–45 € a testa (stima: sul sito i prezzi sono solo nelle foto del menù, non li ho potuti leggere)",
+  "voti": [
+   {
+    "fonte": "Google",
+    "valore": "4,6/5",
+    "recensioni": 549,
+    "visto": "23/11/2026",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJvXgo5eUd5kcRdL-h9wJ5bOE",
+    "nota": "voto Google non ufficiale, dato aggiornato al 05/11/2026"
+   },
+   {
+    "fonte": "TheFork",
+    "valore": "non c'è",
+    "recensioni": null,
+    "visto": "23/11/2026",
+    "url": null,
+    "nota": "non trovato su TheFork"
+   },
+   {
+    "fonte": "TripAdvisor",
+    "valore": "4,5/5",
+    "recensioni": 61,
+    "visto": "23/11/2026",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19335139-Reviews-Goma_Restaurant-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+    "nota": "scheda «Goma Restaurant», voto non ufficiale"
+   }
+  ],
+  "nicchia": true,
+  "perche": "La sala «normale» dello stesso chef dell'Omakase. Sushi, nigiri, chirashi e plateau «Gomabox» preparati al momento. Qualità alta a prezzo più basso. Da provare: la chirashi e il sushi di tonno toro.",
+  "da_sapere": "Prenotare non è obbligatorio, ma conviene (sala piccola). Ultimo ordine verso le 21:30: dopo i parchi andate presto. Venerdì e sabato dalle 21 c'è un omakase al banco: a voi non serve, non ci siete.",
+  "sito": "https://www.goma-restaurant.com/sushibar",
+  "menu": "https://www.goma-restaurant.com/goma-sushibar-menu-soir-lunch",
+  "prenota": "https://app.noshow.io/reservation/goma",
+  "thefork": null,
+  "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19335139-Reviews-Goma_Restaurant-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+  "maps": "https://www.google.com/maps/search/?api=1&query=SUSHIBAR+by+Goma+15+rue+d%27Ariane+77700+Chessy",
+  "fonti": [
+   "https://www.goma-restaurant.com/sushibar (23/11/2026)",
+   "https://www.google.com/maps/place/?q=place_id:ChIJvXgo5eUd5kcRdL-h9wJ5bOE (dati del 05/11/2026, visto 23/11/2026)",
+   "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19335139-Reviews-Goma_Restaurant-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)"
+  ],
+  "best_buy": true,
+  "perche_best_buy": "Il sushi del campione del mondo (lo stesso chef dell'Omakase) a circa un terzo del prezzo, a 5 minuti dalla stazione."
+ },
+ {
+  "nome": "Fémèzon",
+  "zona": "Val d'Europe · cene lun–mer",
+  "cucina": "tradizionale",
+  "pasti": [
+   "pranzo",
+   "cena"
+  ],
+  "aperto": "cena mar–gio 19–22, ven e sab 19–22:30; chiuso domenica e lunedì: per voi martedì 15 e mercoledì 16 (Google, non ufficiale: il sito non dà gli orari)",
+  "indirizzo": "9 rue d'Ariane, 77700 Chessy",
+  "lat": 48.8575504,
+  "lon": 2.7719952,
+  "fermata": "Val d'Europe · RER A, 4 min",
+  "da_val_europe": "4 min a piedi",
+  "fascia": "€€€",
+  "prezzo": "circa 40–60 € a testa la sera (Rankeat, non ufficiale)",
+  "voti": [
+   {
+    "fonte": "Google",
+    "valore": "4,8/5",
+    "recensioni": 822,
+    "visto": "23/11/2026",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ1X7xHdgc5kcRY5W9ajZ_-ak",
+    "nota": "voto Google non ufficiale, dato aggiornato al 05/11/2026"
+   },
+   {
+    "fonte": "TheFork",
+    "valore": "non c'è",
+    "recensioni": null,
+    "visto": "23/11/2026",
+    "url": null,
+    "nota": "non trovato su TheFork: si prenota per telefono"
+   },
+   {
+    "fonte": "TripAdvisor",
+    "valore": "4,7/5",
+    "recensioni": 123,
+    "visto": "23/11/2026",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19971623-Reviews-Femezon-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+    "nota": "voto non ufficiale"
+   }
+  ],
+  "nicchia": true,
+  "perche": "Piccola tavola francese moderna (38 coperti), con anche bottega di foie gras. Cucina creativa su prodotti nobili: foie gras, tartare di manzo, agnello cotto 7 ore, sogliola. È il miglior «francese» a piedi dall'alloggio.",
+  "da_sapere": "Prenotare per telefono: +33 9 70 91 38 64. Menù anche in inglese. Qualcuno scrive che la carne arriva più cotta del chiesto: dite bene la cottura («saignant» = al sangue).",
+  "sito": "https://www.femezon.fr/",
+  "menu": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19971623-Reviews-Femezon-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+  "prenota": "tel:+33970913864",
+  "thefork": null,
+  "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19971623-Reviews-Femezon-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+  "maps": "https://www.google.com/maps/search/?api=1&query=F%C3%A9m%C3%A8zon+9+rue+d%27Ariane+77700+Chessy",
+  "fonti": [
+   "https://www.femezon.fr/ (23/11/2026)",
+   "https://www.google.com/maps/place/?q=place_id:ChIJ1X7xHdgc5kcRY5W9ajZ_-ak (dati del 05/11/2026, visto 23/11/2026)",
+   "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19971623-Reviews-Femezon-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
+   "https://rankeat.fr/restaurants/femezon-chessy (23/11/2026, non ufficiale)"
+  ],
+  "best_buy": false
+ },
+ {
+  "nome": "L'Emphase",
+  "zona": "Val d'Europe · cene lun–mer",
+  "cucina": "tradizionale",
+  "pasti": [
+   "pranzo",
+   "cena"
+  ],
+  "aperto": "tutti i giorni, cena 18–23 (ven e sab fino a mezzanotte): va bene anche domenica 13 dopo le 21 (sito ufficiale, visto 23/11/2026)",
+  "indirizzo": "21 rue d'Ariane, 77700 Chessy",
+  "lat": 48.858096,
+  "lon": 2.771213,
+  "fermata": "Val d'Europe · RER A, 5 min",
+  "da_val_europe": "5 min a piedi",
+  "fascia": "€€",
+  "prezzo": "circa 25 € a testa (prezzo medio TheFork); entrecôte 250 g 24,90 € (menù su TripAdvisor)",
+  "voti": [
+   {
+    "fonte": "Google",
+    "valore": "4,6/5",
+    "recensioni": 1075,
+    "visto": "23/11/2026",
+    "url": "https://www.google.com/maps/search/?api=1&query=L%27Emphase+21+rue+d%27Ariane+77700+Chessy",
+    "nota": "voto Google letto su Wanderlog (agg. 19/10/2025), non ufficiale"
+   },
+   {
+    "fonte": "TheFork",
+    "valore": "9,0/10",
+    "recensioni": 964,
+    "visto": "23/11/2026",
+    "url": "https://www.thefork.com/restaurant/l-emphase-r581919",
+    "nota": "voto non ufficiale"
+   },
+   {
+    "fonte": "TripAdvisor",
+    "valore": "4,5/5",
+    "recensioni": 127,
+    "visto": "23/11/2026",
+    "url": "https://www.tripadvisor.fr/Restaurant_Review-g1182377-d19839923-Reviews-L_emphase-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+    "nota": "voto non ufficiale"
+   }
+  ],
+  "nicchia": true,
+  "perche": "Bistrot di quartiere, cucina fatta in casa, ambiente caldo con musica. Buono quando volete mangiare semplice e spendere poco. Da prendere: l'entrecôte con salsa al pepe e il dolce «La Pomme de l'Emphase».",
+  "da_sapere": "Più bistrot-bar che ristorante fine: anche burger e taglieri. Happy hour 18–20. Su TheFork spesso c'è lo sconto del 20%. È l'opzione più sicura per domenica 13 tardi.",
+  "sito": "https://lemphase.com/",
+  "menu": "https://www.thefork.com/restaurant/l-emphase-r581919/menu",
+  "prenota": "https://reservation.laddition.com/booking/Xuj2IqxJ0",
+  "thefork": "https://www.thefork.com/restaurant/l-emphase-r581919",
+  "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g1182377-d19839923-Reviews-L_emphase-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+  "maps": "https://www.google.com/maps/search/?api=1&query=L%27Emphase+21+rue+d%27Ariane+77700+Chessy",
+  "fonti": [
+   "https://lemphase.com/ (23/11/2026)",
+   "https://www.thefork.com/restaurant/l-emphase-r581919 (23/11/2026)",
+   "https://www.tripadvisor.fr/Restaurant_Review-g1182377-d19839923-Reviews-L_emphase-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
+   "https://wanderlog.com/list/geoCategory/209692/where-to-eat-best-restaurants-in-chessy (23/11/2026, non ufficiale)"
+  ],
+  "best_buy": true,
+  "perche_best_buy": "Circa 25 € a testa con 9,0 su TheFork, aperto tutte le sere fino alle 23: va bene anche dopo i parchi e domenica tardi."
+ },
+ {
+  "nome": "Le George (Hôtel L'Élysée Val d'Europe)",
+  "zona": "Val d'Europe · cene lun–mer",
+  "cucina": "carne",
+  "pasti": [
+   "pranzo",
+   "cena"
+  ],
+  "aperto": "cena tutti i giorni 19–23: va bene anche domenica 13 dopo le 21 e lunedì 14 (sito ufficiale dell'hotel, visto 23/11/2026)",
+  "indirizzo": "1 place d'Ariane (Hôtel L'Élysée, 7 cours du Danube), 77700 Serris",
+  "lat": 48.8555749,
+  "lon": 2.7753751,
+  "fermata": "Val d'Europe · RER A, 2 min",
+  "da_val_europe": "2 min a piedi (davanti all'ingresso del centro commerciale)",
+  "fascia": "€€",
+  "prezzo": "prezzo medio 33 € (TheFork); menù 2 piatti 26 €, 3 piatti 34 €, cena circa 40 € tutto compreso (actu.fr, 29/03/2026)",
+  "voti": [
+   {
+    "fonte": "Google",
+    "valore": "4,2/5",
+    "recensioni": 951,
+    "visto": "23/11/2026",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJp6faaSgd5kcR9P0n8Hyw3UA",
+    "nota": "voto Google non ufficiale, dato aggiornato al 05/11/2026"
+   },
+   {
+    "fonte": "TheFork",
+    "valore": "8,7/10",
+    "recensioni": 601,
+    "visto": "23/11/2026",
+    "url": "https://www.thefork.com/restaurant/le-george-r288683",
+    "nota": "voto non ufficiale"
+   },
+   {
+    "fonte": "TripAdvisor",
+    "valore": "4,1/5",
+    "recensioni": 759,
+    "visto": "23/11/2026",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g780713-d1475295-Reviews-Le_George-Serris_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+    "nota": "voto non ufficiale"
+   }
+  ],
+  "nicchia": false,
+  "perche": "La «steak house» dell'hotel, in una bella sala con vetrata e piante. Carne scelta e piatti di stagione. Da prendere: la côte de bœuf o il rumsteak. Il vino ha un ricarico fisso di 24 € a bottiglia: le bottiglie buone convengono.",
+  "da_sapere": "Comodissimo e aperto ogni sera. Cuociono la carne a bassa temperatura: alcuni la trovano troppo cotta, chiedete «saignant». Servizio a volte lento. Prenotazione da TheFork.",
+  "sito": "https://www.hotelelysee.com/restaurant",
+  "menu": "https://whatiseat.com/en/menu/hotel-lelysee-val-deurope-le-george/",
+  "prenota": "https://www.thefork.com/restaurant/le-george-r288683",
+  "thefork": "https://www.thefork.com/restaurant/le-george-r288683",
+  "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g780713-d1475295-Reviews-Le_George-Serris_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+  "maps": "https://www.google.com/maps/search/?api=1&query=Le+George+1+place+d%27Ariane+77700+Serris",
+  "fonti": [
+   "https://www.hotelelysee.com/restaurant (23/11/2026)",
+   "https://actu.fr/ile-de-france/serris_77449/une-table-elegante-des-classiques-a-deguster-sans-se-ruiner-a-val-deurope-ce-restaurant-fait-recette_64068952.html (29/03/2026)",
+   "https://www.thefork.com/restaurant/le-george-r288683 (23/11/2026)",
+   "https://www.tripadvisor.com/Restaurant_Review-g780713-d1475295-Reviews-Le_George-Serris_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
+   "https://www.google.com/maps/place/?q=place_id:ChIJp6faaSgd5kcR9P0n8Hyw3UA (dati del 05/11/2026, visto 23/11/2026)"
+  ],
+  "best_buy": true,
+  "perche_best_buy": "Carne alla griglia a circa 33 € a testa, aperto tutte le sere fino alle 23, a 2 passi dalla stazione. Il Lincoln ha voti più alti su TheFork ma lunedì è chiuso e non serve vino."
+ },
+ {
+  "nome": "The Lincoln Steakhouse",
+  "zona": "Val d'Europe · cene lun–mer",
+  "cucina": "carne",
+  "pasti": [
+   "pranzo",
+   "cena"
+  ],
+  "aperto": "domenica 19–23, lunedì chiuso, martedì e mercoledì 19–21:30 (Google, non ufficiale; TripAdvisor dice domenica fino alle 22: telefonate)",
+  "indirizzo": "7 place Octogonale, 77700 Chessy",
+  "lat": 48.859268,
+  "lon": 2.7704081,
+  "fermata": "Val d'Europe · RER A, 7 min",
+  "da_val_europe": "7–8 min a piedi",
+  "fascia": "€€",
+  "prezzo": "prezzo medio 25 € (TheFork); grigliate grandi da dividere 85–130 € (menù su TripAdvisor)",
+  "voti": [
+   {
+    "fonte": "Google",
+    "valore": "4,4/5",
+    "recensioni": 248,
+    "visto": "23/11/2026",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJVdMEHwAd5kcRirAb6fAGOIA",
+    "nota": "voto Google non ufficiale, dato aggiornato al 05/11/2026"
+   },
+   {
+    "fonte": "TheFork",
+    "valore": "9,9/10",
+    "recensioni": 4,
+    "visto": "23/11/2026",
+    "url": "https://www.thefork.com/restaurant/the-lincoln-steakhouse-r862990",
+    "nota": "solo 4 recensioni, voto non ufficiale"
+   },
+   {
+    "fonte": "TripAdvisor",
+    "valore": "3,5/5",
+    "recensioni": 6,
+    "visto": "23/11/2026",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d33090809-Reviews-The_Lincoln_Steakhouse-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+    "nota": "solo 6 recensioni, voto non ufficiale"
+   }
+  ],
+  "nicchia": true,
+  "perche": "Steakhouse nuovo, in stile turco: grigliate, entrecôte, tomahawk da 1,3 kg e piatti misti da dividere. Porzioni grandi e buon prezzo, secondo le recensioni.",
+  "da_sapere": "Non servono alcolici. Locale recente, poche recensioni: è la seconda scelta per la carne. Martedì e mercoledì l'ultimo ordine è presto (21:30).",
+  "sito": "https://go.nordqr.com/the-lincoln",
+  "menu": "https://go.nordqr.com/the-lincoln",
+  "prenota": "https://www.thefork.com/restaurant/the-lincoln-steakhouse-r862990",
+  "thefork": "https://www.thefork.com/restaurant/the-lincoln-steakhouse-r862990",
+  "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d33090809-Reviews-The_Lincoln_Steakhouse-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+  "maps": "https://www.google.com/maps/search/?api=1&query=The+Lincoln+Steakhouse+7+place+Octogonale+77700+Chessy",
+  "fonti": [
+   "https://www.google.com/maps/place/?q=place_id:ChIJVdMEHwAd5kcRirAb6fAGOIA (dati del 05/11/2026, visto 23/11/2026)",
+   "https://www.tripadvisor.com/Restaurant_Review-g1182377-d33090809-Reviews-The_Lincoln_Steakhouse-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
+   "https://www.thefork.com/restaurant/the-lincoln-steakhouse-r862990 (23/11/2026)",
+   "http://wanderlog.com/place/details/14944514/the-lincoln-steakhouse (23/11/2026, non ufficiale)"
+  ],
+  "best_buy": false
+ },
+ {
+  "nome": "Brasserie Rosalie",
+  "zona": "Disney Village · cene lun–mer",
+  "cucina": "pesce",
+  "pasti": [
+   "pranzo",
+   "cena"
+  ],
+  "aperto": "tutti i giorni 8–23 (sabato fino alle 23:30): va bene anche domenica 13 dopo le 21 (sito ufficiale, visto 23/11/2026)",
+  "indirizzo": "Disney Village, 77700 Chessy",
+  "lat": 48.8692126,
+  "lon": 2.7861054,
+  "fermata": "Marne-la-Vallée–Chessy · RER A, 4 min",
+  "da_val_europe": "1 fermata di RER A (circa 3 min) + 4 min a piedi; a piedi circa 28 min",
+  "fascia": "€€",
+  "prezzo": "prezzo medio 30 € (TheFork); menù Brasserie 39,50 €; plateau piccolo 29,50 €, plateau «Rosalie» 58,50 € (menù ufficiale)",
+  "voti": [
+   {
+    "fonte": "Google",
+    "valore": "4,6/5",
+    "recensioni": 10914,
+    "visto": "23/11/2026",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJcSE5Gp0d5kcRLQLXB8x6fYM",
+    "nota": "voto Google non ufficiale, dato aggiornato al 05/11/2026"
+   },
+   {
+    "fonte": "TheFork",
+    "valore": "8,8/10",
+    "recensioni": 454,
+    "visto": "23/11/2026",
+    "url": "https://www.thefork.com/restaurant/brasserie-rosalie-r811288",
+    "nota": "voto non ufficiale"
+   },
+   {
+    "fonte": "TripAdvisor",
+    "valore": "3,7/5",
+    "recensioni": 245,
+    "visto": "23/11/2026",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d26840517-Reviews-Brasserie_Rosalie-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+    "nota": "voto non ufficiale"
+   }
+  ],
+  "nicchia": false,
+  "perche": "Grande brasserie francese sul lago del Disney Village, con banco di ostriche. È l'unico posto buono per il pesce in zona. Da prendere: le ostriche Gillardeau o il plateau Rosalie (ostriche, mezza aragosta, gamberi).",
+  "da_sapere": "Non è un ristorante Disney: lo gestisce il Groupe Bertrand. Sala enorme e piena di turisti, conviene prenotare. Aperta tardi ogni sera. Non c'è un secondo posto di pesce valido nella zona: per questo ne trovate uno solo.",
+  "sito": "https://www.brasserierosalie.com/",
+  "menu": "https://www.brasserierosalie.com/en/menus",
+  "prenota": "https://www.brasserierosalie.com/",
+  "thefork": "https://www.thefork.com/restaurant/brasserie-rosalie-r811288",
+  "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g1182377-d26840517-Reviews-Brasserie_Rosalie-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html",
+  "maps": "https://www.google.com/maps/search/?api=1&query=Brasserie+Rosalie+Disney+Village+77700+Chessy",
+  "fonti": [
+   "https://www.brasserierosalie.com/ (23/11/2026)",
+   "https://www.brasserierosalie.com/en/menus (23/11/2026)",
+   "https://media.disneylandparis.com/d4th/en-usd/images/D01R20_brasserie-rosalie.pdf (menù autunno-inverno, 16/10/2026)",
+   "https://www.thefork.com/restaurant/brasserie-rosalie-r811288 (23/11/2026)",
+   "https://www.tripadvisor.com/Restaurant_Review-g1182377-d26840517-Reviews-Brasserie_Rosalie-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
+   "https://www.google.com/maps/place/?q=place_id:ChIJcSE5Gp0d5kcRLQLXB8x6fYM (dati del 05/11/2026, visto 23/11/2026)"
+  ],
+  "best_buy": true,
+  "perche_best_buy": "L'unico posto di pesce buono in zona: plateau di frutti di mare a circa 30 € a testa, aperto tutte le sere fino alle 23."
+ },
+ {
+  "nome": "Wonderwoods by Ephemera",
+  "zona": "Val d'Europe · cene lun–mer",
+  "cucina": "tradizionale",
+  "pasti": [
+   "pranzo",
+   "cena"
+  ],
+  "aperto": "cena lun–ven 18:30–22; sabato e domenica 12–22 continuato: domenica 13 solo se arrivate entro le 21 (sito ufficiale, visto 23/11/2026)",
+  "indirizzo": "Imagi Park, 1 rue de l'Hymne à la Joie (centro commerciale Val d'Europe), 77700 Serris",
+  "lat": 48.854248,
+  "lon": 2.775208,
+  "fermata": "Val d'Europe · RER A, 3 min",
+  "da_val_europe": "3 min a piedi",
+  "fascia": "€€",
+  "prezzo": "menù «Immersif» 42 € (entrata, piatto, dolce), 49 € con cocktail; menù delle feste 46 € (menù ufficiale); prezzo medio 30 € (TheFork)",
+  "voti": [
+   {
+    "fonte": "Google",
+    "valore": "4,8/5",
+    "recensioni": 8520,
+    "visto": "23/11/2026",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJHZWx7Iod5kcRDSLwY9RzUVU",
+    "nota": "voto non ufficiale"
+   },
+   {
+    "fonte": "TheFork",
+    "valore": "8,8/10",
+    "recensioni": 932,
+    "visto": "23/11/2026",
+    "url": "https://www.thefork.com/restaurant/wonderwoods-by-ephemera-val-d-europe-r845049",
+    "nota": "voto non ufficiale"
+   },
+   {
+    "fonte": "TripAdvisor",
+    "valore": "4,5/5",
+    "recensioni": 981,
+    "visto": "23/11/2026",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g780713-d33273847-Reviews-Wonderwoods_Restaurant_Ephemera-Serris_Marne_la_Vallee_Seine_et_Marne_Ile_de_Fra.html",
+    "nota": "voto letto nell'elenco TripAdvisor di Serris; la scheda in cache mostrava 4,4 su 389; non ufficiale"
+   }
+  ],
+  "nicchia": false,
+  "perche": "Cena in una «foresta incantata» con luci e piccoli spettacoli. Cucina francese di casa, fatta al momento. Da prendere: la tourte ai funghi con prosciutto al tartufo e il camembert al forno.",
+  "da_sapere": "È più esperienza che alta cucina: alcuni trovano i piatti nella media. Prenotate dal sito (si riempie). A dicembre c'è il menù delle feste con foie gras e anatra confit.",
+  "sito": "https://www.ephemera-group.com/wonderwoods-val-d-europe",
+  "menu": "https://www.ephemera-group.com/menu/wonderwoods-val-d-europe",
+  "prenota": "https://www.ephemera-group.com/nos-restaurants",
+  "thefork": "https://www.thefork.com/restaurant/wonderwoods-by-ephemera-val-d-europe-r845049",
+  "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g780713-d33273847-Reviews-Wonderwoods_Restaurant_Ephemera-Serris_Marne_la_Vallee_Seine_et_Marne_Ile_de_Fra.html",
+  "maps": "https://www.google.com/maps/search/?api=1&query=Wonderwoods+by+Ephemera+Imagi+Park+1+rue+de+l%27Hymne+%C3%A0+la+Joie+77700+Serris",
+  "fonti": [
+   "https://www.ephemera-group.com/wonderwoods-val-d-europe (23/11/2026)",
+   "https://www.ephemera-group.com/menu/wonderwoods-val-d-europe (23/11/2026)",
+   "https://www.thefork.com/restaurant/wonderwoods-by-ephemera-val-d-europe-r845049 (23/11/2026)",
+   "https://www.tripadvisor.com/Restaurant_Review-g780713-d33273847-Reviews-Wonderwoods_Restaurant_Ephemera-Serris_Marne_la_Vallee_Seine_et_Marne_Ile_de_Fra.html (23/11/2026)",
+   "https://www.google.com/maps/place/?q=place_id:ChIJHZWx7Iod5kcRDSLwY9RzUVU (23/11/2026)"
+  ],
+  "best_buy": false
+ }
+]

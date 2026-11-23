@@ -2,10 +2,10 @@
 "account": "377be6",
 "sessione": "09020623f487",
 "giorno": "2026-11-22",
-"turni": 5,
-"peso": 1294160,
-"uscita": 21049,
-"contesto_max": 325254,
+"turni": 6,
+"peso": 1711609,
+"uscita": 29029,
+"contesto_max": 360020,
 "anomalie": [],
 "blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": 2,
@@ -37,19 +37,19 @@
 },
 "remota": "01QTFEqQQmp8",
 "aiutanti": 0,
-"strumenti": 39,
+"strumenti": 50,
 "bilancia": 2,
 "motori": {
-"opus": 1294160
+"opus": 1711609
 },
 "grezzi": {
 "opus": [
-75,
-11431597,
-36544,
+96,
+14928486,
+58815,
 0,
-21049
+29029
 ]
 },
-"costo": 2.9999
+"costo": 4.0371
 }

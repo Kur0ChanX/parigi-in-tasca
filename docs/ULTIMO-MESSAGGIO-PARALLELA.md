@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (23/11/2026 14:42 ora italiana)
+# Ultimo messaggio di Mario (23/11/2026 18:39 ora italiana)
 
-si applica kit
+controllo 25 ok 14 ok
