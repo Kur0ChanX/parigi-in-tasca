@@ -1,0 +1,36 @@
+{
+"account": "cba507",
+"sessione": "e9100850e0a0",
+"giorno": "2026-11-23",
+"turni": 2,
+"peso": 514401,
+"uscita": 14628,
+"contesto_max": 157427,
+"anomalie": [],
+"blocchi": {
+"Stop 8 · Il turno finisce con una": 2
+},
+"esempi_blocchi": {
+"Stop 8 · Il turno finisce con una": [
+"08:47 · Il turno finisce con una domanda o un passo a mano per Mario: il messaggio ha una domanda decisiva (🛑): metti «🛑» nella sua riga di oggi in «## 0. Aspetta Mario» («- gg/mm · 🛑 · <segno giallo> <Nome> ",
+"09:03 · Il turno finisce con una domanda o un passo a mano per Mario: il messaggio ha una domanda decisiva (🛑): metti «🛑» nella sua riga di oggi in «## 0. Aspetta Mario» («- gg/mm · 🛑 · <segno giallo> <Nome> "
+]
+},
+"remota": "01Rwcxc5Bet6",
+"aiutanti": 0,
+"strumenti": 28,
+"bilancia": 2,
+"motori": {
+"opus": 514401
+},
+"grezzi": {
+"opus": [
+53,
+4037781,
+29944,
+0,
+14628
+]
+},
+"costo": 1.3399
+}
