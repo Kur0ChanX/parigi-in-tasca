@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (23/11/2026 02:24 ora italiana)
+# Ultima risposta di Claude (23/11/2026 03:08 ora italiana)
 
-Aspetto il tuo video.
+Ho aggiunto in «Da fare» come vedrai la prova con `?tela=si` e l'ho salvato su GitHub.
