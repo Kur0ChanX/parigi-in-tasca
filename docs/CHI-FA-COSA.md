@@ -33,3 +33,4 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | PR 37 | Controllo 14 (altro account) | v36 da `versione-v36` (commit df327f9), unita 22/11 | — | 22/11 |
 | PR 45 | Controllo 23 | v45 da `versione-v45` (commit 6022aec), unita 23/11 | — | 23/11 |
 | PR 46 | Controllo 23 | prova «luci ferme» da `versione-v45-prova` (commit 5a8d6bb), unita 23/11 | — | 23/11 |
+| PR 47 | Controllo 25 | prova «lucine sulla tela» da `versione-v45-tela` (commit f4803af), unita 23/11 | — | 23/11 |

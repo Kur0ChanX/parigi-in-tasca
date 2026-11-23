@@ -25,3 +25,20 @@
 - Fatto sul ramo: tutte le animazioni di sola luminosità e di movimento semplice (rotate, scale, translate) sulla tela, anche con due animazioni insieme (finestre del castello) e con cose sopra che le coprono (ridisegnate sopra la copia; per chi si muove su una tela d’appoggio). Restano nel disegno: fiammelle dentro le lanterne che dondolano (animazione dentro animazione), proiezioni del castello (maschera), stelline della luna (sotto la slitta). Telefono di prova: **1.355 → 73 strati**; confronto a pixel allo stesso istante: scarto medio ~1 su 255, solo bordi sotto il pixel.
 - Prova automatica: «C27 · tela» in `tools/prova-web-app.js` (strati ≤ 120, confronto a pixel, niente tela con «riduci movimento»). Strumenti di misura in `archivio/2026-11-23-c27-strati/lavoro/` (`confronto.js`, `perche.js`).
 - Manca: video di Mario con `?luci=ferme` (conferma della causa), poi versione nuova pubblicata e suo video; dopo, togliere `?luci=ferme`.
+
+## Pubblicazione della prova · Controllo 25 (23/11)
+- Mario 23/11 ~08:50, alla DOMANDA 1 («pubblico la prova «lucine sulla tela»? 1 · sì, pubblica · 2 · no, aspetta»), intero:
+> 11
+- → scelta 1: pubblicare la prova `?tela=si` (l’app normale resta com’è). Prove locali rifatte sull’ultimo commit prima della PR.
+- PR 47 da `versione-v45-tela` (commit f4803af, prove locali: colori ok, `--controlla` VERO, web app 81/81, scritte 20/20), unita squash (main 32f68ba). Sito vero letto col browser (Pixel 7): normale senza scritta né tela; `?tela=si` con «PROVA · lucine sulla tela», tela accesa, 0 errori.
+- Manca: i 3 video di Mario (normale, `?luci=ferme`, `?tela=si`), misura con `misura.py`, poi Prossimi passi 2 delle consegne (tela per tutti, v46).
+
+## Esito dei video · Mario 23/11 ~09:1x, intero
+> Allora, su normale flickera, luciferme no, però non flickera, però è bruttissimo. Luci ferme, e su tela c'è lo stesso problema, flickera lo stesso su tela.
+- → normale: sfarfalla · `?luci=ferme`: NON sfarfalla (ma brutta, tutto fermo) · `?tela=si`: sfarfalla uguale. Quindi: la causa sta nelle animazioni del foglio di stile, ma NON nel numero di strati (1.355 → 69 non basta). Tentativo «tela» fallito (secondo dopo la v40 «più leggera»): si cambia strada.
+
+## Causa trovata · Controllo 25 (23/11, misure col telefono di prova, script in `archivio/2026-11-23-c27-strati/lavoro/`: `ricrea.js`, `spazza.js`)
+- Misura: strati grandi RICREATI (id nuovo = strato da ridisegnare da zero, sul telefono vuoto per un fotogramma) in 24–30 s con la slitta in volo: normale 5–6 · `?luci=ferme` 0 · `?tela=si` 5 → combacia coi 3 video di Mario.
+- Con la tela restano 34 animazioni nel disegno (19 fiammelle, 7+4 proiezioni, 3 stelline della luna, 2 `tw`): fermate tutte → 0. Una per una: solo le **3 stelline della luna** (`.luna-st`) → 0 (4 prove su 4, normale e tela; anche 70 s: 6 → 0). Proiezioni, fiammelle, `tw2/tw3`: restano 4–5.
+- Perché: le stelline stanno nel gruppo lontano subito PRIMA della slitta; ogni stellina animata è uno strato; la slitta (mossa dal programma) quando ci passa sopra non può più stare nello strato di sotto, e il telefono rifà gli strati di slitta, tetti, Torre e faro (e quelli dopo).
+- Correzione (v46): stelline disegnate sulla tela del cielo (#sky) come la luna, stesso posto, colore e luccichio; nel disegno solo la forma, nascosta. Prova «C27 · slitta» in `tools/prova-web-app.js` (rossa prima: 3 animazioni sotto la slitta, 63 strati rifatti; luce delle stelline sulla tela).

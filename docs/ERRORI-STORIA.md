@@ -88,3 +88,9 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 ## Spostati dal diario il 23/11/2026 (Controllo 24, file snello: la difesa è già nella prova `elementFromPoint` dei tasti fissi)
 | 22/11/2026 | Fila dei giorni sparita sul telefono dalla v17 alla v24. | Barra delle schede fissa (z 60) sopra la fila (z 30); le prove guardavano che i tasti ci fossero, non che si potessero toccare. | Prove con `elementFromPoint` sui tasti fissi (storia in ERRORI-STORIA). |
 | 22/11/2026 | Sul PC «in breve» restava su 2 colonne, anche se c’era la regola dei 3 (trovato dalla Controllo 9). | La regola del PC stava PRIMA di quella generale dei 2 colonne nel CSS: a parità di forza vince l’ultima. | Regole del PC in fondo al CSS (blocco v32); prova «PC (1440 px)… «in breve» su 3 colonne» in `prova-web-app.js`. |
+
+## Spostati dal diario il 23/11/2026 (Controllo 25, file snello)
+| Data | Errore | Causa vera | Difesa |
+|---|---|---|---|
+| 22/11/2026 | v18, prima di pubblicare (trovato da me): nella riga della scelta i km dai parchi erano sbagliati (n. 8 «0,6 km» invece di 1,9). | Ho chiamato `kmT` la funzione nuova, ma `kmT` esisteva già (minuti a piedi → km) in un blocco interno, e lì vinceva quella vecchia. Quarto caso di nome già usato (`go`, `.pc`, `cresce`). | Prima di un nome nuovo (funzione, costante, classe) `grep -c '\bnome\b'` nella pagina = 0; prova «n. 8 = 1,9 km come la scheda» in `tools/prova-web-app.js`. |
+| 22/11/2026 | Slitta del film disegnata da noi in vettoriale invece della foto di Mario («ritaglia questa immagine… non disegnare»). | Ho eseguito una «Scelta» ereditata (C18: «sagoma disegnata da noi») senza confrontarla con le parole intere di Mario. | Personaggi e figure: sempre la foto di Mario ritagliata. Una scelta ereditata si confronta prima con le parole di Mario. |
