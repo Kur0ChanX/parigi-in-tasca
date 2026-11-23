@@ -1,9 +1,12 @@
-# Ultima risposta di Claude (23/11/2026 09:43 ora italiana)
+# Ultima risposta di Claude (23/11/2026 09:48 ora italiana)
 
-La v46 è online: la correzione dello sfarfallio adesso vale per tutti.
+🧠 Continuo con Opus 5.5 · Extra, come la sessione di prima. Fable non serve: adesso aspetto solo la tua prova sul telefono, non c'è niente da progettare.
+
+🛑 **v46 sul telefono:** Torre, faro, slitta e Zero spariscono ancora per un attimo?
+🛑 **Alloggi «spenti» (n. 18, 20, 21):** come li mostro? La domanda è ancora aperta (Controllo 14).
 
 ───
-✅ FATTO
-- Le prove sono tutte verdi, compresa quella nuova sullo sfarfallio: web app 82 su 82, scritte 20 su 20, colori ok. Ho pubblicato la v46 (PR 48).
-- Ho controllato il sito vero in un browser che imita il telefono: c'è la v46, sotto la slitta non c'è più niente di animato e non ci sono errori.
-- Prima della pubblicazione la prova nuova era rossa per un motivo suo: guardava la stellina su un solo pixel, e a schermo piccolo la stellina è minuscola. Ora guarda un quadratino di 5×5 pixel. Sulla pagina non cambiava …
+✅ **FATTO**
+- La chat è partita e il lavoro è allineato con GitHub.
+- La v46 è online: l'ho controllato adesso sul sito.
+- Ho rifatto mio il promemoria degli orari RER A del 13 e del 17 dicembre: scatta il 26/11 alle 10:17. Se gli orari sono usciti, li …
