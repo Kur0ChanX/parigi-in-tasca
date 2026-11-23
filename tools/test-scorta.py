@@ -677,7 +677,9 @@ with tempfile.TemporaryDirectory() as tmp:
     env_e = dict(os.environ, CLAUDE_PROJECT_DIR=e)
     out = sh(sys.executable, "-I", "-c", prova + f"print(sorted(m.scarica([{{'nome': {nome_q!r}}}, {{'nome': {nome_p!r}}}])))",
              cwd=e, env=env_e)
-    controlla(out == str(sorted([nome_p, nome_q])) and remoto(e, nome_q) == sq2, "C352: scorte scaricate in un fetch solo")
+    # E5 (C468): il fetch scrive in refs/remotes/origin/; remoto() guardava refs/<nome>, che qui non c'è (15 s a vuoto)
+    controlla(out == str(sorted([nome_p, nome_q])) and git(e, "rev-parse", "-q", "--verify", f"refs/remotes/origin/{nome_q}") == sq2,
+              "C352: scorte scaricate in un fetch solo")
     out = sh(sys.executable, "-I", "-c", prova + f"print(sorted(m.scarica([{{'nome': {nome_q!r}}}, {{'nome': 'scorta-parallela-20261030-01SPARIT/claude/prova-1'}}])))",
              cwd=e, env=env_e)
     controlla(out == str([nome_q]), "C352: un ramo sparito → gli altri scaricati uno per uno")
@@ -789,5 +791,34 @@ with tempfile.TemporaryDirectory() as t18:
               and git(r18, "rev-parse", "-q", "--verify", "refs/scorta-principale/claude/prova-1") == locale18,
               "voce 10: invio fallito → al giro dopo riparte, senza una scorta nuova")
     aspetta_file(os.path.join(r18, ".git", "scorta-spinta")); time.sleep(0.5)  # E455
+
+# 19. PT E155 (Kit 51; sezione 20 di Pronti in Tavola, Mario 21/11 «1 Correggilo e mettilo come regola per tutti»): voce
+#     già nell'archivio intero del ramo ma uscita dal suo registro → NON è nuova e la scorta che la porta è «niente»
+#     (prima ogni scorta vecchia con quella voce diceva «1 nuovi» all'avvio)
+with tempfile.TemporaryDirectory() as t19:
+    r19 = os.path.join(t19, "r")
+    os.makedirs(os.path.join(r19, "docs")); os.makedirs(os.path.join(r19, "archivio", "messaggi-mario"))
+    git(r19, "init", "-q", "-b", "ramo")
+    for k, v in (("user.name", "P"), ("user.email", "p@example.com"), ("commit.gpgsign", "false")):
+        git(r19, "config", k, v)
+    a, b, c = (("2026-11-19 15:00", "01AAAAAAAAAA", "prima"), ("2026-11-19 15:32", "01AAAAAAAAAA", "uscita dal registro"),
+               ("2026-11-19 16:00", "01AAAAAAAAAA", "dopo"))
+    reg19, arc19 = os.path.join(r19, "docs", "MESSAGGI-MARIO.md"), os.path.join(r19, "archivio", "messaggi-mario", "2026-11.md")
+    open(reg19, "w").write(sc9.scrivi_voci([a, b, c]))
+    open(arc19, "w").write(sc9.scrivi_archivio([a, b, c]))
+    git(r19, "add", "-A"); git(r19, "commit", "-q", "-m", "base")
+    git(r19, "checkout", "-q", "-b", "scorta")
+    git(r19, "commit", "-q", "--allow-empty", "-m", "Scorta automatica")
+    git(r19, "checkout", "-q", "ramo")
+    open(reg19, "w").write(sc9.scrivi_voci([a, c]))  # b uscita dal registro, resta nell'archivio
+    git(r19, "commit", "-q", "-am", "registro col tetto")
+    cwd_prima, sc9.CWD = sc9.CWD, r19
+    try:
+        nuove19 = sc9.messaggi_nuovi("scorta")
+        lavoro19 = sc9.lavoro_della_scorta("scorta")
+    finally:
+        sc9.CWD = cwd_prima
+    controlla(nuove19 == [], f"PT E155: voce già nell'archivio intero = non nuova ({nuove19})")
+    controlla(lavoro19 == "niente", f"PT E155: scorta con la sola voce già archiviata = niente da unire ({lavoro19})")
 
 print(f"Scorta: {ok_n} controlli riusciti")

@@ -206,6 +206,60 @@ try:
     controlla(codice == 0 and "archivio/C6/foto-1/ · 1 file" in uscita and "1 cartelle su 1" in uscita,
               "--arretrati: elenca la cartella mai citata, uscita 0")
 
+    # 11 · Foto rifatta sopra lo stesso file (C516 «Poi», Kit 45): un invio o una riga di prima non bastano.
+    prog, reg = progetto_nuovo(base, "g")
+    scrivi(prog, "archivio/C8/foto-1/a.png", "prima\n", nato=ADESSO - 900)
+    scrivi(prog, "archivio/C8/foto-2/b.png", "prima\n", nato=ADESSO - 900)
+    scrivi(prog, "archivio/C8/foto-3/c.png", "prima\n", nato=ADESSO - 900)
+    salva(prog, "foto per Mario")
+    reg.manda(["archivio/C8/foto-1/a.png"], ADESSO - 800)
+    da_fare(prog, ["Foto 2 e 3: vanno bene? `archivio/C8/foto-2/` `archivio/C8/foto-3/`"])
+    controlla(hook(prog, reg)[0] == 0, "rifatta, prima: una mandata e due citate → passa")
+    memoria = os.path.join(prog, ".git", "foto-chieste.json")
+    with open(memoria, encoding="utf-8") as f:
+        voci = json.load(f)["citate"]
+    controlla(len(voci) == 2 and all("@" in v for v in voci), f"memoria: percorso e contenuto ({voci})")
+    # la terza come la ricordava il kit di prima (solo il percorso): vale finché la foto non è rifatta
+    with open(memoria, "w", encoding="utf-8") as f:
+        json.dump({"citate": [v if "foto-2" in v else v.split("@")[0] for v in voci]}, f)
+    da_fare(prog)  # Mario risponde «cambia»: le righe vanno via
+    controlla(hook(prog, reg)[0] == 0, "rifatta, prima: righe tolte → restano chiuse (memoria nuova e vecchia)")
+    for nome in ("foto-1/a.png", "foto-2/b.png", "foto-3/c.png"):
+        scrivi(prog, f"archivio/C8/{nome}", "rifatta\n", nato=ADESSO - 100)
+    salva(prog, "foto rifatte sopra gli stessi file")
+    codice, errore, _ = hook(prog, reg)
+    controlla(codice == 2 and all(f"archivio/C8/foto-{n}/ (1 file)" in errore for n in (1, 2, 3)),
+              f"rifatte sopra lo stesso file: tornano aperte tutte e tre ({errore[:200]})")
+    reg.manda(["archivio/C8/foto-1/a.png"], ADESSO - 50)
+    da_fare(prog, ["Foto 2 rifatta: va bene? `archivio/C8/foto-2/b.png`"])
+    codice, errore, _ = hook(prog, reg)
+    controlla(codice == 2 and "foto-3/ (1 file)" in errore and "foto-1/" not in errore and "foto-2/" not in errore,
+              "rifatte: rimandata dopo la rinascita e riga nuova → a posto; la terza resta aperta")
+    da_fare(prog)
+    controlla("foto-2/" not in hook(prog, reg)[1], "rifatta e citata, riga tolta: resta chiusa (memoria col contenuto)")
+
+    # 12 · Arretrati su copia corta: il commit del taglio non dà per «aggiunto» tutto l'archivio; niente doppioni.
+    prog, reg = progetto_nuovo(base, "h")
+    for i in range(3):
+        scrivi(prog, f"archivio/C9/vecchia-{i}/a.png")
+    salva(prog, "foto vecchie")
+    scrivi(prog, "archivio/C9/taglio/a.png")
+    salva(prog, "commit che nella copia corta è il taglio")
+    scrivi(prog, "archivio/C9/nuova/a.png")
+    salva(prog, "foto nuova")
+    corta = os.path.join(base, "h-corta")
+    git(base, "clone", "-q", "--depth", "2", "file://" + prog, corta)
+    codice, _, uscita = hook(corta, None, argomenti=("--arretrati", "14"))
+    controlla(codice == 0 and "archivio/C9/nuova/ · 1 file" in uscita and "1 cartelle su 1" in uscita
+              and "storia corta" in uscita, f"--arretrati su copia corta: conta solo la foto nuova ({uscita[-160:]})")
+    git(prog, "rm", "-q", "archivio/C9/nuova/a.png")
+    salva(prog, "foto tolta")
+    scrivi(prog, "archivio/C9/nuova/a.png")
+    salva(prog, "foto rimessa")
+    codice, _, uscita = hook(prog, None, argomenti=("--arretrati", "14"))
+    controlla("archivio/C9/nuova/ · 1 file" in uscita and "5 cartelle su 5" in uscita and "storia corta" not in uscita,
+              f"--arretrati su copia intera: 5 cartelle, il file aggiunto due volte conta una ({uscita[-160:]})")
+
     # 10 · Tempo: l'hook gira a ogni fine turno (E224).
     prog, reg = progetto_nuovo(base, "f")
     for i in range(60):

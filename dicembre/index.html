@@ -912,6 +912,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
+ {v:47,d:'23/11',n:['Con «riduci movimento» del telefono la luna e le sue stelline restano al loro posto nel cielo della testata.']},
  {v:46,d:'23/11',n:['Testata più stabile: Torre Eiffel, faro e slitta non spariscono più per un attimo mentre la slitta passa.']},
  {v:45,d:'23/11',n:['La luna di Topolino nella testata resta nitida: sul telefono, dopo qualche minuto, poteva diventare una macchia sfocata.']},
  {v:44,d:'23/11',n:['«Questo o quello?»: scegliete voi gli alloggi da confrontare (si parte da n. 8, 16 e 23), con le differenze riga per riga: prezzo, minuti fino ai parchi, voto, domenica sera, pro e contro.']},
@@ -2629,6 +2630,8 @@ if(cv&&cv.getContext){
  const stop=()=>{run=false;cancelAnimationFrame(raf)};
  size();draw(t0+1600);
  addEventListener('resize',()=>{size();if(!run)draw(performance.now())},{passive:true});
+ /* Controllo 27 (prova rossa 23/11): con «riduci movimento» il cielo si disegna una volta sola; se la testata cambia altezza dopo (scritte e immagini caricate), la tela restava della misura vecchia e luna e stelline fuori posto → si ridisegna quando la testata cambia misura */
+ if(window.ResizeObserver){let rh=0;new ResizeObserver(()=>{const h=hero.getBoundingClientRect().height;if(Math.abs(h-rh)<1)return;rh=h;size();if(!run)draw(performance.now())}).observe(hero)}
  document.addEventListener('palette',()=>{size();if(!run)draw(performance.now())});
  if(!RM){if('IntersectionObserver' in window)new IntersectionObserver(e=>{vis=e[0].isIntersecting;vis?start():stop()}).observe(hero);
   document.addEventListener('visibilitychange',()=>document.hidden?stop():start());start();

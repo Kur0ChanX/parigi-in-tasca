@@ -29,6 +29,7 @@ Quattro posti per le prove, ognuno con la sua bravura e i suoi limiti. GitHub no
 - Sotto 2000: nessuna domanda e nessun avviso.
 
 ## Lezioni dal diario
+- **E516** «Minuti di GitHub finiti» detto a Mario con una 🛑 (Giri 96): `conta-minuti.py` contava anche i giri del PC di casa (`self-hosted`); veri ~1155 su 2000. Prima di «è finito» una prova dal vero (un lavoro piccolo che parte); macchina nuova = rifaccio la verifica dei conti.
 - **E168** (Mario 31/10 23:50) L'Atlante si aggiorna da solo ogni 3 ore di giorno, a ogni versione su `main` e a mano: niente più giri a ogni consegna (457 partenze in 2,5 giorni); a mano solo se Mario lo chiede.
 - **E215** Un conto che legge un elenco dal server si confronta col `total_count` (le ricerche di GitHub si fermano a 1000 giri: 853 minuti segnati, 3830 veri).
 - **E218** Un lavoro fermo per un tetto di GitHub passa su Blacksmith da solo, in una riga, senza chiedere (C290, E162; 29/10 «non dovresti neanche chiederlo»).

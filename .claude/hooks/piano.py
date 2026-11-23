@@ -8,6 +8,8 @@ Comandi a mano (`python3 -I .claude/hooks/piano.py <modo> <file>`):
   pronto <file>     controlla la forma e mette il sigillo (solo Fable: con un altro motore il comando è negato)
   controlla <file>  0 = sigillo valido · 1 = ROTTO · 2 = senza sigillo
   stato <file>      una riga: «senza sigillo» | «pronto · N passi aperti · primo: <nome>» | «rotto»
+E500: `stato`, `controlla` e `inizio` (al cambio di motore nella chat del sigillo) aggiungono una riga «⚠️ E500» se, a
+esecuzione non partita, dei file nominati dal piano sono cambiati dalla base del sigillo (carte e `archivio/` no).
 Hook (JSON da stdin): `inizio` (UserPromptSubmit), `prima` (PreToolUse › Bash: nega il push), `scritto` (PostToolUse ›
 Edit|Write: avvisa). Motore di adesso letto come `fermo-fable.py`. Esce sempre 0 negli hook e tace su ogni errore suo.
 Stato in `.git/piano-pronto-<sessione>.json` e `.git/piano-diamanti-<sessione>.json` (fuori dal repo).
@@ -38,6 +40,9 @@ PRONTO_CMD = re.compile(r'\bpython3?\b[^\n;&|]*?piano\.py["\']?\s+pronto\b')
 CARTELLA = 'docs/lavori-in-corso/'
 SBLOCCO_DIARIO = 'Passi 💎 a Opus, scelto da Mario'
 SCELTA_FABLE = ('vai con fable', 'continua con fable', 'resta fable', 'eseguilo tu')
+BASE = re.compile(r' · base ([0-9a-f]{7,40}) · ')
+PERCORSI = re.compile(r'[\w.-]+(?:/[\w.-]+)+\.\w{1,5}')  # un percorso scritto nel piano: almeno una «/» e l'estensione
+FUORI_PIANO = ('docs/', 'archivio/')  # carte e foto cambiano sempre: non sono «file del piano»
 
 
 def blocco(testo):
@@ -276,6 +281,49 @@ def miei_piani(origin):
     return sorted({f for f in cambiati if f.startswith(CARTELLA) and f.endswith('.md')})
 
 
+# ---------- E500: file del piano cambiati dalla base del sigillo ----------
+
+def partita(righe, percorso):
+    """True se dal sigillo è stato spuntato almeno un passo. Confronto col file com'era nel commit del sigillo;
+    se quel commit non si trova (sigillo non ancora salvato, storia corta): partita = un passo 🧠 o 🔧 spuntato."""
+    passi = lista_passi(righe)
+    fatti = {p['nome'] for p in passi if p['fatto']}
+    rel = os.path.relpath(os.path.abspath(percorso), progetto())
+    nato = (git('log', '-1', '--format=%H', '-S' + (riga_sigillo(righe) or ''), '--', rel) or '').strip()
+    allora = git('show', f'{nato}:{rel}') if nato else None
+    if allora is not None:
+        return fatti != {p['nome'] for p in lista_passi(blocco(allora)) if p['fatto']}
+    return any(p['fatto'] and p['segno'] != '💎' for p in passi)
+
+
+def avviso_base(righe, percorso):
+    """Una riga se, a esecuzione non partita, la base del sigillo non c'è in questa copia o dei file nominati dal
+    piano sono cambiati dopo (un'altra chat: C516, «Kit 41» preso 2 minuti dopo il sigillo). Sennò ''."""
+    m = BASE.search(riga_sigillo(righe) or '')
+    if not m or partita(righe, percorso):
+        return ''
+    base = m.group(1)
+    if git('cat-file', '-e', base + '^{commit}') is None:
+        return (f'⚠️ E500: la base del sigillo ({base}) non è nella storia di questa copia: non so dire se i file del '
+                'piano sono cambiati. `git fetch --deepen=300 origin` e rilancia, prima del primo passo.')
+    testo = '\n'.join(righe)
+    nominati = {t[2:] if t.startswith('./') else t for t in PERCORSI.findall(testo)}
+
+    def nominato(f):
+        if '/' not in f:  # file in cima al progetto (`firestore.rules:738`): il nome intero, non un pezzo di percorso
+            return bool(re.search(r'(?<![\w/.-])' + re.escape(f) + r'(?![\w/-])', testo))
+        return any(f == t or f.endswith('/' + t) for t in nominati)
+
+    cambiati = sorted(f for f in (git('diff', '--name-only', f'{base}..HEAD') or '').splitlines()
+                      if f and not f.startswith(FUORI_PIANO) and nominato(f))
+    if not cambiati:
+        return ''
+    elenco = ', '.join(cambiati[:6]) + (f' e altri {len(cambiati) - 6}' if len(cambiati) > 6 else '')
+    return (f'⚠️ E500: {len(cambiati)} file nominati dal piano sono cambiati dalla base del sigillo ({base}): {elenco}. '
+            f'Prima del primo passo guardali (`git diff {base}..HEAD -- <file>`): se toccano un passo, riga in '
+            '«❓ Per Fable» e Fable risigilla; sennò una riga nel Diario e avanti.')
+
+
 # ---------- comandi a mano ----------
 
 def pronto(percorso):
@@ -325,6 +373,9 @@ def controlla(percorso):
         return 2
     if impronta(righe) == scritto:
         print('Sigillo valido.')
+        avviso = avviso_base(righe, percorso)
+        if avviso:
+            print(avviso)
         return 0
     print(f'ROTTO: il piano è cambiato dopo il sigillo. Cosa è cambiato: git log -1 --format=%h -S\'Sigillo: {scritto}\' '
           f'-- {percorso}, poi git diff <quel commit> -- {percorso}')
@@ -341,6 +392,9 @@ def stato(percorso):
     else:
         aperti = [p['nome'] for p in lista_passi(righe) if not p['fatto']]
         print(f'pronto · {len(aperti)} passi aperti · primo: {primo_dal_titolo(righe) or (aperti[0] if aperti else "—")}')
+        avviso = avviso_base(righe, percorso)
+        if avviso:
+            print(avviso)
     return 0
 
 
@@ -446,6 +500,11 @@ def inizio(dati):
             os.remove(percorso)
         except Exception:
             pass
+        # Qui parte l'esecuzione (Mario ha cambiato motore nella chat del sigillo): l'avviso E500, una volta sola.
+        piano_ = os.path.join(progetto(), str(st.get('file') or ''))
+        avviso = avviso_base(blocco(leggi_testo(piano_) or ''), piano_) if st.get('file') else ''
+        if avviso:
+            testi.append(avviso)
         return '\n'.join(testi)
     file = st.get('file') or 'del lavoro'
     # Collaudo C487 (B2): le stesse guardie di «tutto con opus» (testo corto, niente domanda), sennò

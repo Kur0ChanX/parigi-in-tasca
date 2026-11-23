@@ -42,3 +42,8 @@
 - Con la tela restano 34 animazioni nel disegno (19 fiammelle, 7+4 proiezioni, 3 stelline della luna, 2 `tw`): fermate tutte → 0. Una per una: solo le **3 stelline della luna** (`.luna-st`) → 0 (4 prove su 4, normale e tela; anche 70 s: 6 → 0). Proiezioni, fiammelle, `tw2/tw3`: restano 4–5.
 - Perché: le stelline stanno nel gruppo lontano subito PRIMA della slitta; ogni stellina animata è uno strato; la slitta (mossa dal programma) quando ci passa sopra non può più stare nello strato di sotto, e il telefono rifà gli strati di slitta, tetti, Torre e faro (e quelli dopo).
 - Correzione (v46): stelline disegnate sulla tela del cielo (#sky) come la luna, stesso posto, colore e luccichio; nel disegno solo la forma, nascosta. Prova «C27 · slitta» in `tools/prova-web-app.js` (rossa prima: 3 animazioni sotto la slitta, 63 strati rifatti; luce delle stelline sulla tela).
+- v46 online (PR 48, main cf8f7c5; prove locali: web app 82/82, scritte 20/20). Sito vero letto col browser (Pixel 7): v46, 0 animazioni sotto la slitta, stelline nascoste nel disegno, novità presente, 0 errori. Manca: Mario guarda la v46 sul telefono.
+
+## Prova rossa al giro del Kit 53 · Controllo 27, 23/11 ~14:55
+- `node tools/prova-web-app.js` sui file del sito uguali a `main` (v46): rossa 2 volte su 2 la riga «C27 · slitta», per le stelline con «riduci movimento» (luce 8/19/7, serve > 180); una volta rossa anche «C23 luna» (poi verde). Alla v46 era 82/82.
+- Causa misurata: con «riduci movimento» il cielo si disegnava una volta, a volte con la testata ancora più alta (tela 1101 contro 1063). Correzione: ridisegno quando la testata cambia misura (v47); web app 82/82 due volte, scritte 20/20.

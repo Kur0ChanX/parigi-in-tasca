@@ -8,7 +8,7 @@ minuti e nessuno se n'è accorto. Qui, in sola lettura (`gh api`, come `.claude/
      partire (`on: push` con `branches` e `paths` in `.github/workflows/*.yml`);
      un push il cui ultimo commit porta `[skip ci]` (o gli altri segni di GitHub) non fa attendere niente (E404);
   2. per ogni flusso l'ultimo giro: in coda da oltre 5 minuti senza lavori = FERMO; nessun giro 5 minuti dopo il push
-     = NON NATO; un lavoro che aspetta da oltre 3 minuti una macchina di casa = MACCHINA; prima = ATTESA (si riguarda);
+     = NON NATO; un giro finito «startup_failure» nell'ultima ora (anche d'altri, E528) = MORTI; un lavoro che aspetta da oltre 3 minuti una macchina di casa = MACCHINA; prima = ATTESA (si riguarda);
      per MACCHINA il motivo VERO lo dà lo strumento del progetto che conosce la macchina di casa, se il progetto lo
      nomina in `.claude/progetto.json` «pc_dei_giri» (nel progetto fonte `tools/giro-partito.py`, che non è nel kit; kit 38.51,
      C511 p.23; I22, 14/11: PC acceso che faceva un altro giro detto «spento, staccato o occupato»): acceso e occupato
@@ -18,7 +18,7 @@ Non rilancia da solo: stampa la chiamata esatta per Claude (`actions_run_trigger
 Mai due rilanci: se è fermo anche il giro lanciato a mano lo dice e basta. Oltre un'ora un giro fermo è uno zombie
 (11/11: cancellarlo dà 409): si ignora.
 --tutti: anche i flussi che non ho toccato io (di base solo quelli dei miei push). --senza-guasti: salta il punto 3.
-Esce: 0 tutto bene · 10 attesa · 20 fermo o non nato · 1 non so (gh o git muti: lo dice).
+Esce: 0 tutto bene · 10 attesa · 20 fermo, non nato o morti · 1 non so (gh o git muti: lo dice).
 Prove: python3 -I tools/test-giri-fermi.py
 """
 import datetime as dt
@@ -33,8 +33,10 @@ VECCHIO = 3600  # secondi: oltre, è uno zombie e non si rilancia
 MACCHINA = 180  # secondi: oltre, un lavoro che aspetta una macchina di casa non verrà preso (come giro-partito.py)
 MARGINE = 10    # secondi fra l'orologio di qui e quello di GitHub
 IN_CODA = ('queued', 'requested', 'waiting', 'pending')
-ESITI = {'ATTESA': 10, 'FERMO': 20, 'NON NATO': 20, 'FERMO A MANO': 20, 'MACCHINA': 20}
-GUASTO = ('FERMO', 'NON NATO', 'FERMO A MANO')  # gli stati dove c'entra GitHub
+ESITI = {'ATTESA': 10, 'FERMO': 20, 'NON NATO': 20, 'FERMO A MANO': 20, 'MACCHINA': 20, 'MORTI': 20}
+GUASTO = ('FERMO', 'NON NATO', 'FERMO A MANO', 'MORTI')  # gli stati dove c'entra GitHub
+# E528 (22/11): GitHub rifiuta il giro prima di partire, niente passi né registro (flusso «BuildFailed» o il suo nome)
+MORTO = 'startup_failure'
 # segni nel messaggio dell'ultimo commit di un push: GitHub non fa partire nessun giro `on: push` (E404)
 SALTA = ('[skip ci]', '[ci skip]', '[no ci]', '[skip actions]', '[actions skip]')
 GUASTI = 'https://www.githubstatus.com/api/v2/incidents/unresolved.json'
@@ -218,6 +220,8 @@ def giudica(giri, lavori_di, attesi, adesso, tutti=False):
     for g in giri:
         per_flusso.setdefault(flusso_di(g), []).append(g)
     voci = []
+    morti = sorted([g for g in giri if g.get('conclusion') == MORTO
+                    and (adesso - ora_di(g['created_at'])).total_seconds() <= VECCHIO], key=lambda g: g['created_at'])
     for flusso in sorted(set(per_flusso) | set(attesi)):
         if not tutti and flusso not in attesi:
             continue
@@ -251,7 +255,22 @@ def giudica(giri, lavori_di, attesi, adesso, tutti=False):
             stato = 'ATTESA' if secondi <= SOGLIA else 'FERMO A MANO' if g.get('event') == 'workflow_dispatch' else 'FERMO'
         voci.append({'stato': stato, 'flusso': flusso, 'secondi': secondi, 'giro': g, 'commit': g.get('head_sha', ''),
                      'lavoro': lavoro})
+    if morti:  # C535: una voce sola per tutti (vale per ogni flusso, anche senza miei push); «non nato» è spiegato da questa
+        g = morti[-1]
+        voci = [v for v in voci if v['stato'] != 'NON NATO']
+        voci.append({'stato': 'MORTI', 'flusso': flusso_di(g), 'secondi': int((adesso - ora_di(morti[0]['created_at']))
+                     .total_seconds()), 'giro': g, 'commit': g.get('head_sha', ''), 'lavoro': None, 'quanti': len(morti),
+                     'dal': morti[0]['created_at']})
     return voci
+
+
+def ora_italiana(s):
+    """«HH:MM» ora italiana da un orario di GitHub (UTC); senza fusi orari nel contenitore: «HH:MM UTC»."""
+    try:
+        from zoneinfo import ZoneInfo
+        return ora_di(s).astimezone(ZoneInfo('Europe/Rome')).strftime('%H:%M')
+    except Exception:
+        return ora_di(s).strftime('%H:%M UTC')
 
 
 def esito_di(voci):
@@ -266,7 +285,7 @@ def righe(voci, flussi, ramo, guasti=None):
     out = ['STATO: ' + ('FERMO' if peggio == 20 else 'ATTESA')]
     for v in voci:
         g, minuti = v['giro'], v['secondi'] // 60
-        chi = f"giro «{g.get('name')}» #{g.get('run_number')} ({g.get('event')}, commit {v['commit'][:9]})" if g \
+        chi = f"giro «{g.get('name') or (g.get('display_title') or '')[:40]}» #{g.get('run_number')} ({g.get('event')}, commit {v['commit'][:9]})" if g \
             else f"push del commit {v['commit'][:9]}"
         if v['stato'] == 'ATTESA' and v.get('perche'):
             out.append(f"- ATTESA · {v['flusso']} · {chi}: {v['perche']}. NON ripiegare; riguarda fra 5 min (stesso comando).")
@@ -291,6 +310,15 @@ def righe(voci, flussi, ramo, guasti=None):
             out.append(f'  A Mario, una riga col motivo vero: «Il tuo PC di casa non ha preso il lavoro: {perche}. Lo passo '
                        'al server».')
             continue
+        if v['stato'] == 'MORTI':
+            dal = ora_italiana(v['dal'])
+            out.append(f"- GIRI MORTI · {v['quanti']} giri finiti «{MORTO}» nell'ultima ora, dalle {dal} (ultimo: {chi}, "
+                       f"flusso «{v['flusso']}»): GitHub li rifiuta prima di partire, senza passi né registro. NON "
+                       'rilanciare: muore anche il lancio a mano (E528). Da guardare: la pagina dei costi (tetto di spesa, '
+                       'minuti, pagamento) e un file dei giri rotto.')
+            out.append(f'  A Mario, SUBITO e per prima, una riga: «GitHub non fa partire nessun giro ({v["quanti"]} rifiutati '
+                       f'dalle {dal}): prove e anteprima ferme».')
+            continue
         if v['stato'] == 'FERMO A MANO':
             out.append(f"- FERMO A MANO · {v['flusso']} · {chi}: anche il lancio a mano è in coda da {minuti} min senza "
                        'lavori. NON rilanciare ancora: GitHub non fa partire niente. Dillo a Mario coi fatti.')
@@ -311,8 +339,9 @@ def righe(voci, flussi, ramo, guasti=None):
         else:
             out.append('Pagina dei guasti di GitHub: nessun guasto scritto adesso (l\'11/11 l\'hanno scritto con ~27 '
                        'minuti di ritardo): a Mario niente causa senza controprova (E398).')
-        out.append('A Mario, una riga coi fatti: «GitHub fermo: giro rilanciato a mano alle HH:MM» (ora italiana); mai '
-                   '«si sblocca da solo» (E396).')
+        if any(v['stato'] in ('FERMO', 'NON NATO', 'FERMO A MANO') for v in voci):
+            out.append('A Mario, una riga coi fatti: «GitHub fermo: giro rilanciato a mano alle HH:MM» (ora italiana); mai '
+                       '«si sblocca da solo» (E396).')
     return out
 
 

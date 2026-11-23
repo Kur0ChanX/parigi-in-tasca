@@ -152,5 +152,26 @@ for nome, avuto, atteso in altri:
         rossi += 1
         print(f'ROSSO {nome}: {avuto!r} invece di {atteso!r}')
 casi = casi + altri
+
+# E516 (Mario 20/11): il conto dei minuti divide i lavori per macchina. `.claude/conta-minuti.py` lavora appena si
+# apre (chiama GitHub): qui si prova solo la sua funzione pura, presa dal testo. (GitHub, Blacksmith, PC di casa).
+import re
+sorgente = (pathlib.Path(__file__).parent.parent / '.claude' / 'conta-minuti.py').read_text(encoding='utf-8')
+spazio = {'re': re}
+exec(re.search(r'^def minuti_del_lavoro\(.*?(?=^def )', sorgente, re.S | re.M).group(0), spazio)
+conto = [
+    ('PC di casa: non conta per GitHub', spazio['minuti_del_lavoro'](7, ['self-hosted', 'casa']), (0, 0, 7)),
+    ('GitHub Linux', spazio['minuti_del_lavoro'](7, ['ubuntu-latest']), (7, 0, 0)),
+    ('GitHub Windows conta doppio', spazio['minuti_del_lavoro'](5, ['windows-2025']), (10, 0, 0)),
+    ('GitHub macOS conta 10', spazio['minuti_del_lavoro'](3, ['macos-latest']), (30, 0, 0)),
+    ('Blacksmith 4 vCPU', spazio['minuti_del_lavoro'](10, ['blacksmith-4vcpu-ubuntu-2404']), (0, 20, 0)),
+    ('Blacksmith Windows conta doppio', spazio['minuti_del_lavoro'](10, ['blacksmith-2vcpu-windows-2025']), (0, 20, 0)),
+    ('senza etichette = GitHub', spazio['minuti_del_lavoro'](4, None), (4, 0, 0)),
+]
+for nome, avuto, atteso in conto:
+    if avuto != atteso:
+        rossi += 1
+        print(f'ROSSO {nome}: {avuto!r} invece di {atteso!r}')
+casi = casi + conto
 print(f'Scegli-giro: {len(casi) - rossi}/{len(casi)} casi giusti')
 raise SystemExit(1 if rossi else 0)

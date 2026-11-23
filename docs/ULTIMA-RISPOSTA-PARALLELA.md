@@ -1,9 +1,3 @@
-# Ultima risposta di Claude (23/11/2026 03:13 ora italiana)
+# Ultima risposta di Claude (23/11/2026 12:18 ora italiana)
 
-La correzione dello sfarfallio è pronta e provata. **Non è ancora online**: la pubblicazione ha bisogno del tuo ok. Ho passato le consegne: questa era l'ottava chat della catena, quindi la prossima la apri tu.
-
-───
-✅ FATTO
-- Lucine, addobbi che dondolano, vapore, scintille, finestre del castello e faro adesso li disegna una tela sopra il disegno. Non sono più uno strato a testa.
-- Telefono di prova: gli strati passano da 1.355 a 69. Ho confrontato lo stesso istante pixel per pixel e l'aspetto resta uguale: cambiano solo i bordi, per meno di un pixel.
-- Per ora la tela si accende solo con …
+Una precisazione sulla DOMANDA 1: il kit sono le regole e i controlli automatici con cui lavoro in tutti i tuoi progetti. Qui c'è ancora il Kit 43, e ora che la chiave funziona posso mettere il 53. Ho aggiunto la stessa riga anche nella lista di «Aspetta Mario».
