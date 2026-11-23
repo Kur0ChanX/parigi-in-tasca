@@ -2,10 +2,10 @@
 "account": "cba507",
 "sessione": "9a66e2136333",
 "giorno": "2026-11-22",
-"turni": 7,
-"peso": 1396639,
-"uscita": 24280,
-"contesto_max": 338033,
+"turni": 8,
+"peso": 2095878,
+"uscita": 34403,
+"contesto_max": 356943,
 "anomalie": [
 "1 uscite di strumento enormi (50 KB la più grande): leggere a pezzi (grep -n, sed -n)"
 ],
@@ -35,19 +35,19 @@
 },
 "remota": "01Rwcxc4Xr46",
 "aiutanti": 0,
-"strumenti": 38,
+"strumenti": 55,
 "bilancia": 2,
 "motori": {
-"opus": 1396639
+"opus": 2095878
 },
 "grezzi": {
 "opus": [
-75,
-12222025,
-42369,
+109,
+18473252,
+61143,
 0,
-24280
+34403
 ]
 },
-"costo": 3.2692
+"costo": 4.8722
 }

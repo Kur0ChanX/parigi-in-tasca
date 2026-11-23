@@ -2,34 +2,39 @@
 "account": "cba507",
 "sessione": "ff1f232ecb73",
 "giorno": "2026-11-23",
-"turni": 1,
-"peso": 422456,
-"uscita": 14266,
-"contesto_max": 117145,
+"turni": 4,
+"peso": 1081381,
+"uscita": 29784,
+"contesto_max": 187791,
 "anomalie": [],
 "remota": "01Rwcxc557ju",
 "aiutanti": 0,
-"strumenti": 29,
+"strumenti": 64,
 "motori": {
-"opus": 422456
+"opus": 1081381
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-53,
-2624894,
-70867,
+121,
+8000373,
+105842,
 0,
-14266
+29784
 ]
 },
-"costo": 1.3774,
+"costo": 3.0429,
 "blocchi": {
-"Stop 7 · Domanda a Mario poco chiara": 1
+"Stop 7 · Domanda a Mario poco chiara": 2,
+"Stop 14 · Ti fermi ad aspettare Mario": 1
 },
 "esempi_blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": [
-"12:18 · Domanda a Mario poco chiara («❓ **DOMANDE** 🛑 **DOMANDA 1:** applico il Kit 53 (22/11) al », C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+"12:18 · Domanda a Mario poco chiara («❓ **DOMANDE** 🛑 **DOMANDA 1:** applico il Kit 53 (22/11) al », C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere",
+"15:13 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1:** quali idee faccio? Rispondimi c», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso); mancano le sce"
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"15:13 · Ti fermi ad aspettare Mario con il contesto a 187k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
 ]
 }
 }
