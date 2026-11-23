@@ -1,0 +1,31 @@
+{
+"account": "cba507",
+"sessione": "68220b473a2d",
+"giorno": "2026-11-23",
+"turni": 1,
+"peso": 2034489,
+"uscita": 75649,
+"contesto_max": 218366,
+"anomalie": [
+"4 uscite di strumento enormi (113 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"un turno ha aggiunto 123k token al contesto",
+"75k token scritti in un turno"
+],
+"remota": "01Rwcxc6J6cx",
+"aiutanti": 0,
+"strumenti": 100,
+"motori": {
+"opus": 2034489
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+179,
+14409552,
+172088,
+0,
+75649
+]
+},
+"costo": 5.7723
+}
