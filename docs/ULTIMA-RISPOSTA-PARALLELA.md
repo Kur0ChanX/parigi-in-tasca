@@ -1,13 +1,13 @@
-# Ultima risposta di Claude (23/11/2026 11:38 ora italiana)
+# Ultima risposta di Claude (23/11/2026 11:56 ora italiana)
 
-Ho capito: vuoi il kit RVC più nuovo in questo progetto. Dopo vuoi un controllo della guida di dicembre e idee nuove, da approvare una per una.
-🧠 Opus · Extra
+Ho capito: hai solo l'app GitHub. Ti serve un'app che crea i codici: l'app GitHub non li fa.
 
-✅ **FATTO**
-- Ho provato a scaricare il kit: senza chiave non si può. Il repo RVC è privato e GitHub risponde «non trovato».
-- In questo ambiente la chiave `RVC_KIT_TOKEN` non c'è.
-- Ho segnato la tua richiesta di controllo e idee (lavoro C28): la faccio subito dopo il kit, così uso già le regole nuove.
+⚠️ **Questa foto ha un codice QR segreto.** Non la salvo nel progetto, perché il progetto su GitHub è pubblico. Non mandarmi più foto del QR né della «setup key».
 
 ───
-💡 **PARERE**
-- La strada migliore è una **chiave di sola lettura** (un **token**: una password che permette solo di leggere il …
+👉 **DA FARE TU**
+A cosa serve: avere l'app che crea il codice di 6 cifre per GitHub.
+1. Lascia aperta questa pagina di GitHub.
+2. Dal Play Store installa **Google Authenticator** (gratis, di Google).
+3. Torna su GitHub e tocca la scritta blu «setup key», sotto il QR. Copia la chiave che compare.
+4. Apri Google Authenticator: tocca «+» …
