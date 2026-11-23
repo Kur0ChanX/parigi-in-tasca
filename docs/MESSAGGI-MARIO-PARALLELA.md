@@ -2,10 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 11:40 · 01WTjqUwFBdt
-Cioè non è che voglio importi le cose, io voglio solo il meglio dell'applicazione, non voglio aggiungere delle cose che non vanno bene, che sia chiaro.
-Mappe, la mappa fammela, vedo che fammela mettere a schermo intero la mappa che abbiamo appena fatto, e poi il pinch to zoom dopo un po' indietro non va, sbloccalo, e anche pinch out.
-
 ## 2026-11-22 11:41 · 01WTjqUwFBdt
 E nella schermata principale mettimi tutte gli shortcut, ecco, delle cose principali, dei tasti, così non vado a cercare direttamente nelle pagine. Tipo la mappa deve avere un tasto shortcut nella schermata principale e anche tante altre cose fondamentali.
 
@@ -143,3 +139,6 @@ Ok, va bene. Ehm, Non solo Moxie, cioè non so se noi dobbiamo prendere quello d
 
 ## 2026-11-23 01:37 · 01Rwcxc6ffPi
 Domanda 1, domanda 2, va bene. Ok, come consiglio.
+
+## 2026-11-23 02:07 · 01Rwcxc6J6cx
+@"/root/.claude/uploads/[segreto tolto dalla scorta]/8356ac8f-VID_20261123_020540.mp4" Guarda attentamente frame per frame. Dovrei aver registrato 90 frame. Guarda attentamente la torre Eiffel come flickera, e anche le renne con la slitta dovrebbero flickerare insieme.
