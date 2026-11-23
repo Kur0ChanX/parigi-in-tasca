@@ -29,5 +29,6 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C22 | Controllo 22 (da Controllo 21) | Controllo di itinerari e alloggi (n. 8, 16, 23), Orly e mercatini; C26 «Questo o quello?»; PR da versione-v44 | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C22-controllo-itinerari.md` | 22/11 |
 | C23 | Controllo 23 (da Controllo 19) | Testata di dicembre: luna di Topolino che dopo un po’ diventa sfocata sul telefono → luna disegnata nel cielo animato (canvas) | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C23-testata-leggera.md` | 23/11 |
 | C24 | Controllo 19 (da Controllo 18) | Tasto «Scegli dove dormire»: rosa → confronto → scelta che cambia l'itinerario (risposte 11 21 31), guida dei giorni secondo l'hotel | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C24-scegli-dove-dormire.md` | 22/11 |
+| C27 | Controllo 23 | Testata: Torre, faro e slitta che sfarfallano (1.355 strati) → lucine sulla tela, meno strati | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C27-testata-strati.md` | 23/11 |
 | PR 37 | Controllo 14 (altro account) | v36 da `versione-v36` (commit df327f9), unita 22/11 | — | 22/11 |
 | PR 45 | Controllo 23 | v45 da `versione-v45` (commit 6022aec), unita 23/11 | — | 23/11 |
