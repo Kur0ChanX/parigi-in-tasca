@@ -2,34 +2,46 @@
 "account": "cba507",
 "sessione": "57ddcc3fb811",
 "giorno": "2026-11-23",
-"turni": 1,
-"peso": 118285,
-"uscita": 2937,
-"contesto_max": 78570,
-"anomalie": [],
+"turni": 5,
+"peso": 2391177,
+"uscita": 72247,
+"contesto_max": 275764,
+"anomalie": [
+"2 uscite di strumento enormi (51 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"un turno ha aggiunto 123k token al contesto",
+"63k token scritti in un turno"
+],
 "remota": "01Rwcxc4qAM1",
-"aiutanti": 0,
-"strumenti": 12,
+"aiutanti": 1,
+"strumenti": 102,
 "motori": {
-"opus": 118285
+"opus": 2391177
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-17,
-632184,
-32292,
+187,
+18235419,
+164971,
 0,
-2937
+72247
 ]
 },
-"costo": 0.4436,
+"costo": 6.4125,
 "blocchi": {
-"Stop 7 · Domanda a Mario poco chiara": 1
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 8 · Il turno finisce con una": 1
 },
 "esempi_blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": [
 "15:15 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1 · quali idee faccio nella guida di», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"15:37 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Nella guida non è ancora cambiato niente: la nuova versione (v48) arriva dopo le prove.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <"
+],
+"Stop 8 · Il turno finisce con una": [
+"15:37 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
 ]
 }
 }
