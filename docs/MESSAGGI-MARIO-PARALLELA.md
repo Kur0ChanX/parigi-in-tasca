@@ -2,12 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 15:13 · 01Rwcxc4aWHi
-Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
-
-## 2026-11-22 15:15 · 01Rwcxc4aWHi
-Sì, appena finito le cose che ti ho detto, pubblica.
-
 ## 2026-11-22 15:22 · 01Rwcxc4Xr46
 Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa c'entrano i birilli, cioè? E tu me lo confermi pure, i birilli sono al posto giusto. Ma i birilli, che cavolo ce ne facciamo? Devono esserci cose attinenti, cioè. Puoi andare tu in una bancarella e vedere dei birilli in vendita. Ti sembra normale? Ma come ragioni? Boh.
 
@@ -128,3 +122,9 @@ No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti,
 
 ## 2026-11-23 18:39 · 01Rwcxc2rpkc
 controllo 25 ok 14 ok
+
+## 2026-11-23 18:40 · 01Rwcxc2rpkc
+11
+
+## 2026-11-23 18:41 · 01Rwcxc2rpkc
+Ma i voti può controllare in tempo reale senza consumare token e risorse? Se io tipo una chiamata spinta.
