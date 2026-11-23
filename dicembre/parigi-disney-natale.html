@@ -1609,7 +1609,10 @@ const FR=s=>{const o=[];let cur='',dep=0;for(const t of String(s||'').split(/(<[
   if(cur.trim())o.push(cur.trim());return o},
  PCX=(p,c)=>`<div class="pcx">${FR(p).map(x=>`<p class="p">${x}</p>`).join(' ')} ${FR(c).map(x=>`<p class="c">${x}</p>`).join(' ')}</div>`,
  QPT=(s,k)=>FR(s).map(x=>`<span class="qoq-pt ${k}">${x}</span>`).join(' '),
- RIGHE=s=>FR(s).map(x=>`<span class="fr">${x}</span>`).join(' ');
+ RIGHE=s=>FR(s).map(x=>`<span class="fr">${x}</span>`).join(' '),
+/* C20 (Mario 23/11 «14 ok», scelta 1): nel passo 2 chi non ha posto per le notti scelte va in fondo, in un gruppo col perché e coi colori normali (prima: righe grigie in mezzo alle altre) */
+ GR14=(L,R,n)=>{const ok=L.filter(x=>x.c),d14=n?[]:L.filter(x=>!x.c&&x.h.ab),es=L.filter(x=>!x.c&&!d14.includes(x));
+  return ok.map(R).join('')+(d14.length?`<p class="sc-g sc-g14">Liberi solo dal 14: su Airbnb le 4 notti dal 13 non ci sono più; vanno bene se domenica dormite a Parigi.</p>${d14.map(R).join('')}`:'')+(es.length?`<p class="sc-g sc-g14">Esauriti per queste notti: non c'è più posto.</p>${es.map(R).join('')}`:'')};
 const GN={rosa:"⭐ La vostra rosa",meno:"Spendere meno",vicino:"Vicino al treno",comodo:"Tutto comodo",spa:"Spa e piscina",romantico:"Romantico",spazio:"Più spazio",parchi:"A piedi dai parchi",airbnb:"Airbnb"};
 const GD={tutti:"Tutti, con il numero fisso: ordinateli come volete.",rosa:"Quelli che avete messo nella rosa con «⭐ Metti nella rosa» o dal tasto «⭐ Rosa alloggi» della schermata principale.",meno:"Il prezzo più basso con pulizia buona.",vicino:"Al massimo 10 minuti a piedi dalla stazione Val d'Europe, poi 3 minuti di treno fino ai parchi.",comodo:"Reception 24 ore, poco cammino, bar e negozi vicino: la vacanza più rilassata.",spa:"Piscina, sauna o idromassaggio. Tutte le spa chiudono entro le 22:00: col n. 12 la usate domenica sera, dopo i mercatini. Vicino al treno ce n'è una sola: il n. 12.",romantico:"Vasca privata, una casa curata con colazione o una spa con massaggi di coppia.",spazio:"Appartamenti da 47 a 70 m², o con 2 camere.",parchi:"Dormire dentro Disney: a piedi ai parchi, ma costa molto di più.",airbnb:"Appartamenti su Airbnb (n. 16–21, 23, 25–28 e 31–35): niente reception, di solito arrivo con la cassetta delle chiavi. Prezzi tutto incluso, letti in euro su airbnb.it. I n. 18, 20 e 21 sono liberi solo dal 14: vanno bene se domenica dormite a Parigi. Voti su 5, di solito più alti di quelli di Booking: per ordinarli la pagina li conta ×2, ma non sono confrontabili 1 a 1."};
 const AL=[
@@ -2517,16 +2520,17 @@ ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class
   $('#scN').querySelectorAll('details.sc-o').forEach(d=>{d.dataset.ty=d.dataset.k==='n-4n'?'dis':'hotel'}); /* C13 pezzo 2: colore e etichetta come nel passo 2 */
   const L=AL.map(h=>({h,s:{n:SCE.n,d:h.id}})).map(x=>Object.assign(x,{c:conto(x.s)}));
   const byTot=(a,b)=>(a.c?a.c.tot:1e9)-(b.c?b.c.tot:1e9),SRT={prezzo:byTot,disney:(a,b)=>(a.c?arrMin(a.h.id):1e9)-(b.c?arrMin(b.h.id):1e9)||byTot(a,b),rer:(a,b)=>!a.c-!b.c||rerMin(a.h)-rerMin(b.h)||byTot(a,b),pulizia:(a,b)=>!a.c-!b.c||v10(b.h,'cl')-v10(a.h,'cl')||byTot(a,b)};
-  $('#scD').toggleAttribute('data-solo-rosa',ROF);$('#scD').innerHTML=L.filter(x=>!hidN('d-'+x.h.id)&&(!ROF||ROSA.has(x.h.id))).sort(SRT[SO2]).map(({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
+  $('#scD').toggleAttribute('data-solo-rosa',ROF);const L2=L.filter(x=>!hidN('d-'+x.h.id)&&(!ROF||ROSA.has(x.h.id))).sort(SRT[SO2]),RW=({h,s,c})=>{const on=scStr(s)===me,rc=scStr(s)===scStr(MIO_S),sp=SCE.n&&h.g.includes('spa')&&h.id!==13;
    const rk=c?rerK(h):null,c5=/\/5/.test(h.cl);
    const m=c?`<span class="sc-k"><i>🏰 Disney</i><b>${arrMin(h.id)} min</b><small>${kmDT(h.id)?kmDT(h.id)+' · ':''}${comeD(h.id)}${dX(dMin(arrMin(h.id),arrMin(MIO_S.d)))}</small></span><span class="sc-k"><i>🚉 RER</i><b>${rk.v}</b><small>${rk.s}</small></span><span class="sc-k"><i>🧼 Pulizia</i><b>${esc(h.cl.replace('/5',''))}</b><small>${/\d/.test(h.cl)?(c5?'su 5 · Airbnb':'su 10'):'non letta'}</small></span>`:h.ab?'<span class="sc-na">Libero solo dal 14: va bene se domenica dormite a Parigi</span>':'<span class="sc-na">Esaurito per queste notti</span>';
    const px=c?(rc?'<small class="sc-dt sc-rc">★ consiglio</small>':`<small class="sc-dt">totale ${dEur(c.tot,cm.tot)}</small>`):'';
-   return row('d-'+h.id,on,!c,`<span class="nb sm">${h.id}</span>`,(ROSA.has(h.id)?'<span class="ro-st" title="Nella vostra rosa">⭐</span> ':'')+esc(h.n),esc(h.sub),c?fmt(c.q[0]):h.ab?'dal 14':'?',SCE.n?'3 notti':'4 notti',m,
+   return row('d-'+h.id,on,false,`<span class="nb sm">${h.id}</span>`,(ROSA.has(h.id)?'<span class="ro-st" title="Nella vostra rosa">⭐</span> ':'')+esc(h.n),esc(h.sub),c?fmt(c.q[0]):h.ab?'dal 14':'?',SCE.n?'3 notti':'4 notti',m,
 `<p class="small muted">${c?esc(c.q[1]):h.ab?'Su Airbnb 13→17 non è disponibile (21/11/2026): libero solo dal 14, va bene se domenica dormite a Parigi.':'Prezzo per queste notti non disponibile (esaurito su Booking).'}</p>
 ${c?`<p class="small">Totale del viaggio ≈ ${fmt(c.tot)}${rc?'':' ('+dEur(c.tot,cm.tot)+' rispetto al consiglio)'}. Ai parchi ${c.park} min${c.nav?' + attesa della navetta':''} ogni mattina; a piedi ${c.walk} min al giorno, circa ${kmT(c.walk)}. Voto ${h.ab?'Airbnb ':''}${h.sc}.</p>`:''}
 ${PCX(h.pro,h.con+(sp?' Con la domenica a Parigi la spa quasi non la usate: chiude alle 22:00, come i parchi.':'')+(SCE.n&&!REC.includes(h.id)&&!h.ab?' Lunedì mattina le valigie: da chiedere al gestore, oppure deposito della stazione di Chessy.':''))}
 ${xxBox(h)}
-<div class="sc-act">${c?btn(s,on):''}<a class="btn ghost" href="#al-${h.id}">Scheda</a>${rosaB(h.id)}${nasB('d-'+h.id)}</div>`,px)}).join('');
+<div class="sc-act">${c?btn(s,on):''}<a class="btn ghost" href="#al-${h.id}">Scheda</a>${rosaB(h.id)}${nasB('d-'+h.id)}</div>`,px)};
+  $('#scD').innerHTML=GR14(L2,RW,SCE.n);
   renderNas();renderRosa()
   document.querySelectorAll('#scSort button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===SO2)))}
  /* una riga aperta per lista: le altre si chiudono e la riga toccata resta ferma sotto il dito */
@@ -2903,6 +2907,7 @@ if(scD){
  const tag=()=>{const n={tutti:0,hotel:0,bb:0,casa:0};
   scD.querySelectorAll(':scope>details[data-k^="d-"]').forEach(d=>{const sm=d.querySelector('.sc-n small');const t=tyOf(sm?sm.textContent:'');d.dataset.ty=t;n[t==='disney'?'hotel':t]++;n.tutti++});
   {const x=document.querySelectorAll('#scBB .sc-xb').length;n.bb+=x;n.tutti+=x}
+  scD.querySelectorAll(':scope>.sc-g14').forEach(g=>{const t=new Set();let e=g.nextElementSibling;while(e&&e.tagName==='DETAILS'){t.add(e.dataset.ty==='disney'?'hotel':e.dataset.ty);e=e.nextElementSibling}if(t.size===1)g.dataset.ty=[...t][0];else delete g.dataset.ty}); /* C20: il titolo del gruppo sparisce col suo tipo */
   if(!ty||!n[ty])ty='tutti';scD.dataset.ty=ty;
   sw.innerHTML=TY.map(([k,a,b])=>`<button type="button" data-ty="${k}" aria-pressed="${k===ty}">${a} · ${n[k]}<small>${b}</small></button>`).join('')};
  sw.addEventListener('click',e=>{const b=e.target.closest('button[data-ty]');if(!b)return;ty=b.dataset.ty;try{localStorage.setItem('pdn-tipo',ty)}catch(e){}tag()});

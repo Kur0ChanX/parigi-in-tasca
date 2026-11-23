@@ -367,6 +367,25 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const okL = t.lunghi.length === 0 && t.pc === 1 && t.carte > 30 && t.conPcx === t.carte && t.punti > t.carte * 3 && t.colPcx === 1 && t.colPagina === 2;
       ok('C29: nessuna riga visibile oltre 350 caratteri; pro e contro una frase per punto (.pcx in ogni scheda), sul computer in una colonna', okL); if (!okL) console.log(t);
     }
+    // C20 (Mario 23/11 «14 ok», scelta 1): passo 2 di «Scegli» con 4 notti dal 13, gli alloggi senza posto vanno in fondo in un gruppo col perché, niente righe grigie;
+    // col filtro «Hotel» il titolo «Liberi solo dal 14» (solo Airbnb) sparisce con le sue righe
+    {
+      const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const r = await c.newPage();
+      r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+      await r.goto(B + 'dicembre/'); await r.evaluate(() => { localStorage.setItem('pdn-scelta', '4n-8'); localStorage.setItem('pdn-rosa', '[]'); localStorage.removeItem('pdn-tipo'); }); await r.reload(); await r.waitForTimeout(900);
+      const g = await r.evaluate(async () => {
+        const w = () => new Promise((x) => setTimeout(x, 200)), k = [...document.querySelectorAll('#scD>*')], i = k.findIndex((e) => /^Liberi solo dal 14/.test(e.textContent));
+        const dopo = i < 0 ? [] : k.slice(i + 1).filter((e) => e.tagName === 'DETAILS').map((e) => e.dataset.k);
+        const o = { grigie: document.querySelectorAll('#scD>details.off').length, titolo: i, prima: k.slice(0, Math.max(0, i)).every((e) => e.tagName !== 'DETAILS' || !/^d-(18|20|21)$/.test(e.dataset.k)), dopo: dopo.join(' ') };
+        document.querySelector('.tyswitch [data-ty="hotel"]').click(); await w();
+        o.nascostoHotel = getComputedStyle(k[i]).display === 'none';
+        document.querySelector('.tyswitch [data-ty="tutti"]').click(); await w();
+        return o;
+      });
+      await c.close();
+      const okG = g.grigie === 0 && g.titolo > 0 && g.prima && /^d-18 d-20 d-21\b/.test(g.dopo) && g.nascostoHotel;
+      ok('C20: passo 2 con 4 notti dal 13, n. 18, 20, 21 in fondo nel gruppo «Liberi solo dal 14», niente righe grigie, titolo nascosto col filtro Hotel', okG); if (!okG) console.log(g);
+    }
     // Mario 22/11: la scelta cambia la pagina e va fatto capire: riquadro prima, avviso dopo, pallino sulle schede cambiate che sparisce aprendole
     const av = await q.evaluate(async () => {
       const w = () => new Promise((r) => setTimeout(r, 250)), prima = document.body.dataset.tab, sc0 = new URL(location.href).searchParams.get('scelta');
