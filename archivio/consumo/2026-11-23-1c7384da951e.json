@@ -1,0 +1,35 @@
+{
+"account": "cba507",
+"sessione": "1c7384da951e",
+"giorno": "2026-11-23",
+"turni": 1,
+"peso": 271991,
+"uscita": 9358,
+"contesto_max": 96314,
+"anomalie": [],
+"remota": "01Rwcxc5ahDd",
+"aiutanti": 0,
+"strumenti": 20,
+"motori": {
+"opus": 271991
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+36,
+1552234,
+55953,
+0,
+9358
+]
+},
+"costo": 0.9454,
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"09:48 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «18, 20, 21):** come li mostro? La domanda è ancora aperta (Controllo 14).». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede M"
+]
+}
+}
