@@ -827,6 +827,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 .dlApp i{font-style:normal;font-size:1.6rem;line-height:1}.dlApp span{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}.dlApp b{font-size:1.05rem}.dlApp small{font-weight:500;opacity:.85;font-size:.8rem;line-height:1.25}.dlApp em{font-style:normal;font-size:1.6rem;color:var(--lamp)}
 #top.anim-pausa *{animation-play-state:paused!important}
 .luci-ferme *{animation:none!important}
+.lt-off{animation:none!important;opacity:0!important}
 .luci-ferme body::before{content:'PROVA · luci ferme';position:fixed;top:calc(env(safe-area-inset-top) + 6px);left:50%;transform:translateX(-50%);z-index:9999;background:#F0C800;color:#000;font:700 13px/1 system-ui,sans-serif;padding:6px 12px;border-radius:99px;pointer-events:none}
 .apps2 .dlApp.roApp{gap:16px}.roApp i{position:relative}.ro-n{position:absolute;top:-.45em;right:-.55em;min-width:1.25em;height:1.25em;padding:0 .25em;border-radius:1em;background:var(--lamp);color:#1a1f4a;font:800 .72rem/1.25em system-ui,sans-serif;text-align:center;box-shadow:0 0 0 2px rgb(20 26 70 / .9)}
 .apps2 .dlApp small.ro-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px;-webkit-line-clamp:unset;opacity:1}.dlApp .ro-c{display:inline-block;flex:none;padding:1px 7px;border-radius:999px;border:1px solid rgb(246 201 100 / .7);background:rgb(246 201 100 / .14);font-size:.74rem;font-weight:700;white-space:nowrap}
@@ -2769,4 +2770,114 @@ else{show('piano',{keep:true});scrollTo(0,0)}
 {let nascostaDa=0;document.addEventListener('visibilitychange',()=>{if(document.hidden){nascostaDa=Date.now();return}
  if(nascostaDa&&Date.now()-nascostaDa>30*60*1000&&!document.body.dataset.card){show('piano',{keep:true});scrollTo(0,0)}nascostaDa=0})}
 })();
+/* C27 · pezzo 2 · lucine sulla tela (Controllo 24; Mario 23/11 02:05 «guarda la torre Eiffel come flickera, e anche le renne con la slitta»).
+   Ogni lucina animata col foglio di stile era uno strato a sé (1.355 sul telefono di prova): ogni tanto il telefono perdeva per un fotogramma lo strato di Torre, faro e slitta.
+   Ora le lucine che cambiano solo luminosità restano al loro posto nel disegno ma ferme e trasparenti (classe lt-off): le copio una per una in un’immagine (atlante)
+   e una tela sopra il disegno le ridisegna 30 volte al secondo, con la luminosità della loro animazione (tempi, ritardi e curve letti dal foglio di stile).
+   Quello che nel disegno sta sopra una lucina (casette davanti, nebbia, albero, vignetta) lo ridisegno sopra la sua copia («source-atop»): l’aspetto resta uguale.
+   Restano animate nel disegno solo le lucine coperte da cose che si muovono. Se qualcosa va storto tutto torna come prima. Prova «C27 · tela» in tools/prova-web-app.js. */
+{const DE=document.documentElement;
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!DE.classList.contains('luci-ferme')&&window.CSSAnimation&&document.getAnimations&&window.XMLSerializer){
+ const BZ={ease:[.25,.1,.25,1],'ease-in':[.42,0,1,1],'ease-out':[0,0,.58,1],'ease-in-out':[.42,0,.58,1]};
+ const curva=s=>{s=(s||'linear').trim();let m=s.match(/^steps\((\d+)(?:,\s*([\w-]+))?\)$/);
+  if(m){const n=+m[1],a=/start/.test(m[2]||'')?1:0;return x=>Math.min(1,Math.floor(x*n+a)/n)}
+  if(s==='step-end')return x=>x<1?0:1;if(s==='step-start')return x=>x>0?1:0;
+  m=s.match(/^cubic-bezier\(([^)]+)\)$/);const p=BZ[s]||(m&&m[1].split(',').map(Number));if(!p)return x=>x;
+  const [a,b,c,d]=p,B=(t,p1,p2)=>3*(1-t)*(1-t)*t*p1+3*(1-t)*t*t*p2+t*t*t;
+  return x=>{let lo=0,hi=1,t=x;for(let i=0;i<16;i++){t=(lo+hi)/2;if(B(t,a,c)<x)lo=t;else hi=t}return B(t,b,d)}};
+ /* luminosità di una lucina al tempo «now» (stesso orologio delle animazioni) */
+ const val=(L,now)=>{const t=(now-L.t0)/L.du;if(t<0)return L.b;const i=Math.floor(t);let p=t-i;if(L.rv!==(L.al&&i%2===1))p=1-p;
+  const K=L.k;let j=0;while(j<K.length-2&&p>=K[j+1].o)j++;const A=K[j],B=K[j+1],s=B.o-A.o;
+  return A.v+(B.v-A.v)*(s>0?A.e(Math.min(1,Math.max(0,(p-A.o)/s))):1)};
+ const PP='fill fill-opacity fill-rule stroke stroke-width stroke-opacity stroke-linecap stroke-linejoin stroke-dasharray stroke-dashoffset stroke-miterlimit opacity visibility paint-order'.split(' ');
+ const FOGLIA=/^(path|rect|circle|ellipse|polygon|polyline|line|image|use|text)$/,XS=new XMLSerializer();
+ const SVGS=()=>[document.querySelector('svg.scene'),document.getElementById('garland'),document.getElementById('footMarket')].filter(Boolean);
+ let E=[],gen=0,raf=0,last=0,rif=0;
+ const carica=str=>new Promise((ok,no)=>{const im=new Image(),u=URL.createObjectURL(new Blob([str],{type:'image/svg+xml'}));
+  im.onload=()=>{URL.revokeObjectURL(u);ok(im)};im.onerror=()=>{URL.revokeObjectURL(u);no(new Error('atlante non caricato'))};im.src=u});
+ const tela=(w,h)=>{const c=document.createElement('canvas');c.width=w;c.height=h;return c};
+ const costruisci=async(sv,g)=>{
+  const s=sv.getBoundingClientRect();if(s.width<20||s.height<20)return null;
+  const A=document.getAnimations().filter(a=>a instanceof CSSAnimation&&a.effect&&a.effect.target&&a.effect.target!==sv&&sv.contains(a.effect.target));
+  const anim=new Set(A.map(a=>a.effect.target)),nA=new Map(),all=[...sv.querySelectorAll('*')],idx=new Map(all.map((e,i)=>[e,i]));
+  const MC=new Map(),AM=new Map(),OP=new Map();
+  /* maschera, ritaglio, filtro o fusione su di sé o su un antenato: non si copia */
+  const segnato=e=>{if(!e||e===sv)return 0;if(MC.has(e))return MC.get(e);const cs=getComputedStyle(e);
+   const v=e.hasAttribute('mask')||e.hasAttribute('clip-path')||e.hasAttribute('filter')||cs.maskImage!=='none'||cs.clipPath!=='none'||cs.filter!=='none'||cs.mixBlendMode!=='normal'?1:segnato(e.parentElement);MC.set(e,v);return v};
+  const mosso=e=>{if(!e||e===sv)return 0;if(AM.has(e))return AM.get(e);const v=anim.has(e)?1:mosso(e.parentElement);AM.set(e,v);return v};
+  const opAnt=e=>{if(!e||e===sv)return 1;if(OP.has(e))return OP.get(e);const v=(+getComputedStyle(e).opacity)*opAnt(e.parentElement);OP.set(e,v);return v};
+  A.forEach(a=>nA.set(a.effect.target,(nA.get(a.effect.target)||0)+1));
+  const cand=[];
+  for(const a of A){const el=a.effect.target,kf=a.effect.getKeyframes(),tm=a.effect.getComputedTiming();
+   if(tm.iterations!==Infinity||!(tm.duration>0)||!kf.length||!kf.every(f=>Object.keys(f).every(k=>/^(offset|computedOffset|easing|composite|opacity)$/.test(k))))continue;
+   if(nA.get(el)>1||mosso(el.parentElement)||segnato(el)||[...el.querySelectorAll('*')].some(d=>anim.has(d)))continue;
+   const b=parseFloat(el.getAttribute('opacity')||el.style.opacity||1),k=kf.map(f=>({o:f.computedOffset,v:f.opacity==null?b:parseFloat(f.opacity),e:curva(f.easing)}));
+   const tf=getComputedStyle(el).animationTimingFunction.split(/,(?![^(]*\))/)[0];if(k[0].o>0)k.unshift({o:0,v:b,e:curva(tf)});if(k[k.length-1].o<1)k.push({o:1,v:b,e:x=>x});
+   const tl=document.timeline.currentTime,dir=tm.direction||'normal';
+   cand.push({el,a,k,b,du:tm.duration,t0:tl-(a.currentTime||0)+(tm.delay||0),rv:/reverse/.test(dir),al:/alternate/.test(dir),m:opAnt(el.parentElement)})}
+  if(!cand.length)return null;
+  const C=new Set(cand.map(c=>c.el)),inC=e=>{for(;e&&e!==sv;e=e.parentElement)if(C.has(e))return 1;return 0};
+  /* griglia delle cose disegnate (per trovare in fretta cosa sta sopra una lucina) */
+  const Q=32,nx=Math.ceil(s.width/Q),ny=Math.ceil(s.height/Q),GR=new Map();
+  all.forEach((e,i)=>{if(!FOGLIA.test(e.localName)||e.closest('defs,mask,clipPath,symbol,pattern,marker')||inC(e)||segnato(e))return;
+   const r=e.getBoundingClientRect();if(!(r.width>0||r.height>0))return;const o={e,i,l:r.left-2,t:r.top-2,r:r.right+2,b:r.bottom+2};
+   const x0=Math.max(0,Math.floor((o.l-s.left)/Q)),x1=Math.min(nx-1,Math.floor((o.r-s.left)/Q)),y0=Math.max(0,Math.floor((o.t-s.top)/Q)),y1=Math.min(ny-1,Math.floor((o.b-s.top)/Q));
+   for(let x=x0;x<=x1;x++)for(let y=y0;y<=y1;y++){const kk=x*4096+y;(GR.get(kk)||GR.set(kk,[]).get(kk)).push(o)}});
+  const kz=devicePixelRatio||1,cw=Math.round(s.width*kz),ch=Math.round(s.height*kz),kx=cw/s.width,ky=ch/s.height;
+  const M=(m,dx,dy)=>`matrix(${m.a*kx} ${m.b*ky} ${m.c*kx} ${m.d*ky} ${(m.e-s.left)*kx-dx} ${(m.f-s.top)*ky-dy})`;
+  const refs=new Set();
+  const copia=(o,op)=>{const c=o.cloneNode(true),P=[o,...o.querySelectorAll('*')],B=[c,...c.querySelectorAll('*')];
+   P.forEach((e,i)=>{const d=B[i],cs=getComputedStyle(e);for(const x of ['class','id','style'])d.removeAttribute(x);
+    d.setAttribute('style',PP.map(p=>p+':'+cs.getPropertyValue(p).replace(/url\((["']?)[^#)"']*#([\w-]+)\1\)/g,(m0,q,id)=>{refs.add(id);return 'url(#'+id+')'})).join(';'));
+    for(const x of ['mask','clip-path','filter','fill','stroke']){const v=d.getAttribute(x),m1=v&&v.match(/url\(#([\w-]+)\)/);if(m1)refs.add(m1[1])}});
+   B[0].removeAttribute('transform');B[0].style.opacity=op;return XS.serializeToString(c)};
+  const L=[],tieni=[],fuori=[],OV=new Map();let ax=0,ay=0,rh=0;const AW=Math.max(cw,256);
+  for(const c of cand){const r=c.el.getBoundingClientRect(),l=Math.max(r.left,s.left),t=Math.max(r.top,s.top),rr=Math.min(r.right,s.right),bb=Math.min(r.bottom,s.bottom);
+   if(!(rr>l&&bb>t)){fuori.push(c);continue}
+   const i0=idx.get(c.el),ov=new Set();let ok=true;
+   for(let x=Math.max(0,Math.floor((l-s.left)/Q));x<=Math.min(nx-1,Math.floor((rr-s.left)/Q))&&ok;x++)for(let y=Math.max(0,Math.floor((t-s.top)/Q));y<=Math.min(ny-1,Math.floor((bb-s.top)/Q))&&ok;y++)
+    for(const o of GR.get(x*4096+y)||[])if(o.i>i0&&o.l<r.right&&o.r>r.left&&o.t<r.bottom&&o.b>r.top){if(mosso(o.e)||/^(use|text)$/.test(o.e.localName)){ok=false;break}ov.add(o.e)}
+   if(!ok){tieni.push(c);continue}
+   c.dx=Math.max(0,Math.floor((l-s.left)*kx)-2);c.dy=Math.max(0,Math.floor((t-s.top)*ky)-2);c.w=Math.min(cw,Math.ceil((rr-s.left)*kx)+2)-c.dx;c.h=Math.min(ch,Math.ceil((bb-s.top)*ky)+2)-c.dy;
+   if(ax+c.w>AW){ax=0;ay+=rh+2;rh=0}c.ax=ax;c.ay=ay;ax+=c.w+2;rh=Math.max(rh,c.h);c.ov=[...ov];c.ov.forEach(e=>OV.has(e)||OV.set(e,'lt'+OV.size));L.push(c)}
+  if(!L.length)return null;
+  const AH=ay+rh;let cl='',co='',dv='';
+  for(const c of L){const box=`<svg x="${c.ax}" y="${c.ay}" width="${c.w}" height="${c.h}" overflow="hidden">`;
+   cl+=box+`<g transform="${M(c.el.getScreenCTM(),c.dx,c.dy)}">${copia(c.el,1)}</g></svg>`;
+   if(c.ov.length)co+=box+c.ov.map(e=>`<use href="#${OV.get(e)}" transform="${M(e.getScreenCTM(),c.dx,c.dy)}"/>`).join('')+'</svg>'}
+  for(const [e,id] of OV)dv+=`<g id="${id}">${copia(e,(+getComputedStyle(e).opacity)*opAnt(e.parentElement))}</g>`;
+  const VG=sv.querySelector('#vigna');let vs='';if(VG&&!segnato(VG.parentElement))vs=`<g transform="${M(VG.getScreenCTM(),0,0)}">${copia(VG,+getComputedStyle(VG).opacity)}</g>`;
+  /* definizioni usate (sfumature, maschere): copiate coi colori già calcolati */
+  const fatte=new Set();let df='';const def=id=>{if(fatte.has(id))return;fatte.add(id);const o=document.getElementById(id);if(!o)return;const c=o.cloneNode(true),P=[o,...o.querySelectorAll('*')],B=[c,...c.querySelectorAll('*')];
+   P.forEach((e,i)=>{const d=B[i];if(e.localName==='stop'){const cs=getComputedStyle(e);d.setAttribute('stop-color',cs.stopColor);d.setAttribute('stop-opacity',cs.stopOpacity)}d.removeAttribute('style');d.removeAttribute('class');
+    for(const at of [...d.attributes]){const m2=at.value.match(/url\(#([\w-]+)\)/)||(/href$/.test(at.name)&&at.value.match(/^#([\w-]+)$/));if(m2)def(m2[1])}});df+=XS.serializeToString(c)};
+  [...refs].forEach(def);
+  const doc=(w,h,body)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><defs>${df}${dv}</defs>${body}</svg>`;
+  const [iL,iO,iV]=await Promise.all([carica(doc(AW,AH,cl)),co?carica(doc(AW,AH,co)):null,vs?carica(doc(cw,ch,vs)):null]);
+  if(g!==gen)return null;
+  const at=tela(AW,AH),x=at.getContext('2d');x.drawImage(iL,0,0);if(iO){x.globalCompositeOperation='source-atop';x.drawImage(iO,0,0)}
+  let vg=null;if(iV){vg=tela(cw,ch);vg.getContext('2d').drawImage(iV,0,0)}
+  const box=document.createElement('div'),cv=tela(cw,ch);box.className='ltBox';box.setAttribute('aria-hidden','true');
+  /* la tela segue il disegno da sola: subito dopo nel flusso, tirata su della sua altezza (o con la stessa posizione, se il disegno è «absolute») */
+  const cs=getComputedStyle(sv);box.style.cssText=(/absolute|fixed/.test(cs.position)?`position:${cs.position};top:${cs.top};left:${cs.left};`:`position:relative;display:block;margin:-${s.height}px 0 0;left:0;top:0;`)+`width:${s.width}px;height:${s.height}px;z-index:${cs.zIndex};pointer-events:none`;
+  cv.style.cssText='position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none';box.appendChild(cv);sv.after(box);metti({sv,box});
+  for(const c of L.concat(fuori))c.el.classList.add('lt-off');
+  return {sv,box,cv,ctx:cv.getContext('2d'),at,vg,L,fuori,tieni,W:s.width,H:s.height,cw,ch}};
+ const metti=T=>{const s=T.sv.getBoundingClientRect(),b=T.box.getBoundingClientRect();
+  if(Math.abs(s.left-b.left)>.5)T.box.style.left=(parseFloat(T.box.style.left)+s.left-b.left)+'px';if(Math.abs(s.top-b.top)>.5)T.box.style.top=(parseFloat(T.box.style.top)+s.top-b.top)+'px';return s};
+ const disegnaT=(T,now)=>{const x=T.ctx;x.globalCompositeOperation='source-over';x.globalAlpha=1;x.clearRect(0,0,T.cw,T.ch);
+  for(const L of T.L){let a=val(L,now)*L.m;if(a<.004)continue;x.globalAlpha=a>1?1:a;x.drawImage(T.at,L.ax,L.ay,L.w,L.h,L.dx,L.dy,L.w,L.h)}
+  if(T.vg){x.globalAlpha=1;x.globalCompositeOperation='source-atop';x.drawImage(T.vg,0,0);x.globalCompositeOperation='source-over'}};
+ const togli=()=>{for(const T of E){for(const c of T.L.concat(T.fuori))c.el.classList.remove('lt-off');T.box.remove()}E=[]};
+ const rifai=()=>{clearTimeout(rif);rif=setTimeout(avvia,500)};
+ const ciclo=now=>{raf=requestAnimationFrame(ciclo);if(now-last<32)return;last=now;
+  for(const T of E){const r=T.sv.getBoundingClientRect();if(Math.abs(r.width-T.W)>.5||Math.abs(r.height-T.H)>.5||!T.L[0].el.isConnected){rifai();continue}
+   if(!r.width||r.bottom<0||r.top>innerHeight)continue;metti(T);if(!T.sv.closest('.anim-pausa'))disegnaT(T,now)}};
+ const avvia=async()=>{const g=++gen;cancelAnimationFrame(raf);togli();
+  try{for(const sv of SVGS()){const T=await costruisci(sv,g);if(g!==gen){if(T){for(const c of T.L.concat(T.fuori))c.el.classList.remove('lt-off');T.box.remove()}return}if(T){E.push(T);disegnaT(T,document.timeline.currentTime)}}
+   raf=requestAnimationFrame(ciclo)}catch(e){if(g===gen)togli();console.warn('C27 tela: torno alle lucine del disegno',e)}};
+ window.luciTela={E:()=>E,val,disegna:disegnaT,avvia,togli,ferma:()=>{gen++;cancelAnimationFrame(raf)}};
+ document.addEventListener('palette',rifai);
+ const via=()=>setTimeout(avvia,1200);if(document.readyState==='complete')via();else addEventListener('load',via,{once:true});
+}}
 </script>
