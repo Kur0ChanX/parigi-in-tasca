@@ -1,13 +1,13 @@
-# Ultima risposta di Claude (23/11/2026 11:38 ora italiana)
+# Ultima risposta di Claude (23/11/2026 11:58 ora italiana)
 
-Ho capito: vuoi il kit RVC più nuovo in questo progetto. Dopo vuoi un controllo della guida di dicembre e idee nuove, da approvare una per una.
-🧠 Opus · Extra
+Ho capito: Google Authenticator ce l'hai già installato.
+🧠 Opus · Medio
 
-✅ **FATTO**
-- Ho provato a scaricare il kit: senza chiave non si può. Il repo RVC è privato e GitHub risponde «non trovato».
-- In questo ambiente la chiave `RVC_KIT_TOKEN` non c'è.
-- Ho segnato la tua richiesta di controllo e idee (lavoro C28): la faccio subito dopo il kit, così uso già le regole nuove.
+Bene: non devi scaricare niente.
 
-───
-💡 **PARERE**
-- La strada migliore è una **chiave di sola lettura** (un **token**: una password che permette solo di leggere il …
+👉 **DA FARE TU**
+A cosa serve: dare a Google Authenticator la chiave nuova di GitHub.
+1. Tocca «Apri». Se dentro c'è già una riga «GitHub», è la vecchia: lasciala stare per ora.
+2. Torna su GitHub e tocca la scritta blu «setup key» sotto il QR. Copia la chiave.
+3. In Authenticator tocca «+», scegli la voce per inserire una chiave a mano, scrivi il nome «GitHub» e incolla la chiave.
+4. Compare una riga nuova con 6 cifre. Scrivile su GitHub nel riquadro «Verify the code from the app» e …
