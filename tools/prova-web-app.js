@@ -571,7 +571,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     {
       const cg = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const g = await cg.newPage();
       g.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
-      const leggi = () => g.evaluate(() => { const t = (s) => (document.querySelector(s) || {}).textContent || ''; return { box: t('#vaBox'), avv: t('#p-dom .va-dom'), dorme: [...document.querySelectorAll('#panels .dorme-day')].map((x) => x.textContent), gio: t('#p-gio'), msg: [...document.querySelectorAll('#vaBox .xx-msg')].map((x) => x.textContent), ics: (document.querySelector('#vaBox a[download]') || {}).href || '', gc: (document.querySelector('#vaBox a[href*="calendar.google.com"]') || {}).href || '' }; });
+      const leggi = () => g.evaluate(() => { const t = (s) => (document.querySelector(s) || {}).textContent || ''; return { box: t('#vaBox'), dom: t('#p-dom'), avv: t('#p-dom .va-dom'), dorme: [...document.querySelectorAll('#panels .dorme-day')].map((x) => x.textContent), gio: t('#p-gio'), msg: [...document.querySelectorAll('#vaBox .xx-msg')].map((x) => x.textContent), ics: (document.querySelector('#vaBox a[download]') || {}).href || '', gc: (document.querySelector('#vaBox a[href*="calendar.google.com"]') || {}).href || '' }; });
       const vai = async (k) => { await g.goto(B + 'dicembre/' + (k ? '?scelta=' + k : '')); await g.waitForTimeout(700); return leggi(); };
       const r0 = await vai(''), r8 = await vai('4n-8'), r23 = await vai('4n-23'), r16 = await vai('4n-16'), rP = await vai('lo-16'), r1 = await vai('4n-1'), r29 = await vai('4n-29');
       const okD = r0.dorme.length === 5 && r0.dorme.every((x) => /n\. 8/.test(x)) && /mio consiglio/.test(r0.dorme[0]) && r8.dorme.every((x) => /n\. 8/.test(x) && !/mio consiglio/.test(x)) && /Hotel Locomo/.test(rP.dorme[0]) && rP.dorme.slice(1).every((x) => /n\. 16/.test(x));
@@ -584,6 +584,32 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const ok16 = /48 ore prima/.test(r16.avv) && r16.msg.length === 1 && /Vincent/.test(r16.msg[0]) && /prime 24 ore/.test(r16.box) && !r16.gc;
       const okP = /Domenica notte a Parigi/.test(rP.box) && /Lunedì mattina/.test(rP.box) && !rP.avv && /du 14 au 17/.test(rP.msg[0] || '') && /lundi 14 décembre/.test(rP.msg[0] || '') && /Hotel Locomo: gratis fino a sabato 12\/12/.test(rP.box);
       ok('C24: domenica secondo l’alloggio: n. 23 gestore di persona (avviso, 2 messaggi, indirizzo), n. 16 ora 48 ore prima, notte a Parigi (date 14→17)', ok23 && ok16 && okP); if (!(ok23 && ok16 && okP)) console.log({ ok23, ok16, okP, r23, r16, rP });
+      // C22 (Controllo 21, Mario 22/11 23:16 «con molta cura» sui n. 16 e 23): orari ufficiali RER A, n. 23 a 700 m (giovedì 8:10), arrivo Booking entro le 23:00, messaggi secondo il piano
+      const okC22 = /alle 8:10/.test(r23.box) && /8h10/.test(r23.msg[0]) && /entro le 23:00/.test(r23.avv) && /14:00–23:00/.test(r23.dom)
+        && !/déposer/.test(r16.msg[0]) && /où laisser les clés/.test(r16.msg[0]) && /déposer nos valises/.test(rP.msg[0] || '')
+        && /21:43/.test(r8.dom) && /22:08 \(22:43\)/.test(r8.dom) && !/non fermano a Val d'Europe/.test(r8.gio) && /8:18, 8:24/.test(r8.gio)
+        && /🥐 Colazione/.test(r16.box) && /7:00–22:00/.test(r23.box) && /25 €/.test(r8.box) && !/🥐/.test(r1.box) && !/Domenica sera, appena/.test(rP.box); // colazione: Monop’ della stazione (sito Monoprix);
+      ok('C22: n. 23 giovedì alle 8:10 e arrivo entro le 23:00, colazione per i n. 8, 16, 23, messaggio del n. 16 senza valigie (con la notte a Parigi sì), RER 21:43 e treni di riserva', okC22); if (!okC22) console.log({ b23: r23.box.slice(0, 600), m16: r16.msg, mP: rP.msg, d8: r8.dom.slice(-1500) });
+      // C22 parte 2 (Controllo 22): Galeries con la pista sul tetto dal 24/11 (sito Galeries), carta bancaria solo all'uscita della metro a Orly (IDFM)
+      const okC22b = await g.evaluate(() => { const t = document.body.textContent; return /pista di pattinaggio \(16 €/.test(t) && /forse chi non pattina non sale/.test(t) && /uscita<\/b> della metro a Orly|uscita della metro a Orly/.test(document.body.innerHTML) && /14,80 € a testa/.test(t); });
+      ok('C22: Galeries con la pista sul tetto (terrazza forse solo per chi pattina); Orly: carta bancaria all’uscita della metro, 14,80 €', okC22b);
+      // C26 (Controllo 22, Mario 22/11 «in Questo o quello devo poter scegliere io gli hotel per un confronto non le abbinate prefatte»): tasti accesi/spenti, «＋ Aggiungi», confronto riga per riga, salvato sul telefono
+      {
+        const prima = await g.evaluate(() => { const o = {}; ['pdn-rosa', 'pdn-qoq', 'pdn-scelta', 'pdn-alloggio'].forEach((k) => { o[k] = localStorage.getItem(k); }); localStorage.setItem('pdn-rosa', '[16,23]'); ['pdn-qoq', 'pdn-scelta', 'pdn-alloggio'].forEach((k) => localStorage.removeItem(k)); return o; });
+        const leggiQ = () => g.evaluate(() => { const el = document.getElementById('duels'); return { chips: [...el.querySelectorAll('button[data-qoq]')].map((b) => b.dataset.qoq + ':' + b.getAttribute('aria-pressed')).join(' '), righe: el.querySelectorAll('.qoq-r').length, breve: (el.querySelector('.qoq-in') || {}).textContent || '', pareri: [...el.querySelectorAll('.qoq-r details summary')].map((s) => s.textContent).join(' | '), schede: el.querySelectorAll('a[href^="#al-"]').length, brutto: /undefined|NaN|\bnull\b/.test(el.textContent), largo: el.scrollWidth > el.clientWidth + 1, riass: (el.closest('details.more-al') || { querySelector: () => ({}) }).querySelector('summary').textContent }; });
+        await g.goto(B + 'dicembre/'); await g.waitForTimeout(700);
+        const q0 = await leggiQ();
+        await g.evaluate(() => { const d = document.getElementById('duels').closest('details'); let p = d; while (p) { if (p.tagName === 'DETAILS') p.open = true; p = p.parentElement; } document.querySelector('#duels button[data-qoq="8"]').click(); });
+        const q1 = await leggiQ();
+        await g.evaluate(() => { const s = document.querySelector('#duels select[data-qoq-add]'); s.value = '12'; s.dispatchEvent(new Event('change', { bubbles: true })); });
+        await g.reload(); await g.waitForTimeout(700);
+        const q2 = await leggiQ(), salvato = await g.evaluate(() => localStorage.getItem('pdn-qoq'));
+        await g.evaluate((o) => { Object.entries(o).forEach(([k, v]) => { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); }); }, prima);
+        const okQ = /Confrontate voi/.test(q0.riass) && q0.chips === '8:true 16:true 23:true' && q0.righe === 11 && q0.schede === 3 && /spende meno n\. 23/.test(q0.breve) && /più vicino ai parchi n\. 16/.test(q0.breve) && /N\. 16 Nice studio/.test(q0.pareri) && !q0.brutto && !q0.largo
+          && q1.chips === '8:false 16:true 23:true' && q1.schede === 2 && q1.pareri === ''
+          && salvato === '[12,16,23]' && /12:true/.test(q2.chips) && /8:false/.test(q2.chips) && q2.schede === 3 && /N\. 12 Relais Spa o n\. 13|^$/.test(q2.pareri) && !q2.brutto;
+        ok('C26: «Questo o quello?» lo sceglie Mario: parte da n. 8, 16 e 23 (rosa + consiglio), si spegne un alloggio, si aggiunge il n. 12, resta dopo la ricarica; niente coppie fisse', okQ); if (!okQ) console.log({ q0, q1, q2, salvato });
+      }
       const ok1 = /8:44 da Chessy/.test(r1.gio) && /8:44 da Chessy/.test(r1.box) && /8:47 da Val d'Europe/.test(r8.gio) && /Gratis fino a lunedì 7\/12/.test(r29.box);
       ok('C24: giovedì del n. 1 da Chessy (8:44, non Val d’Europe); n. 29 «prima dell’8/12» = gratis fino al 7/12', ok1); if (!ok1) console.log(r1.gio.slice(-400), r29.box);
       // tutti e 35, con 4 notti e con la notte a Parigi: riquadro pieno, niente «undefined», «NaN» o «null» nel riquadro e nei giorni

@@ -66,3 +66,14 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 | 21/11/2026 | Il `sw.js` di novembre salvava ogni pagina come «./»: dicembre sovrascriveva la copia senza rete di novembre. | Service worker per un sito con una pagina sola. | `sw.js` lascia stare `/dicembre/`; prova `prova-web-app.js` con e senza rete (storia in ERRORI-STORIA). |
 | 21/11/2026 | La #10 ha tolto da sola la testa di Topolino dall'icona chiesta da Mario. | Dubbio di marchio trattato come divieto, deciso senza Mario. | Dubbi su marchi e personaggi: a Mario il rischio in una riga, decide lui (storia in ERRORI-STORIA). |
 | 21/11/2026 | Link di dicembre mandato a un amico con l'anteprima di novembre. | Link dato come testo semplice con gli spazi: l'app ne ha preso solo un pezzo. | Link da mandare: riquadro di codice, da solo su una riga, anteprima controllata (storia in ERRORI-STORIA). |
+
+## Spostati dal diario il 22/11/2026 (Controllo 21, file snello: la difesa è già nella prova «casette intere scorrendo»)
+| Data | Errore | Causa vera | Difesa |
+|---|---|---|---|
+| 21/11/2026 | Testata: casette dei mercatini che sparivano scorrendo, poi Torre Eiffel dietro le casette. | Parallasse al contrario; correzione guardata solo nel pezzo chiesto. | Prova «casette intere scorrendo»; un disegno si guarda intero nel confronto (storia in ERRORI-STORIA). |
+| 21/11/2026 | Etichette «da chiedere / non ufficiale» accavallate nei pro e contro (10 casi), prova delle scritte verde. | `.pc p` a griglia: l'etichetta finiva in una colonna stretta; la prova saltava lo stesso paragrafo. | `.pc p` senza griglia; `prova-scritte.js` conta lo stesso paragrafo sulla stessa riga (storia in ERRORI-STORIA). |
+
+## Spostati dal diario il 22/11/2026 (Controllo 22, file snello: la difesa è già in `prova-scritte.js` e nelle regole del PC)
+| Data | Errore | Causa vera | Difesa |
+|---|---|---|---|
+| 21/11/2026 | Sul PC (Mario, foto 21:37) la testata di dicembre era tagliata in alto: luna e cielo a metà, bordo netto. | Il disegno riempie la larghezza con altezza fissa al massimo 380 px: su uno schermo largo 1920 ne restava visibile poco più di metà. Prove e foto solo a larghezza di telefono. | Sul PC altezza della testata proporzionata alla larghezza (`min(36.25vw,74vh)`); `prova-scritte.js` gira anche a 1470 e 1920 px; ogni cambio d'aspetto si guarda anche su un PC. |

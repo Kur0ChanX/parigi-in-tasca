@@ -1,0 +1,47 @@
+{
+"account": "cba507",
+"sessione": "5936c339e23b",
+"giorno": "2026-11-22",
+"turni": 5,
+"peso": 1149062,
+"uscita": 22591,
+"contesto_max": 280099,
+"anomalie": [
+"2 uscite di strumento enormi (51 KB la più grande): leggere a pezzi (grep -n, sed -n)"
+],
+"blocchi": {
+"Stop 15 · There are uncommitted changes in": 2,
+"Stop 10 · Promessa a Mario senza voce": 2,
+"Stop 8 · Il turno finisce con una": 1
+},
+"esempi_blocchi": {
+"Stop 15 · There are uncommitted changes in": [
+"23:29 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch.",
+"23:33 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"23:35 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Appena finisce pubblico.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura dei dati veri>», c",
+"23:43 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Ultimo giro delle prove sulla v43 completa in corso; poi ti mando foto e domanda.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove l"
+],
+"Stop 8 · Il turno finisce con una": [
+"23:46 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+]
+},
+"remota": "01Rwcxc3NLHA",
+"aiutanti": 0,
+"strumenti": 37,
+"bilancia": 2,
+"motori": {
+"opus": 1149062
+},
+"grezzi": {
+"opus": [
+76,
+9905133,
+36414,
+0,
+22591
+]
+},
+"costo": 2.7245
+}
