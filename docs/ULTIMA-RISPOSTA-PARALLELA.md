@@ -1,9 +1,20 @@
-# Ultima risposta di Claude (23/11/2026 03:13 ora italiana)
+# Ultima risposta di Claude (23/11/2026 08:47 ora italiana)
 
-La correzione dello sfarfallio è pronta e provata. **Non è ancora online**: la pubblicazione ha bisogno del tuo ok. Ho passato le consegne: questa era l'ottava chat della catena, quindi la prossima la apri tu.
+Ho capito: sono la Controllo 25 e riprendo la correzione dello **sfarfallio** (la Torre, il faro e la slitta che spariscono per un attimo nella testata).
+
+🧠 Continuo con Opus 5.5 · Extra, come la sessione precedente. Fable non serve: la correzione è già pronta e provata, resta da pubblicarla e guardare i tuoi video.
 
 ───
 ✅ FATTO
-- Lucine, addobbi che dondolano, vapore, scintille, finestre del castello e faro adesso li disegna una tela sopra il disegno. Non sono più uno strato a testa.
-- Telefono di prova: gli strati passano da 1.355 a 69. Ho confrontato lo stesso istante pixel per pixel e l'aspetto resta uguale: cambiano solo i bordi, per meno di un pixel.
-- Per ora la tela si accende solo con …
+- Ho unito il lavoro salvato dalla Controllo 24. La mia copia è uguale a quella su GitHub.
+- Ho controllato: online c'è la v45. La correzione «tela» è pronta e il codice non è cambiato da quando è stato provato.
+- Gli orari della RER A per il 13 e il 17/12 non sono …
+
+## Domande a Mario
+
+❓ DOMANDE
+**DOMANDA 1: pubblico la prova «lucine sulla tela»?**
+📌 È la correzione dello sfarfallio. Senza un tuo ok scritto il sistema non mi lascia pubblicarla.
+1 · sì, pubblica
+2 · no, aspetta
+Consiglio: **1**.
