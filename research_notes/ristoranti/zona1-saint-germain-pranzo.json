@@ -1,0 +1,837 @@
+[
+  {
+    "nome": "L'Atelier Roulière",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "carne",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–14:30 e 19–23 (sito ufficiale, visto 23/11/2026)",
+    "indirizzo": "24 rue des Canettes, 75006 Paris",
+    "lat": 48.8516166,
+    "lon": 2.3336406,
+    "fascia": "€€",
+    "prezzo": "35–55 € a testa (antipasti 11,50–12,50 €, piatti 22,50–44,50 €; prezzo medio TheFork 52 €)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,6/5",
+        "recensioni": 1536,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJOdPf9tlx5kcRsm98EYUdFtA",
+        "nota": "non ufficiale; numero di Google del 05/11/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "9,5/10",
+        "recensioni": 1107,
+        "visto": "23/11/2026",
+        "url": "https://www.thefork.com/restaurant/atelier-rouliere-r201129",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,3/5",
+        "recensioni": 726,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d788277-Reviews-L_Atelier_Rouliere-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "best_buy": true,
+    "perche_best_buy": "Carne di macelleria di qualità (Google 4,6, TheFork 9,5) a 35–55 €: costa meno di Didon e Gueuleton e convince di più dell'Entrecôte.",
+    "perche": "Nasce da una famiglia di macellai (Roulière, dal 1877). Carne scelta e frollata con misura. Da prendere: l'entrecôte o la costata Angus per due, e prima la zuppa di cipolle gratinata.",
+    "da_sapere": "Prenotare: sala piccola, tavoli vicini. Si parla inglese. Carte accettate. Qualche recensione parla di servizio lento.",
+    "sito": "https://www.atelier-rouliere.fr/",
+    "menu": "https://www.atelier-rouliere.fr/menu/",
+    "prenota": "https://www.atelier-rouliere.fr/reservation/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=L%27Atelier+Rouli%C3%A8re+24+rue+des+Canettes%2C+75006+Paris",
+    "thefork": "https://www.thefork.com/restaurant/atelier-rouliere-r201129",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d788277-Reviews-L_Atelier_Rouliere-Paris_Ile_de_France.html",
+    "fermata": "Mabillon · metro 10, 3 min (anche Saint-Sulpice · metro 4, 4 min)",
+    "da_chatelet": "~16 min (stima): metro 4 fino a Saint-Sulpice (5 fermate), poi 4 min a piedi",
+    "fonti": [
+      "https://www.atelier-rouliere.fr/contact/ (orari, visto 23/11/2026)",
+      "https://www.thefork.com/restaurant/atelier-rouliere-r201129 (voto e prezzo medio, visto 23/11/2026)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d788277-Reviews-L_Atelier_Rouliere-Paris_Ile_de_France.html (voto e prezzi dei piatti, visto 23/11/2026)",
+      "https://www.google.com/maps/place/?q=place_id:ChIJOdPf9tlx5kcRsm98EYUdFtA (voto e coordinate, dato del 05/11/2026)",
+      "https://freshmagparis.com/latelier-rouliere-une-boucherie-devenue-bistrot-a-viandes-dexception (intervista, 23/06/2025; non ufficiale)"
+    ]
+  },
+  {
+    "nome": "Didon",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "carne",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–14:30 e 19–22:30 (sito ufficiale, visto 23/11/2026)",
+    "indirizzo": "8 rue du Dragon, 75006 Paris",
+    "lat": 48.8537625,
+    "lon": 2.3311074,
+    "fascia": "€€€",
+    "prezzo": "55–75 € a testa la domenica (antipasti 24–28 €, piatti 39–43 €; il menu pranzo 28–35 € vale solo lun–ven)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,7/5",
+        "recensioni": 1218,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJmUnWNT1x5kcR8EL2VvKUH1Q",
+        "nota": "non ufficiale; numero di Google del 05/11/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "9,3/10",
+        "recensioni": 789,
+        "visto": "23/11/2026",
+        "url": "https://www.thefork.com/restaurant/didon-r714031",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,7/5",
+        "recensioni": 606,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d23683593-Reviews-Didon-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "Gault&Millau",
+        "valore": "13/20",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://fr.gaultmillau.com/fr/restaurants/didon-",
+        "nota": "guida 2026, pagina del 18/09/2026"
+      }
+    ],
+    "nicchia": true,
+    "best_buy": false,
+    "perche": "Piccolo bistrot dove quasi tutto si cuoce alla brace di carbone. La carta la firma lo chef Michel Portos (ex due stelle). Da prendere: l'entrecôte Angus o il manzo «persillé» alla brace.",
+    "da_sapere": "Prenotare (Zenchef o TheFork, a volte con sconto). Sala piccola, al piano di sopra più spazio. Tutti i vini si possono avere anche al bicchiere. Il menu pranzo economico non c'è la domenica.",
+    "sito": "https://didonrestaurant.com/",
+    "menu": "https://didonrestaurant.com/wp-content/uploads/2026/10/menu-didon-13-oct-2026.pdf",
+    "prenota": "https://bookings.zenchef.com/results?rid=356335&pid=1001",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Didon+8+rue+du+Dragon%2C+75006+Paris",
+    "thefork": "https://www.thefork.com/restaurant/didon-r714031",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d23683593-Reviews-Didon-Paris_Ile_de_France.html",
+    "fermata": "Saint-Germain-des-Prés · metro 4, 4 min",
+    "da_chatelet": "~16 min (stima): metro 4 fino a Saint-Germain-des-Prés (4 fermate), poi 4 min a piedi",
+    "fonti": [
+      "https://didonrestaurant.com/ (orari, visto 23/11/2026)",
+      "https://didonrestaurant.com/wp-content/uploads/2026/10/menu-midi-angl-13-oct-2026.pdf (menu pranzo solo feriale, 13/10/2026)",
+      "https://fr.gaultmillau.com/fr/restaurants/didon- (voto e prezzi dei piatti, 18/09/2026; non ufficiale)",
+      "https://www.thefork.com/restaurant/didon-r714031 (voto e prezzo medio 70 €, visto 23/11/2026)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d23683593-Reviews-Didon-Paris_Ile_de_France.html (voto, visto 23/11/2026)",
+      "https://www.google.com/maps/place/?q=place_id:ChIJmUnWNT1x5kcR8EL2VvKUH1Q (voto e coordinate, dato del 05/11/2026)"
+    ]
+  },
+  {
+    "nome": "Gueuleton Saint-Germain-des-Prés",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "carne",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 10–24 orario continuato (sito ufficiale: tutti i giorni, visto 23/11/2026)",
+    "indirizzo": "21 rue Guisarde, 75006 Paris",
+    "lat": 48.8518133,
+    "lon": 2.3340107,
+    "fascia": "€€€",
+    "prezzo": "60–70 € a testa (stima di Gilles Pudlowski, 02/07/2024; non ufficiale). La costata frollata si paga al kg (prezzo sulla lavagna)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,4/5",
+        "recensioni": 1127,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ0zUmzsFx5kcRJGg-aTppjKo",
+        "nota": "non ufficiale; numero di Google del 05/11/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "scheda non trovata cercando il 23/11/2026; si prenota con Zenchef"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,2/5",
+        "recensioni": 25,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d27712713-Reviews-Gueuleton_Saint_germain_des_pres-Paris_Ile_de_France.html",
+        "nota": "non ufficiale, poche recensioni"
+      }
+    ],
+    "nicchia": false,
+    "best_buy": false,
+    "perche": "Locale da «buongustai carnivori» della catena Gueuleton, con carne delle macellerie Nivernaises. Da prendere: la costata di manzo frollata da dividere, con frites e béarnaise.",
+    "da_sapere": "Fa parte di una catena (oltre 20 locali). Recensioni divise: carne lodata, ma rumoroso e caro per alcuni. Prenotare su Zenchef. Aperto senza pausa: va bene anche a pranzo tardi.",
+    "sito": "https://www.gueuleton.fr/gueuleton-saint-germain-des-pres",
+    "menu": "https://www.gueuleton.fr/gueuleton-saint-germain-des-pres",
+    "prenota": "https://bookings.zenchef.com/results?rid=366037",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Gueuleton+Saint-Germain-des-Pr%C3%A9s+21+rue+Guisarde%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d27712713-Reviews-Gueuleton_Saint_germain_des_pres-Paris_Ile_de_France.html",
+    "fermata": "Mabillon · metro 10, 2 min (anche Saint-Germain-des-Prés · metro 4, 3 min)",
+    "da_chatelet": "~15 min (stima): metro 4 fino a Saint-Germain-des-Prés (4 fermate), poi 3 min a piedi",
+    "fonti": [
+      "https://www.gueuleton.fr/gueuleton-saint-germain-des-pres (orari e prenotazione, visto 23/11/2026)",
+      "https://www.gillespudlowski.com/377920/restaurants/paris-6e-le-gueuleton-saint-germain-est-arrive (prezzo medio, 02/07/2024; non ufficiale)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d27712713-Reviews-Gueuleton_Saint_germain_des_pres-Paris_Ile_de_France.html (voto, visto 23/11/2026)",
+      "https://www.google.com/maps/place/?q=place_id:ChIJ0zUmzsFx5kcRJGg-aTppjKo (voto e coordinate, dato del 05/11/2026)"
+    ]
+  },
+  {
+    "nome": "Le Relais de l'Entrecôte (Saint-Benoît)",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "carne",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–15 e 18:30–23 (sito ufficiale: weekend e festivi 12–15, visto 23/11/2026)",
+    "indirizzo": "20 rue Saint-Benoît, 75006 Paris",
+    "lat": 48.8545954,
+    "lon": 2.3328203,
+    "fascia": "€€",
+    "prezzo": "27,50 € il menu unico (insalata + entrecôte con frites, bis compreso); 35 € con il dolce (Petit Futé, 04/07/2026; non ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,2/5",
+        "recensioni": 8161,
+        "visto": "23/11/2026",
+        "url": "https://fr.restaurantguru.com/Le-Relais-de-lEntrecote-Paris",
+        "nota": "copia del voto Google su Restaurant Guru, pagina del 16/05/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non c'è: niente prenotazioni"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,9/5",
+        "recensioni": 2746,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d719401-Reviews-Le_Relais_de_l_Entrecote-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": false,
+    "best_buy": false,
+    "perche": "Il classico dal 1959: un solo piatto, entrecôte con la famosa salsa verde segreta e frites, servito due volte. Da prendere: il menu, e il dolce se c'è fame.",
+    "da_sapere": "Niente prenotazioni: c'è quasi sempre fila (a volte lunga). Molto turistico, servizio veloce, non è un posto per chiacchierare. Si sceglie solo la cottura. A 2 minuti dalla chiesa.",
+    "sito": "https://www.relaisdelentrecote.com/fr/adresses",
+    "menu": "https://www.relaisdelentrecote.com/fr/menu",
+    "prenota": "non si prenota",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Le+Relais+de+l%27Entrec%C3%B4te+%28Saint-Beno%C3%AEt%29+20+rue+Saint-Beno%C3%AEt%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d719401-Reviews-Le_Relais_de_l_Entrecote-Paris_Ile_de_France.html",
+    "fermata": "Saint-Germain-des-Prés · metro 4, 3 min",
+    "da_chatelet": "~15 min (stima): metro 4 fino a Saint-Germain-des-Prés (4 fermate), poi 3 min a piedi",
+    "fonti": [
+      "https://www.relaisdelentrecote.com/fr/adresses (orari, visto 23/11/2026)",
+      "https://www.relaisentrecote.fr/?page_id=396&lang=en_GB (orari weekend 12–15, visto 23/11/2026)",
+      "https://www.petitfute.co.uk/v17231-17301-paris-75006/c1165-restaurants/c4-cuisine-francaise/2031250-le-relais-de-l-entrecote-st-germain-des-pres.html (prezzi, 04/07/2026; non ufficiale)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d719401-Reviews-Le_Relais_de_l_Entrecote-Paris_Ile_de_France.html (voto, visto 23/11/2026)",
+      "https://fr.restaurantguru.com/Le-Relais-de-lEntrecote-Paris (voto Google, 16/05/2026; non ufficiale)"
+    ]
+  },
+  {
+    "nome": "L'Avant Comptoir de la Mer",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "pesce",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–23 orario continuato (sito ufficiale: 7 giorni su 7 tutto l'anno, visto 23/11/2026)",
+    "indirizzo": "3 carrefour de l'Odéon, 75006 Paris",
+    "lat": 48.8520991,
+    "lon": 2.3387941,
+    "fascia": "€",
+    "prezzo": "25–40 € a testa (piattini 5–15 € l'uno, se ne prendono 3–4; vino al bicchiere da 3,50 €) (sito ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,3/5",
+        "recensioni": 268,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJX2odav5x5kcR7gd0hQI3qGQ",
+        "nota": "non ufficiale; numero di Google del 05/11/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non c'è: niente prenotazioni"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "scheda non trovata cercando il 23/11/2026"
+      },
+      {
+        "fonte": "Gault&Millau",
+        "valore": "11/20",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://fr.gaultmillau.com/fr/restaurants/l-avant-comptoir-de-la-mer",
+        "nota": "guida 2026; non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "best_buy": true,
+    "perche_best_buy": "Ostriche dei migliori allevatori e piattini di pesce da 5–15 €: si mangia bene con 25–40 €, la metà degli altri posti di pesce.",
+    "perche": "Banco di mare del gruppo Camdeborde (il padre della «bistronomia»): ostriche dei migliori allevatori francesi e piattini di pesce. Da prendere: ostriche, crocchette di merluzzo, cannolicchi alla marinara, e la mousse al cioccolato.",
+    "da_sapere": "Si mangia al banco, quasi tutti in piedi, pochi sgabelli. Niente prenotazioni né telefono: alle 13 di domenica sarà pieno, meglio arrivare verso le 12. Gault&Millau scrive «domenica chiuso», ma il sito ufficiale dice 7 su 7.",
+    "sito": "https://camdeborde.com/les-restaurants/avant-comptoir-de-la-mer",
+    "menu": "https://camdeborde.com/les-restaurants/avant-comptoir-de-la-mer",
+    "prenota": "non si prenota",
+    "maps": "https://www.google.com/maps/search/?api=1&query=L%27Avant+Comptoir+de+la+Mer+3+carrefour+de+l%27Od%C3%A9on%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "non c'è",
+    "fermata": "Odéon · metro 4 e 10, 1 min",
+    "da_chatelet": "~11 min (stima): metro 4 fino a Odéon (3 fermate), poi 1 min a piedi",
+    "fonti": [
+      "https://camdeborde.com/les-restaurants/avant-comptoir-de-la-mer (orari, prezzi, niente prenotazioni, visto 23/11/2026)",
+      "https://lefooding.com/restaurants/restaurant-l-avant-comptoir-de-la-mer-paris-1 (piatti e prezzi, aggiornato 05/08/2026; non ufficiale)",
+      "https://fr.gaultmillau.com/fr/restaurants/l-avant-comptoir-de-la-mer (voto, 16/07/2026; non ufficiale)",
+      "https://www.google.com/maps/place/?q=place_id:ChIJX2odav5x5kcR7gd0hQI3qGQ (voto e coordinate, dato del 05/11/2026)"
+    ]
+  },
+  {
+    "nome": "La Méditerranée",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "pesce",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–14:30 e 19:30–23 (sito ufficiale: tutti i giorni, visto 23/11/2026)",
+    "indirizzo": "2 place de l'Odéon, 75006 Paris",
+    "lat": 48.8500938,
+    "lon": 2.3386079,
+    "fascia": "€€€",
+    "prezzo": "37–45 € il menu (2 o 3 portate, sui piatti segnati «Menu»); alla carta 50–70 € a testa (piatti 25–68 €)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,2/5",
+        "recensioni": 771,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJYUw2C9xx5kcRVM2D_COZB6g",
+        "nota": "non ufficiale; numero di Google del 05/11/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "9,3/10",
+        "recensioni": 3527,
+        "visto": "23/11/2026",
+        "url": "https://www.thefork.com/restaurant/la-mediterranee-r337109",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,9/5",
+        "recensioni": 748,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d718687-Reviews-La_Mediterranee-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "Michelin",
+        "valore": "selezionato (senza stella)",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/la-mediterranee"
+      }
+    ],
+    "nicchia": false,
+    "best_buy": false,
+    "perche": "Storico ristorante di pesce davanti al teatro dell'Odéon, sala luminosa con affreschi. Selezionato dalla guida Michelin. Da prendere: la bouillabaisse (38 €) o la sogliola alla mugnaia.",
+    "da_sapere": "Prenotare (TheFork o telefono 01 43 26 02 30). Ambiente elegante e silenzioso. Il menu a 37–45 € conviene; alla carta è caro e su TripAdvisor il rapporto qualità/prezzo è giudicato basso.",
+    "sito": "https://www.la-mediterranee.com/",
+    "menu": "https://www.la-mediterranee.com/menus",
+    "prenota": "https://module.lafourchette.com/fr_FR/module/337109-b3fc7",
+    "maps": "https://www.google.com/maps/search/?api=1&query=La+M%C3%A9diterran%C3%A9e+2+place+de+l%27Od%C3%A9on%2C+75006+Paris",
+    "thefork": "https://www.thefork.com/restaurant/la-mediterranee-r337109",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d718687-Reviews-La_Mediterranee-Paris_Ile_de_France.html",
+    "fermata": "Odéon · metro 4 e 10, 4 min",
+    "da_chatelet": "~14 min (stima): metro 4 fino a Odéon (3 fermate), poi 4 min a piedi",
+    "fonti": [
+      "https://www.la-mediterranee.com/ (orari, visto 23/11/2026)",
+      "https://www.la-mediterranee.com/menus (prezzi, visto 23/11/2026)",
+      "https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/la-mediterranee (selezione Michelin, visto 23/11/2026)",
+      "https://www.thefork.com/restaurant/la-mediterranee-r337109 (voto e prezzo medio 64 €, visto 23/11/2026)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d718687-Reviews-La_Mediterranee-Paris_Ile_de_France.html (voto, visto 23/11/2026)",
+      "https://www.google.com/maps/place/?q=place_id:ChIJYUw2C9xx5kcRVM2D_COZB6g (voto e coordinate, dato del 05/11/2026)"
+    ]
+  },
+  {
+    "nome": "Huguette, Bistro de la mer",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "pesce",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–23:30 orario continuato (sito ufficiale: tutti i giorni, visto 23/11/2026)",
+    "indirizzo": "81 rue de Seine, 75006 Paris",
+    "lat": 48.8532996,
+    "lon": 2.3371134,
+    "fascia": "€€",
+    "prezzo": "40–60 € a testa alla carta (6 ostriche 16–32 €, piatti di pesce 23–39 €; le formule 25–29 € valgono solo lun–ven)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,4/5",
+        "recensioni": 2614,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJZ6UXGNlx5kcRkussL8qcmrI",
+        "nota": "non ufficiale; numero di Google del 05/11/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "scheda non trovata cercando il 23/11/2026; si prenota per telefono o email"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,0/5",
+        "recensioni": 913,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d10044448-Reviews-Huguette_Bistro_de_la_Mer-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "best_buy": false,
+    "perche": "Bistrot di mare allegro, con ostriche di molti allevatori diversi e frutti di mare freschi. Da prendere: il piatto di ostriche «Dégustation» (46 €) o le cozze alla marinara con patatine.",
+    "da_sapere": "Servizio continuato: va bene anche se si arriva tardi. Prenotare al 01 43 25 00 28 o per email (resa@huguette-bistro.com). Tavoli piccoli, rumoroso nelle ore di punta.",
+    "sito": "https://www.huguette-bistro.com/",
+    "menu": "https://www.huguette-bistro.com/",
+    "prenota": "tel:+33143250028",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Huguette%2C+Bistro+de+la+mer+81+rue+de+Seine%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d10044448-Reviews-Huguette_Bistro_de_la_Mer-Paris_Ile_de_France.html",
+    "fermata": "Mabillon · metro 10, 3 min (anche Odéon · metro 4 e 10, 3 min)",
+    "da_chatelet": "~13 min (stima): metro 4 fino a Odéon (3 fermate), poi 3 min a piedi",
+    "fonti": [
+      "https://www.huguette-bistro.com/ (orari, carta e prezzi, visto 23/11/2026)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d10044448-Reviews-Huguette_Bistro_de_la_Mer-Paris_Ile_de_France.html (voto, visto 23/11/2026)",
+      "https://www.google.com/maps/place/?q=place_id:ChIJZ6UXGNlx5kcRkussL8qcmrI (voto e coordinate, dato del 05/11/2026)"
+    ]
+  },
+  {
+    "nome": "Tsukizi",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "sushi",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–14:15 e 19–22:15 (sito ufficiale in francese: «7 giorni su 7» dalla riapertura del 23/10/2026, visto 23/11/2026) — da riconfermare, vedi «da sapere»",
+    "indirizzo": "2 bis rue des Ciseaux, 75006 Paris",
+    "lat": 48.8530238,
+    "lon": 2.3340222,
+    "fascia": "€€",
+    "prezzo": "35–55 € a testa (plateaux di sushi 25–52 €, chirashi 30–48 €; il menu a 26 € vale solo mar–ven)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,6/5",
+        "recensioni": 977,
+        "visto": "23/11/2026",
+        "url": "https://kobofamily.com/tsukizi",
+        "nota": "numero citato dal sito ufficiale, non visto su Google"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non c'è: si prenota con OpenTable (OpenTable 4,8/5 su 37 recensioni)"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,2/5",
+        "recensioni": 176,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d719951-Reviews-Tsukizi-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "OpenTable",
+        "valore": "4,8/5",
+        "recensioni": 37,
+        "visto": "23/11/2026",
+        "url": "https://www.opentable.fr/restaurant/profile/435936",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "best_buy": false,
+    "perche": "Il bar di sushi più antico di Parigi (1981), tenuto dai figli del fondatore. Pesce scelto ogni mattina e tagliato al banco. Da prendere: il chirashi speciale o i nigiri al banco, e la battera di sgombro.",
+    "da_sapere": "ATTENZIONE orari: prima chiudeva domenica e lunedì. Solo il sito francese dice «aperto 7 su 7»; sito inglese, TripAdvisor e OpenTable dicono ancora mar–sab. Prima di andare: provare a prenotare su OpenTable per domenica 13/12 o telefonare (01 72 68 50 57). Sala piccola (una decina di posti al banco): prenotare.",
+    "sito": "https://kobofamily.com/tsukizi",
+    "menu": "https://kobofamily.com/menus/tsukizi",
+    "prenota": "https://www.opentable.fr/booking/restref/availability?restRef=435936&lang=fr-FR",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tsukizi+2+bis+rue+des+Ciseaux%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d719951-Reviews-Tsukizi-Paris_Ile_de_France.html",
+    "fermata": "Mabillon · metro 10, 1 min (anche Saint-Germain-des-Prés · metro 4, 1 min)",
+    "da_chatelet": "~13 min (stima): metro 4 fino a Saint-Germain-des-Prés (4 fermate), poi 1 min a piedi",
+    "fonti": [
+      "https://kobofamily.com/tsukizi (orari 7/7, riapertura 23/10/2026, prezzi, visto 23/11/2026)",
+      "https://kobofamily.com/en/tsukizi (versione inglese con orari mar–sab, non aggiornata; vista 23/11/2026)",
+      "https://www.opentable.fr/restaurant/profile/435936 (voto; orari mar–sab, dati di marzo 2026; non ufficiale)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d719951-Reviews-Tsukizi-Paris_Ile_de_France.html (voto, visto 23/11/2026)",
+      "https://nominatim.openstreetmap.org (coordinate della via, 23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Takuto (ex Kaïto)",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "sushi",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–22 orario continuato (sito ufficiale, visto 23/11/2026)",
+    "indirizzo": "71 rue de Seine, 75006 Paris",
+    "lat": 48.8541356,
+    "lon": 2.3370418,
+    "fascia": "€€",
+    "prezzo": "35–55 € a testa (set da 4 o 5 hand roll 32–42 €, roll singoli 8–13 €; la formula pranzo con zuppa vale solo nei giorni feriali) (menu ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,3/5",
+        "recensioni": 330,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJHZ6sv6lx5kcRvF0KFMl_yDs",
+        "nota": "non ufficiale; numero di Google del 05/11/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "scheda non trovata cercando il 23/11/2026; si prenota dal sito"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "scheda non trovata cercando il 23/11/2026"
+      },
+      {
+        "fonte": "Time Out",
+        "valore": "5/5 (critica)",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://www.timeout.fr/paris/restaurant/japonais",
+        "nota": "lista dei migliori giapponesi, 30/03/2026"
+      }
+    ],
+    "nicchia": true,
+    "best_buy": true,
+    "perche_best_buy": "Hand roll di uno chef che ha avuto la stella Michelin, con tonno frollato: 5 roll a 42 € e aperto di sicuro la domenica.",
+    "perche": "Banco di hand roll (maki fatti al momento, alga croccante) dello chef Takuya Watanabe, che portò la stella Michelin a Jin. Tonno ikejime frollato. Da prendere: il «Kaito maki» (toro, akami, zucca marinata, shiso) e il «Toro Taku».",
+    "da_sapere": "Locale piccolo, si mangia al banco. Prenotare dal sito. Pasto veloce: a volte il tavolo serve dopo 40–60 minuti. Aperto senza pausa, va bene anche alle 14.",
+    "sito": "https://takuto.fr/",
+    "menu": "https://takuto.fr/wp-content/uploads/2026/10/takuto-menu.pdf",
+    "prenota": "https://takuto.fr/reservation",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Takuto+%28ex+Ka%C3%AFto%29+71+rue+de+Seine%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "non c'è",
+    "fermata": "Saint-Germain-des-Prés · metro 4, 3 min (anche Odéon · metro 4 e 10, 4 min)",
+    "da_chatelet": "~14 min (stima): metro 4 fino a Odéon (3 fermate), poi 4 min a piedi",
+    "fonti": [
+      "https://takuto.fr/ (orari, visto 23/11/2026)",
+      "https://takuto.fr/wp-content/uploads/2026/10/takuto-menu.pdf (prezzi, ottobre 2026)",
+      "https://www.timeout.fr/paris/restaurant/japonais (critica, 30/03/2026; non ufficiale)",
+      "https://www.google.com/maps/place/?q=place_id:ChIJHZ6sv6lx5kcRvF0KFMl_yDs (voto e coordinate, dato del 05/11/2026)"
+    ]
+  },
+  {
+    "nome": "Blueberry Maki Bar",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "sushi",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12:30–15 e 19–22:30 (sito ufficiale: pranzo sab–dom 12:30–15, visto 23/11/2026)",
+    "indirizzo": "6 rue du Sabot, 75006 Paris",
+    "lat": 48.8527706,
+    "lon": 2.3314671,
+    "fascia": "€€",
+    "prezzo": "35–50 € a testa alla carta (stima di lesrestos.com e Time Out; non ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,5/5",
+        "recensioni": 1626,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ4bG0R-px5kcR-YufGIIXUkc",
+        "nota": "non ufficiale; numero di Google del 05/11/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "scheda non trovata cercando il 23/11/2026"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,4/5",
+        "recensioni": 714,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d4097673-Reviews-Blueberry_Maki_Bar-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "Gault&Millau",
+        "valore": "12/20",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://fr.gaultmillau.com/fr/restaurants/blueberry",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "best_buy": false,
+    "perche": "Sushi bar elegante dal 2013, con 7 posti al banco davanti ai sushiman. Sushi classici e maki creativi. Da prendere: il chirashi o i maki «signature», con un sake.",
+    "da_sapere": "Prenotare per telefono (01 42 22 21 56), soprattutto nel weekend. Luci soffuse e musica. Porzioni piccole per qualcuno. È la riserva se Tsukizi fosse chiuso: sono a 4 minuti l'uno dall'altro.",
+    "sito": "https://www.blueberrymakibar.com/",
+    "menu": "https://www.blueberrymakibar.com/",
+    "prenota": "tel:+33142222156",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Blueberry+Maki+Bar+6+rue+du+Sabot%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d4097673-Reviews-Blueberry_Maki_Bar-Paris_Ile_de_France.html",
+    "fermata": "Saint-Sulpice · metro 4, 3 min (anche Saint-Germain-des-Prés · metro 4, 4 min)",
+    "da_chatelet": "~16 min (stima): metro 4 fino a Saint-Sulpice (5 fermate), poi 3 min a piedi",
+    "fonti": [
+      "https://www.blueberrymakibar.com/ (orari, visto 23/11/2026)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d4097673-Reviews-Blueberry_Maki_Bar-Paris_Ile_de_France.html (voto e orari, visto 23/11/2026)",
+      "https://www.google.com/maps/place/?q=place_id:ChIJ4bG0R-px5kcR-YufGIIXUkc (voto e coordinate, dato del 05/11/2026)",
+      "https://www.lesrestos.com/restaurant/fiche/paris/blueberry-maki-bar (prezzo stimato; non ufficiale)",
+      "https://www.timeout.fr/paris/restaurant/blueberry (prezzi indicativi; non ufficiale)"
+    ]
+  },
+  {
+    "nome": "Allard",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "tradizionale",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–14 e 19–22 (sito ufficiale: tutti i giorni, visto 23/11/2026)",
+    "indirizzo": "41 rue Saint-André-des-Arts, 75006 Paris",
+    "lat": 48.8533413,
+    "lon": 2.3410806,
+    "fascia": "€€€",
+    "prezzo": "80–100 € a testa (antipasti 14–36 €, piatti 44–58 €, anatra alle olive per due 110 €; il menu 28–34 € vale solo lun–ven) (carta ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,3/5",
+        "recensioni": 1381,
+        "visto": "23/11/2026",
+        "url": "https://www.amex-dining-explorer.com/restaurant/allard-paris/",
+        "nota": "copia del voto Google su un sito non ufficiale, data non indicata"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "8,8/10",
+        "recensioni": 593,
+        "visto": "23/11/2026",
+        "url": "https://en.dinnersite.nl/restaurant/allard-r408835/reviews",
+        "nota": "copia della scheda TheFork r408835 su dinnersite.nl; la pagina thefork.com oggi rimanda a un elenco"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,6/5",
+        "recensioni": 1334,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d695265-Reviews-Restaurant_Allard-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "Michelin",
+        "valore": "selezionato, «Coup de cœur» (senza stella)",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/allard"
+      }
+    ],
+    "nicchia": false,
+    "best_buy": false,
+    "perche": "Bistrot parigino vero dal 1932, oggi della casa Alain Ducasse; sala d'epoca. Selezionato dalla guida Michelin. Da prendere: le cosce di rana «Fernande Allard», l'anatra di Challans alle olive (per due) e il savarin al rum.",
+    "da_sapere": "È l'«occasione speciale» della zona: caro. Recensioni divise (TripAdvisor 3,6, prezzi giudicati alti). Prenotare su Zenchef. Sulla strada fra Notre-Dame e il Louvre.",
+    "sito": "https://www.restaurant-allard.fr/",
+    "menu": "https://www.restaurant-allard.fr/wp-content/uploads/2026/10/2026_10_19-ALLARD-CARTE-FOOD-GB.pdf",
+    "prenota": "https://bookings.zenchef.com/results?rid=374504&pid=1001",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Allard+41+rue+Saint-Andr%C3%A9-des-Arts%2C+75006+Paris",
+    "thefork": "https://www.thefork.com/restaurant/allard-r408835",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d695265-Reviews-Restaurant_Allard-Paris_Ile_de_France.html",
+    "fermata": "Odéon · metro 4 e 10, 3 min (anche Saint-Michel · metro 4, 3 min)",
+    "da_chatelet": "~12 min (stima): metro 4 fino a Saint-Michel (2 fermate), poi 3 min a piedi",
+    "fonti": [
+      "https://www.restaurant-allard.fr/contact/ (orari, visto 23/11/2026)",
+      "https://www.restaurant-allard.fr/wp-content/uploads/2026/10/2026_10_19-ALLARD-CARTE-FOOD-GB.pdf (prezzi, 19/10/2026)",
+      "https://www.restaurant-allard.fr/carte/ (menu pranzo solo lun–ven, visto 23/11/2026)",
+      "https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/allard (selezione, 16/03/2026)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d695265-Reviews-Restaurant_Allard-Paris_Ile_de_France.html (voto, visto 23/11/2026)",
+      "https://nominatim.openstreetmap.org (coordinate, 23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Chez Fernand Christine",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "tradizionale",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 12–14:30 e 19–23 (sito ufficiale: tutti i giorni, visto 23/11/2026)",
+    "indirizzo": "9 rue Christine, 75006 Paris",
+    "lat": 48.85457,
+    "lon": 2.339624,
+    "fascia": "€€",
+    "prezzo": "45–55 € a testa (antipasti 14,50–29,50 €, piatti 29,50–39,50 €, bœuf bourguignon 36,50 €; il menu 29,50 € vale solo lun–ven) (carta ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,4/5",
+        "recensioni": 1396,
+        "visto": "23/11/2026",
+        "url": "http://wanderlog.com/place/details/437684/chez-fernand-christine",
+        "nota": "copia del voto Google su Wanderlog, data non indicata"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "scheda non trovata cercando il 23/11/2026"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,2/5",
+        "recensioni": 1129,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d1580042-Reviews-Chez_Fernand_Christine-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "best_buy": false,
+    "perche": "Bistrot tradizionale in una via tranquilla, travi a vista e aria di vecchia Parigi. Cantina enorme (oltre 2.000 vini, bottiglie da 39,50 €). Da prendere: il bœuf bourguignon con guance di Black Angus, o il Camembert al forno col miele.",
+    "da_sapere": "Prenotare (piccolo e molto richiesto). Tavoli stretti. Il personale parla un po' di inglese. Sulla strada fra Notre-Dame e il Louvre.",
+    "sito": "https://www.restaurantchezfernand.fr/",
+    "menu": "https://www.restaurantchezfernand.fr/menu.pdf",
+    "prenota": "tel:+33143251855",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Chez+Fernand+Christine+9+rue+Christine%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d1580042-Reviews-Chez_Fernand_Christine-Paris_Ile_de_France.html",
+    "fermata": "Odéon · metro 4 e 10, 4 min (anche Saint-Michel · metro 4, 5 min)",
+    "da_chatelet": "~14 min (stima): metro 4 fino a Odéon (3 fermate), poi 4 min a piedi",
+    "fonti": [
+      "https://www.restaurantchezfernand.fr/ (orari e cantina, visto 23/11/2026)",
+      "https://www.restaurantchezfernand.fr/menu.pdf (prezzi, visto 23/11/2026)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d1580042-Reviews-Chez_Fernand_Christine-Paris_Ile_de_France.html (voto e coordinate, visto 23/11/2026)",
+      "http://wanderlog.com/place/details/437684/chez-fernand-christine (voto Google; non ufficiale)"
+    ]
+  },
+  {
+    "nome": "Brasserie des Prés",
+    "zona": "Saint-Germain · pranzo di domenica",
+    "cucina": "tradizionale",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom pranzo 12–15:30 e cena 19–22:30 (sito ufficiale, visto 23/11/2026)",
+    "indirizzo": "6 cour du Commerce Saint-André, 75006 Paris",
+    "lat": 48.852943,
+    "lon": 2.339199,
+    "fascia": "€",
+    "prezzo": "25–35 € a testa (carta del pranzo del weekend: antipasti 6–18 €, piatti 13–26 €) (menu ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,7/5",
+        "recensioni": 5565,
+        "visto": "23/11/2026",
+        "url": "https://intravel.net/paris/restaurants-cafes/brasserie-des-pres",
+        "nota": "copia del voto Google su InTravel, pagina del 07/10/2026"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non c'è: si prenota con SevenRooms"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,9/5",
+        "recensioni": 254,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g187147-d26250855-Reviews-Brasserie_Des_Pres-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": false,
+    "best_buy": true,
+    "perche_best_buy": "Cucina francese classica tutta fatta in casa a 25–35 € a testa, Google 4,7 su oltre 5.000 recensioni: il prezzo più basso fra i tradizionali.",
+    "perche": "Grande brasserie del gruppo Nouvelle Garde: tutto fatto in casa e prezzi bassi per Saint-Germain. In un vecchio passaggio coperto, con un pezzo delle mura medievali in sala. Da prendere: zuppa di cipolle, uovo mimosa, salsiccia e purè, Paris-Brest.",
+    "da_sapere": "Pochi tavoli prenotabili, molti posti senza prenotazione: arrivare presto. Tengono il tavolo 15 minuti. Ambiente giovane e rumoroso. A 1 minuto da Odéon, comodo verso il Louvre.",
+    "sito": "https://lanouvellegarde.com/fr/brasserie-des-pres",
+    "menu": "https://lanouvellegarde.com/wp-content/uploads/bdp_wk.pdf",
+    "prenota": "https://www.sevenrooms.com/explore/brasseriedespres/reservations/create/search/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Brasserie+des+Pr%C3%A9s+6+cour+du+Commerce+Saint-Andr%C3%A9%2C+75006+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g187147-d26250855-Reviews-Brasserie_Des_Pres-Paris_Ile_de_France.html",
+    "fermata": "Odéon · metro 4 e 10, 1 min",
+    "da_chatelet": "~11 min (stima): metro 4 fino a Odéon (3 fermate), poi 1 min a piedi",
+    "fonti": [
+      "https://lanouvellegarde.com/fr/brasserie-des-pres (orari e prenotazioni, visto 23/11/2026)",
+      "https://lanouvellegarde.com/wp-content/uploads/bdp_wk.pdf (carta pranzo weekend, visto 23/11/2026)",
+      "https://parisbymouth.com/where-to-eat-in-saint-germain (parere, 14/03/2026; non ufficiale)",
+      "https://www.theinfatuation.com/paris/reviews/brasserie-des-pres (mura medievali in sala; non ufficiale)",
+      "https://www.tripadvisor.com/Restaurant_Review-g187147-d26250855-Reviews-Brasserie_Des_Pres-Paris_Ile_de_France.html (voto e coordinate, visto 23/11/2026)"
+    ]
+  }
+]

@@ -54,7 +54,8 @@
    "https://www.goma-restaurant.com/omakase (23/11/2026)",
    "https://www.google.com/maps/place/?q=place_id:ChIJ3d1jDMMd5kcRkMQLRnQGRk8 (dati del 05/11/2026, visto 23/11/2026)",
    "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19335130-Reviews-Goma_Omakase-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)"
-  ]
+  ],
+  "best_buy": false
  },
  {
   "nome": "Sushibar by Goma",
@@ -111,7 +112,9 @@
    "https://www.goma-restaurant.com/sushibar (23/11/2026)",
    "https://www.google.com/maps/place/?q=place_id:ChIJvXgo5eUd5kcRdL-h9wJ5bOE (dati del 05/11/2026, visto 23/11/2026)",
    "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19335139-Reviews-Goma_Restaurant-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)"
-  ]
+  ],
+  "best_buy": true,
+  "perche_best_buy": "Il sushi del campione del mondo (lo stesso chef dell'Omakase) a circa un terzo del prezzo, a 5 minuti dalla stazione."
  },
  {
   "nome": "Fémèzon",
@@ -169,7 +172,8 @@
    "https://www.google.com/maps/place/?q=place_id:ChIJ1X7xHdgc5kcRY5W9ajZ_-ak (dati del 05/11/2026, visto 23/11/2026)",
    "https://www.tripadvisor.com/Restaurant_Review-g1182377-d19971623-Reviews-Femezon-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
    "https://rankeat.fr/restaurants/femezon-chessy (23/11/2026, non ufficiale)"
-  ]
+  ],
+  "best_buy": false
  },
  {
   "nome": "L'Emphase",
@@ -227,7 +231,9 @@
    "https://www.thefork.com/restaurant/l-emphase-r581919 (23/11/2026)",
    "https://www.tripadvisor.fr/Restaurant_Review-g1182377-d19839923-Reviews-L_emphase-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
    "https://wanderlog.com/list/geoCategory/209692/where-to-eat-best-restaurants-in-chessy (23/11/2026, non ufficiale)"
-  ]
+  ],
+  "best_buy": true,
+  "perche_best_buy": "Circa 25 € a testa con 9,0 su TheFork, aperto tutte le sere fino alle 23: va bene anche dopo i parchi e domenica tardi."
  },
  {
   "nome": "Le George (Hôtel L'Élysée Val d'Europe)",
@@ -286,7 +292,9 @@
    "https://www.thefork.com/restaurant/le-george-r288683 (23/11/2026)",
    "https://www.tripadvisor.com/Restaurant_Review-g780713-d1475295-Reviews-Le_George-Serris_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
    "https://www.google.com/maps/place/?q=place_id:ChIJp6faaSgd5kcR9P0n8Hyw3UA (dati del 05/11/2026, visto 23/11/2026)"
-  ]
+  ],
+  "best_buy": true,
+  "perche_best_buy": "Carne alla griglia a circa 33 € a testa, aperto tutte le sere fino alle 23, a 2 passi dalla stazione. Il Lincoln ha voti più alti su TheFork ma lunedì è chiuso e non serve vino."
  },
  {
   "nome": "The Lincoln Steakhouse",
@@ -344,7 +352,8 @@
    "https://www.tripadvisor.com/Restaurant_Review-g1182377-d33090809-Reviews-The_Lincoln_Steakhouse-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
    "https://www.thefork.com/restaurant/the-lincoln-steakhouse-r862990 (23/11/2026)",
    "http://wanderlog.com/place/details/14944514/the-lincoln-steakhouse (23/11/2026, non ufficiale)"
-  ]
+  ],
+  "best_buy": false
  },
  {
   "nome": "Brasserie Rosalie",
@@ -404,7 +413,9 @@
    "https://www.thefork.com/restaurant/brasserie-rosalie-r811288 (23/11/2026)",
    "https://www.tripadvisor.com/Restaurant_Review-g1182377-d26840517-Reviews-Brasserie_Rosalie-Chessy_Marne_la_Vallee_Seine_et_Marne_Ile_de_France.html (23/11/2026)",
    "https://www.google.com/maps/place/?q=place_id:ChIJcSE5Gp0d5kcRLQLXB8x6fYM (dati del 05/11/2026, visto 23/11/2026)"
-  ]
+  ],
+  "best_buy": true,
+  "perche_best_buy": "L'unico posto di pesce buono in zona: plateau di frutti di mare a circa 30 € a testa, aperto tutte le sere fino alle 23."
  },
  {
   "nome": "Wonderwoods by Ephemera",
@@ -463,6 +474,7 @@
    "https://www.thefork.com/restaurant/wonderwoods-by-ephemera-val-d-europe-r845049 (23/11/2026)",
    "https://www.tripadvisor.com/Restaurant_Review-g780713-d33273847-Reviews-Wonderwoods_Restaurant_Ephemera-Serris_Marne_la_Vallee_Seine_et_Marne_Ile_de_Fra.html (23/11/2026)",
    "https://www.google.com/maps/place/?q=place_id:ChIJHZWx7Iod5kcRDSLwY9RzUVU (23/11/2026)"
-  ]
+  ],
+  "best_buy": false
  }
 ]
