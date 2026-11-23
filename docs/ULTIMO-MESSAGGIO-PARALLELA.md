@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (23/11/2026 15:31 ora italiana)
+# Ultimo messaggio di Mario (23/11/2026 15:40 ora italiana)
 
-Allora, secondo me puoi fare pulizia dei testi interni senza cancellare informazioni, cioè solo migliorarlo e renderlo più ordinato. Poi secondo me puoi fare i treni in tempo reale, i mezzi di trasporto, lista valigie con spunte no perché c'è in un'altra applicazione, il meteo va bene, i migliori ristoranti dove mangiare a Parigi con in base a tipo carne, pesce o sushi o cucina tradizionale, con insomma i migliori. Fai non i più, cioè non solo i più blasonati, ma anche ristoranti nicchie molto molto buoni, che di solito sono anche più buoni di quelli blasonati, con non so, le informazioni che mi possono servire, con il voto, il costo, mi clicco, mi fa vedere il menu, le foto, il posto dov'è, quanto mi fa vedere, quanto è distante, insomma valuta tu dei ristoranti a Parigi per pranzo e per cena.
+metti in Parigi in generale, in posti dove si può arrivare tranquillamente con i mezzi. Certo, non mandarmi a un'ora di distanza per mangiare un piatto di pasta, ecco.

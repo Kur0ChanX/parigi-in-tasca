@@ -2,34 +2,42 @@
 "account": "cba507",
 "sessione": "57ddcc3fb811",
 "giorno": "2026-11-23",
-"turni": 1,
-"peso": 118285,
-"uscita": 2937,
-"contesto_max": 78570,
+"turni": 4,
+"peso": 275190,
+"uscita": 8593,
+"contesto_max": 151928,
 "anomalie": [],
 "remota": "01Rwcxc4qAM1",
-"aiutanti": 0,
-"strumenti": 12,
+"aiutanti": 1,
+"strumenti": 23,
 "motori": {
-"opus": 118285
+"opus": 275190
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-17,
-632184,
-32292,
+38,
+1799781,
+41768,
 0,
-2937
+8593
 ]
 },
-"costo": 0.4436,
+"costo": 0.8661,
 "blocchi": {
-"Stop 7 · Domanda a Mario poco chiara": 1
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 8 · Il turno finisce con una": 1
 },
 "esempi_blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": [
 "15:15 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1 · quali idee faccio nella guida di», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l"
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"15:37 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Nella guida non è ancora cambiato niente: la nuova versione (v48) arriva dopo le prove.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <"
+],
+"Stop 8 · Il turno finisce con una": [
+"15:37 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
 ]
 }
 }
