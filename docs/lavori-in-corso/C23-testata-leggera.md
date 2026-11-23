@@ -10,6 +10,8 @@
 - 22/11 22:09 (foto della v41 delle 22:08, `archivio/2026-11-22-c23-v41/mario-2208-v41-luna-sfocata.jpg`), intero: «andava bene poi invece»
   → anche nella v41 la luna diventa una macchia sfocata senza crateri (resta solo il bagliore). Indizio nuovo: **all’apertura è giusta, poi si rovina**. Ipotesi da provare (dopo la guida): dopo un po’ il telefono butta via l’immagine della luna (memoria della grafica) e non la ridisegna; il bagliore sfocato, animato e con il filtro, resta. Prova possibile: luna in un pezzo solo, ferma, col bagliore già dentro l’immagine (niente filtro né animazioni intorno), oppure luna fuori dal disegno animato.
 
+- 23/11 02:05 (video `archivio/2026-11-23-video-v45-flicker-mario/VID_20261123_020540-mario.mp4`, 26 s, 785 fotogrammi), intero: «Guarda attentamente frame per frame. Dovrei aver registrato 90 frame. Guarda attentamente la torre Eiffel come flickera, e anche le renne con la slitta dovrebbero flickerare insieme.»
+
 ## Cosa si vede nel video della v40 (Controllo 18, fotogrammi)
 - Riga dritta nel cielo all’altezza della cima della Torre: sono i due fasci del faro (triangoli lunghi e sottili), anche senza zoom.
 - Pagina allargata con due dita (secondi 5–7): rettangoli a scatti, casette e Torre che spariscono a pezzi = pezzi di disegno (tasselli) che il telefono non fa in tempo a ridisegnare.
