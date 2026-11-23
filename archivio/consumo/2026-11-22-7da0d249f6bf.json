@@ -1,0 +1,39 @@
+{
+"account": "cba507",
+"sessione": "7da0d249f6bf",
+"giorno": "2026-11-22",
+"turni": 2,
+"peso": 499359,
+"uscita": 11356,
+"contesto_max": 257299,
+"anomalie": [],
+"remota": "01Rwcxc7MpsS",
+"aiutanti": 0,
+"strumenti": 18,
+"motori": {
+"opus": 499359
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+34,
+4159896,
+21245,
+0,
+11356
+]
+},
+"costo": 1.2292,
+"blocchi": {
+"Stop 15 · There are uncommitted changes in": 1,
+"Stop 5 · Notifica non letta (in coda": 1
+},
+"esempi_blocchi": {
+"Stop 15 · There are uncommitted changes in": [
+"16:57 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 5 · Notifica non letta (in coda": [
+"16:57 · Notifica non letta (in coda dalle 16:42: messaggio di un'altra chat, GitHub o sveglia, E357): chiama ReadNotifications finché dice 0; se cambia qualcosa per Mario (domanda già risposta, lavoro già fat"
+]
+}
+}

@@ -2,10 +2,10 @@
 "account": "377be6",
 "sessione": "3b94e617eb43",
 "giorno": "2026-11-22",
-"turni": 1,
-"peso": 1091200,
-"uscita": 30545,
-"contesto_max": 255185,
+"turni": 2,
+"peso": 1196008,
+"uscita": 33565,
+"contesto_max": 285736,
 "anomalie": [
 "5 uscite di strumento enormi (391 KB la più grande): leggere a pezzi (grep -n, sed -n)",
 "avvio pesante: 217k token dopo le letture d'avvio (tetto 130k)",
@@ -13,19 +13,31 @@
 ],
 "remota": "01QTFEqR4smB",
 "aiutanti": 0,
-"strumenti": 40,
+"strumenti": 42,
 "motori": {
-"opus": 1091200
+"opus": 1196008
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-74,
-8743771,
-51219,
+79,
+9593629,
+54993,
 0,
-30545
+33565
 ]
 },
-"costo": 2.7697
+"costo": 3.0303,
+"blocchi": {
+"Stop 14 · Ti fermi ad aspettare Mario": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"18:17 · Ti fermi ad aspettare Mario con il contesto a 255k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"18:17 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1 🛑** (serve a pubblicare la v37 sul sit», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+]
+}
 }
