@@ -32,3 +32,4 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C27 | Controllo 23 | Testata: Torre, faro e slitta che sfarfallano (1.355 strati) → lucine sulla tela, meno strati | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C27-testata-strati.md` | 23/11 |
 | PR 37 | Controllo 14 (altro account) | v36 da `versione-v36` (commit df327f9), unita 22/11 | — | 22/11 |
 | PR 45 | Controllo 23 | v45 da `versione-v45` (commit 6022aec), unita 23/11 | — | 23/11 |
+| PR 46 | Controllo 23 | prova «luci ferme» da `versione-v45-prova` (commit 5a8d6bb), unita 23/11 | — | 23/11 |
