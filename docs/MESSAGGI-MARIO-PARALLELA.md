@@ -2,15 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 15:03 · 01Rwcxc4aWHi
-Le renne, siccome sono tre, farle un po' indipendenti di movimento l'una con l'altra e che si muovono magari un po' le zampe. Così non sembra uno sticker che si muove tutto insieme, ecco. E dargli un senso di movimento reale.
-
-## 2026-11-22 15:06 · 01Rwcxc4aWHi
-Dietro lo deve inseguire questo cane, animalo e fallo piccolino, piccolo piccolo. Il naso lasciaglielo luminoso, però ripeto, il cane è piccolo, non farlo grande quanto la renna, ovviamente. Cioè non grande, scusami, non grande quanto tutta il, non farlo grande quanto tutta la renne è slitta, fallo più piccolo in proporzione.
-
-## 2026-11-22 15:06 · 01Rwcxc4aWHi
-Fallo che si muovono le orecchie, si muove un po' il mantello di sotto e la bocca a poco si apre e si chiude, insomma come se avesse un po' di vento.
-
 ## 2026-11-22 15:09 · 01Rwcxc4aWHi
 Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.
 
@@ -128,3 +119,12 @@ si applica kit
 
 ## 2026-11-23 15:31 · 01Rwcxc4qAM1
 Allora, secondo me puoi fare pulizia dei testi interni senza cancellare informazioni, cioè solo migliorarlo e renderlo più ordinato. Poi secondo me puoi fare i treni in tempo reale, i mezzi di trasporto, lista valigie con spunte no perché c'è in un'altra applicazione, il meteo va bene, i migliori ristoranti dove mangiare a Parigi con in base a tipo carne, pesce o sushi o cucina tradizionale, con insomma i migliori. Fai non i più, cioè non solo i più blasonati, ma anche ristoranti nicchie molto molto buoni, che di solito sono anche più buoni di quelli blasonati, con non so, le informazioni che mi possono servire, con il voto, il costo, mi clicco, mi fa vedere il menu, le foto, il posto dov'è, quanto mi fa vedere, quanto è distante, insomma valuta tu dei ristoranti a Parigi per pranzo e per cena.
+
+## 2026-11-23 15:39 · 01Rwcxc4qAM1
+metti Google, The Fork e TripAdvisor.
+
+## 2026-11-23 15:40 · 01Rwcxc4qAM1
+metti in Parigi in generale, in posti dove si può arrivare tranquillamente con i mezzi. Certo, non mandarmi a un'ora di distanza per mangiare un piatto di pasta, ecco.
+
+## 2026-11-23 15:46 · 01Rwcxc4qAM1
+No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti, ecco. Si può valutare tutto, però consigliami tu i Best Buy, dove mangiare carne, dove mangiare sushi giapponese, dove mangiare il pesce, dove mangiare cucina tradizionale, eccetera eccetera. Mettimi tu i consigli e poi alternative, insomma, molte alternative.
