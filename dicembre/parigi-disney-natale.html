@@ -1,5 +1,6 @@
 <title>Parigi e Disney a Natale</title>
 <script>try{if(localStorage.getItem('palette')==='vino')document.documentElement.dataset.palette='vino'}catch(e){}</script>
+<script>/* C27 · prova per Mario: con ?luci=ferme nell’indirizzo tutte le animazioni fatte col foglio di stile si fermano (pochi strati); cielo e slitta continuano. Si capisce se lo sfarfallio di Torre e slitta viene dai troppi strati */if(/[?&]luci=ferme\b/.test(location.search))document.documentElement.classList.add('luci-ferme')</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -825,6 +826,8 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 .dlApp{display:flex;align-items:center;gap:12px;margin-top:10px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,rgb(246 201 100 / .22),rgb(255 255 255 / .06));border:1.5px solid var(--lamp);color:var(--night-ink);text-decoration:none;box-shadow:0 0 0 4px rgb(246 201 100 / .12)}
 .dlApp i{font-style:normal;font-size:1.6rem;line-height:1}.dlApp span{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}.dlApp b{font-size:1.05rem}.dlApp small{font-weight:500;opacity:.85;font-size:.8rem;line-height:1.25}.dlApp em{font-style:normal;font-size:1.6rem;color:var(--lamp)}
 #top.anim-pausa *{animation-play-state:paused!important}
+.luci-ferme *{animation:none!important}
+.luci-ferme body::before{content:'PROVA · luci ferme';position:fixed;top:calc(env(safe-area-inset-top) + 6px);left:50%;transform:translateX(-50%);z-index:9999;background:#F0C800;color:#000;font:700 13px/1 system-ui,sans-serif;padding:6px 12px;border-radius:99px;pointer-events:none}
 .apps2 .dlApp.roApp{gap:16px}.roApp i{position:relative}.ro-n{position:absolute;top:-.45em;right:-.55em;min-width:1.25em;height:1.25em;padding:0 .25em;border-radius:1em;background:var(--lamp);color:#1a1f4a;font:800 .72rem/1.25em system-ui,sans-serif;text-align:center;box-shadow:0 0 0 2px rgb(20 26 70 / .9)}
 .apps2 .dlApp small.ro-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px;-webkit-line-clamp:unset;opacity:1}.dlApp .ro-c{display:inline-block;flex:none;padding:1px 7px;border-radius:999px;border:1px solid rgb(246 201 100 / .7);background:rgb(246 201 100 / .14);font-size:.74rem;font-weight:700;white-space:nowrap}
 .dlGiorno{margin-bottom:var(--s4)}.dlGiorno p{margin:0 0 8px}.dlGiorno a{display:inline-block;padding:9px 16px;border-radius:999px;background:var(--lamp);color:var(--lamp-ink);font-weight:800;text-decoration:none}
