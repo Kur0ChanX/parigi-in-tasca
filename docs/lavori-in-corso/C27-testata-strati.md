@@ -46,4 +46,4 @@
 
 ## Prova rossa al giro del Kit 53 · Controllo 27, 23/11 ~14:55
 - `node tools/prova-web-app.js` sui file del sito uguali a `main` (v46): rossa 2 volte su 2 la riga «C27 · slitta», per le stelline con «riduci movimento» (luce 8/19/7, serve > 180); una volta rossa anche «C23 luna» (poi verde). Alla v46 era 82/82.
-- Ipotesi (non provata): con «riduci movimento» il cielo si disegna UNA volta all’apertura (`size();draw(t0+1600)`), forse prima che la testata abbia la misura finale. Prossimo passo: misurarlo. Per questo il kit NON è ancora unito a `main`.
+- Causa misurata: con «riduci movimento» il cielo si disegnava una volta, a volte con la testata ancora più alta (tela 1101 contro 1063). Correzione: ridisegno quando la testata cambia misura (v47); web app 82/82 due volte, scritte 20/20.
