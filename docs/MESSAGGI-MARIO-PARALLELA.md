@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 12:04 · 01WTjqUxPidP
-Vedi qua che l'indice, mettimi gli shortcut, anche giro di mercatini più piccoli, notte, vin brûlée più piccole, insomma regola bene gli spazi, mettimi l'indice delle cose più importanti. I tasti sotto devono occupare meno spazio, insomma tutti gli spazi ottimizzati bene, non farmi coprire troppo la pagina, ecco, la pagina da vedere.
-
 ## 2026-11-22 12:09 · 01WTjqUxPidP
 Quando parlo di schermata principale intendo questa, che la facciamo diventare un indice per andare direttamente subito nei posti.
 
@@ -135,3 +132,6 @@ Allora, su normale flickera, luciferme no, però non flickera, però è bruttiss
 
 ## 2026-11-23 11:35 · 01Rwcxc5ahDd
 Riusciamo a portare il kit aggiornato RVC qui? Dimmi cosa me posso fare.
+
+## 2026-11-23 11:37 · 01Rwcxc5ahDd
+Poi continuo a migliorare l'applicazione con cose utili per me, per informazioni, insomma, valutiamoli insieme alle tue idee, io le approvo o no. Poi controlla se va tutto bene, se ci sono buchi, se ci sono mancanze, se è possibile migliorare alcune parti, se ci siamo dimenticati qualcosa, insomma, se vogliamo aggiungere qualcos'altro di intelligente, di smart, geniale, insomma, dammi delle idee, io vediamo un po' se funzionano o no. Però prima vediamo questa cosa del kit, risolviamola.
