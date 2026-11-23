@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 15:13 · 01Rwcxc4aWHi
-Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
-
 ## 2026-11-22 15:15 · 01Rwcxc4aWHi
 Sì, appena finito le cose che ti ho detto, pubblica.
 
@@ -128,3 +125,6 @@ No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti,
 
 ## 2026-11-23 18:39 · 01Rwcxc2rpkc
 controllo 25 ok 14 ok
+
+## 2026-11-23 18:40 · 01Rwcxc2rpkc
+11
