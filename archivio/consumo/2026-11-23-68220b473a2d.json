@@ -1,0 +1,39 @@
+{
+"account": "cba507",
+"sessione": "68220b473a2d",
+"giorno": "2026-11-23",
+"turni": 2,
+"peso": 2113081,
+"uscita": 77072,
+"contesto_max": 224371,
+"anomalie": [
+"4 uscite di strumento enormi (113 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"un turno ha aggiunto 123k token al contesto",
+"75k token scritti in un turno"
+],
+"remota": "01Rwcxc6J6cx",
+"aiutanti": 0,
+"strumenti": 102,
+"motori": {
+"opus": 2113081
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+185,
+15072434,
+176234,
+0,
+77072
+]
+},
+"costo": 5.9665,
+"blocchi": {
+"Stop 8 · Il turno finisce con una": 1
+},
+"esempi_blocchi": {
+"Stop 8 · Il turno finisce con una": [
+"02:02 · Il turno finisce con una domanda o un passo a mano per Mario: il messaggio ha una domanda decisiva (🛑): metti «🛑» nella sua riga di oggi in «## 0. Aspetta Mario» («- gg/mm · 🛑 · <segno giallo> <Nome> "
+]
+}
+}
