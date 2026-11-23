@@ -13,7 +13,7 @@
 - **Ipotesi** (da confermare sul telefono di Mario): con ~1.350 strati il telefono non fa in tempo o non ha memoria grafica per tutti; ogni tanto un fotogramma esce senza lo strato dove stanno Torre, faro e slitta (e la luna, C23, persa del tutto). Prova possibile: stessa pagina con le lucine ferme (pochi strati) → se lo sfarfallio sparisce, causa confermata.
 
 ## Piano (a pezzi)
-1. Pagina di prova con le lucine ferme (accese, non lampeggiano) → video di Mario 20 s.
+1. ✅ Prova online (PR 46, 23/11): `?luci=ferme` ferma tutte le animazioni del foglio di stile (12 strati invece di 1.355; le 405 lucine non della testata sono nei mercatini più in basso). Manca: video di Mario 20–30 s con la slitta che passa.
 2. Lucine che lampeggiano disegnate su una tela sopra il disegno (come cielo e luna): nel disegno restano accese e ferme, la tela aggiunge il lampeggio. Obiettivo: meno di 150 strati, aspetto uguale.
 3. Le altre parti animate (`.appeso`, `.scint`, `.stellaC`, `.vapore`, `.fiamma`, `.neve-st`, proiezioni) una per una: tela o meno strati.
 4. Prova automatica «strati della testata ≤ 150» in `tools/prova-web-app.js` (CDP LayerTree) + prova che Torre e slitta si VEDONO; video prima/dopo a Mario; v46.
