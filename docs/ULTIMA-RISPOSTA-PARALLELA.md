@@ -1,9 +1,14 @@
-# Ultima risposta di Claude (23/11/2026 03:13 ora italiana)
+# Ultima risposta di Claude (23/11/2026 09:03 ora italiana)
 
-La correzione dello sfarfallio è pronta e provata. **Non è ancora online**: la pubblicazione ha bisogno del tuo ok. Ho passato le consegne: questa era l'ottava chat della catena, quindi la prossima la apri tu.
+Ho capito: «11» = sì, pubblica la prova «lucine sulla tela».
+🧠 Opus · Extra
 
 ───
 ✅ FATTO
-- Lucine, addobbi che dondolano, vapore, scintille, finestre del castello e faro adesso li disegna una tela sopra il disegno. Non sono più uno strato a testa.
-- Telefono di prova: gli strati passano da 1.355 a 69. Ho confrontato lo stesso istante pixel per pixel e l'aspetto resta uguale: cambiano solo i bordi, per meno di un pixel.
-- Per ora la tela si accende solo con …
+- Prima di pubblicare ho rifatto tutte le prove. Sono tutte verdi: web app 81 su 81, scritte sovrapposte 20 su 20, colori ok.
+- La prova è online: ho aperto la **PR** 47 e l'ho unita (la PR è la richiesta che porta il lavoro nel sito pubblico).
+- Ho controllato il sito vero in un browser, come su un telefono. La pagina normale è uguale a prima. Con `?tela=si` c'è la scritta «PROVA · lucine sulla tela», la tela è accesa e non ci sono errori.
+
+───
+💡 PARERE
+Apri i link nel browser del telefono (Chrome), non …
