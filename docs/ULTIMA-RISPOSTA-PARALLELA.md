@@ -1,29 +1,19 @@
-# Ultima risposta di Claude (23/11/2026 00:08 ora italiana)
+# Ultima risposta di Claude (23/11/2026 02:15 ora italiana)
 
-Ho capito: riparto come Controllo 22. La v43 aspetta il tuo ok; intanto ho controllato Orly e mercatini e ho rifatto «Questo o quello?» come volevi.
-🧠 Continuo con Opus · Extra, come la sessione precedente · Fable: non serve (erano controlli con le fonti e un pezzo di pagina piccolo).
+Hai ragione tu: il mio primo conteggio era sbagliato per difetto.
 
 ───
-✅ **FATTO**
-
-| Cosa | Esito |
-|---|---|
-| Orly e mercatini controllati sulle pagine ufficiali (lette il 22/11/2026) | quasi tutto era giusto |
-| Galeries Lafayette: dal 24/11 al 3/1 sul tetto c’è una pista di pattinaggio (16 €, su prenotazione) | corretto: forse sulla terrazza sale solo chi pattina. In …
+✅ FATTO
+- Ho rimisurato il tuo video fotogramma per fotogramma. Ha **785 fotogrammi** (26 secondi), non 90.
+- A pagina ferma la Torre sparisce **16 volte**, circa una ogni secondo e mezzo. Dura un fotogramma alla volta, quindi è un lampo veloce ma fastidioso.
+- Prima ne avevo contate 13 perché guardavo solo i fotogrammi dove manca tutta la cima. Errore mio.
+- Negli stessi fotogrammi sparisce **tutto ciò che vola**: slitta con le renne di Nightmare, fasci del faro, corpo della Torre. Te lo mostro nell'immagine qui sopra …
 
 ## Domande a Mario
 
-❓ **DOMANDE**
+❓ DOMANDE
+**DOMANDA 1** · Prima di rifare tutte le lucine, faccio una prova veloce? Preparo una pagina con le lucine accese ma ferme; tu la apri e registri 20 secondi. Se lo sfarfallio sparisce, la causa è giusta.
+- 1 · sì, prima la prova
+- 2 · no, vai diretto con la correzione
 
-**DOMANDA 1 🛑** (te la richiedo): pubblico la v43 sul sito?
-📌 Di cosa parliamo: è la guida controllata sui n. 8, 16 e 23. Dentro ci sono:
-- i treni ufficiali;
-- col n. 23, giovedì si esce alle 8:10 e domenica si arriva entro le 23:00;
-- i messaggi ai gestori e la colazione;
-- le due correzioni di stanotte (Galeries e Orly).
-
-Il sistema pubblica solo con un tuo ok scritto in questa chat.
-1 · sì, pubblica: sul telefono trovi la v43 · 2 · no, aspetta: resta la v42.
-Consiglio: **1**, è la guida più giusta che abbiamo.
-
-**DOMANDA 2 🛑**: il nuovo «Questo o quello?» va bene così? Le …
+Consiglio: **1**. Ti costa 20 secondi e evita un lavoro lungo sulla causa sbagliata. Intanto preparo la pagina di prova.

@@ -1,0 +1,48 @@
+{
+"account": "cba507",
+"sessione": "68220b473a2d",
+"giorno": "2026-11-23",
+"turni": 3,
+"peso": 2113081,
+"uscita": 77072,
+"contesto_max": 263314,
+"anomalie": [
+"4 uscite di strumento enormi (113 KB la più grande): leggere a pezzi (grep -n, sed -n)",
+"un turno ha aggiunto 123k token al contesto",
+"75k token scritti in un turno"
+],
+"remota": "01Rwcxc6J6cx",
+"aiutanti": 0,
+"strumenti": 102,
+"motori": {
+"opus": 2113081
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+185,
+15072434,
+176234,
+0,
+77072
+]
+},
+"costo": 5.9665,
+"blocchi": {
+"Stop 8 · Il turno finisce con una": 2,
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 8 · Il turno finisce con una": [
+"02:02 · Il turno finisce con una domanda o un passo a mano per Mario: il messaggio ha una domanda decisiva (🛑): metti «🛑» nella sua riga di oggi in «## 0. Aspetta Mario» («- gg/mm · 🛑 · <segno giallo> <Nome> ",
+"02:15 · Il turno finisce con una domanda o un passo a mano per Mario: il messaggio ha una domanda decisiva (🛑): metti «🛑» nella sua riga di oggi in «## 0. Aspetta Mario» («- gg/mm · 🛑 · <segno giallo> <Nome> "
+],
+"Stop 10 · Promessa a Mario senza voce": [
+"02:15 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Te lo mostro nell'immagine qui sopra (397 tutto c'è, 398 sparisce).». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> "
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"02:15 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1** · Prima di rifare tutte le lucine, f», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+]
+}
+}
