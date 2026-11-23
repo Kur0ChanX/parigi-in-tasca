@@ -34,3 +34,9 @@
 - Trovato (vecchio, non mio): `.pc p{padding-left:28px}` dei pro e contro vale anche per il contenitore della pagina `<div class="pc">`: quasi tutti i paragrafi rientrano di 28 px. Correzione: `.pc>p`. Cambia l'aspetto di tutta la pagina → foto prima/dopo a Mario.
 - Prossimo: zona 4 (Parigi coi mezzi), pranzo di domenica col link a «Mangiare», fonti, «Da fare» (prenotare), pulizia testi col controllo prima/dopo, prove nuove in prova-web-app.js, misure, foto, v48.
 - Controllo Da fare (consegne Controllo 28): 0 voci nuove; voce C28 aggiornata (resto dei testi nella v49).
+
+## Controllo 29 (23/11, v49 «testi ordinati»: nel ramo, non online)
+- Scelta: pro e contro degli alloggi una frase per punto (+ e –), divisi da codice (`FR`, `PCX`, `QPT`, `RIGHE` nella pagina) e non riscritti a mano: le parole restano tutte, cambia solo l'ordine visivo. Stessa cosa in «Questo o quello?», spa, prezzi, parere sulle coppie; a mano: legenda della scelta, nota della mappa, trasporti nei costi (righe).
+- Righe visibili oltre 350 caratteri: 18 prima, 0 dopo. `confronta-fatti --da HEAD`: nessun fatto perso (4488 prima e dopo).
+- Trovato: pro e contro in 2 colonne sul computer (classe `.pc` uguale al contenitore). Ora `.pcx`; prova «C29»; riga in `docs/ERRORI.md`.
+- La v48 aspetta ancora l'ok di Mario sulle sue 4 foto: si pubblica da `versione-v48` tagliato a 70bb82f (senza la v49), oppure insieme alla v49 se Mario approva anche queste foto.
