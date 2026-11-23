@@ -11,7 +11,8 @@
 ],
 "blocchi": {
 "Stop 8 · Il turno finisce con una": 2,
-"Stop 15 · There are uncommitted changes in": 1
+"Stop 15 · There are uncommitted changes in": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1
 },
 "esempi_blocchi": {
 "Stop 8 · Il turno finisce con una": [
@@ -20,6 +21,9 @@
 ],
 "Stop 15 · There are uncommitted changes in": [
 "09:31 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"09:43 · Ti fermi ad aspettare Mario con il contesto a 262k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
 ]
 },
 "remota": "01Rwcxc5Bet6",
