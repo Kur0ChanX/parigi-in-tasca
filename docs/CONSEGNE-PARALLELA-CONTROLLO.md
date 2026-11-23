@@ -27,9 +27,9 @@
 - Mai mostrare o salvare chiavi, QR o «setup key».
 
 ## Ultimo messaggio di Mario
-> messo
+> ora continua a migliorare l'applicazione con cose utili per me, per informazioni, insomma, valutiamoli insieme alle tue idee, io le approvo o no. Poi controlla se va tutto bene, se ci sono buchi, se ci sono mancanze, se è possibile migliorare alcune parti, se ci siamo dimenticati qualcosa, insomma, se vogliamo aggiungere qualcos'altro di intelligente, di smart, geniale, insomma, dammi delle idee,
 
-(23/11 12:12, alla Controllo 26: la chiave `RVC_KIT_TOKEN` è nell’ambiente.)
+(23/11 12:14, alla Controllo 26, durante le consegne: è C28, da fare SUBITO dopo il kit; prima «messo» 12:13 = chiave nell’ambiente.)
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Medio** (`medium`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
@@ -46,19 +46,20 @@ Testo da incollare:
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-23 09:45 · [AVVIO] Sei la chat parallela Controllo 26 di Parigi in tasca, linea «Controllo»… → 
-- 2026-11-23 11:35 · Riusciamo a portare il kit aggiornato RVC qui? Dimmi cosa me posso fare. → 
-- 2026-11-23 11:37 · Poi continuo a migliorare l'applicazione con cose utili per me, per informazioni… → 
-- 2026-11-23 11:45 · non riesco a mettere 2 fattori non mi arriva il codice nell app git hub vosa sba… → 
-- 2026-11-23 11:49 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta… → 
-- 2026-11-23 11:53 · si che ho cliccato nel video esce questo → 
-- 2026-11-23 11:54 · esl se clicco mi porta qui → 
-- 2026-11-23 11:56 · io ho solo l'app git hub → 
-- 2026-11-23 12:00 · metto in base all ora o contatore? → 
-- 2026-11-23 12:02 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta… → 
-- 2026-11-23 12:09 · ok ho la chiave → 
-- 2026-11-23 12:13 · messo → 
+- 2026-11-23 09:45 · [AVVIO] Sei la chat parallela Controllo 26 di Parigi in tasca, linea «Controllo»… → avvio; sveglia RER A rifatta
+- 2026-11-23 11:35 · Riusciamo a portare il kit aggiornato RVC qui? Dimmi cosa me posso fare. → guida chiave del kit (riga «Aspetta Mario»)
+- 2026-11-23 11:37 · Poi continuo a migliorare l'applicazione con cose utili per me, per informazioni… → C28 aperto (docs/lavori-in-corso/C28-idee-e-controllo.md)
+- 2026-11-23 11:45 · non riesco a mettere 2 fattori non mi arriva il codice nell app git hub vosa sba… → guida a due passaggi di GitHub; foto in archivio
+- 2026-11-23 11:49 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta… → video letto; riga ERRORI 23/11
+- 2026-11-23 11:53 · si che ho cliccato nel video esce questo → risposta: c’è solo «Reconfigure 2FA»
+- 2026-11-23 11:54 · esl se clicco mi porta qui → guida «Edit» dell’app di autenticazione
+- 2026-11-23 11:56 · io ho solo l'app git hub → Google Authenticator (foto col QR non salvata)
+- 2026-11-23 12:00 · metto in base all ora o contatore? → risposta: «In base all’ora»
+- 2026-11-23 12:02 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta… → video: codice nella pagina sbagliata, prima «Save»
+- 2026-11-23 12:09 · ok ho la chiave → guida per l’ambiente
+- 2026-11-23 12:13 · messo → chiave salvata → chiusa per aprire la Controllo 27
+- 2026-11-23 12:14 · ora continua a migliorare l'applicazione con cose utili per me… → C28 (parole intere nel file): la Controllo 27 lo fa dopo il kit
 
 Ultimo, intero:
-> messo
+> ora continua a migliorare l'applicazione con cose utili per me, per informazioni, insomma, valutiamoli insieme alle tue idee, io le approvo o no. Poi controlla se va tutto bene, se ci sono buchi, se ci sono mancanze, se è possibile migliorare alcune parti, se ci siamo dimenticati qualcosa, insomma, se vogliamo aggiungere qualcos'altro di intelligente, di smart, geniale, insomma, dammi delle idee,
 
