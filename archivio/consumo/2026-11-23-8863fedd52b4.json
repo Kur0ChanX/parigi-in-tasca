@@ -1,0 +1,43 @@
+{
+"account": "cba507",
+"sessione": "8863fedd52b4",
+"giorno": "2026-11-23",
+"turni": 3,
+"peso": 189967,
+"uscita": 4245,
+"contesto_max": 206626,
+"anomalie": [],
+"blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": 1,
+"Stop 15 · There are uncommitted changes in": 1,
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": [
+"16:29 · Consegne non su GitHub (C226, blocco 1/3): docs/ERRORI-STORIA.md, docs/ERRORI.md fuori dal commit. Fai commit e push adesso (`git push -u origin claude/parigi-ramo-definitivo`), controlla `git rev-par"
+],
+"Stop 15 · There are uncommitted changes in": [
+"16:29 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+],
+"Stop 7 · Domanda a Mario poco chiara": [
+"16:34 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1** · A cosa serve: senza il tuo ok sull», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+]
+},
+"remota": "01Rwcxc2rpkc",
+"aiutanti": 0,
+"strumenti": 6,
+"bilancia": 2,
+"motori": {
+"opus": 189967
+},
+"grezzi": {
+"opus": [
+19,
+1627420,
+4785,
+0,
+4245
+]
+},
+"costo": 0.4487
+}
