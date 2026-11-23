@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (23/11/2026 01:37 ora italiana)
+# Ultimo messaggio di Mario (23/11/2026 02:13 ora italiana)
 
-Domanda 1, domanda 2, va bene. Ok, come consiglio.
+No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è fastidioso. Cliccherà anche la renna, nightmare, insomma tutto quello che vola.
