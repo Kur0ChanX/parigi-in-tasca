@@ -1,60 +1,57 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
-## Stato (Controllo 23 `session_01Rwcxc6J6cxwZCWqrStpDUk`, 23/11 02:25 ora italiana, chiusa alla soglia; la apre la Controllo 23 con `create_session` (catena 7 di 8))
-- Ramo comune ≠ origin: PUSH DA FARE (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
-- **v45 ONLINE** (PR #45, main `7ac754f`, sito `{"v": 45}`): luna di Topolino sulla tela del cielo (C23). **Prova «luci ferme» ONLINE** (PR #46, main `5eb4756`): `https://kur0chanx.github.io/parigi-in-tasca/dicembre/?luci=ferme` ferma tutte le animazioni del foglio di stile (12 strati invece di 1.355), scritta gialla «PROVA · luci ferme». Prove sul commit `5a8d6bb`: colori ok, `--controlla` VERO, web app 80/80, scritte 20/20.
+## Stato (Controllo 24 `session_01Rwcxc2dHvCYzfFCkLcQ63C`, 23/11 03:12 ora italiana, chiusa alla soglia; la apre Mario (catena a 8 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`)
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261123-01Rwcxc2dHvC/claude/parigi-ramo-definitivo.
+- **v45 ONLINE** (main `5eb4756`, sito `{"v": 45}`) + prova `?luci=ferme` online (PR 46). **Prova `?tela=si` PRONTA ma NON online**: commit provato `5cf6041` (web app 81/81, scritte 20/20, colori e `--controlla` VERO); la PR è stata negata dal permesso della sessione → serve l’ok di Mario («pubblica»), poi Prossimi passi 1.
 - **Già deciso da Mario (non richiedere):** alloggi n. 8, 16, 23 (più probabili 16 e 23); fasci del faro restano; prima la guida, poi la grafica (guida finita con la v44).
-- **Da non rifare:** C23 luna (v45), misure del video di C27 (16 fotogrammi, 1.355 strati; script in `archivio/2026-11-23-c27-strati/lavoro/`), prova `?luci=ferme` (PR 46), C22, C26, v41–v45.
-- **Cosa preme a Mario adesso:** Torre, faro e slitta che spariscono per un attimo (video 02:05, «fastidioso», «tutto quello che vola»): C27, `docs/lavori-in-corso/C27-testata-strati.md`.
+- **Da non rifare:** C27 tela (pezzi 2 e 3, 5cf6041), misure del video di C27, prova `?luci=ferme`, C23 luna, C22, C26, v41–v45.
+- **Cosa preme a Mario adesso:** Torre, faro e slitta che spariscono per un attimo («fastidioso», «tutto quello che vola»): C27, `docs/lavori-in-corso/C27-testata-strati.md`; il suo video in 3 modi è in «Aspetta Mario».
 
-## Cosa è stato fatto (Controllo 23) · verifica: `git show --stat 6022aec 5a8d6bb` e PR #45, #46
-- C23 luna: nella foto di Mario mancava l’immagine (non era sfocata). Luna, alone e bagliore ora sulla tela `#sky` (`lunaImg`, `lunaBag`, `luna`; immagine in `<defs>`); prova «C23» sui pixel (telefono, dopo 8 s, riduci movimento, PC). Prova rossa trovata e corretta: testata nascosta → misura 0 → errore nel ciclo dei fotogrammi.
-- C27: video di Mario misurato (785 fotogrammi): il corpo della Torre sparisce 16 volte per un fotogramma, insieme a faro e slitta (stesso strato). Chromium Pixel 7: 1.355 strati (899 lucine `circle`, `.ond`, `.tw`, `.appeso`…; 405 lucine sono nei mercatini più in basso, fuori dalla testata). Prova `?luci=ferme` + prova «C27». Immagine per Mario `archivio/2026-11-23-c27-strati/1-dal-tuo-video-397-398.jpg` (mandata).
-- `docs/ERRORI.md`: riga 23/11 (luna, prova rossa); 3 righe vecchie in ERRORI-STORIA (tetto 10 KB).
-- Controllo Da fare: 1 voce aggiunta (C27 con «👁 Lo vedi») + 2 righe in «Aspetta Mario» (v45 da guardare; DOMANDA 1 della prova).
+## Cosa è stato fatto (Controllo 24) · verifica: `git log --oneline 36ce2ae^..5cf6041`
+- C27 pezzi 2 e 3 sul ramo, commit provato **5cf6041**: lucine, addobbi che dondolano, vapore, scintille, finestre del castello e faro disegnati su una tela sopra ogni disegno (testata, ghirlanda, mercatino in fondo); quello che li copre è ridisegnato sopra la copia («source-atop»), chi si muove e ha qualcosa sopra passa da una tela d’appoggio. Telefono di prova: **1.355 → 69 strati**, aspetto uguale al confronto a pixel (scarto medio 1,1 su 255, 0,19 % di pixel diversi, solo bordi).
+- **Solo con `?tela=si`** (scritta gialla «PROVA · lucine sulla tela»): l’app normale resta com’è finché il video di Mario non conferma.
+- Prove locali verdi su 5cf6041: colori, `--controlla`, web app 81/81 (nuova «C27 · tela»), scritte 20/20. **Non pubblicato**: la creazione del ramo `versione-v45-tela` + PR è stata negata dal permesso della sessione (niente PR senza richiesta esplicita).
+- `docs/ERRORI.md`: riga 23/11 (ordine invertito tela/disegno, trovato col confronto a pixel); 2 righe vecchie in ERRORI-STORIA. Da fare: riga nuova in «Aspetta Mario» (video in 3 modi), voce C27 aggiornata, voce C7 accorciata (sotto i 40 KB).
 
 ## Strade provate e scartate
-- Pagina di prova nuova in `/dicembre/` o altrove: i service worker salvano OGNI pagina aperta come l’app (chiave `./`) → avrebbe sostituito l’app senza rete. Usato `?luci=ferme` sull’app stessa.
-- Fermare solo `.scene *` o `#top *`: restavano 405–441 strati (lucine dei mercatini più in basso). Serve tutta la pagina.
-- Primo conteggio dei fotogrammi (13, solo cima intera): sbagliato per difetto; giusto 16 (cali ≥ 15 % sul conteggio dei punti dorati).
+- Lucine in gruppi animati (v40): strati enormi, più lavoro di disegno. Lucine con animazione non «compositata» (fill-opacity): ridisegno di tutto il disegno a ogni passo. Scelta la tela con atlante.
+- Lucine coperte lasciate nel disegno: ne restavano 166 → meglio ridisegnare sopra la copia quello che le copre.
+- Confronto con screenshot `fullPage`: cambia l’altezza della finestra e sposta la testata (falso errore). Confronto solo nella finestra, dopo `scrollIntoView`.
 
 ## Prossimi passi
-1. Aspettare la risposta alla DOMANDA 1 (riga in «Aspetta Mario») e il video di Mario con `?luci=ferme`: se Torre e slitta non spariscono più → causa confermata (troppi strati). Misurare il video con gli script in `archivio/2026-11-23-c27-strati/lavoro/` (`python3 -I misura.py <video> <uscita.npy>`, poi i cali ≥ 15 %; `salti.py`; `node strati.js [index.html?luci=ferme]`).
-2. C27 pezzo 2: lucine che lampeggiano disegnate su una tela sopra il disegno (nel disegno restano accese e ferme), anche nei mercatini più in basso; obiettivo < 150 strati, aspetto uguale; prova automatica sugli strati (CDP `LayerTree`, abilitarlo DOPO il caricamento) e che Torre e slitta si VEDONO; video prima/dopo a Mario; poi togliere `?luci=ferme`.
-3. Aspettare il «👁» di Mario su v44 e v45 (riga in «Aspetta Mario»).
-4. Verso il 26/11: orari RER A del 13 e 17/12 su https://malignea.fr/horaires/ (pubblica 21 giorni avanti; la copia letta il 23/11 era vecchia).
+1. **Pubblicare la prova** quando Mario lo dice (o dà il permesso): `git push origin 5cf6041:refs/heads/versione-v45-tela`, PR verso `main` in bozza → pronta → unione squash (testo pronto: «Prova «lucine sulla tela» per lo sfarfallio della testata», com’era la PR 46), poi `git fetch origin main && git merge origin/main` e push; controllare `…/dicembre/?tela=si` online (scritta PROVA).
+2. Video di Mario (riga in «Aspetta Mario»): normale, `?luci=ferme`, `?tela=si`. Misurarlo con `archivio/2026-11-23-c27-strati/lavoro/misura.py` (cali ≥ 15 % = fotogrammi senza Torre). Se con la tela niente sparisce → tela per tutti: togliere la condizione `tela-si` (riga `if(DE.classList.contains('tela-si')&&…`), togliere `?luci=ferme` e le due scritte PROVA, prova «C27 · tela» senza `?tela=si`, versione v46 con novità.
+3. Restano animate nel disegno (pochi strati): fiammelle dentro le lanterne che dondolano (animazione dentro animazione), proiezioni del castello (maschera), stelline della luna (sotto la slitta). Solo se il video lo chiede.
+4. Verso il 26/11: orari RER A del 13 e 17/12 su https://malignea.fr/horaires/.
 
 ## Blocchi e rischi
-- Nomi nuovi nella pagina: prima `grep -c "\bnome\b"` = 0 (usati ora anche `lunaImg`, `lunaB`, `lunaG`, `lunaS`, `lunaCol`, `lunaBag`, `luna`, `luci-ferme`).
-- Codice nel ciclo dei fotogrammi: uscire se la misura è 0 (testata nascosta), sennò si ferma tutto il cielo.
-- Le prove servono la cartella del repo dal vivo: mai modificare `dicembre/` mentre girano.
-- `docs/DA-FARE.md` ~39,6 KB (tetto 40): alla prossima riga accorciare le voci finite. `docs/ERRORI.md` al tetto (10 KB).
-- Foto per Mario: scritta in alto su ogni immagine; video di Mario: misurare, non solo guardare a occhio.
+- Codice della tela: blocco «C27 · lucine sulla tela» in fondo all’ultimo `<script>` di `dicembre/parigi-disney-natale.html`; prove a mano con `window.luciTela` (`E()`, `ferma()`, `disegna(T,now)`, `val`, `mossa`); strumenti in `archivio/2026-11-23-c27-strati/lavoro/` (`confronto.js` + `diff.py`, `perche.js`, `strati.js`).
+- La tela si rifà da sola se cambia la misura del disegno o la tavolozza («palette»); a pagina ingrandita le lucine sulla tela sono un po’ meno nitide (non provato sul telefono vero).
+- Nomi nuovi nella pagina: prima `grep -c` = 0 (usati ora `lt-off`, `ltBox`, `luciTela`, `tela-si`).
+- Le prove servono la cartella del repo dal vivo: mai modificare `dicembre/` mentre girano. `docs/ERRORI.md` e `docs/DA-FARE.md` al tetto.
 
 ## Ultimo messaggio di Mario
 > No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è fastidioso. Cliccherà anche la renna, nightmare, insomma tutto quello che vola.
 
-(23/11 02:13: conteggio rifatto, 16 fotogrammi, slitta insieme alla Torre → C27; prova `?luci=ferme` online e DOMANDA 1 in «Aspetta Mario».)
+(23/11 02:13, alla Controllo 23; in questa sessione nessun messaggio di Mario oltre l’avvio.)
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 24
-la apre la Controllo 23 con `create_session` (catena 7 di 8). Scritto da Controllo 23 il 23/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 25
+la apre Mario (catena a 8 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`. Scritto da Controllo 24 il 23/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 24 · lucine sulla tela`
+Titolo: `🟩 🗼 Controllo 25 · pubblica prova tela`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 24 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 25 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-23 01:41 · [AVVIO] Sei la chat parallela Controllo 23 di Parigi in tasca, linea «Controllo»… → avvio; C23 luna (6022aec, PR 45, v45)
-- 2026-11-23 02:07 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/8356ac8f-VID_20261123_02054… → video in `archivio/2026-11-23-video-v45-flicker-mario/`, C27
-- 2026-11-23 02:13 · No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è fas… → C27 (conteggio rifatto, prova ?luci=ferme 5a8d6bb, PR 46, DOMANDA 1)
+- 2026-11-23 02:27 · [AVVIO] Sei la chat parallela Controllo 24 di Parigi in tasca, linea «Controllo»… → avvio; C27 tela (5cf6041, solo con ?tela=si, non pubblicata: PR negata dal permesso)
 
 Ultimo, intero:
-> No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è fastidioso. Cliccherà anche la renna, nightmare, insomma tutto quello che vola.
+> [AVVIO] Sei la chat parallela Controllo 24 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 
