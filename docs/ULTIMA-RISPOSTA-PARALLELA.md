@@ -1,13 +1,13 @@
-# Ultima risposta di Claude (23/11/2026 11:38 ora italiana)
+# Ultima risposta di Claude (23/11/2026 11:52 ora italiana)
 
-Ho capito: vuoi il kit RVC più nuovo in questo progetto. Dopo vuoi un controllo della guida di dicembre e idee nuove, da approvare una per una.
-🧠 Opus · Extra
+Ho capito: nel video cerchi il codice nell'app GitHub, ma lì non c'è.
 
-✅ **FATTO**
-- Ho provato a scaricare il kit: senza chiave non si può. Il repo RVC è privato e GitHub risponde «non trovato».
-- In questo ambiente la chiave `RVC_KIT_TOKEN` non c'è.
-- Ho segnato la tua richiesta di controllo e idee (lavoro C28): la faccio subito dopo il kit, così uso già le regole nuove.
+**Cosa sbagli** (dal tuo video):
+- Fra il secondo 8 e il 16 apri l'app GitHub. Lì il codice non c'è mai: quell'app non crea codici.
+- Non hai toccato «More options». La richiesta da approvare nell'app GitHub parte solo da lì.
+- La prima pagina dice «You can no longer delay»: questo controllo non si può più rimandare.
 
 ───
-💡 **PARERE**
-- La strada migliore è una **chiave di sola lettura** (un **token**: una password che permette solo di leggere il …
+👉 **DA FARE TU**
+A cosa serve: passare il controllo di GitHub e poi fare la chiave del kit. Prova i passi in quest'ordine e fermati al primo che funziona.
+1. Nella pagina col riquadro «XXXXXX» tocca …
