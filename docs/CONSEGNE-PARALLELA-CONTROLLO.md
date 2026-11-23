@@ -20,7 +20,7 @@
 
 ## Prossimi passi
 1. ✅ Prova `?tela=si` pubblicata (Mario «11», PR 47 unita 23/11, sito vero controllato) — da non rifare.
-2. Video di Mario (riga in «Aspetta Mario»): normale, `?luci=ferme`, `?tela=si`. Misurarlo con `archivio/2026-11-23-c27-strati/lavoro/misura.py` (cali ≥ 15 % = fotogrammi senza Torre). Se con la tela niente sparisce → tela per tutti: togliere la condizione `tela-si` (riga `if(DE.classList.contains('tela-si')&&…`), togliere `?luci=ferme` e le due scritte PROVA, prova «C27 · tela» senza `?tela=si`, versione v46 con novità.
+2. ✅ Video di Mario (23/11): normale e tela sfarfallano, luci ferme no → causa misurata: 3 stelline della luna sotto la slitta (`docs/lavori-in-corso/C27-testata-strati.md` «Causa trovata»); v46 online (PR 48). Resta: Mario guarda la v46 («Aspetta Mario»). Se ok: togliere le prove `?luci=ferme` e `?tela=si` (codice «C27 · lucine sulla tela», classi `luci-ferme`/`tela-si`, le due scritte PROVA, prove «C27» e «C27 · tela»), v47 senza novità visibili. Se sfarfalla ancora: suo video, misura con `misura.py`, poi `ricrea.js` sulle altre animazioni.
 3. Restano animate nel disegno (pochi strati): fiammelle dentro le lanterne che dondolano (animazione dentro animazione), proiezioni del castello (maschera), stelline della luna (sotto la slitta). Solo se il video lo chiede.
 4. Verso il 26/11: orari RER A del 13 e 17/12 su https://malignea.fr/horaires/.
 
