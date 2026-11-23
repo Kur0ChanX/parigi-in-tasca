@@ -2,34 +2,40 @@
 "account": "cba507",
 "sessione": "1c7384da951e",
 "giorno": "2026-11-23",
-"turni": 2,
-"peso": 587296,
-"uscita": 25346,
-"contesto_max": 118864,
-"anomalie": [],
+"turni": 11,
+"peso": 1238102,
+"uscita": 48551,
+"contesto_max": 183178,
+"anomalie": [
+"1 uscite di strumento enormi (48 KB la più grande): leggere a pezzi (grep -n, sed -n)"
+],
 "remota": "01Rwcxc5ahDd",
 "aiutanti": 0,
-"strumenti": 33,
+"strumenti": 61,
 "motori": {
-"opus": 587296
+"opus": 1238102
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-60,
-2924344,
-134457,
+123,
+7498618,
+196289,
 0,
-25346
+48551
 ]
 },
-"costo": 2.1677,
+"costo": 4.0416,
 "blocchi": {
-"Stop 10 · Promessa a Mario senza voce": 1
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 11 · 📸 Foto o video di": 1
 },
 "esempi_blocchi": {
 "Stop 10 · Promessa a Mario senza voce": [
 "09:48 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «18, 20, 21):** come li mostro? La domanda è ancora aperta (Controllo 14).». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede M"
+],
+"Stop 11 · 📸 Foto o video di": [
+"11:47 · 📸 Foto o video di questa sessione in archivio/, non mandati a Mario e senza riga in «## 0. Aspetta Mario» (C516, E498): archivio/2026-11-23-github-due-fattori/ (2 file). Per Mario → mandali ORA con la"
 ]
 },
 "costo_fredde": 0.4727,
