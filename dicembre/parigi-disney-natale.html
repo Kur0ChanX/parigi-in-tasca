@@ -133,9 +133,9 @@ b,strong{font-weight:700}
 .checked b{color:var(--night-ink)}
 .scene{position:relative;z-index:1;display:block;width:100%;height:clamp(270px,16vw + 210px,380px);margin-top:var(--s3);max-width:100%}
 
-.luna-st{fill:#FFF8E2;transform-box:fill-box;transform-origin:center}
+/* C27: le stelline della luna le disegna la tela del cielo (#sky): animate qui erano uno strato proprio sotto la slitta e a ogni passaggio facevano rifare gli strati di Torre, faro e slitta */.luna-t{display:none}
 .sl{opacity:.95}.pk-c{fill:var(--ember)}.ombraC{fill:var(--night-2);opacity:.3}.neve-st{fill:#FFFFFF;opacity:.5;transform-box:fill-box;transform-origin:center}
-@media (prefers-reduced-motion:no-preference){.neve-st{animation:brilla 4.2s ease-in-out infinite}.luna-st{animation:brilla 3.4s ease-in-out infinite}.luna-st.s2{animation-delay:-1.2s}.luna-st.s3{animation-delay:-2.3s}}
+@media (prefers-reduced-motion:no-preference){.neve-st{animation:brilla 4.2s ease-in-out infinite}}
 @keyframes brilla{0%,100%{opacity:.2;transform:scale(.5)}50%{opacity:1;transform:scale(1)}}
 /* v32 · luci della testata (Mario 22/11 12:27 «L’albero fallo meglio… nel cielo più romantico, più viva. Il castello… con le finestre fatte meglio che si illuminano, magari con delle proiezioni»): solo luce, niente figure disegnate. Con «riduci movimento» tutto fermo e niente proiezioni */
 #castLuci{fill:var(--lamp-hot)}
@@ -885,6 +885,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
+ {v:46,d:'23/11',n:['Testata più stabile: Torre Eiffel, faro e slitta non spariscono più per un attimo mentre la slitta passa.']},
  {v:45,d:'23/11',n:['La luna di Topolino nella testata resta nitida: sul telefono, dopo qualche minuto, poteva diventare una macchia sfocata.']},
  {v:44,d:'23/11',n:['«Questo o quello?»: scegliete voi gli alloggi da confrontare (si parte da n. 8, 16 e 23), con le differenze riga per riga: prezzo, minuti fino ai parchi, voto, domenica sera, pro e contro.']},
  {v:43,d:'22/11',n:['Treni di domenica sera e di giovedì controllati con gli orari ufficiali della RER A, coi treni di riserva se perdete quello giusto.','N. 23: giovedì si esce alle 8:10 (la stazione è a 700 m); su Booking l’arrivo è entro le 23:00.','Messaggi per i gestori dei n. 16 e 23 più giusti: chiedono come lasciare le chiavi giovedì; le valigie solo se arrivate lunedì mattina.','Moxy: nella scheda anche il prezzo della camera col letto matrimoniale (circa 677 €).','Nel riquadro «Il vostro alloggio» la colazione: in hotel o al Monop’ davanti alla stazione (domenica fino alle 22:00, da lunedì dalle 7:00).','Galeries Lafayette: dal 24/11 sul tetto c’è la pista di pattinaggio, forse la terrazza è solo per chi pattina.','Orly: se giovedì il ticket aeroporto non si carica, all’uscita della metro si paga con la carta (14,80 €).']},{v:42,d:'22/11',n:['In «Giorni», in cima, il riquadro «Il vostro alloggio»: come si entra, treni di domenica e giovedì, cancellazione gratis.','Promemoria della cancellazione nel calendario e messaggio in francese per il gestore, da copiare.','La domenica si adatta all’alloggio scelto: avviso in cima se l’ora d’arrivo va scritta prima.']},{v:41,d:'22/11',n:['L’app si apre sempre sul Piano, in cima.','Schermata principale a tre riquadri: «Scegli dove dormire» apre la vostra rosa con le schede affiancate da confrontare; «🛏️ Dormiamo qui» cambia giorni, strade e orari.','Disegno in alto più nitido, e sta fermo quando allargate la pagina con due dita.']},{v:40,d:'22/11',n:['Disegno in alto più leggero: scorre liscio, la Torre Eiffel resta ferma e l’albero ha il tratto più sottile.']},{v:39,d:'22/11',n:['Tasto «⭐ Rosa alloggi»: sulla stella quanti ne avete scelti, sotto i numeri degli alloggi.']},{v:38,d:'22/11',n:['Tasto «⭐ Rosa alloggi» più pulito: una riga sola con quanti alloggi avete scelto.']},{v:37,d:'22/11',n:['Tasto «⭐ Rosa alloggi» nella schermata principale: lì scegliete voi gli alloggi della rosa, con le spunte o con la ⭐.']},
@@ -984,7 +985,7 @@ const VERSIONI=[
   <ellipse cx="330" cy="205" rx="420" ry="80" fill="url(#rosaG)"/>
   <!-- strato lontano: tetti di Parigi e la Torre Eiffel accesa -->
   <g class="par" data-depth="-0.06" data-max="26">
-   <!-- stelline della luna; la luna di Topolino, l’alone e il bagliore che respira sono sulla tela del cielo (#sky, C23), qui dietro -->
+   <!-- stelline della luna: qui solo la forma (nascoste); le disegna la tela del cielo (#sky, C27) con la luna di Topolino, l’alone e il bagliore che respira (C23), qui dietro -->
    <g class="luna-t"><path class="luna-st" d="M272 51.6 L272.75 54.25 L275.4 55 L272.75 55.75 L272 58.4 L271.25 55.75 L268.6 55 L271.25 54.25Z"/><path class="luna-st s2" d="M209 90.4 L209.57 92.43 L211.6 93 L209.57 93.57 L209 95.6 L208.43 93.57 L206.4 93 L208.43 92.43Z"/><path class="luna-st s3" d="M247 38.8 L247.48 40.52 L249.2 41 L247.48 41.48 L247 43.2 L246.52 41.48 L244.8 41 L246.52 40.52Z"/></g>
    <!-- C18 · slitta, pacchi e polvere di stelle (disegnati da JS) --><g id="pacchi"></g><g id="polvere"></g><g id="slitta" class="sl" style="visibility:hidden"><g transform="scale(.211538)"><use href="#slImg" mask="url(#slMs)"/><g id="slJb"><use href="#slImg" clip-path="url(#slCj)"/></g><g id="slR3"><use href="#slImg" mask="url(#slM3)"/><g id="slR3a"><use href="#slImg" clip-path="url(#slC3a)"/></g><g id="slR3b"><use href="#slImg" clip-path="url(#slC3b)"/></g></g><g id="slR2"><use href="#slImg" mask="url(#slM2)"/><g id="slR2a"><use href="#slImg" clip-path="url(#slC2a)"/></g><g id="slR2b"><use href="#slImg" clip-path="url(#slC2b)"/></g></g><g id="slR1"><use href="#slImg" mask="url(#slM1)"/><g id="slR1a"><use href="#slImg" clip-path="url(#slC1a)"/></g><g id="slR1b"><use href="#slImg" clip-path="url(#slC1b)"/></g></g></g><g id="zero" transform="translate(114 12)"><g transform="scale(.036)"><use href="#zImg" mask="url(#zMc)"/><g id="zOre"><use href="#zImg" clip-path="url(#zCo)"/></g><g id="zBocca"><use href="#zImg" clip-path="url(#zCb)"/></g><g id="zMant"><use href="#zImg" clip-path="url(#zCm)"/></g><circle id="zNaso" cx="63" cy="33" r="46" fill="url(#zNasoG)"/></g></g></g>
    <g id="roofs" style="fill:var(--sil-3)"></g>
@@ -2554,6 +2555,16 @@ if(cv&&cv.getContext){
   ctx.globalAlpha=RM?1:.7+.3*u;ctx.fillStyle=ga;ctx.beginPath();ctx.arc(ax,ay,r,0,6.28);ctx.fill();
   ctx.globalAlpha=RM?.6:.35+.45*u;ctx.drawImage(lunaG,cx-32.46*s*z,cy-26.1*s*z,lunaG.width/dpr*z,lunaG.height/dpr*z);
   ctx.globalAlpha=1;if(lunaB)ctx.drawImage(lunaB,x,y,a('width')*s,a('height')*s)};
+ /* C27 · stelline della luna sulla tela del cielo (Mario 23/11, video: con la tela Torre, faro e slitta sparivano ancora per un attimo, con le luci ferme no).
+    Animate nel disegno erano uno strato a sé proprio sotto la slitta: quando la slitta ci passava sopra, il telefono rifaceva da capo gli strati di Torre, faro e slitta (vuoti per un fotogramma; misura col telefono di prova: 6 strati rifatti in 30 s, 0 senza).
+    Stesso posto, colore e luccichio di prima (brilla: 3,4 s, luminosità .2→1, grandezza .5→1, curva ease-in-out; ritardi 0, 1,2 e 2,3 s); con «riduci movimento» ferme e piene, come prima */
+ const STL=[...document.querySelectorAll('.luna-st')].map(e=>{const d=e.getAttribute('d'),n=(d.match(/-?[\d.]+/g)||[]).map(Number),xs=n.filter((_,j)=>j%2===0),ys=n.filter((_,j)=>j%2===1);
+  return {p:new Path2D(d),cx:(Math.min(...xs)+Math.max(...xs))/2,cy:(Math.min(...ys)+Math.max(...ys))/2,dl:e.classList.contains('s2')?1.2:e.classList.contains('s3')?2.3:0}});
+ const eio=x=>{/* cubic-bezier(.42,0,.58,1), come ease-in-out del foglio di stile */let a=0,b=1;for(let k=0;k<20;k++){const u=(a+b)/2;if(3*.42*u*(1-u)*(1-u)+3*.58*u*u*(1-u)+u*u*u<x)a=u;else b=u}const v=(a+b)/2;return 3*v*v*(1-v)+v*v*v};
+ const stelline=t=>{if(!STL.length)return;const m=sceneMap(),s=m(1,0)[0]-m(0,0)[0];if(!(s>0))return;ctx.fillStyle='#FFF8E2';
+  for(const q of STL){let o=1,k=1;if(!RM){const f=((t+q.dl)/3.4)%1,h=f<.5?eio(f*2):1-eio((f-.5)*2);o=.2+.8*h;k=.5+.5*h}
+   const [x,y]=m(q.cx,q.cy);ctx.save();ctx.globalAlpha=o;ctx.translate(x,y);ctx.scale(s*k,s*k);ctx.translate(-q.cx,-q.cy);ctx.fill(q.p);ctx.restore()}
+  ctx.globalAlpha=1};
  /* fuochi di scintille sopra il castello: tre al caricamento, poi uno ogni tanto */
  const LAUNCH=[[440,200,452,62],[562,205,582,72],[505,150,505,30],[420,210,410,90],[585,215,612,96]];
  const COL=['#FFE7A3','#FFFFFF','#BFD8FF','#FFE7A3'];
@@ -2584,7 +2595,7 @@ if(cv&&cv.getContext){
   for(const f of flakes){f.y+=f.v;f.x+=Math.sin(t*.5+f.w)*.25;if(f.y>H+4){f.y=-4;f.x=Math.random()*W}ctx.globalAlpha=.35+f.r*.25;ctx.beginPath();ctx.arc(f.x,f.y,f.r,0,6.28);ctx.fill()}
   ctx.globalAlpha=1;
   if(!RM)fireworks(t);
-  luna(t);
+  luna(t);stelline(t);
   ctx.globalAlpha=1};
  const loop=now=>{draw(now);if(run)raf=requestAnimationFrame(loop)};
  const start=()=>{if(run||RM||!vis||document.hidden||hero.classList.contains('anim-pausa'))return;run=true;raf=requestAnimationFrame(loop)};
