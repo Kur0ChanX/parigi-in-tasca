@@ -243,7 +243,7 @@ details.sc-o>summary::after{grid-column:4;grid-row:1;margin-top:9px}
 .sc-b{padding:0 12px 12px 50px;display:grid;gap:8px}
 .sc-l{display:grid;gap:4px;font-size:.92rem;padding-left:1.1em;margin:0}
 .sc-up{color:var(--bad);font-weight:800}.sc-dn{color:var(--good);font-weight:800}.sc-eq{color:var(--mute);font-weight:700}
-.sc-o .pc{font-size:.9rem}
+.sc-o .pcx{font-size:.9rem}
 .sc-act{display:flex;flex-wrap:wrap;gap:8px}
 .sc-act .btn{min-height:44px}
 .xx>summary{font-weight:800}
@@ -382,11 +382,14 @@ details.sc-o>summary::after{grid-column:4;grid-row:1;margin-top:9px}
 .kv dt{color:var(--mute);font-weight:600}
 .kv dd{margin:0;min-width:0}
 .pc{display:grid;gap:6px;font-size:.97rem}
-/* C28: «>» = solo i paragrafi dei pro e contro; prima valeva anche per il contenitore della pagina (<div class="pc">) e spostava di 28 px quasi tutti i paragrafi */
-.pc>p{position:relative;padding-left:28px}
-.pc>p::before{position:absolute;left:0;top:0}
-.pc .p::before{content:"+";color:var(--good);font-weight:800}
-.pc .c::before{content:"–";color:var(--bad);font-weight:800}
+/* .pc = solo il contenitore della pagina (<div class="pc">). C29: i pro e contro hanno la classe loro, .pcx: il nome uguale ha dato 3 difetti (pagina larga 735 px, paragrafi rientrati di 28 px, pro e contro in 2 colonne sul computer). Una frase per punto (FR). */
+.pcx{display:grid;gap:6px;font-size:.97rem}
+.pcx>p{position:relative;padding-left:28px}
+.pcx>p::before{position:absolute;left:0;top:0}
+.pcx .p::before{content:"+";color:var(--good);font-weight:800}
+.pcx .c::before{content:"–";color:var(--bad);font-weight:800}
+.pcx .p+.c{margin-top:6px}
+.qoq-pt{display:block;margin-top:2px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--brand);color:var(--brand-ink);border:0;cursor:pointer;transition:transform .15s ease,filter .15s;font-size:1rem;font-family:var(--text)}
 .btn:hover{filter:brightness(1.08)}
 .btn:active{transform:scale(.97)}
@@ -1618,6 +1621,16 @@ const AB=(id,d)=>`https://www.airbnb.it/rooms/${id}?check_in=2026-12-${d}&check_
  EURT="Prezzi tutto incluso, letti in euro su airbnb.it.",DAL14="<b>Libero solo dal 14:</b> va bene se domenica dormite a Parigi.",
  abCon=h=>`Niente reception. Con la domenica a Parigi, lunedì 14 si entra solo dalle ${h}: valigie al deposito della stazione di Chessy (livello +1, 7:00–22:00) o accordo col gestore.`,
  ab4=(id,t)=>`<a href="${AB(id,13)}" target="_blank" rel="noopener">${t}</a>`;
+/* C29 (Mario 23/11: testi «più ordinati, senza cancellare informazioni»): pro e contro una frase per punto.
+   FR spezza dopo . ! ? … seguiti da spazio e maiuscola o «, solo fuori dai tag (mai dentro <a>, <span>, <b>):
+   i punti uniti con uno spazio ridanno il testo di prima, niente si perde. Niente «lookbehind» nelle espressioni: i telefoni vecchi non lo leggono e la pagina si fermerebbe. */
+const FR=s=>{const o=[];let cur='',dep=0;for(const t of String(s||'').split(/(<[^>]+>)/)){if(!t)continue;
+  if(t[0]==='<'){dep+=t[1]==='/'?-1:/^<(br|img|wbr|hr)\b|\/>$/i.test(t)?0:1;cur+=t;continue}
+  if(dep>0){cur+=t;continue}
+  const q=t.replace(/([.!?…])\s+(?=[A-ZÀ-ÖØ-Ý«])/g,'$1\u0001').split('\u0001');cur+=q[0];for(let i=1;i<q.length;i++){if(cur.trim())o.push(cur.trim());cur=q[i]}}
+  if(cur.trim())o.push(cur.trim());return o},
+ PCX=(p,c)=>`<div class="pcx">${FR(p).map(x=>`<p class="p">${x}</p>`).join('')}${FR(c).map(x=>`<p class="c">${x}</p>`).join('')}</div>`,
+ QPT=s=>FR(s).map(x=>`<span class="qoq-pt">${x}</span>`).join('');
 const GN={rosa:"⭐ La vostra rosa",meno:"Spendere meno",vicino:"Vicino al treno",comodo:"Tutto comodo",spa:"Spa e piscina",romantico:"Romantico",spazio:"Più spazio",parchi:"A piedi dai parchi",airbnb:"Airbnb"};
 const GD={tutti:"Tutti, con il numero fisso: ordinateli come volete.",rosa:"Quelli che avete messo nella rosa con «⭐ Metti nella rosa» o dal tasto «⭐ Rosa alloggi» della schermata principale.",meno:"Il prezzo più basso con pulizia buona.",vicino:"Al massimo 10 minuti a piedi dalla stazione Val d'Europe, poi 3 minuti di treno fino ai parchi.",comodo:"Reception 24 ore, poco cammino, bar e negozi vicino: la vacanza più rilassata.",spa:"Piscina, sauna o idromassaggio. Tutte le spa chiudono entro le 22:00: col n. 12 la usate domenica sera, dopo i mercatini. Vicino al treno ce n'è una sola: il n. 12.",romantico:"Vasca privata, una casa curata con colazione o una spa con massaggi di coppia.",spazio:"Appartamenti da 47 a 70 m², o con 2 camere.",parchi:"Dormire dentro Disney: a piedi ai parchi, ma costa molto di più.",airbnb:"Appartamenti su Airbnb (n. 16–21, 23, 25–28 e 31–35): niente reception, di solito arrivo con la cassetta delle chiavi. Prezzi tutto incluso, letti in euro su airbnb.it. I n. 18, 20 e 21 sono liberi solo dal 14: vanno bene se domenica dormite a Parigi. Voti su 5, di solito più alti di quelli di Booking: per ordinarli la pagina li conta ×2, ma non sono confrontabili 1 a 1."};
 const AL=[
@@ -1813,7 +1826,7 @@ const card=h=>`<article class="card${h.id===MIO?' is-rec':''}${hidN('d-'+h.id)?'
  <div class="tags">${h.g.map(x=>`<span class="tag">${GN[x]}</span>`).join('')}</div>
  <p class="small">${h.pl}</p>
  <dl class="kv"><div><dt>Domenica sera</dt><dd>${h.sun}</dd></div><div><dt>Ai parchi</dt><dd>${h.tr}</dd></div>${h.spa?`<div><dt>Spa</dt><dd>${h.spa}</dd></div>`:''}</dl>
- <div class="pc"><p class="p">${h.pro}</p><p class="c">${h.con}</p></div>
+ ${PCX(h.pro,h.con)}
  ${xxBox(h)}
  <a class="btn ghost" href="${h.u}" target="_blank" rel="noopener">${h.ul||'Apri su Booking: 13→17 dic, 2 adulti'}${OUT}</a>
  <button type="button" class="btn ghost use-al" data-use="${h.id}" aria-pressed="${h.id===CHO}">${h.id===CHO?'✓ La pagina segue questo alloggio':'Usa questo nella pagina'}</button>
@@ -2066,8 +2079,8 @@ const qoqH=()=>{
  o+=R('⭐ Voto e pulizia',h=>`${esc(h.sc)} · pulizia ${esc(h.cl)}`+tg(h.id,bV,'voto più alto'));
  o+=R('🌙 Domenica sera',h=>h.sun);
  o+=R('↩️ Prezzo e cancellazione',h=>h.pl);
- o+=R('✅ Pro',h=>h.pro);
- o+=R('⚠️ Contro',h=>h.con);
+ o+=R('✅ Pro',h=>QPT(h.pro));
+ o+=R('⚠️ Contro',h=>QPT(h.con));
  o+=R('📄 Scheda',h=>`<a href="#al-${h.id}">Apri la scheda del n. ${h.id}</a>`);
  const ids=new Set(sel.map(h=>h.id)),par=DUELS.filter(([q])=>{const m=[...q.matchAll(/n\. (\d+)/gi)].map(x=>+x[1]);return m.length&&m.every(n=>ids.has(n))});
  if(par.length)o+=`<div class="qoq-r"><b>💡 Il mio parere su queste coppie</b>${par.map(([q,a])=>`<details><summary>${esc(q)}</summary><div class="in"><p>${esc(a)}</p></div></details>`).join('')}</div>`;
@@ -2518,7 +2531,7 @@ $('#sources').innerHTML=SRC.map(g=>`<h3>${esc(g[0])}</h3><ul>${g[1].map(s=>`<li>
    return row('n-'+(o?o.id:'4n'),on,0,dot(on),o?esc(o.n):'4 notti vicino a Disney',o?esc(o.sub):'13→17 nello stesso posto: niente cambio di hotel',o?fmt(o.p):'—',o?'1 notte':'niente Parigi',m,
 `<ul class="sc-l">${o?`<li>Domenica sera: restate a Parigi quanto volete, niente treni.</li><li>${o.dep} ${o.ci}</li><li>Lunedì: uscita alle ${T(monB(o,SCE.d).out)}, RER A da ${RS[o.st].n} con le valigie.</li>`:`<li>Domenica sera: valigie dagli armadietti e RER A${k?', in camera verso le '+k.sunIn:''}.</li><li>Lunedì: al parco senza valigie${k?', uscita alle '+T(k.mon):''}.</li>`}</ul>
 ${k?`<p class="small">Con il n. ${SCE.d}: totale del viaggio ≈ ${fmt(k.tot)}${rc?'':' ('+dEur(k.tot,cm.tot)+' rispetto al consiglio)'}.</p>`:''}
-<div class="pc"><p class="p">${o?o.pro:"Un solo alloggio: valigie disfatte una volta. Col n. 12 la spa domenica sera."}</p><p class="c">${o?o.con:"Domenica sera valigie e treno: via da Parigi alle 20:40 (alle 18:50 col n. 12)."}</p></div>
+${PCX(o?o.pro:"Un solo alloggio: valigie disfatte una volta. Col n. 12 la spa domenica sera.",o?o.con:"Domenica sera valigie e treno: via da Parigi alle 20:40 (alle 18:50 col n. 12).")}
 ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class="in"><div class="dove" data-par="${o.id}"></div></div></details>`:''}
 <div class="sc-act">${btn(s,on)}${o?`<a class="btn ghost" href="${o.u}" target="_blank" rel="noopener">Booking${OUT}</a>${nasB('n-'+o.id)}`:''}</div>`,px)};
   $('#scN').innerHTML=`<p class="sc-g">Prima scelta: tutte e 4 le notti vicino a Disney, 13→17</p><div class="sc-list">${nOpt(null)}</div><details class="sc-par"${PO?' open':''}><summary>Oppure domenica a Parigi, poi 3 notti vicino a Disney (14→17) · ${PAR.filter(p=>!hidN('n-'+p.id)).length} hotel</summary>${['gl','ce'].map(z=>{const V=PAR.filter(p=>p.z===z&&!hidN('n-'+p.id));return V.length?`<p class="sc-g">${z==='gl'?'Vicino alla Gare de Lyon: i più comodi per i treni':'In centro, più belli (Opéra, Châtelet)'}</p><div class="sc-list">${V.map(nOpt).join('')}</div>`:''}).join('')}</details>`;
@@ -2532,7 +2545,7 @@ ${o?`<details class="more"><summary>Dov'è e quanto ci vuole</summary><div class
    return row('d-'+h.id,on,!c,`<span class="nb sm">${h.id}</span>`,(ROSA.has(h.id)?'<span class="ro-st" title="Nella vostra rosa">⭐</span> ':'')+esc(h.n),esc(h.sub),c?fmt(c.q[0]):h.ab?'dal 14':'?',SCE.n?'3 notti':'4 notti',m,
 `<p class="small muted">${c?esc(c.q[1]):h.ab?'Su Airbnb 13→17 non è disponibile (21/11/2026): libero solo dal 14, va bene se domenica dormite a Parigi.':'Prezzo per queste notti non disponibile (esaurito su Booking).'}</p>
 ${c?`<p class="small">Totale del viaggio ≈ ${fmt(c.tot)}${rc?'':' ('+dEur(c.tot,cm.tot)+' rispetto al consiglio)'}. Ai parchi ${c.park} min${c.nav?' + attesa della navetta':''} ogni mattina; a piedi ${c.walk} min al giorno, circa ${kmT(c.walk)}. Voto ${h.ab?'Airbnb ':''}${h.sc}.</p>`:''}
-<div class="pc"><p class="p">${h.pro}</p><p class="c">${h.con}${sp?' Con la domenica a Parigi la spa quasi non la usate: chiude alle 22:00, come i parchi.':''}${SCE.n&&!REC.includes(h.id)&&!h.ab?' Lunedì mattina le valigie: da chiedere al gestore, oppure deposito della stazione di Chessy.':''}</p></div>
+${PCX(h.pro,h.con+(sp?' Con la domenica a Parigi la spa quasi non la usate: chiude alle 22:00, come i parchi.':'')+(SCE.n&&!REC.includes(h.id)&&!h.ab?' Lunedì mattina le valigie: da chiedere al gestore, oppure deposito della stazione di Chessy.':''))}
 ${xxBox(h)}
 <div class="sc-act">${c?btn(s,on):''}<a class="btn ghost" href="#al-${h.id}">Scheda</a>${rosaB(h.id)}${nasB('d-'+h.id)}</div>`,px)}).join('');
   renderNas();renderRosa()
