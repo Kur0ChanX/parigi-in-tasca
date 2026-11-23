@@ -1,25 +1,22 @@
-# Ultima risposta di Claude (23/11/2026 16:12 ora italiana)
+# Ultima risposta di Claude (23/11/2026 16:34 ora italiana)
 
-La v48 è pronta e provata, ma non è ancora online: aspetta il tuo ok sulle 4 foto.
+🛑 Prima le 2 domande decisive ancora aperte:
+- **Controllo 25:** guarda la guida sul telefono. Torre, faro e slitta spariscono ancora per un attimo?
+- **Controllo 14:** come mostro gli alloggi «spenti» (n. 18, 20, 21)?
+
+🧠 Continuo con Opus 5.5 · Extra, come la sessione di prima. Fable non serve: è un lavoro piccolo sui testi.
 
 ───
-✅ **FATTO**
-- **Ristoranti:** ora sono 56, in 4 zone:
-
-| Zona | Posti |
-|---|---|
-| ☀️ Domenica, pranzo · Saint-Germain | 13 |
-| 🌙 Domenica, cena · centro | 16 |
-| 🚇 Parigi, coi mezzi (Marais, 11°, Canal Saint-Martin, Montmartre…) | 19 |
-| 🏠 Vicino all'alloggio · cene lun–mer | 8 |
-
-- **Best buy:** uno per cucina in ogni zona. Esempi: carne Robert et Louise (Marais), pesce Clamato (11°), sushi Nobisan (Marais), tradizionale Le Savarin (9°).
-- **Paragrafi:** ho corretto il difetto vecchio, ora i paragrafi …
+✅ FATTO
+- **Pro e contro degli alloggi:** adesso c'è una frase per riga, con + e –. Le parole sono le stesse, non ho tolto niente: il controllo automatico non ha perso nessun numero, orario, prezzo o link.
+- Ho fatto lo stesso in «Questo o quello?» e nei testi …
 
 ## Domande a Mario
 
-❓ **DOMANDE**
-**DOMANDA 1 · le 4 foto della v48 vanno bene?**
-📌 Di cosa parliamo: 1 paragrafi allineati (prima e dopo) · 2 la scheda «Mangiare» · 3 la scheda di un ristorante · 4 i prossimi treni.
-1 · sì, pubblica · 2 · cambia qualcosa (scrivimi cosa)
-Consiglio: 1.
+❓ DOMANDE
+**DOMANDA 1** · A cosa serve: senza il tuo ok sulle foto non pubblico.
+Le 6 foto qui sopra vanno bene? Le foto 1–4 sono quelle di prima: paragrafi, Mangiare, un ristorante, treni. Le foto 5–6 sono nuove: pro e contro una frase per riga.
+1 · sì, pubblica tutto insieme
+2 · pubblica solo le foto 1–4
+3 · cambia qualcosa (scrivi cosa)
+Consiglio: **1**.

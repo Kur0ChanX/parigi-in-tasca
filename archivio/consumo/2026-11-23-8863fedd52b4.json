@@ -1,0 +1,39 @@
+{
+"account": "cba507",
+"sessione": "8863fedd52b4",
+"giorno": "2026-11-23",
+"turni": 3,
+"peso": 189967,
+"uscita": 4245,
+"contesto_max": 206626,
+"anomalie": [],
+"blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": 1,
+"Stop 15 · There are uncommitted changes in": 1
+},
+"esempi_blocchi": {
+"Stop 3 · Consegne non su GitHub (C226,": [
+"16:29 · Consegne non su GitHub (C226, blocco 1/3): docs/ERRORI-STORIA.md, docs/ERRORI.md fuori dal commit. Fai commit e push adesso (`git push -u origin claude/parigi-ramo-definitivo`), controlla `git rev-par"
+],
+"Stop 15 · There are uncommitted changes in": [
+"16:29 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+]
+},
+"remota": "01Rwcxc2rpkc",
+"aiutanti": 0,
+"strumenti": 6,
+"bilancia": 2,
+"motori": {
+"opus": 189967
+},
+"grezzi": {
+"opus": [
+19,
+1627420,
+4785,
+0,
+4245
+]
+},
+"costo": 0.4487
+}
