@@ -1,5 +1,9 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
+## Stato (Controllo 23 `session_01Rwcxc6J6cxwZCWqrStpDUk`, 23/11 02:25 ora italiana, chiusa alla soglia; la apre la Controllo 23 con `create_session` (catena 7 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261123-01Rwcxc6J6cx/claude/parigi-ramo-definitivo.
+- (qui le righe di giudizio della Controllo 23: fatto, provato, dove si verifica)
+
 ## Stato (Controllo 22 `session_01Rwcxc6ffPihnoof8UBtXt1`, 23/11 01:39 ora italiana, chiusa alla soglia; la apre la Controllo 22 con `create_session` (catena 6 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Giri in corso: pages build and deployment. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
 
@@ -38,21 +42,22 @@
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 23
-la apre la Controllo 22 con `create_session` (catena 6 di 8). Scritto da Controllo 22 il 23/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 24
+la apre la Controllo 23 con `create_session` (catena 7 di 8). Scritto da Controllo 23 il 23/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 23 · luna sfocata`
+Titolo: `🟩 🗼 Controllo 24 · lucine sulla tela`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 23 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 24 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-22 23:49 · [AVVIO] Sei la chat parallela Controllo 22 di Parigi in tasca, linea «Controllo»… → avvio; C22 parte 2 (be5c762), C26 (9c8385b), DOMANDE 1 e 2
-- 2026-11-23 01:37 · Domanda 1, domanda 2, va bene. Ok, come consiglio. → risposta alle domande 1 e 2: PR #44 unita, v44
+- 2026-11-23 01:41 · [AVVIO] Sei la chat parallela Controllo 23 di Parigi in tasca, linea «Controllo»… → 
+- 2026-11-23 02:07 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/8356ac8f-VID_20261123_02054… → 
+- 2026-11-23 02:13 · No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è fas… → 
 
 Ultimo, intero:
-> Domanda 1, domanda 2, va bene. Ok, come consiglio.
+> No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è fastidioso. Cliccherà anche la renna, nightmare, insomma tutto quello che vola.
 
