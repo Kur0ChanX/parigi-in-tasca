@@ -443,6 +443,36 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     }
     await c3.close();
   }
+  // C23 (Controllo 23; foto di Mario 22/11 22:09 «andava bene poi invece»: sul telefono, dopo un po’, la luna di Topolino non veniva più disegnata e restava il bagliore sfocato):
+  // la luna sta sulla tela del cielo (#sky), ridisegnata a ogni fotogramma. Si prova che si VEDE: i pixel della tela, dove l’immagine è piena, sono quelli dell’immagine
+  // messa nel posto calcolato qui dal disegno SVG (telefono e PC, con e senza movimento, anche dopo 8 s), e davanti non c’è niente del disegno salvo slitta, pacchi e stelline (proiezioni: maschera del castello; la tela non risponde ai tocchi, si guarda ciò che non la contiene).
+  {
+    const luna = async (vp, rm, attesa) => {
+      const c = await b.newContext({ viewport: vp, deviceScaleFactor: 2, serviceWorkers: 'block', reducedMotion: rm }); const r = await c.newPage();
+      r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+      await r.goto(B + 'dicembre/'); await r.evaluate(() => document.querySelector('.scene').scrollIntoView({ block: 'end' })); await r.waitForTimeout(attesa);
+      const v = await r.evaluate(async () => {
+        const li = document.getElementById('lunaT'), cv = document.getElementById('sky'), sc = document.querySelector('.scene'), m = sc.getScreenCTM(), a = (n) => +li.getAttribute(n);
+        const p0 = new DOMPoint(a('x'), a('y')).matrixTransform(m), p1 = new DOMPoint(a('x') + a('width'), a('y') + a('height')).matrixTransform(m), cr = cv.getBoundingClientRect(), k = cv.width / cr.width;
+        const im = new Image(); im.src = li.getAttribute('href'); await im.decode();
+        const t = document.createElement('canvas'); t.width = cv.width; t.height = cv.height; const tx = t.getContext('2d');
+        const X = (p0.x - cr.left) * k, Y = (p0.y - cr.top) * k, L = (p1.x - p0.x) * k, A = (p1.y - p0.y) * k; tx.drawImage(im, X, Y, L, A);
+        const x0 = Math.floor(X), y0 = Math.floor(Y), w = Math.ceil(L) + 1, h = Math.ceil(A) + 1;
+        const atteso = tx.getImageData(x0, y0, w, h).data, visto = cv.getContext('2d').getImageData(x0, y0, w, h).data;
+        let n = 0, diff = 0; for (let i = 0; i < atteso.length; i += 4) if (atteso[i + 3] === 255) { n++; diff += (Math.abs(atteso[i] - visto[i]) + Math.abs(atteso[i + 1] - visto[i + 1]) + Math.abs(atteso[i + 2] - visto[i + 2])) / 3; }
+        document.head.insertAdjacentHTML('beforeend', '<style id="provaPE">.scene,.scene *{pointer-events:auto!important}</style>');
+        const davanti = []; for (const [ux, uy] of [[240, 76], [224.74, 63.4], [255.26, 63.4]]) { const q = new DOMPoint(ux, uy).matrixTransform(m);
+          for (const e of document.elementsFromPoint(q.x, q.y)) { if (e === cv) break; if (e !== sc && !e.contains(cv) && e.id !== 'vigna' && !e.closest('#slitta,#pacchi,#polvere,.luna-st,g[mask]')) davanti.push(e.tagName + (e.id ? '#' + e.id : '') + '.' + (e.getAttribute('class') || '')); } }
+        document.getElementById('provaPE').remove();
+        return { inDefs: !!li.closest('defs'), n, diff: n ? Math.round(diff / n * 10) / 10 : 999, largo: Math.round(p1.x - p0.x), davanti: [...new Set(davanti)] };
+      });
+      await c.close(); return v;
+    };
+    for (const [nome, vp, rm, attesa] of [['telefono', { width: 390, height: 844 }, 'no-preference', 1500], ['telefono dopo 8 s', { width: 390, height: 844 }, 'no-preference', 8000], ['telefono, riduci movimento', { width: 390, height: 844 }, 'reduce', 1500], ['PC 1440', { width: 1440, height: 900 }, 'no-preference', 1500]]) {
+      const v = await luna(vp, rm, attesa), buona = v.inDefs && v.n > 2000 && v.diff < 6 && !v.davanti.length;
+      ok(`C23: luna di Topolino disegnata e visibile sulla tela del cielo (${nome}: ${v.largo} px, ${v.n} punti pieni, scarto ${v.diff}), niente davanti`, buona); if (!buona) console.log(v);
+    }
+  }
   // C18: la slitta passa da sola dopo 5 s (nel cielo, coi pacchi); con «riduci movimento» non parte; giovedì 17 col riquadro «Partite prima»
   {
     const mk = async (rm) => { const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block', reducedMotion: rm }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); }); await r.goto(B + 'dicembre/'); return [c, r]; };
