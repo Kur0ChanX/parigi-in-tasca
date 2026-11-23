@@ -58,7 +58,7 @@ Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o
 - 2026-11-23 12:02 · @"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta… → video: codice nella pagina sbagliata, prima «Save»
 - 2026-11-23 12:09 · ok ho la chiave → guida per l’ambiente
 - 2026-11-23 12:13 · messo → chiave salvata → chiusa per aprire la Controllo 27
-- 2026-11-23 12:14 · ora continua a migliorare l'applicazione con cose utili per me… → C28 (parole intere nel file): la Controllo 27 lo fa dopo il kit
+- 2026-11-23 12:14 · ora continua a migliorare l'applicazione con cose utili per me, per informazioni… → → C28 (parole intere nel file): la Controllo 27 lo fa dopo il kit
 
 Ultimo, intero:
 > ora continua a migliorare l'applicazione con cose utili per me, per informazioni, insomma, valutiamoli insieme alle tue idee, io le approvo o no. Poi controlla se va tutto bene, se ci sono buchi, se ci sono mancanze, se è possibile migliorare alcune parti, se ci siamo dimenticati qualcosa, insomma, se vogliamo aggiungere qualcos'altro di intelligente, di smart, geniale, insomma, dammi delle idee,
