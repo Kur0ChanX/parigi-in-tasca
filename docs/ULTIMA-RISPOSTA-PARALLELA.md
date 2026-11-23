@@ -1,16 +1,23 @@
-# Ultima risposta di Claude (23/11/2026 12:09 ora italiana)
+# Ultima risposta di Claude (23/11/2026 12:18 ora italiana)
 
-Ottimo! Ora mettila nell'ambiente.
+Ho capito: prima installo il kit RVC aggiornato, poi faccio il controllo della guida e ti propongo le idee (C28).
 
-👉 **DA FARE TU**
-A cosa serve: farla trovare alle chat nuove.
-1. In cima a questa chat tocca il titolo della sessione. Si apre il menu dell'ambiente: tocca «Edit».
-2. Cerca la parte delle variabili d'ambiente e scrivi questa riga. Subito dopo l'uguale incolla la chiave, senza spazi:
-```
-RVC_KIT_TOKEN=
-```
-3. Salva.
-4. Se nello «Script di configurazione» c'è una chiave messa il 22/11, cancellala da lì.
-5. Scrivimi «salvata». Poi apro io la chat nuova, che scarica il kit.
+🧠 Continuo con Opus 5.5 · Extra. Fable non serve: installare il kit è un lavoro già scritto passo passo.
 
-Se non trovi «Edit» o le variabili, mandami una foto: la chiave non deve essere in …
+🛑 Ti aspettano ancora due domande decisive:
+- **v46:** sul telefono Torre, faro e slitta spariscono ancora per un attimo?
+- **Alloggi «spenti»** (n. 18, 20, 21): come li mostro?
+
+───
+✅ **FATTO**
+- **La chiave funziona.** Ho scaricato il Kit 53 da RVC: qui c'è ancora il Kit 43.
+- **Prova a secco** (guardo cosa cambierebbe senza scrivere niente). Cambierebbero 29 file:
+  - 14 …
+
+## Domande a Mario
+
+❓ conta solo le domande della sessione aperta, non di tutta la catena. Sarà più chiaro.
+- **Accesso alle app:** chi perde il telefono rientra col suo profilo. Qui non cambia niente, perché questa app non ha accesso.
+- 7 controlli automatici e 6 guide di lavoro aggiornati.
+
+Ti consiglio di installarlo: rischio basso. Ogni file vecchio resta accanto, come copia `.prima-del-kit`.
