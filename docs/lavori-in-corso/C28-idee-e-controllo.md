@@ -40,3 +40,4 @@
 - Righe visibili oltre 350 caratteri: 18 prima, 0 dopo. `confronta-fatti --da HEAD`: nessun fatto perso (4488 prima e dopo).
 - Trovato: pro e contro in 2 colonne sul computer (classe `.pc` uguale al contenitore). Ora `.pcx`; prova «C29»; riga in `docs/ERRORI.md`.
 - La v48 aspetta ancora l'ok di Mario sulle sue 4 foto: si pubblica da `versione-v48` tagliato a 70bb82f (senza la v49), oppure insieme alla v49 se Mario approva anche queste foto.
+- 23/11 18:4x Mario «11» (DOMANDA 1 della Controllo 29, scelta 1): foto approvate, si pubblica tutto insieme come v48 (Mangiare, treni, meteo, paragrafi, pro e contro a righe).
