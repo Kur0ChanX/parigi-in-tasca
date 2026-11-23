@@ -307,6 +307,38 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     });
     const okT = tk.vw >= 600 || (tk.cw > 0 && tk.sw <= tk.cw + 1 && tk.th === 'none' && tk.righe === 6);
     ok('C13 pezzo 4: «Treni e ticket» sul telefono a schede, niente da scorrere di lato', okT); if (!okT) console.log(tk);
+    // C28 (Mario 23/11): scheda «Mangiare» (best buy per cucina e alternative, 3 voti, link), treni dal vivo, meteo in cima ai giorni
+    const mg = await q.evaluate(async () => {
+      const w = () => new Promise((r) => setTimeout(r, 250)), prima = document.body.dataset.tab, tutti = (s) => [...document.querySelectorAll(s)];
+      document.querySelector('.tabbar button[data-t="mangiare"]').click(); await w();
+      const r = { schede: tutti('.tabbar button').length, on: document.getElementById('mangiare').classList.contains('tab-on'), sw: document.documentElement.scrollWidth, vw: innerWidth };
+      document.querySelector('#risZ [data-z="tt"]').click(); document.querySelector('#risC [data-c="tt"]').click(); await w();
+      const C = tutti('#risCards .card');
+      r.tot = C.length;
+      r.tre = C.every((c) => c.querySelectorAll('.facts .fact').length === 3);
+      r.maps = C.every((c) => /^https:\/\/www\.google\.com\/maps\//.test((c.querySelector('.ris-b a') || {}).href || ''));
+      r.come = C.every((c) => [...c.querySelectorAll('.ris-b a')].some((a) => a.href.includes('travelmode=transit')));
+      // in ogni gruppo di cucina, con una zona sola, il best buy viene per primo
+      r.bbPrimo = true;
+      for (const z of ['sg', 'cc', 'al']) {
+        document.querySelector(`#risZ [data-z="${z}"]`).click(); await w();
+        let primo = true;
+        for (const el of tutti('#risCards > *')) { if (el.matches('h3.ris-h')) { primo = true; continue; } if (el.classList.contains('is-bb') && !primo) r.bbPrimo = false; primo = false; }
+      }
+      document.querySelector('#risC [data-c="sushi"]').click(); await w();
+      r.soloSushi = tutti('#risCards .card').every((c) => c.querySelector('.card-top p').textContent.includes('Sushi'));
+      document.querySelector('#risC [data-c="tt"]').click(); await w();
+      r.sw2 = document.documentElement.scrollWidth;
+      document.querySelector('.tabbar button[data-t="biglietti"]').click(); await w();
+      r.treni = tutti('#treniOra .tr-l a').filter((a) => /^https:\/\/www\.(bonjour-)?ratp\.fr\//.test(a.href)).length;
+      document.querySelector('.tabbar button[data-t="giorni"]').click(); await w();
+      r.meteo = tutti('#panels .meteo[data-d]').length; r.meteoTesto = tutti('#panels .meteo').every((m) => m.textContent.includes('Météo-France'));
+      r.trGo = tutti('#panels a.tr-go[href="#treniOra"]').length;
+      if (prima) { document.querySelector(`.tabbar button[data-t="${prima}"]`).click(); await w(); }
+      return r;
+    });
+    const okM = mg.schede === 5 && mg.on && mg.tot >= 30 && mg.tre && mg.maps && mg.come && mg.bbPrimo && mg.soloSushi && mg.sw <= mg.vw && mg.sw2 <= mg.vw && mg.treni === 8 && mg.meteo === 5 && mg.meteoTesto && mg.trGo === 5;
+    ok('C28: scheda «Mangiare» (best buy per primo, 3 voti, Maps e «Come arrivo»), 8 tasti dei treni dal vivo, meteo e scorciatoia ai treni in ogni giorno', okM); if (!okM) console.log(mg);
     // Mario 22/11: la scelta cambia la pagina e va fatto capire: riquadro prima, avviso dopo, pallino sulle schede cambiate che sparisce aprendole
     const av = await q.evaluate(async () => {
       const w = () => new Promise((r) => setTimeout(r, 250)), prima = document.body.dataset.tab, sc0 = new URL(location.href).searchParams.get('scelta');
