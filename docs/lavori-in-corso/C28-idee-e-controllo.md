@@ -41,3 +41,9 @@
 - Trovato: pro e contro in 2 colonne sul computer (classe `.pc` uguale al contenitore). Ora `.pcx`; prova «C29»; riga in `docs/ERRORI.md`.
 - La v48 aspetta ancora l'ok di Mario sulle sue 4 foto: si pubblica da `versione-v48` tagliato a 70bb82f (senza la v49), oppure insieme alla v49 se Mario approva anche queste foto.
 - 23/11 18:4x Mario «11» (DOMANDA 1 della Controllo 29, scelta 1): foto approvate, si pubblica tutto insieme come v48 (Mangiare, treni, meteo, paragrafi, pro e contro a righe).
+
+## Parole di Mario (23/11/2026 18:4x)
+> Ma i voti può controllare in tempo reale senza consumare token e risorse? Se io tipo una chiamata spinta.
+
+- Lettura: «chiamata spinta» = chiamata API (voce). Cercato il 23/11/2026: Google Places API (New), `rating` e `userRatingCount` = SKU «Place Details Enterprise», 1.000 letture gratis al mese, poi 20 $ ogni 1.000, serve un conto con carta (developers.google.com/maps, pagine del 09–17/11/2026). TripAdvisor: Content API chiusa il 31/08/2026, ora «Terra», gratis solo all'inizio, carta (tripadvisor.com/developers; stayapi.com, non ufficiale). TheFork: API solo per ristoranti e partner (docs.thefork.io).
+- Strade: A chiave nella pagina (la vedrebbe chiunque: no) · B lavoro automatico su GitHub ogni settimana con la chiave nei segreti, 56 posti ≈ 240 letture al mese, gratis, zero token · C come ora (voto con data + link al voto vero). DOMANDA 2 a Mario, consiglio C.
