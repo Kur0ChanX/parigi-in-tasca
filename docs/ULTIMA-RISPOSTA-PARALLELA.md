@@ -1,13 +1,12 @@
-# Ultima risposta di Claude (23/11/2026 11:38 ora italiana)
+# Ultima risposta di Claude (23/11/2026 12:09 ora italiana)
 
-Ho capito: vuoi il kit RVC più nuovo in questo progetto. Dopo vuoi un controllo della guida di dicembre e idee nuove, da approvare una per una.
-🧠 Opus · Extra
+Ho capito: il controllo a due passaggi l'hai passato e sei sulla pagina per creare la chiave. 👍
 
-✅ **FATTO**
-- Ho provato a scaricare il kit: senza chiave non si può. Il repo RVC è privato e GitHub risponde «non trovato».
-- In questo ambiente la chiave `RVC_KIT_TOKEN` non c'è.
-- Ho segnato la tua richiesta di controllo e idee (lavoro C28): la faccio subito dopo il kit, così uso già le regole nuove.
+Tutto giusto: RVC, «Contents» in sola lettura, scadenza 24/11/2027. C'è solo un problema: **«Name has already been taken»**. Una chiave con quel nome esiste già, probabilmente fatta ieri. Non si può rileggere, quindi ne facciamo una nuova.
 
 ───
-💡 **PARERE**
-- La strada migliore è una **chiave di sola lettura** (un **token**: una password che permette solo di leggere il …
+👉 **DA FARE TU**
+A cosa serve: creare la chiave e metterla dove le chat la trovano.
+1. In «Token name» cambia il nome in: `Kit RVC lettura 2`
+2. Tocca «Generate token» e copia subito la chiave (inizia con `github_pat_`). Non mandarmela.
+3. Impostazioni …
