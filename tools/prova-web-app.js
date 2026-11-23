@@ -367,6 +367,25 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const okL = t.lunghi.length === 0 && t.pc === 1 && t.carte > 30 && t.conPcx === t.carte && t.punti > t.carte * 3 && t.colPcx === 1 && t.colPagina === 2;
       ok('C29: nessuna riga visibile oltre 350 caratteri; pro e contro una frase per punto (.pcx in ogni scheda), sul computer in una colonna', okL); if (!okL) console.log(t);
     }
+    // C20 (Mario 23/11 «14 ok», scelta 1): passo 2 di «Scegli» con 4 notti dal 13, gli alloggi senza posto vanno in fondo in un gruppo col perché, niente righe grigie;
+    // col filtro «Hotel» il titolo «Liberi solo dal 14» (solo Airbnb) sparisce con le sue righe
+    {
+      const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const r = await c.newPage();
+      r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+      await r.goto(B + 'dicembre/'); await r.evaluate(() => { localStorage.setItem('pdn-scelta', '4n-8'); localStorage.setItem('pdn-rosa', '[]'); localStorage.removeItem('pdn-tipo'); }); await r.reload(); await r.waitForTimeout(900);
+      const g = await r.evaluate(async () => {
+        const w = () => new Promise((x) => setTimeout(x, 200)), k = [...document.querySelectorAll('#scD>*')], i = k.findIndex((e) => /^Liberi solo dal 14/.test(e.textContent));
+        const dopo = i < 0 ? [] : k.slice(i + 1).filter((e) => e.tagName === 'DETAILS').map((e) => e.dataset.k);
+        const o = { grigie: document.querySelectorAll('#scD>details.off').length, titolo: i, prima: k.slice(0, Math.max(0, i)).every((e) => e.tagName !== 'DETAILS' || !/^d-(18|20|21)$/.test(e.dataset.k)), dopo: dopo.join(' ') };
+        document.querySelector('.tyswitch [data-ty="hotel"]').click(); await w();
+        o.nascostoHotel = getComputedStyle(k[i]).display === 'none';
+        document.querySelector('.tyswitch [data-ty="tutti"]').click(); await w();
+        return o;
+      });
+      await c.close();
+      const okG = g.grigie === 0 && g.titolo > 0 && g.prima && /^d-18 d-20 d-21\b/.test(g.dopo) && g.nascostoHotel;
+      ok('C20: passo 2 con 4 notti dal 13, n. 18, 20, 21 in fondo nel gruppo «Liberi solo dal 14», niente righe grigie, titolo nascosto col filtro Hotel', okG); if (!okG) console.log(g);
+    }
     // Mario 22/11: la scelta cambia la pagina e va fatto capire: riquadro prima, avviso dopo, pallino sulle schede cambiate che sparisce aprendole
     const av = await q.evaluate(async () => {
       const w = () => new Promise((r) => setTimeout(r, 250)), prima = document.body.dataset.tab, sc0 = new URL(location.href).searchParams.get('scelta');
@@ -532,42 +551,6 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const v = await luna(vp, rm, attesa), buona = v.inDefs && v.n > 2000 && v.diff < 6 && !v.davanti.length;
       ok(`C23: luna di Topolino disegnata e visibile sulla tela del cielo (${nome}: ${v.largo} px, ${v.n} punti pieni, scarto ${v.diff}), niente davanti`, buona); if (!buona) console.log(v);
     }
-  }
-  // C27 (Controllo 23): con ?luci=ferme tutte le animazioni del foglio di stile sono ferme (prova dello sfarfallio sul telefono di Mario), con la scritta «PROVA»; senza, le lucine lampeggiano
-  {
-    const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
-    const conta = () => r.evaluate(() => ({ tela: window.luciTela ? luciTela.E().length : 0, css: document.getAnimations().filter((a) => a.constructor.name === 'CSSAnimation' && a.playState === 'running').length, prova: document.documentElement.classList.contains('luci-ferme'), scritta: getComputedStyle(document.body, '::before').content }));
-    await r.goto(B + 'dicembre/?luci=ferme'); await r.waitForTimeout(800); const ferma = await conta();
-    await r.goto(B + 'dicembre/'); await r.waitForTimeout(800); const normale = await conta();
-    ok(`C27: con ?luci=ferme nessuna animazione del foglio di stile (${ferma.css}) e la scritta «PROVA»; senza, lampeggiano (${normale.css}) e niente scritta`, ferma.prova && ferma.css === 0 && ferma.tela === 0 && /PROVA/.test(ferma.scritta) && !normale.prova && (normale.css > 100 || normale.tela >= 2) && normale.css > 100 && !/PROVA/.test(normale.scritta));
-    await c.close();
-  }
-  // C27 · tela (Controllo 24, video di Mario 23/11 02:05: Torre, faro e slitta che spariscono per un fotogramma): lucine, addobbi, vapore e scintille disegnati su una tela sopra il disegno
-  // → pochi strati sul telefono; aspetto uguale: stesso istante, tela contro animazioni del disegno, pixel per pixel; niente tela con «riduci movimento»
-  {
-    const c = await b.newContext({ viewport: { width: 412, height: 839 }, deviceScaleFactor: 2.625, isMobile: true, hasTouch: true, serviceWorkers: 'block' }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
-    await r.goto(B + 'dicembre/?tela=si'); await r.waitForFunction(() => window.luciTela && luciTela.E().length >= 3, null, { timeout: 15000 }).catch(() => {});
-    const cdp = await c.newCDPSession(r); let lay = null; cdp.on('LayerTree.layerTreeDidChange', (e) => { if (e.layers) lay = e.layers; });
-    await r.evaluate(() => document.querySelector('.scene').scrollIntoView({ block: 'end' })); await r.waitForTimeout(500); await cdp.send('LayerTree.enable'); await r.evaluate(() => scrollBy(0, 1)); await r.waitForTimeout(1500); await cdp.send('LayerTree.disable');
-    const scrittaT = await r.evaluate(() => /PROVA/.test(getComputedStyle(document.body, '::before').content));
-    const strati = lay ? lay.filter((l) => l.drawsContent).length : -1, info = await r.evaluate(() => window.luciTela ? luciTela.E().map((T) => [T.L.length, T.tieni.length]) : []);
-    const shot = async () => { const cl = await r.evaluate(() => { const s = document.querySelector('svg.scene'); s.scrollIntoView({ block: 'center' }); const q = s.getBoundingClientRect(); return { x: 0, y: Math.max(0, q.top), width: innerWidth, height: Math.min(q.height, innerHeight - Math.max(0, q.top)) }; }); await r.waitForTimeout(150); return (await r.screenshot({ clip: cl })).toString('base64'); };
-    let d = { media: 99, forti: 99 };
-    if (info.length >= 3) {
-      await r.evaluate(() => { const st = document.createElement('style'); st.textContent = '#sky,#slitta,#pacchi,#polvere,.bokeh{visibility:hidden!important}'; document.head.appendChild(st); luciTela.ferma(); document.getAnimations().forEach((a) => a.pause()); window.T0 = document.timeline.currentTime + 777; luciTela.E().forEach((T) => luciTela.disegna(T, T0)); });
-      const sB = await shot();
-      await r.evaluate(() => { for (const T of luciTela.E()) { T.box.style.visibility = 'hidden'; for (const x of T.L.concat(T.fuori)) x.el.classList.remove('lt-off'); } document.getAnimations();
-        for (const T of luciTela.E()) for (const x of T.L) x.el.getAnimations().forEach((a, j) => { const P = x.parts[j]; a.pause(); if (P) a.currentTime = (T0 - P.t0) + P.dl; }); });
-      const sA = await shot();
-      d = await r.evaluate(async ([a, b2]) => { const im = (s) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = 'data:image/png;base64,' + s; }); const [A, Bi] = await Promise.all([im(a), im(b2)]), w = A.width, h = A.height;
-        const px = (i) => { const k = document.createElement('canvas'); k.width = w; k.height = h; const x = k.getContext('2d'); x.drawImage(i, 0, 0); return x.getImageData(0, 0, w, h).data; }, p = px(A), q = px(Bi); let s = 0, n = 0;
-        for (let i = 0; i < p.length; i += 4) { const m = Math.max(Math.abs(p[i] - q[i]), Math.abs(p[i + 1] - q[i + 1]), Math.abs(p[i + 2] - q[i + 2])); s += m; if (m > 40) n++; } return { media: +(s / (w * h)).toFixed(2), forti: +(100 * n / (w * h)).toFixed(2) }; }, [sA, sB]);
-    }
-    await c.close();
-    const c2 = await b.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce', serviceWorkers: 'block' }); const r2 = await c2.newPage(); await r2.goto(B + 'dicembre/?tela=si'); await r2.waitForTimeout(2600); const rm = await r2.evaluate(() => !window.luciTela && !document.querySelector('.ltBox')); await c2.close();
-    const tela = info.reduce((n, x) => n + x[0], 0), tieni = info.reduce((n, x) => n + x[1], 0);
-    ok(`C27 · tela: ${tela} lucine e addobbi sulla tela (testata, ghirlanda, mercatino; ${tieni} rimasti nel disegno), strati che disegnano ${strati} (prima 1.355), aspetto uguale (scarto medio ${d.media}, pixel diversi ${d.forti} %), niente tela con «riduci movimento»; per ora solo con ?tela=si (scritta «PROVA»)`,
-      info.length === 3 && scrittaT && tela > 600 && tieni <= 20 && strati > 0 && strati <= 120 && d.media < 2.5 && d.forti < 1 && rm);
   }
   // C27 · slitta (Controllo 25, video di Mario 23/11: con la tela sfarfalla ancora, con le luci ferme no): le 3 stelline della luna, animate nel disegno proprio sotto la slitta,
   // facevano rifare al telefono gli strati di Torre, faro e slitta a ogni passaggio (vuoti per un fotogramma). → nessuna animazione del foglio di stile nel disegno prima della slitta;

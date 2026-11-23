@@ -52,3 +52,4 @@
 > controllo 25 ok
 
 - Risposta di Mario alla riga 🛑 Controllo 25: sulla v47 Torre, faro, slitta e Zero non spariscono più → sfarfallio chiuso. Resta da togliere le prove `?luci=ferme` e `?tela=si` (servivano solo alla ricerca della causa).
+- Fatto nel ramo (v49): tolte le prove `?luci=ferme` e `?tela=si` (2 righe in cima, 4 regole di stile, blocco «lucine sulla tela» di ~160 righe) e le loro 2 prove in `prova-web-app.js`. Restano la prova «C27 · slitta» e la luna sulla tela del cielo (C23), che sono altre cose.

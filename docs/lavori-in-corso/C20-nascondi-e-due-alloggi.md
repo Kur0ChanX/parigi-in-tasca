@@ -49,3 +49,4 @@ Prima di questo: «Cerca di non creare conflitti con l'altro account… cerca di
 > 14 ok
 
 - Risposta alla DOMANDA 1 (riga 🛑 Controllo 14): scelta 1, il consiglio → passo 2 di «Scegli», con 4 notti dal 13 gli alloggi liberi solo dal 14 (n. 18, 20, 21) vanno in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché.
+- Fatto nel ramo (v49, non online): `GR14` nella pagina divide il passo 2 in: con posto · «Liberi solo dal 14» (Airbnb senza le 4 notti dal 13: n. 18, 20, 21) · «Esauriti per queste notti» (n. 15, esaurito su Booking anche dal 14: non era nella domanda, stessa regola). Niente più righe grigie. Il titolo del gruppo prende il tipo delle sue righe (sparisce col filtro «Hotel»). Prova «C20» in `tools/prova-web-app.js`. Foto `archivio/2026-11-23-c29-v49-testi/v49-3-liberi-dal-14.png`.

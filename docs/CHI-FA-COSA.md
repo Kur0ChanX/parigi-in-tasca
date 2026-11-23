@@ -37,3 +37,4 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | PR 47 | Controllo 25 | prova «lucine sulla tela» da `versione-v45-tela` (commit f4803af), unita 23/11 | — | 23/11 |
 | PR 48 | Controllo 25 | v46 da `versione-v46` (commit 79ff648), unita 23/11 | — | 23/11 |
 | PR 49 | Controllo 27 | v47 + Kit 53 da `versione-v47` (commit 2afbbf1), unita 23/11 | — | 23/11 |
+| PR 50 | Controllo 29 | v48 da `versione-v48` (commit 76550db), unita 23/11 | — | 23/11 |
