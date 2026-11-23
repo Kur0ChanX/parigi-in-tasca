@@ -1,0 +1,41 @@
+{
+"account": "cba507",
+"sessione": "e682fcb819b9",
+"giorno": "2026-11-23",
+"turni": 3,
+"peso": 1321028,
+"uscita": 74487,
+"contesto_max": 309858,
+"anomalie": [
+"58k token scritti in un turno"
+],
+"remota": "01Rwcxc2dHvC",
+"aiutanti": 0,
+"strumenti": 47,
+"motori": {
+"opus": 1321028
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+92,
+7735291,
+139978,
+0,
+74487
+]
+},
+"costo": 4.157,
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 1,
+"Stop 15 · There are uncommitted changes in": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"02:58 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Le porto sulla tela nel prossimo pezzo.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura dei"
+],
+"Stop 15 · There are uncommitted changes in": [
+"02:58 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+]
+}
+}

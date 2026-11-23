@@ -27,7 +27,8 @@
 <link rel="apple-touch-icon" href="icona-180.png?v=6">
 <title>Parigi e Disney a Natale</title>
 <script>try{if(localStorage.getItem('palette')==='vino')document.documentElement.dataset.palette='vino'}catch(e){}</script>
-<script>/* C27 · prova per Mario: con ?luci=ferme nell’indirizzo tutte le animazioni fatte col foglio di stile si fermano (pochi strati); cielo e slitta continuano. Si capisce se lo sfarfallio di Torre e slitta viene dai troppi strati */if(/[?&]luci=ferme\b/.test(location.search))document.documentElement.classList.add('luci-ferme')</script>
+<script>/* C27 · prova per Mario: con ?luci=ferme nell’indirizzo tutte le animazioni fatte col foglio di stile si fermano (pochi strati); cielo e slitta continuano. Si capisce se lo sfarfallio di Torre e slitta viene dai troppi strati */if(/[?&]luci=ferme\b/.test(location.search))document.documentElement.classList.add('luci-ferme');
+/* C27 · seconda prova (Controllo 24): con ?tela=si le lucine si disegnano sulla tela sopra il disegno (pochi strati, stesso aspetto) */if(/[?&]tela=si\b/.test(location.search))document.documentElement.classList.add('tela-si')</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -855,7 +856,8 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 #top.anim-pausa *{animation-play-state:paused!important}
 .luci-ferme *{animation:none!important}
 .lt-off{animation:none!important;opacity:0!important}
-.luci-ferme body::before{content:'PROVA · luci ferme';position:fixed;top:calc(env(safe-area-inset-top) + 6px);left:50%;transform:translateX(-50%);z-index:9999;background:#F0C800;color:#000;font:700 13px/1 system-ui,sans-serif;padding:6px 12px;border-radius:99px;pointer-events:none}
+.luci-ferme body::before,.tela-si body::before{content:'PROVA · luci ferme';position:fixed;top:calc(env(safe-area-inset-top) + 6px);left:50%;transform:translateX(-50%);z-index:9999;background:#F0C800;color:#000;font:700 13px/1 system-ui,sans-serif;padding:6px 12px;border-radius:99px;pointer-events:none}
+.tela-si body::before{content:'PROVA · lucine sulla tela'}
 .apps2 .dlApp.roApp{gap:16px}.roApp i{position:relative}.ro-n{position:absolute;top:-.45em;right:-.55em;min-width:1.25em;height:1.25em;padding:0 .25em;border-radius:1em;background:var(--lamp);color:#1a1f4a;font:800 .72rem/1.25em system-ui,sans-serif;text-align:center;box-shadow:0 0 0 2px rgb(20 26 70 / .9)}
 .apps2 .dlApp small.ro-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px;-webkit-line-clamp:unset;opacity:1}.dlApp .ro-c{display:inline-block;flex:none;padding:1px 7px;border-radius:999px;border:1px solid rgb(246 201 100 / .7);background:rgb(246 201 100 / .14);font-size:.74rem;font-weight:700;white-space:nowrap}
 .dlGiorno{margin-bottom:var(--s4)}.dlGiorno p{margin:0 0 8px}.dlGiorno a{display:inline-block;padding:9px 16px;border-radius:999px;background:var(--lamp);color:var(--lamp-ink);font-weight:800;text-decoration:none}
@@ -2804,7 +2806,7 @@ else{show('piano',{keep:true});scrollTo(0,0)}
    Quello che nel disegno sta sopra una lucina (casette davanti, nebbia, albero, vignetta) lo ridisegno sopra la sua copia («source-atop»): l’aspetto resta uguale (prova a pixel «C27 · tela»).
    Restano animate nel disegno solo quelle coperte da cose che si muovono, quelle sotto la slitta e quelle con maschere. Se qualcosa va storto tutto torna come prima. */
 {const DE=document.documentElement;
- if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!DE.classList.contains('luci-ferme')&&window.CSSAnimation&&document.getAnimations&&window.XMLSerializer){
+ if(DE.classList.contains('tela-si')&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!DE.classList.contains('luci-ferme')&&window.CSSAnimation&&document.getAnimations&&window.XMLSerializer){
  const BZ={ease:[.25,.1,.25,1],'ease-in':[.42,0,1,1],'ease-out':[0,0,.58,1],'ease-in-out':[.42,0,.58,1]};
  const curva=s=>{s=(s||'linear').trim();let m=s.match(/^steps\((\d+)(?:,\s*([\w-]+))?\)$/);
   if(m){const n=+m[1],a=/start/.test(m[2]||'')?1:0;return x=>Math.min(1,Math.floor(x*n+a)/n)}

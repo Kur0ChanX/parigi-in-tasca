@@ -486,9 +486,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   // → pochi strati sul telefono; aspetto uguale: stesso istante, tela contro animazioni del disegno, pixel per pixel; niente tela con «riduci movimento»
   {
     const c = await b.newContext({ viewport: { width: 412, height: 839 }, deviceScaleFactor: 2.625, isMobile: true, hasTouch: true, serviceWorkers: 'block' }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
-    await r.goto(B + 'dicembre/'); await r.waitForFunction(() => window.luciTela && luciTela.E().length >= 3, null, { timeout: 15000 }).catch(() => {});
+    await r.goto(B + 'dicembre/?tela=si'); await r.waitForFunction(() => window.luciTela && luciTela.E().length >= 3, null, { timeout: 15000 }).catch(() => {});
     const cdp = await c.newCDPSession(r); let lay = null; cdp.on('LayerTree.layerTreeDidChange', (e) => { if (e.layers) lay = e.layers; });
     await r.evaluate(() => document.querySelector('.scene').scrollIntoView({ block: 'end' })); await r.waitForTimeout(500); await cdp.send('LayerTree.enable'); await r.evaluate(() => scrollBy(0, 1)); await r.waitForTimeout(1500); await cdp.send('LayerTree.disable');
+    const scrittaT = await r.evaluate(() => /PROVA/.test(getComputedStyle(document.body, '::before').content));
     const strati = lay ? lay.filter((l) => l.drawsContent).length : -1, info = await r.evaluate(() => window.luciTela ? luciTela.E().map((T) => [T.L.length, T.tieni.length]) : []);
     const shot = async () => { const cl = await r.evaluate(() => { const s = document.querySelector('svg.scene'); s.scrollIntoView({ block: 'center' }); const q = s.getBoundingClientRect(); return { x: 0, y: Math.max(0, q.top), width: innerWidth, height: Math.min(q.height, innerHeight - Math.max(0, q.top)) }; }); await r.waitForTimeout(150); return (await r.screenshot({ clip: cl })).toString('base64'); };
     let d = { media: 99, forti: 99 };
@@ -503,10 +504,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
         for (let i = 0; i < p.length; i += 4) { const m = Math.max(Math.abs(p[i] - q[i]), Math.abs(p[i + 1] - q[i + 1]), Math.abs(p[i + 2] - q[i + 2])); s += m; if (m > 40) n++; } return { media: +(s / (w * h)).toFixed(2), forti: +(100 * n / (w * h)).toFixed(2) }; }, [sA, sB]);
     }
     await c.close();
-    const c2 = await b.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce', serviceWorkers: 'block' }); const r2 = await c2.newPage(); await r2.goto(B + 'dicembre/'); await r2.waitForTimeout(2600); const rm = await r2.evaluate(() => !window.luciTela && !document.querySelector('.ltBox')); await c2.close();
+    const c2 = await b.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce', serviceWorkers: 'block' }); const r2 = await c2.newPage(); await r2.goto(B + 'dicembre/?tela=si'); await r2.waitForTimeout(2600); const rm = await r2.evaluate(() => !window.luciTela && !document.querySelector('.ltBox')); await c2.close();
     const tela = info.reduce((n, x) => n + x[0], 0), tieni = info.reduce((n, x) => n + x[1], 0);
-    ok(`C27 · tela: ${tela} lucine e addobbi sulla tela (testata, ghirlanda, mercatino; ${tieni} rimasti nel disegno), strati che disegnano ${strati} (prima 1.355), aspetto uguale (scarto medio ${d.media}, pixel diversi ${d.forti} %), niente tela con «riduci movimento»`,
-      info.length === 3 && tela > 600 && tieni <= 20 && strati > 0 && strati <= 120 && d.media < 2.5 && d.forti < 1 && rm);
+    ok(`C27 · tela: ${tela} lucine e addobbi sulla tela (testata, ghirlanda, mercatino; ${tieni} rimasti nel disegno), strati che disegnano ${strati} (prima 1.355), aspetto uguale (scarto medio ${d.media}, pixel diversi ${d.forti} %), niente tela con «riduci movimento»; per ora solo con ?tela=si (scritta «PROVA»)`,
+      info.length === 3 && scrittaT && tela > 600 && tieni <= 20 && strati > 0 && strati <= 120 && d.media < 2.5 && d.forti < 1 && rm);
   }
   // C18: la slitta passa da sola dopo 5 s (nel cielo, coi pacchi); con «riduci movimento» non parte; giovedì 17 col riquadro «Partite prima»
   {
