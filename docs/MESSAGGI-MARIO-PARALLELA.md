@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 15:09 · 01Rwcxc4aWHi
-Mi raccomando, il verde non troppo in vista, deve, lui è nel buio, quindi da lontano non è che distingo bene il verde, deve essere in ombra. Giusto il rosso di Jack va bene in vista, almeno si capisce.
-
 ## 2026-11-22 15:13 · 01Rwcxc4aWHi
 Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
 
@@ -128,3 +125,6 @@ metti in Parigi in generale, in posti dove si può arrivare tranquillamente con 
 
 ## 2026-11-23 15:46 · 01Rwcxc4qAM1
 No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti, ecco. Si può valutare tutto, però consigliami tu i Best Buy, dove mangiare carne, dove mangiare sushi giapponese, dove mangiare il pesce, dove mangiare cucina tradizionale, eccetera eccetera. Mettimi tu i consigli e poi alternative, insomma, molte alternative.
+
+## 2026-11-23 18:39 · 01Rwcxc2rpkc
+controllo 25 ok 14 ok
