@@ -32,3 +32,7 @@
 - → scelta 1: pubblicare la prova `?tela=si` (l’app normale resta com’è). Prove locali rifatte sull’ultimo commit prima della PR.
 - PR 47 da `versione-v45-tela` (commit f4803af, prove locali: colori ok, `--controlla` VERO, web app 81/81, scritte 20/20), unita squash (main 32f68ba). Sito vero letto col browser (Pixel 7): normale senza scritta né tela; `?tela=si` con «PROVA · lucine sulla tela», tela accesa, 0 errori.
 - Manca: i 3 video di Mario (normale, `?luci=ferme`, `?tela=si`), misura con `misura.py`, poi Prossimi passi 2 delle consegne (tela per tutti, v46).
+
+## Esito dei video · Mario 23/11 ~09:1x, intero
+> Allora, su normale flickera, luciferme no, però non flickera, però è bruttissimo. Luci ferme, e su tela c'è lo stesso problema, flickera lo stesso su tela.
+- → normale: sfarfalla · `?luci=ferme`: NON sfarfalla (ma brutta, tutto fermo) · `?tela=si`: sfarfalla uguale. Quindi: la causa sta nelle animazioni del foglio di stile, ma NON nel numero di strati (1.355 → 69 non basta). Tentativo «tela» fallito (secondo dopo la v40 «più leggera»): si cambia strada.
