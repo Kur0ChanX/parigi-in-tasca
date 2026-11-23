@@ -2,10 +2,10 @@
 "account": "cba507",
 "sessione": "8863fedd52b4",
 "giorno": "2026-11-23",
-"turni": 5,
-"peso": 2791390,
-"uscita": 51888,
-"contesto_max": 314337,
+"turni": 6,
+"peso": 3210427,
+"uscita": 61773,
+"contesto_max": 328296,
 "anomalie": [
 "26k token scritti in un turno",
 "1 uscite di strumento enormi (178 KB la più grande): leggere a pezzi (grep -n, sed -n)"
@@ -28,21 +28,21 @@
 },
 "remota": "01Rwcxc2rpkc",
 "aiutanti": 0,
-"strumenti": 82,
+"strumenti": 95,
 "bilancia": 2,
 "motori": {
-"opus": 2791390
+"opus": 3210427
 },
 "grezzi": {
 "opus": [
-164,
-21345181,
-317815,
+184,
+24878725,
+330805,
 0,
-51888
+61773
 ]
 },
-"costo": 7.85,
+"costo": 8.8584,
 "costo_fredde": 1.692,
 "memoria_scaduta": 1,
 "ricreati": 211497,

@@ -1,17 +1,20 @@
-# Ultima risposta di Claude (23/11/2026 18:58 ora italiana)
+# Ultima risposta di Claude (23/11/2026 20:00 ora italiana)
 
 ✅ FATTO
-- **La v49 è pronta nel ramo, non è online.** Nel passo 2 di «Scegli», con 4 notti dal 13, i n. 18, 20 e 21 stanno in fondo, in un gruppo «Liberi solo dal 14» col perché e coi colori normali. Ho trattato allo stesso modo il n. 15, che è esaurito su Booking: è in un gruppo «Esauriti per queste notti».
-- Ho tolto dalla pagina le due prove che servivano a trovare lo sfarfallio (`?luci=ferme` e `?tela=si`): circa 160 righe di codice in meno.
-- **Prove verdi:** web app 83 su 83 (ci sono 2 prove vecchie in meno e 1 nuova sul gruppo), scritte 20 su 20, colori a posto. Tutto è salvato su …
+- **La v49 è online dalle 19:59.** L'ho controllata sul sito vero: nel passo 2 di «Scegli» ci sono i gruppi «Liberi solo dal 14» ed «Esauriti», non ci sono più righe grigie e la pagina non dà errori. Sul telefono tocca il numerino in alto e poi «Aggiorna versione».
+- Il codice di prova della testata non c'è più.
+
+───
+💡 PARERE sui voti «a spinta»
+Ho valutato e c'è un modo:
+- Un tasto **«Aggiorna i voti»** che parte **solo quando lo tocchi tu**, mai da solo.
+- Il lavoro lo fa **GitHub** (il sito che tiene il codice dell'app): chiede a Google i voti dei 56 ristoranti e li mette nell'app …
 
 ## Domande a Mario
 
 ❓ DOMANDE
-**DOMANDA 3** · A cosa serve: senza il tuo ok sulla foto non pubblico la v49.
-📌 Di cosa parliamo: la foto qui sopra. È il passo 2 di «Scegli»: a sinistra com'era prima (righe grigie), a destra com'è adesso (gruppo in fondo col perché).
-1 · sì, pubblica
-2 · cambia qualcosa (scrivi cosa)
+**DOMANDA 4** · A cosa serve: con la carta si può fare, senza no. Su soldi e carta decidi tu.
+📌 Di cosa parliamo: il tasto per aggiornare i voti Google della scheda «Mangiare» quando lo tocchi tu.
+1 · sì, fallo: ti guido io passo passo (stima: ~15 minuti a mano, una volta sola)
+2 · no, niente carta: restano voto con data e link al voto vero
 Consiglio: **1**.
-
-La DOMANDA 2 sui voti dei ristoranti aggiornati da soli è ancora aperta (consiglio: 2, lasciarli come sono).
