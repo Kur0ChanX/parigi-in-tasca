@@ -6,7 +6,7 @@
 ## Nastro delle versioni
 🚀 Online: v45 · 🟩 Controllo 23 · 23/11 · luna di Topolino sempre nitida (C23: disegnata sulla tela del cielo; PR 45, prove locali verdi: web app 79/79, scritte 20/20)
 ✅ Prima: v44 · 🟩 Controllo 22 · 23/11 · guida controllata (n. 8, 16, 23, Orly, mercatini) e «Questo o quello?» (PR 44)
-⏳ Dopo: orari RER A del 13–17/12 (verso il 26/11)
+⏳ Dopo: orari RER A del 13–17/12 (il 23/11 ancora no, sito fino al 6/12; sveglia 26/11 10:17 della Controllo 25)
 
 ## 0. Aspetta Mario
 - 23/11 · 🟩 Controllo 24 · C27 · scrivi «pubblica» (la prova `?tela=si` è pronta e provata, ma senza il tuo ok non posso aprire la PR); poi video di 30 s della testata, con la slitta che passa, in 3 modi: https://kur0chanx.github.io/parigi-in-tasca/dicembre/ , poi con `?luci=ferme` e con `?tela=si` in fondo all’indirizzo. 📌 A cosa serve: capire se lo sfarfallio viene dai troppi strati e se la tela lo toglie.
