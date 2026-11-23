@@ -21,7 +21,7 @@
 
 ## Prossimi passi
 1. Risposta di Mario sulla v46 (riga 🛑 in «Aspetta Mario»). **Ok** → togliere le prove: `?luci=ferme` (script in testa alla pagina, classe `luci-ferme`, prova «C27»), `?tela=si` (blocco «C27 · lucine sulla tela» in fondo all’ultimo `<script>`, classi `tela-si`/`lt-off`/`ltBox`, `window.luciTela`, prova «C27 · tela»), le due scritte PROVA; v47 senza novità visibili (o novità «pagina più leggera»), prove, PR, controllo online. **Sfarfalla ancora** → suo video, `misura.py`, poi `ricrea.js`/`spazza.js` su ciò che resta (pacchi e polvere aggiunti dal programma, Zero).
-2. Sveglia RER A (26/11 10:17): rifarla da questa sessione (`send_later`), poi cancellare `trig_01AMpc1X4UrgQ8oSgS5a6814`.
+2. Sveglia RER A (26/11 10:17): rifatta dalla Controllo 26 (`trig_01S2eBGe4VhaBSxPU6yKa187`); la vecchia `trig_01AMpc1X4UrgQ8oSgS5a6814` spenta (cancellarla bloccato dal controllo automatico dei permessi).
 3. Restano animate nel disegno (non servono per lo sfarfallio): 19 fiammelle, proiezioni del castello, `tw2/tw3`. Toccarle solo se Mario lo chiede.
 
 ## Blocchi e rischi
