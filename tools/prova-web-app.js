@@ -509,6 +509,29 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     ok(`C27 · tela: ${tela} lucine e addobbi sulla tela (testata, ghirlanda, mercatino; ${tieni} rimasti nel disegno), strati che disegnano ${strati} (prima 1.355), aspetto uguale (scarto medio ${d.media}, pixel diversi ${d.forti} %), niente tela con «riduci movimento»; per ora solo con ?tela=si (scritta «PROVA»)`,
       info.length === 3 && scrittaT && tela > 600 && tieni <= 20 && strati > 0 && strati <= 120 && d.media < 2.5 && d.forti < 1 && rm);
   }
+  // C27 · slitta (Controllo 25, video di Mario 23/11: con la tela sfarfalla ancora, con le luci ferme no): le 3 stelline della luna, animate nel disegno proprio sotto la slitta,
+  // facevano rifare al telefono gli strati di Torre, faro e slitta a ogni passaggio (vuoti per un fotogramma). → nessuna animazione del foglio di stile nel disegno prima della slitta;
+  // slitta spostata lungo 3 passaggi: nessuno strato grande rifatto; le stelline si vedono sulla tela del cielo (che luccicano; con «riduci movimento» ferme e piene)
+  {
+    const stella = (pg) => pg.evaluate(() => { const cv = document.getElementById('sky'), sc = document.querySelector('.scene'), m = sc.getScreenCTM(), cr = cv.getBoundingClientRect(), k = cv.width / cr.width, x = cv.getContext('2d');
+      return [[272, 55], [209, 93], [247, 41]].map(([sx, sy]) => { const q = new DOMPoint(sx, sy).matrixTransform(m), px = x.getImageData(Math.round((q.x - cr.left) * k), Math.round((q.y - cr.top) * k), 1, 1).data; return Math.min(px[0], px[1], px[2]) * px[3] / 255; }); });
+    const c = await b.newContext({ viewport: { width: 412, height: 839 }, deviceScaleFactor: 2.625, isMobile: true, hasTouch: true, serviceWorkers: 'block' }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+    await r.goto(B + 'dicembre/'); await r.waitForTimeout(1500);
+    const prima = await r.evaluate(() => { const sl = document.getElementById('slitta'); return document.getAnimations().filter((a) => { const e = a.effect && a.effect.target; return e && a.playState === 'running' && e.closest('svg.scene') && (e.compareDocumentPosition(sl) & Node.DOCUMENT_POSITION_FOLLOWING); }).map((a) => a.effect.target.getAttribute('class') || a.effect.target.tagName); });
+    let luce = [0, 0, 0]; for (let i = 0; i < 8; i++) { const v = await stella(r); luce = luce.map((a, j) => Math.max(a, v[j])); await r.waitForTimeout(450); }
+    const cdp = await c.newCDPSession(r); let lay = null; cdp.on('LayerTree.layerTreeDidChange', (e) => { if (e.layers) lay = e.layers; });
+    await r.evaluate(() => document.querySelector('.scene').scrollIntoView({ block: 'end' })); await r.waitForTimeout(300); await cdp.send('LayerTree.enable');
+    const visti = new Set(); let nuovi = 0, primo = true;
+    for (const [d, y0] of [[-1, 70], [1, 62], [-1, 78]]) for (let u = 0; u <= 1.0001; u += 0.04) {
+      await r.evaluate(([u, d, y0]) => window.slittaProva(u, d, y0), [u, d, y0]); await r.waitForTimeout(120);
+      for (const l of lay || []) { if (!l.drawsContent || l.width * l.height < 15000) continue; if (!visti.has(l.layerId)) { visti.add(l.layerId); if (!primo) nuovi++; } } primo = false;
+    }
+    await cdp.send('LayerTree.disable'); await c.close();
+    const c2 = await b.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce', serviceWorkers: 'block' }); const r2 = await c2.newPage(); await r2.goto(B + 'dicembre/'); await r2.waitForTimeout(1500); const luceRM = await stella(r2); await c2.close();
+    ok(`C27 · slitta: nessuna animazione nel disegno sotto la slitta (${prima.length}), slitta spostata lungo 3 passaggi senza strati grandi rifatti (${nuovi}), stelline della luna sulla tela del cielo (luce ${luce.map(Math.round).join('/')}, con «riduci movimento» ${luceRM.map(Math.round).join('/')})`,
+      prima.length === 0 && visti.size > 0 && nuovi === 0 && luce.every((v) => v > 180) && luceRM.every((v) => v > 180));
+    if (prima.length) console.log('animazioni sotto la slitta:', prima);
+  }
   // C18: la slitta passa da sola dopo 5 s (nel cielo, coi pacchi); con «riduci movimento» non parte; giovedì 17 col riquadro «Partite prima»
   {
     const mk = async (rm) => { const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block', reducedMotion: rm }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); }); await r.goto(B + 'dicembre/'); return [c, r]; };

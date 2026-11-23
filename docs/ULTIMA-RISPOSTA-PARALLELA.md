@@ -1,9 +1,14 @@
-# Ultima risposta di Claude (23/11/2026 03:13 ora italiana)
+# Ultima risposta di Claude (23/11/2026 09:31 ora italiana)
 
-La correzione dello sfarfallio è pronta e provata. **Non è ancora online**: la pubblicazione ha bisogno del tuo ok. Ho passato le consegne: questa era l'ottava chat della catena, quindi la prossima la apri tu.
+Ho capito: con la tela sfarfalla ancora, con le luci ferme no (ma è brutta).
+🧠 Opus · Extra
 
 ───
 ✅ FATTO
-- Lucine, addobbi che dondolano, vapore, scintille, finestre del castello e faro adesso li disegna una tela sopra il disegno. Non sono più uno strato a testa.
-- Telefono di prova: gli strati passano da 1.355 a 69. Ho confrontato lo stesso istante pixel per pixel e l'aspetto resta uguale: cambiano solo i bordi, per meno di un pixel.
-- Per ora la tela si accende solo con …
+- **Causa trovata e provata** sul telefono di prova. Il colpevole non sono le tante lucine: sono le **3 stelline che luccicano vicino alla luna**. Stanno proprio sotto il passaggio della slitta. Quando la slitta ci passa sopra, il telefono ridisegna da zero lo strato di Torre, faro e slitta, e per un attimo quello strato resta vuoto.
+- La misura combacia coi tuoi 3 video:
+
+| Versione | Strati rifatti in 30 s | Il tuo video |
+|---|---|---|
+| normale | 6 | sfarfalla |
+| luci ferme | 0 | non …
