@@ -31,7 +31,8 @@
 "blocchi": {
 "Stop 8 · Il turno finisce con una": 3,
 "Stop 10 · Promessa a Mario senza voce": 2,
-"Stop 7 · Domanda a Mario poco chiara": 1
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1
 },
 "esempi_blocchi": {
 "Stop 8 · Il turno finisce con una": [
@@ -45,6 +46,9 @@
 ],
 "Stop 7 · Domanda a Mario poco chiara": [
 "02:15 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1** · Prima di rifare tutte le lucine, f», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"02:24 · Ti fermi ad aspettare Mario con il contesto a 291k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
 ]
 }
 }
