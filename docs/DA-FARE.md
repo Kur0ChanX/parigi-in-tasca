@@ -4,11 +4,12 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v44 · 🟩 Controllo 22 · 23/11 · guida controllata (n. 8, 16, 23, Orly, mercatini) e «Questo o quello?» scelto da Mario (PR 44; Mario 23/11 01:37 «Domanda 1, domanda 2, va bene»)
-🛠️ In arrivo: v45 · 🟩 Controllo 23 · 23/11 · luna di Topolino sempre nitida (C23: disegnata sulla tela del cielo), prove locali verdi (web app 79/79, scritte 20/20)
+🚀 Online: v45 · 🟩 Controllo 23 · 23/11 · luna di Topolino sempre nitida (C23: disegnata sulla tela del cielo; PR 45, prove locali verdi: web app 79/79, scritte 20/20)
+✅ Prima: v44 · 🟩 Controllo 22 · 23/11 · guida controllata (n. 8, 16, 23, Orly, mercatini) e «Questo o quello?» (PR 44)
 ⏳ Dopo: orari RER A del 13–17/12 (verso il 26/11)
 
 ## 0. Aspetta Mario
+- 23/11 · 🟩 Controllo 23 · guarda la v45 sul telefono (se vedi ancora «v44»: numerino in alto → «Aggiorna versione») e lascia la testata in vista 3–4 minuti: la luna di Topolino resta nitida coi crateri? Già che ci sei, la guida dei giorni col n. 16 o 23 e «Questo o quello?» (v44). Scrivi cosa vedi, anche «ok». 📌 Serve a chiudere le voci «👁» di C22, C23, C24 e C26.
 - 22/11 · 🛑 · 🟩 Controllo 14 · DOMANDA 1: gli alloggi «spenti» (n. 18, 20, 21: su Airbnb liberi solo dal 14) come li mostro? 📌 Di cosa parliamo: passo 2 di «Scegli», righe grigie quando avete scelto 4 notti dal 13. Scelte: 1 · in fondo, in un gruppo «Liberi solo dal 14» coi colori normali e il perché · 2 · nascosti da soli finché scegliete 4 notti · 3 · come ora, con la scritta «non libero il 13» più chiara. Consiglio 1.
 - 22/11 · ❓ · 🟩 Controllo 19 · ok a un controllo automatico che blocca le foto di lavoro senza la scritta in alto? Scelte: 1 · sì, fallo · 2 · no. Consiglio: 1. 📌 Di cosa parliamo: l’errore «foto di lavoro aperte senza la scritta» è ricapitato (docs/ERRORI.md); il controllo sta nei file delle regole (`.claude/`), che si toccano solo col tuo ok scritto.
 - 22/11 · ❓ · 🟩 Controllo 13 · DOMANDA 1: l’albero della testata lo faccio dal tuo disegno (preso da un annuncio Etsy: sul sito pubblico potrebbe non essere permesso) o ne disegno uno nostro nello stesso stile? Scelte: 1 · il tuo disegno · 2 · uno nostro uguale nello stile. Consiglio: 1, come hai chiesto. 📌 Di cosa parliamo: l’albero di Natale nella testata della pagina di dicembre (Mario 22/11 16:29 «Ti mando un albero…»).
