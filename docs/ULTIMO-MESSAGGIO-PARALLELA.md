@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (23/11/2026 11:35 ora italiana)
+# Ultimo messaggio di Mario (23/11/2026 11:45 ora italiana)
 
-Riusciamo a portare il kit aggiornato RVC qui? Dimmi cosa me posso fare.
+non riesco a mettere 2 fattori non mi arriva il codice nell app git hub vosa sbaglio?
