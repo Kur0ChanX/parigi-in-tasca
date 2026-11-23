@@ -339,6 +339,34 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     });
     const okM = mg.schede === 5 && mg.on && mg.tot >= 30 && mg.tre && mg.maps && mg.come && mg.bbPrimo && mg.soloSushi && mg.sw <= mg.vw && mg.sw2 <= mg.vw && mg.treni === 8 && mg.meteo === 5 && mg.meteoTesto && mg.trGo === 5;
     ok('C28: scheda «Mangiare» (best buy per primo, 3 voti, Maps e «Come arrivo»), 8 tasti dei treni dal vivo, meteo e scorciatoia ai treni in ogni giorno', okM); if (!okM) console.log(mg);
+    // C29 (Mario 23/11 «pulizia dei testi … più ordinato», senza togliere informazioni): niente muri di testo. Con tutte le sezioni e le tendine aperte nessuna riga
+    // visibile supera 350 caratteri (prima 18: pro e contro degli alloggi, spa, prezzi, legenda, mappa, costi). Pro e contro con la classe loro (.pcx), una frase per
+    // punto: il nome .pc uguale al contenitore della pagina ha dato 3 difetti (pagina larga, paragrafi rientrati, pro e contro in 2 colonne sul computer).
+    {
+      const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const r = await c.newPage();
+      r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+      await r.goto(B + 'dicembre/'); await r.waitForTimeout(900);
+      const t = await r.evaluate(() => {
+        document.body.removeAttribute('data-tab'); document.body.removeAttribute('data-card'); document.querySelectorAll('details').forEach((d) => { d.open = true; });
+        const lunghi = [];
+        for (const e of document.querySelectorAll('main p, main li, main dd, main .in > div')) {
+          if (e.querySelector('p,li,ul,ol,div') || e.closest('.picks')) continue;
+          const riga = e.innerText.split('\n').map((x) => x.replace(/\s+/g, ' ').trim()).sort((x, y) => y.length - x.length)[0] || '';
+          if (riga.length > 350) lunghi.push(riga.length + ': ' + riga.slice(0, 60));
+        }
+        const carte = document.querySelectorAll('#hotelCards article').length;
+        return { lunghi, pc: document.querySelectorAll('.pc').length, carte, conPcx: document.querySelectorAll('#hotelCards article .pcx').length, punti: document.querySelectorAll('#hotelCards .pcx>p').length };
+      });
+      await c.close();
+      const c6 = await b.newContext({ viewport: { width: 1440, height: 900 }, serviceWorkers: 'block' }); const r6 = await c6.newPage();
+      await r6.goto(B + 'dicembre/'); await r6.waitForTimeout(900);
+      Object.assign(t, await r6.evaluate(() => { document.body.removeAttribute('data-tab'); document.body.removeAttribute('data-card');
+        const x = document.querySelector('#hotelCards .pcx'), col = (e) => (e ? getComputedStyle(e).gridTemplateColumns.trim().split(/\s+/).length : 0);
+        return { colPcx: col(x), colPagina: col(document.querySelector('.pc')) }; }));
+      await c6.close();
+      const okL = t.lunghi.length === 0 && t.pc === 1 && t.carte > 30 && t.conPcx === t.carte && t.punti > t.carte * 3 && t.colPcx === 1 && t.colPagina === 2;
+      ok('C29: nessuna riga visibile oltre 350 caratteri; pro e contro una frase per punto (.pcx in ogni scheda), sul computer in una colonna', okL); if (!okL) console.log(t);
+    }
     // Mario 22/11: la scelta cambia la pagina e va fatto capire: riquadro prima, avviso dopo, pallino sulle schede cambiate che sparisce aprendole
     const av = await q.evaluate(async () => {
       const w = () => new Promise((r) => setTimeout(r, 250)), prima = document.body.dataset.tab, sc0 = new URL(location.href).searchParams.get('scelta');
