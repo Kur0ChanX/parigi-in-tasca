@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (23/11/2026 11:45 ora italiana)
+# Ultimo messaggio di Mario (23/11/2026 12:02 ora italiana)
 
-non riesco a mettere 2 fattori non mi arriva il codice nell app git hub vosa sbaglio?
+@"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta].mp4" Niente, ho preso il codice che mi hai detto tu, l'ho messo su Google, ho messo in base all'ora, ho copiato il codice, l'ho messo sull'autenticazione come nel video, ma non funziona. Cosa sbaglio?

@@ -1,13 +1,11 @@
-# Ultima risposta di Claude (23/11/2026 11:38 ora italiana)
+# Ultima risposta di Claude (23/11/2026 12:03 ora italiana)
 
-Ho capito: vuoi il kit RVC più nuovo in questo progetto. Dopo vuoi un controllo della guida di dicembre e idee nuove, da approvare una per una.
-🧠 Opus · Extra
+Ho capito: il codice nuovo di Authenticator l'hai scritto, ma GitHub dice «Two-factor authentication failed».
 
-✅ **FATTO**
-- Ho provato a scaricare il kit: senza chiave non si può. Il repo RVC è privato e GitHub risponde «non trovato».
-- In questo ambiente la chiave `RVC_KIT_TOKEN` non c'è.
-- Ho segnato la tua richiesta di controllo e idee (lavoro C28): la faccio subito dopo il kit, così uso già le regole nuove.
+**Cosa sbagli** (dal video): il codice lo scrivi nella pagina **sbagliata**. È la pagina vecchia «Two-factor settings · Verify your recently…», che vuole ancora il codice della chiave vecchia. Va scritto invece sotto il QR, nel riquadro «Verify the code from the app», e poi va toccato **«Save»**. Finché non tocchi «Save», GitHub non conosce la chiave nuova.
+
+(Authenticator nel video si vede nero: è normale, l'app blocca le registrazioni dello schermo.)
 
 ───
-💡 **PARERE**
-- La strada migliore è una **chiave di sola lettura** (un **token**: una password che permette solo di leggere il …
+👉 **DA FARE TU**
+A cosa …
