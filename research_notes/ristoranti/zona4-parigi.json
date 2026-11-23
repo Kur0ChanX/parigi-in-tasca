@@ -1,0 +1,1167 @@
+[
+  {
+    "nome": "Robert et Louise",
+    "zona": "Marais",
+    "cucina": "carne",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13: 12–22 continuato (pranzo e cena) · lun 14: solo cena 17:30–22 · mar 15 e mer 16: chiuso (sito ufficiale, visto 23/11/2026; Google uguale)",
+    "indirizzo": "64 rue Vieille-du-Temple, 75003 Paris",
+    "lat": 48.8590844,
+    "lon": 2.3594957,
+    "fascia": "€€",
+    "prezzo": "35–50 € a testa (entrecôte 300 g 26 €, côte de bœuf per 2 70 €, antipasti 9–20 €; carta sul sito ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,5/5",
+        "recensioni": 3514,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Robert+et+Louise%2C+64+rue+Vieille-du-Temple%2C+75003+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota dal sito"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,2/5",
+        "recensioni": 1586,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d715003-Reviews-Robert_et_Louise-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": false,
+    "perche": "Bistrot del 1958 con il camino: la carne si griglia sul fuoco di legna davanti a te. Prendi la côte de bœuf per due o l'entrecôte con patate saltate.",
+    "da_sapere": "Prenota dal sito (bottone «Réserver») o allo 01 42 78 55 89. Chiedi il piano terra vicino al camino: il seminterrato ha meno atmosfera (Paris by Mouth). Locale piccolo e rumoroso, niente per vegetariani.",
+    "sito": "https://www.robertetlouise.com/",
+    "menu": "https://www.robertetlouise.com/menus-carte/",
+    "prenota": "https://www.robertetlouise.com/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Robert+et+Louise%2C+64+rue+Vieille-du-Temple%2C+75003+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d715003-Reviews-Robert_et_Louise-Paris_Ile_de_France.html",
+    "fermata": "Saint-Paul · metro 1, 7 min a piedi (anche Rambuteau, metro 11)",
+    "da_chatelet": "~13 min (stima): metro 1 da Châtelet a Saint-Paul (2 fermate) + 7 min a piedi; dal RER A aggiungi ~5 min di corridoi",
+    "best_buy": true,
+    "perche_best_buy": "Carne alla brace di legna di ottima qualità a prezzi da bistrot: entrecôte con contorno a 26 €, Google 4,5 su oltre 3.500 recensioni, aperto domenica tutto il giorno.",
+    "fonti": [
+      "https://www.robertetlouise.com/ (23/11/2026)",
+      "https://www.robertetlouise.com/menus-carte/ (23/11/2026)",
+      "https://www.theinfatuation.com/paris/guides/best-steak-frites-paris (23/11/2026)",
+      "https://parisbymouth.com/robert-et-louise/ (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Robert+et+Louise%2C+64+rue+Vieille-du-Temple%2C+75003+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d715003-Reviews-Robert_et_Louise-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Unico",
+    "zona": "Charonne · rue Paul Bert (11e)",
+    "cucina": "carne",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13 e lun 14: chiuso · mar 15 e mer 16: 12–14 e 19:30–22 (sito ufficiale, visto 23/11/2026; Google: cena fino 22:30)",
+    "indirizzo": "15 rue Paul Bert, 75011 Paris",
+    "lat": 48.85199,
+    "lon": 2.3846317,
+    "fascia": "€€€",
+    "prezzo": "50–60 € a testa (carni 30–40 €, antipasti 10–14 €; sito ufficiale. Prezzo medio TheFork 58 €)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,4/5",
+        "recensioni": 571,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Unico%2C+15+rue+Paul+Bert%2C+75011+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "9,6/10",
+        "recensioni": 1159,
+        "visto": "23/11/2026",
+        "url": "https://www.thefork.fr/restaurant/unico-r35147",
+        "nota": "non ufficiale; pagina letta il 23/11/2026 (copia del 20/11/2026)"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,9/5",
+        "recensioni": 295,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d896780-Reviews-Unico-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Ex macelleria anni '70 diventata tempio della carne argentina cotta sulla brace di carbone. Prendi il bife de lomo (filetto) o l'ojo de bife con chimichurri.",
+    "da_sapere": "Prenota su TheFork o dal sito. Chiuso domenica e lunedì. Grande scelta di vini argentini; il personale spiega bene i tagli.",
+    "sito": "https://resto-unico.com/",
+    "menu": "https://resto-unico.com/",
+    "prenota": "https://www.thefork.fr/restaurant/unico-r35147",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Unico%2C+15+rue+Paul+Bert%2C+75011+Paris",
+    "thefork": "https://www.thefork.fr/restaurant/unico-r35147",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d896780-Reviews-Unico-Paris_Ile_de_France.html",
+    "fermata": "Faidherbe-Chaligny · metro 8, 3 min a piedi (anche Charonne, metro 9)",
+    "da_chatelet": "~18 min (stima): metro 1 fino a Bastille, poi metro 8 fino a Faidherbe-Chaligny (2 fermate) + 3 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://resto-unico.com/ (23/11/2026)",
+      "https://www.thefork.fr/restaurant/unico-r35147 (23/11/2026)",
+      "https://fr.gaultmillau.com/fr/restaurants/unico-paul-bert (23/11/2026)",
+      "https://www.timeout.fr/paris/restaurants/les-meilleurs-restaurants-pour-viandards (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Unico%2C+15+rue+Paul+Bert%2C+75011+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d896780-Reviews-Unico-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Le Severo",
+    "zona": "Pernety · Mouton-Duvernet (14e)",
+    "cucina": "carne",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13: chiuso · lun 14 e mar 15: 12–14 e 19:30–22 · mer 16: solo cena 19:30–22 (sito ufficiale lesevero.com, visto 23/11/2026; Google uguale, cena dalle 19)",
+    "indirizzo": "8 rue des Plantes, 75014 Paris",
+    "lat": 48.8319583,
+    "lon": 2.3245614,
+    "fascia": "€€€",
+    "prezzo": "45–65 € a testa (alla carta 40–60 €, Paris je t'aime; tartare 20 € e filetto al pepe 42 € su TheFork nel 2024) — stima",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,0/5",
+        "recensioni": 425,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Le+Severo%2C+8+rue+des+Plantes%2C+75014+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "il 23/11/2026 TheFork scrive «Severo n'est plus disponible»; vecchio voto 9,4/10 su 1.269 recensioni (pagina del 2024)"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,0/5",
+        "recensioni": 4,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719424-Reviews-Le_Severo-Paris_Ile_de_France.html",
+        "nota": "non ufficiale; solo 4 recensioni, poco indicativo"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Minuscolo bistrot da veri carnivori: carne di più razze frollata 60 giorni (Le Fooding). Famoso per la tartare e per il filetto al pepe con patatine.",
+    "da_sapere": "Pochi posti: prenota dal sito o allo 01 45 40 40 91. Chiuso sabato e domenica, mercoledì solo cena. Locale spartano: si va per la carne, non per l'impiattamento (per questo Google è a 4,0).",
+    "sito": "https://www.lesevero.com/",
+    "menu": "https://www.lesevero.com/",
+    "prenota": "https://www.lesevero.com/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Le+Severo%2C+8+rue+des+Plantes%2C+75014+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719424-Reviews-Le_Severo-Paris_Ile_de_France.html",
+    "fermata": "Mouton-Duvernet · metro 4, 6 min a piedi (anche Pernety, metro 13)",
+    "da_chatelet": "~24 min (stima): metro 4 diretta da Châtelet a Mouton-Duvernet (11 fermate) + 6 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://www.lesevero.com/adresses (23/11/2026)",
+      "https://parisjetaime.com/restaurant/le-severo-p649 (23/11/2026)",
+      "https://parisauthority.com/en/articles/paris-steak-restaurants (23/11/2026)",
+      "https://www.thefork.fr/restaurant/severo-r335857 (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Le+Severo%2C+8+rue+des+Plantes%2C+75014+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719424-Reviews-Le_Severo-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Gaston",
+    "zona": "Batignolles (17e)",
+    "cucina": "carne",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "tutti i giorni 12–14:30 e 19–22:30: dom 13, lun 14, mar 15, mer 16 pranzo e cena (sito ufficiale «Ouvert 7J/7», visto 23/11/2026; Google uguale)",
+    "indirizzo": "11 rue Brochant, 75017 Paris",
+    "lat": 48.8886142,
+    "lon": 2.317296,
+    "fascia": "€€",
+    "prezzo": "40–55 € a testa la sera (prezzo medio TheFork 39 €; côte de bœuf 90–130 €/kg); pranzo con menu sotto i 30 € (recensione TheFork)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,6/5",
+        "recensioni": 2364,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Gaston%2C+11+rue+Brochant%2C+75017+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "8,4/10",
+        "recensioni": 1722,
+        "visto": "23/11/2026",
+        "url": "https://www.thefork.fr/restaurant/gaston-r269743",
+        "nota": "non ufficiale; copia della pagina del 28/06/2026: «Complet sur TheFork», non si prenota lì"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,3/5",
+        "recensioni": 284,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d11660759-Reviews-Gaston-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Bistrot di quartiere tutto sulla carne frollata, in parte dalla macelleria Metzger Frères. Prendi la côte de bœuf da dividere e l'osso al midollo.",
+    "da_sapere": "Aperto tutti i giorni. Prenota dal sito o allo 01 46 27 49 89 (TheFork non lo prende più). Può essere rumoroso; servizio a volte lento.",
+    "sito": "https://www.gastondesbatignolles.fr/",
+    "menu": "https://www.thefork.fr/restaurant/gaston-r269743/menu",
+    "prenota": "https://www.gastondesbatignolles.fr/reservation/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Gaston%2C+11+rue+Brochant%2C+75017+Paris",
+    "thefork": "https://www.thefork.fr/restaurant/gaston-r269743",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d11660759-Reviews-Gaston-Paris_Ile_de_France.html",
+    "fermata": "Brochant · metro 13, 5 min a piedi",
+    "da_chatelet": "~23 min (stima): metro 14 fino a Saint-Lazare (3 fermate), poi metro 13 direzione Les Courtilles fino a Brochant (4 fermate) + 5 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://www.gastondesbatignolles.fr/ (23/11/2026)",
+      "https://www.thefork.fr/restaurant/gaston-r269743 (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Gaston%2C+11+rue+Brochant%2C+75017+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d11660759-Reviews-Gaston-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Clamato",
+    "zona": "Charonne (11e)",
+    "cucina": "pesce",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "tutti i giorni 12–14:30 e 19–22:30: dom 13, lun 14, mar 15, mer 16 pranzo e cena (sito ufficiale, visto 23/11/2026). Chiusure annunciate solo 24–25/12 e 31/12–1/1",
+    "indirizzo": "80 rue de Charonne, 75011 Paris",
+    "lat": 48.853525,
+    "lon": 2.3805999,
+    "fascia": "€€",
+    "prezzo": "45–65 € a testa (piattini 7–15 €, 6 ostriche 23 €, plateau 65 €, branzino intero 39 €; sito ufficiale) — stima",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,4/5",
+        "recensioni": 1667,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Clamato%2C+80+rue+de+Charonne%2C+75011+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); non prende prenotazioni"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,1/5",
+        "recensioni": 532,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d5937604-Reviews-Clamato-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "Michelin",
+        "valore": "Bib Gourmand",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/clamato",
+        "nota": "guida, non recensioni"
+      }
+    ],
+    "nicchia": false,
+    "perche": "Il bar di mare della squadra di Septime: pesce solo da piccole barche, piatti da dividere che cambiano ogni giorno. Prendi ostriche, ceviche e il pesce intero del giorno.",
+    "da_sapere": "Non si prenota: arriva all'apertura (12 o 19) o tardi. Vini naturali. Il conto sale in fretta se ordini tanti piattini.",
+    "sito": "https://www.clamato-charonne.fr/",
+    "menu": "https://www.clamato-charonne.fr/",
+    "prenota": "non si prenota (si entra senza prenotazione)",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Clamato%2C+80+rue+de+Charonne%2C+75011+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d5937604-Reviews-Clamato-Paris_Ile_de_France.html",
+    "fermata": "Charonne · metro 9, 6 min a piedi (anche Ledru-Rollin, metro 8, 7 min)",
+    "da_chatelet": "~17 min (stima): metro 1 fino a Bastille, metro 8 fino a Ledru-Rollin (1 fermata) + 7 min a piedi",
+    "best_buy": true,
+    "perche_best_buy": "Ha il Bib Gourmand Michelin (il bollino del miglior rapporto qualità/prezzo), pesce di piccola pesca dei cuochi di Septime ed è aperto tutti e quattro i nostri giorni, pranzo e cena.",
+    "fonti": [
+      "https://www.clamato-charonne.fr/ (23/11/2026)",
+      "https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/clamato (23/11/2026)",
+      "https://www.timeout.fr/paris/restaurant/fruits-de-mer (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Clamato%2C+80+rue+de+Charonne%2C+75011+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d5937604-Reviews-Clamato-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Sur Mer",
+    "zona": "Canal Saint-Martin (10e)",
+    "cucina": "pesce",
+    "pasti": [
+      "cena"
+    ],
+    "aperto": "dom 13 e lun 14: chiuso · mar 15 e mer 16: solo cena, circa 18–22 (sito ufficiale: 16–22; Le Fooding: da novembre ad aprile dalle 18; Google 18–23; visto 23/11/2026). Pranzo solo gio–sab",
+    "indirizzo": "1 rue de Marseille, 75010 Paris",
+    "lat": 48.8713568,
+    "lon": 2.3626892,
+    "fascia": "€€",
+    "prezzo": "40–55 € a testa (piattini 5–10 €, piatti 14,50–29,50 €; Le Fooding, aggiornato 05/03/2026)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,5/5",
+        "recensioni": 650,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Sur+Mer%2C+1+rue+de+Marseille%2C+75010+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota con Zenchef dal sito"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,8/5",
+        "recensioni": 179,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d7681950-Reviews-Sur_Mer-Paris_Ile_de_France.html",
+        "nota": "non ufficiale; scheda con l'indirizzo vecchio (53 rue de Lancry): mescola Sur Mer e Comptoir Sur Mer"
+      }
+    ],
+    "nicchia": true,
+    "perche": "La chef Olive Davoux cucina solo pesce di piccola pesca, in piatti da dividere. Time Out la mette fra le migliori tavole di mare di Parigi: prova il riccio al burro bianco e le seppie alla piastra.",
+    "da_sapere": "Prenota online dal sito. Piatti piccoli: ne servono 2–3 a testa, e su TripAdvisor qualcuno lo trova caro. Domenica e lunedì è chiuso: vai al Comptoir Sur Mer, a 2 minuti a piedi.",
+    "sito": "https://surmer.restaurant/",
+    "menu": "https://www.google.com/maps/search/?api=1&query=Sur+Mer%2C+1+rue+de+Marseille%2C+75010+Paris",
+    "prenota": "https://surmer.restaurant/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sur+Mer%2C+1+rue+de+Marseille%2C+75010+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d7681950-Reviews-Sur_Mer-Paris_Ile_de_France.html",
+    "fermata": "Jacques Bonsergent · metro 5, 2 min a piedi",
+    "da_chatelet": "~15 min (stima): metro 11 fino a République (4 fermate), metro 5 fino a Jacques Bonsergent (1 fermata) + 2 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://surmer.restaurant/ (23/11/2026)",
+      "https://lefooding.com/restaurants/restaurant-sur-mer-paris (23/11/2026)",
+      "http://www.timeout.fr/paris/restaurants/sur-mer (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Sur+Mer%2C+1+rue+de+Marseille%2C+75010+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d7681950-Reviews-Sur_Mer-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Comptoir Sur Mer",
+    "zona": "Canal Saint-Martin (10e)",
+    "cucina": "pesce",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13: 12:30–20 continuato (sito; Google 12–20) · lun 14: solo sera 17–22 (Google e Le Fooding: dalle 18) · mar 15 e mer 16: chiuso (sito ufficiale, visto 23/11/2026)",
+    "indirizzo": "53 rue de Lancry, 75010 Paris",
+    "lat": 48.8716965,
+    "lon": 2.3622229,
+    "fascia": "€€",
+    "prezzo": "35–50 € a testa (crostacei 6–15 €, ostriche 8–20 €, pesci 14–25,50 €; Le Fooding, aggiornato 11/03/2026)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,5/5",
+        "recensioni": 855,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Comptoir+Sur+Mer%2C+53+rue+de+Lancry%2C+75010+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota solo per telefono"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "nessuna scheda propria: la scheda «Sur Mer» (3,8/5, 179) ha questo indirizzo e mescola i due locali"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Il primo locale di Sur Mer, ora banco di frutti di mare: ostriche normanne, vongole della Camargue, ricci, scampi del Guilvinec. Componi il tuo plateau, servito tutto il giorno.",
+    "da_sapere": "Piccolo (circa 20 posti). Prenotazione solo per telefono: 01 48 03 21 38. Domenica si mangia anche nel pomeriggio: ottimo ripiego quando Sur Mer è chiuso.",
+    "sito": "https://surmer.restaurant/",
+    "menu": "https://shop.surmer.restaurant/",
+    "prenota": "per telefono 01 48 03 21 38",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Comptoir+Sur+Mer%2C+53+rue+de+Lancry%2C+75010+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "non c'è",
+    "fermata": "Jacques Bonsergent · metro 5, 2 min a piedi",
+    "da_chatelet": "~15 min (stima): metro 11 fino a République (4 fermate), metro 5 fino a Jacques Bonsergent (1 fermata) + 2 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://surmer.restaurant/ (23/11/2026)",
+      "https://lefooding.com/en/restaurants/comptoir-sur-mer (23/11/2026)",
+      "https://shop.surmer.restaurant/ (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Comptoir+Sur+Mer%2C+53+rue+de+Lancry%2C+75010+Paris (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Bulot Bulot",
+    "zona": "Pigalle · rue des Martyrs (18e)",
+    "cucina": "pesce",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13: 12:30–15 e 19:30–23:30 · lun 14: solo cena 19:30–22:30 · mar 15: chiuso · mer 16: cena 19:30–22:30 secondo la pagina francese, non indicato in quella inglese → da confermare (sito ufficiale, visto 23/11/2026)",
+    "indirizzo": "83 rue des Martyrs, 75018 Paris",
+    "lat": 48.8833766,
+    "lon": 2.3396012,
+    "fascia": "€€",
+    "prezzo": "35–50 € a testa (6 ostriche da 16 €, tarama 14,50 €, gravlax 12,90 €; menu PDF ufficiale) — stima",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,6/5",
+        "recensioni": 631,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bulot+Bulot%2C+83+rue+des+Martyrs%2C+75018+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota dal sito"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,4/5",
+        "recensioni": 58,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d14082794-Reviews-Bulot_Bulot-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Banco di mare con ostriche quasi tutte normanne, bulots con maionese fatta in casa e lobster roll di astice blu. Piccolo e accogliente, in rue des Martyrs.",
+    "da_sapere": "Prenota dal sito (no email). Gli orari del sito non sono uguali fra pagina francese e inglese: per mercoledì telefona allo 01 42 64 19 09.",
+    "sito": "https://www.bulotbulot.fr/",
+    "menu": "https://www.bulotbulot.fr/menu",
+    "prenota": "https://www.bulotbulot.fr/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bulot+Bulot%2C+83+rue+des+Martyrs%2C+75018+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d14082794-Reviews-Bulot_Bulot-Paris_Ile_de_France.html",
+    "fermata": "Abbesses · metro 12, 2 min a piedi (anche Pigalle, metro 2 e 12, 3 min)",
+    "da_chatelet": "~21 min (stima): metro 14 fino a Saint-Lazare (3 fermate), poi metro 12 fino a Pigalle (4 fermate) + 3 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://www.bulotbulot.fr/ (23/11/2026)",
+      "https://www.bulotbulot.fr/menu (23/11/2026)",
+      "https://www.lebonbon.fr/paris/les-tops-food-et-drink/restaurants-ou-deguster-de-bons-fruits-de-mer-a-paris (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Bulot+Bulot%2C+83+rue+des+Martyrs%2C+75018+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d14082794-Reviews-Bulot_Bulot-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Le Duc",
+    "zona": "Montparnasse · Raspail (14e)",
+    "cucina": "pesce",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13: chiuso · lun 14: da confermare (sito: «lun–sab pranzo e cena»; Google: cena 19–22:30; Gault&Millau: chiuso) · mar 15 e mer 16: 12–14 e 19–22:30 (sito ufficiale + Google, visto 23/11/2026)",
+    "indirizzo": "243 boulevard Raspail, 75014 Paris",
+    "lat": 48.8387472,
+    "lon": 2.3311175,
+    "fascia": "€€€",
+    "prezzo": "pranzo 55 € (menu de la mer); cena 90–130 € a testa (crudi 30–42 €, antipasti 20–38 €; sito ufficiale) — stima per la cena",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,4/5",
+        "recensioni": 357,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Le+Duc%2C+243+boulevard+Raspail%2C+75014+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota per telefono"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,1/5",
+        "recensioni": 218,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719110-Reviews-Restaurant_Le_Duc-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": false,
+    "perche": "Occasione speciale: istituzione del pesce dal 1967, sala come la cabina di una barca. Pesce crudo e cotto semplice e preciso: prova il bar cru e la sole meunière.",
+    "da_sapere": "Caro. A pranzo c'è il menu de la mer a 55 €, il modo più furbo di provarlo. Prenota per telefono: 01 43 20 96 30.",
+    "sito": "http://www.restaurantleduc.com/",
+    "menu": "http://www.restaurantleduc.com/",
+    "prenota": "per telefono 01 43 20 96 30",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Le+Duc%2C+243+boulevard+Raspail%2C+75014+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719110-Reviews-Restaurant_Le_Duc-Paris_Ile_de_France.html",
+    "fermata": "Raspail · metro 4 e 6, 1 min a piedi",
+    "da_chatelet": "~16 min (stima): metro 4 diretta da Châtelet a Raspail (9 fermate) + 1 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "http://www.restaurantleduc.com/ (23/11/2026)",
+      "https://fr.gaultmillau.com/fr/restaurants/le-duc (23/11/2026)",
+      "https://www.timeout.fr/paris/restaurant/fruits-de-mer (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Le+Duc%2C+243+boulevard+Raspail%2C+75014+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719110-Reviews-Restaurant_Le_Duc-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Nobisan",
+    "zona": "Marais",
+    "cucina": "sushi",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "tutti i giorni 12:30–16 (sab–dom fino 16:30) e 19–22:30: dom 13, lun 14, mar 15, mer 16 pranzo e cena (sito ufficiale, visto 23/11/2026; Google uguale)",
+    "indirizzo": "58 rue de Turenne, 75003 Paris",
+    "lat": 48.8589247,
+    "lon": 2.3646183,
+    "fascia": "€€",
+    "prezzo": "35–50 € a testa (menu di 5 temaki 24–44 €, temaki singoli 7–14 €; sito ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,8/5",
+        "recensioni": 515,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Nobisan%2C+58+rue+de+Turenne%2C+75003+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); non prende prenotazioni"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,8/5",
+        "recensioni": 6,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d33419978-Reviews-Nobisan_Temaki_Bar-Paris_Ile_de_France.html",
+        "nota": "non ufficiale; solo 6 recensioni"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Banco di temaki (coni di alga croccante) arrotolati al momento davanti a te. Prendi il menu Signature: salmone scottato, toro, ricciola, capesante, granchio.",
+    "da_sapere": "Non si prenota: si fa la fila, meglio arrivare all'apertura. Aperto tutti i giorni, anche il pomeriggio fino alle 16.",
+    "sito": "https://nobisan-temaki.com/",
+    "menu": "https://nobisan-temaki.com/menu",
+    "prenota": "non si prenota (si entra in fila)",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nobisan%2C+58+rue+de+Turenne%2C+75003+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d33419978-Reviews-Nobisan_Temaki_Bar-Paris_Ile_de_France.html",
+    "fermata": "Chemin Vert · metro 8, 5 min a piedi (anche Saint-Sébastien–Froissart, metro 8)",
+    "da_chatelet": "~16 min (stima): metro 1 fino a Bastille, metro 8 fino a Chemin Vert (1 fermata) + 5 min a piedi",
+    "best_buy": true,
+    "perche_best_buy": "Pesce da sushi di alto livello (toro, ricciola, capesante) a prezzo chiaro: 5 temaki a 34–38 €, Google 4,8, aperto tutti i giorni pranzo e cena.",
+    "fonti": [
+      "https://nobisan-temaki.com/ (23/11/2026)",
+      "https://nobisan-temaki.com/menu (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Nobisan%2C+58+rue+de+Turenne%2C+75003+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d33419978-Reviews-Nobisan_Temaki_Bar-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Hando Marais",
+    "zona": "Haut-Marais",
+    "cucina": "sushi",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13: 12:30–17 e 19:30–22:30 (sito; Google 12:30–15:30 e 19–22) · lun 14: cena sicura (Google 19:30–22; il sito dice anche pranzo, da confermare) · mar 15 e mer 16: 12:30–15:30 e 19:30–22:30 (sito ufficiale e Google, visto 23/11/2026)",
+    "indirizzo": "14 rue de Bretagne, 75003 Paris",
+    "lat": 48.8627757,
+    "lon": 2.3629704,
+    "fascia": "€€",
+    "prezzo": "30–50 € a testa (set da 3 a 6 hand roll circa 19–45 €, hand roll singoli 6–11 €; menu PDF ufficiale) — stima",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,8/5",
+        "recensioni": 712,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Hando+Marais%2C+14+rue+de+Bretagne%2C+75003+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota dal sito"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,0/5",
+        "recensioni": 2,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d33291775-Reviews-Hando_Parisian_Handroll_Marais-Paris_Ile_de_France.html",
+        "nota": "non ufficiale; solo 2 recensioni: la scheda generale Hando ha 4,3/5 su 27"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Hand roll e nigiri della chef Chiharu Takada (ex Takara), in una sala luminosa disegnata da Isabelle Stanislas. Prova il set di hand roll con toro e granchio reale.",
+    "da_sapere": "Si prenota dal sito. Posti al banco. Gli orari del lunedì a pranzo non sono chiari: meglio la cena.",
+    "sito": "https://www.hando-paris.com/marais",
+    "menu": "https://www.hando-paris.com/s/HANDO-MARAIS-MENU.pdf",
+    "prenota": "https://www.hando-paris.com/marais",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hando+Marais%2C+14+rue+de+Bretagne%2C+75003+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d33291775-Reviews-Hando_Parisian_Handroll_Marais-Paris_Ile_de_France.html",
+    "fermata": "Filles du Calvaire · metro 8, 4 min a piedi (anche Temple, metro 3)",
+    "da_chatelet": "~15 min (stima): metro 11 fino a République (4 fermate), metro 8 fino a Filles du Calvaire (1 fermata) + 4 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://www.hando-paris.com/marais (23/11/2026)",
+      "https://www.hando-paris.com/restaurant-japonais-paris-marais (23/11/2026)",
+      "https://www.hando-paris.com/s/HANDO-MARAIS-MENU.pdf (23/11/2026)",
+      "https://numero.com/lifestyle/food/restaurant-japonais-paris (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Hando+Marais%2C+14+rue+de+Bretagne%2C+75003+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d33291775-Reviews-Hando_Parisian_Handroll_Marais-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Sushi Shunei",
+    "zona": "Montmartre · Abbesses (18e)",
+    "cucina": "sushi",
+    "pasti": [
+      "cena"
+    ],
+    "aperto": "dom 13 e lun 14: chiuso · mar 15 e mer 16: solo cena, turni alle 19:00 e alle 21:30 (sito ufficiale e Guida Michelin, visto 23/11/2026)",
+    "indirizzo": "3 rue Audran, 75018 Paris",
+    "lat": 48.8850881,
+    "lon": 2.3358119,
+    "fascia": "€€€",
+    "prezzo": "200–250 € a testa (due menu omakase; pranzo del sabato 150 €; Yonder, maggio 2026)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,6/5",
+        "recensioni": 261,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Sushi+Shunei%2C+3+rue+Audran%2C+75018+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); il locale gestisce da solo le prenotazioni (Michelin)"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,9/5",
+        "recensioni": 12,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d24190617-Reviews-Sushi_Shunei-Paris_Ile_de_France.html",
+        "nota": "non ufficiale; solo 12 recensioni"
+      },
+      {
+        "fonte": "Michelin",
+        "valore": "in guida (€€€€); 1 stella secondo Yonder (05/2026)",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://guide.michelin.com/en/ile-de-france/paris/restaurant/sushi-shunei",
+        "nota": "guida, non recensioni"
+      }
+    ],
+    "nicchia": false,
+    "perche": "Occasione speciale: omakase su un banco di hinoki lungo 7 metri, solo 9 posti. Lo guidano Chizuko Kimura, prima donna chef di sushi premiata da Michelin, e il maestro Takeshi Morooka.",
+    "da_sapere": "Molto caro. Il menu si sceglie quando prenoti; serve la carta di credito e c'è una penale di 200 € a testa se annulli meno di 48 ore prima. Pochissimi posti: prenota subito. Ad Abbesses ci sono tante scale (meglio l'ascensore).",
+    "sito": "https://www.sushishunei.com/",
+    "menu": "https://www.sushishunei.com/",
+    "prenota": "https://www.sushishunei.com/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sushi+Shunei%2C+3+rue+Audran%2C+75018+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d24190617-Reviews-Sushi_Shunei-Paris_Ile_de_France.html",
+    "fermata": "Abbesses · metro 12, 3 min a piedi (anche Blanche, metro 2)",
+    "da_chatelet": "~25 min (stima): metro 14 fino a Saint-Lazare (3 fermate), poi metro 12 fino ad Abbesses (5 fermate) + 3 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://www.sushishunei.com/ (23/11/2026)",
+      "https://guide.michelin.com/en/ile-de-france/paris/restaurant/sushi-shunei (23/11/2026)",
+      "https://www.yonder.fr/les-tops/restaurants/meilleurs-sushis-paris (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Sushi+Shunei%2C+3+rue+Audran%2C+75018+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d24190617-Reviews-Sushi_Shunei-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Abri Soba",
+    "zona": "Faubourg-Montmartre · Cadet (9e)",
+    "cucina": "sushi",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13 e lun 14: chiuso · mar 15 e mer 16: 12–14 e 19–22:30 (Instagram ufficiale, visto 23/11/2026; Google uguale)",
+    "indirizzo": "10 rue Saulnier, 75009 Paris",
+    "lat": 48.8749316,
+    "lon": 2.3444844,
+    "fascia": "€",
+    "prezzo": "20–35 € a testa (piatti e bento 10–20 €, piatti da dividere 15–21 €; Le Fooding, aggiornato 24/02/2026)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,7/5",
+        "recensioni": 1479,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Abri+Soba%2C+10+rue+Saulnier%2C+75009+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); non prende prenotazioni"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,3/5",
+        "recensioni": 161,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d11847106-Reviews-Abri_Soba-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Giapponese vero ma non sushi: soba di grano saraceno fatti in casa da Ryo Morishita, caldi o freddi, e la sera piatti da izakaya con pesce crudo. Prova la soba all'anatra e la crème brûlée al grano saraceno.",
+    "da_sapere": "Non si prenota: la sera c'è fila di 30–45 minuti (Paris Eater). Arriva prima delle 19. Chiuso domenica e lunedì.",
+    "sito": "https://www.instagram.com/abri_soba/",
+    "menu": "https://www.google.com/maps/search/?api=1&query=Abri+Soba%2C+10+rue+Saulnier%2C+75009+Paris",
+    "prenota": "non si prenota (si entra in fila)",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Abri+Soba%2C+10+rue+Saulnier%2C+75009+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d11847106-Reviews-Abri_Soba-Paris_Ile_de_France.html",
+    "fermata": "Cadet · metro 7, 2 min a piedi",
+    "da_chatelet": "~15 min (stima): metro 7 diretta da Châtelet a Cadet (7 fermate) + 2 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://www.instagram.com/abri_soba/ (23/11/2026)",
+      "https://lefooding.com/restaurants/restaurant-abri-soba-paris-3 (23/11/2026)",
+      "https://www.pariseater.com/restaurants/the-ultimate-guide-to-japanese-restaurants-in-paris (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Abri+Soba%2C+10+rue+Saulnier%2C+75009+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d11847106-Reviews-Abri_Soba-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Jinchan Yokocho",
+    "zona": "République · Faubourg du Temple (10e)",
+    "cucina": "sushi",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "tutti i giorni 12–14:30 (sab–dom 12–15) e 19–22:30: dom 13, lun 14, mar 15, mer 16 pranzo e cena (sito ufficiale, visto 23/11/2026; Google uguale)",
+    "indirizzo": "41 rue du Faubourg du Temple, 75010 Paris",
+    "lat": 48.8692909,
+    "lon": 2.3686856,
+    "fascia": "€",
+    "prezzo": "20–30 € a testa (antipasti 5–10 €, piatti 14–22 €; hebdo.news, gennaio 2025) — stima",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,8/5",
+        "recensioni": 2020,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jinchan+Yokocho%2C+41+rue+du+Faubourg+du+Temple%2C+75010+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota con Zenchef"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,7/5",
+        "recensioni": 399,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d32701175-Reviews-Jinchan_Yokocho-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Izakaya di una coppia franco-giapponese in una finta viuzza di Tokyo anni '80. Tutto fatto in casa: curry giapponese, donburi, sashimi, pollo karaage.",
+    "da_sapere": "Non è un sushi bar: è cucina di casa giapponese. Aperto tutti i giorni; si prenota online ma si entra anche senza.",
+    "sito": "https://jinchangroup.com/restaurant/yokocho?lang=fr",
+    "menu": "https://jinchangroup.com/restaurant/yokocho?lang=fr",
+    "prenota": "https://bookings.zenchef.com/results?rid=375818",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Jinchan+Yokocho%2C+41+rue+du+Faubourg+du+Temple%2C+75010+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d32701175-Reviews-Jinchan_Yokocho-Paris_Ile_de_France.html",
+    "fermata": "Goncourt · metro 11, 3 min a piedi (anche République)",
+    "da_chatelet": "~12 min (stima): metro 11 diretta da Châtelet a Goncourt (5 fermate) + 3 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://jinchangroup.com/restaurant/yokocho?lang=fr (23/11/2026)",
+      "https://hebdo.news/jinchan-yokocho-table-japonaise-a-paris-comme-a-tokyo (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Jinchan+Yokocho%2C+41+rue+du+Faubourg+du+Temple%2C+75010+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d32701175-Reviews-Jinchan_Yokocho-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Bistrot Paul Bert",
+    "zona": "Charonne · rue Paul Bert (11e)",
+    "cucina": "tradizionale",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13 e lun 14: chiuso · mar 15 e mer 16: 12–14 e 19:30–23 (sito ufficiale, visto 23/11/2026; Google: cena fino 22:30)",
+    "indirizzo": "18 rue Paul Bert, 75011 Paris",
+    "lat": 48.8522292,
+    "lon": 2.3848682,
+    "fascia": "€€€",
+    "prezzo": "50–70 € a testa (antipasti 9–12 €, piatti 24–54 €; Gault&Millau 2026) — stima",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,2/5",
+        "recensioni": 1896,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bistrot+Paul+Bert%2C+18+rue+Paul+Bert%2C+75011+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota solo per telefono"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,8/5",
+        "recensioni": 1413,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719048-Reviews-Bistrot_Paul_Bert-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": false,
+    "perche": "Il bistrot parigino per eccellenza, quasi uguale dal 1985. Prendi lo steak au poivre con patatine e, per finire, il soufflé o la tarte tatin.",
+    "da_sapere": "Prenota solo per telefono, 01 43 72 24 01, meglio 1–2 settimane prima. Chiuso domenica e lunedì. Pieno e rumoroso; qualcuno lo trova caro.",
+    "sito": "https://bistrotpaulbert.fr/",
+    "menu": "https://www.google.com/maps/search/?api=1&query=Bistrot+Paul+Bert%2C+18+rue+Paul+Bert%2C+75011+Paris",
+    "prenota": "per telefono 01 43 72 24 01",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bistrot+Paul+Bert%2C+18+rue+Paul+Bert%2C+75011+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719048-Reviews-Bistrot_Paul_Bert-Paris_Ile_de_France.html",
+    "fermata": "Faidherbe-Chaligny · metro 8, 4 min a piedi",
+    "da_chatelet": "~19 min (stima): metro 1 fino a Bastille, poi metro 8 fino a Faidherbe-Chaligny (2 fermate) + 4 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://bistrotpaulbert.fr/ (23/11/2026)",
+      "https://fr.gaultmillau.com/fr/restaurants/bistrot-paul-bert (23/11/2026)",
+      "https://www.pariseater.com/restaurants/best-bistros-in-paris-read-before-you-travel (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Bistrot+Paul+Bert%2C+18+rue+Paul+Bert%2C+75011+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d719048-Reviews-Bistrot_Paul_Bert-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Le Savarin",
+    "zona": "Saint-Georges · SoPi (9e)",
+    "cucina": "tradizionale",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "dom 13: pranzo 12:30–15 (cena: il sito dice aperto, Google no → da confermare) · lun 14, mar 15, mer 16: 12:30–14 e 19:30–21:30 ultimo ingresso, secondo turno alle 21:15 (sito ufficiale, visto 23/11/2026)",
+    "indirizzo": "4 rue de Navarin, 75009 Paris",
+    "lat": 48.8795572,
+    "lon": 2.3396558,
+    "fascia": "€€",
+    "prezzo": "36–56 € a testa alla carta; pranzo feriale: formula 23 €, piatto del giorno 18 € (Le Fooding, aggiornato 24/02/2026)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,6/5",
+        "recensioni": 1155,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Le+Savarin%2C+4+rue+de+Navarin%2C+75009+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota con Zenchef"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,4/5",
+        "recensioni": 245,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d10895021-Reviews-Le_Savarin-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "Michelin",
+        "valore": "Bib Gourmand (nuovo 2026)",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": "https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/savarin-1219118",
+        "nota": "guida, non recensioni"
+      }
+    ],
+    "nicchia": true,
+    "perche": "Bistrot di «cucina di famiglia» del gruppo del Pantruche, nuovo Bib Gourmand 2026. Prendi la tartare al coltello con ottime patatine, il vol-au-vent di rana pescatrice e il flan alla vaniglia.",
+    "da_sapere": "Prenota online (Zenchef). Domenica sera da verificare. A pranzo nei feriali la formula a 23 € è un affare.",
+    "sito": "https://www.lapantruchoise.com/lesavarin",
+    "menu": "https://www.google.com/maps/search/?api=1&query=Le+Savarin%2C+4+rue+de+Navarin%2C+75009+Paris",
+    "prenota": "https://bookings.zenchef.com/results?rid=348233&pid=1001",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Le+Savarin%2C+4+rue+de+Navarin%2C+75009+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d10895021-Reviews-Le_Savarin-Paris_Ile_de_France.html",
+    "fermata": "Saint-Georges · metro 12, 3 min a piedi (anche Pigalle, 5 min)",
+    "da_chatelet": "~20 min (stima): metro 14 fino a Saint-Lazare (3 fermate), poi metro 12 fino a Saint-Georges (3 fermate) + 3 min a piedi",
+    "best_buy": true,
+    "perche_best_buy": "Bib Gourmand Michelin 2026, Google 4,6 su oltre 1.100 recensioni, piatti da bistrot curati a 36–56 € (pranzo feriale 23 €) e aperto anche lunedì.",
+    "fonti": [
+      "https://www.lapantruchoise.com/lesavarin (23/11/2026)",
+      "https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/savarin-1219118 (23/11/2026)",
+      "https://lefooding.com/restaurants/le-savarin (23/11/2026)",
+      "https://www.timeout.fr/paris/restaurants/le-savarin (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Le+Savarin%2C+4+rue+de+Navarin%2C+75009+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d10895021-Reviews-Le_Savarin-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Grande Brasserie",
+    "zona": "Bastille",
+    "cucina": "tradizionale",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "tutti i giorni 12–14:30 e 19–23: dom 13, lun 14, mar 15, mer 16 pranzo e cena (sito ufficiale, visto 23/11/2026; Google: domenica cena fino 22)",
+    "indirizzo": "6 rue de la Bastille, 75004 Paris",
+    "lat": 48.8537389,
+    "lon": 2.3679602,
+    "fascia": "€€",
+    "prezzo": "40–55 € a testa la sera (antipasti 12–28 €, piatti 24–45 €); pranzo lun–ven 22–27 € (carta ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,4/5",
+        "recensioni": 1035,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Grande+Brasserie%2C+6+rue+de+la+Bastille%2C+75004+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota con Zenchef"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "4,1/5",
+        "recensioni": 157,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d23502460-Reviews-Grande_Brasserie-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": false,
+    "perche": "Brasserie d'epoca (l'ex Petit Bofinger) con mosaici e banquettes. Uovo mayo campione del mondo 2023, ris de veau, onglet al pepe e la tarte tatin, che fanno in poche porzioni.",
+    "da_sapere": "Prenota online o allo 09 75 80 99 72. A pranzo lun–ven formula a 22–27 €. Ordina la tarte tatin appena arrivi (Sortiraparis).",
+    "sito": "https://www.grandebrasserie.fr/",
+    "menu": "https://www.grandebrasserie.fr/la-carte",
+    "prenota": "https://bookings.zenchef.com/results?rid=356254&pid=1001",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Grande+Brasserie%2C+6+rue+de+la+Bastille%2C+75004+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d23502460-Reviews-Grande_Brasserie-Paris_Ile_de_France.html",
+    "fermata": "Bastille · metro 1, 5 e 8, 2 min a piedi",
+    "da_chatelet": "~8 min (stima): metro 1 diretta da Châtelet a Bastille (3 fermate) + 2 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://www.grandebrasserie.fr/ (23/11/2026)",
+      "https://www.grandebrasserie.fr/la-carte (23/11/2026)",
+      "https://www.timeout.fr/paris/restaurants/les-meilleurs-restaurants-ouverts-le-dimanche-a-paris (23/11/2026)",
+      "https://www.sortiraparis.com/en/where-to-eat-in-paris/restaurant/articles/353258-la-grande-brasserie-bastille-don-t-leave-without-tasting-its-desserts (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Grande+Brasserie%2C+6+rue+de+la+Bastille%2C+75004+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d23502460-Reviews-Grande_Brasserie-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Chez Paul",
+    "zona": "Bastille",
+    "cucina": "tradizionale",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "tutti i giorni dalle 12 a mezzanotte e oltre, servizio continuo: dom 13, lun 14, mar 15, mer 16 (sito ufficiale: 12–1 / 12–0; Google 12–00:30; visto 23/11/2026)",
+    "indirizzo": "13 rue de Charonne, 75011 Paris",
+    "lat": 48.8527801,
+    "lon": 2.3743656,
+    "fascia": "€€",
+    "prezzo": "35–45 € a testa (piatti 21,50–29 €, antipasti circa 12 €; carta sul sito ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,3/5",
+        "recensioni": 2981,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Chez+Paul%2C+13+rue+de+Charonne%2C+75011+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota dal sito o per telefono"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,8/5",
+        "recensioni": 1947,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d714994-Reviews-Chez_Paul-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": false,
+    "perche": "Bistrot dal 1900 con sale d'epoca e piatti classici fatti in casa. Prendi la steak tartare della casa o lo steak au poivre flambé al cognac.",
+    "da_sapere": "Servizio continuo tutto il giorno: comodo per orari strani. Tanti turisti; TripAdvisor solo 3,8. Prenota dal sito o allo 01 47 00 34 57.",
+    "sito": "https://chezpaul.com/",
+    "menu": "https://chezpaul.com/",
+    "prenota": "https://chezpaul.com/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Chez+Paul%2C+13+rue+de+Charonne%2C+75011+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d714994-Reviews-Chez_Paul-Paris_Ile_de_France.html",
+    "fermata": "Ledru-Rollin · metro 8, 3 min a piedi (anche Bastille, 7 min)",
+    "da_chatelet": "~12 min (stima): metro 1 fino a Bastille (3 fermate), metro 8 fino a Ledru-Rollin (1 fermata) + 3 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://chezpaul.com/ (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Chez+Paul%2C+13+rue+de+Charonne%2C+75011+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d714994-Reviews-Chez_Paul-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  },
+  {
+    "nome": "Bouillon Julien",
+    "zona": "Faubourg Saint-Denis (10e)",
+    "cucina": "tradizionale",
+    "pasti": [
+      "pranzo",
+      "cena"
+    ],
+    "aperto": "tutti i giorni 11:45–24 senza pausa: dom 13, lun 14, mar 15, mer 16 (sito ufficiale, visto 23/11/2026; Google uguale)",
+    "indirizzo": "16 rue du Faubourg Saint-Denis, 75010 Paris",
+    "lat": 48.8705454,
+    "lon": 2.3531783,
+    "fascia": "€",
+    "prezzo": "15–25 € a testa (antipasti 3,80–9,90 €, piatti 9,90–14,20 €; carta ufficiale)",
+    "voti": [
+      {
+        "fonte": "Google",
+        "valore": "4,2/5",
+        "recensioni": 11668,
+        "visto": "23/11/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bouillon+Julien%2C+16+rue+du+Faubourg+Saint-Denis%2C+75010+Paris",
+        "nota": "non ufficiale"
+      },
+      {
+        "fonte": "TheFork",
+        "valore": "non c'è",
+        "recensioni": null,
+        "visto": "23/11/2026",
+        "url": null,
+        "nota": "non trovato su TheFork (ricerca del 23/11/2026); si prenota dal sito"
+      },
+      {
+        "fonte": "TripAdvisor",
+        "valore": "3,6/5",
+        "recensioni": 2552,
+        "visto": "23/11/2026",
+        "url": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d695218-Reviews-Bouillon_Julien-Paris_Ile_de_France.html",
+        "nota": "non ufficiale"
+      }
+    ],
+    "nicchia": false,
+    "perche": "Bouillon del 1906 con un salone Art Nouveau splendido (vetrata di Charles Buffet). Classici francesi a prezzi bassissimi: uova mayo, escargots, pièce du boucher con patatine.",
+    "da_sapere": "Si può andare senza prenotare (ma c'è fila) oppure prenotare dal sito. Cucina semplice: si va per la sala e per il prezzo, non per l'alta cucina.",
+    "sito": "https://www.bouillon-julien.com/",
+    "menu": "https://www.bouillon-julien.com/menu",
+    "prenota": "https://www.bouillon-julien.com/rserver",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bouillon+Julien%2C+16+rue+du+Faubourg+Saint-Denis%2C+75010+Paris",
+    "thefork": "non c'è",
+    "tripadvisor": "https://www.tripadvisor.fr/Restaurant_Review-g187147-d695218-Reviews-Bouillon_Julien-Paris_Ile_de_France.html",
+    "fermata": "Strasbourg–Saint-Denis · metro 4, 8 e 9, 3 min a piedi",
+    "da_chatelet": "~9 min (stima): metro 4 diretta da Châtelet a Strasbourg–Saint-Denis (4 fermate) + 3 min a piedi",
+    "best_buy": false,
+    "fonti": [
+      "https://www.bouillon-julien.com/contact (23/11/2026)",
+      "https://www.bouillon-julien.com/menu (23/11/2026)",
+      "https://www.google.com/maps/search/?api=1&query=Bouillon+Julien%2C+16+rue+du+Faubourg+Saint-Denis%2C+75010+Paris (23/11/2026)",
+      "https://www.tripadvisor.fr/Restaurant_Review-g187147-d695218-Reviews-Bouillon_Julien-Paris_Ile_de_France.html (23/11/2026)"
+    ]
+  }
+]
