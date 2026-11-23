@@ -94,3 +94,8 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 |---|---|---|---|
 | 22/11/2026 | v18, prima di pubblicare (trovato da me): nella riga della scelta i km dai parchi erano sbagliati (n. 8 «0,6 km» invece di 1,9). | Ho chiamato `kmT` la funzione nuova, ma `kmT` esisteva già (minuti a piedi → km) in un blocco interno, e lì vinceva quella vecchia. Quarto caso di nome già usato (`go`, `.pc`, `cresce`). | Prima di un nome nuovo (funzione, costante, classe) `grep -c '\bnome\b'` nella pagina = 0; prova «n. 8 = 1,9 km come la scheda» in `tools/prova-web-app.js`. |
 | 22/11/2026 | Slitta del film disegnata da noi in vettoriale invece della foto di Mario («ritaglia questa immagine… non disegnare»). | Ho eseguito una «Scelta» ereditata (C18: «sagoma disegnata da noi») senza confrontarla con le parole intere di Mario. | Personaggi e figure: sempre la foto di Mario ritagliata. Una scelta ereditata si confronta prima con le parole di Mario. |
+
+## Spostati dal diario il 23/11/2026 (Controllo 26, file snello)
+| Data | Errore | Causa vera | Difesa |
+|---|---|---|---|
+| 22/11/2026 | Novità v30 con «un'ombra» fra apici semplici: la scritta si chiudeva e tutto lo script della pagina si fermava (trovato da me prima delle prove). | Testo scritto da Python dentro un heredoc di bash: `\\'` diventa `'`. | Nei testi della pagina l'apostrofo tipografico «’»; dopo ogni modifica via script, controllo della sintassi dei 4 `<script>` (e la prova «nessun errore nella pagina»). |

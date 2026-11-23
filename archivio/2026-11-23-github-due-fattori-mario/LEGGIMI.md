@@ -4,3 +4,4 @@
 2. Pagina «Two-factor settings · Verify your recently configured two-factor authentication method» (codice di 6 cifre).
 Nessun codice né chiave nelle foto.
 - 3-video-mario-11-47.mp4 (11:48, «cosa sbaglio?»): link della chiave → «Verify 2FA now» → riquadro XXXXXX → apre l’app GitHub (nessun codice: l’app non li fa) → torna alla pagina; sotto «More options» c’è «Reconfigure 2FA on this account».
+- 4-more-options-aperto.jpg (11:53, «si che ho cliccato»): «More options» aperto contiene solo «Reconfigure 2FA on this account».
