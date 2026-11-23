@@ -6,10 +6,9 @@
 ## Nastro delle versioni
 🚀 Online: v49 · 🟩 Controllo 29 · 23/11 19:59 · alloggi dal 14 (PR 51: gruppo «Liberi solo dal 14» ed «Esauriti» nel passo 2, via le prove ?luci=ferme e ?tela=si; prove locali verdi: web app 83/83, scritte 20/20; sito vero letto: v49, 0 righe grigie, 0 errori)
 🧪 In prova: nessuna
-⏳ Dopo: tasto «Aggiorna i voti» (se Mario dice sì alla DOMANDA 4); orari RER A del 13–17/12 (sveglia 26/11 10:17)
+⏳ Dopo: orari RER A del 13–17/12 (sveglia 26/11 10:17)
 
 ## 0. Aspetta Mario
-- 23/11 · ❓ · 🟩 Controllo 29 · C28 · DOMANDA 4: tasto «Aggiorna i voti» con Google? 📌 Di cosa parliamo: i voti della scheda «Mangiare» aggiornati solo quando tocchi tu (risposta alla DOMANDA 2: «a spinta», gratis); Google lo permette gratis fino a ~17 tocchi al mese, ma chiede una carta sul suo account Google Cloud; con un tetto giornaliero non paghi mai. Scelte: 1 · sì, fallo (ti guido io passo passo, ~15 minuti) · 2 · no, niente carta: restano voto con data e link al voto vero. Consiglio: 1.
 - 22/11 · ❓ · 🟩 Controllo 19 · ok a un controllo automatico che blocca le foto di lavoro senza la scritta in alto? Scelte: 1 · sì, fallo · 2 · no. Consiglio: 1. 📌 Di cosa parliamo: l’errore «foto di lavoro aperte senza la scritta» è ricapitato (docs/ERRORI.md); il controllo sta nei file delle regole (`.claude/`), che si toccano solo col tuo ok scritto.
 - 22/11 · ❓ · 🟩 Controllo 13 · DOMANDA 1: l’albero della testata lo faccio dal tuo disegno (preso da un annuncio Etsy: sul sito pubblico potrebbe non essere permesso) o ne disegno uno nostro nello stesso stile? Scelte: 1 · il tuo disegno · 2 · uno nostro uguale nello stile. Consiglio: 1, come hai chiesto. 📌 Di cosa parliamo: l’albero di Natale nella testata della pagina di dicembre (Mario 22/11 16:29 «Ti mando un albero…»).
 - 22/11 · 🟨 Controllo 12 · guarda la v33 sul telefono (se c’è ancora «v32»: numerino → «Aggiorna versione») e tocca «Guida Disneyland»: parte dal 14 dicembre? Scrivi cosa vedi, anche «ok». 📌 Serve a chiudere le voci «👁» della v33 e a sapere se il link della guida è giusto sul telefono vero.
@@ -100,6 +99,7 @@
 - 🟩 Controllo · C22 · controllo di itinerari e informazioni degli alloggi, soprattutto n. 8, 16 e 23 (parole intere di Mario e cosa è stato controllato in `docs/lavori-in-corso/C22-controllo-itinerari.md`) · v43 online con la v44 (23/11) · manca: orari RER A del 13–17/12 (escono verso il 26/11) · 👁 Lo vedi: sul sito vero la v44, in «Giorni» col n. 16 o 23 scelto, il riquadro «Il vostro alloggio» e giovedì · prova: foto di Mario dal sito
 
 ## 2. Claude dopo scelta o ok di Mario
+- 🟩 Controllo · C28 · voti dei ristoranti (Google, TheFork, TripAdvisor) ricontrollati a mano qualche giorno prima della partenza o il giorno stesso, quando Mario lo chiede (Mario 23/11 ~20:0x: niente tasto né aggiornamento automatico, «pochissimi tocchi al mese, non conviene») · 👁 Lo vedi: nella scheda «Mangiare» i voti con la data nuova
 - 👁 Lo vedi: la pagina di dicembre riordinata sul sito, come web app · prova: Mario la apre dal telefono e la manda all'amico · Pagina facile (C3) pubblicata come web app dopo l'«ok» di Mario (promessa del 21/11 17:3x: «La pubblico quando mi dici che la pagina ti va bene.»): PR #3 unita il 21/11, https://kur0chanx.github.io/parigi-in-tasca/dicembre/ ; manca: Mario la apre dal telefono.
 - Pagina di dicembre: orari di uscita con l'hotel scelto, poi ripubblicare l'Artifact (sorgente `dicembre/parigi-disney-natale.html`).
 
