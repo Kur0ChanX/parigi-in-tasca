@@ -84,3 +84,7 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 | 21/11/2026 | 5 link Airbnb portavano all'annuncio sbagliato. | Numero di 19 cifre scritto come numero JavaScript: arrotondato. | Numeri lunghi sempre fra virgolette; prova sul numero d'annuncio (storia in ERRORI-STORIA). |
 | 22/11/2026 | `tyOf is not defined`: Dormire senza tasti dei tipi (prove rosse). | Funzione spostata in un altro dei due script `(()=>{…})()`. | Funzioni comuni via `window`; le prove scrivono subito l'errore (storia in ERRORI-STORIA). |
 | 22/11/2026 | Il `sw.js` di novembre, a ogni aggiornamento, cancellava anche i cassetti di dicembre (trovato dalla Controllo 6). | Scritto quando il sito aveva una guida sola: «cancella tutto ciò che non è mio». | Ogni service worker tocca solo i suoi cassetti (storia in ERRORI-STORIA). |
+
+## Spostati dal diario il 23/11/2026 (Controllo 24, file snello: la difesa è già nella prova `elementFromPoint` dei tasti fissi)
+| 22/11/2026 | Fila dei giorni sparita sul telefono dalla v17 alla v24. | Barra delle schede fissa (z 60) sopra la fila (z 30); le prove guardavano che i tasti ci fossero, non che si potessero toccare. | Prove con `elementFromPoint` sui tasti fissi (storia in ERRORI-STORIA). |
+| 22/11/2026 | Sul PC «in breve» restava su 2 colonne, anche se c’era la regola dei 3 (trovato dalla Controllo 9). | La regola del PC stava PRIMA di quella generale dei 2 colonne nel CSS: a parità di forza vince l’ultima. | Regole del PC in fondo al CSS (blocco v32); prova «PC (1440 px)… «in breve» su 3 colonne» in `prova-web-app.js`. |
