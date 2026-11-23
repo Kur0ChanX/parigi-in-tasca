@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 15:24 · 01Rwcxc4Xr46
-No, però scusami, anche io ho sbagliato. Tipo quelle sfere che ci sono nelle bancarelle, mi spieghi che cavolo ci fanno? Che cosa significa? Cioè, metti qualcosa di inerente. Per le lucine sono sempre d'accordo, cioè più ce n'è meglio è, più da atmosfera meglio è, da tutte le parti. Anche la pagina del web farà più stile natalizia. Parigi, Disney, Natale, ecco.
-
 ## 2026-11-22 15:30 · 01Rwcxc4Xr46
 Quando siamo nel giorno di Disneyland, oppure anche nella schermata principale, app Disneyland mi deve aprire il mio Disneyland, la mia app di Disneyland, che adesso te la mando, però devi controllare, mi sembra che ogni persona ha il proprio link o ha la propria memoria, perché ognuno ha i propri giorni, non lo so, valuta un po', se li apre a ognuno la propria sezione. Ecco, adesso ti invio l'app guida Disneyland da mettere sempre nella schermata principale e da mettere nelle giornate dove andiamo a Disneyland, così la possiamo consultare. Sono praticamente, questo è un viaggio, sono due app abbinate, questa e quella di Disneyland.
 
@@ -128,3 +125,6 @@ Ma i voti può controllare in tempo reale senza consumare token e risorse? Se io
 
 ## 2026-11-23 19:57 · 01Rwcxc2rpkc
 No, non voglio che li aggiorni da solo, ma anche a spinta si possono aggiornare, magari in qualche modo gratuito che si possa aggiornare, possa controllare da solo. Non lo so, valuta tu. Questa è per la domanda 2. Domanda a 3 vanno bene, vanno bene.
+
+## 2026-11-23 20:08 · 01Rwcxc2rpkc
+No, sono pochissimi tocchi al mese. Boh, non conviene, secondo me. Al massimo ti farò fare io una ricerca su Claude qualche giorno prima o il giorno stesso della partenza.
