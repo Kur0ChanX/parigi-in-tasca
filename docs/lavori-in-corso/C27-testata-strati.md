@@ -25,3 +25,8 @@
 - Fatto sul ramo: tutte le animazioni di sola luminosità e di movimento semplice (rotate, scale, translate) sulla tela, anche con due animazioni insieme (finestre del castello) e con cose sopra che le coprono (ridisegnate sopra la copia; per chi si muove su una tela d’appoggio). Restano nel disegno: fiammelle dentro le lanterne che dondolano (animazione dentro animazione), proiezioni del castello (maschera), stelline della luna (sotto la slitta). Telefono di prova: **1.355 → 73 strati**; confronto a pixel allo stesso istante: scarto medio ~1 su 255, solo bordi sotto il pixel.
 - Prova automatica: «C27 · tela» in `tools/prova-web-app.js` (strati ≤ 120, confronto a pixel, niente tela con «riduci movimento»). Strumenti di misura in `archivio/2026-11-23-c27-strati/lavoro/` (`confronto.js`, `perche.js`).
 - Manca: video di Mario con `?luci=ferme` (conferma della causa), poi versione nuova pubblicata e suo video; dopo, togliere `?luci=ferme`.
+
+## Pubblicazione della prova · Controllo 25 (23/11)
+- Mario 23/11 ~08:50, alla DOMANDA 1 («pubblico la prova «lucine sulla tela»? 1 · sì, pubblica · 2 · no, aspetta»), intero:
+> 11
+- → scelta 1: pubblicare la prova `?tela=si` (l’app normale resta com’è). Prove locali rifatte sull’ultimo commit prima della PR.

@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 11:49 · 01WTjqUxPidP
-Vedi qua la foto è coperta, l'immagine.
-
 ## 2026-11-22 11:52 · 01WTjqUxPidP
 Conta che vabbè, la giornata di priorità di curare i dettagli è quella a Parigi, poi vabbè, quella di Disneyland, sì, andare tornare nell'alloggio, quella di Disneyland, niente di che, e poi ritornare alla fine ritornare in aeroporto con... rispettare gli orari per arrivare in anticipo, lì calcolare i trasporti con un po' di orario extra, non troppo preciso, cioè se segnalamelo di andare prima, quanto ci vuole ad arrivare lì per non perdere il volo, ecco, se ci sono da prendere i bagagli e quant'altro, eccetera eccetera.
 Ok, vai avanti da solo e mi fido di te, non c'è bisogno che ti autorizzo.
@@ -142,3 +139,6 @@ Domanda 1, domanda 2, va bene. Ok, come consiglio.
 
 ## 2026-11-23 02:13 · 01Rwcxc6J6cx
 No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è fastidioso. Cliccherà anche la renna, nightmare, insomma tutto quello che vola.
+
+## 2026-11-23 08:48 · 01Rwcxc5Bet6
+11
