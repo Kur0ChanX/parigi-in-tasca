@@ -1,13 +1,12 @@
-# Ultima risposta di Claude (23/11/2026 11:38 ora italiana)
+# Ultima risposta di Claude (23/11/2026 11:54 ora italiana)
 
-Ho capito: vuoi il kit RVC più nuovo in questo progetto. Dopo vuoi un controllo della guida di dicembre e idee nuove, da approvare una per una.
-🧠 Opus · Extra
+Ho capito: dentro «More options» c'è solo «Reconfigure 2FA», e quel tasto ti porta alla pagina della sicurezza.
 
-✅ **FATTO**
-- Ho provato a scaricare il kit: senza chiave non si può. Il repo RVC è privato e GitHub risponde «non trovato».
-- In questo ambiente la chiave `RVC_KIT_TOKEN` non c'è.
-- Ho segnato la tua richiesta di controllo e idee (lavoro C28): la faccio subito dopo il kit, così uso già le regole nuove.
+Hai ragione, scusa: «More options» l'avevi toccato. Nel video l'ho guardato troppo in fretta. Ho segnato l'errore nel diario degli errori.
+
+Sei nella pagina giusta. Il banner in alto chiede di sistemare il secondo passaggio proprio qui. Rifacciamo l'app di autenticazione (cioè l'app che crea il codice di 6 cifre).
 
 ───
-💡 **PARERE**
-- La strada migliore è una **chiave di sola lettura** (un **token**: una password che permette solo di leggere il …
+👉 **DA FARE TU**
+A cosa serve: avere di nuovo un'app che crea i codici di GitHub. Così passi il controllo e poi fai la chiave del kit.
+1. Hai già un'app …
