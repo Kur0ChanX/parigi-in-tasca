@@ -473,6 +473,15 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       ok(`C23: luna di Topolino disegnata e visibile sulla tela del cielo (${nome}: ${v.largo} px, ${v.n} punti pieni, scarto ${v.diff}), niente davanti`, buona); if (!buona) console.log(v);
     }
   }
+  // C27 (Controllo 23): con ?luci=ferme tutte le animazioni del foglio di stile sono ferme (prova dello sfarfallio sul telefono di Mario), con la scritta «PROVA»; senza, le lucine lampeggiano
+  {
+    const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
+    const conta = () => r.evaluate(() => ({ css: document.getAnimations().filter((a) => a.constructor.name === 'CSSAnimation' && a.playState === 'running').length, prova: document.documentElement.classList.contains('luci-ferme'), scritta: getComputedStyle(document.body, '::before').content }));
+    await r.goto(B + 'dicembre/?luci=ferme'); await r.waitForTimeout(800); const ferma = await conta();
+    await r.goto(B + 'dicembre/'); await r.waitForTimeout(800); const normale = await conta();
+    ok(`C27: con ?luci=ferme nessuna animazione del foglio di stile (${ferma.css}) e la scritta «PROVA»; senza, lampeggiano (${normale.css}) e niente scritta`, ferma.prova && ferma.css === 0 && /PROVA/.test(ferma.scritta) && !normale.prova && normale.css > 100 && !/PROVA/.test(normale.scritta));
+    await c.close();
+  }
   // C18: la slitta passa da sola dopo 5 s (nel cielo, coi pacchi); con «riduci movimento» non parte; giovedì 17 col riquadro «Partite prima»
   {
     const mk = async (rm) => { const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block', reducedMotion: rm }); const r = await c.newPage(); r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); }); await r.goto(B + 'dicembre/'); return [c, r]; };
