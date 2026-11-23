@@ -4,9 +4,9 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v46 · 🟩 Controllo 25 · 23/11 · Torre, faro e slitta non spariscono più (C27: stelline della luna sulla tela del cielo; PR 48, prove locali verdi: web app 82/82, scritte 20/20)
-✅ Prima: v45 · 🟩 Controllo 23 · 23/11 · luna di Topolino sempre nitida (PR 45); prove `?luci=ferme` (PR 46) e `?tela=si` (PR 47) ancora online
-⏳ Dopo: orari RER A del 13–17/12 (il 23/11 ancora no, sito fino al 6/12; sveglia 26/11 10:17 della Controllo 25)
+🚀 Online: v48 · 🟩 Controllo 29 · 23/11 18:47 · Mangiare, treni, meteo (PR 50: scheda Mangiare, prossimi treni dal vivo, meteo, pro e contro a righe; prove locali verdi: web app 84/84, scritte 20/20; sito vero letto: v48, 0 errori)
+🧪 In prova: nessuna
+⏳ Dopo: v49 · 🟩 Controllo 29 · alloggi «liberi solo dal 14» in un gruppo, via le prove `?luci=ferme` e `?tela=si`; orari RER A del 13–17/12 (sveglia 26/11 10:17)
 
 ## 0. Aspetta Mario
 - 23/11 · ❓ · 🟩 Controllo 29 · C28 · DOMANDA 2: i voti dei ristoranti li aggiorniamo da soli? 📌 Di cosa parliamo: i voti Google, TheFork e TripAdvisor della scheda «Mangiare», oggi scritti con la data (23/11); ogni voto è già un link alla pagina col voto di oggi. Scelte: 1 · sì, solo Google, ogni settimana in automatico (gratis fino a 1.000 letture al mese; serve un tuo account Google Cloud con carta e un tetto di spesa; TripAdvisor e TheFork non lo danno gratis) · 2 · no, restano scritti con la data e il link mostra quello vero. Consiglio: 2.
