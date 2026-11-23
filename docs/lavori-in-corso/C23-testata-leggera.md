@@ -42,6 +42,8 @@
 - Nessun codice tocca `lunaT`. Ricerca (23/11/2026): nessun difetto noto preciso; aperta una segnalazione di Chromium su animazioni SVG complesse che consumano memoria grafica col tempo (issues.chromium.org/issues/423073247). Causa = **ipotesi**: col tempo il telefono non ridisegna più quell’immagine dentro un disegno con ~800 animazioni che lo fanno ridisegnare di continuo.
 - **Scelta (tecnica, mia):** luna, alone e bagliore si disegnano sulla tela del cielo (`#sky`, dietro il disegno, già ridisegnata a ogni fotogramma e dove le stelle si vedono sempre), con l’immagine decodificata una volta e tenuta dal programma (`createImageBitmap`); nel disegno SVG restano solo le 3 stelline. Stesso posto, grandezza, colori e respiro di prima; la slitta passa ancora davanti. L’immagine resta nella pagina (`<image id="lunaT">` dentro `<defs>`, non disegnata) così `tools/fai-icone-dicembre.js` continua a scriverla.
 
+- Fatto (Controllo 23): luna, alone e bagliore sulla tela del cielo (`lunaImg`, `lunaBag`, `luna`), immagine in `<defs>`; via `mglow`, `lunaSfuma`, `respiro`, `respiro2`; prova «C23» in `tools/prova-web-app.js` (pixel uguali all’immagine nel posto calcolato dal disegno, telefono, dopo 8 s, riduci movimento, PC; niente davanti). Prova rossa trovata e corretta: testata nascosta → misura 0 → errore nel ciclo (ora esce). **v45 online 23/11** (PR 45, main 7ac754f, sito `{"v": 45}`).
+
 ## Manca
 - v41 insieme a C24 pezzo 1 sistemato (8 prove + la prova che si ferma a riga 309) oppure C24 dietro un interruttore.
-- 👁 Mario: apre la v41 sul telefono, scorre e allarga con due dita: niente riga, niente rettangoli, luna nitida.
+- 👁 Mario: apre la v45 sul telefono e lascia la testata in vista 3–4 minuti: luna nitida coi crateri (riga in «Aspetta Mario» del 23/11).
