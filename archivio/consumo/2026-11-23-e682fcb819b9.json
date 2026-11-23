@@ -1,0 +1,37 @@
+{
+"account": "cba507",
+"sessione": "e682fcb819b9",
+"giorno": "2026-11-23",
+"turni": 2,
+"peso": 795057,
+"uscita": 58491,
+"contesto_max": 287228,
+"anomalie": [
+"58k token scritti in un turno"
+],
+"remota": "01Rwcxc2dHvC",
+"aiutanti": 0,
+"strumenti": 34,
+"motori": {
+"opus": 795057
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+64,
+3530984,
+119552,
+0,
+58491
+]
+},
+"costo": 2.8327,
+"blocchi": {
+"Stop 10 · Promessa a Mario senza voce": 1
+},
+"esempi_blocchi": {
+"Stop 10 · Promessa a Mario senza voce": [
+"02:58 · Promessa a Mario senza voce 👁 in docs/DA-FARE.md (C331): «Le porto sulla tela nel prossimo pezzo.». Nella sua voce (o in una nuova) scrivi «👁 Lo vedi: <dove la vede Mario> · prova: <foto o lettura dei"
+]
+}
+}
