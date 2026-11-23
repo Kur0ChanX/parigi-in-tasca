@@ -10,6 +10,10 @@
 - 22/11 22:09 (foto della v41 delle 22:08, `archivio/2026-11-22-c23-v41/mario-2208-v41-luna-sfocata.jpg`), intero: «andava bene poi invece»
   → anche nella v41 la luna diventa una macchia sfocata senza crateri (resta solo il bagliore). Indizio nuovo: **all’apertura è giusta, poi si rovina**. Ipotesi da provare (dopo la guida): dopo un po’ il telefono butta via l’immagine della luna (memoria della grafica) e non la ridisegna; il bagliore sfocato, animato e con il filtro, resta. Prova possibile: luna in un pezzo solo, ferma, col bagliore già dentro l’immagine (niente filtro né animazioni intorno), oppure luna fuori dal disegno animato.
 
+- 23/11 02:05 (video `archivio/2026-11-23-video-v45-flicker-mario/VID_20261123_020540-mario.mp4`, 26 s, 785 fotogrammi), intero: «Guarda attentamente frame per frame. Dovrei aver registrato 90 frame. Guarda attentamente la torre Eiffel come flickera, e anche le renne con la slitta dovrebbero flickerare insieme.»
+
+- 23/11 ~02:1x, intero: «No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è fastidioso. Cliccherà anche la renna, nightmare, insomma tutto quello che vola.» («cliccherà» = sfarfalla, dettato a voce)
+
 ## Cosa si vede nel video della v40 (Controllo 18, fotogrammi)
 - Riga dritta nel cielo all’altezza della cima della Torre: sono i due fasci del faro (triangoli lunghi e sottili), anche senza zoom.
 - Pagina allargata con due dita (secondi 5–7): rettangoli a scatti, casette e Torre che spariscono a pezzi = pezzi di disegno (tasselli) che il telefono non fa in tempo a ridisegnare.
@@ -42,6 +46,8 @@
 - Nessun codice tocca `lunaT`. Ricerca (23/11/2026): nessun difetto noto preciso; aperta una segnalazione di Chromium su animazioni SVG complesse che consumano memoria grafica col tempo (issues.chromium.org/issues/423073247). Causa = **ipotesi**: col tempo il telefono non ridisegna più quell’immagine dentro un disegno con ~800 animazioni che lo fanno ridisegnare di continuo.
 - **Scelta (tecnica, mia):** luna, alone e bagliore si disegnano sulla tela del cielo (`#sky`, dietro il disegno, già ridisegnata a ogni fotogramma e dove le stelle si vedono sempre), con l’immagine decodificata una volta e tenuta dal programma (`createImageBitmap`); nel disegno SVG restano solo le 3 stelline. Stesso posto, grandezza, colori e respiro di prima; la slitta passa ancora davanti. L’immagine resta nella pagina (`<image id="lunaT">` dentro `<defs>`, non disegnata) così `tools/fai-icone-dicembre.js` continua a scriverla.
 
+- Fatto (Controllo 23): luna, alone e bagliore sulla tela del cielo (`lunaImg`, `lunaBag`, `luna`), immagine in `<defs>`; via `mglow`, `lunaSfuma`, `respiro`, `respiro2`; prova «C23» in `tools/prova-web-app.js` (pixel uguali all’immagine nel posto calcolato dal disegno, telefono, dopo 8 s, riduci movimento, PC; niente davanti). Prova rossa trovata e corretta: testata nascosta → misura 0 → errore nel ciclo (ora esce). **v45 online 23/11** (PR 45, main 7ac754f, sito `{"v": 45}`).
+
 ## Manca
 - v41 insieme a C24 pezzo 1 sistemato (8 prove + la prova che si ferma a riga 309) oppure C24 dietro un interruttore.
-- 👁 Mario: apre la v41 sul telefono, scorre e allarga con due dita: niente riga, niente rettangoli, luna nitida.
+- 👁 Mario: apre la v45 sul telefono e lascia la testata in vista 3–4 minuti: luna nitida coi crateri (riga in «Aspetta Mario» del 23/11).
