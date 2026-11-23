@@ -77,3 +77,10 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 | Data | Errore | Causa vera | Difesa |
 |---|---|---|---|
 | 21/11/2026 | Sul PC (Mario, foto 21:37) la testata di dicembre era tagliata in alto: luna e cielo a metà, bordo netto. | Il disegno riempie la larghezza con altezza fissa al massimo 380 px: su uno schermo largo 1920 ne restava visibile poco più di metà. Prove e foto solo a larghezza di telefono. | Sul PC altezza della testata proporzionata alla larghezza (`min(36.25vw,74vh)`); `prova-scritte.js` gira anche a 1470 e 1920 px; ogni cambio d'aspetto si guarda anche su un PC. |
+
+## Spostati dal diario il 23/11/2026 (Controllo 23, file snello: la difesa è già nelle prove e nella regola dei service worker)
+| Data | Errore | Causa vera | Difesa |
+|---|---|---|---|
+| 21/11/2026 | 5 link Airbnb portavano all'annuncio sbagliato. | Numero di 19 cifre scritto come numero JavaScript: arrotondato. | Numeri lunghi sempre fra virgolette; prova sul numero d'annuncio (storia in ERRORI-STORIA). |
+| 22/11/2026 | `tyOf is not defined`: Dormire senza tasti dei tipi (prove rosse). | Funzione spostata in un altro dei due script `(()=>{…})()`. | Funzioni comuni via `window`; le prove scrivono subito l'errore (storia in ERRORI-STORIA). |
+| 22/11/2026 | Il `sw.js` di novembre, a ogni aggiornamento, cancellava anche i cassetti di dicembre (trovato dalla Controllo 6). | Scritto quando il sito aveva una guida sola: «cancella tutto ciò che non è mio». | Ogni service worker tocca solo i suoi cassetti (storia in ERRORI-STORIA). |
