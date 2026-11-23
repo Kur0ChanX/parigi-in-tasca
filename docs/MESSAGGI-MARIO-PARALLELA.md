@@ -2,11 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 12:00 · 01WTjqUxPidP
-No, facciamo quella che consigli tu, scusa, foto 2, scusa.
-Per quello ti dico, vai avanti da solo, tanto ascolta sempre i tuoi consigli, vai avanti da solo.
-Vai avanti da solo e stai attento solo alle domande molto vecchie che mi avevi fatto. Magari le domande vecchie dovrò risponderti, ma quelle nuove so che mi farai, so già che sei al passo con l'app e ti faccio scegliere, ecco. Se sono domande molto importanti ti fermi.
-
 ## 2026-11-22 12:04 · 01WTjqUxPidP
 Vedi qua che l'indice, mettimi gli shortcut, anche giro di mercatini più piccoli, notte, vin brûlée più piccole, insomma regola bene gli spazi, mettimi l'indice delle cose più importanti. I tasti sotto devono occupare meno spazio, insomma tutti gli spazi ottimizzati bene, non farmi coprire troppo la pagina, ecco, la pagina da vedere.
 
@@ -137,3 +132,6 @@ No, guarda, cliccherà tantissime altre volte. Come che non l'hai visto? Ed è f
 
 ## 2026-11-23 09:06 · 01Rwcxc5Bet6
 Allora, su normale flickera, luciferme no, però non flickera, però è bruttissimo. Luci ferme, e su tela c'è lo stesso problema, flickera lo stesso su tela.
+
+## 2026-11-23 11:35 · 01Rwcxc5ahDd
+Riusciamo a portare il kit aggiornato RVC qui? Dimmi cosa me posso fare.
