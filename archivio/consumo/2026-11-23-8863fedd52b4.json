@@ -2,11 +2,13 @@
 "account": "cba507",
 "sessione": "8863fedd52b4",
 "giorno": "2026-11-23",
-"turni": 3,
-"peso": 189967,
-"uscita": 4245,
-"contesto_max": 206626,
-"anomalie": [],
+"turni": 4,
+"peso": 1724774,
+"uscita": 30568,
+"contesto_max": 281611,
+"anomalie": [
+"26k token scritti in un turno"
+],
 "blocchi": {
 "Stop 3 · Consegne non su GitHub (C226,": 1,
 "Stop 15 · There are uncommitted changes in": 1,
@@ -25,19 +27,29 @@
 },
 "remota": "01Rwcxc2rpkc",
 "aiutanti": 0,
-"strumenti": 6,
+"strumenti": 50,
 "bilancia": 2,
 "motori": {
-"opus": 189967
+"opus": 1724774
 },
 "grezzi": {
 "opus": [
-19,
-1627420,
-4785,
+106,
+12138362,
+286394,
 0,
-4245
+30568
 ]
 },
-"costo": 0.4487
+"costo": 5.3306,
+"costo_fredde": 1.692,
+"memoria_scaduta": 1,
+"ricreati": 211497,
+"fredde": [
+[
+211,
+125,
+0
+]
+]
 }
