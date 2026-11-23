@@ -1,0 +1,35 @@
+{
+"account": "cba507",
+"sessione": "57ddcc3fb811",
+"giorno": "2026-11-23",
+"turni": 1,
+"peso": 118285,
+"uscita": 2937,
+"contesto_max": 78570,
+"anomalie": [],
+"remota": "01Rwcxc4qAM1",
+"aiutanti": 0,
+"strumenti": 12,
+"motori": {
+"opus": 118285
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+17,
+632184,
+32292,
+0,
+2937
+]
+},
+"costo": 0.4436,
+"blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": 1
+},
+"esempi_blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": [
+"15:15 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1 · quali idee faccio nella guida di», C233, E145): mancano le scelte numerate «1 · … · 2 · …». NON riscrivere la domanda intera: Mario l'ha già l"
+]
+}
+}

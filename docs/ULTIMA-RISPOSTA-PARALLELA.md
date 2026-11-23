@@ -1,3 +1,3 @@
-# Ultima risposta di Claude (23/11/2026 12:18 ora italiana)
+# Ultima risposta di Claude (23/11/2026 15:15 ora italiana)
 
-Una precisazione sulla DOMANDA 1: il kit sono le regole e i controlli automatici con cui lavoro in tutti i tuoi progetti. Qui c'è ancora il Kit 43, e ora che la chiave funziona posso mettere il 53. Ho aggiunto la stessa riga anche nella lista di «Aspetta Mario».
+Correzione al formato della DOMANDA 1, con le scelte scritte una dopo l'altra: 1 · documenti e salute · 2 · batteria · 3 · lista valigia · 4 · spunte sui due telefoni · 5 · meteo · 6 · treni in tempo reale · 7 · spese · 8 · emergenza · 9 · mangiare nei parchi · 10 · pulizia testi. Consiglio: 1, 2, 3, 8, 10.
