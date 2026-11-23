@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 11:37 · 01WTjqUwFBdt
-No, sotto mi mettevi le date mi faceva vedere l'itinerario del giorno. Sotto c'era tipo domenica, lunedì, martedì, però i numeri. Che fine hanno fatto quelli? Perché sono stati tolti? Non andavano bene? Fammi capire.
-
 ## 2026-11-22 11:40 · 01WTjqUwFBdt
 Cioè non è che voglio importi le cose, io voglio solo il meglio dell'applicazione, non voglio aggiungere delle cose che non vanno bene, che sia chiaro.
 Mappe, la mappa fammela, vedo che fammela mettere a schermo intero la mappa che abbiamo appena fatto, e poi il pinch to zoom dopo un po' indietro non va, sbloccalo, e anche pinch out.
@@ -143,3 +140,6 @@ Dopo sai che cosa devi fare? Sei già informato?
 
 ## 2026-11-22 23:15 · 01Rwcxc7EAGC
 Ok, va bene. Ehm, Non solo Moxie, cioè non so se noi dobbiamo prendere quello di Hotel Moxie, più che altro gli altri due che ti avevo detto. Ehm, Te l'avevo segnati. Gli altri due appartamenti, probabilmente andremo lì. Comunque le scelte sono tre, o Moxie o quei due appartamenti che ti ho detto. Quelli con molta cura, l'itinerario e la guida che si basano molto su quelli, che probabilmente sceglieremo quelli.
+
+## 2026-11-23 01:37 · 01Rwcxc6ffPi
+Domanda 1, domanda 2, va bene. Ok, come consiglio.
