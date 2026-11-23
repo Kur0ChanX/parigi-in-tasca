@@ -17,3 +17,9 @@
 2. Lucine che lampeggiano disegnate su una tela sopra il disegno (come cielo e luna): nel disegno restano accese e ferme, la tela aggiunge il lampeggio. Obiettivo: meno di 150 strati, aspetto uguale.
 3. Le altre parti animate (`.appeso`, `.scint`, `.stellaC`, `.vapore`, `.fiamma`, `.neve-st`, proiezioni) una per una: tela o meno strati.
 4. Prova automatica «strati della testata ≤ 150» in `tools/prova-web-app.js` (CDP LayerTree) + prova che Torre e slitta si VEDONO; video prima/dopo a Mario; v46.
+
+## Pezzo 2 · Controllo 24 (23/11, in corso)
+- Scelta (DOMANDA 1 senza risposta, consiglio 1 «prima la prova»): preparo il pezzo 2 sul ramo, **non lo pubblico** finché il video con `?luci=ferme` non conferma la causa (o Mario dice «vai»).
+- Come: le lucine con animazione di sola luminosità (`lampC` 441, `hb` 251, `lampM` 192, `ond` 86, `tw` 70, `lucBanco`, `stellaC`, finestre) non sono più animate nel disegno: le copio una per una in un’immagine (atlante) e una tela sopra il disegno le ridisegna 30 volte al secondo con la luminosità calcolata dalla stessa animazione (stessi tempi, ritardi, curve). Le lucine coperte da qualcosa disegnato dopo (nebbia, casette davanti) restano nel disegno com’erano. La vignetta passa sopra la tela (stesso aspetto). Ferma come oggi mentre si scorre, a pagina ingrandita e con «riduci movimento».
+- Misura di partenza (Pixel 7, `index.html`): 1.264 animazioni (798 testata, 428 mercatino in fondo, 16–36 ghirlanda).
+
