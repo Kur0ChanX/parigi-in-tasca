@@ -47,3 +47,8 @@
 
 - Lettura: «chiamata spinta» = chiamata API (voce). Cercato il 23/11/2026: Google Places API (New), `rating` e `userRatingCount` = SKU «Place Details Enterprise», 1.000 letture gratis al mese, poi 20 $ ogni 1.000, serve un conto con carta (developers.google.com/maps, pagine del 09–17/11/2026). TripAdvisor: Content API chiusa il 31/08/2026, ora «Terra», gratis solo all'inizio, carta (tripadvisor.com/developers; stayapi.com, non ufficiale). TheFork: API solo per ristoranti e partner (docs.thefork.io).
 - Strade: A chiave nella pagina (la vedrebbe chiunque: no) · B lavoro automatico su GitHub ogni settimana con la chiave nei segreti, 56 posti ≈ 240 letture al mese, gratis, zero token · C come ora (voto con data + link al voto vero). DOMANDA 2 a Mario, consiglio C.
+
+## Parole di Mario (23/11/2026 19:57, risposta alla DOMANDA 2)
+> No, non voglio che li aggiorni da solo, ma anche a spinta si possono aggiornare, magari in qualche modo gratuito che si possa aggiornare, possa controllare da solo. Non lo so, valuta tu.
+
+- Valutazione (Controllo 29): «a spinta» = parte solo quando Mario tocca un tasto. Strada: lavoro di GitHub «Aggiorna i voti» solo a mano (`workflow_dispatch`, repo pubblico = minuti gratis), chiama Google Places (New) per i 56 posti (`rating`, `userRatingCount`: 56 letture a tocco, 1.000 gratis al mese ≈ 17 tocchi), chiave nei segreti di GitHub, tetto giornaliero in Google Cloud (mai addebiti); scrive `voti.json` su un ramo a parte `voti` (non tocca le versioni), la pagina lo legge da raw.githubusercontent.com e lo tiene sul telefono. TripAdvisor e TheFork restano con data e link (nessuna via gratuita e permessa). Serve a Mario: account Google Cloud con carta (Google la chiede anche per l'uso gratis). → DOMANDA 4.
