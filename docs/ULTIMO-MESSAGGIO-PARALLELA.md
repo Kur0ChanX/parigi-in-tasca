@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (23/11/2026 11:45 ora italiana)
+# Ultimo messaggio di Mario (23/11/2026 11:49 ora italiana)
 
-non riesco a mettere 2 fattori non mi arriva il codice nell app git hub vosa sbaglio?
+@"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta].mp4" cosa sbaglio?
