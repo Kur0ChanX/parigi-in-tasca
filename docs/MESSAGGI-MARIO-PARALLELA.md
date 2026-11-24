@@ -2,11 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 15:30 · 01Rwcxc4Xr46
-Quando siamo nel giorno di Disneyland, oppure anche nella schermata principale, app Disneyland mi deve aprire il mio Disneyland, la mia app di Disneyland, che adesso te la mando, però devi controllare, mi sembra che ogni persona ha il proprio link o ha la propria memoria, perché ognuno ha i propri giorni, non lo so, valuta un po', se li apre a ognuno la propria sezione. Ecco, adesso ti invio l'app guida Disneyland da mettere sempre nella schermata principale e da mettere nelle giornate dove andiamo a Disneyland, così la possiamo consultare. Sono praticamente, questo è un viaggio, sono due app abbinate, questa e quella di Disneyland.
-
-https://guida-disneyland-ynoy.pages.dev/?prova=idee
-
 ## 2026-11-22 16:29 · 01Rwcxc4Xr46
 All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio dietro, l'albero che dovresti farlo meglio, cioè l'albero non flickera, molte luci però flickerano all'inizio. Ti mando un albero che puoi mettere al posto di quello se vuoi. Ovviamente lo devi colorare e addobbare. La Torre Eiffel è fatta male dietro e poi flickera all'inizio appena nel video. E Jack Scheletro non farlo passare più volte. Passa una volta, poi non lo vedo più.
 
@@ -128,3 +123,6 @@ No, non voglio che li aggiorni da solo, ma anche a spinta si possono aggiornare,
 
 ## 2026-11-23 20:08 · 01Rwcxc2rpkc
 No, sono pochissimi tocchi al mese. Boh, non conviene, secondo me. Al massimo ti farò fare io una ricerca su Claude qualche giorno prima o il giorno stesso della partenza.
+
+## 2026-11-24 11:31 · 01Rwcxc2rpkc
+salva per passaggio account

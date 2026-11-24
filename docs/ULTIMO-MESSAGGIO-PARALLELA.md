@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (23/11/2026 20:08 ora italiana)
+# Ultimo messaggio di Mario (24/11/2026 11:31 ora italiana)
 
-No, sono pochissimi tocchi al mese. Boh, non conviene, secondo me. Al massimo ti farò fare io una ricerca su Claude qualche giorno prima o il giorno stesso della partenza.
+salva per passaggio account
