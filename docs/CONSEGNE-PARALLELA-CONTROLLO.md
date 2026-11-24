@@ -27,7 +27,7 @@
 (24/11, cambio account: skill `cambio-account`.)
 
 ## Motore e forza di pensiero
-Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, da `get_session`): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
+Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Medio** (`medium`, da `get_session` del 24/11, scelto da Mario): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
 ## Testo per aprire la Controllo 30
 la apre Mario (catena a 5 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`. Scritto da Controllo 29 il 24/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
