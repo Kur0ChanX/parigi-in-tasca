@@ -1,11 +1,14 @@
-# Ultima risposta di Claude (23/11/2026 20:09 ora italiana)
+# Ultima risposta di Claude (24/11/2026 11:33 ora italiana)
 
-Ho capito: niente tasto e niente aggiornamento automatico. I voti li ricontrollo io quando me lo chiedi, qualche giorno prima della partenza o il giorno stesso.
+Ho capito: salvo tutto per passare a un altro account.
 
-───
 ✅ FATTO
-- La DOMANDA 4 è chiusa. Ho scritto il ricontrollo dei voti nella lista «Da fare» come lavoro che parte quando lo chiedi tu, così non si perde. Tutto è salvato su GitHub.
+- Le consegne della Controllo 29 sono scritte e salvate su GitHub (il ramo locale è uguale a quello su GitHub). Il controllo automatico delle consegne è tutto verde.
+- Non c'è lavoro a metà. Online c'è la **v49**.
+- La sessione nuova non la apro io: nascerebbe nell'account senza token.
 
 ───
-💡 PARERE
-Sono d'accordo con te: per 3 settimane non vale una carta. Per il ricontrollo basta che mi scrivi «ricontrolla i voti dei ristoranti», per esempio il 10 o l'11 dicembre: c'è ancora tempo per cambiare una prenotazione se un posto è …
+👉 DA FARE TU
+A cosa serve: far ripartire la catena «Controllo» nell'altro account, da dove ci siamo fermati.
+1. Segui i 3 passi di `docs/kit-progetto/CAMBIO-ACCOUNT.md`: Preferenze nel profilo, Parallel nella chat, apri la sessione.
+2. …
