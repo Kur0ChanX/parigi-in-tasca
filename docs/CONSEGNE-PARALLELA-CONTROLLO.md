@@ -1,63 +1,54 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
-## Stato (Controllo 28 `session_01Rwcxc4qAM1Re3Gizbkzq6u`, 23/11 16:12 ora italiana, chiusa alla soglia; la apre la Controllo 28 con `create_session` (catena 4 di 8))
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261123-01Rwcxc4qAM1/claude/parigi-ramo-definitivo.
-- **Chiusa in attesa di Mario** (contesto oltre 180k, C455): aspetta la risposta alla DOMANDA «le 4 foto della v48 vanno bene?» (riga ❓ Controllo 28 in «Aspetta Mario»; foto in `archivio/2026-11-23-c28-v48-mangiare-treni/`, mandate in chat 23/11 ~16:00).
-- **v48 PRONTA NEL RAMO, NON online** (verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 47}`; nel ramo `grep -c 'id="mangiare"' dicembre/index.html` = 1). Prove locali verdi sull'ultimo codice: web app 83/83 (prova nuova «C28: scheda Mangiare…»), scritte 20/20, allineamenti di #mangiare, #treniOra, day-head = [] (23/11 ~16:00).
-- **Già deciso da Mario (non richiedere):** idee C28 sì 10 (testi, senza togliere informazioni), 6 (treni in tempo reale), 5 (meteo), ristoranti; no 3 (lista valigia: c'è in un'altra app); ristoranti in tutta Parigi raggiungibile coi mezzi (non a un'ora), voti Google + TheFork + TripAdvisor, per ogni cucina un ⭐ best buy e poi molte alternative di ogni prezzo. Prima: alloggi n. 8, 16, 23; fasci del faro restano; kit 53 applicato.
-- **Da non rifare:** ricerca ristoranti (56 in `research_notes/ristoranti/zona1..4-*.json`, 23/11), link RATP (verificati dall'indice di ricerca: il sito blocca i programmi), sveglia RER A (ora `trig_01XizakkWdLMSSeoPhGVnoho`, 26/11 10:17, mia; la vecchia `trig_01RGdHLwHpoekiHBF2R6fDP4` spenta: cancellarla era bloccato).
-- **Cosa preme a Mario adesso:** vedere online la v48 (ristoranti, treni dal vivo, meteo).
+## Stato (Controllo 29 `session_01Rwcxc2rpkccmGhhxREEMF7`, 24/11 11:31 ora italiana, chiusa alla soglia; la apre Mario (catena a 5 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`)
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261123-01Rwcxc2rpkc/claude/parigi-ramo-definitivo.
+- **Chiusa per cambio account** (Mario 24/11 «salva per passaggio account»), nessun lavoro a metà. Online: **v49** (verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 49}`).
+- **Cosa preme a Mario adesso:** niente di aperto; v49 online da guardare sul telefono.
+- **Già deciso da Mario (non richiedere):** foto v48 e v49 approvate e pubblicate; sfarfallio della testata chiuso («controllo 25 ok»); alloggi spenti = scelta 1 («14 ok», fatto); voti dei ristoranti: NIENTE tasto né aggiornamento automatico (DOMANDA 4 → 2), li ricontrollo a mano quando Mario lo chiede prima della partenza (voce in «2.» di `docs/DA-FARE.md`).
+- **Da non rifare:** ricerca prezzi Google Places / TripAdvisor / TheFork (23/11, in `docs/lavori-in-corso/C28-idee-e-controllo.md`); sveglia RER A ora mia `trig_017xP2rFup3Jk9db1mQN71ky` (26/11 10:17, legata a QUESTA sessione: la Controllo 30 la rifà sua e spegne questa; la vecchia `trig_01XizakkWdLMSSeoPhGVnoho` è spenta).
 
-## Cosa è stato fatto (Controllo 28) · verifica: `git log --oneline 01cc098c..HEAD`
-- Scelte di Mario e piano: `docs/lavori-in-corso/C28-idee-e-controllo.md` (parole intere e scelte in corsa).
-- **Mangiare** (quinta scheda in basso): `tools/fai-ristoranti.py` scrive i dati da `research_notes/ristoranti/` nella pagina fra `/*RIS*/` e `/*/RIS*/` (`--controlla` per le prove). Filtri Dove (4 zone + Tutti, si apre da sola sul pasto giusto durante il viaggio) e Cosa; best buy per primo; 3 voti con link; Maps, «Come arrivo» coi mezzi, Menu, Prenota; distanze dalla posizione (solo se permessa). Zona 3: best buy scelti da me (Sushibar by Goma, L'Emphase, Le George, Rosalie unico pesce).
-- **Treni**: riquadro «🚆 Prossimi treni, adesso» (#treniOra) in Treni e ticket, 8 tasti RATP/IDFM; scorciatoia in cima a ogni giorno.
-- **Meteo**: in cima a ogni giorno, Open-Meteo (dal 28/11; salvato in `pdn-meteo`), link Météo-France.
-- Pranzo di domenica collegato a Mangiare; voce «Prenotate i ristoranti» nel Da fare (posto 3, spunte vecchie scalate una volta: `pdn-check-c28`); fonti nuove; scorciatoia in cima «Hotel Disney» → «Mangiare» (restano 12).
-- Difetto vecchio corretto: `.pc p` → `.pc>p` (paragrafi rientrati di 28 px in tutta la pagina). Frase interna «Le note di ricerca…» riscritta coi suoi numeri.
-- `tools/confronta-fatti.js`: numeri, orari, prezzi e link prima/dopo (per la pulizia dei testi).
-
-## Strade provate e scartate
-- Treni dal vivo dentro la pagina (API ufficiale IDFM): serve una chiave che sul sito pubblico vedrebbe chiunque → tasti alle pagine ufficiali.
-- Riscrivere ora tutte le schede lunghe degli alloggi: rimandato alla v49 (rischio e token), proposta a Mario nel messaggio.
+## Cosa è stato fatto (Controllo 29) · verifica: `git log --oneline f20dde55..HEAD`
+- v48 online (PR 50, 23/11 18:47): Mangiare, treni dal vivo, meteo, pro e contro una frase per riga (`FR`, `PCX`, `QPT`, `RIGHE` nella pagina; classe `.pcx` al posto di `.pc` per i pro/contro, riga in `docs/ERRORI.md`), righe oltre 350 caratteri 18 → 0, prova «C29».
+- v49 online (PR 51, 23/11 19:59): passo 2 di «Scegli» con gruppi «Liberi solo dal 14» (18, 20, 21) ed «Esauriti» (15), niente righe grigie (`GR14`), prova «C20»; tolte le prove `?luci=ferme` e `?tela=si` (C27 chiuso).
+- `tools/allineamenti.mjs` non trova Playwright da `tools/` (import ESM): lanciato da una copia nello scratchpad con `node_modules/playwright` collegato.
 
 ## Prossimi passi
-1. Risposta di Mario sulle foto v48: «1» → `versione.json` 48 + novità della v48 (linguaggio da aggiornamento), prove, PR da ramo, giro locale (`.claude/progetto.json`), unione, controllo del sito vero (`versione.json` = 48), riga del nastro; «2» → correggere quello che dice.
-2. Pulizia testi v49: schede lunghe degli alloggi in punti corti (19 testi oltre 350 caratteri: `node` + testo visibile), controllo `node tools/confronta-fatti.js --da <commit>` verde (sennò ogni fatto perso spiegato), foto prima/dopo.
-3. Dal 28/11: guardare che il meteo compaia (Open-Meteo dal proxy dà 429: provare dal sito vero o da una prova con risposta finta).
-4. Da prima: risposta di Mario sulla v46/v47 (prove `?luci=ferme` e `?tela=si` da togliere), chiave vecchia «Kit RVC lettura» da cancellare.
+1. Avvio normale; niente lavoro aperto della catena: aspettare Mario.
+2. Quando Mario lo chiede (10–13/12): ricontrollo voti dei ristoranti (`research_notes/ristoranti/`, poi `tools/fai-ristoranti.py`).
+3. Dal 28/11: guardare che il meteo compaia nella guida (Open-Meteo).
+4. 26/11: sveglia orari RER A del 13 e 17/12 (vedi sopra).
 
 ## Blocchi e rischi
-- Telefono di prova = imitazione: conferme sul telefono di Mario. `docs/ERRORI.md` vicino al tetto di 10 KB.
-- Orari di alcuni ristoranti in disaccordo fra siti (Clover Grill dom sera, Tsukizi, Le Duc lun, Le Savarin dom sera, Bulot Bulot mer): scritto nelle loro schede.
-- Svista ripetuta: 2 foto di lavoro aperte senza scritta in alto (E314); il controllo automatico aspetta Mario (riga Controllo 19).
+- Telefono di prova = imitazione. `docs/ERRORI.md` vicino al tetto di 10 KB.
 
 ## Ultimo messaggio di Mario
-> No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti, ecco. Si può valutare tutto, però consigliami tu i Best Buy, dove mangiare carne, dove mangiare sushi giapponese, dove mangiare il pesce, dove mangiare cucina tradizionale, eccetera eccetera. Mettimi tu i consigli e poi alternative, insomma, molte alternative.
+> salva per passaggio account
 
-(23/11 15:46, risposta alla DOMANDA 2: fatto, best buy per cucina e 56 posti.)
+(24/11, cambio account: skill `cambio-account`.)
 
 ## Motore e forza di pensiero
-Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
+Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, da `get_session`): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 29
-la apre la Controllo 28 con `create_session` (catena 4 di 8). Scritto da Controllo 28 il 23/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 30
+la apre Mario (catena a 5 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`. Scritto da Controllo 29 il 24/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 29 · v48 da pubblicare`
+Titolo: `🟩 🗼 Controllo 30 · aspetta Mario`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 29 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 30 di Parigi in tasca, linea «Controllo» (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-23 15:14 · [AVVIO] Sei la chat parallela Controllo 28 di Parigi in tasca, linea «Controllo»… → avvio; sveglia RER A rifatta mia
-- 2026-11-23 15:31 · Allora, secondo me puoi fare pulizia dei testi interni senza cancellare informaz… → C28: v48 (Mangiare, treni, meteo, frase interna); resto dei testi v49
-- 2026-11-23 15:39 · metti Google, The Fork e TripAdvisor. → 3 voti in ogni scheda (v48)
-- 2026-11-23 15:40 · metti in Parigi in generale, in posti dove si può arrivare tranquillamente con i… → risposta alla DOMANDA 1: zona «Parigi, coi mezzi» (19 posti)
-- 2026-11-23 15:46 · No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti,… → risposta alla DOMANDA 2: best buy per cucina, 56 posti
+- 2026-11-23 16:13 · [AVVIO] Sei la chat parallela Controllo 29 di Parigi in tasca, linea «Controllo»… → avvio; v49 testi (pro e contro a righe, C28)
+- 2026-11-23 18:39 · controllo 25 ok 14 ok → C27 chiuso, C20 scelta 1 (v49, PR 51)
+- 2026-11-23 18:40 · 11 → risposta alla DOMANDA 1: v48 pubblicata (PR 50)
+- 2026-11-23 18:41 · Ma i voti può controllare in tempo reale senza consumare token e risorse? Se io … → DOMANDA 2 (strade e prezzi, C28)
+- 2026-11-23 19:57 · No, non voglio che li aggiorni da solo, ma anche a spinta si possono aggiornare,… → risposta alla DOMANDA 2; DOMANDA 3 ok = v49 pubblicata; DOMANDA 4
+- 2026-11-23 20:08 · No, sono pochissimi tocchi al mese. Boh, non conviene, secondo me. Al massimo ti… → risposta alla DOMANDA 4: no; voce in «2.» di Da fare
+- 2026-11-24 11:31 · salva per passaggio account → cambio account: queste consegne
 
 Ultimo, intero:
-> No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti, ecco. Si può valutare tutto, però consigliami tu i Best Buy, dove mangiare carne, dove mangiare sushi giapponese, dove mangiare il pesce, dove mangiare cucina tradizionale, eccetera eccetera. Mettimi tu i consigli e poi alternative, insomma, molte alternative.
+> salva per passaggio account
 
