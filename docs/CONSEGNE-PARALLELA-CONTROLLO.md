@@ -16,7 +16,7 @@
 1. Avvio normale; niente lavoro aperto della catena: aspettare Mario.
 2. Quando Mario lo chiede (10–13/12): ricontrollo voti dei ristoranti (`research_notes/ristoranti/`, poi `tools/fai-ristoranti.py`).
 3. Dal 28/11: guardare che il meteo compaia nella guida (Open-Meteo).
-4. 26/11: sveglia orari RER A del 13 e 17/12 (vedi sopra).
+4. Orari RER A del 13 e 17/12: la sveglia è scattata il 26/11 10:18 in questa sessione chiusa; su malignea.fr/horaires/ ancora solo fino al 6/12. All'avvio rifai una sveglia tua per il 28/11 (stesso testo della sveglia C22) e spegni `trig_017xP2rFup3Jk9db1mQN71ky` se è ancora attiva.
 
 ## Blocchi e rischi
 - Telefono di prova = imitazione. `docs/ERRORI.md` vicino al tetto di 10 KB.
