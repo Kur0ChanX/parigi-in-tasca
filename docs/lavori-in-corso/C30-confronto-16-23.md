@@ -18,3 +18,5 @@ Chat: Controllo 30 (`session_01Rwcxc7G3cY8jSfhTdMsJxZ`), dal 27/11/2026.
 - Booking blocca i programmi («403 · detected as a robot»): niente altri tentativi automatici (rispetto delle sue regole); il n. 23 lo legge Mario dall'app (DOMANDA 1). Il n. 16 non è su Booking (cercato per nome e numero di registrazione).
 - Risultato: `research_notes/Parigi mercatini e Disneyland dicembre/confronto_16_23_recensioni_27_11.md`. Consiglio n. 16 per l'inverno; n. 23 seconda scelta (cancellazione gratis fino al 29/11 15:00).
 - Pagina non toccata: aspetta la DOMANDA 2 (v50 coi fatti nuovi).
+- Messaggio pronto per il gestore del n. 23 (DOMANDA 3, scelta 2; su Airbnb «Invia un messaggio all'host»):
+  «Bonjour Philippe, nous sommes deux adultes et nous pensons réserver votre appartement du 13 au 17 décembre. Une question avant de réserver : quel type de chauffage y a-t-il, et l'appartement reste-t-il bien chaud en hiver ? Merci beaucoup !»

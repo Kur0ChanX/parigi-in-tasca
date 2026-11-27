@@ -1,55 +1,57 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
-## Stato (Controllo 29 `session_01Rwcxc2rpkccmGhhxREEMF7`, 24/11 11:31 ora italiana, chiusa alla soglia; la apre Mario (catena a 5 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`)
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261123-01Rwcxc2rpkc/claude/parigi-ramo-definitivo.
-- **Chiusa per cambio account** (Mario 24/11 «salva per passaggio account»), nessun lavoro a metà. Online: **v49** (verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 49}`).
-- **Cosa preme a Mario adesso:** niente di aperto; v49 online da guardare sul telefono.
-- **Già deciso da Mario (non richiedere):** foto v48 e v49 approvate e pubblicate; sfarfallio della testata chiuso («controllo 25 ok»); alloggi spenti = scelta 1 («14 ok», fatto); voti dei ristoranti: NIENTE tasto né aggiornamento automatico (DOMANDA 4 → 2), li ricontrollo a mano quando Mario lo chiede prima della partenza (voce in «2.» di `docs/DA-FARE.md`).
-- **Da non rifare:** ricerca prezzi Google Places / TripAdvisor / TheFork (23/11, in `docs/lavori-in-corso/C28-idee-e-controllo.md`); sveglia RER A ora mia `trig_017xP2rFup3Jk9db1mQN71ky` (26/11 10:17, legata a QUESTA sessione: la Controllo 30 la rifà sua e spegne questa; la vecchia `trig_01XizakkWdLMSSeoPhGVnoho` è spenta).
+## Stato (Controllo 30 `session_01Rwcxc7G3cY8jSfhTdMsJxZ`, 27/11 23:39 ora italiana, chiusa alla soglia; la apre la Controllo 30 con `create_session` (catena 5 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261127-01Rwcxc7G3cY/claude/parigi-ramo-definitivo.
+- **Fatto (C30):** confronto n. 16 contro n. 23 con TUTTE le recensioni Airbnb (571 + 68) e le 10 leggibili su Booking (n. 23; il n. 16 non è su Booking). Verifica: `research_notes/Parigi mercatini e Disneyland dicembre/confronto_16_23_recensioni_27_11.md` e `docs/lavori-in-corso/C30-confronto-16-23.md`. Pagina NON toccata (online v49: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 49}`).
+- **Cosa preme a Mario adesso:** scegliere l'alloggio. Mio consiglio n. 16 (inverno provato: 81 recensioni d'inverno «caldo»; RER a 1–2 min; cassetta chiavi 15–02; difetto: acqua calda a serbatoio → chiedere al gestore). Il n. 23 si cancella gratis su Airbnb **fino a domenica 29/11 alle 15:00**: ricordarglielo se scrive prima.
+- **Già deciso da Mario (non richiedere):** NON vuole leggere lui le recensioni Booking (27/11 «che senso ha se devo leggerle io»); voti dei ristoranti solo a mano quando li chiede; foto v48 e v49 approvate.
+- **Da non rifare:** lettura automatica di Booking (blocca i programmi, «403 robot»: non si aggira); chiamata interna di Airbnb con la chiave (fermata dal controllo dei permessi); scaricare di nuovo le 639 recensioni Airbnb (il risultato è negli appunti; costano ~160k token). Le recensioni scaricate erano nello scratchpad (non nel repo: nomi di ospiti).
+- **Domande aperte (righe in «## 0. Aspetta Mario»):** 🛑 DOMANDA 2 (v50 con i fatti nuovi delle recensioni nelle schede «📋 Tutto sul n.» 16 e 23) e DOMANDA 3 (Booking del n. 23: 1 · basta Airbnb · 2 · messaggio in francese al gestore sul riscaldamento, testo in `docs/lavori-in-corso/C30-confronto-16-23.md`). Se Mario risponde «1» alla 2: v50 coi fatti della sezione «In breve» del file di ricerca (n. 16: acqua calda a serbatoio + riga sul boiler nel messaggio al gestore, uscita 1 della RER; n. 23: Booking 8,8, letto in soppalco, età minima 18 su Booking), prove, PR, giro.
+- **Sveglia mia:** `trig_01Si365QX12uhycTTG6hJNpK` (orari RER A, 28/11 10:17): la Controllo 31 la rifà sua e cancella questa. La vecchia `trig_017xP2rFup3Jk9db1mQN71ky` è già scattata e spenta.
+- Controllo Da fare: 0 voci aggiunte (le richieste di Mario di questa sessione sono C30 e le DOMANDE 2 e 3, già in «## 0. Aspetta Mario»).
 
-## Cosa è stato fatto (Controllo 29) · verifica: `git log --oneline f20dde55..HEAD`
-- v48 online (PR 50, 23/11 18:47): Mangiare, treni dal vivo, meteo, pro e contro una frase per riga (`FR`, `PCX`, `QPT`, `RIGHE` nella pagina; classe `.pcx` al posto di `.pc` per i pro/contro, riga in `docs/ERRORI.md`), righe oltre 350 caratteri 18 → 0, prova «C29».
-- v49 online (PR 51, 23/11 19:59): passo 2 di «Scegli» con gruppi «Liberi solo dal 14» (18, 20, 21) ed «Esauriti» (15), niente righe grigie (`GR14`), prova «C20»; tolte le prove `?luci=ferme` e `?tela=si` (C27 chiuso).
-- `tools/allineamenti.mjs` non trova Playwright da `tools/` (import ESM): lanciato da una copia nello scratchpad con `node_modules/playwright` collegato.
+## Cosa è stato fatto (Controllo 30) · verifica: `git log --oneline 21cb05f..HEAD`
+- C30: confronto in `research_notes/…/confronto_16_23_recensioni_27_11.md`; prezzi di oggi (n. 16 503 €, n. 23 489 € su Airbnb); 2 domande a Mario; riga nuova in `docs/ERRORI.md` (lavoro passato a Mario quando Booking blocca) e riga vecchia della slitta spostata in `docs/ERRORI-STORIA.md`.
+
+## Strade provate e scartate (perché; così la prossima non le rifà)
+- Airbnb: chiamata interna con la chiave dell'app → negata dal controllo dei permessi. Va bene il browser automatico che apre `airbnb.it/rooms/<id>/reviews` e scorre la finestra (`[data-review-id]`).
+- Booking: pagina `reviewlist.html` → «Pagina non trovata»; scheda col browser automatico → «403 · detected as a robot». Il servizio di lettura web dà solo le 10 recensioni in evidenza.
+- Chiedere a Mario di leggere lui → Mario contrario (riga in ERRORI).
 
 ## Prossimi passi
-1. Avvio normale. Kit nuovo nella fonte (Kit 56 · 27/11/2026 · Preferenze v40; qui Kit 53): prima l'aggiornamento come dice l'hook d'avvio.
-0. ✅ Fatto dalla Controllo 30 (C30, risultato in `research_notes/…/confronto_16_23_recensioni_27_11.md`; aspetta DOMANDA 1 e 2): ~~Richiesta di Mario arrivata a sessione chiusa (27/11)~~ «Fai una comparazione accurata tra il 16 e il 23 recensioni ecc ecc leggile tutte airb&b e booking» → confronto n. 16 contro n. 23 leggendo TUTTE le recensioni su Airbnb e Booking (fonti e data in `research_notes/`, poi in pagina se cambia qualcosa).
-2. Quando Mario lo chiede (10–13/12): ricontrollo voti dei ristoranti (`research_notes/ristoranti/`, poi `tools/fai-ristoranti.py`).
-3. Dal 28/11: guardare che il meteo compaia nella guida (Open-Meteo).
-4. Orari RER A del 13 e 17/12: la sveglia è scattata il 26/11 10:18 in questa sessione chiusa; su malignea.fr/horaires/ ancora solo fino al 6/12. All'avvio rifai una sveglia tua per il 28/11 (stesso testo della sveglia C22) e spegni `trig_017xP2rFup3Jk9db1mQN71ky` se è ancora attiva.
+1. Avvio normale. Kit nuovo nella fonte (Kit 56 · 27/11/2026 · Preferenze v40; qui Kit 53): prima l'aggiornamento come dice l'hook d'avvio (serve l'ok di Mario per i file di `.claude/`: domanda con il testo pronto).
+2. Quando Mario risponde alle DOMANDE 2 e 3: vedi «Domande aperte» qui sopra.
+3. Quando Mario lo chiede (10–13/12): ricontrollo voti dei ristoranti (`research_notes/ristoranti/`, poi `tools/fai-ristoranti.py`).
+4. Dal 28/11: guardare che il meteo compaia nella guida (Open-Meteo).
+5. Orari RER A del 13 e 17/12: sveglia del 28/11 (sopra).
 
 ## Blocchi e rischi
-- Telefono di prova = imitazione. `docs/ERRORI.md` vicino al tetto di 10 KB.
+- Telefono di prova = imitazione. `docs/ERRORI.md` al tetto di 10 KB (10.098 byte): alla prossima riga spostare una vecchia in `docs/ERRORI-STORIA.md`.
 
 ## Ultimo messaggio di Mario
-> salva per passaggio account
+> dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
 
-(24/11, cambio account: skill `cambio-account`.)
+(27/11 23:37: risposto in chat — Airbnb letto tutto, Booking blocca i programmi, quei dati non servono a decidere; DOMANDA 3 al posto della 1.)
 
 ## Motore e forza di pensiero
-Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, motore di questa chat il 27/11): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
+Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 30
-la apre Mario (catena a 5 di 8, o cambio account): passi in `docs/kit-progetto/CAMBIO-ACCOUNT.md`. Scritto da Controllo 29 il 24/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 31
+la apre la Controllo 30 con `create_session` (catena 5 di 8). Scritto da Controllo 30 il 27/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 30 · aspetta Mario`
+Titolo: `🟩 🗼 Controllo 31 · scelta alloggio`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 30 di Parigi in tasca, linea «Controllo» (repo Kur0ChanX/parigi-in-tasca, ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 31 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-23 16:13 · [AVVIO] Sei la chat parallela Controllo 29 di Parigi in tasca, linea «Controllo»… → avvio; v49 testi (pro e contro a righe, C28)
-- 2026-11-23 18:39 · controllo 25 ok 14 ok → C27 chiuso, C20 scelta 1 (v49, PR 51)
-- 2026-11-23 18:40 · 11 → risposta alla DOMANDA 1: v48 pubblicata (PR 50)
-- 2026-11-23 18:41 · Ma i voti può controllare in tempo reale senza consumare token e risorse? Se io … → DOMANDA 2 (strade e prezzi, C28)
-- 2026-11-23 19:57 · No, non voglio che li aggiorni da solo, ma anche a spinta si possono aggiornare,… → risposta alla DOMANDA 2; DOMANDA 3 ok = v49 pubblicata; DOMANDA 4
-- 2026-11-23 20:08 · No, sono pochissimi tocchi al mese. Boh, non conviene, secondo me. Al massimo ti… → risposta alla DOMANDA 4: no; voce in «2.» di Da fare
-- 2026-11-24 11:31 · salva per passaggio account → cambio account: queste consegne
+- 2026-11-27 23:23 · [AVVIO] Sei la chat parallela Controllo 30 di Parigi in tasca, linea «Controllo»… → avvio; C30 confronto 16-23
+- 2026-11-27 23:35 · se vuoi me le leggo io le recensioni e faccio prima..... → risposta alla DOMANDA 1 (poi sostituita dalla 3)
+- 2026-11-27 23:37 · dico che senso ha se devo leggerle io me lo spieghi la tua utilità? → risposta in chat; DOMANDA 3; riga in docs/ERRORI.md
 
 Ultimo, intero:
-> salva per passaggio account
+> dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
 
