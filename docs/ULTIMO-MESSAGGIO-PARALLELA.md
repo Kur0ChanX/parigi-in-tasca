@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (28/11/2026 00:22 ora italiana)
+# Ultimo messaggio di Mario (28/11/2026 00:32 ora italiana)
 
-Dormiano nell appartamento 23 guarda tutta l'app con cura per itinerario info ecc ecc in base a dove dormiamo
+correggi ci saranno altei errori moxy ecc noi siamo al 23
