@@ -2,13 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 16:29 · 01Rwcxc4Xr46
-All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio dietro, l'albero che dovresti farlo meglio, cioè l'albero non flickera, molte luci però flickerano all'inizio. Ti mando un albero che puoi mettere al posto di quello se vuoi. Ovviamente lo devi colorare e addobbare. La Torre Eiffel è fatta male dietro e poi flickera all'inizio appena nel video. E Jack Scheletro non farlo passare più volte. Passa una volta, poi non lo vedo più.
-
-## 2026-11-22 19:26 · 01QTFEqRa2TK
-non ho ora il token
-se mi dai la guida dove prenderlo
-
 ## 2026-11-22 19:28 · 01QTFEqRa2TK
 11 21  31
 
@@ -132,3 +125,9 @@ Fai una comparazione accurata tra il 16 e il 23 recensioni ecc ecc leggile tutte
 
 ## 2026-11-27 · 01Rwcxc2rpkc (sessione già chiusa, passato alla Controllo 30)
 fallo tu scusa no?
+
+## 2026-11-27 23:35 · 01Rwcxc7G3cY
+se vuoi me le leggo io le recensioni e faccio prima.....
+
+## 2026-11-27 23:37 · 01Rwcxc7G3cY
+dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
