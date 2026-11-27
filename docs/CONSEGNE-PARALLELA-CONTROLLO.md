@@ -6,7 +6,7 @@
 - **Cosa preme a Mario adesso:** scegliere l'alloggio. Mio consiglio n. 16 (inverno provato: 81 recensioni d'inverno «caldo»; RER a 1–2 min; cassetta chiavi 15–02; difetto: acqua calda a serbatoio → chiedere al gestore). Il n. 23 si cancella gratis su Airbnb **fino a domenica 29/11 alle 15:00**: ricordarglielo se scrive prima.
 - **Già deciso da Mario (non richiedere):** NON vuole leggere lui le recensioni Booking (27/11 «che senso ha se devo leggerle io»); voti dei ristoranti solo a mano quando li chiede; foto v48 e v49 approvate.
 - **Da non rifare:** lettura automatica di Booking (blocca i programmi, «403 robot»: non si aggira); chiamata interna di Airbnb con la chiave (fermata dal controllo dei permessi); scaricare di nuovo le 639 recensioni Airbnb (il risultato è negli appunti; costano ~160k token). Le recensioni scaricate erano nello scratchpad (non nel repo: nomi di ospiti).
-- **Domande aperte (righe in «## 0. Aspetta Mario»):** 🛑 DOMANDA 2 (v50 con i fatti nuovi delle recensioni nelle schede «📋 Tutto sul n.» 16 e 23) e DOMANDA 3 (Booking del n. 23: 1 · basta Airbnb · 2 · messaggio in francese al gestore sul riscaldamento, testo in `docs/lavori-in-corso/C30-confronto-16-23.md`). Se Mario risponde «1» alla 2: v50 coi fatti della sezione «In breve» del file di ricerca (n. 16: acqua calda a serbatoio + riga sul boiler nel messaggio al gestore, uscita 1 della RER; n. 23: Booking 8,8, letto in soppalco, età minima 18 su Booking), prove, PR, giro.
+- **Mario 27/11 23:40 «publica» (dopo l'handoff) = risposta alla DOMANDA 2 → 1: la Controllo 31 fa SUBITO la v50** (voce in «1.» di `docs/DA-FARE.md`). **Domande aperte:** ~~🛑 DOMANDA 2~~ (risposta: sì) (v50 con i fatti nuovi delle recensioni nelle schede «📋 Tutto sul n.» 16 e 23) e DOMANDA 3 (Booking del n. 23: 1 · basta Airbnb · 2 · messaggio in francese al gestore sul riscaldamento, testo in `docs/lavori-in-corso/C30-confronto-16-23.md`). Se Mario risponde «1» alla 2: v50 coi fatti della sezione «In breve» del file di ricerca (n. 16: acqua calda a serbatoio + riga sul boiler nel messaggio al gestore, uscita 1 della RER; n. 23: Booking 8,8, letto in soppalco, età minima 18 su Booking), prove, PR, giro.
 - **Sveglia mia:** `trig_01Si365QX12uhycTTG6hJNpK` (orari RER A, 28/11 10:17): la Controllo 31 la rifà sua e cancella questa. La vecchia `trig_017xP2rFup3Jk9db1mQN71ky` è già scattata e spenta.
 - Controllo Da fare: 0 voci aggiunte (le richieste di Mario di questa sessione sono C30 e le DOMANDE 2 e 3, già in «## 0. Aspetta Mario»).
 
@@ -20,7 +20,7 @@
 
 ## Prossimi passi
 1. Avvio normale. Kit nuovo nella fonte (Kit 56 · 27/11/2026 · Preferenze v40; qui Kit 53): prima l'aggiornamento come dice l'hook d'avvio (serve l'ok di Mario per i file di `.claude/`: domanda con il testo pronto).
-2. Quando Mario risponde alle DOMANDE 2 e 3: vedi «Domande aperte» qui sopra.
+2. **Subito: v50** (Mario «publica»): fatti in «Domande aperte» qui sopra; poi prove (`fai-dicembre.py --controlla`, `prova-web-app.js`, `prova-scritte.js`), PR, giro completo, unione. DOMANDA 3 resta aperta.
 3. Quando Mario lo chiede (10–13/12): ricontrollo voti dei ristoranti (`research_notes/ristoranti/`, poi `tools/fai-ristoranti.py`).
 4. Dal 28/11: guardare che il meteo compaia nella guida (Open-Meteo).
 5. Orari RER A del 13 e 17/12: sveglia del 28/11 (sopra).
@@ -29,6 +29,9 @@
 - Telefono di prova = imitazione. `docs/ERRORI.md` al tetto di 10 KB (10.098 byte): alla prossima riga spostare una vecchia in `docs/ERRORI-STORIA.md`.
 
 ## Ultimo messaggio di Mario
+> publica
+
+(27/11 23:40, arrivato durante l'handoff: risposta alla DOMANDA 2 → v50; poi 3 volte «ora»: la vuole SUBITO.) Prima:
 > dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
 
 (27/11 23:37: risposto in chat — Airbnb letto tutto, Booking blocca i programmi, quei dati non servono a decidere; DOMANDA 3 al posto della 1.)
