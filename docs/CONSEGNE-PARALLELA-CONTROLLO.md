@@ -13,7 +13,8 @@
 - `tools/allineamenti.mjs` non trova Playwright da `tools/` (import ESM): lanciato da una copia nello scratchpad con `node_modules/playwright` collegato.
 
 ## Prossimi passi
-1. Avvio normale; niente lavoro aperto della catena: aspettare Mario.
+1. Avvio normale. Kit nuovo nella fonte (Kit 56 · 27/11/2026 · Preferenze v40; qui Kit 53): prima l'aggiornamento come dice l'hook d'avvio.
+0. **Richiesta di Mario arrivata a sessione chiusa (27/11), da fare per prima dopo l'avvio:** «Fai una comparazione accurata tra il 16 e il 23 recensioni ecc ecc leggile tutte airb&b e booking» → confronto n. 16 contro n. 23 leggendo TUTTE le recensioni su Airbnb e Booking (fonti e data in `research_notes/`, poi in pagina se cambia qualcosa).
 2. Quando Mario lo chiede (10–13/12): ricontrollo voti dei ristoranti (`research_notes/ristoranti/`, poi `tools/fai-ristoranti.py`).
 3. Dal 28/11: guardare che il meteo compaia nella guida (Open-Meteo).
 4. Orari RER A del 13 e 17/12: la sveglia è scattata il 26/11 10:18 in questa sessione chiusa; su malignea.fr/horaires/ ancora solo fino al 6/12. All'avvio rifai una sveglia tua per il 28/11 (stesso testo della sveglia C22) e spegni `trig_017xP2rFup3Jk9db1mQN71ky` se è ancora attiva.
