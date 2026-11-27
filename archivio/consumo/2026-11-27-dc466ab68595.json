@@ -2,34 +2,35 @@
 "account": "cba507",
 "sessione": "dc466ab68595",
 "giorno": "2026-11-27",
-"turni": 3,
-"peso": 1539461,
-"uscita": 51553,
-"contesto_max": 267649,
+"turni": 4,
+"peso": 1607755,
+"uscita": 52702,
+"contesto_max": 302545,
 "anomalie": [
 "un turno ha aggiunto 160k token al contesto",
 "45k token scritti in un turno"
 ],
 "remota": "01Rwcxc7G3cY",
 "aiutanti": 0,
-"strumenti": 64,
+"strumenti": 66,
 "motori": {
-"opus": 1539461
+"opus": 1607755
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-117,
-10007381,
-224672,
+120,
+10609220,
+226562,
 0,
-51553
+52702
 ]
 },
-"costo": 4.8303,
+"costo": 4.9888,
 "blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": 1,
-"Stop 8 · Il turno finisce con una": 1
+"Stop 8 · Il turno finisce con una": 1,
+"Stop 14 · Ti fermi ad aspettare Mario": 1
 },
 "esempi_blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": [
@@ -37,6 +38,9 @@
 ],
 "Stop 8 · Il turno finisce con una": [
 "23:38 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+],
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"23:38 · Ti fermi ad aspettare Mario con il contesto a 271k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
 ]
 }
 }
