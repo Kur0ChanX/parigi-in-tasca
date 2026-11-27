@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (27/11/2026 23:43 ora italiana)
+# Ultimo messaggio di Mario (28/11/2026 00:22 ora italiana)
 
-e publica in priorità
+Dormiano nell appartamento 23 guarda tutta l'app con cura per itinerario info ecc ecc in base a dove dormiamo

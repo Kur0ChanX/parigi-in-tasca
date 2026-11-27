@@ -2,9 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 22:09 · 01QTFEqQQmp8
-andava bene poi invece
-
 ## 2026-11-22 22:28 · 01QTFEqSjyGg
 passaggio account salva
 
@@ -127,3 +124,6 @@ confronta nell'app moxy e monolocale di nice
 
 ## 2026-11-27 23:43 · 01Rwcxc6vqxe
 e publica in priorità
+
+## 2026-11-28 00:22 · 01Rwcxc5wytQ
+Dormiano nell appartamento 23 guarda tutta l'app con cura per itinerario info ecc ecc in base a dove dormiamo

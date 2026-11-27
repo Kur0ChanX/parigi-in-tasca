@@ -1,0 +1,27 @@
+{
+"account": "cba507",
+"sessione": "8462667d86bc",
+"giorno": "2026-11-28",
+"turni": 1,
+"peso": 208851,
+"uscita": 8770,
+"contesto_max": 94473,
+"anomalie": [],
+"remota": "01Rwcxc5wytQ",
+"aiutanti": 0,
+"strumenti": 17,
+"motori": {
+"opus": 208851
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+25,
+1049075,
+48055,
+0,
+8770
+]
+},
+"costo": 0.7698
+}
