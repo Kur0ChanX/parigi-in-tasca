@@ -267,6 +267,12 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     ok('«Vicino a Disney» ordina solo per minuti (i km non contano: Mario 22/11 ~11:05)', disOk && srcD.length === 2 && srcD.every((s) => !/km/i.test(s))); if (!disOk || srcD.length !== 2) console.log(v.disMin.join(','), srcD);
     ok('C14: seconda camera a Bussy (Airbnb 15868262) nel riquadro B&B, conteggio «B&B» = righe + 2 camere', v.bb2 && v.bbN === v.bbR + 2); if (!(v.bb2 && v.bbN === v.bbR + 2)) console.log(v.bb2, v.bbN, v.bbR);
     ok('C31: in testa a «Tutti gli alloggi» il n. 23 prenotato, niente Moxy', /4 notti al n\. 23/.test(v.mio) && !/Moxy/.test(v.mio));
+    { // C31 (28/11): il n. 23 aveva 9 minuti a piedi nella scheda e 5 nella tabella dei tempi ai parchi: un dato in due posti, stesso numero (±1)
+      const src = fs.readFileSync(path.join(__dirname, '..', 'dicembre', 'parigi-disney-natale.html'), 'utf8'), al = {}, dv = (src.match(/const DV=\{[^\n]*/) || [''])[0], diversi = [];
+      for (const m of src.matchAll(/\{id:(\d+),[\s\S]{0,4000}?\bmin:(\d+),/g)) al[m[1]] = +m[2];
+      for (const m of dv.matchAll(/(\d+):\["VDE",\[\["w",(\d+)\]\]/g)) if (!(m[1] in al) || Math.abs(al[m[1]] - +m[2]) > 1) diversi.push(m[1] + ': scheda ' + al[m[1]] + ', tempi ' + m[2]);
+      ok('C31: minuti a piedi fino a Val d’Europe uguali nella scheda e nei tempi ai parchi (±1)', diversi.length === 0 && Object.keys(al).length === 35); if (diversi.length) console.log(diversi);
+    }
   }
   // C13 pezzo 2 (22/11): il passo 1 (domenica) ha lo stesso stile del passo 2: colore, 3 riquadri, totale sotto il prezzo
   {
