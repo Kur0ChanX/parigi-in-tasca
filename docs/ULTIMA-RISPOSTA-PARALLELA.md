@@ -1,14 +1,15 @@
-# Ultima risposta di Claude (24/11/2026 11:33 ora italiana)
+# Ultima risposta di Claude (27/11/2026 23:36 ora italiana)
 
-Ho capito: salvo tutto per passare a un altro account.
+Ho capito: le recensioni Booking del n. 23 le leggi tu.
 
-✅ FATTO
-- Le consegne della Controllo 29 sono scritte e salvate su GitHub (il ramo locale è uguale a quello su GitHub). Il controllo automatico delle consegne è tutto verde.
-- Non c'è lavoro a metà. Online c'è la **v49**.
-- La sessione nuova non la apro io: nascerebbe nell'account senza token.
+✅ **FATTO**
+- Ho segnato la tua risposta alla DOMANDA 1 nella lista «Da fare» e l'ho salvata su GitHub.
 
 ───
-👉 DA FARE TU
-A cosa serve: far ripartire la catena «Controllo» nell'altro account, da dove ci siamo fermati.
-1. Segui i 3 passi di `docs/kit-progetto/CAMBIO-ACCOUNT.md`: Preferenze nel profilo, Parallel nella chat, apri la sessione.
-2. …
+👉 **DA FARE TU**
+**A cosa serve:** sapere se il n. 23 tiene il caldo a dicembre. È l'unico punto dove il n. 23 potrebbe perdere contro il n. 16.
+1. Apri le recensioni Booking del n. 23 e tocca l'argomento «Riscaldamento»: il caldo in casa è lodato o criticato?
+2. Poi guarda quelle col voto più basso: cosa criticano?
+3. Scrivimi in due righe, per esempio «riscaldamento ok, i voti bassi parlano del letto».
+
+Dopo aggiorno il …
