@@ -1,12 +1,8 @@
-# Ultima risposta di Claude (28/11/2026 00:09 ora italiana)
+# Ultima risposta di Claude (28/11/2026 00:52 ora italiana)
 
-Ho capito: avvio della Controllo 32; continuo da sola dai «Prossimi passi».
-
-🧠 Continuo con Opus 5.5 · Extra, come la sessione precedente. Fable non serve: ci sono solo lavori piccoli e attese.
-
-───
 ✅ FATTO
-- Il numero della catena è passato a 32. È salvato su GitHub.
-- Ho rifatto mia la sveglia di domani (sabato) alle 10:17: controlla gli orari del treno RER A del 13 e del 17/12 e il meteo nella guida.
-- La sveglia vecchia l'ho spenta, ma non l'ho cancellata: la cancellazione l'ha bloccata il controllo dei permessi. Così spenta non fa danni.
-- Il Kit 56 è scaricato: lo installo appena mi …
+- La guida di dicembre ora parte dal **n. 23 prenotato su Booking (461 €)**. Il Moxy non compare più come consiglio: resta solo fra gli altri alloggi.
+- Ho corretto l'errore della tua foto: menu e riquadro «Il vostro alloggio» ora mostrano tutti e due il n. 23.
+- Biglietti Disney a 505 € (li ho presi per i 3 giorni / 2 parchi dal 14/12): li ho messi in costi, «In breve», «Biglietti» e «Da fare». Totale per due: circa 1.073 €.
+- Errore trovato e corretto: dal n. 23 alla stazione sono **9 minuti a piedi** (circa 700 m), non 5. Era sbagliato nei tempi verso i parchi.
+- Mercoledì sera: …
