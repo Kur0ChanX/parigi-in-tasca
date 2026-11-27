@@ -6,7 +6,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
 | Principale | cerchi | 🟢 🟡 🔴 ⚫ | 22 | session_01WTjqUtegBCzTHdbgdaXDm1 | — |
-| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 30 | session_01Rwcxc7G3cY8jSfhTdMsJxZ | — |
+| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 31 | session_01Rwcxc6vqxeDJS6LUemAjJo | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
@@ -31,7 +31,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C24 | Controllo 19 (da Controllo 18) | Tasto «Scegli dove dormire»: rosa → confronto → scelta che cambia l'itinerario (risposte 11 21 31), guida dei giorni secondo l'hotel | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C24-scegli-dove-dormire.md` | 22/11 |
 | C27 | Controllo 24 (da Controllo 23) | Testata: Torre, faro e slitta che sfarfallano (1.355 strati) → lucine sulla tela, meno strati (pezzo 2 in corso, non pubblicato finché la prova non conferma) | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C27-testata-strati.md` | 23/11 |
 | C28 | Controllo 29 (da Controllo 28) | v48 (ristoranti, treni, meteo) aspetta l'ok di Mario sulle foto; intanto v49: testi lunghi degli alloggi in punti corti, senza togliere fatti | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C28-idee-e-controllo.md` | 23/11 |
-| C30 | Controllo 30 | Confronto n. 16 contro n. 23 con TUTTE le recensioni Airbnb e Booking | `research_notes/…/confronto_16_23_recensioni_27_11.md`, `docs/lavori-in-corso/C30-confronto-16-23.md` | 27/11 |
+| C30 | Controllo 31 (da Controllo 30) | Confronto n. 16 contro n. 23 con TUTTE le recensioni Airbnb e Booking; v50 coi fatti nuovi nelle schede «📋 Tutto sul n.» | `research_notes/…/confronto_16_23_recensioni_27_11.md`, `docs/lavori-in-corso/C30-confronto-16-23.md` | 27/11 |
 | PR 37 | Controllo 14 (altro account) | v36 da `versione-v36` (commit df327f9), unita 22/11 | — | 22/11 |
 | PR 45 | Controllo 23 | v45 da `versione-v45` (commit 6022aec), unita 23/11 | — | 23/11 |
 | PR 46 | Controllo 23 | prova «luci ferme» da `versione-v45-prova` (commit 5a8d6bb), unita 23/11 | — | 23/11 |

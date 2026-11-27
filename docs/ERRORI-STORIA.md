@@ -108,3 +108,9 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 | 22/11/2026 | Luci della testata che sfarfallano all’apertura (Mario, video v33). | Animazioni con ritardo positivo: prima di partire la luce resta accesa piena, poi scatta. | Ritardi sempre negativi; prova «nessuna luce parte in ritardo» su tutta la testata. |
 
 | 22/11/2026 | Regali della slitta invisibili dalla v30 (Mario 13:37), prova verde. | Pacchi di 6 px e scuri, lanciati anche dietro il castello; la prova li contava soltanto. | Pacchi grandi e colorati, solo sul cielo libero; prova con misura ed `elementsFromPoint`. Una cosa da vedere si prova se si VEDE, mai solo se c’è . | *(spostata da ERRORI.md il 27/11/2026)*
+
+## Spostati dal diario il 27/11/2026 (Controllo 31, file snello)
+| Data | Errore | Causa vera | Difesa |
+|---|---|---|---|
+| 22/11/2026 | «Nascondi» (C20): gli hotel di Parigi nascosti tornavano dopo la ricarica. | Chiave fatta su due elenchi con id di tipo diverso (alloggi a numero, Parigi a sigla «lo»), controllo scritto solo per i numeri. | Chiavi di più elenchi: controllo provato con un id di OGNI elenco; prova «resta dopo la ricarica» anche per Parigi in `prova-web-app.js`. |
+| 22/11/2026 | v37, prima di pubblicare (prova rossa): il tasto nuovo «Rosa alloggi» sotto «Guida Disneyland» spingeva l’albero della testata sotto la barra in basso. | Ogni riga in più nella schermata principale allunga la testata: il disegno scende di tanto quanto la riga (80 px). | Tasti nuovi della schermata principale affiancati, mai una riga in più; la prova dell’albero «si vede» lo ferma. |

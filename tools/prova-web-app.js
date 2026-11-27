@@ -237,7 +237,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       out.tasti = tiles.length; out.visibili = tiles.every((a) => { const r = a.getBoundingClientRect(); return r.top >= 0 && r.bottom <= tb.top; }); out.barra = Math.round(tb.height);
       for (const h of tiles.map((a) => a.getAttribute('href') + '|' + (a.dataset.day || ''))) {
         document.querySelector('.tabbar button[data-t="piano"]').click(); await w(); scrollTo(0, 0); await w(200);
-        const [href, day] = h.split('|'); document.querySelector('nav.go a[href="' + href + '"]' + (day ? '[data-day="' + day + '"]' : '')).click(); await w(900);
+        const [href, day] = h.split('|'); document.querySelector('nav.go a[href="' + href + '"]' + (day ? '[data-day="' + day + '"]' : '')).click(); await w(300);
+        for (let k = 0, y = -1; k < 30 && y !== scrollY; k++) { y = scrollY; await w(150); } // E 27/11: lo scorrimento dolce verso il fondo a volte dura più di 0,9 s (computer carico): si aspetta che sia fermo
         const el = document.getElementById(href.slice(1)), r = el.getBoundingClientRect();
         if (r.top < -2 || r.top > innerHeight * 0.5 || el.closest('[hidden]')) out.sbagliati.push(href + ' top ' + Math.round(r.top));
       }

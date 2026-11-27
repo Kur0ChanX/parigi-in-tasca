@@ -5,8 +5,8 @@
 
 ## Nastro delle versioni
 🚀 Online: v49 · 🟩 Controllo 29 · 23/11 19:59 · alloggi dal 14 (PR 51: gruppo «Liberi solo dal 14» ed «Esauriti» nel passo 2, via le prove ?luci=ferme e ?tela=si; prove locali verdi: web app 83/83, scritte 20/20; sito vero letto: v49, 0 righe grigie, 0 errori)
-🧪 In prova: nessuna
-⏳ Dopo: orari RER A del 13–17/12 (sveglia 26/11 10:17)
+🧪 In prova: v50 · 🟩 Controllo 31 · recensioni n. 16 e 23
+⏳ Dopo: orari RER A del 13–17/12 (sveglia 28/11 10:17)
 
 ## 0. Aspetta Mario
 - 27/11 · ❓ · 🟩 Controllo 30 · DOMANDA 3 (al posto della 1, Mario 27/11 «che senso ha se devo leggerle io»): Booking del n. 23 → 1 · basta Airbnb, si decide ora · 2 · Mario chiede al gestore del riscaldamento col messaggio in francese già pronto in chat. Consiglio: 1; prima di domenica 29/11 alle 15:00 (fine della cancellazione gratis del n. 23 su Airbnb). 📌 Di cosa parliamo: confronto n. 16 contro n. 23 (`research_notes/Parigi mercatini e Disneyland dicembre/confronto_16_23_recensioni_27_11.md`, C30): Airbnb letto tutto (571 + 68), Booking blocca i programmi e del n. 23 ho letto solo 10 recensioni su 66.
