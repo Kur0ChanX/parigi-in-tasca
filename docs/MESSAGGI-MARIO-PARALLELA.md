@@ -126,3 +126,9 @@ No, sono pochissimi tocchi al mese. Boh, non conviene, secondo me. Al massimo ti
 
 ## 2026-11-24 11:31 · 01Rwcxc2rpkc
 salva per passaggio account
+
+## 2026-11-27 · 01Rwcxc2rpkc (sessione già chiusa, passato alla Controllo 30)
+Fai una comparazione accurata tra il 16 e il 23 recensioni ecc ecc leggile tutte airb&b e booking
+
+## 2026-11-27 · 01Rwcxc2rpkc (sessione già chiusa, passato alla Controllo 30)
+fallo tu scusa no?

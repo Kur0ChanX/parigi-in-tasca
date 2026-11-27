@@ -1,0 +1,16 @@
+# C30 · Confronto accurato n. 16 contro n. 23 (tutte le recensioni Airbnb e Booking)
+
+Chat: Controllo 30 (`session_01Rwcxc7G3cY8jSfhTdMsJxZ`), dal 27/11/2026.
+
+## Mario 27/11, intero (arrivato alla Controllo 29 già chiusa)
+> Fai una comparazione accurata tra il 16 e il 23 recensioni ecc ecc leggile tutte airb&b e booking
+
+> fallo tu scusa no?
+
+## Piano
+1. Scaricare TUTTE le recensioni: n. 16 su Airbnb (571) e su Booking se c'è; n. 23 su Airbnb (68) e su Booking (66).
+2. Leggerle tutte (testo originale + traduzione), contare lodi e critiche per tema (inverno e freddo, rumore, pulizia, letto, check-in, distanza, gestore).
+3. Ricontrollare prezzo, cancellazione e disponibilità di oggi.
+4. Risultato in `research_notes/Parigi mercatini e Disneyland dicembre/confronto_16_23_recensioni_27_11.md`; in pagina solo se cambia un fatto.
+
+## Scelte in corsa
