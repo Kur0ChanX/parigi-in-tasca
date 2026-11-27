@@ -42,7 +42,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   await ctx.setOffline(true);
   await p.goto(B); ok('senza rete: novembre apre novembre', (await p.title()) === nov);
   await p.goto(B + 'dicembre/'); ok('senza rete: dicembre apre dicembre', (await p.title()) === 'Parigi e Disney a Natale');
-  ok('senza rete: 9 barre dei costi', (await p.$$('#bars a.bar-row')).length === 9); // 9 dal 21/11 sera: barra Locomo + Airbnb n. 16
+  ok('senza rete: 10 barre dei costi', (await p.$$('#bars a.bar-row')).length === 10); // 9 dal 21/11 sera (barra Locomo + Airbnb n. 16); 10 dal 28/11 (C31: n. 23 prenotato in cima)
   await ctx.close();
   // L'amico: apre solo dicembre
   const c2 = await b.newContext({ viewport: { width: 390, height: 844 } }); const q = await c2.newPage();
@@ -120,17 +120,17 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const bt = d.querySelector('a.btn.ghost');
       out.push({ n, ok: !!b && !b.querySelector('.mappa img') && /Posizione indicativa/.test(b.textContent) && b.querySelectorAll('.dr li').length === 3
         && [...b.querySelectorAll('.dr-t')].every((t) => /^circa \d/.test(t.textContent)) && links.length === 3 && links.every((u) => u.searchParams.get('travelmode') === 'transit')
-        && !!bt && /^https:\/\/www\.airbnb\.(com|it)\/rooms\//.test(bt.href) && /Airbnb/.test(bt.textContent)
+        && !!bt && (n === 23 ? /^https:\/\/www\.booking\.com\//.test(bt.href) && /Booking/.test(bt.textContent) : /^https:\/\/www\.airbnb\.(com|it)\/rooms\//.test(bt.href) && /Airbnb/.test(bt.textContent))
         && document.querySelector(`#al-${n} .fact .k`).textContent === 'Voto Airbnb' });
       d.open = false;
     }
     document.querySelector('#filters [data-f="airbnb"]').click(); await new Promise((r) => setTimeout(r, 100));
     const solo = [...document.querySelectorAll('#hotelCards article')].map((a) => +a.id.slice(3)).sort((a, b) => a - b).join(',');
     document.querySelector('#filters [data-f="tutti"]').click(); await new Promise((r) => setTimeout(r, 100));
-    // dalla v18 il consiglio è 4 notti vicino a Disney: per i prezzi con la domenica a Parigi si sceglie Locomo + Moxy, poi si torna al consiglio
-    document.querySelector('#scegli [data-sc="lo-8"]').click(); await new Promise((r) => setTimeout(r, 250));
+    // C31: si parte dal n. 23 prenotato (4 notti); per i prezzi con la domenica a Parigi si sceglie Locomo + n. 23, poi si torna al n. 23
+    document.querySelector('#scegli [data-sc="lo-23"]').click(); await new Promise((r) => setTimeout(r, 250));
     const prezzi = [...document.querySelectorAll('#scD details[data-k^="d-"]')].filter((x) => +x.dataset.k.slice(2) >= 16).map((x) => x.querySelector('.sc-p').textContent);
-    document.querySelector('#scegli [data-sc="4n-8"]').click(); await new Promise((r) => setTimeout(r, 250));
+    document.querySelector('#scegli [data-sc="4n-23"]').click(); await new Promise((r) => setTimeout(r, 250));
     return { out, solo, prezzi, tutti: document.querySelectorAll('#hotelCards article').length };
   });
   // 21/11 (#20): i numeri degli annunci Airbnb (19 cifre) scritti come numeri JavaScript venivano arrotondati → link all'annuncio sbagliato
@@ -266,7 +266,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const disOk = v.disMin.length > 20 && v.disMin.every((m, i) => i === 0 || m >= v.disMin[i - 1]), srcD = fs.readFileSync(path.join(__dirname, '..', 'dicembre', 'parigi-disney-natale.html'), 'utf8').match(/disney:\(a,b\)=>[^,]*(,[^,]*){0,3}/g) || [];
     ok('«Vicino a Disney» ordina solo per minuti (i km non contano: Mario 22/11 ~11:05)', disOk && srcD.length === 2 && srcD.every((s) => !/km/i.test(s))); if (!disOk || srcD.length !== 2) console.log(v.disMin.join(','), srcD);
     ok('C14: seconda camera a Bussy (Airbnb 15868262) nel riquadro B&B, conteggio «B&B» = righe + 2 camere', v.bb2 && v.bbN === v.bbR + 2); if (!(v.bb2 && v.bbN === v.bbR + 2)) console.log(v.bb2, v.bbN, v.bbR);
-    ok('v18: il mio consiglio è 4 notti al n. 8 Moxy (13→17)', /4 notti al n\. 8 Moxy/.test(v.mio));
+    ok('C31: in testa a «Tutti gli alloggi» il n. 23 prenotato (Booking, 461 €), niente Moxy', /4 notti al n\. 23/.test(v.mio) && /461 €/.test(v.mio) && !/Moxy/.test(v.mio));
   }
   // C13 pezzo 2 (22/11): il passo 1 (domenica) ha lo stesso stile del passo 2: colore, 3 riquadri, totale sotto il prezzo
   {
@@ -281,8 +281,8 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     ok('C13 pezzo 2: passo 1 con 3 riquadri (4 notti: domenica, in camera, lunedì; Parigi: a piedi, lunedì, pulizia) e totale sotto il prezzo', ok4 && v.par >= 8 && !v.bad.length && !v.vec); if (!(ok4 && v.par >= 8 && !v.bad.length && !v.vec)) console.log(v);
     // C13 pezzo 3 (22/11): in «Quanto costa» ogni strada ha il tipo del suo alloggio (colore ed etichetta), come in Dormire; n. 8 hotel, n. 31 casa
     const b3 = await q.evaluate(() => [...document.querySelectorAll('#bars>a.bar-row')].map((a) => [a.dataset.sc || '', a.dataset.ty, (a.querySelector('.bar-ty') || {}).textContent || '']));
-    const ok3 = b3.length === 9 && b3.every(([, t, l]) => /^(hotel|bb|casa|disney)$/.test(t) && l.length > 3) && b3.some(([k, t]) => /-8$/.test(k) && t === 'hotel') && b3.some(([k, t]) => /-31$/.test(k) && t === 'casa');
-    ok('C13 pezzo 3: «Quanto costa» con tipo di alloggio su ogni strada (9 strade, n. 8 hotel, n. 31 casa)', ok3); if (!ok3) console.log(b3);
+    const ok3 = b3.length === 10 && b3.every(([, t, l]) => /^(hotel|bb|casa|disney)$/.test(t) && l.length > 3) && b3.some(([k, t]) => /-8$/.test(k) && t === 'hotel') && b3.some(([k, t]) => /-31$/.test(k) && t === 'casa');
+    ok('C13 pezzo 3: «Quanto costa» con tipo di alloggio su ogni strada (10 strade, n. 8 hotel, n. 31 casa)', ok3); if (!ok3) console.log(b3);
     // Mario 22/11 10:18: hotel Disney con un colore suo (rosa), diverso dagli hotel; col tasto «Hotel» resta visibile e conta fra gli hotel
     const dz = await q.evaluate(async () => {
       const w = () => new Promise((r) => setTimeout(r, 150)), d14 = document.querySelector('#scD details[data-k="d-14"]');
@@ -373,7 +373,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     {
       const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' }); const r = await c.newPage();
       r.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
-      await r.goto(B + 'dicembre/'); await r.evaluate(() => { localStorage.setItem('pdn-scelta', '4n-8'); localStorage.setItem('pdn-rosa', '[]'); localStorage.removeItem('pdn-tipo'); }); await r.reload(); await r.waitForTimeout(900);
+      await r.goto(B + 'dicembre/'); await r.evaluate(() => { localStorage.setItem('pdn-scelta23', '4n-8'); localStorage.setItem('pdn-rosa', '[]'); localStorage.removeItem('pdn-tipo'); }); await r.reload(); await r.waitForTimeout(900);
       const g = await r.evaluate(async () => {
         const w = () => new Promise((x) => setTimeout(x, 200)), k = [...document.querySelectorAll('#scD>*')], i = k.findIndex((e) => /^Liberi solo dal 14/.test(e.textContent));
         const dopo = i < 0 ? [] : k.slice(i + 1).filter((e) => e.tagName === 'DETAILS').map((e) => e.dataset.k);
@@ -398,7 +398,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       r.vis = !a.hidden && /Scelto:/.test(a.textContent); r.pall = [...document.querySelectorAll('.tabbar button.nuovo')].map((b) => b.dataset.t).sort().join(',');
       a.querySelector('.vai').click(); await w();
       r.dopo = document.body.dataset.tab + ' ' + [...document.querySelectorAll('.tabbar button.nuovo')].map((b) => b.dataset.t).sort().join(',') + ' ' + a.hidden;
-      document.querySelector(`#scegli [data-sc="${sc0 || '4n-8'}"]`).click(); await w(); a.hidden = true;
+      document.querySelector(`#scegli [data-sc="${sc0 || '4n-23'}"]`).click(); await w(); a.hidden = true;
       if (prima) { document.querySelector(`.tabbar button[data-t="${prima}"]`).click(); await w(); }
       return r;
     });
@@ -407,28 +407,28 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
   }
   // Mario 22/11 «se uno sceglie perché per sbaglio ci clicca, che lo può annullare»: «↩ Annulla» nell'avviso riporta tutto com'era
   { const u = await c2.newPage(); u.on('pageerror', (e) => { errs.push(e.message); console.log('ERRORE NELLA PAGINA: ' + e.message); });
-    const ls = await q.evaluate(() => localStorage.getItem('pdn-scelta'));
-    await u.goto(B + 'dicembre/'); await u.evaluate(() => localStorage.removeItem('pdn-scelta')); await u.reload(); await u.waitForTimeout(800);
+    const ls = await q.evaluate(() => localStorage.getItem('pdn-scelta23'));
+    await u.goto(B + 'dicembre/'); await u.evaluate(() => localStorage.removeItem('pdn-scelta23')); await u.reload(); await u.waitForTimeout(800);
     await u.evaluate(() => { const t = document.querySelector('#scegli [data-ro-f="0"]'); if (t) t.click(); }); // C24: «Tutti» (si parte dalla rosa)
     const an = await u.evaluate(async () => {
       const w = () => new Promise((r) => setTimeout(r, 250)), txt = (s) => (document.querySelector(s) || {}).textContent || '';
-      const foto = () => ({ url: new URL(location.href).searchParams.get('scelta'), ls: localStorage.getItem('pdn-scelta'), d: txt('#scNowD'), n: txt('#scNowN'), mio: /Non avete ancora scelto/.test(txt('#scRis')), pal: [...document.querySelectorAll('.tabbar button.nuovo')].map((b) => b.dataset.t).join(',') });
+      const foto = () => ({ url: new URL(location.href).searchParams.get('scelta'), ls: localStorage.getItem('pdn-scelta23'), d: txt('#scNowD'), n: txt('#scNowN'), mio: /Non avete ancora scelto/.test(txt('#scRis')), pal: [...document.querySelectorAll('.tabbar button.nuovo')].map((b) => b.dataset.t).join(',') });
       const ugu = (a, b) => JSON.stringify(a) === JSON.stringify(b);
       const a = document.querySelector('.sc-avviso'), r = {};
       document.querySelector('.tabbar button[data-t="dormire"]').click(); await w();
       const altra = () => [...document.querySelectorAll('#scD .sc-act [data-sc]')].find((b) => b.getAttribute('aria-pressed') === 'false');
       // 1) nessuna scelta (la pagina segue il mio consiglio): scegli → Annulla → di nuovo «non avete ancora scelto», niente nell'indirizzo né salvato
       const f0 = foto(); altra().click(); await w(); r.cambia1 = !ugu(foto(), f0) && !a.hidden && !a.querySelector('.sc-ann').hidden;
-      a.querySelector('.sc-ann').click(); await w(); r.uguale1 = ugu(foto(), f0); r.f0 = f0; r.f1 = foto(); r.msg = !a.hidden && /Annullato/.test(a.textContent) && /mio consiglio/.test(a.textContent) && a.querySelector('.sc-ann').hidden && a.querySelector('.vai').hidden;
+      a.querySelector('.sc-ann').click(); await w(); r.uguale1 = ugu(foto(), f0); r.f0 = f0; r.f1 = foto(); r.msg = !a.hidden && /Annullato/.test(a.textContent) && /n\. 23/.test(a.textContent) && a.querySelector('.sc-ann').hidden && a.querySelector('.vai').hidden;
       // 2) scelta X, poi Y per sbaglio: Annulla → di nuovo X
       altra().click(); await w(); const fx = foto(); altra().click(); await w(); r.cambia2 = !a.querySelector('.sc-ann').hidden && foto().url !== fx.url;
       a.querySelector('.sc-ann').click(); await w(); r.uguale2 = ugu(foto(), fx); r.fx = fx; r.f2 = foto();
       r.fatti = document.querySelectorAll('.sc-fatto').length;
       return r;
     });
-    const okN = an.cambia1 && an.uguale1 && an.f0.mio && !an.f0.url && !an.f0.ls && an.msg && an.cambia2 && an.uguale2 && !!an.fx.url && an.fx.url === an.fx.ls && !an.fx.mio && an.fatti === 0;
-    ok('«↩ Annulla» nell\'avviso: torna alla scelta di prima (anche a «non avete ancora scelto»), indirizzo, salvataggio, «Adesso:» e pallini come prima', okN); if (!okN) console.log(JSON.stringify(an));
-    await u.evaluate((v) => { if (v) localStorage.setItem('pdn-scelta', v); else localStorage.removeItem('pdn-scelta'); }, ls); await u.close(); }
+    const okN = an.cambia1 && an.uguale1 && !an.f0.mio && !an.f0.url && !an.f0.ls && an.msg && an.cambia2 && an.uguale2 && !!an.fx.url && an.fx.url === an.fx.ls && !an.fx.mio && an.fatti === 0;
+    ok('«↩ Annulla» nell\'avviso: torna alla scelta di prima (anche al n. 23 prenotato, senza salvare niente), indirizzo, salvataggio, «Adesso:» e pallini come prima', okN); if (!okN) console.log(JSON.stringify(an));
+    await u.evaluate((v) => { if (v) localStorage.setItem('pdn-scelta23', v); else localStorage.removeItem('pdn-scelta23'); }, ls); await u.close(); }
   // 21/11 sera: la pagina era larga 735 px su un telefono da 412 (classe .pc del contenitore uguale a quella dei pro/contro)
   ok('telefono 390 px: la pagina non scorre di lato', await q.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   const maleA = airbnb.out.filter((x) => !x.ok);
@@ -707,10 +707,10 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       const leggi = () => g.evaluate(() => { const t = (s) => (document.querySelector(s) || {}).textContent || ''; return { box: t('#vaBox'), dom: t('#p-dom'), avv: t('#p-dom .va-dom'), dorme: [...document.querySelectorAll('#panels .dorme-day')].map((x) => x.textContent), gio: t('#p-gio'), msg: [...document.querySelectorAll('#vaBox .xx-msg')].map((x) => x.textContent), ics: (document.querySelector('#vaBox a[download]') || {}).href || '', gc: (document.querySelector('#vaBox a[href*="calendar.google.com"]') || {}).href || '' }; });
       const vai = async (k) => { await g.goto(B + 'dicembre/' + (k ? '?scelta=' + k : '')); await g.waitForTimeout(700); return leggi(); };
       const r0 = await vai(''), r8 = await vai('4n-8'), r23 = await vai('4n-23'), r16 = await vai('4n-16'), rP = await vai('lo-16'), r1 = await vai('4n-1'), r29 = await vai('4n-29');
-      const okD = r0.dorme.length === 5 && r0.dorme.every((x) => /n\. 8/.test(x)) && /mio consiglio/.test(r0.dorme[0]) && r8.dorme.every((x) => /n\. 8/.test(x) && !/mio consiglio/.test(x)) && /Hotel Locomo/.test(rP.dorme[0]) && rP.dorme.slice(1).every((x) => /n\. 16/.test(x));
-      ok('C24: «Dormite al n. X» in cima a tutti e 5 i giorni (consiglio, scelta, notte a Parigi)', okD); if (!okD) console.log(r0.dorme, r8.dorme, rP.dorme);
+      const okD = r0.dorme.length === 5 && r0.dorme.every((x) => /n\. 23/.test(x) && !/consiglio/.test(x)) && r8.dorme.every((x) => /n\. 8/.test(x) && !/mio consiglio/.test(x)) && /Hotel Locomo/.test(rP.dorme[0]) && rP.dorme.slice(1).every((x) => /n\. 16/.test(x));
+      ok('C24: «Dormite al n. X» in cima a tutti e 5 i giorni (n. 23 prenotato, altra scelta, notte a Parigi)', okD); if (!okD) console.log(r0.dorme, r8.dorme, rP.dorme);
       const primaDel12 = Date.now() < Date.UTC(2026, 11, 12, 8); // il promemoria c'è solo se il giorno non è passato
-      const okB = /il mio consiglio/.test(r0.box) && /Il vostro alloggio/.test(r8.box) && /Reception 24 ore/.test(r8.box) && /Gratis fino a domenica 13\/12/.test(r8.box) && r8.msg.length === 0 && !r8.avv
+      const okB = /Il vostro alloggio/.test(r0.box) && /n\. 23/.test(r0.box) && !/consiglio/.test(r0.box) && /Il vostro alloggio/.test(r8.box) && /Reception 24 ore/.test(r8.box) && /Gratis fino a domenica 13\/12/.test(r8.box) && r8.msg.length === 0 && !r8.avv
         && (!primaDel12 || (/dates=20261212T080000Z\//.test(r8.gc) && /^data:text\/calendar/.test(r8.ics) && /BEGIN%3AVEVENT/.test(r8.ics) && /DTSTART%3A20261212T080000Z/.test(r8.ics)));
       ok('C24: riquadro «Il vostro alloggio» col n. 8: reception, cancellazione gratis fino al 13/12, promemoria il 12/12 (Google e .ics), niente messaggio', okB); if (!okB) console.log(r8);
       const ok23 = /gestore, di persona/.test(r23.avv) && /21:50/.test(r23.avv) && r23.msg.length === 2 && /Philippe et Patricia/.test(r23.msg[0]) && /dimanche 13 décembre vers 21h50/.test(r23.msg[0]) && /du 13 au 17/.test(r23.msg[0]) && /dans le RER/.test(r23.msg[1]) && /32 Rue de la Charbonnière/.test(r23.box);
@@ -728,7 +728,7 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       ok('C22: Galeries con la pista sul tetto (terrazza forse solo per chi pattina); Orly: carta bancaria all’uscita della metro, 14,80 €', okC22b);
       // C26 (Controllo 22, Mario 22/11 «in Questo o quello devo poter scegliere io gli hotel per un confronto non le abbinate prefatte»): tasti accesi/spenti, «＋ Aggiungi», confronto riga per riga, salvato sul telefono
       {
-        const prima = await g.evaluate(() => { const o = {}; ['pdn-rosa', 'pdn-qoq', 'pdn-scelta', 'pdn-alloggio'].forEach((k) => { o[k] = localStorage.getItem(k); }); localStorage.setItem('pdn-rosa', '[16,23]'); ['pdn-qoq', 'pdn-scelta', 'pdn-alloggio'].forEach((k) => localStorage.removeItem(k)); return o; });
+        const prima = await g.evaluate(() => { const o = {}; ['pdn-rosa', 'pdn-qoq', 'pdn-scelta23', 'pdn-alloggio'].forEach((k) => { o[k] = localStorage.getItem(k); }); localStorage.setItem('pdn-rosa', '[16,23]'); ['pdn-qoq', 'pdn-scelta23', 'pdn-alloggio'].forEach((k) => localStorage.removeItem(k)); return o; });
         const leggiQ = () => g.evaluate(() => { const el = document.getElementById('duels'); return { chips: [...el.querySelectorAll('button[data-qoq]')].map((b) => b.dataset.qoq + ':' + b.getAttribute('aria-pressed')).join(' '), righe: el.querySelectorAll('.qoq-r').length, breve: (el.querySelector('.qoq-in') || {}).textContent || '', pareri: [...el.querySelectorAll('.qoq-r details summary')].map((s) => s.textContent).join(' | '), schede: el.querySelectorAll('a[href^="#al-"]').length, brutto: /undefined|NaN|\bnull\b/.test(el.textContent), largo: el.scrollWidth > el.clientWidth + 1, riass: (el.closest('details.more-al') || { querySelector: () => ({}) }).querySelector('summary').textContent }; });
         await g.goto(B + 'dicembre/'); await g.waitForTimeout(700);
         const q0 = await leggiQ();

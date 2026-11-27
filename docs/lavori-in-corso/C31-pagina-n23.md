@@ -22,3 +22,33 @@ Chat: Controllo 32 (da 28/11/2026 00:22). File: `dicembre/parigi-disney-natale.h
 
 ## Scelte in corsa
 - 28/11 00:30: un aiutante rilegge la pagina aperta con `?scelta=4n-23` e fa l'elenco dei punti sbagliati per chi dorme al n. 23 (testo in scratchpad, non nel repo). Intanto io: n. 23 come alloggio di partenza della pagina e controllo degli orari.
+
+## Lista di controllo (rilettura dell'aiutante, 28/11 00:40; [ ] da fare, [x] fatto)
+- [ ] A1 `DV[23]` a piedi 5 → 9 (tempi ai parchi, a piedi, valigie, ordine «Vicino a Disney»); un solo numero ovunque (9 min, 700 m Booking; n. 5 nella stessa via dice 400 m: verificare).
+- [ ] A2 «+ attesa della navetta» anche dove non c'è navetta (n. 23, n. 16) → «del treno».
+- [ ] B3–B4 Home e «In breve»: «Scegliete l'alloggio fra 35», «Uscite dall'hotel», riquadro «Dormire» da scelta.
+- [ ] C5 «via da Parigi alle 20:40»: 20:40 è il ritiro bagagli, treno 21:08.
+- [ ] C6 resto del vecchio consiglio «Col n. 12 la spa domenica sera».
+- [ ] C7 messaggio ai gestori nella scheda senza ora (in «Scegli» e «Giorni» c'è «vers 21h50»).
+- [ ] D8–D11 «il mio consiglio» = Moxy (costi, tabella, menu dei Giorni, «Torna al mio consiglio», Hotel Disney «900 € più del Moxy»: col n. 23 ~960 €); Moxy 545 contro 702 €.
+- [ ] E12–E14 prezzo del n. 23: prima Booking 461 € (prenotato), Airbnb solo come nota; parentesi doppie in «Costi» e «Giorni»; 3 notti da Airbnb.
+- [ ] F15–F16 minuti a piedi in contraddizione (9, 8–10, «meno di 5», 2–5); Monop' «5–8 min» o «davanti alla stazione».
+- [ ] G17 mercoledì «Domani si esce alle 8:30» fisso → ora del giovedì del piano.
+- [ ] G18 giovedì «dall'hotel» → «dall'alloggio»; etichetta del giovedì «Mercatini e città».
+- [ ] G19 domenica col treno delle 21:23 si arriva verso le 22:10, non 21:50.
+- [ ] G20 colazione: «Niente colazione in casa» (c'è la cucina); «uscite 10 minuti prima» ma il piano resta 8:05; spesa domenica sera o lunedì: una sola versione; testo vagante «…stazione Val d'Europe Monoprix».
+- [ ] G21 «Libero dal 13.» nella tappa del check-in.
+- [ ] G22 «09:05 cambio» col treno delle 8:30 (arriva 9:06).
+- [ ] H23 mappa: segno del n. 23 sulla stazione, «Indirizzo esatto dopo la prenotazione»: mancano le coordinate in `TM.a`.
+- [ ] I24 «Vicino all'alloggio» (mangiare): tempi dalla stazione, non dal n. 23.
+- [ ] J25–J26 «Da fare»: «Oggi l'hotel» → fatto il n. 23; richiesta Booking da far accettare, data limite della cancellazione, messaggio ai gestori; navetta Ki Space; voce orari RER «escono verso il 26/11».
+- [ ] K27–K30 dalla stazione all'appartamento (uscita, strada al buio coi trolley); piano B se il gestore non c'è; ore di silenzio 20–8 (arrivo 21:50, uscita 8:10, scala di legno); domanda sul riscaldamento nel messaggio.
+
+## Altri messaggi di Mario
+> correggi ci saranno altei errori moxy ecc noi siamo al 23
+
+(con foto `archivio/2026-11-28-n23/mario-giorni-n8-invece-di-23.jpg`: in «Giorni» il menu dice «23.» con «★ È il mio consiglio», il riquadro «Il vostro alloggio» dice «n. 8 Moxy».)
+
+> biglietti dei parchi presi a 505
+
+(= biglietti Disney comprati, 505 € in due al posto della stima di 544 €; si intende il 3 giorni / 2 parchi 14–16 consigliato dalla pagina.)
