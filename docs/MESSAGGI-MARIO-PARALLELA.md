@@ -2,18 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 19:28 · 01QTFEqRa2TK
-11 21  31
-
-Mi raccomando è una guida deve aiutarmi in base a che hotel scelgo cosa fare nella giornata specialmente domenica con i mercatini come spostarmi consigli info ecc ecc ecc molto accurato
-
-## 2026-11-22 19:35 · 01QTFEqRa2TK
-@"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta].mp4" Non  benissimo ancora come puoi vedere
-
-## 2026-11-22 20:03 · 01QTFEqQQmp8
-Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata
-anche nella 39 la vedevo non caticata a volte la luna
-
 ## 2026-11-22 20:07 · 01QTFEqQQmp8
 mi piaceva il fascio di luce
 ora prosegui con la guida con molta cura
@@ -131,3 +119,12 @@ se vuoi me le leggo io le recensioni e faccio prima.....
 
 ## 2026-11-27 23:37 · 01Rwcxc7G3cY
 dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
+
+## 2026-11-27 23:40 · 01Rwcxc7G3cY
+publica
+
+## 2026-11-27 23:40 · 01Rwcxc7G3cY
+ora
+
+## 2026-11-27 23:41 · 01Rwcxc7G3cY
+confronta nell'app moxy e monolocale di nice
