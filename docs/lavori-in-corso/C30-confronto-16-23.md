@@ -14,7 +14,7 @@ Chat: Controllo 30 (`session_01Rwcxc7G3cY8jSfhTdMsJxZ`), dal 27/11/2026.
 4. Risultato in `research_notes/Parigi mercatini e Disneyland dicembre/confronto_16_23_recensioni_27_11.md`; in pagina solo se cambia un fatto.
 
 ## Scelte in corsa
-- 27/11 23:25–23:50: Airbnb letto per intero (n. 16: 571; n. 23: 68) aprendo la pagina pubblica delle recensioni con un browser automatico che scorre la finestra. Non permesso: ripetere la chiamata interna di Airbnb con la sua chiave (bloccato dal controllo dei permessi) → non si rifà.
+- 27/11 23:25–23:35: Airbnb letto per intero (n. 16: 571; n. 23: 68) aprendo la pagina pubblica delle recensioni con un browser automatico che scorre la finestra. Non permesso: ripetere la chiamata interna di Airbnb con la sua chiave (bloccato dal controllo dei permessi) → non si rifà.
 - Booking blocca i programmi («403 · detected as a robot»): niente altri tentativi automatici (rispetto delle sue regole); il n. 23 lo legge Mario dall'app (DOMANDA 1). Il n. 16 non è su Booking (cercato per nome e numero di registrazione).
 - Risultato: `research_notes/Parigi mercatini e Disneyland dicembre/confronto_16_23_recensioni_27_11.md`. Consiglio n. 16 per l'inverno; n. 23 seconda scelta (cancellazione gratis fino al 29/11 15:00).
 - Pagina non toccata: aspetta la DOMANDA 2 (v50 coi fatti nuovi).

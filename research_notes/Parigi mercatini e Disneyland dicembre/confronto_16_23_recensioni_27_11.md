@@ -1,7 +1,7 @@
 # Confronto n. 16 contro n. 23 · tutte le recensioni (27/11/2026)
 
 Richiesta di Mario (27/11): «Fai una comparazione accurata tra il 16 e il 23 recensioni ecc ecc leggile tutte airb&b e booking» (`docs/lavori-in-corso/C30-confronto-16-23.md`).
-Per chi: 2 adulti, 13→17/12/2026, senza auto. Letto il **27/11/2026 tra le 23:25 e le 23:50 ora italiana**.
+Per chi: 2 adulti, 13→17/12/2026, senza auto. Letto il **27/11/2026 tra le 23:25 e le 23:35 ora italiana**.
 
 ## Cosa ho letto
 
@@ -32,7 +32,7 @@ Come le ho lette: le 29 sotto le 5 stelle del n. 16 una per una; tutte quelle d'
 | Ascensore | sì (primo piano) | non scritto; «non adatto a chi ha mobilità ridotta» |
 | Critiche dal 2025 | nessuna sotto le 5★ (79 recensioni) | nessuna (68) |
 
-## Prezzo e cancellazione oggi (27/11, ~23:45, pagina pubblica Airbnb 13→17)
+## Prezzo e cancellazione oggi (27/11, ~23:30, pagina pubblica Airbnb 13→17)
 - **n. 16**: **503 € in totale**. «Cancellazione gratuita per 24 ore. Cancella entro il giorno 6 dicembre per ottenere un rimborso parziale.» Arrivo 15:00–02:00, partenza entro le 11:00, cassetta delle chiavi ([Airbnb](https://www.airbnb.it/rooms/5115238?check_in=2026-12-13&check_out=2026-12-17&adults=2&guests=2)).
 - **n. 23**: **489 € in totale**. «**Cancellazione gratuita entro le ore 15:00 del giorno 29 novembre.** Effettua la cancellazione entro il giorno 6 dicembre per ottenere un rimborso parziale.» Arrivo dopo le 15:00, partenza entro le 10:00 ([Airbnb](https://www.airbnb.it/rooms/1376052056754954936?check_in=2026-12-13&check_out=2026-12-17&adults=2&guests=2)).
 - n. 23 su Booking: 461 € letto il 22/11; oggi **non riletto** (Booking blocca i programmi). Su Booking è una «Richiesta di prenotazione»; età minima 18 anni; partenza 8:00–10:00 ([Booking](https://www.booking.com/hotel/fr/appartement-a-2km-de-disneyland-paris.it.html)).
