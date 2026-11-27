@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (24/11/2026 11:31 ora italiana)
+# Ultimo messaggio di Mario (27/11/2026 23:35 ora italiana)
 
-salva per passaggio account
+se vuoi me le leggo io le recensioni e faccio prima.....
