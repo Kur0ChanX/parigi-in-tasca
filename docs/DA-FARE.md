@@ -4,8 +4,8 @@
 |---|---|---|---|
 
 ## Nastro delle versioni
-🚀 Online: v50 · 🟩 Controllo 31 · 27/11 23:54 · recensioni n. 16 e 23 (PR 52; prove locali verdi: web app 83/83, scritte 20/20; sito vero letto: v50 e le frasi nuove)
-🧪 In prova: v51 · 🟩 Controllo 31 · Moxy contro 16
+🚀 Online: v51 · 🟩 Controllo 31 · 28/11 00:04 · Moxy contro 16 (PR 53; prove locali verdi: web app 83/83, scritte 20/20; sito vero letto: v51 e le frasi nuove)
+🧪 In prova: nessuna
 ⏳ Dopo: orari RER A del 13–17/12 (sveglia 28/11 10:17)
 
 ## 0. Aspetta Mario
@@ -16,7 +16,7 @@
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
-- 🟩 Controllo 31 · C30 · Mario 27/11 23:43 «confronta nell'app moxy e monolocale di nice»: confronto nella guida di dicembre fra Moxy Paris Val d'Europe e n. 16 (Nice studio) → v51: prezzi del Moxy di oggi in tutta la pagina e parere nuovo «N. 16 o n. 8 Moxy?» in «Questo o quello?» (`research_notes/…/moxy_prezzi_27_11.md`) · 👁 Lo vedi: nella guida, il confronto Moxy contro n. 16 · prova: foto di Mario dal sito vero
+- 🟩 Controllo 31 · C30 · Mario 27/11 23:43 «confronta nell'app moxy e monolocale di nice»: confronto nella guida di dicembre fra Moxy Paris Val d'Europe e n. 16 (Nice studio) → v51: prezzi del Moxy di oggi in tutta la pagina e parere nuovo «N. 16 o n. 8 Moxy?» in «Questo o quello?» (`research_notes/…/moxy_prezzi_27_11.md`), online 28/11 00:04 (PR 53) · 👁 Lo vedi: nella guida, il confronto Moxy contro n. 16 · prova: foto di Mario dal sito vero
 - 🟩 Controllo 31 · C30 · v50 con i fatti nuovi delle recensioni (Mario 27/11 23:40 «publica» = DOMANDA 2 → 1): schede «📋 Tutto sul n.» 16 e 23 (n. 16: acqua calda a serbatoio + riga sul boiler nel messaggio al gestore, uscita 1 della RER; n. 23: Booking 8,8, letto in soppalco, età minima 18 su Booking), online 27/11 23:54 (PR 52) · 👁 Lo vedi: nella guida di dicembre, «📋 Tutto sul n. 16» e «n. 23», versione 50 (foto `archivio/2026-11-27-v50/`) · prova: sito vero con `{"v": 50}`
 - 🟩 Controllo · C28 · idee approvate da Mario 23/11 15:31: ristoranti (pranzo e cena, 4 cucine), treni in tempo reale, meteo, testi più ordinati senza togliere niente (frase interna; pro e contro degli alloggi una frase per riga, nel ramo dalla Controllo 29: righe oltre 350 caratteri da 18 a 0) (`docs/lavori-in-corso/C28-idee-e-controllo.md`) · 👁 Lo vedi: nella guida di dicembre la sezione «Dove mangiare», i tasti «prossimi treni» e il meteo dei 5 giorni (v48 online dal 23/11 sera, PR 50) · prova: web app e scritte verdi, foto a Mario
 - 🟩 Controllo 29 · C20 · alloggi liberi solo dal 14 (n. 18, 20, 21): con 4 notti dal 13, in fondo al passo 2 di «Scegli» in un gruppo «Liberi solo dal 14» coi colori normali e il perché (Mario 23/11 18:39 «14 ok» = scelta 1; v49 online 23/11 19:59, PR 51) (`docs/lavori-in-corso/C20-nascondi-e-due-alloggi.md`) · 👁 Lo vedi: «Scegli» passo 2, in fondo, il gruppo «Liberi solo dal 14» senza righe grigie · prova: web app e scritte verdi, foto a Mario
