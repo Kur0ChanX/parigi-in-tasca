@@ -11,8 +11,13 @@ Chat: Controllo 32 (da 28/11/2026 00:22). File: `dicembre/parigi-disney-natale.h
 - Il n. 23 (Philippe e Patricia, 32 Rue de la Charbonnière, Montévrain, 700 m dalla RER Val d'Europe) diventa l'alloggio della pagina, al posto del mio consiglio n. 8 Moxy.
 - Tutta la pagina va ricontrollata da chi dorme lì: giorni e orari (domenica sera coi bagagli, lunedì–mercoledì Disney, giovedì verso Orly), costi, biglietti, «Da fare prima di partire», testi che dicono ancora «scegliete».
 
+## Risposte di Mario
+> booking 461 preso dai un check su tutto se ci aono info giuste itinerario ecc e info generali
+
+(28/11 ~00:3x) = DOMANDA 1 → 2: prenotato su **Booking, 461 €**, 4 notti 13→17. Regole di Booking: arrivo 14:00–23:00, partenza 8:00–10:00, età minima 18, messaggi ai gestori da Booking. La sveglia del 29/11 (rimborso Airbnb) è spenta: non serve più.
+
 ## Domande (righe in «## 0. Aspetta Mario»)
-- DOMANDA 1 (Controllo 32): avete già prenotato, dove? (Airbnb 489 €, Booking 461 €, non ancora).
+- DOMANDA 1 (Controllo 32): chiusa, Booking 461 €.
 - DOMANDA 2 (Controllo 32): cosa faccio della parte per scegliere (35 alloggi, «Questo o quello?», «Hotel Disney: conviene?»).
 
 ## Scelte in corsa
