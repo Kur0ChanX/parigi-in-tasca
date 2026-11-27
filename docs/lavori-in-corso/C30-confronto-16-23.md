@@ -21,3 +21,8 @@ Chat: Controllo 30 (`session_01Rwcxc7G3cY8jSfhTdMsJxZ`), dal 27/11/2026.
 - 27/11 23:40 Mario «publica», poi «ora» 4 volte e «e publica in priorità» = DOMANDA 2 → 1. Controllo 31: v50 nelle schede «📋 Tutto sul n.» 16 e 23 e nei loro pro e contro: n. 16 lette tutte (81 d’inverno «caldo»), acqua calda a serbatoio in «Cosa può andare storto», riga sul «ballon d’eau chaude» nel messaggio a Vincent, uscita 1 della RER (non confermato); n. 23 Booking 8,8 (27/11), prezzo Booking «letto il 22/11», richiesta di prenotazione ed età minima 18 su Booking, letto nel soppalco, nessuna recensione sul caldo in casa; fonti: le due pagine delle recensioni Airbnb.
 - Messaggio pronto per il gestore del n. 23 (DOMANDA 3, scelta 2; su Airbnb «Invia un messaggio all'host»):
   «Bonjour Philippe, nous sommes deux adultes et nous pensons réserver votre appartement du 13 au 17 décembre. Une question avant de réserver : quel type de chauffage y a-t-il, et l'appartement reste-t-il bien chaud en hiver ? Merci beaucoup !»
+
+## Mario 27/11 23:41, intero (arrivato alla Controllo 30 già chiusa, passato alla Controllo 31)
+> confronta nell'app moxy e monolocale di nice
+
+- Controllo 31 (27/11 ~23:58): il confronto c'è già in «Questo o quello?» (parte da n. 8, 16 e 23) e come «Il mio parere» («N. 16 Nice studio (Airbnb) o n. 8 Moxy?», dati del 21–22/11). Da fare (v51): ricontrollare prezzo, cancellazione e voto del Moxy di oggi (le date 13/12 e 14/12 sono giuste: 4 notti e 3 notti); aggiungere i fatti delle recensioni (n. 16 inverno provato e acqua calda) e un parere chiaro.
