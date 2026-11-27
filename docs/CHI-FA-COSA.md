@@ -32,6 +32,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C27 | Controllo 24 (da Controllo 23) | Testata: Torre, faro e slitta che sfarfallano (1.355 strati) → lucine sulla tela, meno strati (pezzo 2 in corso, non pubblicato finché la prova non conferma) | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C27-testata-strati.md` | 23/11 |
 | C28 | Controllo 29 (da Controllo 28) | v48 (ristoranti, treni, meteo) aspetta l'ok di Mario sulle foto; intanto v49: testi lunghi degli alloggi in punti corti, senza togliere fatti | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C28-idee-e-controllo.md` | 23/11 |
 | C30 | Controllo 31 (da Controllo 30) | Confronto n. 16 contro n. 23 con TUTTE le recensioni Airbnb e Booking; v50 coi fatti nuovi nelle schede «📋 Tutto sul n.» | `research_notes/…/confronto_16_23_recensioni_27_11.md`, `docs/lavori-in-corso/C30-confronto-16-23.md` | 27/11 |
+| C31 | Controllo 32 | Pagina di dicembre rifatta sul n. 23 scelto da Mario: giorni, orari, costi, info | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C31-pagina-n23.md` | 28/11 |
 | PR 37 | Controllo 14 (altro account) | v36 da `versione-v36` (commit df327f9), unita 22/11 | — | 22/11 |
 | PR 45 | Controllo 23 | v45 da `versione-v45` (commit 6022aec), unita 23/11 | — | 23/11 |
 | PR 46 | Controllo 23 | prova «luci ferme» da `versione-v45-prova` (commit 5a8d6bb), unita 23/11 | — | 23/11 |
