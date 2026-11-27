@@ -1,63 +1,60 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
-## Stato (Controllo 28 `session_01Rwcxc4qAM1Re3Gizbkzq6u`, 23/11 16:12 ora italiana, chiusa alla soglia; la apre la Controllo 28 con `create_session` (catena 4 di 8))
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261123-01Rwcxc4qAM1/claude/parigi-ramo-definitivo.
-- **Chiusa in attesa di Mario** (contesto oltre 180k, C455): aspetta la risposta alla DOMANDA «le 4 foto della v48 vanno bene?» (riga ❓ Controllo 28 in «Aspetta Mario»; foto in `archivio/2026-11-23-c28-v48-mangiare-treni/`, mandate in chat 23/11 ~16:00).
-- **v48 PRONTA NEL RAMO, NON online** (verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 47}`; nel ramo `grep -c 'id="mangiare"' dicembre/index.html` = 1). Prove locali verdi sull'ultimo codice: web app 83/83 (prova nuova «C28: scheda Mangiare…»), scritte 20/20, allineamenti di #mangiare, #treniOra, day-head = [] (23/11 ~16:00).
-- **Già deciso da Mario (non richiedere):** idee C28 sì 10 (testi, senza togliere informazioni), 6 (treni in tempo reale), 5 (meteo), ristoranti; no 3 (lista valigia: c'è in un'altra app); ristoranti in tutta Parigi raggiungibile coi mezzi (non a un'ora), voti Google + TheFork + TripAdvisor, per ogni cucina un ⭐ best buy e poi molte alternative di ogni prezzo. Prima: alloggi n. 8, 16, 23; fasci del faro restano; kit 53 applicato.
-- **Da non rifare:** ricerca ristoranti (56 in `research_notes/ristoranti/zona1..4-*.json`, 23/11), link RATP (verificati dall'indice di ricerca: il sito blocca i programmi), sveglia RER A (ora `trig_01XizakkWdLMSSeoPhGVnoho`, 26/11 10:17, mia; la vecchia `trig_01RGdHLwHpoekiHBF2R6fDP4` spenta: cancellarla era bloccato).
-- **Cosa preme a Mario adesso:** vedere online la v48 (ristoranti, treni dal vivo, meteo).
+## Stato (Controllo 30 `session_01Rwcxc7G3cY8jSfhTdMsJxZ`, 27/11 23:39 ora italiana, chiusa alla soglia; la apre la Controllo 30 con `create_session` (catena 5 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261127-01Rwcxc7G3cY/claude/parigi-ramo-definitivo.
+- **Fatto (C30):** confronto n. 16 contro n. 23 con TUTTE le recensioni Airbnb (571 + 68) e le 10 leggibili su Booking (n. 23; il n. 16 non è su Booking). Verifica: `research_notes/Parigi mercatini e Disneyland dicembre/confronto_16_23_recensioni_27_11.md` e `docs/lavori-in-corso/C30-confronto-16-23.md`. Pagina NON toccata (online v49: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 49}`).
+- **Cosa preme a Mario adesso:** scegliere l'alloggio. Mio consiglio n. 16 (inverno provato: 81 recensioni d'inverno «caldo»; RER a 1–2 min; cassetta chiavi 15–02; difetto: acqua calda a serbatoio → chiedere al gestore). Il n. 23 si cancella gratis su Airbnb **fino a domenica 29/11 alle 15:00**: ricordarglielo se scrive prima.
+- **Già deciso da Mario (non richiedere):** NON vuole leggere lui le recensioni Booking (27/11 «che senso ha se devo leggerle io»); voti dei ristoranti solo a mano quando li chiede; foto v48 e v49 approvate.
+- **Da non rifare:** lettura automatica di Booking (blocca i programmi, «403 robot»: non si aggira); chiamata interna di Airbnb con la chiave (fermata dal controllo dei permessi); scaricare di nuovo le 639 recensioni Airbnb (il risultato è negli appunti; costano ~160k token). Le recensioni scaricate erano nello scratchpad (non nel repo: nomi di ospiti).
+- **Mario 27/11 23:40 «publica» (dopo l'handoff) = risposta alla DOMANDA 2 → 1: la Controllo 31 fa SUBITO la v50** (voce in «1.» di `docs/DA-FARE.md`). **Domande aperte:** ~~🛑 DOMANDA 2~~ (risposta: sì) (v50 con i fatti nuovi delle recensioni nelle schede «📋 Tutto sul n.» 16 e 23) e DOMANDA 3 (Booking del n. 23: 1 · basta Airbnb · 2 · messaggio in francese al gestore sul riscaldamento, testo in `docs/lavori-in-corso/C30-confronto-16-23.md`). Se Mario risponde «1» alla 2: v50 coi fatti della sezione «In breve» del file di ricerca (n. 16: acqua calda a serbatoio + riga sul boiler nel messaggio al gestore, uscita 1 della RER; n. 23: Booking 8,8, letto in soppalco, età minima 18 su Booking), prove, PR, giro.
+- **Sveglia mia:** `trig_01Si365QX12uhycTTG6hJNpK` (orari RER A, 28/11 10:17): la Controllo 31 la rifà sua e cancella questa. La vecchia `trig_017xP2rFup3Jk9db1mQN71ky` è già scattata e spenta.
+- Controllo Da fare: 0 voci aggiunte (le richieste di Mario di questa sessione sono C30 e le DOMANDE 2 e 3, già in «## 0. Aspetta Mario»).
 
-## Cosa è stato fatto (Controllo 28) · verifica: `git log --oneline 01cc098c..HEAD`
-- Scelte di Mario e piano: `docs/lavori-in-corso/C28-idee-e-controllo.md` (parole intere e scelte in corsa).
-- **Mangiare** (quinta scheda in basso): `tools/fai-ristoranti.py` scrive i dati da `research_notes/ristoranti/` nella pagina fra `/*RIS*/` e `/*/RIS*/` (`--controlla` per le prove). Filtri Dove (4 zone + Tutti, si apre da sola sul pasto giusto durante il viaggio) e Cosa; best buy per primo; 3 voti con link; Maps, «Come arrivo» coi mezzi, Menu, Prenota; distanze dalla posizione (solo se permessa). Zona 3: best buy scelti da me (Sushibar by Goma, L'Emphase, Le George, Rosalie unico pesce).
-- **Treni**: riquadro «🚆 Prossimi treni, adesso» (#treniOra) in Treni e ticket, 8 tasti RATP/IDFM; scorciatoia in cima a ogni giorno.
-- **Meteo**: in cima a ogni giorno, Open-Meteo (dal 28/11; salvato in `pdn-meteo`), link Météo-France.
-- Pranzo di domenica collegato a Mangiare; voce «Prenotate i ristoranti» nel Da fare (posto 3, spunte vecchie scalate una volta: `pdn-check-c28`); fonti nuove; scorciatoia in cima «Hotel Disney» → «Mangiare» (restano 12).
-- Difetto vecchio corretto: `.pc p` → `.pc>p` (paragrafi rientrati di 28 px in tutta la pagina). Frase interna «Le note di ricerca…» riscritta coi suoi numeri.
-- `tools/confronta-fatti.js`: numeri, orari, prezzi e link prima/dopo (per la pulizia dei testi).
+## Cosa è stato fatto (Controllo 30) · verifica: `git log --oneline 21cb05f..HEAD`
+- C30: confronto in `research_notes/…/confronto_16_23_recensioni_27_11.md`; prezzi di oggi (n. 16 503 €, n. 23 489 € su Airbnb); 2 domande a Mario; riga nuova in `docs/ERRORI.md` (lavoro passato a Mario quando Booking blocca) e riga vecchia della slitta spostata in `docs/ERRORI-STORIA.md`.
 
-## Strade provate e scartate
-- Treni dal vivo dentro la pagina (API ufficiale IDFM): serve una chiave che sul sito pubblico vedrebbe chiunque → tasti alle pagine ufficiali.
-- Riscrivere ora tutte le schede lunghe degli alloggi: rimandato alla v49 (rischio e token), proposta a Mario nel messaggio.
+## Strade provate e scartate (perché; così la prossima non le rifà)
+- Airbnb: chiamata interna con la chiave dell'app → negata dal controllo dei permessi. Va bene il browser automatico che apre `airbnb.it/rooms/<id>/reviews` e scorre la finestra (`[data-review-id]`).
+- Booking: pagina `reviewlist.html` → «Pagina non trovata»; scheda col browser automatico → «403 · detected as a robot». Il servizio di lettura web dà solo le 10 recensioni in evidenza.
+- Chiedere a Mario di leggere lui → Mario contrario (riga in ERRORI).
 
 ## Prossimi passi
-1. Risposta di Mario sulle foto v48: «1» → `versione.json` 48 + novità della v48 (linguaggio da aggiornamento), prove, PR da ramo, giro locale (`.claude/progetto.json`), unione, controllo del sito vero (`versione.json` = 48), riga del nastro; «2» → correggere quello che dice.
-2. Pulizia testi v49: schede lunghe degli alloggi in punti corti (19 testi oltre 350 caratteri: `node` + testo visibile), controllo `node tools/confronta-fatti.js --da <commit>` verde (sennò ogni fatto perso spiegato), foto prima/dopo.
-3. Dal 28/11: guardare che il meteo compaia (Open-Meteo dal proxy dà 429: provare dal sito vero o da una prova con risposta finta).
-4. Da prima: risposta di Mario sulla v46/v47 (prove `?luci=ferme` e `?tela=si` da togliere), chiave vecchia «Kit RVC lettura» da cancellare.
+1. Avvio normale. Kit nuovo nella fonte (Kit 56 · 27/11/2026 · Preferenze v40; qui Kit 53): prima l'aggiornamento come dice l'hook d'avvio (serve l'ok di Mario per i file di `.claude/`: domanda con il testo pronto).
+2. **Subito: v50** (Mario «publica»): fatti in «Domande aperte» qui sopra; poi prove (`fai-dicembre.py --controlla`, `prova-web-app.js`, `prova-scritte.js`), PR, giro completo, unione. DOMANDA 3 resta aperta.
+3. Quando Mario lo chiede (10–13/12): ricontrollo voti dei ristoranti (`research_notes/ristoranti/`, poi `tools/fai-ristoranti.py`).
+4. Dal 28/11: guardare che il meteo compaia nella guida (Open-Meteo).
+5. Orari RER A del 13 e 17/12: sveglia del 28/11 (sopra).
 
 ## Blocchi e rischi
-- Telefono di prova = imitazione: conferme sul telefono di Mario. `docs/ERRORI.md` vicino al tetto di 10 KB.
-- Orari di alcuni ristoranti in disaccordo fra siti (Clover Grill dom sera, Tsukizi, Le Duc lun, Le Savarin dom sera, Bulot Bulot mer): scritto nelle loro schede.
-- Svista ripetuta: 2 foto di lavoro aperte senza scritta in alto (E314); il controllo automatico aspetta Mario (riga Controllo 19).
+- Telefono di prova = imitazione. `docs/ERRORI.md` al tetto di 10 KB (10.098 byte): alla prossima riga spostare una vecchia in `docs/ERRORI-STORIA.md`.
 
 ## Ultimo messaggio di Mario
-> No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti, ecco. Si può valutare tutto, però consigliami tu i Best Buy, dove mangiare carne, dove mangiare sushi giapponese, dove mangiare il pesce, dove mangiare cucina tradizionale, eccetera eccetera. Mettimi tu i consigli e poi alternative, insomma, molte alternative.
+> publica
 
-(23/11 15:46, risposta alla DOMANDA 2: fatto, best buy per cucina e 56 posti.)
+(27/11 23:40, arrivato durante l'handoff: risposta alla DOMANDA 2 → v50; poi 3 volte «ora»: la vuole SUBITO.) Prima:
+> dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
+
+(27/11 23:37: risposto in chat — Airbnb letto tutto, Booking blocca i programmi, quei dati non servono a decidere; DOMANDA 3 al posto della 1.)
 
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 29
-la apre la Controllo 28 con `create_session` (catena 4 di 8). Scritto da Controllo 28 il 23/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 31
+la apre la Controllo 30 con `create_session` (catena 5 di 8). Scritto da Controllo 30 il 27/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 29 · v48 da pubblicare`
+Titolo: `🟩 🗼 Controllo 31 · scelta alloggio`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 29 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 31 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-23 15:14 · [AVVIO] Sei la chat parallela Controllo 28 di Parigi in tasca, linea «Controllo»… → avvio; sveglia RER A rifatta mia
-- 2026-11-23 15:31 · Allora, secondo me puoi fare pulizia dei testi interni senza cancellare informaz… → C28: v48 (Mangiare, treni, meteo, frase interna); resto dei testi v49
-- 2026-11-23 15:39 · metti Google, The Fork e TripAdvisor. → 3 voti in ogni scheda (v48)
-- 2026-11-23 15:40 · metti in Parigi in generale, in posti dove si può arrivare tranquillamente con i… → risposta alla DOMANDA 1: zona «Parigi, coi mezzi» (19 posti)
-- 2026-11-23 15:46 · No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti,… → risposta alla DOMANDA 2: best buy per cucina, 56 posti
+- 2026-11-27 23:23 · [AVVIO] Sei la chat parallela Controllo 30 di Parigi in tasca, linea «Controllo»… → avvio; C30 confronto 16-23
+- 2026-11-27 23:35 · se vuoi me le leggo io le recensioni e faccio prima..... → risposta alla DOMANDA 1 (poi sostituita dalla 3)
+- 2026-11-27 23:37 · dico che senso ha se devo leggerle io me lo spieghi la tua utilità? → risposta in chat; DOMANDA 3; riga in docs/ERRORI.md
 
 Ultimo, intero:
-> No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti, ecco. Si può valutare tutto, però consigliami tu i Best Buy, dove mangiare carne, dove mangiare sushi giapponese, dove mangiare il pesce, dove mangiare cucina tradizionale, eccetera eccetera. Mettimi tu i consigli e poi alternative, insomma, molte alternative.
+> dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
 

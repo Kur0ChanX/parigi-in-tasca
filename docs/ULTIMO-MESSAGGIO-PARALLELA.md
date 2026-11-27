@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (23/11/2026 18:39 ora italiana)
+# Ultimo messaggio di Mario (27/11/2026 23:41 ora italiana)
 
-controllo 25 ok 14 ok
+confronta nell'app moxy e monolocale di nice

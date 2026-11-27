@@ -2,42 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 15:13 · 01Rwcxc4aWHi
-Fai anche le braccia di Jack che si muovono, che salgono e si abbassano ogni tanto, come se sta dando delle frustate alle renne, ecco.
-
-## 2026-11-22 15:15 · 01Rwcxc4aWHi
-Sì, appena finito le cose che ti ho detto, pubblica.
-
-## 2026-11-22 15:22 · 01Rwcxc4Xr46
-Sì, ma i birilli non ci fanno niente, cioè. Ci devono essere altre cose. Ma cosa c'entrano i birilli, cioè? E tu me lo confermi pure, i birilli sono al posto giusto. Ma i birilli, che cavolo ce ne facciamo? Devono esserci cose attinenti, cioè. Puoi andare tu in una bancarella e vedere dei birilli in vendita. Ti sembra normale? Ma come ragioni? Boh.
-
-## 2026-11-22 15:24 · 01Rwcxc4Xr46
-No, però scusami, anche io ho sbagliato. Tipo quelle sfere che ci sono nelle bancarelle, mi spieghi che cavolo ci fanno? Che cosa significa? Cioè, metti qualcosa di inerente. Per le lucine sono sempre d'accordo, cioè più ce n'è meglio è, più da atmosfera meglio è, da tutte le parti. Anche la pagina del web farà più stile natalizia. Parigi, Disney, Natale, ecco.
-
-## 2026-11-22 15:30 · 01Rwcxc4Xr46
-Quando siamo nel giorno di Disneyland, oppure anche nella schermata principale, app Disneyland mi deve aprire il mio Disneyland, la mia app di Disneyland, che adesso te la mando, però devi controllare, mi sembra che ogni persona ha il proprio link o ha la propria memoria, perché ognuno ha i propri giorni, non lo so, valuta un po', se li apre a ognuno la propria sezione. Ecco, adesso ti invio l'app guida Disneyland da mettere sempre nella schermata principale e da mettere nelle giornate dove andiamo a Disneyland, così la possiamo consultare. Sono praticamente, questo è un viaggio, sono due app abbinate, questa e quella di Disneyland.
-
-https://guida-disneyland-ynoy.pages.dev/?prova=idee
-
-## 2026-11-22 16:29 · 01Rwcxc4Xr46
-All'inizio flickerano alcune luci tipo la torre Eiffel che dovresti farla meglio dietro, l'albero che dovresti farlo meglio, cioè l'albero non flickera, molte luci però flickerano all'inizio. Ti mando un albero che puoi mettere al posto di quello se vuoi. Ovviamente lo devi colorare e addobbare. La Torre Eiffel è fatta male dietro e poi flickera all'inizio appena nel video. E Jack Scheletro non farlo passare più volte. Passa una volta, poi non lo vedo più.
-
-## 2026-11-22 19:26 · 01QTFEqRa2TK
-non ho ora il token
-se mi dai la guida dove prenderlo
-
-## 2026-11-22 19:28 · 01QTFEqRa2TK
-11 21  31
-
-Mi raccomando è una guida deve aiutarmi in base a che hotel scelgo cosa fare nella giornata specialmente domenica con i mercatini come spostarmi consigli info ecc ecc ecc molto accurato
-
-## 2026-11-22 19:35 · 01QTFEqRa2TK
-@"/root/.claude/uploads/[segreto tolto dalla scorta]/[segreto tolto dalla scorta].mp4" Non  benissimo ancora come puoi vedere
-
-## 2026-11-22 20:03 · 01QTFEqQQmp8
-Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata
-anche nella 39 la vedevo non caticata a volte la luna
-
 ## 2026-11-22 20:07 · 01QTFEqQQmp8
 mi piaceva il fascio di luce
 ora prosegui con la guida con molta cura
@@ -128,3 +92,39 @@ No, per i prezzi mettimi come consigli Best Buy, ma poi gli altri mettili tutti,
 
 ## 2026-11-23 18:39 · 01Rwcxc2rpkc
 controllo 25 ok 14 ok
+
+## 2026-11-23 18:40 · 01Rwcxc2rpkc
+11
+
+## 2026-11-23 18:41 · 01Rwcxc2rpkc
+Ma i voti può controllare in tempo reale senza consumare token e risorse? Se io tipo una chiamata spinta.
+
+## 2026-11-23 19:57 · 01Rwcxc2rpkc
+No, non voglio che li aggiorni da solo, ma anche a spinta si possono aggiornare, magari in qualche modo gratuito che si possa aggiornare, possa controllare da solo. Non lo so, valuta tu. Questa è per la domanda 2. Domanda a 3 vanno bene, vanno bene.
+
+## 2026-11-23 20:08 · 01Rwcxc2rpkc
+No, sono pochissimi tocchi al mese. Boh, non conviene, secondo me. Al massimo ti farò fare io una ricerca su Claude qualche giorno prima o il giorno stesso della partenza.
+
+## 2026-11-24 11:31 · 01Rwcxc2rpkc
+salva per passaggio account
+
+## 2026-11-27 · 01Rwcxc2rpkc (sessione già chiusa, passato alla Controllo 30)
+Fai una comparazione accurata tra il 16 e il 23 recensioni ecc ecc leggile tutte airb&b e booking
+
+## 2026-11-27 · 01Rwcxc2rpkc (sessione già chiusa, passato alla Controllo 30)
+fallo tu scusa no?
+
+## 2026-11-27 23:35 · 01Rwcxc7G3cY
+se vuoi me le leggo io le recensioni e faccio prima.....
+
+## 2026-11-27 23:37 · 01Rwcxc7G3cY
+dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
+
+## 2026-11-27 23:40 · 01Rwcxc7G3cY
+publica
+
+## 2026-11-27 23:40 · 01Rwcxc7G3cY
+ora
+
+## 2026-11-27 23:41 · 01Rwcxc7G3cY
+confronta nell'app moxy e monolocale di nice
