@@ -1,0 +1,42 @@
+{
+"account": "cba507",
+"sessione": "dc466ab68595",
+"giorno": "2026-11-27",
+"turni": 3,
+"peso": 1539461,
+"uscita": 51553,
+"contesto_max": 267649,
+"anomalie": [
+"un turno ha aggiunto 160k token al contesto",
+"45k token scritti in un turno"
+],
+"remota": "01Rwcxc7G3cY",
+"aiutanti": 0,
+"strumenti": 64,
+"motori": {
+"opus": 1539461
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+117,
+10007381,
+224672,
+0,
+51553
+]
+},
+"costo": 4.8303,
+"blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 8 · Il turno finisce con una": 1
+},
+"esempi_blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": [
+"23:34 · Domanda a Mario poco chiara («❓ **DOMANDE** **DOMANDA 1:** mi mandi le recensioni Booking », C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso). NON riscrivere"
+],
+"Stop 8 · Il turno finisce con una": [
+"23:38 · Il turno finisce con una domanda o un passo a mano per Mario: rinomina la sessione (set_session_title): col giallo della tua catena se dopo questo messaggio ti fermi ad aspettare Mario («<🟡|🟨|💛|✴️|📒> "
+]
+}
+}
