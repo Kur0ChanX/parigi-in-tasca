@@ -5,7 +5,7 @@
 
 ## Nastro delle versioni
 🚀 Online: v51 · 🟩 Controllo 31 · 28/11 00:04 · Moxy contro 16 (PR 53; prove locali verdi: web app 83/83, scritte 20/20; sito vero letto: v51 e le frasi nuove)
-🧪 In prova: nessuna
+🧪 In prova: v52 · 🟩 Controllo 32 · n. 23 prenotato (prove locali verdi: web app 84/84, scritte 20/20)
 ⏳ Dopo: orari RER A del 13–17/12 (sveglia 28/11 10:17)
 
 ## 0. Aspetta Mario
