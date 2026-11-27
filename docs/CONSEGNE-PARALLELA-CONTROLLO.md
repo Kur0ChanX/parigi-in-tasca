@@ -1,7 +1,7 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
-## Stato (Controllo 31 `session_01Rwcxc6vqxeDJS6LUemAjJo`, 28/11 00:05 ora italiana, chiusa alla soglia; la apre la Controllo 31 con `create_session` (catena 7 di 8))
-- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261127-01Rwcxc6vqxe/claude/parigi-ramo-definitivo.
+## Stato (Controllo 31 `session_01Rwcxc6vqxeDJS6LUemAjJo`, 28/11 00:06 ora italiana, chiusa alla soglia; la apre la Controllo 31 con `create_session` (catena 7 di 8))
+- Ramo comune ≠ origin: PUSH DA FARE (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
 - (qui le righe di giudizio della Controllo 31: fatto, provato, dove si verifica)
 
 ## Stato (Controllo 30 `session_01Rwcxc7G3cY8jSfhTdMsJxZ`, 27/11 23:39 ora italiana, chiusa alla soglia; la apre la Controllo 30 con `create_session` (catena 5 di 8))
