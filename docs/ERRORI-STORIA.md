@@ -114,3 +114,6 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 |---|---|---|---|
 | 22/11/2026 | «Nascondi» (C20): gli hotel di Parigi nascosti tornavano dopo la ricarica. | Chiave fatta su due elenchi con id di tipo diverso (alloggi a numero, Parigi a sigla «lo»), controllo scritto solo per i numeri. | Chiavi di più elenchi: controllo provato con un id di OGNI elenco; prova «resta dopo la ricarica» anche per Parigi in `prova-web-app.js`. |
 | 22/11/2026 | v37, prima di pubblicare (prova rossa): il tasto nuovo «Rosa alloggi» sotto «Guida Disneyland» spingeva l’albero della testata sotto la barra in basso. | Ogni riga in più nella schermata principale allunga la testata: il disegno scende di tanto quanto la riga (80 px). | Tasti nuovi della schermata principale affiancati, mai una riga in più; la prova dell’albero «si vede» lo ferma. |
+
+- Spostata da ERRORI.md il 28/11/2026 (tetto 10 KB, C31):
+| 22/11/2026 | v37 online col tasto «Rosa alloggi · 2 / n. 16 e 23 · toccate per cambiarla»: Mario «come rovinare una grafica». | Testo pensato per dire tutto (numero, elenco, istruzione): doppione e due righe; foto guardata solo per il posto, non per le parole. | Tasti della schermata principale: titolo corto + una riga breve, niente doppioni; la prova vieta l’elenco dei numeri nel tasto. |
