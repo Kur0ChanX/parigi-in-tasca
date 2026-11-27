@@ -106,3 +106,5 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 
 ## Spostate dal diario il 23/11/2026 (Controllo 29)
 | 22/11/2026 | Luci della testata che sfarfallano all’apertura (Mario, video v33). | Animazioni con ritardo positivo: prima di partire la luce resta accesa piena, poi scatta. | Ritardi sempre negativi; prova «nessuna luce parte in ritardo» su tutta la testata. |
+
+| 22/11/2026 | Regali della slitta invisibili dalla v30 (Mario 13:37), prova verde. | Pacchi di 6 px e scuri, lanciati anche dietro il castello; la prova li contava soltanto. | Pacchi grandi e colorati, solo sul cielo libero; prova con misura ed `elementsFromPoint`. Una cosa da vedere si prova se si VEDE, mai solo se c’è . | *(spostata da ERRORI.md il 27/11/2026)*
