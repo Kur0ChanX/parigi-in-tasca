@@ -1,3 +1,3 @@
-# Ultimo messaggio di Mario (27/11/2026 23:41 ora italiana)
+# Ultimo messaggio di Mario (28/11/2026 00:22 ora italiana)
 
-confronta nell'app moxy e monolocale di nice
+Dormiano nell appartamento 23 guarda tutta l'app con cura per itinerario info ecc ecc in base a dove dormiamo
