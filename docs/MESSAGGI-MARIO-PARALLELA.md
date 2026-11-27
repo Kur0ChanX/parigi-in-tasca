@@ -2,10 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 20:03 · 01QTFEqQQmp8
-Mi raccomando priorità massima nella guida poi pensiamo alla grafica della foto animata
-anche nella 39 la vedevo non caticata a volte la luna
-
 ## 2026-11-22 20:07 · 01QTFEqQQmp8
 mi piaceva il fascio di luce
 ora prosegui con la guida con molta cura
@@ -129,3 +125,6 @@ publica
 
 ## 2026-11-27 23:40 · 01Rwcxc7G3cY
 ora
+
+## 2026-11-27 23:43 · 01Rwcxc6vqxe
+e publica in priorità
