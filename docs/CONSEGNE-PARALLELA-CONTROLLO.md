@@ -1,5 +1,9 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
+## Stato (Controllo 31 `session_01Rwcxc6vqxeDJS6LUemAjJo`, 28/11 00:05 ora italiana, chiusa alla soglia; la apre la Controllo 31 con `create_session` (catena 7 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261127-01Rwcxc6vqxe/claude/parigi-ramo-definitivo.
+- (qui le righe di giudizio della Controllo 31: fatto, provato, dove si verifica)
+
 ## Stato (Controllo 30 `session_01Rwcxc7G3cY8jSfhTdMsJxZ`, 27/11 23:39 ora italiana, chiusa alla soglia; la apre la Controllo 30 con `create_session` (catena 5 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb. Scorte NON unite: scorta-parallela-20261127-01Rwcxc7G3cY/claude/parigi-ramo-definitivo.
 - **Fatto (C30):** confronto n. 16 contro n. 23 con TUTTE le recensioni Airbnb (571 + 68) e le 10 leggibili su Booking (n. 23; il n. 16 non è su Booking). Verifica: `research_notes/Parigi mercatini e Disneyland dicembre/confronto_16_23_recensioni_27_11.md` e `docs/lavori-in-corso/C30-confronto-16-23.md`. Pagina NON toccata (online v49: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 49}`).
@@ -39,22 +43,21 @@
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 31
-la apre la Controllo 30 con `create_session` (catena 5 di 8). Scritto da Controllo 30 il 27/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 32
+la apre la Controllo 31 con `create_session` (catena 7 di 8). Scritto da Controllo 31 il 28/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 31 · scelta alloggio`
+Titolo: `🟩 🗼 Controllo 32 · kit e alloggio`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 31 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 32 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-27 23:23 · [AVVIO] Sei la chat parallela Controllo 30 di Parigi in tasca, linea «Controllo»… → avvio; C30 confronto 16-23
-- 2026-11-27 23:35 · se vuoi me le leggo io le recensioni e faccio prima..... → risposta alla DOMANDA 1 (poi sostituita dalla 3)
-- 2026-11-27 23:37 · dico che senso ha se devo leggerle io me lo spieghi la tua utilità? → risposta in chat; DOMANDA 3; riga in docs/ERRORI.md
+- 2026-11-27 23:40 · [AVVIO] Sei la chat parallela Controllo 31 di Parigi in tasca, linea «Controllo»… → 
+- 2026-11-27 23:43 · e publica in priorità → 
 
 Ultimo, intero:
-> dico che senso ha se devo leggerle io me lo spieghi la tua utilità?
+> e publica in priorità
 
