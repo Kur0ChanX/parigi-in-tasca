@@ -798,6 +798,23 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
     const okP = [p1, p2].every((x) => /nuvoloso · 2°–6° · pioggia 35 %/.test(x.m13) && /Open-Meteo/.test(x.m13) && x.mangiare > 50 && !x.er.length);
     ok('C32: meteo col 13/12 pieno, alla prima apertura e alla seconda (previsione salvata): giorno scritto, «Mangiare» pieno, nessun errore', okP); if (!okP) console.log({ p1, p2 });
   }
+  // C32: «Mangiare» → «📍 Più vicini» con la posizione permessa (dalla v48 «B is not defined», distanze mai scritte); I24: in «Vicino all'alloggio» i minuti dal n. prenotato
+  {
+    const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block', permissions: ['geolocation'], geolocation: { latitude: 48.853, longitude: 2.784 } });
+    const r = await c.newPage(); const er = []; r.on('pageerror', (e) => er.push(e.message));
+    await r.goto(B + 'dicembre/'); await r.waitForTimeout(1200);
+    await r.evaluate(() => document.getElementById('risPos').click()); await r.waitForTimeout(1200);
+    const x = await r.evaluate(() => ({ dist: document.querySelectorAll('.ris-d').length, card: document.querySelectorAll('.ris a').length }));
+    await r.evaluate(() => document.querySelector('#risZ button[data-z="al"], [data-z="al"]').click()); await r.waitForTimeout(400);
+    const al = await r.evaluate(() => ({ n: document.getElementById('risN').textContent, pdn: window.pdnMio }));
+    await r.evaluate(() => document.querySelector('[data-z="sg"]').click()); await r.waitForTimeout(300);
+    const sg = await r.evaluate(() => document.getElementById('risN').textContent);
+    await c.close();
+    const okD = x.dist >= 10 && x.card > 50 && !er.length;
+    ok('C32: «Mangiare» → «📍 Più vicini» con la posizione: distanze scritte nelle schede, nessun errore', okD); if (!okD) console.log({ x, er });
+    const okA = al.pdn && al.pdn.n === 23 && al.pdn.min === 9 && al.n.includes('dal n. 23 aggiungete circa 9 minuti') && !sg.includes('aggiungete');
+    ok('I24: «Vicino all’alloggio» dice i minuti in più dal n. 23 (stesso numero della scheda, 9); Saint-Germain no', okA); if (!okA) console.log({ al, sg });
+  }
   await b.close(); server.kill(); fs.unlinkSync(path.join(DIR, 'parigi-in-tasca')); fs.rmdirSync(DIR);
   process.exit(falsi ? 1 : 0);
 })().catch((e) => { console.error(e); server.kill(); process.exit(1); });
