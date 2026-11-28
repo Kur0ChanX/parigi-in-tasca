@@ -54,7 +54,7 @@ Testo da incollare:
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-28 00:07 · [AVVIO] Sei la chat parallela Controllo 32 di Parigi in tasca, linea «Controllo»… → avvio
+- 2026-11-28 00:07 · [AVVIO] Sei la chat parallela Controllo 32 di Parigi in tasca, linea «Controllo»… → avvio, sveglia RER rifatta
 - 2026-11-28 00:22 · Dormiano nell appartamento 23 guarda tutta l'app con cura per itinerario info ec… → C31, v52 (PR 54)
 - 2026-11-28 00:31 · booking 461 preso dai un check su tutto se ci aono info giuste itinerario ecc e … → risposta alla DOMANDA 1 (Booking 461 €); C31, v52
 - 2026-11-28 00:32 · correggi ci saranno altei errori moxy ecc noi siamo al 23 → C31, v52 (foto in `archivio/2026-11-28-n23/`)
