@@ -117,3 +117,9 @@ Righe tolte da `docs/ERRORI.md` (difese già dentro prove e regole).
 
 - Spostata da ERRORI.md il 28/11/2026 (tetto 10 KB, C31):
 | 22/11/2026 | v37 online col tasto «Rosa alloggi · 2 / n. 16 e 23 · toccate per cambiarla»: Mario «come rovinare una grafica». | Testo pensato per dire tutto (numero, elenco, istruzione): doppione e due righe; foto guardata solo per il posto, non per le parole. | Tasti della schermata principale: titolo corto + una riga breve, niente doppioni; la prova vieta l’elenco dei numeri nel tasto. |
+
+## Spostati dal diario il 28/11/2026 (Controllo 33, file snello)
+| Data | Errore | Causa vera | Difesa |
+|---|---|---|---|
+| 22/11/2026 | v40 «più leggera»: sul telefono luna sfocata e rettangoli a zoom (video 19:35). | Contate le animazioni, non il lavoro di disegno (raddoppiato dai gruppi di lucine); prove solo a zoom normale. | Testata: misura del disegno prima/dopo e prova a pagina ingrandita (storia in ERRORI-STORIA). |
+| 22/11/2026 | Giovedì del n. 1: «ultimo treno sicuro 8:47 da Val d’Europe», ma col bus il n. 1 arriva a Chessy (trovato dalla Controllo 19). | La riga del giovedì prendeva la stazione della domenica sera (`sunSt`), non quella della strada del giovedì: per il n. 1 sono diverse. | Ogni orario si prende dalla strada di quel giorno (`thuCH`); prova «giovedì del n. 1 da Chessy» in `prova-web-app.js`. |

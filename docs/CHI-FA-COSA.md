@@ -6,7 +6,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | Catena | Forma | Segni | Numero | Sessione | Chiusa il |
 |---|---|---|---|---|---|
 | Principale | cerchi | 🟢 🟡 🔴 ⚫ | 22 | session_01WTjqUtegBCzTHdbgdaXDm1 | — |
-| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 32 | session_01Rwcxc5wytQABAgrjwvZxTi | — |
+| Controllo | quadrati | 🟩 🟨 🟥 ⬛ | 33 | session_01Rwcxc6YpeBRMa4Wz5R9i43 | — |
 
 ## Lavori in corso
 | Codice | Chat | Cosa | File principali | Dal |
@@ -33,6 +33,7 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | C28 | Controllo 29 (da Controllo 28) | v48 (ristoranti, treni, meteo) aspetta l'ok di Mario sulle foto; intanto v49: testi lunghi degli alloggi in punti corti, senza togliere fatti | `dicembre/parigi-disney-natale.html`, `docs/lavori-in-corso/C28-idee-e-controllo.md` | 23/11 |
 | C30 | Controllo 31 (da Controllo 30) | Confronto n. 16 contro n. 23 con TUTTE le recensioni Airbnb e Booking; v50 coi fatti nuovi nelle schede «📋 Tutto sul n.» | `research_notes/…/confronto_16_23_recensioni_27_11.md`, `docs/lavori-in-corso/C30-confronto-16-23.md` | 27/11 |
 | C31 | Controllo 32 | Pagina di dicembre rifatta sul n. 23 scelto da Mario: giorni, orari, costi, info | `dicembre/parigi-disney-natale.html`, `tools/prova-web-app.js`, `docs/lavori-in-corso/C31-pagina-n23.md` | 28/11 |
+| C32 | Controllo 33 | URGENZA: meteo e «Mangiare» spariti alla seconda apertura (v52) → v53 | `dicembre/parigi-disney-natale.html` (meteo), `tools/prova-web-app.js`, `docs/lavori-in-corso/C32-meteo.md` | 28/11 |
 | PR 37 | Controllo 14 (altro account) | v36 da `versione-v36` (commit df327f9), unita 22/11 | — | 22/11 |
 | PR 45 | Controllo 23 | v45 da `versione-v45` (commit 6022aec), unita 23/11 | — | 23/11 |
 | PR 46 | Controllo 23 | prova «luci ferme» da `versione-v45-prova` (commit 5a8d6bb), unita 23/11 | — | 23/11 |
