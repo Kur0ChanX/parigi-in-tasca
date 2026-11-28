@@ -2,31 +2,31 @@
 "account": "cba507",
 "sessione": "8462667d86bc",
 "giorno": "2026-11-28",
-"turni": 4,
-"peso": 2221875,
-"uscita": 55424,
-"contesto_max": 348074,
+"turni": 5,
+"peso": 2973353,
+"uscita": 59065,
+"contesto_max": 359007,
 "anomalie": [
 "3 uscite di strumento enormi (56 KB la più grande): leggere a pezzi (grep -n, sed -n)",
 "26k token scritti in un turno"
 ],
 "remota": "01Rwcxc5wytQ",
 "aiutanti": 1,
-"strumenti": 85,
+"strumenti": 94,
 "motori": {
-"opus": 2221875
+"opus": 2973353
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-146,
-17717434,
-138292,
+163,
+20562423,
+497298,
 0,
-55424
+59065
 ]
 },
-"costo": 5.7589,
+"costo": 9.2728,
 "blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": 1,
 "Stop 15 · There are uncommitted changes in": 1
@@ -38,5 +38,15 @@
 "Stop 15 · There are uncommitted changes in": [
 "00:52 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
 ]
-}
+},
+"costo_fredde": 2.8104,
+"memoria_scaduta": 1,
+"ricreati": 351304,
+"fredde": [
+[
+351,
+555,
+0
+]
+]
 }

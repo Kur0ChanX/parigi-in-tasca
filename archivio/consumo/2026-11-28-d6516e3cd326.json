@@ -1,0 +1,18 @@
+{
+"account": "cba507",
+"sessione": "d6516e3cd326",
+"giorno": "2026-11-28",
+"turni": 0,
+"peso": 0,
+"uscita": 0,
+"contesto_max": 0,
+"anomalie": [],
+"blocchi": {
+"Stop 14 · Ti fermi ad aspettare Mario": 1
+},
+"esempi_blocchi": {
+"Stop 14 · Ti fermi ad aspettare Mario": [
+"00:05 · Ti fermi ad aspettare Mario con il contesto a 283k (oltre 180k, C455): fai PRIMA le consegne (skill consegne, tutte le fasi; nella sessione nuova la riga in «Aspetta Mario» e le sue domande). NON risc"
+]
+}
+}

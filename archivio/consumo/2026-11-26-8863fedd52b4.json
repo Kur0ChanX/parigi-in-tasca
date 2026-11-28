@@ -1,0 +1,45 @@
+{
+"account": "cba507",
+"sessione": "8863fedd52b4",
+"giorno": "2026-11-26",
+"turni": 1,
+"peso": 599203,
+"uscita": 1630,
+"contesto_max": 358700,
+"anomalie": [],
+"remota": "01Rwcxc2rpkc",
+"aiutanti": 0,
+"strumenti": 4,
+"motori": {
+"opus": 599203
+},
+"bilancia": 2,
+"grezzi": {
+"opus": [
+9,
+1426706,
+358699,
+0,
+1630
+]
+},
+"costo": 3.1876,
+"costo_fredde": 2.8428,
+"memoria_scaduta": 1,
+"ricreati": 355347,
+"fredde": [
+[
+355,
+2805,
+0
+]
+],
+"blocchi": {
+"Stop 7 · «👉 DA FARE TU» senza": 1
+},
+"esempi_blocchi": {
+"Stop 7 · «👉 DA FARE TU» senza": [
+"10:18 · «👉 DA FARE TU» senza «A cosa serve» (kit 37.2, Mario: «regola per tutti i progetti»): prima riga del blocco «A cosa serve: …» (cosa ottiene Mario, l'app o il lavoro). Riscrivi solo quel blocco."
+]
+}
+}
