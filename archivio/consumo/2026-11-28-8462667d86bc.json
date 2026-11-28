@@ -2,26 +2,38 @@
 "account": "cba507",
 "sessione": "8462667d86bc",
 "giorno": "2026-11-28",
-"turni": 1,
-"peso": 208851,
-"uscita": 8770,
-"contesto_max": 94473,
+"turni": 3,
+"peso": 619815,
+"uscita": 29224,
+"contesto_max": 303066,
 "anomalie": [],
 "remota": "01Rwcxc5wytQ",
-"aiutanti": 0,
-"strumenti": 17,
+"aiutanti": 1,
+"strumenti": 38,
 "motori": {
-"opus": 208851
+"opus": 619815
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-25,
-1049075,
-48055,
+64,
+3554559,
+94540,
 0,
-8770
+29224
 ]
 },
-"costo": 0.7698
+"costo": 2.052,
+"blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": 1,
+"Stop 15 · There are uncommitted changes in": 1
+},
+"esempi_blocchi": {
+"Stop 7 · Domanda a Mario poco chiara": [
+"00:26 · Domanda a Mario poco chiara («❓ DOMANDE **DOMANDA 1 🛑 · Avete già prenotato il n. 23 (4 no», C233, E145): manca la riga «📌 Di cosa parliamo:» (cos'è, dove si vede, perché serve adesso); mancano le sce"
+],
+"Stop 15 · There are uncommitted changes in": [
+"00:52 · There are uncommitted changes in the repository. Please commit and push these changes to the remote branch."
+]
+}
 }

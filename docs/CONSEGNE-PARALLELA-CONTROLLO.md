@@ -1,5 +1,9 @@
 # Consegne della catena «Controllo» (chat parallela, segni 🟩 🟨 🟥 ⬛)
 
+## Stato (Controllo 32 `session_01Rwcxc5wytQABAgrjwvZxTi`, 28/11 01:00 ora italiana, chiusa alla soglia; la apre la Controllo 32 con `create_session` (catena 8 di 8))
+- Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
+- (qui le righe di giudizio della Controllo 32: fatto, provato, dove si verifica)
+
 ## Stato (Controllo 31 `session_01Rwcxc6vqxeDJS6LUemAjJo`, 28/11 00:06 ora italiana, chiusa alla soglia; la apre la Controllo 31 con `create_session` (catena 7 di 8))
 - Ramo comune = origin (verifica: `git rev-parse HEAD` = `origin/claude/parigi-ramo-definitivo`). Nessun giro in corso. PR aperte: #2 (bozza) Kit 43 installato e viaggio 13–17 dicemb.
 - **Online v51** (verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 51}`; la pagina contiene «Prudenti: prenotate il Moxy»). v50 (PR 52, 27/11 23:54) = schede «📋 Tutto sul n.» 16 e 23 coi fatti di tutte le recensioni; v51 (PR 53, 28/11 00:04) = Moxy coi prezzi di oggi (Family Sleeper 702 € 4 notti, 555 € 3 notti, cancellazione gratuita) in tutta la pagina e parere nuovo «N. 16 Nice studio (Airbnb) o n. 8 Moxy?» in «Questo o quello?». Prove locali verdi su tutte e due: web app 83/83, scritte 20/20.
@@ -39,21 +43,24 @@
 ## Motore e forza di pensiero
 Motore: **claude-opus-5-5** (Opus 5.5) · impegno **Extra** (`xhigh`, dal registro della sessione): la sessione nuova nasce con questi (C474, `create_session` con `model` ed `effort`), mai chiesti a Mario (E277).
 
-## Testo per aprire la Controllo 32
-la apre la Controllo 31 con `create_session` (catena 7 di 8). Scritto da Controllo 31 il 28/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
+## Testo per aprire la Controllo 33
+la apre la Controllo 32 con `create_session` (catena 8 di 8). Scritto da Controllo 32 il 28/11/2026 (righe di fatto da `tools/consegne.py fatti --parallela`).
 
-Titolo: `🟩 🗼 Controllo 32 · kit e alloggio`
+Titolo: `🟩 🗼 Controllo 33 · n. 23 e`
 
 Testo da incollare:
 ```
-[AVVIO] Sei la chat parallela Controllo 32 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
+[AVVIO] Sei la chat parallela Controllo 33 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch origin claude/parigi-ramo-definitivo && git merge --ff-only origin/claude/parigi-ramo-definitivo (se «HEAD detached» prima git checkout claude/parigi-ramo-definitivo). Leggi CLAUDE.md, docs/ERRORI.md e le tue consegne docs/CONSEGNE-PARALLELA-CONTROLLO.md (leggi i file solo a blocchi con grep -n e sed -n, mai interi); continua da sola dai «Prossimi passi».
 ```
 
 ## Messaggi di Mario di questa sessione
 Scritti dallo script (C469): dopo «→» cosa ne è stato (C…, file, commit o «risposta alla domanda N»).
-- 2026-11-27 23:40 · [AVVIO] Sei la chat parallela Controllo 31 di Parigi in tasca, linea «Controllo»… → avvio; v50 (PR 52)
-- 2026-11-27 23:43 · e publica in priorità → v50 online 23:54 (PR 52); poi v51 (PR 53) col confronto Moxy / n. 16
+- 2026-11-28 00:07 · [AVVIO] Sei la chat parallela Controllo 32 di Parigi in tasca, linea «Controllo»… → 
+- 2026-11-28 00:22 · Dormiano nell appartamento 23 guarda tutta l'app con cura per itinerario info ec… → 
+- 2026-11-28 00:31 · booking 461 preso dai un check su tutto se ci aono info giuste itinerario ecc e … → 
+- 2026-11-28 00:32 · correggi ci saranno altei errori moxy ecc noi siamo al 23 → 
+- 2026-11-28 00:33 · biglietti dei parchi presi a 505 → 
 
 Ultimo, intero:
-> e publica in priorità
+> biglietti dei parchi presi a 505
 
