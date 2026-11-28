@@ -25,4 +25,5 @@ Trovato da Controllo 33 il 28/11 ~01:10, facendo il controllo della sveglia «or
 
 ## Stato
 - 28/11 01:17: v53 online (PR 55, squash `e738b5d9`). Prove locali sul commit `4afa7328`: web app 86/86 (al primo giro «service worker suo» rossa, la nota instabile 🐞; rifatta da sola verde), scritte 20/20, `--controlla` e colori verdi. Sito vero: `versione.json` = 53, `dicembre/index.html` identico al file provato (`cmp`).
-- Resta: Mario la vede sul telefono (riga in «## 0. Aspetta Mario»).
+- 28/11 01:29: v54 online (PR 56, squash `21534709`): «📍 Più vicini» e I24. Prove sul codice di `421be5c4`: web app 88/88 (al primo giro «service worker suo» rossa, poi da sola verde), scritte 20/20, `--controlla` e colori verdi. Sito vero = file provato (`cmp`).
+- Resta: Mario le vede sul telefono (riga in «## 0. Aspetta Mario»).
