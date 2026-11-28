@@ -1687,6 +1687,7 @@ const DUELS=[
 ];
 /* «Questo o quello?»: lo disegna C26 (qoqR, più sotto), quando le funzioni dei minuti ai parchi sono pronte */
 const MIO=23,STAR='<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>';
+window.pdnMio={n:MIO,min:(AL.find(h=>h.id===MIO)||{}).min}; /* C32 · I24: «Mangiare» (fuori da questo blocco) scrive i minuti dall'alloggio prenotato con lo stesso numero della scheda */
 /* SCELTA (C11, Mario 21/11 20:52 «quando clicco mi cambia la pagina … l'itinerario e tutto»): domenica notte a Parigi (n) + alloggio vicino a Disney (d) */
 const BKP=s=>`https://www.booking.com/hotel/fr/${s}.it.html?checkin=2026-12-13&checkout=2026-12-14&group_adults=2&group_children=0&no_rooms=1`;
 /* stazioni RER A degli hotel di Parigi: minuti fino a Val d'Europe e Chessy (orario del fine settimana, appunti trasporti) */
@@ -2794,6 +2795,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden)prendi()})
 (()=>{
 const box=document.getElementById('risCards');if(!box)return;
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'),OUT='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h9v9M16 4 5 15"/></svg>',STAR='<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0l2.2 5.3L16 6l-4.4 3.8L13 16 8 12.8 3 16l1.4-6.2L0 6l5.8-.7z"/></svg>';
+const es=()=>`<span class="bd es">stima</span>`; /* C32: «B» dei bollini vive nel blocco grande sopra, non qui (da v48: «📍 Distanze» andava in errore e non scriveva niente) */
 const ZN=[['sg','☀️ Domenica, pranzo · Saint-Germain'],['cc','🌙 Domenica, cena · centro'],['pa','🚇 Parigi, coi mezzi'],['al','🏠 Vicino all’alloggio · lun–mer'],['tt','Tutti']];
 const CU={carne:['🥩','Carne'],pesce:['🐟','Pesce'],sushi:['🍣','Sushi e giapponese'],tradizionale:['🥖','Tradizionale']};
 const CK=['tt',...Object.keys(CU)],K='pdn-ris',at=s=>esc(s).replace(/"/g,'&quot;');
@@ -2807,7 +2809,7 @@ const km=r=>{const t=Math.PI/180,[a,b]=pos,x=Math.sin((r.la-a)*t/2)**2+Math.cos(
 const num=n=>Number(n).toLocaleString('it-IT');
 const voto=([f,v,s,n,u])=>{const x=`<div class="k">${f}</div><div class="v">${v?`${v}<small>/${s}</small>`:'—'}</div><div class="k">${v?(n?num(n)+' voti':'voto'):'non c’è'}</div>`;
  return u?`<a class="fact" href="${at(u)}" target="_blank" rel="noopener" aria-label="${f}: ${v?v+' su '+s:'non c’è'}, apri la pagina">${x}</a>`:`<div class="fact">${x}</div>`};
-const dist=r=>{if(!pos)return'';const d=km(r);return `<br><b class="ris-d">📍 ${d<1?Math.max(100,Math.round(d*10)*100)+' m':num(Math.round(d*10)/10)+' km'} da voi in linea d’aria${d<2.5?` · circa ${Math.max(1,Math.round(d*1.3/4.8*60))} min a piedi`:' · meglio coi mezzi'}</b> ${B.es()}`};
+const dist=r=>{if(!pos)return'';const d=km(r);return `<br><b class="ris-d">📍 ${d<1?Math.max(100,Math.round(d*10)*100)+' m':num(Math.round(d*10)/10)+' km'} da voi in linea d’aria${d<2.5?` · circa ${Math.max(1,Math.round(d*1.3/4.8*60))} min a piedi`:' · meglio coi mezzi'}</b> ${es()}`};
 const fonte=f=>{const m=String(f).match(/^(https:\/\/[^\s)]+)\s*(.*)$/);if(!m)return esc(f);let h='';try{h=new URL(m[1]).hostname.replace(/^www\./,'')}catch(e){h='link'}return `<a href="${at(m[1])}" target="_blank" rel="noopener">${esc(h)}</a>${m[2]?' '+esc(m[2]):''}`};
 const L=(u,t,c)=>u?`<a class="btn${c?'':' ghost'}" href="${at(u)}" target="_blank" rel="noopener">${t}${OUT}</a>`:'';
 const card=r=>`<article class="card ris${r.bb?' is-bb':''}" id="ris-${r.i}">
@@ -2830,7 +2832,7 @@ const render=()=>{
  let h='';(st.c==='tt'?Object.keys(CU):[st.c]).forEach(c=>{const l=Z.filter(r=>r.c===c).sort(ord);if(!l.length)return;
   if(st.c==='tt')h+=`<h3 class="ris-h">${CU[c][0]} ${CU[c][1]} <span class="muted small">· ${l.length}</span></h3>`;h+=l.map(card).join('')});
  box.innerHTML=h||'<p class="muted">Nessun posto con questa scelta: provate «Tutti».</p>';
- const bb=Z.filter(r=>r.bb).length;document.getElementById('risN').textContent=`${Z.length} posti${bb?`, di cui ${bb} best buy`:''}.`;
+ const bb=Z.filter(r=>r.bb).length;const M=window.pdnMio;document.getElementById('risN').textContent=`${Z.length} posti${bb?`, di cui ${bb} best buy`:''}.${st.z==='al'&&M&&M.min?` I minuti a piedi sono dalla stazione Val d’Europe: dal n. ${M.n} aggiungete circa ${M.min} minuti.`:''}`;
  zB.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.z===st.z));
  cB.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.c===st.c));
  oB.hidden=!pos;oB.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.o===st.o));
