@@ -60,3 +60,4 @@ Chat: Controllo 32 (da 28/11/2026 00:22). File: `dicembre/parigi-disney-natale.h
 - Mappa: posizione del n. 23 a parte (`TM_PREN`), il blocco TM resta di `tools/fai-mappa-viaggio.py`.
 - Menu «Lunedì–mercoledì» con `autocomplete="off"` (foto di Mario: menu sul 23, riquadro sull'8; ipotesi: il browser rimette nel menu l'ultimo valore toccato).
 - Resta: DOMANDA 2 (cosa fare della parte per scegliere), I24.
+- 28/11 00:58: v52 online (PR 54, squash 99c271fe); sito vero letto: `{"v": 52}`, «Prenotato: n. 23», «biglietti Disney 505 €». Foto prima/dopo di Giorni: `archivio/2026-11-28-n23/confronto-giorni-v52.png` (mandata a Mario).
