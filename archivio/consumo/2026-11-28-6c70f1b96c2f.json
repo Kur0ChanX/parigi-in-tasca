@@ -2,28 +2,28 @@
 "account": "cba507",
 "sessione": "6c70f1b96c2f",
 "giorno": "2026-11-28",
-"turni": 1,
-"peso": 139930,
-"uscita": 3440,
-"contesto_max": 81606,
+"turni": 2,
+"peso": 213318,
+"uscita": 4098,
+"contesto_max": 86547,
 "anomalie": [],
 "remota": "01Rwcxc3jmdM",
 "aiutanti": 0,
-"strumenti": 10,
+"strumenti": 12,
 "motori": {
-"opus": 139930
+"opus": 213318
 },
 "bilancia": 2,
 "grezzi": {
 "opus": [
-19,
-713302,
-41105,
+23,
+838663,
+87151,
 0,
-3440
+4098
 ]
 },
-"costo": 0.5404,
+"costo": 0.947,
 "blocchi": {
 "Stop 7 · Domanda a Mario poco chiara": 1
 },
