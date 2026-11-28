@@ -5,6 +5,7 @@
 - **Online v54** (verifica: `curl -s https://kur0chanx.github.io/parigi-in-tasca/dicembre/versione.json` = `{"v": 54}`; `dicembre/index.html` del sito = quello provato). v53 PR 55 (01:17, urgenza meteo), v54 PR 56 (01:29). Prove locali verdi: web app 88/88, scritte 20/20.
 - **Già deciso da Mario (non richiedere):** dormono al **n. 23, prenotato su Booking a 461 €**, 4 notti 13→17; **biglietti Disney presi a 505 €**; vuole tutta l'app giusta per il n. 23.
 - **Da non rifare:** lettura di Booking col browser automatico (403 robot): Parallel `web_fetch`; `delete_trigger` (controllo dei permessi); coordinate a mano nel blocco `TM`; `send_later` e `create_session` (catena 8 di 8: bloccati).
+- **Cosa preme a Mario adesso:** che tutta l'app sia giusta per il n. 23 (itinerario e info); poi la DOMANDA 2.
 - **Domande aperte (righe in «## 0. Aspetta Mario»):** DOMANDA 2 della Controllo 32 🛑 (parte per scegliere: 1 · riquadro chiuso in fondo · 2 · togliere · 3 · lasciare; consiglio 1); «guarda la v54» (n. 23, meteo, «Mangiare»); DOMANDA 1 della Controllo 31 (Kit 56).
 - **Preferenze di claude.ai:** Mario v38 = kit di qui (Kit 53); la v40 arriva solo col Kit 56 (DOMANDA 1): dopo il kit, il testo di `docs/kit-progetto/PREFERENZE-CHAT.txt` a Mario.
 - **Sveglie:** `trig_01WfEXJaic6mfksKN87ipNmz` (28/11 10:17, orari RER A + meteo) resta legata alla Controllo 32: `send_later` bloccato (8 di 8), quindi NON spenta. Orari RER del 13–17/12 controllati alle 01:05: ancora assenti (malignea.fr solo fino al 6/12). Il meteo dentro la guida ora funziona (C32).
