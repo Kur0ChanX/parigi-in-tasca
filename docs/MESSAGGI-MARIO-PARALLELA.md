@@ -2,15 +2,6 @@
 
 Scritto da `.claude/hooks/scorta.py` (C291): arriva nel ramo unendo la scorta. Non si modifica a mano.
 
-## 2026-11-22 22:28 · 01QTFEqSjyGg
-passaggio account salva
-
-## 2026-11-22 23:08 · 01Rwcxc7EAGC
-No, cos'hai capito? Ti ho mandato la chat dell'altra. Ti ho mandato la chat dell'altro account. Adesso voglio continuare qua.
-
-## 2026-11-22 23:09 · 01Rwcxc7EAGC
-Se è tutto verde, pubblica.
-
 ## 2026-11-22 23:14 · 01Rwcxc7EAGC
 Dopo sai che cosa devi fare? Sei già informato?
 
@@ -127,3 +118,12 @@ e publica in priorità
 
 ## 2026-11-28 00:22 · 01Rwcxc5wytQ
 Dormiano nell appartamento 23 guarda tutta l'app con cura per itinerario info ecc ecc in base a dove dormiamo
+
+## 2026-11-28 00:31 · 01Rwcxc5wytQ
+booking 461 preso dai un check su tutto se ci aono info giuste itinerario ecc e info generali
+
+## 2026-11-28 00:32 · 01Rwcxc5wytQ
+correggi ci saranno altei errori moxy ecc noi siamo al 23
+
+## 2026-11-28 00:33 · 01Rwcxc5wytQ
+biglietti dei parchi presi a 505
