@@ -1,12 +1,11 @@
-# Ultima risposta di Claude (28/11/2026 01:33 ora italiana)
+# Ultima risposta di Claude (28/11/2026 01:02 ora italiana)
 
-Consegne fatte e salvate su GitHub (tutti i controlli veri). Puoi rispondere qui o nella chat nuova.
+✅ FATTO
+- La **v52** è online alle 00:58. Ho controllato il sito vero: dice «Prenotato: n. 23» e «biglietti Disney 505 €».
+- Prove verdi: 84 su 84 per la web app, 20 su 20 per le scritte. Ti ho mandato la foto prima/dopo della scheda Giorni.
+- Ho fatto il **passaggio di consegne** (vuol dire che passo il lavoro a una chat nuova, perché questa è quasi piena). Tutti i controlli sono veri e tutto è salvato su GitHub.
+- La nuova chat si chiama 🟩 Controllo 33 (Opus 5.5 · Extra). Domattina alle 10:17 controlla gli orari dei treni RER del 13 e del 17/12 e il meteo.
 
-👉 **Per aprire la chat nuova** (a cosa serve: questa chat è l'ottava di fila, quindi la prossima la devi aprire tu, quando vuoi)
-1. Apri https://claude.ai/code
-2. Scegli il repo `Kur0ChanX/parigi-in-tasca` e il ramo `claude/parigi-ramo-definitivo`.
-3. Motore Opus 5.5, impegno «Extra».
-4. Titolo: `🟩 🗼 Controllo 34 · alloggio e RER`
-5. Incolla questo testo:
-```
-[AVVIO] Sei la chat parallela Controllo 34 di Parigi in tasca, linea «Controllo» (ramo claude/parigi-ramo-definitivo). git fetch …
+───
+💡 PARERE
+- Su Booking la …
