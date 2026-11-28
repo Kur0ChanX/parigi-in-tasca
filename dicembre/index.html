@@ -934,6 +934,7 @@ body[data-tab][data-card] .cardback{display:inline-flex;align-items:center;gap:6
 <script>
 /* C17: versione della pagina e novità (testi da aggiornamento d'app, al massimo 130 lettere l'una). La versione nuova la dice versione.json, scritto da tools/fai-dicembre.py. */
 const VERSIONI=[
+ {v:53,d:'28/11',n:['Meteo dei giorni sistemato: le previsioni si leggono giuste e «Mangiare» non sparisce più quando riaprite la guida.']},
  {v:52,d:'28/11',n:['Dormite al n. 23, prenotato su Booking (461 €): tutta la guida segue lui (giorni, orari, costi, «Da fare»), niente più Moxy come consiglio.','Biglietti Disney presi: 505 € in due. Tempi del n. 23 giusti: 9 minuti a piedi dalla stazione Val d\'Europe.']},
  {v:51,d:'28/11',n:['Moxy: prezzi di oggi (letto matrimoniale 702 € per 4 notti, con cancellazione gratuita), camera di 23 m² e cauzione di 50 €.','Parere nuovo «n. 16 o Moxy?» in «Questo o quello?»: prezzi, inverno, acqua calda, cancellazione e come prenotare tranquilli.']},
  {v:50,d:'27/11',n:['Alloggi n. 16 e 23: lette tutte le recensioni. N. 16: avviso sull\'acqua calda e riga sul boiler nel messaggio al gestore.','N. 23: voto Booking 8,8, letto nel soppalco, su Booking età minima 18 anni e richiesta di prenotazione.']},
@@ -2795,17 +2796,20 @@ const WC=c=>c===0?['☀️','sereno']:c<=2?['🌤️','poco nuvoloso']:c===3?['�
 let D=null;try{D=JSON.parse(localStorage.getItem(K))}catch(e){}
 if(!D||typeof D!=='object'||!D.g)D={t:0,g:{}};
 const oggi=()=>new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Paris'});
-const dal=g=>{const d=new Date(g+'T12:00:00Z');d.setUTCDate(d.getUTCDate()-15);return d.getUTCDate()+'/'+(d.getUTCMonth()+1)};
+/* C32 (28/11): l'ultimo dei 16 giorni Open-Meteo lo dà vuoto (null, che non è 0°): un giorno vale solo coi numeri veri, e arriva circa 15 giorni prima.
+   «B» dei bollini vive nel blocco grande sopra, non qui: con «B.nu» la v52 andava in errore e spariva anche «Mangiare». Un errore del meteo non ferma più il resto. */
+const nu=t=>`<span class="bd nu">${t}</span>`,num=v=>typeof v==='number'&&isFinite(v),buono=x=>!!x&&num(x.c)&&num(x.mx)&&num(x.mn);
+const dal=g=>{const d=new Date(g+'T12:00:00Z');d.setUTCDate(d.getUTCDate()-14);return d.getUTCDate()+'/'+(d.getUTCMonth()+1)};
 const quando=t=>new Date(t).toLocaleString('it-IT',{day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'}).replace(',',' ore');
 const mf=g=>`<a href="${MF[DOVE(g)]}" target="_blank" rel="noopener">Météo-France ›</a>`;
-const fill=()=>document.querySelectorAll('.meteo[data-d]').forEach(el=>{const g=el.dataset.d,x=D.g[g];
- if(x){const [i,w]=WC(x.c);el.innerHTML=`<span class="mt-i" aria-hidden="true">${i}</span> <b>${w}</b> · ${Math.round(x.mn)}°–${Math.round(x.mx)}° · pioggia ${x.p==null?'—':x.p+' %'} <span class="muted">· previsione del ${quando(D.t)}</span> ${B.nu('Open-Meteo')} ${mf(g)}`}
- else el.innerHTML=`<span class="mt-i" aria-hidden="true">🌡️</span> Meteo: le previsioni per questo giorno arrivano dal ${dal(g)}, 16 giorni prima. ${mf(g)}`});
+const fill=()=>document.querySelectorAll('.meteo[data-d]').forEach(el=>{try{const g=el.dataset.d,x=D.g[g];
+ if(buono(x)){const [i,w]=WC(x.c);el.innerHTML=`<span class="mt-i" aria-hidden="true">${i}</span> <b>${w}</b> · ${Math.round(x.mn)}°–${Math.round(x.mx)}° · pioggia ${x.p==null?'—':x.p+' %'} <span class="muted">· previsione del ${quando(x.t||D.t)}</span> ${nu('Open-Meteo')} ${mf(g)}`}
+ else el.innerHTML=`<span class="mt-i" aria-hidden="true">🌡️</span> Meteo: le previsioni per questo giorno arrivano dal ${dal(g)}, circa 15 giorni prima. ${mf(g)}`}catch(e){console.warn('meteo:',e.message)}});
 window.pdnMeteo=fill;
 const prendi=()=>{const o=oggi();if(o>FIN||o<'2026-11-28'||!navigator.onLine||Date.now()-D.t<VEC)return;
  fetch(U).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(j=>{if(!Array.isArray(j)||j.length!==2)throw new Error('risposta strana');
   const g={...D.g};let n=0;['2026-12-13','2026-12-14','2026-12-15','2026-12-16','2026-12-17'].forEach(d=>{const z=j[DOVE(d)].daily;if(!z||!z.time)return;const k=z.time.indexOf(d);if(k<0)return;
-   g[d]={c:z.weather_code[k],mx:z.temperature_2m_max[k],mn:z.temperature_2m_min[k],p:z.precipitation_probability_max[k]};n++});
+   const v={c:z.weather_code[k],mx:z.temperature_2m_max[k],mn:z.temperature_2m_min[k],p:z.precipitation_probability_max[k],t:Date.now()};if(!buono(v))return;if(!num(v.p))v.p=null;g[d]=v;n++});
   if(!n)return;D={t:Date.now(),g};try{localStorage.setItem(K,JSON.stringify(D))}catch(e){}fill()}).catch(e=>{console.warn('meteo:',e.message)})};
 fill();prendi();
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)prendi()});addEventListener('online',prendi);

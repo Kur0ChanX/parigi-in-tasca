@@ -777,6 +777,27 @@ const sw = (p) => p.waitForFunction(() => navigator.serviceWorker.controller, nu
       await c9.close();
     }
   }
+  // C32 (28/11): risposta di Open-Meteo simulata come quella vera del 28/11 (ultimo giorno coi valori vuoti), giorno fisso 28/11.
+  // v52: «B is not defined» alla prima previsione salvata → alla seconda apertura meteo vuoto e «Mangiare» sparito; il 13/12 vuoto sarebbe diventato «0°–0°».
+  {
+    const om = (pieno) => JSON.stringify([0, 1].map(() => ({ daily: { time: ['2026-12-12', '2026-12-13'], weather_code: [51, pieno ? 3 : null], temperature_2m_max: [6.9, pieno ? 6.4 : null], temperature_2m_min: [4, pieno ? 1.6 : null], precipitation_probability_max: [null, pieno ? 35 : null] } })));
+    const apri = async (pieno, memoria) => {
+      const c = await b.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
+      await c.clock.setFixedTime(new Date('2026-11-28T10:00:00+01:00'));
+      await c.route('https://api.open-meteo.com/**', (rt) => rt.fulfill({ contentType: 'application/json', body: om(pieno) }));
+      if (memoria) await c.addInitScript((m) => { try { localStorage.setItem('pdn-meteo', m); } catch (e) {} }, memoria);
+      const r = await c.newPage(); const er = []; r.on('pageerror', (e) => er.push(e.message));
+      await r.goto(B + 'dicembre/'); await r.waitForTimeout(1200);
+      const x = await r.evaluate(() => ({ m13: (document.querySelector('#panels .meteo[data-d="2026-12-13"]') || {}).textContent || '', mem: localStorage.getItem('pdn-meteo') || '', mangiare: document.querySelectorAll('.ris a').length }));
+      await c.close(); return { ...x, er };
+    };
+    const v1 = await apri(false), v2 = await apri(false, JSON.stringify({ t: 0, g: { '2026-12-13': { c: null, mx: null, mn: null, p: null } } }));
+    const p1 = await apri(true); const p2 = await apri(true, p1.mem);
+    const okV = [v1, v2].every((x) => /arrivano dal 29\/11/.test(x.m13) && !/0°/.test(x.m13) && x.mangiare > 50 && !x.er.length);
+    ok('C32: meteo col 13/12 vuoto da Open-Meteo (anche già salvato vuoto dalla v52): «arrivano dal 29/11», niente «0°», «Mangiare» pieno, nessun errore', okV); if (!okV) console.log({ v1, v2 });
+    const okP = [p1, p2].every((x) => /nuvoloso · 2°–6° · pioggia 35 %/.test(x.m13) && /Open-Meteo/.test(x.m13) && x.mangiare > 50 && !x.er.length);
+    ok('C32: meteo col 13/12 pieno, alla prima apertura e alla seconda (previsione salvata): giorno scritto, «Mangiare» pieno, nessun errore', okP); if (!okP) console.log({ p1, p2 });
+  }
   await b.close(); server.kill(); fs.unlinkSync(path.join(DIR, 'parigi-in-tasca')); fs.rmdirSync(DIR);
   process.exit(falsi ? 1 : 0);
 })().catch((e) => { console.error(e); server.kill(); process.exit(1); });
