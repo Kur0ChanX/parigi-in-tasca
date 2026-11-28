@@ -44,3 +44,5 @@ Catene di sessioni e lavori in corso di ogni chat (skill `chat-parallela`). Prim
 | PR 51 | Controllo 29 | v49 da `versione-v49` (commit c2dd9ee), unita 23/11 | — | 23/11 |
 | PR 52 | Controllo 31 | v50 da `versione-v50` (commit 561718c), unita 27/11 | — | 27/11 |
 | PR 53 | Controllo 31 | v51 da `versione-v51` (commit 9ffe0ab), unita 28/11 | — | 28/11 |
+| PR 54 | Controllo 32 | v52 da `versione-v52`, unita 28/11 | — | 28/11 |
+| PR 55 | Controllo 33 | v53 (urgenza meteo) da `versione-v53` (commit 4afa732), unita 28/11 01:1x | — | 28/11 |

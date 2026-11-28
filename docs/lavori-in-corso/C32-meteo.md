@@ -19,4 +19,5 @@ Trovato da Controllo 33 il 28/11 ~01:10, facendo il controllo della sveglia «or
 - Prove nuove «C32» in `tools/prova-web-app.js` (vuoto, già salvato vuoto, pieno alla prima e alla seconda apertura).
 
 ## Stato
-- Correzione e prove in locale; poi v53 (urgenza: si pubblica subito).
+- 28/11 01:17: v53 online (PR 55, squash `e738b5d9`). Prove locali sul commit `4afa7328`: web app 86/86 (al primo giro «service worker suo» rossa, la nota instabile 🐞; rifatta da sola verde), scritte 20/20, `--controlla` e colori verdi. Sito vero: `versione.json` = 53, `dicembre/index.html` identico al file provato (`cmp`).
+- Resta: Mario la vede sul telefono (riga in «## 0. Aspetta Mario»).
