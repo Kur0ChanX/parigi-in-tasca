@@ -40,7 +40,7 @@ Chat: Controllo 32 (da 28/11/2026 00:22). File: `dicembre/parigi-disney-natale.h
 - [x] G21 «Libero dal 13.» nella tappa del check-in.
 - [x] G22 (lasciato: 9:05 è il cambio col treno delle 8:24, che arriva alle 8:59) «09:05 cambio» col treno delle 8:30 (arriva 9:06).
 - [x] H23 mappa: segno del n. 23 sulla stazione, «Indirizzo esatto dopo la prenotazione»: mancano le coordinate in `TM.a`.
-- [ ] I24 (aperto, piccolo: i dati dei ristoranti li scrive `tools/fai-ristoranti.py`) «Vicino all'alloggio» (mangiare): tempi dalla stazione, non dal n. 23.
+- [x] I24 (fatto da Controllo 33 nella v54, C32; era aperto, piccolo: i dati dei ristoranti li scrive `tools/fai-ristoranti.py`) «Vicino all'alloggio» (mangiare): tempi dalla stazione, non dal n. 23.
 - [x] J25–J26 «Da fare»: «Oggi l'hotel» → fatto il n. 23; richiesta Booking da far accettare, data limite della cancellazione, messaggio ai gestori; navetta Ki Space; voce orari RER «escono verso il 26/11».
 - [x] K27–K30 dalla stazione all'appartamento (uscita, strada al buio coi trolley); piano B se il gestore non c'è; ore di silenzio 20–8 (arrivo 21:50, uscita 8:10, scala di legno); domanda sul riscaldamento nel messaggio.
 

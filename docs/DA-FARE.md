@@ -5,7 +5,7 @@
 
 ## Nastro delle versioni
 🚀 Online: v53 · 🟩 Controllo 33 · 28/11 01:17 · meteo e Mangiare (PR 55, urgenza; prove locali verdi: web app 86/86, scritte 20/20)
-🧪 In prova: nessuna
+🧪 In prova: v54 · 🟩 Controllo 33 · distanze e n. 23
 ⏳ Dopo: orari RER A del 13–17/12 (sveglia 28/11 10:17)
 
 ## 0. Aspetta Mario
@@ -18,7 +18,7 @@
 - 21/11 · ❓ · 🟢 Principale 13 · DOMANDA 6: la luna nuova (più luminosa, più piccola, con il bagliore, anche nella testata) ti piace? 📌 Di cosa parliamo: la luna a forma di Topolino nell'icona, nell'anteprima del link e nella testata della pagina, già online dalle 19:33 come chiesto («pubblica»); serve per chiudere il lavoro o ritoccarla: 1 · sì, va bene così · 2 · ritocca (cosa: colore, grandezza, bagliore, posto). Consiglio: 1. Foto e video `archivio/2026-11-21-luna-viva/1-icona-confronto.jpg`, `2-testata-confronto.jpg`, `3-anteprima-link.jpg`, `4-testata-luna-video.mp4` (mandati ~19:37).
 
 ## 1. Claude da solo
-- 🟩 Controllo 33 · C32 · URGENZA: dalla v52, da oggi (primo giorno con le previsioni) alla seconda apertura spariscono meteo e «Mangiare»; il 13/12 vuoto di Open-Meteo sarebbe diventato «0°–0°» → v53 online 28/11 01:17 (PR 55; `docs/lavori-in-corso/C32-meteo.md`) · 👁 Lo vedi: in Giorni, Dom 13 «Meteo: … arrivano dal 29/11» (da domani il tempo vero) e «Mangiare» pieno anche riaprendo l'app
+- 🟩 Controllo 33 · C32 · URGENZA: dalla v52, da oggi (primo giorno con le previsioni) alla seconda apertura spariscono meteo e «Mangiare»; il 13/12 vuoto di Open-Meteo sarebbe diventato «0°–0°» → v53 online 28/11 01:17 (PR 55; `docs/lavori-in-corso/C32-meteo.md`) · 👁 Lo vedi: in Giorni, Dom 13 «Meteo: … arrivano dal 29/11» (da domani il tempo vero) e «Mangiare» pieno anche riaprendo l'app; v54: in «Mangiare» «📍 Più vicini» scrive le distanze e «🏠 Vicino all'alloggio» dice «dal n. 23 aggiungete circa 9 minuti»
 - 🟩 Controllo 32 · C31 · guida di dicembre sul n. 23 prenotato (Booking 461 €) e biglietti 505 €: v52 (`docs/lavori-in-corso/C31-pagina-n23.md`) · 👁 Lo vedi: nell'app «Prenotato: n. 23» in Piano, Giorni e Dormire, niente Moxy come consiglio · prova: foto di Mario dal sito vero
 - 🟩 Controllo 31 · C30 · v50 con i fatti nuovi delle recensioni (Mario 27/11 23:40 «publica» = DOMANDA 2 → 1): schede «📋 Tutto sul n.» 16 e 23 (n. 16: acqua calda a serbatoio + riga sul boiler nel messaggio al gestore, uscita 1 della RER; n. 23: Booking 8,8, letto in soppalco, età minima 18 su Booking), online 27/11 23:54 (PR 52) · 👁 Lo vedi: nella guida di dicembre, «📋 Tutto sul n. 16» e «n. 23», versione 50 (foto `archivio/2026-11-27-v50/`) · prova: sito vero con `{"v": 50}`
 - 🟩 Controllo · C28 · idee approvate da Mario 23/11 15:31: ristoranti (pranzo e cena, 4 cucine), treni in tempo reale, meteo, testi più ordinati senza togliere niente (frase interna; pro e contro degli alloggi una frase per riga, nel ramo dalla Controllo 29: righe oltre 350 caratteri da 18 a 0) (`docs/lavori-in-corso/C28-idee-e-controllo.md`) · 👁 Lo vedi: nella guida di dicembre la sezione «Dove mangiare», i tasti «prossimi treni» e il meteo dei 5 giorni (v48 online dal 23/11 sera, PR 50) · prova: web app e scritte verdi, foto a Mario
